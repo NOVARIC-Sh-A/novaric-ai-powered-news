@@ -1,0 +1,24 @@
+{
+  "name": "projects/novaric-paragon/locations/europe-west1/jobs/weekly-politicians-ingest",
+  "description": "NOVARIC® PARAGON Weekly Kuvendi Politicians Ingestion, Status Reconciliation & Image Mirroring Job",
+  "schedule": "0 4 * * 1",
+  "timeZone": "Etc/UTC",
+  "httpTarget": {
+    "uri": "https://api.media.novaric.al/api/v1/politicians/ingest",
+    "httpMethod": "POST",
+    "headers": {
+      "Content-Type": "application/json",
+      "Authorization": "Bearer ${OPS_METRICS_AUTH_TOKEN}",
+      "User-Agent": "NOVARIC-CloudScheduler/1.0"
+    },
+    "body": "eyJkcnlfcnVuIjogZmFsc2V9"
+  },
+  "retryConfig": {
+    "retryCount": 5,
+    "maxRetryDuration": "1800s",
+    "minBackoffDuration": "10s",
+    "maxBackoffDuration": "300s",
+    "maxDoublings": 5
+  },
+  "attemptDeadline": "600s"
+}

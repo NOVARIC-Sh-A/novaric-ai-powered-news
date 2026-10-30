@@ -1,0 +1,544 @@
+
+{
+  "profiles": [
+    {
+      "id": "vip1",
+      "name": "Edi Rama",
+      "imageUrl": "https://novaricstorage.blob.core.windows.net/media/Profile-Photos/Edi-RAMA.jfif",
+      "category": "Politikë (PS)",
+      "shortBio": "Kryeministër i Shqipërisë, Kryetar i Partisë Socialiste.",
+      "detailedBio": "Edi Rama (lindur më 4 korrik 1964) është një politikan, piktor dhe publicist shqiptar, Kryeministër i Shqipërisë dhe Kryetar i Partisë Socialiste. Më parë ka shërbyer si Ministër i Kulturës, Rinisë dhe Sporteve (1998-2000) dhe si Kryetar i Bashkisë së Tiranës (2000-2011). Si kryebashkiak, ai transformoi pamjen e qytetit me projekte rigjallëruese urbane. Udhëheqja e tij si kryeministër është fokusuar në reformat strukturore, integrimin evropian dhe modernizimin e vendit.",
+      "paragonAnalysis": [
+        { "dimension": "Policy Engagement & Expertise", "score": 88, "peerAverage": 70, "globalBenchmark": 75, "description": "Mat aftësinë për t'u angazhuar thellësisht me çështjet politike, për të kuptuar legjislacionin dhe për të kontribuar në mënyrë domethënëse në debate.", "commentary": "Shquhet për projekte transformuese afatgjata si Rilindja Urbane, por kritikohet për mungesë konsultimi dhe kosto të lartë." },
+        { "dimension": "Narrative & Communication", "score": 92, "peerAverage": 75, "globalBenchmark": 80, "description": "Mat aftësinë për të komunikuar qartë me publikun, për të ndërtuar një narrativë bindëse dhe për të përdorur median në mënyrë efektive.", "commentary": "Komunikues i jashtëzakonshëm dhe karizmatik, përdor median sociale dhe daljet publike në mënyrë efektive, por stili i tij mund të jetë polarizues." },
+        { "dimension": "Assertiveness & Influence", "score": 85, "peerAverage": 72, "globalBenchmark": 78, "description": "Vlerëson aftësinë për të ndikuar te kolegët, për të ndërtuar koalicione dhe për të shtyrë përpara axhendën e tij/saj politike.", "commentary": "Ka arritur të forcojë marrëdhëniet me partnerët kyç dhe të rrisë profilin e Shqipërisë. Nisma si \"Ballkani i Hapur\" kanë sjellë si mbështetje, ashtu edhe kritika." },
+        { "dimension": "Governance & Institutional Strength", "score": 68, "peerAverage": 60, "globalBenchmark": 68, "description": "Mat kontributin në forcimin e institucioneve demokratike, respektimin e rregullave dhe promovimin e qeverisjes së mirë.", "commentary": "Ka mbikëqyrur rritje ekonomike, por kritikohet për rritjen e borxhit publik dhe varësinë nga PPP-të." },
+        { "dimension": "Accountability & Transparency", "score": 48, "peerAverage": 55, "globalBenchmark": 65, "description": "Vlerëson nivelin e transparencës në veprimtarinë publike dhe gatishmërinë për t'u mbajtur përgjegjës për vendimet e marra.", "commentary": "Qeverisja e tij është përballur me akuza të vazhdueshme për korrupsion, kapje të shtetit dhe mungesë transparence." },
+        { "dimension": "Organizational & Party Cohesion", "score": 95, "peerAverage": 85, "globalBenchmark": 80, "description": "Vlerëson nivelin e disiplinës partiake, besnikërinë ndaj linjës së partisë dhe rolin në organizimin e brendshëm.", "commentary": "Ka një kontroll pothuajse absolut mbi Partinë Socialiste, duke qenë figura qendrore dhe vendimmarrësi i padiskutueshëm." },
+        { "dimension": "Representation & Responsiveness", "score": 65, "peerAverage": 68, "globalBenchmark": 72, "description": "Mat sa mirë deputeti përfaqëson interesat e zonës së tij zgjedhore dhe sa i përgjegjshëm është ndaj nevojave të qytetarëve.", "commentary": "Fokusi në projektet e mëdha kombëtare ndonjëherë lë në hije përgjigjen ndaj nevojave specifike lokale." }
+      ]
+    },
+    {
+      "id": "vip2",
+      "name": "Sali Berisha",
+      "imageUrl": "https://novaricstorage.blob.core.windows.net/media/Profile-Photos/Sali-BERISHA.jpg",
+      "category": "Politikë (PD)",
+      "shortBio": "Ish-President dhe ish-Kryeministër, figurë historike e Partisë Demokratike.",
+      "detailedBio": "Sali Berisha (lindur më 15 tetor 1944) është një kardiolog dhe politikan shqiptar, i cili ka shërbyer si Presidenti i dytë i Shqipërisë (1992-1997) dhe si Kryeministër (2005-2013). Ai ka qenë lideri i Partisë Demokratike të Shqipërisë për dy dekada dhe mbetet një figurë me ndikim të madh në politikën shqiptare. Karriera e tij është shënuar nga tranzicioni i Shqipërisë drejt demokracisë dhe ekonomisë së tregut.",
+       "paragonAnalysis": [
+        { "dimension": "Policy Engagement & Expertise", "score": 70, "peerAverage": 70, "globalBenchmark": 75, "description": "Mat aftësinë për t'u angazhuar thellësisht me çështjet politike, për të kuptuar legjislacionin dhe për të kontribuar në mënyrë domethënëse në debate.", "commentary": "Në të kaluarën, ka pasur momente vizionare (liberalizimi i vizave, anëtarësimi në NATO). Vitet e fundit, fokusi ka kaluar te mbijetesa politike." },
+        { "dimension": "Narrative & Communication", "score": 82, "peerAverage": 75, "globalBenchmark": 80, "description": "Mat aftësinë për të komunikuar qartë me publikun, për të ndërtuar një narrativë bindëse dhe për të përdorur median në mënyrë efektive.", "commentary": "Mbetet një orator i fuqishëm me aftësi për të mobilizuar mbështetësit e tij më besnikë, edhe pse retorika e tij është bërë gjithnjë e më shumë përçarëse." },
+        { "dimension": "Assertiveness & Influence", "score": 40, "peerAverage": 72, "globalBenchmark": 78, "description": "Vlerëson aftësinë për të ndikuar te kolegët, për të ndërtuar koalicione dhe për të shtyrë përpara axhendën e tij/saj politike.", "commentary": "I shpallur \"non grata\" nga SHBA dhe MB, gjë që ka izoluar atë dhe një pjesë të partisë së tij nga partnerët perëndimorë kyç." },
+        { "dimension": "Governance & Institutional Strength", "score": 60, "peerAverage": 60, "globalBenchmark": 68, "description": "Mat kontributin në forcimin e institucioneve demokratike, respektimin e rregullave dhe promovimin e qeverisjes së mirë.", "commentary": "Aktiviteti i tij parlamentar është i kufizuar, duke u fokusuar kryesisht në fjalime politike dhe më pak në iniciativa konkrete legjislative." },
+        { "dimension": "Accountability & Transparency", "score": 30, "peerAverage": 55, "globalBenchmark": 65, "description": "Vlerëson nivelin e transparencës në veprimtarinë publike dhe gatishmërinë për t'u mbajtur përgjegjës për vendimet e marra.", "commentary": "Nën arrest shtëpie dhe përballet me akuza serioze për korrupsion nga SPAK, gjë që ka dëmtuar rëndë perceptimin e tij publik." },
+        { "dimension": "Organizational & Party Cohesion", "score": 88, "peerAverage": 85, "globalBenchmark": 80, "description": "Vlerëson nivelin e disiplinës partiake, besnikërinë ndaj linjës së partisë dhe rolin në organizimin e brendshëm.", "commentary": "Pavarësisht sfidave, ruan një ndikim masiv dhe një kontroll të fortë mbi grupimin e tij brenda Partisë Demokratike, duke shkaktuar përçarjen e saj." },
+        { "dimension": "Representation & Responsiveness", "score": 55, "peerAverage": 68, "globalBenchmark": 72, "description": "Mat sa mirë deputeti përfaqëson interesat e zonës së tij zgjedhore dhe sa i përgjegjshëm është ndaj nevojave të qytetarëve.", "commentary": "Fokusi në betejat e brendshme partiake dhe ato personale ka lënë në plan të dytë përfaqësimin e drejtpërdrejtë të shqetësimeve qytetare." }
+      ]
+    },
+    {
+      "id": "vip3",
+      "name": "Ilir Meta",
+      "imageUrl": "/photos/ilir_meta.jpg",
+      "category": "Politikë (PL)",
+      "shortBio": "Kryetar i Partisë së Lirisë, ish-President i Shqipërisë.",
+      "detailedBio": "Ilir Meta (lindur më 24 mars 1969) është një politikan shqiptar, aktualisht Kryetar i Partisë së Lirisë (ish-LSI). Ai ka mbajtur poste të larta shtetërore, duke përfshirë Kryeministër i Shqipërisë (1999-2002), Kryetar i Kuvendit (2013-2017) dhe President i Shqipërisë (2017-2022). Meta është i njohur për karrierën e tij të gjatë politike dhe rolin e tij si \"kingmaker\" në skenën politike shqiptare.",
+      "paragonAnalysis": [
+        { "dimension": "Policy Engagement & Expertise", "score": 55, "peerAverage": 70, "globalBenchmark": 75, "description": "Mat aftësinë për t'u angazhuar thellësisht me çështjet politike, për të kuptuar legjislacionin dhe për të kontribuar në mënyrë domethënëse në debate.", "commentary": "Njihet më shumë si një strateg dhe takticien politik afatshkurtër, i fokusuar te lëvizjet për të maksimizuar pushtetin, sesa si një vizionar." },
+        { "dimension": "Narrative & Communication", "score": 75, "peerAverage": 75, "globalBenchmark": 80, "description": "Mat aftësinë për të komunikuar qartë me publikun, për të ndërtuar një narrativë bindëse dhe për të përdorur median në mënyrë efektive.", "commentary": "Komunikimi i tij është bërë gjithnjë e më i paparashikueshëm, emocional dhe shpërthyes, gjë që e bën më pak efektiv." },
+        { "dimension": "Assertiveness & Influence", "score": 68, "peerAverage": 72, "globalBenchmark": 78, "description": "Vlerëson aftësinë për të ndikuar te kolegët, për të ndërtuar koalicione dhe për të shtyrë përpara axhendën e tij/saj politike.", "commentary": "Gjatë presidencës mbajti marrëdhënie korrekte, por veprimet e tij të fundit kanë tensionuar marrëdhëniet me partnerët ndërkombëtarë." },
+        { "dimension": "Governance & Institutional Strength", "score": 62, "peerAverage": 60, "globalBenchmark": 68, "description": "Mat kontributin në forcimin e institucioneve demokratike, respektimin e rregullave dhe promovimin e qeverisjes së mirë.", "commentary": "Në rolet e mëparshme ka treguar aftësi menaxhuese, por mandati si President u shoqërua me përplasje të forta institucionale." },
+        { "dimension": "Accountability & Transparency", "score": 35, "peerAverage": 55, "globalBenchmark": 65, "description": "Vlerëson nivelin e transparencës në veprimtarinë publike dhe gatishmërinë për t'u mbajtur përgjegjës për vendimet e marra.", "commentary": "Përballet me akuza të vazhdueshme për korrupsion dhe pasuri të pajustifikuar, të cilat janë intensifikuar me hetimet e SPAK." },
+        { "dimension": "Organizational & Party Cohesion", "score": 92, "peerAverage": 85, "globalBenchmark": 80, "description": "Vlerëson nivelin e disiplinës partiake, besnikërinë ndaj linjës së partisë dhe rolin në organizimin e brendshëm.", "commentary": "Ka kontroll absolut mbi Partinë e Lirisë, duke qenë figura dominuese dhe vendimmarrësi kryesor." },
+        { "dimension": "Representation & Responsiveness", "score": 58, "peerAverage": 68, "globalBenchmark": 72, "description": "Mat sa mirë deputeti përfaqëson interesat e zonës së tij zgjedhore dhe sa i përgjegjshëm është ndaj nevojave të qytetarëve.", "commentary": "Fokusi i tij primar mbetet në strategjinë politike kombëtare dhe forcimin e partisë, më pak në përfaqësimin specifik të zonës zgjedhore." }
+      ]
+    },
+    {
+      "id": "vip4",
+      "name": "Blendi Fevziu",
+      "imageUrl": "https://novaricstorage.blob.core.windows.net/media/Profile-Photos/BF_Opinion.jfif",
+      "category": "Media",
+      "shortBio": "Gazetar dhe drejtues i emisionit \"Opinion\" në TV Klan.",
+      "detailedBio": "Blendi Fevziu është një nga gazetarët dhe opinionistët më të njohur në Shqipëri. Ai drejton emisionin politik \"Opinion\" në TV Klan, i cili është një ndër emisionet më të ndjekura dhe me ndikim në vend. Fevziu është gjithashtu autor i disa librave, shpesh me tematikë historike dhe biografike. Ai njihet për stilin e tij direkt dhe aftësinë për të moderuar debate të nxehta politike.",
+      "publicPerception": { "positive": 60, "neutral": 30, "negative": 10 },
+      "professionalPerformance": { "excellent": 50, "good": 35, "average": 10, "needsImprovement": 5 },
+      "skillsDevelopment": { "leadership": 20, "communication": 40, "expertise": 30, "ethics": 10 },
+      "maragonSummary": {
+        "Readiness": 88,
+        "Aptitude": 92,
+        "Governance": 78,
+        "OversightNurturing": 80
+      },
+      "maragonAnalysis": [
+        { "dimension": "Pajtueshmëria Etike", "score": 88, "peerAverage": 75, "globalBenchmark": 92, "description": "Respektimi i standardeve etike, si shmangia e konfliktit të interesit, mbrojtja e burimeve dhe trajtimi me dinjitet i të ftuarve.", "commentary": "Ruan një reputacion të fortë etik, duke e mbajtur emisionin larg skandaleve të mëdha etike. Mban distancë profesionale nga subjektet që mbulon." },
+        { "dimension": "Profesionalizmi në Kriza", "score": 95, "peerAverage": 80, "globalBenchmark": 90, "description": "Përfshin qartësinë, elokuencën, aftësinë për të bërë pyetje të mprehta dhe për të menaxhuar dinamikën e një debati të drejtpërdrejtë.", "commentary": "Një nga pikat e tij më të forta. Është një komunikues i shkëlqyer, i shpejtë dhe me aftësi të jashtëzakonshme për të mbajtur vëmendjen e audiencës dhe tensionin në studio." },
+        { "dimension": "Saktësia Faktike & Verifikimi", "score": 85, "peerAverage": 72, "globalBenchmark": 88, "description": "Vlerëson rigorozitetin në verifikimin e informacionit para transmetimit, atribuimin e saktë të burimeve dhe dallimin e qartë midis faktit dhe opinionit.", "commentary": "Fevziu tregon një nivel të lartë të përgatitjes, por shpejtësia e formatit live ndonjëherë lejon pasaktësi të vogla që zakonisht korrigjohen. Mbështetet shumë në reputacionin e të ftuarve." },
+        { "dimension": "Paanshmëria, Balanca & Anshmëria", "score": 78, "peerAverage": 65, "globalBenchmark": 90, "description": "Mat aftësinë për të moderuar debatin në mënyrë të paanshme, duke u dhënë kohë dhe hapësirë të barabartë të gjitha palëve dhe duke shmangur paragjykimet personale.", "commentary": "Ndonëse synon paanshmëri, stili i tij konfrontues dhe ndërprerjet e shpeshta mund të perceptohen si favorizim ose si mungesë ekuilibri nga audienca, pavarësisht qëllimit." },
+        { "dimension": "Thellësia e Analizës/Pyetjeve", "score": 92, "peerAverage": 75, "globalBenchmark": 88, "description": "Mat aftësinë e emisionit dhe prezantuesit për të ndikuar në diskursin publik, për të vendosur axhendën dhe për t'u perceptuar si një burim i rëndësishëm informacioni.", "commentary": "'Opinion' mbetet një pikë reference kyçe në median shqiptare. Temat e trajtuara dhe debatet e zhvilluara shpesh dominojnë ciklin e lajmeve të ditëve në vijim." },
+        { "dimension": "Qartësia & Koherenca", "score": 90, "peerAverage": 70, "globalBenchmark": 85, "description": "Analizon mënyrën se si personaliteti e përdor median sociale, duke ruajtur standardet e paanshmërisë dhe profesionalizmit edhe jashtë studios.", "commentary": "Llogaritë e tij sociale përdoren kryesisht për të promovuar punën dhe për të ndarë opinione të peshuara, duke shmangur polemikat e panevojshme personale." },
+        { "dimension": "Promovimi i të Menduarit Kritik", "score": 80, "peerAverage": 70, "globalBenchmark": 82, "description": "Vlerëson aftësinë për të nxitur debatin dhe mendimin kritik tek audienca.", "commentary": "Emisioni shpesh nxit debat publik, por formati i shpejtë ndonjëherë sakrifikon thellësinë për hir të dinamikës televizive." }
+      ]
+    },
+    {
+      "id": "vip5",
+      "name": "Ardit Gjebrea",
+      "imageUrl": "https://novaricstorage.blob.core.windows.net/media/Profile-Photos/Ardit-GJEBREA.png",
+      "category": "Media & Showbiz",
+      "shortBio": "Këngëtar, producent dhe drejtues i \"E Diela Shqiptare\".",
+      "detailedBio": "Ardit Gjebrea është një figurë poliedrike në skenën shqiptare, i njohur si këngëtar, kompozitor, producent televiziv dhe prezantues. Ai është krijuesi dhe drejtuesi i programit maratonë të së dielës \"E Diela Shqiptare\" në TV Klan. Gjebrea ka një karrierë të gjatë në muzikë, duke filluar që në moshë të re, dhe ka organizuar disa nga festivalet më të rëndësishme muzikore në Shqipëri, si \"Kënga Magjike\".",
+      "publicPerception": { "positive": 70, "neutral": 20, "negative": 10 },
+      "professionalPerformance": { "excellent": 60, "good": 30, "average": 5, "needsImprovement": 5 },
+      "skillsDevelopment": { "leadership": 25, "communication": 30, "expertise": 20, "ethics": 25 },
+       "maragonAnalysis": [
+        { "dimension": "Pajtueshmëria Etike", "score": 92, "peerAverage": 75, "globalBenchmark": 92, "description": "Respektimi i standardeve etike, si shmangia e konfliktit të interesit, mbrojtja e burimeve dhe trajtimi me dinjitet i të ftuarve.", "commentary": "Një nga figurat më të pastra dhe më etike në tregun mediatik, i vlerësuar për qasjen humane dhe profesionalizmin." },
+        { "dimension": "Profesionalizmi në Kriza", "score": 96, "peerAverage": 80, "globalBenchmark": 90, "description": "Përfshin qartësinë, elokuencën, aftësinë për të bërë pyetje të mprehta dhe për të menaxhuar dinamikën e një debati të drejtpërdrejtë.", "commentary": "I jashtëzakonshëm në komunikim. Ka një aftësi natyrale për t'u lidhur me audiencën dhe për të menaxhuar spektakle të gjata e komplekse." },
+        { "dimension": "Saktësia Faktike & Verifikimi", "score": 85, "peerAverage": 72, "globalBenchmark": 88, "description": "Vlerëson rigorozitetin në verifikimin e informacionit para transmetimit, atribuimin e saktë të burimeve dhe dallimin e qartë midis faktit dhe opinionit.", "commentary": "Në rubrikat sociale, tregon kujdes për saktësinë e historive njerëzore. Në argëtim, ky kriter është më pak i aplikueshëm." },
+        { "dimension": "Paanshmëria, Balanca & Anshmëria", "score": 88, "peerAverage": 65, "globalBenchmark": 90, "description": "Mat aftësinë për të moderuar debatin në mënyrë të paanshme, duke u dhënë kohë dhe hapësirë të barabartë të gjitha palëve dhe duke shmangur paragjykimet personale.", "commentary": "Në rolin e tij si prezantues i formateve argëtuese, ai ruan një neutralitet të plotë dhe qasje pozitive ndaj të gjithë pjesëmarrësve." },
+        { "dimension": "Thellësia e Analizës/Pyetjeve", "score": 94, "peerAverage": 75, "globalBenchmark": 88, "description": "Mat aftësinë e emisionit dhe prezantuesit për të ndikuar në diskursin publik, për të vendosur axhendën dhe për t'u perceptuar si një burim i rëndësishëm informacioni.", "commentary": "Programi i tij është një institucion televiziv që ndiqet masivisht dhe ka një ndikim të thellë kulturor dhe social në shoqërinë shqiptare." },
+        { "dimension": "Qartësia & Koherenca", "score": 90, "peerAverage": 70, "globalBenchmark": 85, "description": "Analizon mënyrën se si personaliteti e përdor median sociale, duke ruajtur standardet e paanshmërisë dhe profesionalizmit edhe jashtë studios.", "commentary": "Menaxhon një imazh shumë pozitiv dhe profesional online, duke e përdorur për bamirësi dhe për të promovuar punën e tij." },
+        { "dimension": "Promovimi i të Menduarit Kritik", "score": 75, "peerAverage": 70, "globalBenchmark": 82, "description": "Vlerëson aftësinë për të nxitur debatin dhe mendimin kritik tek audienca.", "commentary": "Formati fokusohet më shumë tek emocionet dhe argëtimi sesa te nxitja e mendimit kritik, por rubrikat sociale shpesh trajtojnë tema me ndjeshmëri të lartë." }
+      ]
+    },
+    {
+      "id": "vip6",
+      "name": "Lulzim Basha",
+      "imageUrl": "/photos/lulzim_basha.jpg",
+      "category": "Politikë (PD)",
+      "shortBio": "Ish-Kryetar i Partisë Demokratike, deputet.",
+      "detailedBio": "Lulzim Basha është një politikan shqiptar, i cili ka shërbyer si Kryetar i Partisë Demokratike nga viti 2013 deri në 2022. Ai ka mbajtur disa poste ministrore, përfshirë Ministër i Punëve të Jashtme dhe Ministër i Brendshëm, si dhe ka qenë Kryetar i Bashkisë së Tiranës. Basha ka qenë një figurë qendrore në politikën opozitare shqiptare për shumë vite.",
+      "paragonAnalysis": [
+        { "dimension": "Policy Engagement & Expertise", "score": 58, "peerAverage": 70, "globalBenchmark": 75, "description": "Mat aftësinë për t'u angazhuar thellësisht me çështjet politike, për të kuptuar legjislacionin dhe për të kontribuar në mënyrë domethënëse në debate.", "commentary": "Shpesh është kritikuar për mungesë të një vizioni të qartë dhe afatgjatë, duke u fokusuar më shumë në reagime ndaj zhvillimeve ditore." },
+        { "dimension": "Narrative & Communication", "score": 70, "peerAverage": 75, "globalBenchmark": 80, "description": "Mat aftësinë për të komunikuar qartë me publikun, për të ndërtuar një narrativë bindëse dhe për të përdorur median në mënyrë efektive.", "commentary": "Komunikon në mënyrë të qetë dhe të strukturuar, por i mungon karizma dhe fuqia mobilizuese e liderëve të tjerë historikë." },
+        { "dimension": "Assertiveness & Influence", "score": 75, "peerAverage": 72, "globalBenchmark": 78, "description": "Vlerëson aftësinë për të ndikuar te kolegët, për të ndërtuar koalicione dhe për të shtyrë përpara axhendën e tij/saj politike.", "commentary": "Ka marrëdhënie të mira me partnerët ndërkombëtarë, por kjo nuk është përkthyer gjithmonë në mbështetje të fortë politike." },
+        { "dimension": "Governance & Institutional Strength", "score": 60, "peerAverage": 60, "globalBenchmark": 68, "description": "Mat kontributin në forcimin e institucioneve demokratike, respektimin e rregullave dhe promovimin e qeverisjes së mirë.", "commentary": "Platformat e tij ekonomike kanë qenë standarde, por nuk kanë arritur të bindin një shumicë të elektoratit." },
+        { "dimension": "Accountability & Transparency", "score": 60, "peerAverage": 55, "globalBenchmark": 65, "description": "Vlerëson nivelin e transparencës në veprimtarinë publike dhe gatishmërinë për t'u mbajtur përgjegjës për vendimet e marra.", "commentary": "Nuk është përballur me akuza të mëdha korrupsioni personalisht, por lidershipi i tij është kritikuar për menaxhimin e çështjeve të brendshme." },
+        { "dimension": "Organizational & Party Cohesion", "score": 50, "peerAverage": 85, "globalBenchmark": 80, "description": "Vlerëson nivelin e disiplinës partiake, besnikërinë ndaj linjës së partisë dhe rolin në organizimin e brendshëm.", "commentary": "Ka humbur ndjeshëm ndikimin dhe kontrollin mbi Partinë Demokratike, duke çuar në përçarjen e saj." },
+        { "dimension": "Representation & Responsiveness", "score": 62, "peerAverage": 68, "globalBenchmark": 72, "description": "Mat sa mirë deputeti përfaqëson interesat e zonës së tij zgjedhore dhe sa i përgjegjshëm është ndaj nevojave të qytetarëve.", "commentary": "Përpjekjet e tij për përfaqësim shpesh janë eklipsuar nga luftërat e brendshme partiake dhe sfidat e lidershipit." }
+      ]
+    },
+    {
+      "id": "vip7",
+      "name": "Monika Kryemadhi",
+      "imageUrl": "/photos/monika_kryemadhi.jpg",
+      "category": "Politikë (PL)",
+      "shortBio": "Deputete, figurë drejtuese në Partinë e Lirisë.",
+      "detailedBio": "Monika Kryemadhi është një politikane shqiptare, ish-kryetare e Lëvizjes Socialiste për Integrim (tani Partia e Lirisë). Ajo është deputete në Kuvendin e Shqipërisë dhe ka një karrierë të gjatë politike, duke qenë aktive në skenë që nga vitet '90. Kryemadhi është e njohur për rolin e saj si një zë i fuqishëm në politikën shqiptare.",
+       "paragonAnalysis": [
+        { "dimension": "Policy Engagement & Expertise", "score": 58, "peerAverage": 65, "globalBenchmark": 70, "description": "Mat aftësinë për t'u angazhuar thellësisht me çështjet politike, për të kuptuar legjislacionin dhe për të kontribuar në mënyrë domethënëse në debate.", "commentary": "Fokusi i saj ka qenë kryesisht në organizimin e partisë dhe strategjitë elektorale afatshkurtra." },
+        { "dimension": "Narrative & Communication", "score": 82, "peerAverage": 75, "globalBenchmark": 80, "description": "Mat aftësinë për të komunikuar qartë me publikun, për të ndërtuar një narrativë bindëse dhe për të përdorur median në mënyrë efektive.", "commentary": "Komunikuese energjike dhe e drejtpërdrejtë, me aftësi për të mobilizuar bazën e partisë." },
+        { "dimension": "Assertiveness & Influence", "score": 65, "peerAverage": 70, "globalBenchmark": 75, "description": "Vlerëson aftësinë për të ndikuar te kolegët, për të ndërtuar koalicione dhe për të shtyrë përpara axhendën e tij/saj politike.", "commentary": "Ka mbajtur kontakte pune me ndërkombëtarët, por pa një rol të spikatur në diplomaci." },
+        { "dimension": "Governance & Institutional Strength", "score": 55, "peerAverage": 60, "globalBenchmark": 68, "description": "Mat kontributin në forcimin e institucioneve demokratike, respektimin e rregullave dhe promovimin e qeverisjes së mirë.", "commentary": "Nuk ka pasur rol direkt në menaxhimin ekonomik, por partia e saj ka ndikuar në politikat ekonomike kur ka qenë në qeveri." },
+        { "dimension": "Accountability & Transparency", "score": 42, "peerAverage": 55, "globalBenchmark": 65, "description": "Vlerëson nivelin e transparencës në veprimtarinë publike dhe gatishmërinë për t'u mbajtur përgjegjës për vendimet e marra.", "commentary": "Përballet me akuza për pasuri të pajustifikuar dhe korrupsion, gjë që ka ndikuar negativisht në imazhin e saj." },
+        { "dimension": "Organizational & Party Cohesion", "score": 85, "peerAverage": 85, "globalBenchmark": 80, "description": "Vlerëson nivelin e disiplinës partiake, besnikërinë ndaj linjës së partisë dhe rolin në organizimin e brendshëm.", "commentary": "Ruan një ndikim shumë të fortë brenda strukturave të Partisë së Lirisë, duke qenë një figurë kyçe vendimmarrëse." },
+        { "dimension": "Representation & Responsiveness", "score": 60, "peerAverage": 68, "globalBenchmark": 72, "description": "Mat sa mirë deputeti përfaqëson interesat e zonës së tij zgjedhore dhe sa i përgjegjshëm është ndaj nevojave të qytetarëve.", "commentary": "Aktiviteti i saj përfaqësues është i lidhur ngushtë me strategjinë dhe interesat e partisë." }
+      ]
+    },
+    {
+      "id": "vip8",
+      "name": "Erion Veliaj",
+      "imageUrl": "/photos/erion_veliaj.jpg",
+      "category": "Politikë (PS)",
+      "shortBio": "Kryetar i Bashkisë së Tiranës.",
+      "detailedBio": "Erion Veliaj është Kryetar i Bashkisë së Tiranës që nga viti 2015, i rizgjedhur për mandate të tjera. Më parë, ai ka shërbyer si Ministër i Mirëqenies Sociale dhe Rinisë. Veliaj njihet për projektet e tij urbane në Tiranë dhe iniciativat sociale. Aktiviteti i tij politik filloi me lëvizjen qytetare \"MJAFT!\".",
+      "paragonAnalysis": [
+        { "dimension": "Policy Engagement & Expertise", "score": 82, "peerAverage": 75, "globalBenchmark": 78, "description": "Mat aftësinë për t'u angazhuar thellësisht me çështjet politike, për të kuptuar legjislacionin dhe për të kontribuar në mënyrë domethënëse në debate.", "commentary": "Ka demonstruar një vizion të qartë për transformimin urban të Tiranës, por kritikohet për fokusin te betoni." },
+        { "dimension": "Narrative & Communication", "score": 90, "peerAverage": 80, "globalBenchmark": 82, "description": "Mat aftësinë për të komunikuar qartë me publikun, për të ndërtuar një narrativë bindëse dhe për të përdorur median në mënyrë efektive.", "commentary": "Shumë i aftë në komunikim dhe marketing politik. Përdor mediat sociale dhe eventet publike në mënyrë intensive." },
+        { "dimension": "Assertiveness & Influence", "score": 75, "peerAverage": 70, "globalBenchmark": 72, "description": "Vlerëson aftësinë për të ndikuar te kolegët, për të ndërtuar koalicione dhe për të shtyrë përpara axhendën e tij/saj politike.", "commentary": "Ka treguar efikasitet në realizimin e projekteve të mëdha, por kritikohet për mungesë transparence në tenderë." },
+        { "dimension": "Governance & Institutional Strength", "score": 72, "peerAverage": 70, "globalBenchmark": 74, "description": "Mat kontributin në forcimin e institucioneve demokratike, respektimin e rregullave dhe promovimin e qeverisjes së mirë.", "commentary": "Ka treguar aftësi menaxhuese gjatë krizave, por shpesh është kritikuar për përdorimin e tyre për qëllime propagandistike." },
+        { "dimension": "Accountability & Transparency", "score": 40, "peerAverage": 58, "globalBenchmark": 65, "description": "Vlerëson nivelin e transparencës në veprimtarinë publike dhe gatishmërinë për t'u mbajtur përgjegjës për vendimet e marra.", "commentary": "Administrata e tij është përballur me skandale dhe akuza të shumta për korrupsion, veçanërisht lidhur me dosjen \"5D\"." },
+        { "dimension": "Organizational & Party Cohesion", "score": 85, "peerAverage": 85, "globalBenchmark": 80, "description": "Vlerëson nivelin e disiplinës partiake, besnikërinë ndaj linjës së partisë dhe rolin në organizimin e brendshëm.", "commentary": "Ka mbështetje të fortë brenda Partisë Socialiste dhe konsiderohet një nga figurat kryesore të saj." },
+        { "dimension": "Representation & Responsiveness", "score": 65, "peerAverage": 68, "globalBenchmark": 75, "description": "Mat sa mirë deputeti përfaqëson interesat e zonës së tij zgjedhore dhe sa i përgjegjshëm është ndaj nevojave të qytetarëve.", "commentary": "Organizon takime të shpeshta me komunitetin, por shpesh akuzohet se injoron zërat kritikë dhe shoqërinë civile." }
+      ]
+    },
+    {
+      "id": "vip9",
+      "name": "Sokol Balla",
+      "imageUrl": "https://novaricstorage.blob.core.windows.net/media/Profile-Photos/SB_Real-Story.jpg",
+      "category": "Media",
+      "shortBio": "Gazetar dhe analist politik, drejtues i emisionit \"Real Story\".",
+      "detailedBio": "Sokol Balla është një gazetar i njohur dhe analist politik në Shqipëri. Ai ka një karrierë të gjatë në media, duke punuar në disa nga televizionet më të rëndësishme në vend. Aktualisht drejton emisionin 'Real Story', ku analizon zhvillimet politike dhe sociale me të ftuar nga fusha të ndryshme.",
+      "publicPerception": { "positive": 50, "neutral": 35, "negative": 15 },
+      "professionalPerformance": { "excellent": 45, "good": 40, "average": 10, "needsImprovement": 5 },
+      "skillsDevelopment": { "leadership": 20, "communication": 35, "expertise": 30, "ethics": 15 },
+       "maragonAnalysis": [
+        { "dimension": "Pajtueshmëria Etike", "score": 85, "peerAverage": 75, "globalBenchmark": 92, "description": "Respektimi i standardeve etike.", "commentary": "Njihet për një karrierë pa kompromise të mëdha etike. Mban një linjë të qartë profesionale." },
+        { "dimension": "Profesionalizmi në Kriza", "score": 88, "peerAverage": 80, "globalBenchmark": 90, "description": "Aftësitë e komunikimit dhe angazhimi.", "commentary": "Komunikues i qartë dhe moderator i aftë. Menaxhon mirë debatet me shumë panelistë." },
+        { "dimension": "Saktësia Faktike & Verifikimi", "score": 82, "peerAverage": 72, "globalBenchmark": 88, "description": "Saktësia dhe verifikimi i fakteve.", "commentary": "Balla shfaq një përkushtim të mirë ndaj verifikimit, por nganjëherë mbështetet te burime politike që kërkojnë verifikim të mëtejshëm." },
+        { "dimension": "Paanshmëria, Balanca & Anshmëria", "score": 75, "peerAverage": 65, "globalBenchmark": 90, "description": "Paanshmëria dhe objektiviteti.", "commentary": "Përpiqet të mbajë një qasje të ekuilibruar, por dinamika e debatit mund të anojë në varësi të të ftuarve në panel." },
+        { "dimension": "Thellësia e Analizës/Pyetjeve", "score": 84, "peerAverage": 75, "globalBenchmark": 88, "description": "Ndikimi dhe relevanca publike.", "commentary": "Emisioni i tij është një platformë e rëndësishme për diskursin politik, duke kontribuar rregullisht në debatin publik." },
+        { "dimension": "Qartësia & Koherenca", "score": 80, "peerAverage": 70, "globalBenchmark": 85, "description": "Profesionalizmi në mediat sociale.", "commentary": "Përdor mediat sociale në mënyrë profesionale, kryesisht për të promovuar emisionin e tij." },
+        { "dimension": "Promovimi i të Menduarit Kritik", "score": 78, "peerAverage": 70, "globalBenchmark": 82, "description": "Vlerëson aftësinë për të nxitur debatin dhe mendimin kritik tek audienca.", "commentary": "Inkurajon debatin, por thellësia e analizës ndonjëherë varet nga cilësia e panelistëve." }
+      ]
+    },
+    {
+      "id": "vip10",
+      "name": "Eni Vasili",
+      "imageUrl": "https://novaricstorage.blob.core.windows.net/media/Profile-Photos/EV_Open.jfif",
+      "category": "Media",
+      "shortBio": "Gazetare dhe drejtuese e emisionit \"Open\" në Top Channel.",
+      "detailedBio": "Eni Vasili është një gazetare dhe moderatore e njohur shqiptare, me një karrierë të gjatë në televizion. Ajo drejton emisionin e debatit politik 'Open' në Top Channel, i cili është një nga emisionet kryesore të këtij formati në vend. Vasili njihet për stilin e saj energjik të moderimit dhe aftësinë për të menaxhuar debate me shumë të ftuar.",
+       "publicPerception": { "positive": 55, "neutral": 30, "negative": 15 },
+       "professionalPerformance": { "excellent": 50, "good": 40, "average": 8, "needsImprovement": 2 },
+       "skillsDevelopment": { "leadership": 25, "communication": 38, "expertise": 25, "ethics": 12 },
+       "maragonAnalysis": [
+        { "dimension": "Pajtueshmëria Etike", "score": 86, "peerAverage": 75, "globalBenchmark": 92, "description": "Respektimi i standardeve etike.", "commentary": "Ruan standarde të larta etike, duke u fokusuar te përmbajtja dhe jo te skandalet personale apo profesionale." },
+        { "dimension": "Profesionalizmi në Kriza", "score": 90, "peerAverage": 80, "globalBenchmark": 90, "description": "Aftësitë e komunikimit dhe angazhimi.", "commentary": "Shumë e aftë në menaxhimin e debateve të ashpra, duke mbajtur kontrollin e studios dhe duke bërë pyetje të drejtpërdrejta." },
+        { "dimension": "Saktësia Faktike & Verifikimi", "score": 88, "peerAverage": 72, "globalBenchmark": 88, "description": "Saktësia dhe verifikimi i fakteve.", "commentary": "Tregon një rigorozitet të lartë në përgatitjen e temave dhe verifikimin e fakteve, veçanërisht në dosjet investigative." },
+        { "dimension": "Paanshmëria, Balanca & Anshmëria", "score": 80, "peerAverage": 65, "globalBenchmark": 90, "description": "Paanshmëria dhe objektiviteti.", "commentary": "Arrnon të jetë një moderatore e paanshme, duke u dhënë hapësirë të gjitha palëve, edhe pse stili i saj është energjik." },
+        { "dimension": "Thellësia e Analizës/Pyetjeve", "score": 87, "peerAverage": 75, "globalBenchmark": 88, "description": "Ndikimi dhe relevanca publike.", "commentary": "'Open' është një nga emisionet më me ndikim në vend, duke trajtuar tema që shpesh vendosin axhendën mediatike." },
+        { "dimension": "Qartësia & Koherenca", "score": 85, "peerAverage": 70, "globalBenchmark": 85, "description": "Profesionalizmi në mediat sociale.", "commentary": "Menaxhon një prani profesionale online, duke e përdorur për të angazhuar audiencën me temat e emisionit." },
+        { "dimension": "Promovimi i të Menduarit Kritik", "score": 82, "peerAverage": 70, "globalBenchmark": 82, "description": "Vlerëson aftësinë për të nxitur debatin dhe mendimin kritik tek audienca.", "commentary": "Formati i debatit nxit përplasjen e ideve, duke i ofruar audiencës perspektiva të ndryshme." }
+      ]
+    },
+    {
+      "id": "vip11",
+      "name": "Inva Mula",
+      "imageUrl": "/photos/inva_mula.jpg",
+      "category": "Art & Kulturë",
+      "shortBio": "Soprano me famë ndërkombëtare.",
+      "detailedBio": "Inva Mula është një soprano shqiptare me famë ndërkombëtare. Ajo ka performuar në skenat më prestigjioze të operës në botë, si La Scala në Milano, Opera e Parisit dhe Metropolitan Opera në Nju Jork. Mula është veçanërisht e njohur për rolet e saj në operat italiane dhe franceze. Ajo është gjithashtu e famshme për sigurimin e zërit të këngës për personazhin Diva Plavalaguna në filmin 'The Fifth Element'."
+    },
+    {
+      "id": "vip12",
+      "name": "Ermal Mamaqi",
+      "imageUrl": "/photos/ermal_mamaqi.jpg",
+      "category": "Showbiz & Biznes",
+      "shortBio": "Aktor, moderator, producent dhe sipërmarrës.",
+      "detailedBio": "Ermal Mamaqi është një personazh i njohur mediatik në Shqipëri, i cili ka pasur sukses si aktor komik, prezantues televiziv, producent dhe së fundmi si sipërmarrës dhe trajner motivimi. Ai drejtoi për shumë vite emisionin e suksesshëm 'Xing me Ermalin'. Vitet e fundit, ai është fokusuar në prodhimin e filmave dhe në biznesin e tij të trajnimeve për sukses personal dhe profesional."
+    },
+    {
+      "id": "vip13",
+      "name": "Alketa Vejsiu",
+      "imageUrl": "https://novaric.co/wp-content/uploads/2025/12/AlketaVEJSIU.jpg",
+      "category": "Media & Showbiz",
+      "shortBio": "Prezantuese televizive, producente dhe sipërmarrëse.",
+      "detailedBio": "Alketa Vejsiu është një nga prezantueset televizive më të njohura dhe më jetëgjata në Shqipëri. Ajo ka drejtuar disa nga spektaklet më të mëdha televizive, përfshirë 'Dance with me', 'X Factor Albania' dhe 'Festivali i Këngës'. Vejsiu është gjithashtu një sipërmarrëse e suksesshme, me biznese në fushën e organizimit të eventeve dhe modës.",
+      "maragonAnalysis": [
+        { "dimension": "Pajtueshmëria Etike", "score": 89, "peerAverage": 75, "globalBenchmark": 92, "description": "Respektimi i standardeve etike, si shmangia e konfliktit të interesit, mbrojtja e burimeve dhe trajtimi me dinjitet i të ftuarve.", "commentary": "Shquhet për profesionalizëm dhe etikë të lartë në punën e saj si prezantuese dhe producente." },
+        { "dimension": "Profesionalizmi në Kriza", "score": 93, "peerAverage": 80, "globalBenchmark": 90, "description": "Përfshin qartësinë, elokuencën, aftësinë për të bërë pyetje të mprehta dhe për të menaxhuar dinamikën e një debati të drejtpërdrejtë.", "commentary": "Shumë elokuente dhe energjike, me një aftësi të spikatur për të drejtuar shfaqje të mëdha live dhe për të krijuar një lidhje të fortë me publikun." },
+        { "dimension": "Saktësia Faktike & Verifikimi", "score": 82, "peerAverage": 72, "globalBenchmark": 88, "description": "Vlerëson rigorozitetin në verifikimin e informacionit para transmetimit, atribuimin e saktë të burimeve dhe dallimin e qartë midis faktit dhe opinionit.", "commentary": "Ashtu si Gjebrea, në formatet e saj fokusi është te menaxhimi i spektaklit. Ruan saktësi në prezantimin e informacionit të produksionit." },
+        { "dimension": "Paanshmëria, Balanca & Anshmëria", "score": 86, "peerAverage": 65, "globalBenchmark": 90, "description": "Mat aftësinë për të moderuar debatin në mënyrë të paanshme, duke u dhënë kohë dhe hapësirë të barabartë të gjitha palëve dhe duke shmangur paragjykimet personale.", "commentary": "Profesionale dhe e paanshme në rolin e saj si prezantuese, duke u dhënë hapësirë të gjithë konkurrentëve apo të ftuarve." },
+        { "dimension": "Thellësia e Analizës/Pyetjeve", "score": 88, "peerAverage": 75, "globalBenchmark": 88, "description": "Mat aftësinë e emisionit dhe prezantuesit për të ndikuar në diskursin publik, për të vendosur axhendën dhe për t'u perceptuar si një burim i rëndësishëm informacioni.", "commentary": "Ka drejtuar disa nga spektaklet më të mëdha, duke qenë një figurë me ndikim të madh në botën e showbiz-it shqiptar." },
+        { "dimension": "Qartësia & Koherenca", "score": 85, "peerAverage": 70, "globalBenchmark": 85, "description": "Analizon mënyrën se si personaliteti e përdor median sociale, duke ruajtur standardet e paanshmërisë dhe profesionalizmit edhe jashtë studios.", "commentary": "Prani e kuruar dhe profesionale në mediat sociale, e fokusuar te puna, moda dhe mesazhet pozitive." },
+        { "dimension": "Promovimi i të Menduarit Kritik", "score": 78, "peerAverage": 70, "globalBenchmark": 82, "description": "Vlerëson aftësinë për të nxitur debatin dhe mendimin kritik tek audienca.", "commentary": "Formati i saj është kryesisht argëtues, duke pasur më pak fokus te mendimi kritik dhe më shumë te emocionet dhe estetika." }
+      ]
+    },
+    {
+      "id": "vip14",
+      "name": "Arian Çani",
+      "imageUrl": "https://dosja.al/wp-content/uploads/2019/06/Arian-Cani.jpg",
+      "category": "Media",
+      "shortBio": "Prezantues i emisionit \"Zonë e Lirë\" në ABC News.",
+      "detailedBio": "Arian Çani është një figurë kontroverse dhe me ndikim në median shqiptare, i njohur për emisionin e tij 'Zonë e Lirë'. Emisioni, i cili ka ndryshuar disa herë televizion, karakterizohet nga stili provokues i Çanit, debatet e ashpra dhe trajtimi i temave nga politika te showbiz-i. Ai mbetet një nga emisionet më të komentuara në vend."
+    },
+    {
+      "id": "vip15",
+      "name": "Arbana Osmani",
+      "imageUrl": "https://ata.gov.al/wp-content/uploads/2023/01/Arbana-Osmani.jpg",
+      "category": "Media & Showbiz",
+      "shortBio": "Prezantuese e \"Big Brother VIP Albania\" në Top Channel.",
+      "detailedBio": "Arbana Osmani është një nga prezantueset më të dashura për publikun shqiptar. Ajo ka një karrierë të gjatë në Top Channel, ku ka drejtuar disa nga programet më të suksesshme, duke kulmuar me fenomenin televiziv 'Big Brother VIP Albania'. Stili i saj i qetë dhe profesional i moderimit vlerësohet gjerësisht."
+    },
+    {
+      "id": "vip16",
+      "name": "Adi Krasta",
+      "imageUrl": "https://kallxo.com/wp-content/uploads/2022/10/ad-krasta-1-scaled.jpg",
+      "category": "Media",
+      "shortBio": "Gazetar dhe prezantues me karrierë të gjatë në media.",
+      "detailedBio": "Adi Krasta është një gazetar, prezantues dhe publicist me një karrierë të gjatë dhe me ndikim në median shqiptare. Ai njihet për stilin e tij intelektual, gjuhën e pasur dhe qasjen kritike ndaj fenomeneve politike dhe sociale. Krasta ka drejtuar disa emisione të rëndësishme dhe konsiderohet një nga zërat më të pavarur në gazetarinë shqiptare."
+    },
+    {
+      "id": "vip17",
+      "name": "Sonila Meço",
+      "imageUrl": "https://novaric.co/wp-content/uploads/2025/12/SonilaMECO.jpg",
+      "category": "Media",
+      "shortBio": "Gazetare, prezantuese lajmesh dhe drejtuese emisionesh.",
+      "detailedBio": "Sonila Meço është një gazetare dhe moderatore e njohur, me një përvojë të gjatë në disa nga televizionet kryesore në vend. Ajo njihet për profesionalizmin, qartësinë në komunikim dhe aftësinë për të moderuar debate të informuara. Meço ka drejtuar si edicione lajmesh ashtu edhe emisione të thelluara politike."
+    },
+    {
+      "id": "vip18",
+      "name": "Marin Mema",
+      "imageUrl": "https://www.libohova.org/wp-content/uploads/2020/07/Marin-Mema-gazetar-top-channel.jpg",
+      "category": "Media",
+      "shortBio": "Gazetar investigativ, i njohur për emisionin \"Gjurmë Shqiptare\".",
+      "detailedBio": "Marin Mema është një gazetar investigativ, i famshëm për emisionin e tij 'Gjurmë Shqiptare' në Top Channel. Puna e tij fokusohet në zbulimin e historive të pa treguara, trashëgimisë kulturore shqiptare në rajon dhe çështjeve me karakter kombëtar. Mema vlerësohet për kërkimin e tij të thelluar dhe guximin për të trajtuar tema të ndjeshme."
+    },
+    {
+      "id": "vip19",
+      "name": "Benet Beci",
+      "imageUrl": "https://novaricstorage.blob.core.windows.net/media/Profile-Photos/Benet-BECI",
+      "category": "Politikë (PS)",
+      "shortBio": "Kryetar i Bashkisë Shkodër, inxhinier dhe ish-deputet.",
+      "detailedBio": "Benet Beci, aktualisht Kryetar i Bashkisë Shkodër, është një figurë me një karrierë të gjatë në administratën publike dhe politikë. I diplomuar si inxhinier, ai ka drejtuar Fondin Shqiptar të Zhvillimit (FSHZH) për një periudhë të gjatë, duke menaxhuar projekte të rëndësishme infrastrukturore në nivel kombëtar. Para zgjedhjes së tij si kryebashkiak, Beci ka shërbyer edhe si deputet i Partisë Socialiste në Kuvendin e Shqipërisë. Udhëheqja e tij në Shkodër fokusohet në zhvillimin urban, përmirësimin e shërbimeve publike dhe promovimin e potencialit turistik dhe ekonomik të rajonit.",
+       "paragonAnalysis": [
+        { "dimension": "Policy Engagement & Expertise", "score": 80, "peerAverage": 75, "globalBenchmark": 78, "description": "Mat aftësinë për t'u angazhuar thellësisht me çështjet politike, për të kuptuar legjislacionin dhe për të kontribuar në mënyrë domethënëse në debate.", "commentary": "Ka një vizion të qartë për zhvillimin infrastrukturor, të mbështetur nga përvoja e tij e mëparshme." },
+        { "dimension": "Narrative & Communication", "score": 75, "peerAverage": 78, "globalBenchmark": 80, "description": "Mat aftësinë për të komunikuar qartë me publikun, për të ndërtuar një narrativë bindëse dhe për të përdorur median në mënyrë efektive.", "commentary": "Komunikues i matur dhe teknik, por jo gjithmonë i aftë të ngjallë pasion politik." },
+        { "dimension": "Assertiveness & Influence", "score": 88, "peerAverage": 70, "globalBenchmark": 75, "description": "Vlerëson aftësinë për të ndikuar te kolegët, për të ndërtuar koalicione dhe për të shtyrë përpara axhendën e tij/saj politike.", "commentary": "Përkatësia e tij politike dhe përvoja e mëparshme i sigurojnë një marrëdhënie shumë të mirë me qeverinë qendrore." },
+        { "dimension": "Governance & Institutional Strength", "score": 85, "peerAverage": 78, "globalBenchmark": 80, "description": "Mat kontributin në forcimin e institucioneve demokratike, respektimin e rregullave dhe promovimin e qeverisjes së mirë.", "commentary": "Përvoja në FSHZH i jep një avantazh të madh në menaxhimin administrativ dhe zbatimin e projekteve." },
+        { "dimension": "Accountability & Transparency", "score": 70, "peerAverage": 65, "globalBenchmark": 70, "description": "Vlerëson nivelin e transparencës në veprimtarinë publike dhe gatishmërinë për t'u mbajtur përgjegjës për vendimet e marra.", "commentary": "Deri tani ka një imazh relativisht të pastër, por sfidat e transparencës në bashki mbeten." },
+        { "dimension": "Organizational & Party Cohesion", "score": 80, "peerAverage": 85, "globalBenchmark": 80, "description": "Vlerëson nivelin e disiplinës partiake, besnikërinë ndaj linjës së partisë dhe rolin në organizimin e brendshëm.", "commentary": "Ka mbështetje të fortë brenda partisë dhe konsiderohet një figurë e rëndësishme rajonale për PS." },
+        { "dimension": "Representation & Responsiveness", "score": 82, "peerAverage": 75, "globalBenchmark": 78, "description": "Mat sa mirë deputeti përfaqëson interesat e zonës së tij zgjedhore dhe sa i përgjegjshëm është ndaj nevojave të qytetarëve.", "commentary": "Tregon një qasje të hapur ndaj bashkëpunimit me komunitetin dhe grupet e interesit në qytet." }
+      ]
+    },
+    {
+      "id": "vip20",
+      "name": "Enkel Demi (Tomi)",
+      "imageUrl": "https://novaric.co/wp-content/uploads/2025/12/EnkelDEMI.jpg",
+      "category": "Media & Letërsi",
+      "shortBio": "Gazetar, shkrimtar dhe drejtues i emisionit \"Shih Programin\".",
+      "detailedBio": "Enkel Demi, i njohur gjerësisht me nofkën 'Tomi', është një gazetar, publicist, shkrimtar dhe përkthyes shqiptar. Ai ka një karrierë të gjatë në media, duke punuar si në shtypin e shkruar ashtu edhe në radio e televizion. Stili i tij karakterizohet nga një përzierje e ironisë, kulturës së gjerë dhe komentit të mprehtë social e politik. Ai ka drejtuar disa emisione të suksesshme dhe është autor i disa librave."
+    },
+    {
+      "id": "vip21",
+      "name": "Armina Mevlani",
+      "imageUrl": "https://www.shkodraweb.com/wp-content/uploads/2023/12/armina-mevlani-2.jpg",
+      "category": "Showbiz & Influencer",
+      "shortBio": "Blogere mode, sipërmarrëse dhe personazh mediatik.",
+      "detailedBio": "Armina Mevlani është një nga blogeret dhe influencueset e para dhe më të suksesshme të modës në Shqipëri. Ajo është themeluese e blogut 'Armina's Puzzle' dhe ka një prani të fortë në mediat sociale. Përveç modës, ajo është shpesh e pranishme në media si opinioniste në emisione të ndryshme dhe është e njohur për lidhjen e saj me Shkëlzen Berishën, djalin e ish-kryeministrit Sali Berisha."
+    },
+    {
+      "id": "vip22",
+      "name": "Bledi Mane",
+      "imageUrl": "https://www.voxnews.al/wp-content/uploads/2023/01/bledimane.jpg",
+      "category": "Media",
+      "shortBio": "Gazetar i njohur për stilin e tij provokues dhe pa kompromis.",
+      "detailedBio": "Bledi Mane është një gazetar i njohur për stilin e tij të drejtpërdrejtë, shpeshherë provokues dhe polemizues. Ai ka punuar në disa media dhe është i njohur për shkrimet e tij pa filtra dhe komentet e tij të mprehta mbi politikën, shoqërinë dhe botën e showbiz-it. Mane ka marrë pjesë edhe në formate televizive si 'Big Brother VIP'."
+    },
+    {
+      "id": "vip23",
+      "name": "Mustafa Nano",
+      "imageUrl": "https://dosja.al/wp-content/uploads/2023/01/mustafa-nano.jpg",
+      "category": "Media",
+      "shortBio": "Publicist, analist dhe drejtues emisioni.",
+      "detailedBio": "Mustafa Nano është një publicist, analist dhe autor i njohur në Shqipëri. Ai ka një karrierë të gjatë në gazetari dhe opinionbërje, duke u shquar për qëndrimet e tij shpesh kundër rrymës dhe kritikën ndaj fenomeneve politike, fetare dhe sociale. Nano ka drejtuar disa emisione televizive dhe është autor i disa librave. Stili i tij polemik dhe intelektual e bën një zë të veçantë në hapësirën publike."
+    },
+    {
+      "id": "vip24",
+      "name": "Ermal Peçi",
+      "imageUrl": "https://newsbomb.al/wp-content/uploads/2023/04/ermal-peci.jpg",
+      "category": "Media & Showbiz",
+      "shortBio": "Prezantues televiziv, i njohur për emisione argëtuese.",
+      "detailedBio": "Ermal Peçi është një prezantues i ri dhe energjik televiziv. Ai është bërë i njohur duke drejtuar disa emisione argëtuese dhe të pasdites, ku interviston personazhe të njohur nga bota e artit, kulturës dhe showbiz-it. Stili i tij është dinamik dhe miqësor."
+    },
+    {
+      "id": "vip25",
+      "name": "Ilva Tare",
+      "imageUrl": "https://shqiptarja.com/uploads/ckeditor/images/ilva%20tare%20e.jpg",
+      "category": "Media",
+      "shortBio": "Gazetare me përvojë dhe ish-drejtuese e \"Tonight Ilva Tare\".",
+      "detailedBio": "Ilva Tare është një nga gazetaret dhe moderatoret më të respektuara në Shqipëri. Për shumë vite, ajo drejtoi emisionin e suksesshëm politik 'Tonight Ilva Tare', i cili shquhej për debatin e thelluar dhe profesionalizmin. Tare njihet për qetësinë, përgatitjen dhe aftësinë për të bërë pyetje të mprehta. Aktualisht, ajo punon në Shtetet e Bashkuara, por mbetet një figurë me ndikim në gazetarinë shqiptare."
+    },
+    {
+      "id": "vip26",
+      "name": "Dalina Buzi",
+      "imageUrl": "https://politiko.al/wp-content/uploads/2022/10/dalinabuzi.jpg",
+      "category": "Media & Produksion",
+      "shortBio": "Gazetare, skenariste dhe themeluese e \"Anabel Media\".",
+      "detailedBio": "Dalina Buzi është një figurë inovatore në median shqiptare. Pasi punoi si gazetare, ajo themeloi 'Anabel', një nga revistat e para online me fokus te gratë e reja, e cila më pas u zgjerua në një platformë të plotë mediatike. Buzi është gjithashtu një skenariste dhe producente e suksesshme, duke krijuar seriale online që kanë pasur një ndikim të madh, si 'Hostel by Anabel'. Ajo është një zë i rëndësishëm për gjeneratën e re."
+    },
+    {
+      "id": "vip27",
+      "name": "Ledion Liço",
+      "imageUrl": "https://www.gazetadita.al/wp-content/uploads/2024/02/Ledion-Lico-696x463-1.jpg",
+      "category": "Media & Showbiz",
+      "shortBio": "Prezantues dhe producent televiziv.",
+      "detailedBio": "Ledion Liço është një prezantues dhe producent televiziv i njohur, me një karrierë të gjatë në Top Media. Ai ka drejtuar disa nga formatet më të mëdha, si 'Top Fest' dhe 'The Voice of Albania'. Stili i tij është modern, energjik dhe i sofistikuar. Liço është gjithashtu i përfshirë në menaxhimin e medias dhe prodhimin e formateve të reja."
+    },
+    {
+      "id": "vip28",
+      "name": "Dritan Shakohoxha",
+      "imageUrl": "https://kallxo.com/wp-content/uploads/2018/06/dritan-shakohoxha-1.jpg",
+      "category": "Gazetari Sportive",
+      "shortBio": "Komentator i njohur sportiv.",
+      "detailedBio": "Dritan Shakohoxha është padyshim zëri më i njohur i komentimit sportiv në Shqipëri, veçanërisht për futbollin. Ai ka komentuar ndeshjet më të rëndësishme të Kombëtares Shqiptare dhe kampionateve kryesore evropiane për dekada. Stili i tij është pasionant, emocional dhe plot ngjyra, duke u bërë një figurë shumë e dashur për sportdëshiruesit."
+    },
+    {
+      "id": "vip29",
+      "name": "Belind Këlliçi",
+      "imageUrl": "https://dosja.al/wp-content/uploads/2023/02/Belind-Kellici.jpg",
+      "category": "Politikë (PD)",
+      "shortBio": "Deputet i Partisë Demokratike dhe figurë e re politike.",
+      "detailedBio": "Belind Këlliçi është një politikan i ri dhe energjik i Partisë Demokratike. Ai u bë i njohur si kryetar i Forumit Rinor të Partisë Demokratike dhe më vonë si deputet në Kuvendin e Shqipërisë. Në vitin 2023, ai ishte kandidati i koalicionit opozitar 'Bashkë Fitojmë' për Bashkinë e Tiranës. Këlliçi njihet për stilin e tij konfrontues dhe denoncimet e forta ndaj qeverisë."
+    },
+    {
+      "id": "vip30",
+      "name": "Bajram Begaj",
+      "imageUrl": "https://novaricstorage.blob.core.windows.net/media/Profile-Photos/B-BEGA.jfif",
+      "category": "Politikë (President)",
+      "shortBio": "President i Republikës së Shqipërisë.",
+      "detailedBio": "Bajram Begaj është Presidenti aktual i Republikës së Shqipërisë. Para se të merrte këtë detyrë, ai kishte një karrierë të gjatë ushtarake, duke arritur gradën e Gjeneral Majorit dhe duke shërbyer si Shef i Shtabit të Përgjithshëm të Forcave të Armatosura Shqiptare. Zgjedhja e tij si president erdhi si propozim i Partisë Socialiste në pushtet. Mandati i tij fokusohet në ruajtjen e unitetit kombëtar dhe përfaqësimin e shtetit."
+    },
+    {
+      "id": "vip31",
+      "name": "Samir Mane",
+      "imageUrl": "/photos/samir_mane.jpg",
+      "category": "Biznes",
+      "shortBio": "President i Grupit BALFIN, një nga sipërmarrësit më të suksesshme.",
+      "detailedBio": "Samir Mane është një sipërmarrës dhe investitor shqiptar, themelues dhe president i Grupit BALFIN, një nga grupet më të mëdha private të investimeve në Shqipëri dhe rajon. Aktivitetet e grupit shtrihen në fusha të ndryshme, si pasuritë e paluajtshme, shitjet me pakicë (me rrjetet NEPTUN dhe SPAR), turizmi dhe industria minerare. Mane konsiderohet një nga biznesmenët më të fuqishëm dhe me ndikim në ekonominë shqiptare.",
+       "paragonAnalysis": [
+        { "dimension": "Policy Engagement & Expertise", "score": 92, "peerAverage": 80, "globalBenchmark": 85, "description": "Mat aftësinë për t'u angazhuar thellësisht me çështjet politike, për të kuptuar legjislacionin dhe për të kontribuar në mënyrë domethënëse në debate.", "commentary": "Ka treguar një aftësi të jashtëzakonshme për të diversifikuar portofolin e investimeve, duke e bërë Grupin BALFIN lider rajonal." },
+        { "dimension": "Narrative & Communication", "score": 85, "peerAverage": 80, "globalBenchmark": 83, "description": "Mat aftësinë për të komunikuar qartë me publikun, për të ndërtuar një narrativë bindëse dhe për të përdorur median në mënyrë efektive.", "commentary": "Një nga figurat më me ndikim në ekonominë shqiptare. Imazhi i tij është ai i një biznesmeni të suksesshëm." },
+        { "dimension": "Assertiveness & Influence", "score": 88, "peerAverage": 82, "globalBenchmark": 84, "description": "Vlerëson aftësinë për të ndikuar te kolegët, për të ndërtuar koalicione dhe për të shtyrë përpara axhendën e tij/saj politike.", "commentary": "Stil menaxherial efektiv dhe i orientuar drejt rritjes. Ka ndërtuar një ekip të fortë menaxherial." },
+        { "dimension": "Governance & Institutional Strength", "score": 90, "peerAverage": 78, "globalBenchmark": 80, "description": "Mat kontributin në forcimin e institucioneve demokratike, respektimin e rregullave dhe promovimin e qeverisjes së mirë.", "commentary": "Grupi BALFIN ka shënuar një rritje të qëndrueshme dhe është një nga kontribuesit më të mëdhenj në ekonominë shqiptare." },
+        { "dimension": "Accountability & Transparency", "score": 75, "peerAverage": 70, "globalBenchmark": 75, "description": "Vlerëson nivelin e transparencës në veprimtarinë publike dhe gatishmërinë për t'u mbajtur përgjegjës për vendimet e marra.", "commentary": "Ka rritur angazhimin në CSR vitet e fundit, por kritikohet se disa projekte kanë ndikim negativ mjedisor." },
+        { "dimension": "Organizational & Party Cohesion", "score": 85, "peerAverage": 85, "globalBenchmark": 80, "description": "Vlerëson nivelin e disiplinës partiake, besnikërinë ndaj linjës së partisë dhe rolin në organizimin e brendshëm.", "commentary": "Si lider i një grupi të madh, ruan kohezion të lartë organizativ." },
+        { "dimension": "Representation & Responsiveness", "score": 70, "peerAverage": 68, "globalBenchmark": 72, "description": "Mat sa mirë deputeti përfaqëson interesat e zonës së tij zgjedhore dhe sa i përgjegjshëm është ndaj nevojave të qytetarëve.", "commentary": "Fokusi është në rritjen e biznesit; përgjegjshmëria ndaj komunitetit shprehet kryesisht përmes CSR." }
+      ]
+    },
+    {
+      "id": "vip32",
+      "name": "Ylli Rakipi",
+      "imageUrl": "https://novaricstorage.blob.core.windows.net/media/Profile-Photos/YR_TePaEks.jpg",
+      "category": "Media",
+      "shortBio": "Gazetar dhe drejtues i emisionit \"Të Paekspozuarit\".",
+      "detailedBio": "Ylli Rakipi është një gazetar, publicist dhe moderator i njohur për stilin e tij të mprehtë dhe kritik. Ai është themeluesi dhe drejtuesi i emisionit 'Të Paekspozuarit', i cili fokusohet në investigimin dhe demaskimin e aferave politike dhe korruptive. Rakipi njihet për qëndrimet e tij pa kompromis ndaj pushtetit dhe konsiderohet një nga zërat më të fortë opozitarë në median shqiptare.",
+       "publicPerception": { "positive": 40, "neutral": 25, "negative": 35 },
+       "professionalPerformance": { "excellent": 45, "good": 30, "average": 15, "needsImprovement": 10 },
+       "skillsDevelopment": { "leadership": 20, "communication": 30, "expertise": 30, "ethics": 20 },
+       "maragonAnalysis": [
+        { "dimension": "Pajtueshmëria Etike", "score": 78, "peerAverage": 75, "globalBenchmark": 92, "description": "Respektimi i standardeve etike.", "commentary": "Ndonëse me qëndrime të forta, ai ruan një integritet në përputhje me linjën e tij editoriale të deklaruar si kritike." },
+        { "dimension": "Profesionalizmi në Kriza", "score": 85, "peerAverage": 80, "globalBenchmark": 90, "description": "Aftësitë e komunikimit dhe angazhimi.", "commentary": "Ka një stil unik dhe të drejtpërdrejtë që angazhon një audiencë specifike që kërkon gazetari pa kompromis." },
+        { "dimension": "Saktësia Faktike & Verifikimi", "score": 75, "peerAverage": 72, "globalBenchmark": 88, "description": "Saktësia dhe verifikimi i fakteve.", "commentary": "Fokusohet më shumë në opinionin editorial dhe denoncimin sesa në verifikimin e detajuar të fakteve brenda formatit të emisionit." },
+        { "dimension": "Paanshmëria, Balanca & Anshmëria", "score": 62, "peerAverage": 65, "globalBenchmark": 90, "description": "Paanshmëria dhe objektiviteti.", "commentary": "Ka një linjë të qartë editoriale kritike ndaj qeverisë. Emisioni nuk pretendon të jetë i balancuar, por një zë opozitar." },
+        { "dimension": "Thellësia e Analizës/Pyetjeve", "score": 80, "peerAverage": 75, "globalBenchmark": 88, "description": "Ndikimi dhe relevanca publike.", "commentary": "Ka një ndikim të konsiderueshëm në segmentin opozitar të opinionit publik dhe shërben si një platformë për zërat kritikë." },
+        { "dimension": "Qartësia & Koherenca", "score": 70, "peerAverage": 70, "globalBenchmark": 85, "description": "Profesionalizmi në mediat sociale.", "commentary": "Përdor mediat sociale për të amplifikuar mesazhet dhe gjetjet e emisionit të tij." },
+        { "dimension": "Promovimi i të Menduarit Kritik", "score": 85, "peerAverage": 70, "globalBenchmark": 82, "description": "Vlerëson aftësinë për të nxitur debatin dhe mendimin kritik tek audienca.", "commentary": "Nxit fuqishëm mendimin kritik ndaj pushtetit, duke qenë një nga zërat më të fortë në këtë drejtim." }
+      ]
+    },
+    {
+      "id": "vip33",
+      "name": "Dr Alban Gj. THIKA",
+      "imageUrl": "https://novaricstorage.blob.core.windows.net/media/Profile-Photos/NOVARIC_Team-Member_A-THIKA_Small.png",
+      "category": "Biznes & Analizë Mediatike",
+      "shortBio": "Analist i medias dhe konsulent strategjik, i specializuar në ndërthurjen e teknologjisë me median.",
+      "detailedBio": "Dr. Alban Gj. THIKA është një konsulent strategjik dhe analist poliedrik me një përvojë të gjerë ndërkombëtare në biznes, financë dhe media. Formimi i tij i shquar akademik përfshin një Doktoraturë në Administrim Biznesi (DBA) nga University of South Australia, një MBA nga University of Adelaide dhe një certifikatë në Strategji Disruptive nga Harvard Business School. Karriera e tij profesionale shtrihet në sektorë të ndryshëm, duke përfshirë role si Analist i të Dhënave dhe Inteligjencës së Biznesit, Konsulent i Mediave Sociale dhe Analist Marketingu, si dhe Drejtor Ekzekutiv për Strategjinë e Zhvillimit të Biznesit. Dr. THIKA zotëron një njohuri të thellë të politikave të BE-së, menaxhimit të cikleve të projekteve dhe mbrojtjes së pronësisë intelektuale. Ai është një negociator i zoti dhe një profesionist fleksibël; ai zotëron rrjedhshëm gjuhën shqipe dhe angleze, dhe ka njohuri bazike të gjuhëve të tjera të listuara në CV-në e tij, si italishtja, frëngjishtja dhe gjermanishtja. Angazhimi i tij në komunitet përfshin themelimin e shoqatave arsimore dhe mediatike për komunitetin shqiptar në Australi. Ekspertiza e Dr. THIKA-s qëndron në zhvillimin e strategjive inovative që ndihmojnë organizatat të lundrojnë në peizazhe komplekse teknologjike dhe tregu.",
+      "paragonAnalysis": [
+        { "dimension": "Policy Engagement & Expertise", "score": 95, "peerAverage": 80, "globalBenchmark": 85, "description": "Mat aftësinë për t'u angazhuar thellësisht me çështjet politike, për të kuptuar legjislacionin dhe për të kontribuar në mënyrë domethënëse në debate.", "commentary": "Demonstron aftësi të jashtëzakonshme në analiza komplekse dhe planifikim strategjik, të mbështetur nga formimi i tij akademik." },
+        { "dimension": "Narrative & Communication", "score": 88, "peerAverage": 82, "globalBenchmark": 84, "description": "Mat aftësinë për të komunikuar qartë me publikun, për të ndërtuar një narrativë bindëse dhe për të përdorur median në mënyrë efektive.", "commentary": "Shumë i aftë në prezantimin e koncepteve të vështira në mënyrë të qartë dhe bindëse, si në mjedise akademike ashtu edhe ato të biznesit." },
+        { "dimension": "Assertiveness & Influence", "score": 86, "peerAverage": 78, "globalBenchmark": 80, "description": "Vlerëson aftësinë për të ndikuar te kolegët, për të ndërtuar koalicione dhe për të shtyrë përpara axhendën e tij/saj politike.", "commentary": "Po ndërton një profil si një lider mendimi në fushën e ndërthurjes së teknologjisë me median, duke sjellë perspektiva inovative." },
+        { "dimension": "Governance & Institutional Strength", "score": 90, "peerAverage": 75, "globalBenchmark": 78, "description": "Mat kontributin në forcimin e institucioneve demokratike, respektimin e rregullave dhe promovimin e qeverisjes së mirë.", "commentary": "Njohuri e thellë e teknologjive të fundit dhe aplikimi i tyre në media dhe biznes, duke i dhënë një avantazh konkurrues." },
+        { "dimension": "Accountability & Transparency", "score": 92, "peerAverage": 85, "globalBenchmark": 88, "description": "Vlerëson nivelin e transparencës në veprimtarinë publike dhe gatishmërinë për t'u mbajtur përgjegjës për vendimet e marra.", "commentary": "Ruan një standard të lartë etike dhe objektiviteti në punën e tij, duke u bazuar te të dhënat dhe faktet." },
+        { "dimension": "Organizational & Party Cohesion", "score": 89, "peerAverage": 80, "globalBenchmark": 83, "description": "Vlerëson nivelin e disiplinës partiake, besnikërinë ndaj linjës së partisë dhe rolin në organizimin e brendshëm.", "commentary": "Përvoja e tij si drejtor ekzekutiv dëshmon aftësi të forta në menaxhimin dhe zbatimin e suksesshëm të projekteve." },
+        { "dimension": "Representation & Responsiveness", "score": 85, "peerAverage": 75, "globalBenchmark": 78, "description": "Mat sa mirë deputeti përfaqëson interesat e zonës së tij zgjedhore dhe sa i përgjegjshëm është ndaj nevojave të qytetarëve.", "commentary": "Angazhimi i tij në komunitet përfshin themelimin e shoqatave arsimore dhe mediatike për komunitetin shqiptar." }
+      ]
+    },
+    {
+      "id": "vip34",
+      "name": "Taulant Balla",
+      "imageUrl": "https://www.parlament.al/Files/Deputetet/taulant-balla.jpg",
+      "category": "Politikë (PS)",
+      "shortBio": "Ministër i Shtetit për Marrëdhëniet me Parlamentin.",
+      "detailedBio": "Taulant Balla është një figurë kyçe në Partinë Socialiste, duke shërbyer si Ministër i Shtetit për Marrëdhëniet me Parlamentin. Ai ka një karrierë të gjatë politike dhe konsiderohet një nga strategët kryesorë të partisë.",
+      "paragonAnalysis": [
+        { "dimension": "Policy Engagement & Expertise", "score": 85, "peerAverage": 70, "globalBenchmark": 75, "description": "", "commentary": "" },
+        { "dimension": "Narrative & Communication", "score": 80, "peerAverage": 75, "globalBenchmark": 80, "description": "", "commentary": "" },
+        { "dimension": "Assertiveness & Influence", "score": 88, "peerAverage": 72, "globalBenchmark": 78, "description": "", "commentary": "" },
+        { "dimension": "Governance & Institutional Strength", "score": 75, "peerAverage": 60, "globalBenchmark": 68, "description": "", "commentary": "" },
+        { "dimension": "Accountability & Transparency", "score": 60, "peerAverage": 55, "globalBenchmark": 65, "description": "", "commentary": "" },
+        { "dimension": "Organizational & Party Cohesion", "score": 90, "peerAverage": 85, "globalBenchmark": 80, "description": "", "commentary": "" },
+        { "dimension": "Representation & Responsiveness", "score": 70, "peerAverage": 68, "globalBenchmark": 72, "description": "", "commentary": "" }
+      ]
+    },
+    {
+      "id": "vip35",
+      "name": "Gazment Bardhi",
+      "imageUrl": "https://www.parlament.al/Files/Deputetet/gazment-bardhi.jpg",
+      "category": "Politikë (PD)",
+      "shortBio": "Kryetar i Grupit Parlamentar të PD.",
+      "detailedBio": "Gazment Bardhi është Kryetar i Grupit Parlamentar të Partisë Demokratike. Ai është një jurist me profesion dhe një figurë e rëndësishme në opozitë, shpesh duke udhëhequr debate ligjore dhe politike në parlament.",
+      "paragonAnalysis": [
+        { "dimension": "Policy Engagement & Expertise", "score": 78, "peerAverage": 70, "globalBenchmark": 75, "description": "", "commentary": "" },
+        { "dimension": "Narrative & Communication", "score": 75, "peerAverage": 75, "globalBenchmark": 80, "description": "", "commentary": "" },
+        { "dimension": "Assertiveness & Influence", "score": 80, "peerAverage": 72, "globalBenchmark": 78, "description": "", "commentary": "" },
+        { "dimension": "Governance & Institutional Strength", "score": 65, "peerAverage": 60, "globalBenchmark": 68, "description": "", "commentary": "" },
+        { "dimension": "Accountability & Transparency", "score": 70, "peerAverage": 55, "globalBenchmark": 65, "description": "", "commentary": "" },
+        { "dimension": "Organizational & Party Cohesion", "score": 75, "peerAverage": 85, "globalBenchmark": 80, "description": "", "commentary": "" },
+        { "dimension": "Representation & Responsiveness", "score": 65, "peerAverage": 68, "globalBenchmark": 72, "description": "", "commentary": "" }
+      ]
+    },
+    {
+      "id": "vip36",
+      "name": "Jorida Tabaku",
+      "imageUrl": "https://www.parlament.al/Files/Deputetet/jorida-tabaku.jpg",
+      "category": "Politikë (PD)",
+      "shortBio": "Deputete e PD, eksperte ekonomie.",
+      "detailedBio": "Jorida Tabaku është deputete e Partisë Demokratike dhe eksperte e njohur në fushën e ekonomisë. Ajo shpesh fokusohet në çështjet ekonomike, integrimin evropian dhe luftën kundër korrupsionit.",
+      "paragonAnalysis": [
+        { "dimension": "Policy Engagement & Expertise", "score": 85, "peerAverage": 70, "globalBenchmark": 75, "description": "", "commentary": "" },
+        { "dimension": "Narrative & Communication", "score": 82, "peerAverage": 75, "globalBenchmark": 80, "description": "", "commentary": "" },
+        { "dimension": "Assertiveness & Influence", "score": 78, "peerAverage": 72, "globalBenchmark": 78, "description": "", "commentary": "" },
+        { "dimension": "Governance & Institutional Strength", "score": 70, "peerAverage": 60, "globalBenchmark": 68, "description": "", "commentary": "" },
+        { "dimension": "Accountability & Transparency", "score": 80, "peerAverage": 55, "globalBenchmark": 65, "description": "", "commentary": "" },
+        { "dimension": "Organizational & Party Cohesion", "score": 75, "peerAverage": 85, "globalBenchmark": 80, "description": "", "commentary": "" },
+        { "dimension": "Representation & Responsiveness", "score": 75, "peerAverage": 68, "globalBenchmark": 72, "description": "", "commentary": "" }
+      ]
+    },
+    {
+      "id": "vip37",
+      "name": "Belinda Balluku",
+      "imageUrl": "https://www.kryeministria.al/wp-content/uploads/2019/01/Belinda-Balluku.jpg",
+      "category": "Politikë (PS)",
+      "shortBio": "Zëvendëskryeministre dhe Ministre e Infrastrukturës dhe Energjisë.",
+      "detailedBio": "Belinda Balluku është Zëvendëskryeministre dhe Ministre e Infrastrukturës dhe Energjisë. Ajo menaxhon një portofol të madh investimesh publike dhe projektesh strategjike.",
+      "paragonAnalysis": [
+        { "dimension": "Policy Engagement & Expertise", "score": 80, "peerAverage": 70, "globalBenchmark": 75, "description": "", "commentary": "" },
+        { "dimension": "Narrative & Communication", "score": 78, "peerAverage": 75, "globalBenchmark": 80, "description": "", "commentary": "" },
+        { "dimension": "Assertiveness & Influence", "score": 85, "peerAverage": 72, "globalBenchmark": 78, "description": "", "commentary": "" },
+        { "dimension": "Governance & Institutional Strength", "score": 75, "peerAverage": 60, "globalBenchmark": 68, "description": "", "commentary": "" },
+        { "dimension": "Accountability & Transparency", "score": 50, "peerAverage": 55, "globalBenchmark": 65, "description": "", "commentary": "" },
+        { "dimension": "Organizational & Party Cohesion", "score": 88, "peerAverage": 85, "globalBenchmark": 80, "description": "", "commentary": "" },
+        { "dimension": "Representation & Responsiveness", "score": 65, "peerAverage": 68, "globalBenchmark": 72, "description": "", "commentary": "" }
+      ]
+    },
+    {
+      "id": "vip38",
+      "name": "Lindita Nikolla",
+      "imageUrl": "https://www.parlament.al/Files/Deputetet/lindita-nikolla.jpg",
+      "category": "Politikë (PS)",
+      "shortBio": "Kryetare e Kuvendit të Shqipërisë.",
+      "detailedBio": "Lindita Nikolla është Kryetare e Kuvendit të Shqipërisë. Ajo ka mbajtur më parë postin e Ministres së Arsimit dhe Sportit.",
+      "paragonAnalysis": [
+        { "dimension": "Policy Engagement & Expertise", "score": 75, "peerAverage": 70, "globalBenchmark": 75, "description": "", "commentary": "" },
+        { "dimension": "Narrative & Communication", "score": 70, "peerAverage": 75, "globalBenchmark": 80, "description": "", "commentary": "" },
+        { "dimension": "Assertiveness & Influence", "score": 80, "peerAverage": 72, "globalBenchmark": 78, "description": "", "commentary": "" },
+        { "dimension": "Governance & Institutional Strength", "score": 82, "peerAverage": 60, "globalBenchmark": 68, "description": "", "commentary": "" },
+        { "dimension": "Accountability & Transparency", "score": 70, "peerAverage": 55, "globalBenchmark": 65, "description": "", "commentary": "" },
+        { "dimension": "Organizational & Party Cohesion", "score": 85, "peerAverage": 85, "globalBenchmark": 80, "description": "", "commentary": "" },
+        { "dimension": "Representation & Responsiveness", "score": 72, "peerAverage": 68, "globalBenchmark": 72, "description": "", "commentary": "" }
+      ]
+    },
+    {
+      "id": "vip40",
+      "name": "Agron Gjekmarkaj",
+      "imageUrl": "https://www.parlament.al/Files/Deputetet/agron-gjekmarkaj.jpg",
+      "category": "Politikë (PD)",
+      "shortBio": "Nënkryetar i Kuvendit, deputet i PD.",
+      "detailedBio": "Agron Gjekmarkaj është Nënkryetar i Kuvendit dhe deputet i Partisë Demokratike. Ai vjen nga bota akademike dhe publicistika.",
+      "paragonAnalysis": [
+        { "dimension": "Policy Engagement & Expertise", "score": 72, "peerAverage": 70, "globalBenchmark": 75, "description": "", "commentary": "" },
+        { "dimension": "Narrative & Communication", "score": 80, "peerAverage": 75, "globalBenchmark": 80, "description": "", "commentary": "" },
+        { "dimension": "Assertiveness & Influence", "score": 75, "peerAverage": 72, "globalBenchmark": 78, "description": "", "commentary": "" },
+        { "dimension": "Governance & Institutional Strength", "score": 68, "peerAverage": 60, "globalBenchmark": 68, "description": "", "commentary": "" },
+        { "dimension": "Accountability & Transparency", "score": 75, "peerAverage": 55, "globalBenchmark": 65, "description": "", "commentary": "" },
+        { "dimension": "Organizational & Party Cohesion", "score": 70, "peerAverage": 85, "globalBenchmark": 80, "description": "", "commentary": "" },
+        { "dimension": "Representation & Responsiveness", "score": 68, "peerAverage": 68, "globalBenchmark": 72, "description": "", "commentary": "" }
+      ]
+    },
+    {
+        "id": "vip45",
+        "name": "Luçiano Boçi",
+        "imageUrl": "https://www.parlament.al/Files/Deputetet/luciano-boci.jpg",
+        "category": "Politikë (PD)",
+        "shortBio": "Deputet i PD, ish-kandidat për Bashkinë Elbasan.",
+        "detailedBio": "Luçiano Boçi është një politikan me përvojë i Partisë Demokratike, i cili ka shërbyer si deputet në disa legjislatura.",
+         "paragonAnalysis": [
+        { "dimension": "Policy Engagement & Expertise", "score": 76, "peerAverage": 70, "globalBenchmark": 75, "description": "", "commentary": "" },
+        { "dimension": "Narrative & Communication", "score": 78, "peerAverage": 75, "globalBenchmark": 80, "description": "", "commentary": "" },
+        { "dimension": "Assertiveness & Influence", "score": 74, "peerAverage": 72, "globalBenchmark": 78, "description": "", "commentary": "" },
+        { "dimension": "Governance & Institutional Strength", "score": 65, "peerAverage": 60, "globalBenchmark": 68, "description": "", "commentary": "" },
+        { "dimension": "Accountability & Transparency", "score": 70, "peerAverage": 55, "globalBenchmark": 65, "description": "", "commentary": "" },
+        { "dimension": "Organizational & Party Cohesion", "score": 80, "peerAverage": 85, "globalBenchmark": 80, "description": "", "commentary": "" },
+        { "dimension": "Representation & Responsiveness", "score": 72, "peerAverage": 68, "globalBenchmark": 72, "description": "", "commentary": "" }
+      ]
+    }
+  ]
+}

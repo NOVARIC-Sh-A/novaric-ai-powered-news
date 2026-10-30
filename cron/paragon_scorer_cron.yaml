@@ -1,0 +1,38 @@
+# ==============================================================================
+# Google Cloud Scheduler & Cloud Run Job Configuration
+# NOVARIC® Figurat Politike — Nightly PARAGON® Scorer
+# ==============================================================================
+apiVersion: cloudrun.googleapis.com/v1
+kind: Job
+metadata:
+  name: novaric-paragon-scorer-nightly
+  labels:
+    app.kubernetes.io/name: novaric-scorer
+    novaric.co/tier: data-pipeline
+spec:
+  template:
+    spec:
+      taskCount: 1
+      template:
+        spec:
+          containers:
+          - image: gcr.io/novaric-platform/figurat-politike:latest
+            command: ["/bin/bash", "-c", "/app/applet/scripts/nightly_scorer.sh"]
+            resources:
+              limits:
+                memory: 1Gi
+                cpu: 1000m
+            env:
+            - name: MODEL_VERSION
+              value: "v1.0"
+            - name: ENVIRONMENT
+              value: "production"
+
+---
+# Cloud Scheduler Resource Definition
+# Triggers daily at 03:00 UTC (after midnight ingestion pipeline completes)
+schedule: "0 3 * * *"
+timeZone: "Etc/UTC"
+jobTarget:
+  jobName: novaric-paragon-scorer-nightly
+  region: europe-west1

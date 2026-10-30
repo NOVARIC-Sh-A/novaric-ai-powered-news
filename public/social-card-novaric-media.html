@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="sq">
+<head>
+  <meta charset="UTF-8">
+  <title>NOVARIC® Lajme me IA | Shqipëri — Social Sharing Card</title>
+  <style>
+    /* Reset & Base */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    html, body {
+      width: 1200px;
+      height: 630px;
+      overflow: hidden;
+      background-color: #30384B;
+      font-family: Arial, "Helvetica Neue", Helvetica, Arimo, sans-serif;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    /* 1200x630 Card Container */
+    .card-canvas {
+      position: relative;
+      width: 1200px;
+      height: 630px;
+      background-color: #30384B;
+    }
+
+    /* Content Area (Top 520px) */
+    .content-area {
+      position: relative;
+      width: 1200px;
+      height: 520px;
+      background-color: #30384B;
+    }
+
+    /* Brand Bar: Left edge (x: 0, y: 0), 64px wide x 520px high, Fill #AE222C */
+    .brand-bar {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 64px;
+      height: 520px;
+      background-color: #AE222C;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
+
+    /* Brand-Bar Slogan: Rotated -90deg, centered, #E0E4E8, 18px (leaving >= 40px clear at ends, >= 8px across) */
+    .brand-slogan {
+      transform: rotate(-90deg);
+      white-space: nowrap;
+      font-family: Arial, "Helvetica Neue", Helvetica, Arimo, sans-serif;
+      font-size: 18px;
+      font-weight: 700;
+      color: #E0E4E8;
+      letter-spacing: 0.2px;
+      line-height: 1;
+      user-select: none;
+    }
+
+    /* Text Column (Starts at x=160px: 64px bar + 96px clearance) */
+    .text-column {
+      position: absolute;
+      top: 155px;
+      left: 160px;
+      width: 820px;
+    }
+
+    /* Headline: Lajme me IA, Arial Bold, 104px, #FFFFFF, letter-spacing -0.3px, one line */
+    .headline {
+      font-family: Arial, "Helvetica Neue", Helvetica, Arimo, sans-serif;
+      font-size: 104px;
+      font-weight: 700;
+      line-height: 1;
+      color: #FFFFFF;
+      letter-spacing: -0.3px;
+      white-space: nowrap;
+    }
+
+    /* Secondary Line: Shqipëri, Arial Bold, 52px, #009AE4 */
+    .secondary-line {
+      font-family: Arial, "Helvetica Neue", Helvetica, Arimo, sans-serif;
+      font-size: 52px;
+      font-weight: 700;
+      line-height: 1.15;
+      color: #009AE4;
+      margin-top: 18px;
+      letter-spacing: 0;
+    }
+
+    /* Top-Right: Dark Master Logo (Height 90px, clear space 45px, safe margin 60px) */
+    .top-right-logo {
+      position: absolute;
+      top: 60px;
+      right: 60px;
+      height: 90px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    /* White Footer Panel (Bottom 110px, Opaque #FFFFFF) */
+    .footer-panel {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 1200px;
+      height: 110px;
+      background-color: #FFFFFF;
+      display: flex;
+      align-items: center;
+      padding-left: 60px;
+      padding-right: 60px;
+    }
+
+    .footer-content {
+      display: flex;
+      align-items: center;
+      gap: 32px;
+      height: 100%;
+    }
+
+    /* Media Division Logo in Footer (Height 90px, clear space >= 45px) */
+    .media-division-logo {
+      height: 90px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .footer-identity {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 2px;
+    }
+
+    /* Division Name: MEDIA in Arial Bold uppercase, #30384B */
+    .division-name {
+      font-family: Arial, "Helvetica Neue", Helvetica, Arimo, sans-serif;
+      font-size: 26px;
+      font-weight: 700;
+      line-height: 1.1;
+      color: #30384B;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+    }
+
+    /* Domain Name: media.novaric.al in Accessible Cyan #0072A9 */
+    .domain-name {
+      font-family: Arial, "Helvetica Neue", Helvetica, Arimo, sans-serif;
+      font-size: 22px;
+      font-weight: 700;
+      line-height: 1.1;
+      color: #0072A9;
+    }
+
+    /* Marked Placeholder Boxes when official asset files are pending */
+    .logo-placeholder {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 90px;
+      min-width: 120px;
+      padding: 0 16px;
+      border: 1.5px dashed rgba(255, 255, 255, 0.45);
+      border-radius: 4px;
+      font-family: Arial, sans-serif;
+      font-size: 11px;
+      font-weight: 700;
+      color: #E0E4E8;
+      text-align: center;
+      line-height: 1.35;
+      text-transform: uppercase;
+    }
+
+    .logo-placeholder-footer {
+      border: 1.5px dashed rgba(48, 56, 75, 0.4);
+      color: #30384B;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="card-canvas">
+    <!-- Content Area (Top 520px, Flat #30384B) -->
+    <div class="content-area">
+      <!-- Left Brand Bar (64px wide x 520px high, #AE222C) -->
+      <div class="brand-bar">
+        <span class="brand-slogan">Shaping Narrative for a Smarter Society™</span>
+      </div>
+
+      <!-- Text Column (x = 160px: 64px bar + 96px clearance) -->
+      <div class="text-column">
+        <h1 class="headline">Lajme me IA</h1>
+        <div class="secondary-line">Shqipëri</div>
+      </div>
+
+      <!-- Top-Right: Dark Master Logo (Height 90px, 45px clear space) -->
+      <div class="top-right-logo">
+        <!-- LOGO PLACEHOLDER: NOVARIC-Logo_Master-WB-R_21082026_Canvas-28x25-1.png -->
+        <div class="logo-placeholder">
+          NOVARIC®<br>Master Logo Dark
+        </div>
+      </div>
+    </div>
+
+    <!-- White Footer Panel (Bottom 110px, Opaque #FFFFFF) -->
+    <div class="footer-panel">
+      <div class="footer-content">
+        <!-- Media Division Logo (Height 90px, x = 60) -->
+        <div class="media-division-logo">
+          <!-- LOGO PLACEHOLDER: NOVARIC-Logos_Master-WB-R_12062025_500x500.webp -->
+          <div class="logo-placeholder logo-placeholder-footer">
+            NOVARIC®<br>MEDIA Division
+          </div>
+        </div>
+
+        <div class="footer-identity">
+          <div class="division-name">MEDIA</div>
+          <div class="domain-name">media.novaric.al</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>

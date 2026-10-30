@@ -1,0 +1,302 @@
+
+{
+  "version": "1.0.0",
+  "locale": "sq-AL",
+  "timeDecayLambdaPerYear": 0.35,
+  "nlp": {
+    "sentimentModel": "xlm-r-large",
+    "toxicityModel": "shaj-albanian",
+    "lexicons": ["albmore", "olid-taxonomy-sq"],
+    "preprocess": { "stripUrls": true, "lowercase": true, "removeHandles": true }
+  },
+  "contextGuards": [
+    {
+      "id": "media_freedom",
+      "label": "Kufizim për kontekstin e lirisë së medias",
+      "source": "rsf_wpf_index",
+      "applyToDimensions": ["communication"],
+      "method": { "kind": "cap_penalty", "maxPenaltyPoints": 8 }
+    },
+    {
+      "id": "rule_of_law",
+      "label": "Kontekst i sundimit të ligjit",
+      "source": "wjp_rule_of_law",
+      "applyToDimensions": ["integrity"],
+      "method": { "kind": "affine_scale", "slope": 0.6, "intercept": 40 }
+    }
+  ],
+  "dimensions": [
+    {
+      "id": "legislative_effectiveness",
+      "label": "Efektiviteti Legjislativ",
+      "weight": 1,
+      "description": "Nga nisma në ligj, rol komisionesh, pjesëmarrje dhe amendamente.",
+      "indicators": [
+        {
+          "id": "bills_sponsored",
+          "label": "Projektligje të sponsorizuara",
+          "description": "Numri i projektligjeve të paraqitura nga deputeti.",
+          "unit": "count",
+          "direction": "higher_is_better",
+          "formula": { "kind": "minmax", "min": 0, "max": 30 },
+          "sources": ["parliament_open_data", "ipu_parline", "isp_deputetim"],
+          "refresh": "monthly",
+          "evidenceTemplate": "${value} projektligje të sponsorizuara në ${period}."
+        },
+        {
+          "id": "bills_into_law",
+          "label": "Projektligje që u bënë ligj",
+          "description": "Nga nismat e deputetit që u miratuan si ligj.",
+          "unit": "count",
+          "direction": "higher_is_better",
+          "formula": { "kind": "minmax", "min": 0, "max": 10 },
+          "sources": ["parliament_open_data", "isp_deputetim"],
+          "refresh": "monthly",
+          "evidenceTemplate": "${value} u bënë ligj; burime: ${source}."
+        },
+        {
+          "id": "attendance_rate",
+          "label": "Pjesëmarrja në seanca",
+          "description": "Përqindja e seancave ku deputeti ka marrë pjesë.",
+          "unit": "ratio",
+          "direction": "higher_is_better",
+          "formula": { "kind": "thresholds", "bands": [
+            { "lte": 0.50, "score": 30 },
+            { "lte": 0.70, "score": 55 },
+            { "lte": 0.85, "score": 75 },
+            { "lte": 1.00, "score": 90 }
+          ]},
+          "sources": ["parliament_open_data"],
+          "refresh": "monthly",
+          "evidenceTemplate": "Pjesëmarrja ${value}% në ${period}."
+        }
+      ]
+    },
+    {
+      "id": "policy_performance",
+      "label": "Performanca e Politikave & Përafrimi me BE",
+      "weight": 1,
+      "description": "Progres në reforma kyçe dhe prodhime të matshme sipas portofolit.",
+      "indicators": [
+        {
+          "id": "eu_alignment_justice",
+          "label": "Përafrimi me BE – Drejtësia",
+          "description": "Lexim i automatizuar i Raportit të KE për progres/regres.",
+          "unit": "score",
+          "direction": "higher_is_better",
+          "formula": { "kind": "minmax", "min": -2, "max": 2 },
+          "sources": ["ec_albania_report", "oecd_wbco_2024"],
+          "refresh": "annually"
+        }
+      ]
+    },
+    {
+      "id": "integrity",
+      "label": "Integriteti & Transparenca",
+      "weight": 1,
+      "description": "Deklarimet e pasurisë, konfliktet e interesit, indikatorë anticorruption.",
+      "indicators": [
+        {
+          "id": "asset_declaration_flags",
+          "label": "Flamuj në deklarimet e pasurisë",
+          "description": "Numër rastesh me mospërputhje ose vonesa publike.",
+          "unit": "count",
+          "direction": "lower_is_better",
+          "formula": { "kind": "minmax", "min": 0, "max": 5 },
+          "sources": ["ais_open_spending", "greco_albania", "cpi_ti"],
+          "refresh": "quarterly"
+        }
+      ]
+    },
+    {
+      "id": "communication",
+      "label": "Komunikimi & Diskursi Publik",
+      "weight": 0.8,
+      "description": "Tonaliteti, polarizimi, abuziviteti; arsyetohet me kontekstin e lirisë së medias.",
+      "indicators": [
+        {
+          "id": "toxicity_rate",
+          "label": "Shkalla e toksicitetit",
+          "description": "% e postimeve me etiketime toksike (Shaj/OLID).",
+          "unit": "ratio",
+          "direction": "lower_is_better",
+          "formula": { "kind": "minmax", "min": 0.0, "max": 0.4 },
+          "sources": ["official_social_crawl", "shaj_dataset", "olid_taxonomy"],
+          "refresh": "weekly",
+          "evidenceTemplate": "${value}% e mesazheve u klasifikuan toksike."
+        }
+      ]
+    },
+    {
+      "id": "party_leadership",
+      "label": "Lidershipi në Parti & Demokracia e Brendshme",
+      "weight": 0.9,
+      "description": "Zgjedhje të brendshme, qartësi rregullash, kohezion/fraksionim.",
+      "indicators": [
+        {
+          "id": "internal_democracy_score",
+          "label": "Indeksi i Demokracisë së Brendshme",
+          "description": "Rubrikë me kodim ekspertësh (V-Dem scaffolding, audit trail).",
+          "unit": "score",
+          "direction": "higher_is_better",
+          "formula": { "kind": "minmax", "min": 0, "max": 10 },
+          "sources": ["vdem_methodology", "party_statutes", "expert_panel"],
+          "refresh": "annually"
+        }
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "id": "t_hart_2011_public_leadership",
+      "title": "Evaluating Public Leadership: Towards an Assessment Framework",
+      "authors": ["Paul ’t Hart"],
+      "year": 2011,
+      "type": "method",
+      "url": "https://doi.org/10.1080/14719037.2011.589617",
+      "reliability": 0.9,
+      "keyTerms": ["prudence","support","trustworthiness"],
+      "usageNotes": "Meta-rubrikë për komentet cilësore dhe peshimin e rezultateve vs. legjitimitetit."
+    },
+    {
+      "id": "volden_wiseman_les",
+      "title": "Legislative Effectiveness in the United States Congress",
+      "authors": ["Craig Volden","Alan E. Wiseman"],
+      "type": "method",
+      "url": "https://www.tandfonline.com/doi/abs/10.1080/01402382.2014.953676",
+      "reliability": 0.9,
+      "keyTerms": ["agenda status","committee action","law passage"],
+      "usageNotes": "Adaptim për Kuvendin: nisma, trajtim në komisione, miratim në seancë, në ligj."
+    },
+    {
+      "id": "vdem_methodology",
+      "title": "Varieties of Democracy (V-Dem) Codebook & Methodology",
+      "type": "method",
+      "url": "https://www.v-dem.net/",
+      "reliability": 0.95,
+      "keyTerms": ["expert-coding","measurement error","IRT"],
+      "usageNotes": "Përdor formatin e tyre për panelet e ekspertëve dhe pasiguritë e matjes."
+    },
+    {
+      "id": "wjp_rule_of_law",
+      "title": "World Justice Project – Rule of Law Index (Albania)",
+      "type": "dataset",
+      "url": "https://worldjusticeproject.org/",
+      "reliability": 0.9,
+      "keyTerms": ["constraints on government","absence of corruption"],
+      "usageNotes": "Guardrail kontekstual për integritetin."
+    },
+    {
+      "id": "rsf_wpf_index",
+      "title": "Reporters Without Borders – World Press Freedom Index",
+      "type": "dataset",
+      "url": "https://rsf.org/en/index",
+      "reliability": 0.85,
+      "keyTerms": ["political","economic","legal","sociocultural","safety"],
+      "usageNotes": "Kufizon penalizimet/bonuset për komunikimin në ambiente me media të kufizuar."
+    },
+    {
+      "id": "osce_odihr_albania_2021",
+      "title": "OSCE/ODIHR Final Report – Albania Parliamentary Elections 2021",
+      "type": "official_report",
+      "url": "https://www.osce.org/odihr/elections/albania",
+      "year": 2021,
+      "reliability": 0.9,
+      "keyTerms": ["misuse of administrative resources","media access","vote-buying"],
+      "usageNotes": "Tagim cilësor i shkeljeve për kontekst zgjedhor."
+    },
+    {
+      "id": "ec_albania_report",
+      "title": "European Commission – Albania 2024/2025 Report",
+      "type": "official_report",
+      "url": "https://neighbourhood-enlargement.ec.europa.eu/",
+      "reliability": 0.9,
+      "keyTerms": ["acquis alignment","chapters 23/24"],
+      "usageNotes": "Shndërro narrativat e progresit në pikëzime -2..+2 për sektorë."
+    },
+    {
+      "id": "oecd_wbco_2024",
+      "title": "OECD – Western Balkans Competitiveness Outlook 2024",
+      "type": "official_report",
+      "url": "https://www.oecd.org/",
+      "reliability": 0.85,
+      "keyTerms": ["innovation","public governance","education"],
+      "usageNotes": "KPIs krahasuese për performancë politike sipas sektorit."
+    },
+    {
+      "id": "parliament_open_data",
+      "title": "Kuvendi i Shqipërisë – Të dhëna zyrtare (seanca, komisione, nisma)",
+      "type": "dataset",
+      "url": "https://www.parlament.al/",
+      "reliability": 0.95,
+      "keyTerms": ["attendance","initiatives","committees"],
+      "usageNotes": "Burim primar për aktivitetin legjislativ."
+    },
+    {
+      "id": "ipu_parline",
+      "title": "Inter-Parliamentary Union – Parline Database",
+      "type": "dataset",
+      "url": "https://data.ipu.org/",
+      "reliability": 0.9,
+      "keyTerms": ["parliamentary activity","structure"],
+      "usageNotes": "Kros-kontroll dhe kontekst krahasues rajonal."
+    },
+    {
+      "id": "isp_deputetim",
+      "title": "Instituti i Studimeve Politike – Deputetim",
+      "type": "dataset",
+      "url": "https://deputetim.al/",
+      "reliability": 0.8,
+      "keyTerms": ["mp activity","scores","attendance"],
+      "usageNotes": "Përdor për verifikim dhe plotësim kur mungon open data zyrtare."
+    },
+    {
+      "id": "ais_open_spending",
+      "title": "AIS/Open Data Albania – Open Spending & Asset Declarations",
+      "type": "dataset",
+      "url": "https://openprocurement.al/;",
+      "reliability": 0.8,
+      "keyTerms": ["asset declarations","procurement"],
+      "usageNotes": "Mirror jozyrtar kur akseset e HIDAACI janë të kufizuara; shëno kufizimet."
+    },
+    {
+      "id": "cpi_ti",
+      "title": "Transparency International – Corruption Perceptions Index (Albania)",
+      "type": "ngo_index",
+      "url": "https://www.transparency.org/en/cpi",
+      "reliability": 0.85,
+      "keyTerms": ["perception","composite index"],
+      "usageNotes": "Vetëm kontekst; mos e barazo me raste konkrete."
+    },
+    {
+      "id": "greco_albania",
+      "title": "Council of Europe – GRECO Compliance Reports (Albania)",
+      "type": "official_report",
+      "url": "https://www.coe.int/en/web/greco",
+      "reliability": 0.9,
+      "keyTerms": ["conflict of interest","asset declaration","ethics"],
+      "usageNotes": "Konverto rekomandimet në checklist binare për indikatorin e integritetit."
+    },
+    {
+      "id": "official_social_crawl",
+      "title": "Koleksion i kanaleve zyrtare (Facebook, X/Twitter, YouTube)",
+      "type": "dataset",
+      "reliability": 0.7,
+      "usageNotes": "Scraping me whitelist të faqeve zyrtare; ruaj ID postimi për gjurmueshmëri."
+    },
+    {
+      "id": "shaj_dataset",
+      "title": "Shaj – Albanian Abusive Language Dataset",
+      "type": "dataset",
+      "reliability": 0.8,
+      "usageNotes": "Trenim/validim për klasifikimin e toksicitetit."
+    },
+    {
+      "id": "olid_taxonomy",
+      "title": "Offensive Language Identification (OLID) – Taxonomy & Guidelines",
+      "type": "method",
+      "reliability": 0.85,
+      "usageNotes": "Shton kategori të qëndrueshme të abuzivitetit në shqip."
+    }
+  ]
+}

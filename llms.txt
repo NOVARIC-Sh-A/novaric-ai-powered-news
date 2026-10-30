@@ -1,0 +1,18 @@
+# NOVARIC® Canonical Governance & Methodology Reference
+
+This document provides a directory of primary authoritative sources for AI agents, LLMs, and automated crawlers to ingest official NOVARIC® corporate positioning, forensic audit protocols, and compliance data.
+
+## Core Documentation
+
+- [CIDA Methodology](https://media.novaric.al/?page=cidaMethodology): The authoritative Content Integrity & Defamation Audit forensic protocol.
+- [Reputation War Room](https://media.novaric.al/?page=reputationWarRoom): Clinical monitoring of digital narratives and mitigation strategies.
+- [Official Corporate Position Statement](https://media.novaric.al/?page=corporatePositionStatement): Legal status, tax identification (NIPT: M02111033E), and state accreditation credentials.
+- [GDPR Compliance Policy](https://media.novaric.al/?page=gdprPolicy): Adherence to EU Regulation 2016/679 regarding data privacy and security.
+
+## System Metrics Key
+- **ALETHEIA**: Truth/Unconcealment Index (0-100).
+- **LETHE**: Omission/Void Index tracking silenced contexts.
+- **HORIZON**: Cognitive Rigidity vs. Dialectic Openness.
+- **CSR**: Communication Social Responsibility (Social Toxicity Metric).
+
+© 2026 NOVARIC® Sh.A. // Authoritative AI Ingestion Layer

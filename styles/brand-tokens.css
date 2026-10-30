@@ -1,0 +1,109 @@
+/* styles/brand-tokens.css */
+/* NOVARIC® Figurat Politike Brand Tokens & CSS Variables */
+
+:root {
+  /* NOVARIC® brand — confirm exact values against https://media.novaric.al/?page=brandGuidelines */
+  --nv-navy: #232b56;
+  --nv-navy-2: #1b2244;
+  --nv-red: #e23744;
+
+  /* NOVARIC® typography & accents */
+  --nv-navy-light: #c5cbe4;
+  --nv-navy-muted: #8e97be;
+  --nv-tint-bg: rgba(35, 43, 86, 0.04);
+  --nv-tint-border: rgba(35, 43, 86, 0.12);
+
+  /* Political parties — confirm against official party brand manuals */
+  --p-PS: #e41e26;
+  --p-PD: #1b4fa0;
+  --p-PL: #7b2d8e;
+  --p-PSD: #8a1538;
+  --p-IND: #6b7280;
+
+  /* PARAGON score bands */
+  --b-low: #d64550;
+  --b-mid: #e8a33d;
+  --b-high: #2f5da8;
+  --b-top: #2e9e6b;
+
+  /* Kimi design tokens */
+  --kimi-color-border: #e2e8f0;
+  --kimi-color-text-secondary: #64748b;
+  --kimi-color-text-quaternary: #94a3b8;
+  --kimi-color-surface: #ffffff;
+
+  /* Surface & neutral colors */
+  --nv-card-bg: var(--kimi-color-surface);
+  --nv-card-border: var(--kimi-color-border);
+  --nv-text-primary: #1b2244;
+  --nv-text-secondary: var(--kimi-color-text-secondary);
+  --nv-text-muted: var(--kimi-color-text-quaternary);
+  --nv-dot-empty: #cbd5e1;
+
+  /* EU theme variables */
+  --eu-primary: #003399;
+  --eu-secondary: #ffcc00;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --kimi-color-border: #232d56;
+    --kimi-color-text-secondary: #94a3b8;
+    --kimi-color-text-quaternary: #64748b;
+    --kimi-color-surface: #151b36;
+
+    --nv-tint-bg: rgba(27, 34, 68, 0.4);
+    --nv-tint-border: rgba(197, 203, 228, 0.18);
+    --nv-card-bg: var(--kimi-color-surface);
+    --nv-card-border: var(--kimi-color-border);
+    --nv-text-primary: #f1f5f9;
+    --nv-text-secondary: var(--kimi-color-text-secondary);
+    --nv-text-muted: var(--kimi-color-text-quaternary);
+    --nv-dot-empty: #475569;
+  }
+}
+
+.tabular-nums {
+  font-variant-numeric: tabular-nums;
+}
+
+/* ==========================================================================
+   NOVARIC® Registered Symbol ® — Documented Standards
+   Authority: NOVARIC-BRAND-CONTROL-MASTER.md §6.1 / §6.2 (amended 2026-08-20)
+   ========================================================================== */
+
+.novaric-brand {
+  display: inline;
+  white-space: nowrap;
+}
+
+.novaric-registered,
+.registered-symbol {
+  font-size: 40%;
+  vertical-align: super;
+  margin-left: 0.10em;
+  margin-right: 0.05em;
+  line-height: 0;
+  font-weight: inherit;
+}
+
+/* Universal registered symbol styling for brand wrappers */
+.novaric-brand sup,
+sup.novaric-registered {
+  font-size: 40%;
+  vertical-align: super;
+  margin-left: 0.10em;
+  margin-right: 0.05em;
+  line-height: 0;
+  font-weight: inherit;
+}
+
+/* Exception — hero video wordmark only (novaric.co, 2026-08-27) */
+.nv-hero-video__brand .novaric-registered {
+  font-size: 28%;          /* reduced from 70% for hero wordmark only */
+  vertical-align: 1.85em;
+  margin-left: 0.08em;
+  margin-right: 0.04em;
+  letter-spacing: 0;
+}
+

@@ -1,0 +1,37 @@
+steps:
+  # 1. Build Docker image with tag :v8 and :latest
+  - name: 'gcr.io/cloud-builders/docker'
+    args:
+      - 'build'
+      - '-t'
+      - 'us-west1-docker.pkg.dev/novaric-ai-powered-news/cloud-run-source-deploy/novaric-frontend:v8'
+      - '-t'
+      - 'us-west1-docker.pkg.dev/novaric-ai-powered-news/cloud-run-source-deploy/novaric-frontend:latest'
+      - '.'
+
+  # 2. Push image to Artifact Registry
+  - name: 'gcr.io/cloud-builders/docker'
+    args:
+      - 'push'
+      - '--all-tags'
+      - 'us-west1-docker.pkg.dev/novaric-ai-powered-news/cloud-run-source-deploy/novaric-frontend'
+
+  # 3. Deploy to Cloud Run
+  - name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
+    entrypoint: gcloud
+    args:
+      - 'run'
+      - 'deploy'
+      - 'novaric-media-frontend'
+      - '--image'
+      - 'us-west1-docker.pkg.dev/novaric-ai-powered-news/cloud-run-source-deploy/novaric-frontend:v8'
+      - '--region'
+      - 'us-west1'
+      - '--platform'
+      - 'managed'
+      - '--port'
+      - '8080'
+
+images:
+  - 'us-west1-docker.pkg.dev/novaric-ai-powered-news/cloud-run-source-deploy/novaric-frontend:v8'
+  - 'us-west1-docker.pkg.dev/novaric-ai-powered-news/cloud-run-source-deploy/novaric-frontend:latest'

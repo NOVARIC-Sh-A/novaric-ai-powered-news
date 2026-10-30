@@ -1,0 +1,180 @@
+
+/* ================================================
+   NOVARIC® NewsPage – Brand-aligned styling
+   ================================================ */
+
+/* Root wrapper */
+.novaric-news-page {
+  /* subtle background to differentiate from other sections */
+  background: radial-gradient(circle at top left, rgba(59, 130, 246, 0.06), transparent 50%),
+              radial-gradient(circle at bottom right, rgba(15, 23, 42, 0.12), transparent 55%);
+}
+
+/* Page title */
+.novaric-news-page h1 {
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  font-size: 1.05rem;
+  margin-bottom: 1.75rem;
+  position: relative;
+  padding-bottom: 0.5rem;
+}
+
+.novaric-news-page h1::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 2px;
+  width: 72px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, #facc15, #3b82f6);
+}
+
+/* ================================================
+   Filter Bar
+   ================================================ */
+
+.novaric-news-filters {
+  padding: 0.75rem 1rem;
+  border-radius: 999px;
+  background: rgba(15, 23, 42, 0.025);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(148, 163, 184, 0.35);
+}
+
+.novaric-news-filters input[type="text"],
+.novaric-news-filters select {
+  border-radius: 999px !important;
+  border: 1px solid rgba(148, 163, 184, 0.7);
+  background-color: rgba(255, 255, 255, 0.95);
+  font-size: 0.85rem;
+  padding-inline: 0.9rem;
+  padding-block: 0.55rem;
+  outline: none;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease,
+    background-color 0.15s ease;
+}
+
+.novaric-news-filters input[type="text"]::placeholder {
+  color: rgba(100, 116, 139, 0.9);
+}
+
+.novaric-news-filters input[type="text"]:focus,
+.novaric-news-filters select:focus {
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 1px rgba(59, 130, 246, 0.6);
+  background-color: #ffffff;
+}
+
+/* Small pill-like labels/text inside filters if any */
+.novaric-news-filters .filter-label {
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #64748b;
+}
+
+/* ================================================
+   News Cards
+   ================================================ */
+
+.novaric-news-card {
+  transition: transform 0.14s ease-out, box-shadow 0.14s ease-out,
+    border-color 0.14s ease-out, background-color 0.14s ease-out;
+  position: relative;
+  overflow: hidden;
+}
+
+.novaric-news-card::before {
+  /* subtle top accent bar */
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 3px;
+  width: 100%;
+  background: linear-gradient(90deg, #0f172a, #3b82f6, #facc15);
+  opacity: 0.0;
+  transition: opacity 0.2s ease;
+}
+
+.novaric-news-card:hover::before {
+  opacity: 0.85;
+}
+
+.novaric-news-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.18);
+  border-color: rgba(59, 130, 246, 0.4);
+}
+
+/* Headline styling */
+.novaric-news-card h2 {
+  font-size: 0.98rem;
+  line-height: 1.35;
+  margin-bottom: 0.35rem;
+}
+
+/* Content preview */
+.novaric-news-card p {
+  font-size: 0.84rem;
+  line-height: 1.5;
+}
+
+/* Meta (date + source) row */
+.novaric-news-card .meta-row {
+  font-size: 0.7rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #6b7280;
+}
+
+/* If you wrap date+source in a container, apply this class */
+.novaric-news-card .meta-row span {
+  white-space: nowrap;
+}
+
+/* Optional: AI relevance & importance labels */
+.novaric-news-card .ai-relevance {
+  font-size: 0.7rem;
+  color: #2563eb;
+  margin-top: 0.35rem;
+}
+
+.novaric-news-card .high-importance-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  padding: 0.1rem 0.5rem;
+  border-radius: 999px;
+  font-size: 0.7rem;
+  font-weight: 600;
+  color: #92400e;
+  background: linear-gradient(
+    135deg,
+    rgba(250, 204, 21, 0.25),
+    rgba(245, 158, 11, 0.16)
+  );
+}
+
+/* ================================================
+   Responsive refinements
+   ================================================ */
+
+@media (max-width: 768px) {
+  .novaric-news-filters {
+    border-radius: 1rem;
+    padding-inline: 0.75rem;
+  }
+
+  .novaric-news-filters input[type="text"],
+  .novaric-news-filters select {
+    width: 100%;
+  }
+
+  .novaric-news-page h1 {
+    font-size: 0.95rem;
+  }
+}
