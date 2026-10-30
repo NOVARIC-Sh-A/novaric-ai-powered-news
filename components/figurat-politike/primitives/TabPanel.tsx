@@ -3,6 +3,8 @@ import React, { useState } from 'react';
 import { PoliticianDetail, ActivityFeedItem, AssetCategory, MandateItem } from '../../../types/politician';
 import { ZodiacChip } from './ZodiacChip';
 import { ExternalLink } from 'lucide-react';
+import { AWAITING_DATA, NOT_SCORED, hasText, AwaitState } from './awaiting';
+import { AssetTimelineItem } from '../../../types/politician';
 
 interface TabPanelProps {
   politician: PoliticianDetail;
@@ -35,13 +37,36 @@ export const TabPanel: React.FC<TabPanelProps> = ({ politician, className = '' }
     dateOfBirth,
     placeOfBirth,
     electoralZone,
-    bio = {},
+    bio: rawBio,
     recentActivity = [],
     assetDeclaration,
     mandates = []
   } = politician;
 
-  const partyName = category?.includes('(') ? category.match(/\((.*?)\)/)?.[1] || category : category || 'I pavarur';
+  const bio = rawBio || {};
+  const partyFromCategory = category?.includes('(') ? category.match(/\((.*?)\)/)?.[1] : null;
+  const partyName = hasText(bio.party) ? bio.party : (hasText((politician as any).party) ? (politician as any).party : partyFromCategory);
+  const assetTimeline: AssetTimelineItem[] = Array.isArray((politician as any).assetTimeline) ? (politician as any).assetTimeline : [];
+  const statusLabel = institutionalStatus((politician as any).parliamentaryStatus, bio.activeStatus);
+
+function institutionalStatus(status?: string | null, activeStatus?: boolean | null): string | null {
+  if (status === 'active_mp') return 'Aktiv në Kuvend / Active in Parliament';
+  if (status === 'former_mp') return 'Ish-deputet / Former MP';
+  if (status === 'mandate_ended') return 'Mandati përfundoi / Mandate ended';
+  if (status === 'mandate_suspended') return 'Mandati i pezulluar / Mandate suspended';
+  if (status === 'not_an_active_mp') return 'Jo deputet aktiv / Not an active MP';
+  if (activeStatus === true) return 'Aktiv në Kuvend / Active in Parliament';
+  if (activeStatus === false) return 'Jo deputet aktiv / Not an active MP';
+  if (hasText(status)) return status;
+  return null;
+}
+
+function FieldValue({ value }: { value?: string | null }) {
+  if (!hasText(value)) {
+    return <span className="font-medium text-slate-400 dark:text-slate-500">{AWAITING_DATA}</span>;
+  }
+  return <span className="font-semibold text-slate-900 dark:text-slate-100">{value}</span>;
+}
 
   return (
     <div className={`flex flex-col bg-white dark:bg-slate-900 rounded-2xl border border-slate-200 dark:border-slate-800 overflow-hidden shadow-sm ${className}`}>
@@ -55,7 +80,7 @@ export const TabPanel: React.FC<TabPanelProps> = ({ politician, className = '' }
               : 'text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white'
           }`}
         >
-          Biografia
+          Biografia / Biography
         </button>
         <button
           onClick={() => setActiveTab('activity')}
@@ -65,7 +90,7 @@ export const TabPanel: React.FC<TabPanelProps> = ({ politician, className = '' }
               : 'text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white'
           }`}
         >
-          Aktiviteti i fundit
+          Aktiviteti i fundit / Recent activity
         </button>
         <button
           onClick={() => setActiveTab('assets')}
@@ -75,7 +100,7 @@ export const TabPanel: React.FC<TabPanelProps> = ({ politician, className = '' }
               : 'text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white'
           }`}
         >
-          Pasuria (ILDKPKI)
+          Pasuria (ILDKPKI) / Assets
         </button>
         <button
           onClick={() => setActiveTab('mandates')}
@@ -85,7 +110,7 @@ export const TabPanel: React.FC<TabPanelProps> = ({ politician, className = '' }
               : 'text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white'
           }`}
         >
-          Mandatet & Zgjedhjet
+          Mandatet & Zgjedhjet / Mandates
         </button>
       </div>
 
@@ -96,67 +121,59 @@ export const TabPanel: React.FC<TabPanelProps> = ({ politician, className = '' }
           <div className="space-y-4 animate-fadeIn">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-3 text-xs">
               <div className="flex flex-col py-1.5 border-b border-slate-100 dark:border-slate-800/80">
-                <span className="text-[11px] text-slate-400 dark:text-slate-500 font-medium">Emri i plotë</span>
-                <span className="font-bold text-slate-900 dark:text-slate-100 mt-0.5">{bio.fullName || name}</span>
+                <span className="text-[11px] text-slate-400 dark:text-slate-500 font-medium">Emri i plotë / Full name</span>
+                <span className="mt-0.5"><FieldValue value={bio.fullName || name} /></span>
               </div>
 
               <div className="flex flex-col py-1.5 border-b border-slate-100 dark:border-slate-800/80">
-                <span className="text-[11px] text-slate-400 dark:text-slate-500 font-medium">Datëlindja & Vendlindja</span>
-                <span className="font-bold text-slate-900 dark:text-slate-100 mt-0.5">
-                  {dateOfBirth ? dateOfBirth : 'Nuk disponohet'} {placeOfBirth ? `· ${placeOfBirth}` : ''}
+                <span className="text-[11px] text-slate-400 dark:text-slate-500 font-medium">Datëlindja & vendlindja / Birth</span>
+                <span className="mt-0.5">
+                  <FieldValue value={[dateOfBirth, placeOfBirth].filter(hasText).join(' · ') || null} />
                 </span>
               </div>
 
-              {dateOfBirth && (
-                <div className="flex flex-col py-1.5 border-b border-slate-100 dark:border-slate-800/80">
-                  <span className="text-[11px] text-slate-400 dark:text-slate-500 font-medium">Shenja astrologjike</span>
-                  <div className="mt-1">
-                    <ZodiacChip dateOfBirth={dateOfBirth} />
-                  </div>
+              <div className="flex flex-col py-1.5 border-b border-slate-100 dark:border-slate-800/80">
+                <span className="text-[11px] text-slate-400 dark:text-slate-500 font-medium">{NOT_SCORED}</span>
+                <div className="mt-1">
+                  {dateOfBirth ? <ZodiacChip dateOfBirth={dateOfBirth} withStatus /> : <FieldValue value={null} />}
                 </div>
-              )}
-
-              <div className="flex flex-col py-1.5 border-b border-slate-100 dark:border-slate-800/80">
-                <span className="text-[11px] text-slate-400 dark:text-slate-500 font-medium">Zona Zgjedhore</span>
-                <span className="font-semibold text-slate-900 dark:text-slate-100 mt-0.5">
-                  {electoralZone || 'Qarku Tiranë'}
-                </span>
               </div>
 
               <div className="flex flex-col py-1.5 border-b border-slate-100 dark:border-slate-800/80">
-                <span className="text-[11px] text-slate-400 dark:text-slate-500 font-medium">Arsimi (KQZ CV)</span>
-                <span className="font-semibold text-slate-900 dark:text-slate-100 mt-0.5">
-                  {bio.education || 'Arsim i Lartë Universitar'}
-                </span>
+                <span className="text-[11px] text-slate-400 dark:text-slate-500 font-medium">Zona zgjedhore / Electoral zone</span>
+                <span className="mt-0.5"><FieldValue value={electoralZone} /></span>
               </div>
 
               <div className="flex flex-col py-1.5 border-b border-slate-100 dark:border-slate-800/80">
-                <span className="text-[11px] text-slate-400 dark:text-slate-500 font-medium">Profesioni</span>
-                <span className="font-semibold text-slate-900 dark:text-slate-100 mt-0.5">
-                  {bio.profession || 'Jurist / Politikan'}
-                </span>
+                <span className="text-[11px] text-slate-400 dark:text-slate-500 font-medium">Arsimi (KQZ CV) / Education</span>
+                <span className="mt-0.5"><FieldValue value={bio.education} /></span>
               </div>
 
               <div className="flex flex-col py-1.5 border-b border-slate-100 dark:border-slate-800/80">
-                <span className="text-[11px] text-slate-400 dark:text-slate-500 font-medium">Partia & Përkatësia</span>
-                <span className="font-bold text-slate-900 dark:text-slate-100 mt-0.5">
-                  {partyName}
-                </span>
+                <span className="text-[11px] text-slate-400 dark:text-slate-500 font-medium">Profesioni / Profession</span>
+                <span className="mt-0.5"><FieldValue value={bio.profession} /></span>
               </div>
 
               <div className="flex flex-col py-1.5 border-b border-slate-100 dark:border-slate-800/80">
-                <span className="text-[11px] text-slate-400 dark:text-slate-500 font-medium">Email Zyrtar</span>
-                <span className="font-mono text-slate-700 dark:text-slate-300 mt-0.5">
-                  {bio.email || `${name.toLowerCase().replace(/\s+/g, '.')}@parlament.al`}
-                </span>
+                <span className="text-[11px] text-slate-400 dark:text-slate-500 font-medium">Partia & përkatësia / Party</span>
+                <span className="mt-0.5"><FieldValue value={partyName} /></span>
               </div>
 
               <div className="flex flex-col py-1.5 border-b border-slate-100 dark:border-slate-800/80">
-                <span className="text-[11px] text-slate-400 dark:text-slate-500 font-medium">Statusi Institucional</span>
-                <span className="inline-flex items-center gap-1.5 font-bold text-emerald-600 dark:text-emerald-400 mt-0.5">
-                  <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
-                  Aktiv në Kuvend
-                </span>
+                <span className="text-[11px] text-slate-400 dark:text-slate-500 font-medium">Email zyrtar / Official email</span>
+                <span className="mt-0.5 font-mono"><FieldValue value={bio.email} /></span>
+              </div>
+
+              <div className="flex flex-col py-1.5 border-b border-slate-100 dark:border-slate-800/80">
+                <span className="text-[11px] text-slate-400 dark:text-slate-500 font-medium">Statusi institucional / Status</span>
+                {statusLabel ? (
+                  <span className="inline-flex items-center gap-1.5 font-bold text-slate-800 dark:text-slate-100 mt-0.5">
+                    <span className={`w-2 h-2 rounded-full ${statusLabel.startsWith('Aktiv') ? 'bg-emerald-500' : 'bg-slate-400'}`}></span>
+                    {statusLabel}
+                  </span>
+                ) : (
+                  <span className="mt-0.5"><FieldValue value={null} /></span>
+                )}
               </div>
             </div>
 
@@ -201,9 +218,7 @@ export const TabPanel: React.FC<TabPanelProps> = ({ politician, className = '' }
                 </div>
               ))
             ) : (
-              <div className="text-center py-8 text-xs text-slate-400">
-                Nuk ka aktivitete të regjistruara së fundmi në regjistrat e Kuvendit.
-              </div>
+              <AwaitState />
             )}
           </div>
         )}
@@ -211,81 +226,15 @@ export const TabPanel: React.FC<TabPanelProps> = ({ politician, className = '' }
         {/* TAB 3: PASURIA (ILDKPKI) */}
         {activeTab === 'assets' && (
           <div className="space-y-4 animate-fadeIn">
-            {assetDeclaration ? (
-              <>
-                <div className="flex items-center justify-between p-3 bg-slate-50 dark:bg-slate-800/60 rounded-xl border border-slate-200/70 dark:border-slate-700/60">
-                  <div>
-                    <span className="text-xs text-slate-400">Viti i Deklarimit</span>
-                    <div className="text-sm font-bold text-slate-800 dark:text-slate-100">{assetDeclaration.year}</div>
-                  </div>
-                  <span
-                    className={`px-3 py-1 rounded-full text-xs font-bold ${
-                      assetDeclaration.onTime
-                        ? 'bg-emerald-50 text-emerald-700 border border-emerald-200 dark:bg-emerald-950/40 dark:text-emerald-400 dark:border-emerald-800'
-                        : 'bg-amber-50 text-amber-700 border border-amber-200 dark:bg-amber-950/40 dark:text-amber-400 dark:border-amber-800'
-                    }`}
-                  >
-                    {assetDeclaration.onTime ? '✓ Brenda Afatit Ligjor (31 Mars)' : 'Me Vonesë'}
-                  </span>
-                </div>
-
-                <div className="overflow-hidden rounded-xl border border-slate-200 dark:border-slate-800">
-                  <table className="w-full text-left text-xs">
-                    <thead className="bg-slate-100 dark:bg-slate-800/80 text-slate-500 dark:text-slate-400 text-[10px] font-bold uppercase tracking-wider">
-                      <tr>
-                        <th className="py-2.5 px-3">Kategoria e Pasurisë</th>
-                        <th className="py-2.5 px-3">Përshkrimi / Detaje</th>
-                        <th className="py-2.5 px-3 text-right">Vlera</th>
-                      </tr>
-                    </thead>
-                    <tbody className="divide-y divide-slate-100 dark:divide-slate-800 text-slate-700 dark:text-slate-300">
-                      {assetDeclaration.categories.map((cat, idx) => (
-                        <tr key={idx} className="hover:bg-slate-50/50 dark:hover:bg-slate-800/40">
-                          <td className="py-2 px-3 font-semibold">{cat.category}</td>
-                          <td className="py-2 px-3 text-slate-500 dark:text-slate-400">{cat.detail || '—'}</td>
-                          <td className="py-2 px-3 text-right font-mono">
-                            {cat.value !== null && cat.value !== undefined ? (
-                              typeof cat.value === 'number' ? `${cat.value.toLocaleString()} lekë` : cat.value
-                            ) : (
-                              /* Never assert 0 when withheld */
-                              <span className="italic text-slate-400 text-[11px] bg-slate-100 dark:bg-slate-800 px-2 py-0.5 rounded">
-                                nën deklarim
-                              </span>
-                            )}
-                          </td>
-                        </tr>
-                      ))}
-                    </tbody>
-                  </table>
-                </div>
-
-                <div className="text-[10px] text-slate-400 dark:text-slate-500 italic flex items-center justify-between">
-                  <span>Burimi: Inspektorati i Lartë i Deklarimit dhe Kontrollit të Pasurive (ILDKPKI)</span>
-                  {assetDeclaration.sourceUrl && (
-                    <a
-                      href={assetDeclaration.sourceUrl}
-                      target="_blank"
-                      rel="noreferrer"
-                      className="text-blue-600 dark:text-blue-400 underline hover:no-underline"
-                    >
-                      Verifiko dokumentin &rarr;
-                    </a>
-                  )}
-                </div>
-              </>
-            ) : (
-              <div className="text-center py-8 text-xs text-slate-400">
-                <p>Deklarimi i vitit 2025 nuk është publikuar ende në regjistrin e ILDKPKI.</p>
-                <a
-                  href="https://www.ildkpki.al"
-                  target="_blank"
-                  rel="noreferrer"
-                  className="mt-2 inline-block text-blue-600 dark:text-blue-400 text-xs underline"
-                >
-                  Regjistri zyrtar ILDKPKI &rarr;
-                </a>
-              </div>
-            )}
+            <AssetTimeline
+              items={assetTimeline.length > 0 ? assetTimeline : (assetDeclaration?.year ? [{
+                year: assetDeclaration.year,
+                filedAt: assetDeclaration.declaredDate,
+                onTime: assetDeclaration.onTime,
+                sourceUrl: assetDeclaration.sourceUrl,
+                categories: assetDeclaration.categories || [],
+              }] : [])}
+            />
           </div>
         )}
 
@@ -306,7 +255,7 @@ export const TabPanel: React.FC<TabPanelProps> = ({ politician, className = '' }
                     />
                     <div className="text-xs">
                       <span className={`font-mono text-[11px] font-bold ${m.current ? 'text-blue-600 dark:text-blue-400' : 'text-slate-400'}`}>
-                        {m.period} {m.current ? '(Mandati Aktual)' : ''}
+                        {m.period || AWAITING_DATA} {m.current ? '(Mandati aktual / Current)' : ''}
                       </span>
                       <div className="font-semibold text-slate-800 dark:text-slate-200 mt-0.5">
                         {m.role}
@@ -316,13 +265,72 @@ export const TabPanel: React.FC<TabPanelProps> = ({ politician, className = '' }
                 ))}
               </div>
             ) : (
-              <div className="text-center py-8 text-xs text-slate-400">
-                Mandati aktual në legjislaturën e X-të të Kuvendit të Shqipërisë (2021 — 2025).
-              </div>
+              <AwaitState />
             )}
           </div>
         )}
       </div>
+    </div>
+  );
+};
+
+function onTimeLabel(onTime?: boolean | null): string {
+  if (onTime === true) return 'Brenda afatit / On time';
+  if (onTime === false) return 'Me vonesë / Late';
+  return AWAITING_DATA;
+}
+
+const AssetTimeline: React.FC<{ items: AssetTimelineItem[] }> = ({ items }) => {
+  if (!items.length) return <AwaitState />;
+  return (
+    <div className="space-y-4">
+      {items.map((item, index) => (
+        <article key={`${item.year}-${index}`} className="rounded-xl border border-slate-200 dark:border-slate-800 overflow-hidden">
+          <div className="flex items-center justify-between gap-3 px-3 py-2 bg-slate-50 dark:bg-slate-800/60">
+            <div>
+              <div className="text-[11px] text-slate-400">Viti / Year</div>
+              <div className="text-sm font-bold text-slate-800 dark:text-slate-100">{item.year}</div>
+            </div>
+            <span className="px-2.5 py-1 rounded-full text-[11px] font-bold bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 border border-slate-200 dark:border-slate-700">
+              {onTimeLabel(item.onTime)}
+            </span>
+          </div>
+          {item.categories && item.categories.length > 0 ? (
+            <table className="w-full text-left text-xs">
+              <thead className="text-[10px] uppercase tracking-wider text-slate-400">
+                <tr>
+                  <th className="py-2 px-3">Kategoria / Category</th>
+                  <th className="py-2 px-3">Përshkrimi / Detail</th>
+                  <th className="py-2 px-3 text-right">Vlera / Value</th>
+                </tr>
+              </thead>
+              <tbody className="divide-y divide-slate-100 dark:divide-slate-800">
+                {item.categories.map((cat, catIndex) => (
+                  <tr key={catIndex}>
+                    <td className="py-2 px-3 font-semibold">{cat.category}</td>
+                    <td className="py-2 px-3 text-slate-500">{cat.detail || AWAITING_DATA}</td>
+                    <td className="py-2 px-3 text-right font-mono">
+                      {cat.value !== null && cat.value !== undefined
+                        ? (typeof cat.value === 'number' ? `${cat.value.toLocaleString()} lekë` : cat.value)
+                        : AWAITING_DATA}
+                    </td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          ) : (
+            <p className="px-3 py-3 text-xs text-slate-500">{AWAITING_DATA}</p>
+          )}
+          <div className="px-3 py-2 text-[10px] text-slate-400 flex justify-between gap-2">
+            <span>{item.filedAt || 'ILDKPKI'}</span>
+            {item.sourceUrl && (
+              <a href={item.sourceUrl} target="_blank" rel="noreferrer" className="text-blue-600 dark:text-blue-400 underline">
+                {item.sourceUrl}
+              </a>
+            )}
+          </div>
+        </article>
+      ))}
     </div>
   );
 };

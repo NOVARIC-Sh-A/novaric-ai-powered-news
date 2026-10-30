@@ -67,6 +67,27 @@ class TestParagonScoring(unittest.TestCase):
         self.assertGreater(composite, 50.0)
         self.assertLessEqual(composite, 100.0)
 
+    def test_zodiac_is_not_a_scoring_input(self):
+        base = {
+            "bills_sponsored_lead": 2,
+            "committee_attendance_pct": 80.0,
+        }
+        with_zodiac = {
+            **base,
+            "zodiac": "Peshorja",
+            "zodiac_sign": "Libra",
+            "star_sign": "Libra",
+        }
+        dims_a, composite_a, _ = calculate_paragon_dimensions(dict(base))
+        dims_b, composite_b, _ = calculate_paragon_dimensions(dict(with_zodiac))
+        self.assertEqual(dims_a, dims_b)
+        self.assertEqual(composite_a, composite_b)
+
+        with open("services/paragon_scoring_engine.py", encoding="utf-8") as handle:
+            source = handle.read().lower()
+        self.assertNotIn("zodiac", source)
+        self.assertNotIn("star_sign", source)
+
     def test_commentary_generation(self):
         dims = {
             "Angazhimi Politik": 85.0,

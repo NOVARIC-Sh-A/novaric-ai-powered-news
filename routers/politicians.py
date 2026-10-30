@@ -41,16 +41,20 @@ async def get_politician_profile(id_or_slug: str = Path(...)):
 
     # 3. Normalize dimensions for UI stability
     raw_dims = latest_score.get("dimension_scores") or {}
+    if not isinstance(raw_dims, dict):
+        raw_dims = {}
     normalized_dimensions = []
     for dim in PARAGON_DIMENSIONS:
         normalized_dimensions.append({
             "dimension": dim,
-            "score": raw_dims.get(dim, 0)
+            "score": raw_dims.get(dim) if dim in raw_dims else None
         })
 
-    return {
+    from services.politician_dossier import attach_dossier, load_supabase_dossier
+
+    payload = {
         "politician": politician,
-        "overall_score": latest_score.get("overall_score", 0),
+        "overall_score": latest_score.get("overall_score") if latest_score else None,
         "dimensions": normalized_dimensions,
         "metrics": metrics_res.data or [],
         "improvement_checklist": checklist_res.data or [],
@@ -59,3 +63,4 @@ async def get_politician_profile(id_or_slug: str = Path(...)):
             "last_updated": latest_score.get("calculated_at") or latest_score.get("last_updated")
         }
     }
+    return attach_dossier(payload, load_supabase_dossier(supabase, politician))

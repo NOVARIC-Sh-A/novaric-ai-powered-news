@@ -1,9 +1,12 @@
 // components/figurat-politike/primitives/ZodiacChip.tsx
 import React from 'react';
+import { NOT_SCORED } from './awaiting';
 
 interface ZodiacChipProps {
   dateOfBirth?: string | null;
   className?: string;
+  /** Show the explicit not-scored label beside the sign. */
+  withStatus?: boolean;
 }
 
 interface ZodiacInfo {
@@ -160,7 +163,7 @@ export function getZodiacSign(dob: string): ZodiacInfo | null {
   };
 }
 
-export const ZodiacChip: React.FC<ZodiacChipProps> = ({ dateOfBirth, className = '' }) => {
+export const ZodiacChip: React.FC<ZodiacChipProps> = ({ dateOfBirth, className = '', withStatus = false }) => {
   if (!dateOfBirth) return null;
 
   const zodiac = getZodiacSign(dateOfBirth);
@@ -168,11 +171,16 @@ export const ZodiacChip: React.FC<ZodiacChipProps> = ({ dateOfBirth, className =
 
   return (
     <span
-      className={`inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-xs font-semibold bg-purple-50 text-purple-700 border border-purple-200/80 dark:bg-purple-950/40 dark:text-purple-300 dark:border-purple-800/60 shadow-sm transition-all hover:bg-purple-100 dark:hover:bg-purple-900/50 cursor-help ${className}`}
-      title="Shenja llogaritet nga Datelindja në regjistrin zyrtar të Kuvendit"
+      className={`inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-xs font-semibold bg-purple-50 text-purple-700 border border-purple-200/80 dark:bg-purple-950/40 dark:text-purple-300 dark:border-purple-800/60 shadow-sm ${className}`}
+      title={NOT_SCORED}
     >
       <span className="text-purple-600 dark:text-purple-400">{zodiac.glyph}</span>
       <span className="tracking-tight">{zodiac.name}</span>
+      {withStatus && (
+        <span className="text-[10px] font-bold uppercase tracking-wide text-purple-500/90 dark:text-purple-300/80">
+          {NOT_SCORED}
+        </span>
+      )}
     </span>
   );
 };

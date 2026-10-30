@@ -21,9 +21,107 @@ export interface ParagonDimensionItem {
   score: number | null;
   peerAverage: number | null;
   benchmark: number | null;
+  /** Lower bound of the recorded confidence interval, 0–100. Null when the source has none. */
+  confidenceLow?: number | null;
+  /** Upper bound of the recorded confidence interval, 0–100. Null when the source has none. */
+  confidenceHigh?: number | null;
+  /** Share of required inputs present for this dimension, 0–100. */
+  completeness?: number | null;
   verificationStatus?: 'under_review' | 'verified' | 'disputed' | string;
   metricInputs?: Record<string, any>;
   coverage?: any;
+}
+
+export interface DimensionReading {
+  score?: number | null;
+  peerAverage?: number | null;
+  benchmark?: number | null;
+  confidenceLow?: number | null;
+  confidenceHigh?: number | null;
+  completeness?: number | null;
+}
+
+export interface PromiseItem {
+  id?: string;
+  text: string;
+  status?: string | null;
+  date?: string | null;
+  sourceUrl?: string | null;
+}
+
+export interface ConsistencyFlag {
+  id?: string;
+  statement?: string | null;
+  vote?: string | null;
+  flag?: string | null;
+  sourceUrl?: string | null;
+}
+
+export interface VoteRecordItem {
+  id?: string;
+  subject?: string | null;
+  votedAt?: string | null;
+  choice?: string | null;
+  passed?: boolean | null;
+  sourceUrl?: string | null;
+  withParty?: boolean | null;
+}
+
+export interface AssetTimelineItem {
+  year: number;
+  filedAt?: string | null;
+  onTime?: boolean | null;
+  sourceUrl?: string | null;
+  categories?: AssetCategory[];
+}
+
+export interface RhetoricExcerpt {
+  date?: string | null;
+  excerpt: string;
+  sourceUrl?: string | null;
+  topic?: string | null;
+}
+
+export interface RhetoricProfile {
+  speechCount?: number | null;
+  mentionCount?: number | null;
+  averageSentiment?: number | null;
+  averageWordCount?: number | null;
+  excerpts?: RhetoricExcerpt[];
+}
+
+export interface AffiliationLink {
+  kind: string;
+  label: string;
+  detail?: string | null;
+  url?: string | null;
+}
+
+export interface ScoreEvidenceItem {
+  id?: string;
+  dimensionKey?: string | null;
+  metricKey?: string | null;
+  sourceTitle?: string | null;
+  sourceUrl?: string | null;
+  sourcePublisher?: string | null;
+  excerpt?: string | null;
+  retrievedAt?: string | null;
+}
+
+export interface RightOfReplyItem {
+  id?: string;
+  submittedAt?: string | null;
+  statement: string;
+  status?: string | null;
+  sourceUrl?: string | null;
+}
+
+export interface ScoreRevision {
+  computedAt?: string | null;
+  periodEnd?: string | null;
+  modelVersion?: string | null;
+  composite?: number | null;
+  dimensions?: Record<string, number | null>;
 }
 
 export interface CompositeHistoryPoint {
@@ -119,11 +217,21 @@ export interface PoliticianDetail extends VipProfile {
   scoringSuspended?: boolean;
   scoringSuspensionNotice?: string;
   paragonDimensions: ParagonDimensionItem[];
+  dimensionReadings?: Record<string, DimensionReading>;
   compositeHistory: CompositeHistoryPoint[];
   bio: PoliticianBio;
   recentActivity: ActivityFeedItem[];
-  assetDeclaration?: AssetDeclaration;
+  assetDeclaration?: AssetDeclaration | null;
+  assetTimeline?: AssetTimelineItem[];
   mandates: MandateItem[];
+  promises?: PromiseItem[];
+  consistencyFlags?: ConsistencyFlag[];
+  votingRecord?: VoteRecordItem[];
+  rhetoric?: RhetoricProfile | null;
+  affiliations?: AffiliationLink[];
+  evidence?: ScoreEvidenceItem[];
+  rightOfReply?: RightOfReplyItem[];
+  scoreRevisions?: ScoreRevision[];
   metrics?: Record<string, any>;
   commentary?: string;
 }

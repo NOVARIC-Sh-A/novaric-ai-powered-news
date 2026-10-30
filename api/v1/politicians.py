@@ -34,9 +34,12 @@ except ImportError:
             self.headers = headers or {}
 
 from utils.supabase_client import supabase
-from services.paragon_scoring_engine import (
-    calculate_paragon_dimensions,
-    generate_albanian_commentary
+from services.paragon_scoring_engine import generate_albanian_commentary
+from services.politician_dossier import (
+    attach_dossier,
+    identity_dossier,
+    load_sqlite_dossier,
+    load_supabase_dossier,
 )
 from db.seed_politicians import generate_seeded_profiles
 
@@ -132,27 +135,112 @@ def get_seeded_fallback() -> List[Dict[str, Any]]:
     seeded = generate_seeded_profiles()
     return seeded[:104] if len(seeded) >= 104 else seeded
 
+_DIM_COLUMNS = [
+    ("D1", 1, "Angazhimi Politik", "d1_policy_engagement"),
+    ("D2", 2, "Llogaridhënia", "d2_accountability"),
+    ("D3", 3, "Përfaqësimi", "d3_representation"),
+    ("D4", 4, "Asertiviteti", "d4_assertiveness"),
+    ("D5", 5, "Qeverisja", "d5_governance"),
+    ("D6", 6, "Kohësioni", "d6_party_cohesion"),
+    ("D7", 7, "Narrativa", "d7_narrative"),
+]
+
+
+def _optional_number(value: Any) -> Optional[float]:
+    if value is None or isinstance(value, bool) or isinstance(value, dict):
+        return None
+    try:
+        number = float(value)
+    except (TypeError, ValueError):
+        return None
+    if number != number:
+        return None
+    return max(0.0, min(100.0, number))
+
+
 def normalize_dimensions(raw_data: Optional[Union[Dict[str, Any], List[Any]]]) -> List[Dict[str, Any]]:
-    """Guarantees a list of exactly 7 dimensions in a fixed order with safe defaults."""
-    normalized = []
-    source_map = {}
+    """Seven dimensions in canonical order. Missing evidence stays null — never a default score."""
+    by_name: Dict[str, Any] = {}
+    by_key: Dict[str, Any] = {}
+    columns: Dict[str, Any] = raw_data if isinstance(raw_data, dict) else {}
+    positional: List[Any] = raw_data if isinstance(raw_data, list) else []
+
     if isinstance(raw_data, dict):
-        source_map = raw_data
+        metrics = raw_data.get("metrics")
+        if isinstance(metrics, str):
+            try:
+                metrics = json.loads(metrics)
+            except (TypeError, ValueError):
+                metrics = {}
+        if isinstance(metrics, dict):
+            for key, value in metrics.items():
+                if isinstance(value, dict) and key not in by_key:
+                    by_key[str(key).upper()] = value
+        for dim_name in PARAGON_ORDER:
+            if dim_name in raw_data:
+                by_name[dim_name] = raw_data.get(dim_name)
     elif isinstance(raw_data, list):
         for item in raw_data:
-            if isinstance(item, dict) and "dimension" in item:
-                source_map[item["dimension"]] = item.get("score", 0)
+            if not isinstance(item, dict):
+                continue
+            if item.get("dimension"):
+                by_name[str(item["dimension"])] = item
+            if item.get("label"):
+                by_name.setdefault(str(item["label"]), item)
+            if item.get("key"):
+                by_key[str(item["key"]).upper()] = item
 
-    for dim in PARAGON_ORDER:
-        score = source_map.get(dim, 65)
-        clamped_score = max(0, min(100, int(score) if str(score).isdigit() else 65))
+    normalized = []
+    for index, (key, dim_id, name, column) in enumerate(_DIM_COLUMNS):
+        item = by_key.get(key) or by_name.get(name)
+        if item is None and column in columns:
+            item = columns.get(column)
+        if item is None and index < len(positional) and not isinstance(positional[index], dict):
+            item = positional[index]
+
+        if isinstance(item, dict):
+            score = _optional_number(item.get("score"))
+            peer = _optional_number(item.get("peerAverage") if item.get("peerAverage") is not None else item.get("peer_average"))
+            benchmark = _optional_number(
+                item.get("benchmark") if item.get("benchmark") is not None else item.get("globalBenchmark")
+            )
+            completeness = item.get("completeness")
+            if completeness is None:
+                completeness = item.get("coverage_percentage")
+            if isinstance(completeness, dict):
+                completeness = None
+            completeness = _optional_number(completeness)
+            confidence_low = _optional_number(
+                item.get("confidenceLow") if item.get("confidenceLow") is not None else item.get("confidence_low")
+            )
+            confidence_high = _optional_number(
+                item.get("confidenceHigh") if item.get("confidenceHigh") is not None else item.get("confidence_high")
+            )
+            verification = item.get("verificationStatus") or item.get("verification_status")
+        else:
+            score = _optional_number(item)
+            peer = None
+            benchmark = None
+            completeness = None
+            confidence_low = None
+            confidence_high = None
+            verification = None
+
         normalized.append({
-            "dimension": dim,
-            "score": clamped_score,
-            "peerAverage": 65,
-            "globalBenchmark": 70,
-            "description": f"Vlerësimi zyrtar për dimensionin {dim}",
-            "commentary": f"Rezultati {clamped_score}% bazohet në regjistrat publikë të Kuvendit dhe ILDKPKI."
+            "key": key,
+            "id": dim_id,
+            "label": name,
+            "dimension": name,
+            "score": score,
+            "peerAverage": peer,
+            "benchmark": benchmark,
+            "globalBenchmark": benchmark,
+            "completeness": completeness,
+            "confidenceLow": confidence_low,
+            "confidenceHigh": confidence_high,
+            "verificationStatus": verification,
+            "description": None,
+            "commentary": None,
         })
     return normalized
 
@@ -427,33 +515,56 @@ async def get_politician_profile(id_or_slug: str = Path(...)):
                 score_res = supabase.table("paragon_scores").select("*").eq("politician_id", p_id).order("computed_at", desc=True).limit(1).execute()
                 latest_score = score_res.data[0] if score_res.data else None
 
-                composite = float(latest_score.get("composite", 75.0)) if latest_score else 75.0
-                party_short = politician.get("parties", {}).get("short_name", "IND") if isinstance(politician.get("parties"), dict) else "IND"
+                raw_composite = latest_score.get("composite") if latest_score else None
+                composite = float(raw_composite) if raw_composite is not None else None
+                party_short = politician.get("parties", {}).get("short_name") if isinstance(politician.get("parties"), dict) else None
+                party_short = party_short or politician.get("party_short")
 
                 raw_dims = latest_score.get("metrics", {}) if latest_score else {}
+                if isinstance(raw_dims, str):
+                    try:
+                        raw_dims = json.loads(raw_dims)
+                    except (TypeError, ValueError):
+                        raw_dims = {}
                 dimensions_list = normalize_dimensions(latest_score)
 
-                commentary = generate_albanian_commentary(
-                    politician["full_name"],
-                    party_short,
-                    composite,
-                    {d["dimension"]: d["score"] for d in dimensions_list},
-                    raw_dims
-                )
+                commentary = None
+                if composite is not None and party_short:
+                    commentary = generate_albanian_commentary(
+                        politician["full_name"],
+                        party_short,
+                        composite,
+                        {d["dimension"]: d["score"] for d in dimensions_list},
+                        raw_dims if isinstance(raw_dims, dict) else {}
+                    )
 
                 response_payload = {
                     "politician": politician,
-                    "overall_score": int(composite),
-                    "dynamicScore": int(composite),
+                    "id": politician.get("profile_id") or politician.get("id"),
+                    "numericId": politician.get("numeric_id"),
+                    "name": politician.get("full_name"),
+                    "party": party_short,
+                    "primaryRole": politician.get("primary_role"),
+                    "parliamentaryStatus": politician.get("parliamentary_status"),
+                    "overall_score": int(round(composite)) if composite is not None else None,
+                    "dynamicScore": int(round(composite)) if composite is not None else None,
+                    "composite": composite,
                     "dimensions": dimensions_list,
                     "paragonAnalysis": dimensions_list,
                     "commentary": commentary,
-                    "metrics": raw_dims,
+                    "metrics": raw_dims if isinstance(raw_dims, dict) else {},
+                    "dateOfBirth": politician.get("date_of_birth"),
+                    "placeOfBirth": politician.get("place_of_birth"),
+                    "electoralZone": politician.get("electoral_zone"),
+                    "imageUrl": politician.get("photo_url"),
+                    "shortBio": politician.get("bio_short"),
+                    "detailedBio": politician.get("bio_detailed"),
                     "metadata": {
                         "calculated_at": latest_score.get("computed_at") if latest_score else None,
                         "last_updated": politician.get("updated_at")
                     }
                 }
+                attach_dossier(response_payload, load_supabase_dossier(supabase, politician))
                 _profile_cache[cache_key] = {"timestamp": now, "data": response_payload}
                 return response_payload
         except Exception as e:
@@ -478,34 +589,36 @@ async def get_politician_profile(id_or_slug: str = Path(...)):
                 pol = dict(p_row)
                 nid = pol["numeric_id"]
                 p_id = pol["id"]
-                party_name = pol.get("party_short") or "IND"
+                party_name = pol.get("party_short") or None
 
                 cur.execute("SELECT * FROM paragon_scores WHERE politician_id = ? ORDER BY period_end DESC, computed_at DESC LIMIT 1", (p_id,))
                 s_row = cur.fetchone()
                 score_data = dict(s_row) if s_row else None
                 dimensions_list = normalize_dimensions(score_data)
+                raw_composite = score_data.get("composite") if score_data else None
+                composite = float(raw_composite) if raw_composite is not None else None
 
                 response_payload = {
                     "id": f"vip{nid}",
                     "numericId": nid,
                     "politicianId": nid,
                     "name": pol["full_name"],
-                    "category": f"Politikë ({party_name})",
+                    "category": f"Politikë ({party_name})" if party_name else "Politikë",
                     "party": party_name,
-                    "primaryRole": pol.get("primary_role") or "Deputet i Kuvendit të Shqipërisë",
+                    "primaryRole": pol.get("primary_role"),
                     "secondaryRoles": json.loads(pol.get("secondary_roles")) if pol.get("secondary_roles") else [],
-                    "parliamentaryStatus": pol.get("parliamentary_status") or "active_mp",
-                    "imageUrl": pol.get("photo_url") or f"https://media.novaric.al/politicians/vip{nid}.jpg",
+                    "parliamentaryStatus": pol.get("parliamentary_status"),
+                    "imageUrl": pol.get("photo_url"),
                     "photo_source_url": pol.get("photo_source_url") or pol.get("photo_url"),
-                    "shortBio": pol.get("bio_short") or f"Deputet i Kuvendit të Shqipërisë, Qarku {pol.get('electoral_zone')}.",
+                    "shortBio": pol.get("bio_short"),
                     "detailedBio": pol.get("bio_detailed") or "",
-                    "dynamicScore": None,
-                    "composite": None,
+                    "dynamicScore": int(round(composite)) if composite is not None else None,
+                    "composite": composite,
                     "compositeDelta": None,
                     "periodEnd": score_data.get("period_end") if score_data else None,
                     "paragonDimensions": None,
                     "paragonAnalysis": dimensions_list,
-                    "commentary": f"Profili zyrtar i deputetit {pol['full_name']} në Kuvendin e Shqipërisë.",
+                    "commentary": None,
                     "dateOfBirth": pol.get("date_of_birth"),
                     "dateOfBirthVerificationStatus": pol.get("date_of_birth_verification_status"),
                     "dateOfBirthSourceUrl": pol.get("date_of_birth_source_url"),
@@ -513,11 +626,11 @@ async def get_politician_profile(id_or_slug: str = Path(...)):
                     "placeOfBirth": pol.get("place_of_birth"),
                     "electoralZone": pol.get("electoral_zone"),
                     "dimsSource": "db",
-                    "last_updated": pol.get("created_at") or "2026-09-28T08:00:00Z",
+                    "last_updated": pol.get("created_at"),
                     "scoring_suspended": True,
                     "scoring_suspension_notice": "Vlerësimet PARAGON® janë përkohësisht të pezulluara për verifikimin e burimeve dhe integritetit të të dhënave.",
                     "politician": pol,
-                    "overall_score": None,
+                    "overall_score": int(round(composite)) if composite is not None else None,
                     "dimensions": dimensions_list,
                     "metrics": json.loads(score_data["metrics"]) if (score_data and score_data.get("metrics")) else {},
                     "metadata": {
@@ -525,6 +638,7 @@ async def get_politician_profile(id_or_slug: str = Path(...)):
                         "last_updated": pol.get("created_at")
                     }
                 }
+                attach_dossier(response_payload, load_sqlite_dossier(conn, pol))
                 conn.close()
                 _profile_cache[cache_key] = {"timestamp": now, "data": response_payload}
                 return response_payload
@@ -558,17 +672,18 @@ async def get_politician_profile(id_or_slug: str = Path(...)):
         "shortBio": found.get("shortBio"),
         "detailedBio": found.get("detailedBio"),
         "dynamicScore": found.get("dynamicScore"),
+        "party": found.get("party"),
+        "primaryRole": found.get("primaryRole"),
+        "secondaryRoles": found.get("secondaryRoles") or [],
+        "parliamentaryStatus": found.get("parliamentaryStatus"),
         "paragonAnalysis": found.get("paragonAnalysis") or normalize_dimensions(found.get("paragonDimensions")),
-        "commentary": found.get("commentary") or f"Profili zyrtar i deputetit {found.get('name')} në Kuvendin e Shqipërisë.",
+        "dimensions": found.get("paragonAnalysis") or normalize_dimensions(found.get("paragonDimensions")),
+        "commentary": found.get("commentary") or None,
         "dateOfBirth": found.get("dateOfBirth"),
         "placeOfBirth": found.get("placeOfBirth"),
         "electoralZone": found.get("electoralZone"),
-        "paragonDimensions": found.get("paragonDimensions", []),
-        "compositeHistory": found.get("compositeHistory", []),
-        "bio": found.get("bio", {}),
-        "recentActivity": found.get("recentActivity", []),
-        "assetDeclaration": found.get("assetDeclaration", {}),
-        "mandates": found.get("mandates", []),
+        "paragonDimensions": found.get("paragonDimensions"),
+        "compositeHistory": found.get("compositeHistory") or [],
         "politician": {
             "id": found.get("id"),
             "numeric_id": found.get("numericId"),
@@ -582,12 +697,13 @@ async def get_politician_profile(id_or_slug: str = Path(...)):
         },
         "overall_score": found.get("dynamicScore"),
         "dimensions": found.get("paragonAnalysis") or normalize_dimensions(found.get("paragonDimensions")),
-        "metrics": found.get("metrics", {}),
+        "metrics": found.get("metrics") if isinstance(found.get("metrics"), dict) else {},
         "metadata": {
             "calculated_at": found.get("last_updated"),
             "last_updated": found.get("last_updated")
         }
     }
+    attach_dossier(response_payload, identity_dossier(found))
 
     _profile_cache[cache_key] = {"timestamp": now, "data": response_payload}
     return response_payload
