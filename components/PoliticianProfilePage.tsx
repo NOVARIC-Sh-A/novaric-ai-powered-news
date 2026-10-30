@@ -43,22 +43,30 @@ export const PoliticianProfilePage: React.FC<Props> = (props) => {
   const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
-    if (!id || props.profile) return;
+    if (props.profile) {
+      setProfile(props.profile);
+      setLoading(false);
+      setError(null);
+      return;
+    }
+    if (!id) return;
 
+    let alive = true;
     const load = async () => {
       try {
         setLoading(true);
         setError(null);
         const profileData = await fetchProfileById(id);
-        setProfile(profileData);
+        if (alive) setProfile(profileData);
       } catch (err: any) {
         console.error("Error loading profile:", err);
-        setError(err instanceof Error ? err.message : "Nuk u mundësua ngarkimi i profilit.");
+        if (alive) setError(err instanceof Error ? err.message : "Nuk u mundësua ngarkimi i profilit.");
       } finally {
-        setLoading(false);
+        if (alive) setLoading(false);
       }
     };
     load();
+    return () => { alive = false; };
   }, [id, props.profile]);
 
   if (loading) {

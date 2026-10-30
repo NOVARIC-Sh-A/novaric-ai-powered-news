@@ -110,10 +110,10 @@ export function toPoliticianUI(dto: any): VipProfile {
         commentary: dto.commentary || baseline?.commentary,
 
         // Extended Spec Fields
-        party: raw?.party || dto.party || (baseline as any)?.party || (baseline?.category ? (baseline.category.match(/\((.*?)\)/)?.[1] || 'IND') : 'IND'),
-        primaryRole: raw?.primary_role || dto.primaryRole || (raw?.is_active_mp ? "Deputet i Kuvendit të Shqipërisë" : "Figurë Politike"),
+        party: raw?.party || dto.party || (baseline as any)?.party || null,
+        primaryRole: raw?.primary_role || dto.primaryRole || null,
         secondaryRoles: raw?.secondary_roles ? (typeof raw.secondary_roles === 'string' ? JSON.parse(raw.secondary_roles) : raw.secondary_roles) : (dto.secondaryRoles || []),
-        parliamentaryStatus: raw?.parliamentary_status || dto.parliamentaryStatus || (raw?.is_active_mp ? 'active_mp' : 'not_an_active_mp'),
+        parliamentaryStatus: raw?.parliamentary_status || dto.parliamentaryStatus || (raw?.is_active_mp === true || raw?.is_active_mp === 1 ? 'active_mp' : (raw?.is_active_mp === false || raw?.is_active_mp === 0 ? 'not_an_active_mp' : null)),
         detentionStatus: raw?.detention_status || dto.detentionStatus || 'none',
         caseStatus: raw?.case_status || dto.caseStatus || 'none',
         presumptionOfInnocence: raw?.presumption_of_innocence !== undefined ? !!raw.presumption_of_innocence : true,
@@ -123,7 +123,7 @@ export function toPoliticianUI(dto: any): VipProfile {
         dateOfBirthSourceUrl: raw?.date_of_birth_source_url || dto.dateOfBirthSourceUrl,
         dateOfBirthVerifiedAt: raw?.date_of_birth_verified_at || dto.dateOfBirthVerifiedAt,
         roleHistory: raw?.role_history || dto.roleHistory || [],
-        scoringSuspended: true,
+        scoringSuspended: dto.scoringSuspended ?? dto.scoring_suspended ?? raw?.scoring_suspended ?? true,
         scoringSuspensionNotice: "Vlerësimet PARAGON® janë përkohësisht të pezulluara për verifikimin e burimeve dhe integritetit të të dhënave.",
         composite: typeof dto.composite === 'number'
           ? dto.composite
@@ -140,10 +140,20 @@ export function toPoliticianUI(dto: any): VipProfile {
             ? dto.paragonAnalysis.slice(0, 7).map((d: any) => typeof d?.score === 'number' ? d.score : null)
             : null),
         compositeHistory: dto.compositeHistory || (baseline as any)?.compositeHistory || null,
-        bio: dto.bio || (baseline as any)?.bio,
-        recentActivity: dto.recentActivity || (baseline as any)?.recentActivity,
-        assetDeclaration: dto.assetDeclaration || (baseline as any)?.assetDeclaration,
-        mandates: dto.mandates || (baseline as any)?.mandates,
+        bio: dto.bio || null,
+        recentActivity: Array.isArray(dto.recentActivity) ? dto.recentActivity : [],
+        assetDeclaration: dto.assetDeclaration && (dto.assetDeclaration.year || dto.assetDeclaration.categories?.length) ? dto.assetDeclaration : null,
+        assetTimeline: Array.isArray(dto.assetTimeline) ? dto.assetTimeline : [],
+        mandates: Array.isArray(dto.mandates) ? dto.mandates : [],
+        promises: Array.isArray(dto.promises) ? dto.promises : [],
+        consistencyFlags: Array.isArray(dto.consistencyFlags) ? dto.consistencyFlags : [],
+        votingRecord: Array.isArray(dto.votingRecord) ? dto.votingRecord : [],
+        rhetoric: dto.rhetoric || null,
+        affiliations: Array.isArray(dto.affiliations) ? dto.affiliations : [],
+        evidence: Array.isArray(dto.evidence) ? dto.evidence : [],
+        rightOfReply: Array.isArray(dto.rightOfReply) ? dto.rightOfReply : [],
+        scoreRevisions: Array.isArray(dto.scoreRevisions) ? dto.scoreRevisions : [],
+        dimensionReadings: dto.dimensionReadings && typeof dto.dimensionReadings === 'object' ? dto.dimensionReadings : {},
 
         // Enrichment Arrays (Authoritative from aggregate, else fallback)
         timelineEvents: (enrichment.timeline && enrichment.timeline.length > 0) 

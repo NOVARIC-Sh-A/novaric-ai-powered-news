@@ -58,6 +58,10 @@ export const RadarChart: React.FC<RadarChartProps> = ({
     .map((dim, i) => ({ dim, i, hasPeer: typeof dim.peerAverage === 'number' && !isNaN(dim.peerAverage) }))
     .filter((entry) => entry.hasPeer);
 
+  const benchmarkEntries = dimensions
+    .map((dim, i) => ({ dim, i, hasBenchmark: typeof dim.benchmark === 'number' && !isNaN(dim.benchmark) }))
+    .filter((entry) => entry.hasBenchmark);
+
   return (
     <div className={`relative flex flex-col items-center select-none ${className}`}>
       <svg width={size} height={size} className="overflow-visible">
@@ -88,6 +92,37 @@ export const RadarChart: React.FC<RadarChartProps> = ({
           );
         })}
 
+        {/* Benchmark polygon: dotted amber, distinct from subject and peers */}
+        {benchmarkEntries.length >= 3 && (
+          <polygon
+            points={benchmarkEntries.map((e) => {
+              const p = getPoint(e.i, e.dim.benchmark as number);
+              return `${p.x},${p.y}`;
+            }).join(' ')}
+            fill="none"
+            stroke="#d97706"
+            strokeWidth="1.75"
+            strokeDasharray="1.5 3.5"
+            strokeLinejoin="round"
+          />
+        )}
+        {benchmarkEntries.map((e) => {
+          const p = getPoint(e.i, e.dim.benchmark as number);
+          return (
+            <rect
+              key={`bench-${e.i}`}
+              x={p.x - 3}
+              y={p.y - 3}
+              width="6"
+              height="6"
+              fill="none"
+              stroke="#d97706"
+              strokeWidth="1.4"
+              transform={`rotate(45 ${p.x} ${p.y})`}
+            />
+          );
+        })}
+
         {/* Peer Reference Polygon (dashed gray) - only if peers exist */}
         {peerEntries.length >= 3 && (
           <polygon
@@ -102,6 +137,20 @@ export const RadarChart: React.FC<RadarChartProps> = ({
             className="opacity-70 dark:opacity-60"
           />
         )}
+        {peerEntries.map((e) => {
+          const p = getPoint(e.i, e.dim.peerAverage as number);
+          return (
+            <circle
+              key={`peer-${e.i}`}
+              cx={p.x}
+              cy={p.y}
+              r="2.2"
+              fill="none"
+              stroke="#64748b"
+              strokeWidth="1.2"
+            />
+          );
+        })}
 
         {/* Subject Polygon (Brand Blue) - NEVER connect through fabricated values */}
         {scoredEntries.length >= 3 ? (
@@ -227,10 +276,13 @@ export const RadarChart: React.FC<RadarChartProps> = ({
         ) : (
           <div className="text-[10px] text-slate-400 dark:text-slate-500 flex items-center gap-4">
             <span className="inline-flex items-center gap-1.5">
-              <span className="w-2.5 h-0.5 bg-blue-600 rounded"></span> Subjekti
+              <span className="w-2.5 h-0.5 bg-blue-600 rounded"></span> Subjekti / Subject
             </span>
             <span className="inline-flex items-center gap-1.5">
-              <span className="w-2.5 h-0.5 border-t border-dashed border-slate-400"></span> Mes. kolegëve
+              <span className="w-2.5 h-0.5 border-t border-dashed border-slate-400"></span> Mes. kolegëve / Peers
+            </span>
+            <span className="inline-flex items-center gap-1.5">
+              <span className="w-2.5 h-0.5 border-t border-dotted border-amber-600"></span> Benchmark
             </span>
           </div>
         )}

@@ -8,8 +8,12 @@ import { BulletRow } from './primitives/BulletRow';
 import { Sparkline } from './primitives/Sparkline';
 import { ZodiacChip } from './primitives/ZodiacChip';
 import { TabPanel } from './primitives/TabPanel';
+import { AWAITING_DATA } from './primitives/awaiting';
 import { ScoreLineagePanel } from '../analytics/ScoreLineagePanel';
+import { ProfileRecordSections } from './ProfileRecordSections';
+import { EvidenceDrawer } from './EvidenceDrawer';
 import { AlertTriangle, ShieldCheck, Scale, Info } from 'lucide-react';
+import { DimensionReading, ScoreEvidenceItem } from '../../types/politician';
 
 export interface PoliticianCardProps {
   politician?: PoliticianDetail;
@@ -35,6 +39,7 @@ export const PoliticianCard: React.FC<PoliticianCardProps> = ({
   onNavigateToMethodology,
 }) => {
   const [selectedLineageId, setSelectedLineageId] = useState<string | null>(null);
+  const [evidenceKey, setEvidenceKey] = useState<string | null | undefined>(undefined);
   const target: any = politician || profile || {};
   const {
     name = '',
@@ -63,6 +68,12 @@ export const PoliticianCard: React.FC<PoliticianCardProps> = ({
       ? target.dimensions
       : [];
 
+  const readings: Record<string, DimensionReading> = target.dimensionReadings || {};
+  const evidence: ScoreEvidenceItem[] = Array.isArray(target.evidence) ? target.evidence : [];
+
+  const optionalNumber = (value: unknown): number | null =>
+    typeof value === 'number' && !isNaN(value) ? value : null;
+
   const paragonDimensions: ParagonDimensionItem[] = CANONICAL_PARAGON_DIMENSIONS.map((canonical, idx) => {
     const match = rawDims.find((d: any, dIdx: number) => {
       if (!d) return false;
@@ -90,15 +101,20 @@ export const PoliticianCard: React.FC<PoliticianCardProps> = ({
       ? match.globalBenchmark
       : null);
 
+    const reading = readings[canonical.key] || {};
+
     return {
       id: canonical.id,
       key: canonical.key,
       name: canonical.name,
       shortName: canonical.shortName,
       label: `${canonical.key} ${canonical.name}`,
-      score,
-      peerAverage,
-      benchmark,
+      score: score ?? optionalNumber(reading.score),
+      peerAverage: peerAverage ?? optionalNumber(reading.peerAverage),
+      benchmark: benchmark ?? optionalNumber(reading.benchmark),
+      confidenceLow: optionalNumber(match?.confidenceLow) ?? optionalNumber(reading.confidenceLow),
+      confidenceHigh: optionalNumber(match?.confidenceHigh) ?? optionalNumber(reading.confidenceHigh),
+      completeness: optionalNumber(match?.completeness) ?? optionalNumber(reading.completeness),
       metricInputs: match?.metricInputs || match?.metrics || {},
       coverage: match?.coverage,
     };
@@ -124,9 +140,9 @@ export const PoliticianCard: React.FC<PoliticianCardProps> = ({
         if (m) return `${m[3].padStart(2, '0')}.${m[2].padStart(2, '0')}.${m[1]}`;
         return dateOfBirth;
       })()
-    : '—';
-  const pobFormatted = placeOfBirth || '—';
-  const zoneFormatted = electoralZone ? `Qarku ${electoralZone.replace(/^Qarku\s+/i, '')}` : '—';
+    : AWAITING_DATA;
+  const pobFormatted = placeOfBirth || AWAITING_DATA;
+  const zoneFormatted = electoralZone ? `Qarku ${String(electoralZone).replace(/^Qarku\s+/i, '')}` : AWAITING_DATA;
 
   // Strict DOB verification check
   const isDobVerified = Boolean(
@@ -136,7 +152,8 @@ export const PoliticianCard: React.FC<PoliticianCardProps> = ({
   );
 
   // Data-driven primary role & secondary roles
-  const primaryRoleDisplay = target.primaryRole || (target.is_active_mp ? `Deputet i Kuvendit të Shqipërisë · Grupi Parlamentar ${partyName}` : 'Figurë Publike');
+  const primaryRoleDisplay = target.primaryRole || AWAITING_DATA;
+  const scoringSuspended = target.scoringSuspended !== false;
   const secondaryRoles: string[] = Array.isArray(target.secondaryRoles)
     ? target.secondaryRoles
     : (typeof target.secondaryRoles === 'string'
@@ -179,13 +196,13 @@ export const PoliticianCard: React.FC<PoliticianCardProps> = ({
         <div className="flex flex-col md:flex-row items-center md:items-start gap-6">
           {/* Photo wrapped in SVG Score Ring (Score presentation suspended) */}
           <ScoreRing
-            score={null}
+            score={scoringSuspended ? null : (typeof target.composite === 'number' ? target.composite : (target.dynamicScore ?? null))}
             coverage={coverageStr}
             imageUrl={imageUrl}
             name={name}
             size={132}
             strokeWidth={5.5}
-            suspended={true}
+            suspended={scoringSuspended}
           />
 
           {/* Details & Chips */}
@@ -198,7 +215,7 @@ export const PoliticianCard: React.FC<PoliticianCardProps> = ({
               </span>
 
               {/* Zodiac Chip (only if DOB available) */}
-              <ZodiacChip dateOfBirth={dateOfBirth} />
+              <ZodiacChip dateOfBirth={dateOfBirth} withStatus />
 
               {/* Verified DOB Badge — Strictly requires verified status + source URL + verified_at */}
               {isDobVerified && (
@@ -318,6 +335,7 @@ export const PoliticianCard: React.FC<PoliticianCardProps> = ({
                   dimension={dim}
                   onOpenLineage={(id) => setSelectedLineageId(id)}
                   onNavigateToMethodology={onNavigateToMethodology}
+                  onOpenEvidence={(key) => setEvidenceKey(key)}
                 />
               ))}
             </div>
@@ -334,6 +352,25 @@ export const PoliticianCard: React.FC<PoliticianCardProps> = ({
           (c) DOSSIER TABS (Biografia, Aktiviteti, Pasuria, Mandatet)
           ======================================================== */}
       <TabPanel politician={target} />
+
+      <ProfileRecordSections
+        promises={target.promises}
+        consistencyFlags={target.consistencyFlags}
+        votingRecord={target.votingRecord}
+        rhetoric={target.rhetoric}
+        affiliations={target.affiliations}
+        rightOfReply={target.rightOfReply}
+        scoreRevisions={target.scoreRevisions}
+        evidenceCount={evidence.length}
+        onOpenEvidence={(key) => setEvidenceKey(key ?? null)}
+      />
+
+      <EvidenceDrawer
+        open={evidenceKey !== undefined}
+        dimensionKey={evidenceKey}
+        evidence={evidence}
+        onClose={() => setEvidenceKey(undefined)}
+      />
 
       {/* Analytical Spine Lineage Panel Modal for PARAGON Dimensions */}
       {selectedLineageId && (

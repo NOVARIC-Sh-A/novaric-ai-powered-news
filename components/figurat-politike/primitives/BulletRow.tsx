@@ -1,13 +1,15 @@
 // components/figurat-politike/primitives/BulletRow.tsx
 import React, { useState } from 'react';
-import { GitCommit, Clock, ExternalLink } from 'lucide-react';
+import { GitCommit, Clock, ExternalLink, FileSearch } from 'lucide-react';
 import { ParagonDimensionItem } from '../../../types/politician';
+import { AWAITING_DATA } from './awaiting';
 
 interface BulletRowProps {
   dimension: ParagonDimensionItem;
   className?: string;
   onOpenLineage?: (typedId: string) => void;
   onNavigateToMethodology?: () => void;
+  onOpenEvidence?: (dimensionKey: string) => void;
 }
 
 const CANONICAL_TYPED_MAP: Record<string, string> = {
@@ -25,6 +27,7 @@ export const BulletRow: React.FC<BulletRowProps> = ({
   className = '',
   onOpenLineage,
   onNavigateToMethodology,
+  onOpenEvidence,
 }) => {
   const [showTooltip, setShowTooltip] = useState(false);
 
@@ -38,7 +41,13 @@ export const BulletRow: React.FC<BulletRowProps> = ({
     benchmark = null,
     metricInputs = {},
     coverage: dimCoverage,
+    confidenceLow = null,
+    confidenceHigh = null,
+    completeness = null,
   } = dimension as any;
+
+  const hasInterval = typeof confidenceLow === 'number' && typeof confidenceHigh === 'number';
+  const hasCompleteness = typeof completeness === 'number' && !isNaN(completeness);
 
   const dimKey = String(key || (id ? `D${id}` : 'D1')).toUpperCase();
   const typedId = CANONICAL_TYPED_MAP[dimKey] || `paragon:${dimKey.toLowerCase()}`;
@@ -81,6 +90,19 @@ export const BulletRow: React.FC<BulletRowProps> = ({
         </span>
 
         <div className="flex items-center gap-2">
+          {onOpenEvidence && (
+            <button
+              type="button"
+              onClick={(e) => {
+                e.stopPropagation();
+                onOpenEvidence(dimKey);
+              }}
+              className="inline-flex items-center justify-center w-6 h-6 rounded text-slate-500 hover:text-blue-600 hover:bg-slate-100 dark:hover:bg-slate-800"
+              title="Burimet e pikëzimit / Evidence"
+            >
+              <FileSearch className="w-3.5 h-3.5" />
+            </button>
+          )}
           {/* Status Chips: Prejardhja e Pikëzimit for computed, Në pritje të auditimit for nulls */}
           {isScored ? (
             <button
@@ -163,6 +185,21 @@ export const BulletRow: React.FC<BulletRowProps> = ({
             title={`Mesatarja e kolegëve: ${peerAverage}%`}
           />
         )}
+      </div>
+
+      <div className="mt-1.5 flex flex-wrap gap-x-3 gap-y-0.5 text-[10px] text-slate-500 dark:text-slate-400">
+        <span>
+          Intervali i besimit / CI:{' '}
+          <span className="font-mono text-slate-700 dark:text-slate-200">
+            {hasInterval ? `${confidenceLow}–${confidenceHigh}` : AWAITING_DATA}
+          </span>
+        </span>
+        <span>
+          Plotësia e të dhënave / Completeness:{' '}
+          <span className="font-mono text-slate-700 dark:text-slate-200">
+            {hasCompleteness ? `${completeness}%` : AWAITING_DATA}
+          </span>
+        </span>
       </div>
 
       {/* Traceable Raw Metrics & Coverage Tooltip */}

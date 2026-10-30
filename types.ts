@@ -444,6 +444,16 @@ export interface VipProfile {
   roleHistory?: any[];
   scoringSuspended?: boolean;
   scoringSuspensionNotice?: string;
+  assetTimeline?: any[];
+  promises?: any[];
+  consistencyFlags?: any[];
+  votingRecord?: any[];
+  rhetoric?: any;
+  affiliations?: any[];
+  evidence?: any[];
+  rightOfReply?: any[];
+  scoreRevisions?: any[];
+  dimensionReadings?: Record<string, any>;
 }
 
 export interface ArticleData {

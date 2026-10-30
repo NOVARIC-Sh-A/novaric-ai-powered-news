@@ -251,7 +251,6 @@ export const runAnalysisForVip = (vip: VipProfile): FullProfileAnalysis => {
       age: vip.age || (40 + (hash % 10)),
       party: vip.category,
       title: vip.shortBio,
-      zodiacSign: vip.zodiacSign
     },
     educationHistory: [],
     workHistory: [],
