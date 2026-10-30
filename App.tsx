@@ -338,14 +338,23 @@ export const App: React.FC = () => {
           case 'vipProfilePage': {
             // Profiles are lazy loaded, so we might not have them yet.
             // But we can check if it's a known static one first or just assume it will load.
-            const vip = data.profiles.find((p) => p.id.toString() === id);
+            const vip = id ? data.profiles.find((p) =>
+              p.id.toString() === id || p.numericId?.toString() === id || p.id.toString() === `vip${id}`) : undefined;
             if (vip) {
                 setSelectedVipProfileForPage(vip);
-                found = true;
-            } else {
-                // If not in AppData yet (lazy), we still transition and the detail page will fetch.
-                found = true; 
+            } else if (id) {
+                // Not in AppData yet (lazy): pass the id so the detail page fetches it.
+                setSelectedVipProfileForPage({
+                  id,
+                  numericId: parseInt(id.replace(/^vip/i, ''), 10) || undefined,
+                  name: '',
+                  imageUrl: '',
+                  category: 'Politikë',
+                  shortBio: '',
+                  detailedBio: '',
+                });
             }
+            found = true;
             break;
           }
           case 'tvShowPage': {

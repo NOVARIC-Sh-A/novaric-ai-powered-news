@@ -46,9 +46,14 @@ async function request<T>(path: string, init?: RequestInit): Promise<T> {
     }
 
     const textSample = await res.text().catch(() => "");
-    throw new Error(
+    const err = new Error(
       `Endpoint ${endpoint} returned content-type "${contentType}" instead of application/json. Body: ${textSample.slice(0, 80)}`
     );
+    // Static hosting (nginx SPA fallback) answers unknown /api/* routes with index.html:
+    // treat that as "endpoint not available" so callers can use their 404 fallbacks.
+    (err as any).status = 404;
+    (err as any).nonJson = true;
+    throw err;
   } finally {
     clearTimeout(timeoutId);
   }
@@ -242,6 +247,18 @@ export const fetchPoliticianProfile = async (id: string | number): Promise<VipPr
       throw error;
     }
   }
+
+  // 3. Static deployment fallback: the bundled, verified politician export
+  //    (same real dataset the list page renders; no mock/synthetic values).
+  const idStr = String(id);
+  const localPoliticians = (paragonScoresExport?.profiles as any[]) || [];
+  const localMatch = localPoliticians.find(p =>
+    String(p.id) === idStr ||
+    String(p.numericId) === idStr ||
+    String(p.politicianId) === idStr ||
+    String(p.id) === `vip${idStr}`
+  );
+  if (localMatch) return toPoliticianUI(localMatch);
 
   // FALLBACK FOR NON-POLITICAL PROFILES ONLY
   const nonPoliticalProfiles = [
