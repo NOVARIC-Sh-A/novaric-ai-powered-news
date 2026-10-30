@@ -1,0 +1,104 @@
+{
+  "alertPolicies": [
+    {
+      "name": "projects/novaric-paragon/alertPolicies/politicians-ingest-final-failure",
+      "displayName": "🚨 NOVARIC® PARAGON: Politicians Ingestion Final Failure",
+      "documentation": {
+        "content": "Kuvendi politicians ingestion job failed all 5 scheduled retries or crashed with fatal 5xx exception. Consult Runbook: https://github.com/novaric/paragon-media/blob/main/docs/POLITICIANS_PIPELINE_RUNBOOK.md#safe-rollback-procedures",
+        "mimeType": "text/markdown"
+      },
+      "conditions": [
+        {
+          "displayName": "Scheduler Ingest Job Repeated Failure",
+          "conditionThreshold": {
+            "filter": "resource.type = \"cloud_scheduler_job\" AND resource.labels.job_id = \"weekly-politicians-ingest\" AND metric.type = \"cloudscheduler.googleapis.com/job/attempt_count\" AND metric.labels.status != \"SUCCESS\"",
+            "comparison": "COMPARISON_GT",
+            "thresholdValue": 4,
+            "duration": "0s",
+            "trigger": {
+              "count": 1
+            },
+            "aggregations": [
+              {
+                "alignmentPeriod": "300s",
+                "perSeriesAligner": "ALIGN_COUNT"
+              }
+            ]
+          }
+        }
+      ],
+      "combiner": "OR",
+      "enabled": true,
+      "notificationChannels": [
+        "projects/novaric-paragon/notificationChannels/slack-ops-critical",
+        "projects/novaric-paragon/notificationChannels/pagerduty-tier1"
+      ]
+    },
+    {
+      "name": "projects/novaric-paragon/alertPolicies/politicians-membership-change-delta",
+      "displayName": "🏛️ NOVARIC® PARAGON: Material MP Membership Change Detected",
+      "documentation": {
+        "content": "Active MP seat count deltas materially vs previous ingestion run (Delta != 0). MP mandate addition, resignation, or deactivation detected in Kuvendi. Consult Runbook: https://github.com/novaric/paragon-media/blob/main/docs/POLITICIANS_PIPELINE_RUNBOOK.md#deactivate-missing-pass-operational-guide",
+        "mimeType": "text/markdown"
+      },
+      "conditions": [
+        {
+          "displayName": "Active MP Count Delta != 0",
+          "conditionThreshold": {
+            "filter": "resource.type = \"generic_task\" AND metric.type = \"custom.googleapis.com/novaric/politicians/membership_change_delta\"",
+            "comparison": "COMPARISON_NE",
+            "thresholdValue": 0,
+            "duration": "0s",
+            "trigger": {
+              "count": 1
+            },
+            "aggregations": [
+              {
+                "alignmentPeriod": "60s",
+                "perSeriesAligner": "ALIGN_DELTA"
+              }
+            ]
+          }
+        }
+      ],
+      "combiner": "OR",
+      "enabled": true,
+      "notificationChannels": [
+        "projects/novaric-paragon/notificationChannels/slack-ops-critical"
+      ]
+    },
+    {
+      "name": "projects/novaric-paragon/alertPolicies/politicians-image-mirror-defect",
+      "displayName": "🖼️ NOVARIC® PARAGON: Politician Photo Mirroring Resolution Defect",
+      "documentation": {
+        "content": "Mirrored politician photo resolution rate degraded below 104/104 target or placeholder defect observed. Consult Runbook: https://github.com/novaric/paragon-media/blob/main/docs/POLITICIANS_PIPELINE_RUNBOOK.md#image-mirroring-operations",
+        "mimeType": "text/markdown"
+      },
+      "conditions": [
+        {
+          "displayName": "Mirrored Image Resolution < 104",
+          "conditionThreshold": {
+            "filter": "resource.type = \"generic_task\" AND metric.type = \"custom.googleapis.com/novaric/politicians/mirrored_photo_resolved_count\"",
+            "comparison": "COMPARISON_LT",
+            "thresholdValue": 104,
+            "duration": "0s",
+            "trigger": {
+              "count": 1
+            },
+            "aggregations": [
+              {
+                "alignmentPeriod": "60s",
+                "perSeriesAligner": "ALIGN_MEAN"
+              }
+            ]
+          }
+        }
+      ],
+      "combiner": "OR",
+      "enabled": true,
+      "notificationChannels": [
+        "projects/novaric-paragon/notificationChannels/slack-ops-warning"
+      ]
+    }
+  ]
+}

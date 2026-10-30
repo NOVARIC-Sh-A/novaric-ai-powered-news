@@ -1,0 +1,9 @@
+{
+  "name": "NOVARIC® AI-Powered News",
+  "description": "Një aplikacion inteligjent që përdor IA për të verifikuar faktet e pretendimeve ose artikujve të lajmeve, duke ofruar një verdikt, përmbledhje dhe burime mbështetëse nga uebi.",
+  "requestFramePermissions": [],
+  "prompt": "",
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

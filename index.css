@@ -1,0 +1,41 @@
+/* Global styles */
+@import "./styles/brand-tokens.css";
+
+/* Global background repeat prevention and cover styling */
+html, body, #root, #app-wrapper {
+  background-repeat: no-repeat !important;
+}
+
+body {
+  background-image: url('https://novaric.co/wp-content/uploads/2025/10/Nora-AI.jpeg');
+  background-size: cover;
+  background-position: center center;
+  background-attachment: fixed;
+  background-repeat: no-repeat !important;
+}
+
+@media (max-width: 1024px) {
+  html, body, #root, #app-wrapper {
+    background-repeat: no-repeat !important;
+  }
+  body {
+    background-size: cover !important;
+    -webkit-background-size: cover !important;
+    background-position: center top !important;
+    background-attachment: scroll !important;
+    background-repeat: no-repeat !important;
+  }
+}
+
+@media (max-width: 768px) {
+  html, body, #root, #app-wrapper {
+    background-repeat: no-repeat !important;
+  }
+  body {
+    background-repeat: no-repeat !important;
+    background-size: cover !important;
+    -webkit-background-size: cover !important;
+    background-position: center top !important;
+    background-attachment: scroll !important;
+  }
+}

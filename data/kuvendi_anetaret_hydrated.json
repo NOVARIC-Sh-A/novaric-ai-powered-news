@@ -1,0 +1,1882 @@
+{
+  "Kasëm Mahmutaj": {
+    "full_name": "Kasëm Mahmutaj",
+    "date_of_birth": "1962-04-15",
+    "place_of_birth": "Berat",
+    "electoral_zone": "Berat",
+    "email": "kasem.mahmutaj@parlament.al",
+    "photo_url": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/Kasem Mahmutaj.jpg"
+  },
+  "Emilja Koliqi": {
+    "full_name": "Emilja Koliqi",
+    "date_of_birth": "2022-01-15",
+    "place_of_birth": "Shkodër",
+    "electoral_zone": "Shkodër",
+    "email": "Emilja.Koliqi@parlament.al",
+    "photo_url": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/Emilja Koliqi.png"
+  },
+  "Dashnor Sula": {
+    "full_name": "Dashnor Sula",
+    "date_of_birth": "2022-01-15",
+    "place_of_birth": "Peqin",
+    "electoral_zone": "Elbasan",
+    "email": "dashnor.sula@parlament.al",
+    "photo_url": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/DashnorSula.png"
+  },
+  "Eduard Ndreca": {
+    "full_name": "Eduard Ndreca",
+    "date_of_birth": "2022-01-15",
+    "place_of_birth": "Lezhe",
+    "electoral_zone": "Lezhë",
+    "email": "Eduard.Ndreca@parlament.al",
+    "photo_url": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/Eduard Ndreca.png"
+  },
+  "Nasip Naco": {
+    "full_name": "Nasip Naco",
+    "date_of_birth": "2022-01-15",
+    "place_of_birth": "Çorovodë, Skrapar",
+    "electoral_zone": "Berat",
+    "email": "Nasip.Naço@parlament.al ",
+    "photo_url": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/NasipNaco.png"
+  },
+  "Zija Ismaili": {
+    "full_name": "Zija Ismaili",
+    "date_of_birth": "1970-08-19",
+    "place_of_birth": null,
+    "electoral_zone": "Berat",
+    "email": "zija.ismaili@parlament.al",
+    "photo_url": null
+  },
+  "Xhemal Qefalia": {
+    "full_name": "Xhemal Qefalia",
+    "date_of_birth": "2022-01-15",
+    "place_of_birth": "Tiranë",
+    "electoral_zone": null,
+    "email": "xhemal.qefalia@parlament.al",
+    "photo_url": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/xhemalqefalia_foto.jpg"
+  },
+  "Ceno Klosi": {
+    "full_name": "Ceno Klosi",
+    "date_of_birth": "1979-07-11",
+    "place_of_birth": null,
+    "electoral_zone": "Fier",
+    "email": "ceno.klosi@parlament.al",
+    "photo_url": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202509191009209374CENO KLOSI.JPG"
+  },
+  "Ornaldo Rakipi": {
+    "full_name": "Ornaldo Rakipi",
+    "date_of_birth": "1994-01-28",
+    "place_of_birth": "Peqin",
+    "electoral_zone": null,
+    "email": "Ornaldo.Rakipi@parlament.al",
+    "photo_url": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/orlando rakipi.png"
+  },
+  "Arben Pëllumbi": {
+    "full_name": "Arben Pëllumbi",
+    "date_of_birth": "2022-01-15",
+    "place_of_birth": "Korçë",
+    "electoral_zone": null,
+    "email": "Arben.Pellumbi@parlament.al",
+    "photo_url": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/Arben%20Pe%CC%88llumbi.JPG"
+  },
+  "Blendi Gonxhja": {
+    "full_name": "Blendi Gonxhja",
+    "date_of_birth": "1970-06-14",
+    "place_of_birth": null,
+    "electoral_zone": null,
+    "email": "blendi.gonxhja@parlament.al",
+    "photo_url": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202509220801290888LRPH8641-Edit.jpg"
+  },
+  "Iris Luarasi": {
+    "full_name": "Iris Luarasi",
+    "date_of_birth": "1973-07-04",
+    "place_of_birth": null,
+    "electoral_zone": null,
+    "email": "iris.luarasi@parlament.al",
+    "photo_url": null
+  },
+  "Redi Muçi": {
+    "full_name": "Redi Muçi",
+    "date_of_birth": "1985-11-17",
+    "place_of_birth": null,
+    "electoral_zone": null,
+    "email": "redi.muci@parlament.al",
+    "photo_url": null
+  },
+  "Kliti Hoti": {
+    "full_name": "Kliti Hoti",
+    "date_of_birth": "1970-04-15",
+    "place_of_birth": null,
+    "electoral_zone": "Shkodër",
+    "email": "kliti.hoti@parlament.al",
+    "photo_url": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202509250839435652BHPH3535.JPG"
+  },
+  "Etleva Budini": {
+    "full_name": "Etleva Budini",
+    "date_of_birth": "1971-09-28",
+    "place_of_birth": null,
+    "electoral_zone": "Durrës",
+    "email": "etleva.budini@parlament.al",
+    "photo_url": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202509191013065563ETLEVA BUDINI.JPG"
+  },
+  "Arian Ndoja": {
+    "full_name": "Arian Ndoja",
+    "date_of_birth": "1977-08-10",
+    "place_of_birth": null,
+    "electoral_zone": "Durrës",
+    "email": "arian.ndoja@parlament.al",
+    "photo_url": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202509250836320629BHPH3504.JPG"
+  },
+  "Enkelejd Alibeaj": {
+    "full_name": "Enkelejd Alibeaj",
+    "date_of_birth": "2022-01-15",
+    "place_of_birth": "Fier",
+    "electoral_zone": "Fier",
+    "email": "enkelejd.alibeaj@parlament.al",
+    "photo_url": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/Enkeled_Alibeaj.png"
+  },
+  "Ermonela Felaj (Valikaj)": {
+    "full_name": "Ermonela Felaj (Valikaj)",
+    "date_of_birth": "2022-01-15",
+    "place_of_birth": "Berat",
+    "electoral_zone": null,
+    "email": "Ermonela.Felaj@parlament.al",
+    "photo_url": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/Ermonela Felaj - Valikaj.png"
+  },
+  "Teuta Ramaj": {
+    "full_name": "Teuta Ramaj",
+    "date_of_birth": "2022-01-15",
+    "place_of_birth": "Vlorë",
+    "electoral_zone": "Vlorë",
+    "email": "teuta.ramaj@parlament.al",
+    "photo_url": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/TeutaRamaj.png"
+  },
+  "Plarent Ndreca": {
+    "full_name": "Plarent Ndreca",
+    "date_of_birth": "1977-05-27",
+    "place_of_birth": "Rrëshen, Mirditë",
+    "electoral_zone": null,
+    "email": "Plarent.Ndreca@parlament.al",
+    "photo_url": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202401260946034147PLARENT NDRECA.jpg"
+  },
+  "Alban Xhelili": {
+    "full_name": "Alban Xhelili",
+    "date_of_birth": "2022-01-15",
+    "place_of_birth": "Durrës",
+    "electoral_zone": "Durrës",
+    "email": "Alban.Xhelili@parlament.al",
+    "photo_url": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/Alban Xhelili.png"
+  },
+  "Tomor Alizoti": {
+    "full_name": "Tomor Alizoti",
+    "date_of_birth": "2022-01-15",
+    "place_of_birth": "Lushnje",
+    "electoral_zone": "Elbasan",
+    "email": "tomor.alizoti@parlament.al",
+    "photo_url": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/TomorrAlizoti.png"
+  },
+  "Ilirian Pendavinji": {
+    "full_name": "Ilirian Pendavinji",
+    "date_of_birth": "2022-01-15",
+    "place_of_birth": "Korçë",
+    "electoral_zone": "Korçë",
+    "email": "ilirian.pendavinji@parlament.al",
+    "photo_url": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/pendavinji.png"
+  },
+  "Enslemvera Zake": {
+    "full_name": "Enslemvera Zake",
+    "date_of_birth": "2022-01-15",
+    "place_of_birth": "Korçë",
+    "electoral_zone": "Korçë",
+    "email": "Enslemvera.Zake@parlament.al",
+    "photo_url": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/eslenvera zake.png"
+  },
+  "Bujar Çela": {
+    "full_name": "Bujar Çela",
+    "date_of_birth": "2022-01-15",
+    "place_of_birth": "Lushnje",
+    "electoral_zone": "Fier",
+    "email": "bujar.cela@parlament.al",
+    "photo_url": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/BujarCela.png"
+  },
+  "Edmond Spaho": {
+    "full_name": "Edmond Spaho",
+    "date_of_birth": "2022-01-15",
+    "place_of_birth": "Tiranë",
+    "electoral_zone": "Korçë",
+    "email": "edmond.spaho@parlament.al",
+    "photo_url": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/EdmondSpaho.png"
+  },
+  "Saimir Hasalla": {
+    "full_name": "Saimir Hasalla",
+    "date_of_birth": "2022-01-15",
+    "place_of_birth": "Peqin",
+    "electoral_zone": "Elbasan",
+    "email": "saimir.hasalla@parlament.al",
+    "photo_url": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/SaimirHasalla.png"
+  },
+  "Brunilda Haxhiu": {
+    "full_name": "Brunilda Haxhiu",
+    "date_of_birth": "1982-07-11",
+    "place_of_birth": null,
+    "electoral_zone": "Fier",
+    "email": "brunilda.haxhiu@parlament.al",
+    "photo_url": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202510011210594850LRPH0535.JPG"
+  },
+  "Elton Korreshi": {
+    "full_name": "Elton Korreshi",
+    "date_of_birth": "1990-02-16",
+    "place_of_birth": null,
+    "electoral_zone": "Fier",
+    "email": "elton.korreshi@parlament.al",
+    "photo_url": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202509191009550313ELTON KORRESHI.JPG"
+  },
+  "Pranvera Resulaj": {
+    "full_name": "Pranvera Resulaj",
+    "date_of_birth": "1966-01-09",
+    "place_of_birth": "Prrenjas",
+    "electoral_zone": "Vlorë",
+    "email": "pranvera.resulaj@parlament.al",
+    "photo_url": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/pranveraresulaj.png"
+  },
+  "Zef Hila": {
+    "full_name": "Zef Hila",
+    "date_of_birth": "2022-01-15",
+    "place_of_birth": "Barbullush",
+    "electoral_zone": "Shkodër",
+    "email": "zef.hila@parlament.al",
+    "photo_url": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/ZefHila.png"
+  },
+  "Bledjon Nallbati": {
+    "full_name": "Bledjon Nallbati",
+    "date_of_birth": "2022-01-15",
+    "place_of_birth": "Devoll",
+    "electoral_zone": "Korçë",
+    "email": "Bledjon.Nallbati@parlament.al",
+    "photo_url": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202509250835368885LRPH9507.JPG"
+  },
+  "Fadil Nasufi": {
+    "full_name": "Fadil Nasufi",
+    "date_of_birth": "2022-01-15",
+    "place_of_birth": "Berat",
+    "electoral_zone": "Berat",
+    "email": "fadil.nasufi@parlament.al",
+    "photo_url": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202509240713382642LRPH9983.JPG"
+  },
+  "Xhelal Mziu": {
+    "full_name": "Xhelal Mziu",
+    "date_of_birth": "1967-04-13",
+    "place_of_birth": "Diber",
+    "electoral_zone": "Dibër",
+    "email": "xhelal.mziu@parlament.al",
+    "photo_url": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202511191306165256LRPH9479.JPG"
+  },
+  "Asllan Dogjani": {
+    "full_name": "Asllan Dogjani",
+    "date_of_birth": "1967-11-14",
+    "place_of_birth": "Kukës",
+    "electoral_zone": null,
+    "email": "asllan.dogjani@parlament.al",
+    "photo_url": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202305301156283156asllan dogjani.PNG"
+  },
+  "Eralda Bano": {
+    "full_name": "Eralda Bano",
+    "date_of_birth": "2022-01-15",
+    "place_of_birth": "Fier",
+    "electoral_zone": "Fier",
+    "email": "Eralda.Bano@parlament.al",
+    "photo_url": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/Eraldo Tase-Bano.png"
+  },
+  "Lindita Metaliaj": {
+    "full_name": "Lindita Metaliaj",
+    "date_of_birth": "2022-01-15",
+    "place_of_birth": "Lezhë",
+    "electoral_zone": "Lezhë",
+    "email": "lindita.metaliaj@parlament.al",
+    "photo_url": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/linditametaliaj.png"
+  },
+  "Alfred Rushaj": {
+    "full_name": "Alfred Rushaj",
+    "date_of_birth": "2022-01-15",
+    "place_of_birth": "Lezhë",
+    "electoral_zone": null,
+    "email": "Alfred.Rushaj@parlament.al",
+    "photo_url": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/Alfred_Rushaj-removebg-preview.png"
+  },
+  "Ledina Alolli": {
+    "full_name": "Ledina Alolli",
+    "date_of_birth": "1975-07-18",
+    "place_of_birth": null,
+    "electoral_zone": "Korçë",
+    "email": "ledina.alolli@parlament.al",
+    "photo_url": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202509191107272761BHPH3178.JPG"
+  },
+  "Grida Duma": {
+    "full_name": "Grida Duma",
+    "date_of_birth": "2022-01-15",
+    "place_of_birth": "Durrës",
+    "electoral_zone": null,
+    "email": "grida.duma@parlament.al",
+    "photo_url": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/gridashqina_foto.jpg"
+  },
+  "Gerta Duraku": {
+    "full_name": "Gerta Duraku",
+    "date_of_birth": "2022-01-15",
+    "place_of_birth": "Kukës",
+    "electoral_zone": "Kukës",
+    "email": "gerta.duraku@parlament.al",
+    "photo_url": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/GertaDuraku.png"
+  },
+  "Oerd Bylykbashi": {
+    "full_name": "Oerd Bylykbashi",
+    "date_of_birth": "1974-05-22",
+    "place_of_birth": "Durrës",
+    "electoral_zone": "Durrës",
+    "email": "Oerd.Bylykbashi@parlament.al",
+    "photo_url": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202510011158080204LRPH0728.JPG"
+  },
+  "Loer Kume": {
+    "full_name": "Loer Kume",
+    "date_of_birth": "1982-04-11",
+    "place_of_birth": null,
+    "electoral_zone": "Durrës",
+    "email": "loer.kume@parlament.al",
+    "photo_url": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202509191057078889LRPH9626.JPG"
+  },
+  "Etilda Gjonaj": {
+    "full_name": "Etilda Gjonaj",
+    "date_of_birth": "2022-01-15",
+    "place_of_birth": "Tiranë",
+    "electoral_zone": null,
+    "email": "etilda.gjonaj@parlament.al",
+    "photo_url": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/EtildaGjonaj.png"
+  },
+  "Petrit Vasili": {
+    "full_name": "Petrit Vasili",
+    "date_of_birth": "1958-06-03",
+    "place_of_birth": "Tiranë",
+    "electoral_zone": null,
+    "email": "Petrit.Vasili@parlament.al",
+    "photo_url": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/Petrit_Vasili.png"
+  },
+  "Helidon Bushati": {
+    "full_name": "Helidon Bushati",
+    "date_of_birth": "2022-01-15",
+    "place_of_birth": "Shkodër",
+    "electoral_zone": "Shkodër",
+    "email": "helidon.bushati@parlament.al",
+    "photo_url": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/Helidon_Bushati.png"
+  },
+  "Arkend Balla": {
+    "full_name": "Arkend Balla",
+    "date_of_birth": "1985-06-26",
+    "place_of_birth": "Durrës",
+    "electoral_zone": "Durrës",
+    "email": "arkend.balla@parlament.al",
+    "photo_url": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202509191007188046ARKEND BALLA.JPG"
+  },
+  "Anduel Tahiraj": {
+    "full_name": "Anduel Tahiraj",
+    "date_of_birth": "2022-01-15",
+    "place_of_birth": "Vlorë",
+    "electoral_zone": "Vlorë",
+    "email": "Anduel.Rahiraj@parlament.al",
+    "photo_url": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/Anduel Tahiraj.png"
+  },
+  "Rrahman Rraja": {
+    "full_name": "Rrahman Rraja",
+    "date_of_birth": "1961-04-06",
+    "place_of_birth": "Zeze, Kruje",
+    "electoral_zone": "Durrës",
+    "email": "Rrahman.Rraja@parlament.al",
+    "photo_url": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/Rrahman Rraja.JPG"
+  },
+  "Erald Kapri": {
+    "full_name": "Erald Kapri",
+    "date_of_birth": "1987-05-13",
+    "place_of_birth": null,
+    "electoral_zone": null,
+    "email": "erald.kapri@parlament.al",
+    "photo_url": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202509220802355303LRPH9956.JPG"
+  },
+  "Bujar Rexha": {
+    "full_name": "Bujar Rexha",
+    "date_of_birth": "1971-05-01",
+    "place_of_birth": null,
+    "electoral_zone": "Shkodër",
+    "email": "bujar.rexha@parlament.al",
+    "photo_url": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202509191009056524BUJAR REXHA.JPG"
+  },
+  "Denis Deliu": {
+    "full_name": "Denis Deliu",
+    "date_of_birth": "2022-01-15",
+    "place_of_birth": "Krujë",
+    "electoral_zone": "Durrës",
+    "email": "Denis.deliu@parlament.al",
+    "photo_url": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/Denis Deliu.png"
+  },
+  "Frrok Gjini": {
+    "full_name": "Frrok Gjini",
+    "date_of_birth": "1960-09-06",
+    "place_of_birth": "Puke",
+    "electoral_zone": "Shkodër",
+    "email": "frrok.gjini@parlament.al",
+    "photo_url": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202309201308192163Frrok Gjini.jpg"
+  },
+  "Bora Muzhaqi": {
+    "full_name": "Bora Muzhaqi",
+    "date_of_birth": "1990-03-11",
+    "place_of_birth": "Elbasan",
+    "electoral_zone": "Elbasan",
+    "email": "bora.muzhaqi@parlament.al",
+    "photo_url": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202509240707118074LRPH9986.JPG"
+  },
+  "Flutura Açka": {
+    "full_name": "Flutura Açka",
+    "date_of_birth": "1966-06-03",
+    "place_of_birth": "Elbasan",
+    "electoral_zone": "Elbasan",
+    "email": "Flutura.Açka@parlament.al",
+    "photo_url": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/Flutura%20Ac%CC%A7ka.png"
+  },
+  "Anila Denaj": {
+    "full_name": "Anila Denaj",
+    "date_of_birth": "2022-01-15",
+    "place_of_birth": "Tirane",
+    "electoral_zone": null,
+    "email": "Anila.Denaj@parlament.al",
+    "photo_url": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/AnilaDenaj.png"
+  },
+  "Erion Braçe": {
+    "full_name": "Erion Braçe",
+    "date_of_birth": "2022-01-15",
+    "place_of_birth": "Tiranë",
+    "electoral_zone": null,
+    "email": "erion.brace@parlament.al",
+    "photo_url": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202509250831320471LRPH9524.JPG"
+  },
+  "Blendi Klosi": {
+    "full_name": "Blendi Klosi",
+    "date_of_birth": "2022-01-15",
+    "place_of_birth": "Tiranë",
+    "electoral_zone": "Dibër",
+    "email": "Blendi.Klosi@parlament.al",
+    "photo_url": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/Blendi Klosi.png"
+  },
+  "Klevis Jahaj": {
+    "full_name": "Klevis Jahaj",
+    "date_of_birth": "1987-01-29",
+    "place_of_birth": null,
+    "electoral_zone": "Fier",
+    "email": "klevis.jahaj@parlament.al",
+    "photo_url": null
+  },
+  "Bledi Çomo": {
+    "full_name": "Bledi Çomo",
+    "date_of_birth": "1982-06-22",
+    "place_of_birth": null,
+    "electoral_zone": "Korçë",
+    "email": "bledi.como@parlament.al",
+    "photo_url": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202509191008292865BLEDI ÇOMO.JPG"
+  },
+  "Gent Strazimiri": {
+    "full_name": "Gent Strazimiri",
+    "date_of_birth": "1972-10-05",
+    "place_of_birth": null,
+    "electoral_zone": "Durrës",
+    "email": "gent.strazimiri@parlament.al",
+    "photo_url": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202509250836539054BHPH3520.JPG"
+  },
+  "Greta Bardeli": {
+    "full_name": "Greta Bardeli",
+    "date_of_birth": "2022-01-15",
+    "place_of_birth": "Shkodër",
+    "electoral_zone": "Shkodër",
+    "email": "greta.bardeli@parlament.al",
+    "photo_url": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/GretaBardeli.png"
+  },
+  "Benet Beci": {
+    "full_name": "Benet Beci",
+    "date_of_birth": "2022-01-15",
+    "place_of_birth": "Tiranë",
+    "electoral_zone": "Shkodër",
+    "email": "Benet.Beci@parlament.al",
+    "photo_url": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/Benet Beci.jpg"
+  },
+  "Vangjel Dule": {
+    "full_name": "Vangjel Dule",
+    "date_of_birth": "1968-11-17",
+    "place_of_birth": "Gjirokaster",
+    "electoral_zone": "Vlorë",
+    "email": "vangjel.dule@parlament.al",
+    "photo_url": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202511191308232319LRPH8974.JPG"
+  },
+  "Ulsi Manja": {
+    "full_name": "Ulsi Manja",
+    "date_of_birth": "2022-01-15",
+    "place_of_birth": "Dibër",
+    "electoral_zone": "Lezhë",
+    "email": "ulsi.manja@parlament.al",
+    "photo_url": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202509250833549745BHPH3498.JPG"
+  },
+  "Niko Peleshi": {
+    "full_name": "Niko Peleshi",
+    "date_of_birth": "2022-01-15",
+    "place_of_birth": "Korçë",
+    "electoral_zone": "Korçë",
+    "email": "speaker@parlament.al",
+    "photo_url": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202509251413091051final.jpg"
+  },
+  "Petrit Doda": {
+    "full_name": "Petrit Doda",
+    "date_of_birth": "1961-02-28",
+    "place_of_birth": "Vajmëdhej-Muhurr",
+    "electoral_zone": null,
+    "email": "petrit.doda@parlament.al",
+    "photo_url": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/petrit_doda.jpg"
+  },
+  "Luljeta Bozo": {
+    "full_name": "Luljeta Bozo",
+    "date_of_birth": "1942-10-01",
+    "place_of_birth": "Tiranë",
+    "electoral_zone": null,
+    "email": "Luljeta.Bozo@parlament.al",
+    "photo_url": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/LuljetaBozo.png"
+  },
+  "Andia Ulliri": {
+    "full_name": "Andia Ulliri",
+    "date_of_birth": "2022-01-15",
+    "place_of_birth": "Durrës",
+    "electoral_zone": "Durrës",
+    "email": "Andia.Ulliri@parlament.al",
+    "photo_url": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/Andia Ulliri.png"
+  },
+  "Gazment Bardhi": {
+    "full_name": "Gazment Bardhi",
+    "date_of_birth": "1986-07-05",
+    "place_of_birth": "Elbasan",
+    "electoral_zone": "Fier",
+    "email": "Gazment.Bardhi@parlament.al",
+    "photo_url": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/Gazment_Bardhi_(portret).jpg"
+  },
+  "Florenc Spaho": {
+    "full_name": "Florenc Spaho",
+    "date_of_birth": "2022-01-15",
+    "place_of_birth": "Elbasan",
+    "electoral_zone": "Elbasan",
+    "email": "florenc.spaho@parlament.al",
+    "photo_url": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/Florenc Spaho.jpg"
+  },
+  "Olta Xhaçka": {
+    "full_name": "Olta Xhaçka",
+    "date_of_birth": "1979-12-24",
+    "place_of_birth": "Tirane",
+    "electoral_zone": null,
+    "email": "Olta.Xhaçka@parlament.al",
+    "photo_url": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/Olta_Xhac%CC%A7ka_(portret).jpg"
+  },
+  "Adi Qose": {
+    "full_name": "Adi Qose",
+    "date_of_birth": "1992-06-09",
+    "place_of_birth": null,
+    "electoral_zone": "Elbasan",
+    "email": "adi.qose@parlament.al",
+    "photo_url": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202509191004596363ADI QOSE.JPG"
+  },
+  "Toni Gogu": {
+    "full_name": "Toni Gogu",
+    "date_of_birth": "0001-01-01",
+    "place_of_birth": "-",
+    "electoral_zone": null,
+    "email": "toni.gogu@parlament.al",
+    "photo_url": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/Toni Gogu.jpg"
+  },
+  "Lindita Nikolla": {
+    "full_name": "Lindita Nikolla",
+    "date_of_birth": "1965-10-22",
+    "place_of_birth": "Tirane",
+    "electoral_zone": null,
+    "email": "lindita.nikolla@parlament.al",
+    "photo_url": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202201192329034845img_kryetare.jpg"
+  },
+  "Isuf Çelaj": {
+    "full_name": "Isuf Çelaj",
+    "date_of_birth": "2022-01-15",
+    "place_of_birth": "Tropojë",
+    "electoral_zone": "Kukës",
+    "email": "isuf.celaj@parlament.al",
+    "photo_url": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/isufcela.png"
+  },
+  "Qani Xhafa": {
+    "full_name": "Qani Xhafa",
+    "date_of_birth": "1969-10-11",
+    "place_of_birth": null,
+    "electoral_zone": "Elbasan",
+    "email": "qani.xhafa@parlament.al",
+    "photo_url": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202309201332505583qani xhafa foto.jpg"
+  },
+  "Ermal Elezi": {
+    "full_name": "Ermal Elezi",
+    "date_of_birth": "1984-05-28",
+    "place_of_birth": null,
+    "electoral_zone": "Elbasan",
+    "email": "ermal.elezi@parlament.al",
+    "photo_url": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202509191055162043LRPH9619.JPG"
+  },
+  "Luçiano Boçi": {
+    "full_name": "Luçiano Boçi",
+    "date_of_birth": "2022-01-15",
+    "place_of_birth": "Elbasan",
+    "electoral_zone": "Elbasan",
+    "email": "luciano.boci@parlament.al",
+    "photo_url": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/LUCIANO BOCI.jpg"
+  },
+  "Meri Markiçi": {
+    "full_name": "Meri Markiçi",
+    "date_of_birth": "1983-07-21",
+    "place_of_birth": "Shkodër",
+    "electoral_zone": "Shkodër",
+    "email": "Meri.Markiçi@parlament.al",
+    "photo_url": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/Meri%20Markic%CC%A7i.jpg"
+  },
+  "Arbjan Mazniku": {
+    "full_name": "Arbjan Mazniku",
+    "date_of_birth": "1978-11-05",
+    "place_of_birth": null,
+    "electoral_zone": "Elbasan",
+    "email": "arbjan.mazniku@parlament.al",
+    "photo_url": null
+  },
+  "Admir Kadeli": {
+    "full_name": "Admir Kadeli",
+    "date_of_birth": "1989-05-07",
+    "place_of_birth": null,
+    "electoral_zone": "Lezhë",
+    "email": "admir.kadeli@parlament.al",
+    "photo_url": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202509191005235240ADMIR KADELI.JPG"
+  },
+  "Ilir Metaj": {
+    "full_name": "Ilir Metaj",
+    "date_of_birth": "2022-01-15",
+    "place_of_birth": "Çorovoda",
+    "electoral_zone": "Vlorë",
+    "email": "ilir.metaj@parlament.al",
+    "photo_url": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/IlirMetaj.png"
+  },
+  "Eduard Shalsi": {
+    "full_name": "Eduard Shalsi",
+    "date_of_birth": "2022-01-15",
+    "place_of_birth": "Tiranë",
+    "electoral_zone": "Kukës",
+    "email": "eduard.shalsi@parlament.al",
+    "photo_url": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/EduartShalsi.png"
+  },
+  "Vasil Llajo": {
+    "full_name": "Vasil Llajo",
+    "date_of_birth": "1956-11-23",
+    "place_of_birth": null,
+    "electoral_zone": "Vlorë",
+    "email": "vasil.llajo@parlament.al",
+    "photo_url": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202509191025402924VASIL LLAJO.JPG"
+  },
+  "Blendi Himçi": {
+    "full_name": "Blendi Himçi",
+    "date_of_birth": "1977-05-24",
+    "place_of_birth": null,
+    "electoral_zone": "Elbasan",
+    "email": "blendi.himci@parlament.al",
+    "photo_url": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202509220803150856LRPH9959.JPG"
+  },
+  "Shkurt Lasku": {
+    "full_name": "Shkurt Lasku",
+    "date_of_birth": "1968-07-05",
+    "place_of_birth": null,
+    "electoral_zone": null,
+    "email": "shkurt.lasku@parlament.al",
+    "photo_url": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202511100949178629DSC_0296.JPG"
+  },
+  "Klotilda Bushka": {
+    "full_name": "Klotilda Bushka",
+    "date_of_birth": "2022-01-15",
+    "place_of_birth": "Tiranë",
+    "electoral_zone": null,
+    "email": "klotilda.bushka@parlament.al",
+    "photo_url": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/Klotilda Bushka.png"
+  },
+  "Fatmir Mediu": {
+    "full_name": "Fatmir Mediu",
+    "date_of_birth": "1967-01-20",
+    "place_of_birth": "Durrës",
+    "electoral_zone": null,
+    "email": "Fatmir.Mediu@parlament.al",
+    "photo_url": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/Fatmir Mediu.png"
+  },
+  "Orjola Pampuri": {
+    "full_name": "Orjola Pampuri",
+    "date_of_birth": "1981-11-12",
+    "place_of_birth": "Tirane",
+    "electoral_zone": null,
+    "email": "Orjola.Pampuri@parlament.al",
+    "photo_url": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/Orjola Pampuri.jpg"
+  },
+  "Enriketa Jaho": {
+    "full_name": "Enriketa Jaho",
+    "date_of_birth": "1973-03-21",
+    "place_of_birth": null,
+    "electoral_zone": "Berat",
+    "email": "enriketa.jaho@parlament.al",
+    "photo_url": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202509191010152311ENRIKETA JAHO.JPG"
+  },
+  "Ilir Ndraxhi": {
+    "full_name": "Ilir Ndraxhi",
+    "date_of_birth": "2022-01-15",
+    "place_of_birth": "Durrës",
+    "electoral_zone": "Durrës",
+    "email": "ilir.ndraxhi@parlament.al",
+    "photo_url": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/ilirndraxhi.png"
+  },
+  "Arben Ahmetaj": {
+    "full_name": "Arben Ahmetaj",
+    "date_of_birth": "2022-01-15",
+    "place_of_birth": "Gjirokaster",
+    "electoral_zone": null,
+    "email": "Arben.Ahmetaj@parlament.al",
+    "photo_url": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/Arben_Ahmetaj_(portret).jpg"
+  },
+  "Paulin Sterkaj": {
+    "full_name": "Paulin Sterkaj",
+    "date_of_birth": "1961-07-04",
+    "place_of_birth": "Koplik",
+    "electoral_zone": "Shkodër",
+    "email": "Paulin.Sterkaj@parlament.al",
+    "photo_url": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/paulin sterkaj.jpg"
+  },
+  "Ramadan Likaj": {
+    "full_name": "Ramadan Likaj",
+    "date_of_birth": "0001-01-01",
+    "place_of_birth": "Zagore",
+    "electoral_zone": "Shkodër",
+    "email": "ramadan.likaj@parlament.al",
+    "photo_url": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/RamadanLikaj.png"
+  },
+  "Lefter Gështenja": {
+    "full_name": "Lefter Gështenja",
+    "date_of_birth": "2022-01-15",
+    "place_of_birth": "Librazhd",
+    "electoral_zone": "Elbasan",
+    "email": "lefter.geshtenja@parlament.al",
+    "photo_url": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/Lefter_Geshtenja.png"
+  },
+  "Erjon Meka": {
+    "full_name": "Erjon Meka",
+    "date_of_birth": "1977-05-08",
+    "place_of_birth": "Durrës",
+    "electoral_zone": "Durrës",
+    "email": "erjon.meka@parlament.al",
+    "photo_url": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202411111017553588Erjon Meka.jpg"
+  },
+  "Lodovik Hasani": {
+    "full_name": "Lodovik Hasani",
+    "date_of_birth": "1967-09-23",
+    "place_of_birth": "Pukë",
+    "electoral_zone": "Shkodër",
+    "email": "lodovik.hasani@parlament.al",
+    "photo_url": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202310022113378523LodovikHasani.jpg"
+  },
+  "Aulona Bylykbashi": {
+    "full_name": "Aulona Bylykbashi",
+    "date_of_birth": "1985-01-16",
+    "place_of_birth": null,
+    "electoral_zone": "Elbasan",
+    "email": "aulona.bylykbashi@parlament.al",
+    "photo_url": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202509191007583931AULONA BYLUKBASHI.JPG"
+  },
+  "Tritan Shehu": {
+    "full_name": "Tritan Shehu",
+    "date_of_birth": "2022-01-15",
+    "place_of_birth": "Tiranë",
+    "electoral_zone": "Tiranë",
+    "email": "tritan.shehu@parlament.al",
+    "photo_url": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/TritanShehu.png"
+  },
+  "Tedi Blushi": {
+    "full_name": "Tedi Blushi",
+    "date_of_birth": "1984-09-29",
+    "place_of_birth": null,
+    "electoral_zone": null,
+    "email": "tedi.blushi@parlament.al",
+    "photo_url": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202509191025259204TEDI BLUSHI.JPG"
+  },
+  "Besnik Brahimi": {
+    "full_name": "Besnik Brahimi",
+    "date_of_birth": "1963-07-21",
+    "place_of_birth": null,
+    "electoral_zone": "Shkodër",
+    "email": "besnik.brahimi@parlament.al",
+    "photo_url": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202511100948212745DSC_0302.JPG"
+  },
+  "Jorida Tabaku": {
+    "full_name": "Jorida Tabaku",
+    "date_of_birth": "2022-01-15",
+    "place_of_birth": "Tiranë",
+    "electoral_zone": null,
+    "email": "jorida.tabaku@parlament.al",
+    "photo_url": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/joridatabaku_foto.jpg"
+  },
+  "Lavdrim Krrashi": {
+    "full_name": "Lavdrim Krrashi",
+    "date_of_birth": "1969-09-04",
+    "place_of_birth": "Diber",
+    "electoral_zone": "Dibër",
+    "email": "Lavdrim.Krrashi@parlament.al",
+    "photo_url": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/Lavdrim Krashi.png"
+  },
+  "Blerina Gjylameti": {
+    "full_name": "Blerina Gjylameti",
+    "date_of_birth": "2022-01-15",
+    "place_of_birth": "Tiranë",
+    "electoral_zone": "Korçë",
+    "email": "blerina.gjylameti@parlament.al",
+    "photo_url": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/BlerinaGjylameti.png"
+  },
+  "Shpetim Idrizi": {
+    "full_name": "Shpetim Idrizi",
+    "date_of_birth": "1967-07-06",
+    "place_of_birth": "Tirane",
+    "electoral_zone": null,
+    "email": "shpetim.idrizi@parlament.al",
+    "photo_url": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/Shpe%CC%88tim%20Idrizi.jpg"
+  },
+  "Erjona Ismaili": {
+    "full_name": "Erjona Ismaili",
+    "date_of_birth": "2025-09-12",
+    "place_of_birth": null,
+    "electoral_zone": "Vlorë",
+    "email": "erjona.ismaili@parlament.al",
+    "photo_url": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202509240817240862LRPH9976.JPG"
+  },
+  "Bledar Çuçi": {
+    "full_name": "Bledar Çuçi",
+    "date_of_birth": "2022-01-15",
+    "place_of_birth": "Tiranë",
+    "electoral_zone": "Vlorë",
+    "email": "bledar.cuci@parlament.al",
+    "photo_url": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/bledicuci_foto.jpg"
+  },
+  "Luan Baçi": {
+    "full_name": "Luan Baçi",
+    "date_of_birth": "2022-01-15",
+    "place_of_birth": "Durrës",
+    "electoral_zone": "Fier",
+    "email": "luan.baci@parlament.al",
+    "photo_url": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/luan baci.png"
+  },
+  "Asfloral Haxhiu": {
+    "full_name": "Asfloral Haxhiu",
+    "date_of_birth": "1989-01-13",
+    "place_of_birth": null,
+    "electoral_zone": "Fier",
+    "email": "asfloral.haxhiu@parlament.al",
+    "photo_url": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202509191007427037ASFLORAL HAXHIU.JPG"
+  },
+  "Sali Berisha": {
+    "full_name": "Sali Berisha",
+    "date_of_birth": "1944-10-14",
+    "place_of_birth": "Tropoje",
+    "electoral_zone": null,
+    "email": "sali.berisha@parlament.al",
+    "photo_url": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/Sali Berisha.jpg"
+  },
+  "Agron Çela": {
+    "full_name": "Agron Çela",
+    "date_of_birth": "2022-01-15",
+    "place_of_birth": "Shkodër",
+    "electoral_zone": "Shkodër",
+    "email": "Agron.Çela@parlament.al",
+    "photo_url": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/Agron Cela foto Cv faqe.jpg"
+  },
+  "Gëzim Ademaj": {
+    "full_name": "Gëzim Ademaj",
+    "date_of_birth": "1966-11-23",
+    "place_of_birth": "Vlorë",
+    "electoral_zone": "Vlorë",
+    "email": "gezim.ademaj@parlament.al",
+    "photo_url": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202305301132047025gezim ademaj.PNG"
+  },
+  "Ismet Beqiraj": {
+    "full_name": "Ismet Beqiraj",
+    "date_of_birth": "2022-01-15",
+    "place_of_birth": "Fier",
+    "electoral_zone": "Fier",
+    "email": "ismet.beqiraj@parlament.al",
+    "photo_url": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/IsmetBeqiraj.png"
+  },
+  "Erjo Mile": {
+    "full_name": "Erjo Mile",
+    "date_of_birth": "1993-08-22",
+    "place_of_birth": null,
+    "electoral_zone": "Fier",
+    "email": "erjo.mile@parlament.al",
+    "photo_url": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202509191010388485ERIO MILE.JPG"
+  },
+  "Ana Nako": {
+    "full_name": "Ana Nako",
+    "date_of_birth": "1982-10-13",
+    "place_of_birth": null,
+    "electoral_zone": "Fier",
+    "email": "ana.nako@parlament.al",
+    "photo_url": null
+  },
+  "Andrea Mano": {
+    "full_name": "Andrea Mano",
+    "date_of_birth": "1971-07-06",
+    "place_of_birth": null,
+    "electoral_zone": "Korçë",
+    "email": "andrea.mano@parlament.al",
+    "photo_url": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202411131021523561Andrea Mano.jpg"
+  },
+  "Bardhyl Kollçaku": {
+    "full_name": "Bardhyl Kollçaku",
+    "date_of_birth": "2022-01-15",
+    "place_of_birth": "Berat",
+    "electoral_zone": "Berat",
+    "email": "bardhyl.kollcaku@parlament.al",
+    "photo_url": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/BardhylKollcaku.png"
+  },
+  "Sara Mila": {
+    "full_name": "Sara Mila",
+    "date_of_birth": "1995-08-22",
+    "place_of_birth": null,
+    "electoral_zone": "Elbasan",
+    "email": "sara.mila@parlament.al",
+    "photo_url": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202509191025119177SARA MILA .JPG"
+  },
+  "Briseida Çakërri": {
+    "full_name": "Briseida Çakërri",
+    "date_of_birth": "1992-05-20",
+    "place_of_birth": null,
+    "electoral_zone": "Vlorë",
+    "email": "briseida.cakerri@parlament.al",
+    "photo_url": null
+  },
+  "Brunilda Mersini": {
+    "full_name": "Brunilda Mersini",
+    "date_of_birth": "1969-09-18",
+    "place_of_birth": null,
+    "electoral_zone": "Vlorë",
+    "email": "brunilda.mersini@parlament.al",
+    "photo_url": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202509191008489550BRUNILDA MERSINI.JPG"
+  },
+  "Flamur Noka": {
+    "full_name": "Flamur Noka",
+    "date_of_birth": "2022-01-15",
+    "place_of_birth": "Kukës",
+    "electoral_zone": null,
+    "email": "flamur.noka@parlament.al",
+    "photo_url": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/Flamur Noka.jpg"
+  },
+  "Pirro Vengu": {
+    "full_name": "Pirro Vengu",
+    "date_of_birth": "1986-04-23",
+    "place_of_birth": null,
+    "electoral_zone": "Vlorë",
+    "email": "pirro.vengu@parlament.al",
+    "photo_url": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202509240706099918LRPH9997.JPG"
+  },
+  "Besart Xhaferi": {
+    "full_name": "Besart Xhaferi",
+    "date_of_birth": "1990-03-09",
+    "place_of_birth": null,
+    "electoral_zone": null,
+    "email": "besart.xhaferi@parlament.al",
+    "photo_url": null
+  },
+  "Zegjine Çaushi": {
+    "full_name": "Zegjine Çaushi",
+    "date_of_birth": "1998-08-25",
+    "place_of_birth": null,
+    "electoral_zone": "Fier",
+    "email": "zegjine.caushi@parlament.al",
+    "photo_url": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202509191026212744ZEQINE ÇAUSHI.JPG"
+  },
+  "Saimir Korreshi": {
+    "full_name": "Saimir Korreshi",
+    "date_of_birth": "1981-03-12",
+    "place_of_birth": "Lushnje",
+    "electoral_zone": "Fier",
+    "email": "Saimir.Korreshi@parlament.al",
+    "photo_url": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202510031154366767LRPH1156.JPG"
+  },
+  "Mesila Doda": {
+    "full_name": "Mesila Doda",
+    "date_of_birth": "2022-01-15",
+    "place_of_birth": "Kukës",
+    "electoral_zone": null,
+    "email": "Mesila.Doda@parlament.al",
+    "photo_url": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/Mesila_Dode.png"
+  },
+  "Flamur Hoxha": {
+    "full_name": "Flamur Hoxha",
+    "date_of_birth": "2022-01-15",
+    "place_of_birth": "Kukes",
+    "electoral_zone": "Kukës",
+    "email": "flamur.hoxha@parlament.al",
+    "photo_url": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/FlamurHoxha.png"
+  },
+  "Shkelqim Bullari": {
+    "full_name": "Shkelqim Bullari",
+    "date_of_birth": "2005-11-01",
+    "place_of_birth": "Cërrik, Elbasan",
+    "electoral_zone": "Elbasan",
+    "email": "Shkelqim.bullari@parlament.al",
+    "photo_url": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202309281137186825Shkelqim Bullari.jpg"
+  },
+  "Lindita Buxheli": {
+    "full_name": "Lindita Buxheli",
+    "date_of_birth": "2022-01-15",
+    "place_of_birth": "Lushnjë",
+    "electoral_zone": "Fier",
+    "email": "lindita.buxheli@parlament.al",
+    "photo_url": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/LinditaBuxheli.png"
+  },
+  "Ivi Kaso": {
+    "full_name": "Ivi Kaso",
+    "date_of_birth": "1979-03-10",
+    "place_of_birth": null,
+    "electoral_zone": "Korçë",
+    "email": "ivi.kaso@parlament.al",
+    "photo_url": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202509250838028175LRPH9527.JPG"
+  },
+  "Gjin Gjoni": {
+    "full_name": "Gjin Gjoni",
+    "date_of_birth": "1970-03-09",
+    "place_of_birth": null,
+    "electoral_zone": "Lezhë",
+    "email": "gjin.gjoni@parlament.al",
+    "photo_url": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202509191055426408BHPH3227.JPG"
+  },
+  "Romina Kuko": {
+    "full_name": "Romina Kuko",
+    "date_of_birth": "1984-04-18",
+    "place_of_birth": null,
+    "electoral_zone": "Korçë",
+    "email": "romina.kuko@parlament.al",
+    "photo_url": null
+  },
+  "Ervin Demo": {
+    "full_name": "Ervin Demo",
+    "date_of_birth": "1982-05-28",
+    "place_of_birth": null,
+    "electoral_zone": "Berat",
+    "email": "ervin.demo@parlament.al",
+    "photo_url": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202511110852505098Ervin Demo.png"
+  },
+  "Denisa Vata": {
+    "full_name": "Denisa Vata",
+    "date_of_birth": "1988-10-18",
+    "place_of_birth": null,
+    "electoral_zone": "Dibër",
+    "email": "denisa.vata@parlament.al",
+    "photo_url": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202510011210100830DSC_0465.JPG"
+  },
+  "Zamira Sinaj": {
+    "full_name": "Zamira Sinaj",
+    "date_of_birth": "1982-01-29",
+    "place_of_birth": null,
+    "electoral_zone": "Vlorë",
+    "email": "zamira.sinaj@parlament.al",
+    "photo_url": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202509240817011955LRPH9973.JPG"
+  },
+  "Ogerta Manastirliu": {
+    "full_name": "Ogerta Manastirliu",
+    "date_of_birth": "1978-12-20",
+    "place_of_birth": "Tiranë",
+    "electoral_zone": null,
+    "email": "Ogerta.Manastirliu@parlament.al",
+    "photo_url": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/Ogerta Manastirliu.JPG"
+  },
+  "Bardh Spahia": {
+    "full_name": "Bardh Spahia",
+    "date_of_birth": "1976-01-29",
+    "place_of_birth": null,
+    "electoral_zone": "Shkodër",
+    "email": "bardh.spahia@parlament.al",
+    "photo_url": null
+  },
+  "Jozefina Topalli": {
+    "full_name": "Jozefina Topalli",
+    "date_of_birth": "1963-11-25",
+    "place_of_birth": null,
+    "electoral_zone": null,
+    "email": "jozefina.topalli@parlament.al",
+    "photo_url": null
+  },
+  "Dhurata Çupi (Tyli)": {
+    "full_name": "Dhurata Çupi (Tyli)",
+    "date_of_birth": "2022-01-15",
+    "place_of_birth": "Mat",
+    "electoral_zone": "Dibër",
+    "email": "Dhurata.Cupi@parlament.al",
+    "photo_url": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/Dhurata%20C%CC%A7upi.png"
+  },
+  "Xhenis Çela": {
+    "full_name": "Xhenis Çela",
+    "date_of_birth": "1996-09-23",
+    "place_of_birth": null,
+    "electoral_zone": "Shkodër",
+    "email": "xhenis.cela@parlament.al",
+    "photo_url": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202510011205519878DSC_0464.JPG"
+  },
+  "Ermal Pacaj": {
+    "full_name": "Ermal Pacaj",
+    "date_of_birth": "1986-01-10",
+    "place_of_birth": null,
+    "electoral_zone": "Lezhë",
+    "email": "ermal.pacaj@parlament.al",
+    "photo_url": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202509191056454036LRPH9615.JPG"
+  },
+  "Belinda Balluku": {
+    "full_name": "Belinda Balluku",
+    "date_of_birth": "2022-01-15",
+    "place_of_birth": "Tiranë",
+    "electoral_zone": "Fier",
+    "email": "Belinda.Balluku@parlament.al",
+    "photo_url": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202511110909052319Belinda Balluku.jpg"
+  },
+  "Skënder Pashaj": {
+    "full_name": "Skënder Pashaj",
+    "date_of_birth": "1970-02-22",
+    "place_of_birth": null,
+    "electoral_zone": "Durrës",
+    "email": "skender.pashaj@parlament.al",
+    "photo_url": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202509191059368176LRPH9617.JPG"
+  },
+  "Mirela Kumbaro": {
+    "full_name": "Mirela Kumbaro",
+    "date_of_birth": "2022-01-15",
+    "place_of_birth": "Tiranë",
+    "electoral_zone": "Tiranë",
+    "email": "mirela.furxhi@parlament.al",
+    "photo_url": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202511110844089529Mirela-Kumbaro.jpg"
+  },
+  "Besa Spaho": {
+    "full_name": "Besa Spaho",
+    "date_of_birth": "1987-12-02",
+    "place_of_birth": null,
+    "electoral_zone": "Korçë",
+    "email": "besa.spaho@parlament.al",
+    "photo_url": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202509240715366595LRPH9966.JPG"
+  },
+  "Gertjan Deda": {
+    "full_name": "Gertjan Deda",
+    "date_of_birth": "1988-01-13",
+    "place_of_birth": "Lezhe",
+    "electoral_zone": null,
+    "email": "Gertjan.Deda@parlament.al",
+    "photo_url": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/Gertian Deda.png"
+  },
+  "Tatiana Piro (Nurce)": {
+    "full_name": "Tatiana Piro (Nurce)",
+    "date_of_birth": "2022-01-15",
+    "place_of_birth": "Lushnje",
+    "electoral_zone": "Fier",
+    "email": "tatiana.piro@parlament.al",
+    "photo_url": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/tatiana.jpeg"
+  },
+  "Marjana Koçeku": {
+    "full_name": "Marjana Koçeku",
+    "date_of_birth": "2000-11-15",
+    "place_of_birth": null,
+    "electoral_zone": "Shkodër",
+    "email": "marjana.koceku@parlament.al",
+    "photo_url": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202510150731486453LRPH8087 copy.jpg"
+  },
+  "Edona Bilali": {
+    "full_name": "Edona Bilali",
+    "date_of_birth": "2022-01-15",
+    "place_of_birth": "Shkodër",
+    "electoral_zone": "Shkodër",
+    "email": "Edona.Bilali@parlament.al",
+    "photo_url": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/Edona Bilali.jpg"
+  },
+  "Elisa Spiropali": {
+    "full_name": "Elisa Spiropali",
+    "date_of_birth": "2022-01-15",
+    "place_of_birth": "Tiranë",
+    "electoral_zone": null,
+    "email": "elisa.spiropali@parlament.al",
+    "photo_url": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202511110901515921Elisa Spiropali.jpeg"
+  },
+  "Monika Kryemadhi": {
+    "full_name": "Monika Kryemadhi",
+    "date_of_birth": "1974-04-08",
+    "place_of_birth": "Tirane",
+    "electoral_zone": "Fier",
+    "email": "Monika.Kryemadhi@parlament.al",
+    "photo_url": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/monika-e1607012364369.jpg"
+  },
+  "Enno Bozdo": {
+    "full_name": "Enno Bozdo",
+    "date_of_birth": "1972-08-17",
+    "place_of_birth": null,
+    "electoral_zone": "Berat",
+    "email": "enno.bozdo@parlament.al",
+    "photo_url": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202509250836017510LRPH9530.JPG"
+  },
+  "Edi Paloka": {
+    "full_name": "Edi Paloka",
+    "date_of_birth": "2022-01-15",
+    "place_of_birth": "Tiranë",
+    "electoral_zone": null,
+    "email": "Edi.Paloka@parlament.al",
+    "photo_url": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/edipaloka_foto.jpg"
+  },
+  "Ana Dajko": {
+    "full_name": "Ana Dajko",
+    "date_of_birth": "1965-06-11",
+    "place_of_birth": null,
+    "electoral_zone": null,
+    "email": "ana.dajko@parlament.al",
+    "photo_url": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202509261213504465LRPH9539.JPG"
+  },
+  "Fidel Kreka": {
+    "full_name": "Fidel Kreka",
+    "date_of_birth": "1988-04-07",
+    "place_of_birth": null,
+    "electoral_zone": "Korçë",
+    "email": "Fidel.kreka@parlament.al",
+    "photo_url": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202509191056002491BHPH3197.JPG"
+  },
+  "Klodiana Spahiu": {
+    "full_name": "Klodiana Spahiu",
+    "date_of_birth": "1973-05-21",
+    "place_of_birth": "Durrës",
+    "electoral_zone": "Durrës",
+    "email": "Klodiana.Spahiu@parlament.al",
+    "photo_url": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/Klodiana Spahiu.png"
+  },
+  "Pandeli Majko": {
+    "full_name": "Pandeli Majko",
+    "date_of_birth": "1967-11-14",
+    "place_of_birth": "Tiranë",
+    "electoral_zone": null,
+    "email": "pandeli.majko@parlament.al",
+    "photo_url": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/Pandeli_Majko.jpg"
+  },
+  "Luan Duzha": {
+    "full_name": "Luan Duzha",
+    "date_of_birth": "2022-01-15",
+    "place_of_birth": "Elbasan",
+    "electoral_zone": "Elbasan",
+    "email": "luan.duzha@parlament.al",
+    "photo_url": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/Luan-Duzha-LSI-1.jpg"
+  },
+  "Edmond Haxhinasto": {
+    "full_name": "Edmond Haxhinasto",
+    "date_of_birth": "1966-11-16",
+    "place_of_birth": null,
+    "electoral_zone": "Elbasan",
+    "email": "edmond.haxhinasto@parlament.al",
+    "photo_url": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202509191054193285edmond haxhinasto.JPG"
+  },
+  "Ervin Hoxha": {
+    "full_name": "Ervin Hoxha",
+    "date_of_birth": "1978-10-12",
+    "place_of_birth": null,
+    "electoral_zone": null,
+    "email": "ervin.hoxha@parlament.al",
+    "photo_url": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202509240705330015LRPH9990.JPG"
+  },
+  "Evis Kushi": {
+    "full_name": "Evis Kushi",
+    "date_of_birth": "2022-01-15",
+    "place_of_birth": "Elbasan",
+    "electoral_zone": "Elbasan",
+    "email": "Evis.Kushi@parlament.al",
+    "photo_url": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/EVIS-KUSHI-300x289.jpg"
+  },
+  "Klevis Xhoxhi": {
+    "full_name": "Klevis Xhoxhi",
+    "date_of_birth": "1978-11-29",
+    "place_of_birth": "Elbasan",
+    "electoral_zone": "Elbasan",
+    "email": "Klevis.Xhoxhi@parlament.al",
+    "photo_url": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/Klevis Xhoxhi 01.png"
+  },
+  "Genti Lakollari": {
+    "full_name": "Genti Lakollari",
+    "date_of_birth": "1982-06-23",
+    "place_of_birth": null,
+    "electoral_zone": "Korçë",
+    "email": "genti.lakollari@parlament.al",
+    "photo_url": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202509191015212318GENTI LLAKOLLARI.JPG"
+  },
+  "Albana Vokshi": {
+    "full_name": "Albana Vokshi",
+    "date_of_birth": "2022-01-15",
+    "place_of_birth": "Durrës",
+    "electoral_zone": null,
+    "email": "Albana.vokshi@parlament.al",
+    "photo_url": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202509251113258281BHPH3540-Edit.jpg"
+  },
+  "Kreshnik Çollaku": {
+    "full_name": "Kreshnik Çollaku",
+    "date_of_birth": "2022-01-15",
+    "place_of_birth": "Tiranë",
+    "electoral_zone": "Dibër",
+    "email": "kreshnik.collaku@parlament.al",
+    "photo_url": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/KreshnikCollaku.png"
+  },
+  "Edi Rama": {
+    "full_name": "Edi Rama",
+    "date_of_birth": "2022-01-15",
+    "place_of_birth": "Tiranë",
+    "electoral_zone": null,
+    "email": "Edi.Rama@parlament.al",
+    "photo_url": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202511110859043587Edi Rama.png"
+  },
+  "Dashamir Shehi": {
+    "full_name": "Dashamir Shehi",
+    "date_of_birth": "2022-01-15",
+    "place_of_birth": "Tiranë",
+    "electoral_zone": null,
+    "email": "Dashamir.Shehi@parlament.al",
+    "photo_url": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/Dashamir Shehi 01.png"
+  },
+  "Elda Hoti": {
+    "full_name": "Elda Hoti",
+    "date_of_birth": "2022-01-15",
+    "place_of_birth": "Laç",
+    "electoral_zone": "Lezhë",
+    "email": "Elda.Hoti@parlament.al",
+    "photo_url": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/Elda%20hoti.jpg"
+  },
+  "Manjola Luku": {
+    "full_name": "Manjola Luku",
+    "date_of_birth": "1977-12-24",
+    "place_of_birth": null,
+    "electoral_zone": "Durrës",
+    "email": "manjola.luku@parlament.al",
+    "photo_url": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202509191106445814BHPH3217.JPG"
+  },
+  "Albana Koçiu": {
+    "full_name": "Albana Koçiu",
+    "date_of_birth": "1977-07-09",
+    "place_of_birth": null,
+    "electoral_zone": null,
+    "email": "albana.kociu@parlament.al",
+    "photo_url": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202511110820456239kociu.png"
+  },
+  "Igli Cara": {
+    "full_name": "Igli Cara",
+    "date_of_birth": "1969-03-16",
+    "place_of_birth": null,
+    "electoral_zone": "Durrës",
+    "email": "igli.cara@parlament.al",
+    "photo_url": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202509250837237565LRPH9533.JPG"
+  },
+  "Besion Ajazi": {
+    "full_name": "Besion Ajazi",
+    "date_of_birth": "2022-01-15",
+    "place_of_birth": "Gramsh",
+    "electoral_zone": "Elbasan",
+    "email": "besion.ajazi@parlament.al",
+    "photo_url": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/BesianAjazi.png"
+  },
+  "Shpresa Marnoj": {
+    "full_name": "Shpresa Marnoj",
+    "date_of_birth": "2022-01-15",
+    "place_of_birth": "Laç",
+    "electoral_zone": "Lezhë",
+    "email": "shpresa.marnoj@parlament.al",
+    "photo_url": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/shpresamarnoj.png"
+  },
+  "Dasantila Tahiraj": {
+    "full_name": "Dasantila Tahiraj",
+    "date_of_birth": "2022-01-15",
+    "place_of_birth": "Elbasan",
+    "electoral_zone": "Elbasan",
+    "email": "Dasantila.Tahiraj@parlament.al",
+    "photo_url": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/Desantila Tahiraj.png"
+  },
+  "Ferdinant Xhaferaj": {
+    "full_name": "Ferdinant Xhaferaj",
+    "date_of_birth": "1964-01-22",
+    "place_of_birth": "Durrës",
+    "electoral_zone": "Durrës",
+    "email": "Ferdinant.Xhaferaj@parlament.al",
+    "photo_url": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/Ferdinand Xhaferaj.jpg"
+  },
+  "Milva Ekonomi": {
+    "full_name": "Milva Ekonomi",
+    "date_of_birth": "2022-01-15",
+    "place_of_birth": "Tiranë",
+    "electoral_zone": "Durrës",
+    "email": "milva.ekonomi@parlament.al",
+    "photo_url": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202510141302328763BHPH8624 copy.jpg"
+  },
+  "Fation Veizaj": {
+    "full_name": "Fation Veizaj",
+    "date_of_birth": "2022-01-15",
+    "place_of_birth": "Vlorë",
+    "electoral_zone": "Vlorë",
+    "email": "fation.veizaj@parlament.al",
+    "photo_url": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/FationVeizaj.png"
+  },
+  "Agron Duka": {
+    "full_name": "Agron Duka",
+    "date_of_birth": "2022-01-15",
+    "place_of_birth": "Shijak",
+    "electoral_zone": "Durrës",
+    "email": "Agron.Duka@parlament.al",
+    "photo_url": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/Agron_Duka-removebg-preview (1).png"
+  },
+  "Ilir Topi": {
+    "full_name": "Ilir Topi",
+    "date_of_birth": "2022-01-15",
+    "place_of_birth": "Devoll",
+    "electoral_zone": "Korçë",
+    "email": "ilir.topi@parlament.al",
+    "photo_url": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/IlirTopi.png"
+  },
+  "Tërmet Peçi": {
+    "full_name": "Tërmet Peçi",
+    "date_of_birth": "1972-08-30",
+    "place_of_birth": null,
+    "electoral_zone": "Tiranë",
+    "email": "termet.peci@parlament.al",
+    "photo_url": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202509191056289144LRPH9609.JPG"
+  },
+  "Sorina Koti": {
+    "full_name": "Sorina Koti",
+    "date_of_birth": "2004-06-14",
+    "place_of_birth": "Korce",
+    "electoral_zone": "Korçë",
+    "email": "sorina.koti@parlament.al",
+    "photo_url": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/Sorina Koti.jpg"
+  },
+  "Agron Gaxho": {
+    "full_name": "Agron Gaxho",
+    "date_of_birth": "1970-05-12",
+    "place_of_birth": null,
+    "electoral_zone": "Elbasan",
+    "email": "agron.gaxho@parlament.al",
+    "photo_url": null
+  },
+  "Niko Kuri": {
+    "full_name": "Niko Kuri",
+    "date_of_birth": "1968-10-26",
+    "place_of_birth": "Sarandë",
+    "electoral_zone": "Vlorë",
+    "email": "Niko.Kuri@parlament.al",
+    "photo_url": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/Niko Kuri.png"
+  },
+  "Erion Malaj": {
+    "full_name": "Erion Malaj",
+    "date_of_birth": "1988-08-13",
+    "place_of_birth": null,
+    "electoral_zone": null,
+    "email": "erion.malaj@parlament.al",
+    "photo_url": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202509191012458695ERION MALAJ.JPG"
+  },
+  "Laert Duraj": {
+    "full_name": "Laert Duraj",
+    "date_of_birth": "1972-11-09",
+    "place_of_birth": "Tepelene",
+    "electoral_zone": "Tiranë",
+    "email": "Laert.Duraj@parlament.al",
+    "photo_url": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/Laert Duraj.png"
+  },
+  "Zheni Gjergji": {
+    "full_name": "Zheni Gjergji",
+    "date_of_birth": "2022-01-15",
+    "place_of_birth": "Elbasan",
+    "electoral_zone": "Elbasan",
+    "email": "zheni.gjergji@parlament.al",
+    "photo_url": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/ZheniGjergji.png"
+  },
+  "Taulant Balla": {
+    "full_name": "Taulant Balla",
+    "date_of_birth": "2022-01-15",
+    "place_of_birth": "Librazhd",
+    "electoral_zone": null,
+    "email": "taulant.balla@parlament.al",
+    "photo_url": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202509190847008991WhatsApp Image 2025-09-19 at 10.45.01 AM.jpeg"
+  },
+  "Arbi Agalliu": {
+    "full_name": "Arbi Agalliu",
+    "date_of_birth": "2022-01-15",
+    "place_of_birth": "Vlorë",
+    "electoral_zone": "Vlorë",
+    "email": "Arbi.Agalliu@parlament.al",
+    "photo_url": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/arbi.png"
+  },
+  "Ardit Bido": {
+    "full_name": "Ardit Bido",
+    "date_of_birth": "1987-07-20",
+    "place_of_birth": null,
+    "electoral_zone": "Vlorë",
+    "email": "ardit.bido@parlamend.al",
+    "photo_url": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202509191006538520ARDIT BIDO.JPG"
+  },
+  "Antoneta Dhima": {
+    "full_name": "Antoneta Dhima",
+    "date_of_birth": "2022-01-15",
+    "place_of_birth": "Fier",
+    "electoral_zone": "Fier",
+    "email": "Antoneta.Dhima@parlament.al",
+    "photo_url": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/antonetadhima_foto.jpg.png"
+  },
+  "Ervin Salianji": {
+    "full_name": "Ervin Salianji",
+    "date_of_birth": "2022-01-15",
+    "place_of_birth": "Korçë",
+    "electoral_zone": "Korçë",
+    "email": "Ervin.Salianji@parlament.al",
+    "photo_url": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/Ervin-Salianji.jpg"
+  },
+  "Ramion Kurti": {
+    "full_name": "Ramion Kurti",
+    "date_of_birth": "1988-10-21",
+    "place_of_birth": null,
+    "electoral_zone": "Fier",
+    "email": "ramion.kurti@parlament.al",
+    "photo_url": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202509191024598504RAMION KURTI.JPG"
+  },
+  "Gledis Çeliku": {
+    "full_name": "Gledis Çeliku",
+    "date_of_birth": "1983-08-05",
+    "place_of_birth": "Shkodër",
+    "electoral_zone": "Shkodër",
+    "email": "Gledis.Çeliku@parlament.al",
+    "photo_url": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/Gledis Celiku.png"
+  },
+  "Artan Luku": {
+    "full_name": "Artan Luku",
+    "date_of_birth": "1973-03-20",
+    "place_of_birth": null,
+    "electoral_zone": "Durrës",
+    "email": "artan.luku@parlament.al",
+    "photo_url": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202511211354247068BHPH1189.jpg"
+  },
+  "Agron Gjekmarkaj": {
+    "full_name": "Agron Gjekmarkaj",
+    "date_of_birth": "2022-01-15",
+    "place_of_birth": "Lezhë",
+    "electoral_zone": "Lezhë",
+    "email": "Agron.Gjekmarkaj@parlament.al",
+    "photo_url": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202510171019165389WhatsApp Image 2025-10-17 at 12.17.06 PM.jpeg"
+  },
+  "Ilda Dhori": {
+    "full_name": "Ilda Dhori",
+    "date_of_birth": "1990-05-17",
+    "place_of_birth": "Divjake",
+    "electoral_zone": "Fier",
+    "email": "Ilda.Dhori@parlament.al",
+    "photo_url": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/Ilda Dhori.jpg"
+  },
+  "Jurgis Çyrbja": {
+    "full_name": "Jurgis Çyrbja",
+    "date_of_birth": "2022-01-15",
+    "place_of_birth": "Shijak",
+    "electoral_zone": "Durrës",
+    "email": "jurgis.cyrbja@parlament.al",
+    "photo_url": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/Jurgis%20C%CC%A7yrbja.JPG"
+  },
+  "Kiduina Zaka": {
+    "full_name": "Kiduina Zaka",
+    "date_of_birth": "1993-09-20",
+    "place_of_birth": null,
+    "electoral_zone": "Fier",
+    "email": "kiduina.zaka@parlament.al",
+    "photo_url": null
+  },
+  "Klodiana Çapja": {
+    "full_name": "Klodiana Çapja",
+    "date_of_birth": "1994-05-16",
+    "place_of_birth": null,
+    "electoral_zone": "Elbasan",
+    "email": "klodiana.capja@parlament.al",
+    "photo_url": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202509191107028126BHPH3210.JPG"
+  },
+  "Nustret Avdulla": {
+    "full_name": "Nustret Avdulla",
+    "date_of_birth": "2022-01-15",
+    "place_of_birth": "Fier",
+    "electoral_zone": "Fier",
+    "email": "Nustret.Avdulla@parlament.al",
+    "photo_url": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/Nustret Avdulla.png"
+  },
+  "Aurora Mara": {
+    "full_name": "Aurora Mara",
+    "date_of_birth": "2022-01-15",
+    "place_of_birth": "Burrel - Mat",
+    "electoral_zone": "Durrës",
+    "email": "aurora.mara@parlament.al",
+    "photo_url": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/AuroraMara.png"
+  },
+  "Petro Koçi": {
+    "full_name": "Petro Koçi",
+    "date_of_birth": "1961-02-14",
+    "place_of_birth": "Vlore",
+    "electoral_zone": "Fier",
+    "email": "Petro.Koçi@parlament.al",
+    "photo_url": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/Petro Koci.png"
+  },
+  "Seladin Jakupllari": {
+    "full_name": "Seladin Jakupllari",
+    "date_of_birth": "0001-01-01",
+    "place_of_birth": "Pogradec",
+    "electoral_zone": "Korçë",
+    "email": "seladin.jakupllari@parlament.al",
+    "photo_url": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/Seladin Jakupllari .png"
+  },
+  "Orjela Nebijaj": {
+    "full_name": "Orjela Nebijaj",
+    "date_of_birth": "1986-07-21",
+    "place_of_birth": null,
+    "electoral_zone": null,
+    "email": "orjela.nebijaj@parlament.al",
+    "photo_url": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202309201224236009Orjela Nebijaj.jpg"
+  },
+  "Agron Malaj": {
+    "full_name": "Agron Malaj",
+    "date_of_birth": "1980-08-15",
+    "place_of_birth": null,
+    "electoral_zone": "Dibër",
+    "email": "agron.malaj@parlament.al",
+    "photo_url": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202509191005448676AGRON MALAJ.JPG"
+  },
+  "Ina Zhupa": {
+    "full_name": "Ina Zhupa",
+    "date_of_birth": "2022-01-15",
+    "place_of_birth": "Tiranë",
+    "electoral_zone": "Vlorë",
+    "email": "ina.zhupa@parlament.al",
+    "photo_url": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/inazhupa.png"
+  },
+  "Hysen Buzali": {
+    "full_name": "Hysen Buzali",
+    "date_of_birth": "1985-02-19",
+    "place_of_birth": null,
+    "electoral_zone": "Berat",
+    "email": "hysen.buzali@parlament.al",
+    "photo_url": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202509191015362516HYSEN BUZALI.JPG"
+  },
+  "Olsi Komici": {
+    "full_name": "Olsi Komici",
+    "date_of_birth": "1979-07-19",
+    "place_of_birth": null,
+    "electoral_zone": "Elbasan",
+    "email": "olsi.komici@parlament.al",
+    "photo_url": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202509191017481488OLSI KOMICI.JPG"
+  },
+  "Onid Bejleri": {
+    "full_name": "Onid Bejleri",
+    "date_of_birth": "1981-08-14",
+    "place_of_birth": null,
+    "electoral_zone": "Shkodër",
+    "email": "onid.bejleri@parlament.al",
+    "photo_url": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202509191023336421ONID BEJLERI.JPG"
+  },
+  "Merita Bakiu": {
+    "full_name": "Merita Bakiu",
+    "date_of_birth": "2022-01-15",
+    "place_of_birth": "Krujë",
+    "electoral_zone": "Durrës",
+    "email": "Merita.Bakiu@parlament.al",
+    "photo_url": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/Merita Bakiu.png"
+  },
+  "Lulzim Basha": {
+    "full_name": "Lulzim Basha",
+    "date_of_birth": "1974-06-11",
+    "place_of_birth": "Tirane",
+    "electoral_zone": null,
+    "email": "lulzim.basha@parlament.al",
+    "photo_url": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/lulzim basha 1.jpg"
+  },
+  "Agron Shehaj": {
+    "full_name": "Agron Shehaj",
+    "date_of_birth": "2022-01-15",
+    "place_of_birth": "Vlorë",
+    "electoral_zone": null,
+    "email": "Agron.Shehaj@parlament.al",
+    "photo_url": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/Agron Shehaj.foto cv.jpg"
+  },
+  "Belind Këlliçi": {
+    "full_name": "Belind Këlliçi",
+    "date_of_birth": "1987-01-24",
+    "place_of_birth": "Tiranë",
+    "electoral_zone": null,
+    "email": "belind.kellici@parlament.al",
+    "photo_url": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202510141302156472BHPH6088 copy.jpg"
+  },
+  "Ilva Gjuzi": {
+    "full_name": "Ilva Gjuzi",
+    "date_of_birth": "1992-04-04",
+    "place_of_birth": null,
+    "electoral_zone": null,
+    "email": "ilva.gjuzi@parlament.al",
+    "photo_url": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202509191015592481ILVA GJUZI.JPG"
+  },
+  "Vullnet Sinaj": {
+    "full_name": "Vullnet Sinaj",
+    "date_of_birth": "2022-01-15",
+    "place_of_birth": "Vlorë",
+    "electoral_zone": "Vlorë",
+    "email": "vullnet.sinaj@parlament.al",
+    "photo_url": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/Vullnet Sinaj.jpg"
+  },
+  "Kastriot Piroli": {
+    "full_name": "Kastriot Piroli",
+    "date_of_birth": "2022-01-15",
+    "place_of_birth": "Mamurras, Kurbin",
+    "electoral_zone": "Lezhë",
+    "email": "kastriot.piroli@parlament.al",
+    "photo_url": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/KastriotPiroli.png"
+  },
+  "Adea Pirdeni": {
+    "full_name": "Adea Pirdeni",
+    "date_of_birth": "1983-09-30",
+    "place_of_birth": null,
+    "electoral_zone": null,
+    "email": "adea.pirdeni@parlament.al",
+    "photo_url": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202511101435561918Foto %28Adea Pirdeni%29.jpeg"
+  },
+  "Mirela Pitushi": {
+    "full_name": "Mirela Pitushi",
+    "date_of_birth": "0001-01-01",
+    "place_of_birth": "Fier",
+    "electoral_zone": "Fier",
+    "email": "mirela.pitushi@parlament.al",
+    "photo_url": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/Mirela Pitushi.png"
+  },
+  "Bujar Leskaj": {
+    "full_name": "Bujar Leskaj",
+    "date_of_birth": "2022-01-15",
+    "place_of_birth": "Vlorë",
+    "electoral_zone": "Vlorë",
+    "email": "Bujar.Leskaj@parlament.al",
+    "photo_url": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/Bujar Leskaj.png"
+  },
+  "Delina Ibrahimaj": {
+    "full_name": "Delina Ibrahimaj",
+    "date_of_birth": "1983-12-22",
+    "place_of_birth": null,
+    "electoral_zone": null,
+    "email": "delina.ibrahimaj@parlament.al",
+    "photo_url": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202511110847029338ibrahimaj.png"
+  },
+  "Baftjar Zeqaj": {
+    "full_name": "Baftjar Zeqaj",
+    "date_of_birth": "2022-01-15",
+    "place_of_birth": "Fier",
+    "electoral_zone": "Fier",
+    "email": "baftjar.zeqaj@parlament.al",
+    "photo_url": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/BaftjarZeqo.png"
+  },
+  "Tedi Mula": {
+    "full_name": "Tedi Mula",
+    "date_of_birth": "1995-11-14",
+    "place_of_birth": null,
+    "electoral_zone": null,
+    "email": "tedi.mula@parlament.al",
+    "photo_url": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202510011202328213LRPH0460.JPG"
+  },
+  "Igli Hasani": {
+    "full_name": "Igli Hasani",
+    "date_of_birth": "1976-04-11",
+    "place_of_birth": null,
+    "electoral_zone": null,
+    "email": "igli.hasani@parlament.al",
+    "photo_url": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202509191054551260LRPH9462.JPG"
+  },
+  "Erisa Xhixho": {
+    "full_name": "Erisa Xhixho",
+    "date_of_birth": "2022-01-15",
+    "place_of_birth": "Tiranë",
+    "electoral_zone": null,
+    "email": "Erisa.Xhixho@parlament.al",
+    "photo_url": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/Erisa_Xhixho-.png"
+  },
+  "Etjen Xhafaj": {
+    "full_name": "Etjen Xhafaj",
+    "date_of_birth": "2022-01-15",
+    "place_of_birth": "Vlorë",
+    "electoral_zone": null,
+    "email": "etjen.xhafaj@parlament.al",
+    "photo_url": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/EtjenXhafaj.png"
+  },
+  "Mimi Kodheli": {
+    "full_name": "Mimi Kodheli",
+    "date_of_birth": "2022-01-15",
+    "place_of_birth": "Tiranë",
+    "electoral_zone": null,
+    "email": "mimi.kodheli@parlament.al",
+    "photo_url": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/MIMI.png"
+  },
+  "Petrit Malaj": {
+    "full_name": "Petrit Malaj",
+    "date_of_birth": "1978-10-12",
+    "place_of_birth": null,
+    "electoral_zone": "Fier",
+    "email": "petrit.malaj@parlament.al",
+    "photo_url": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202511110831152256malaj.png"
+  },
+  "Damian Gjiknuri": {
+    "full_name": "Damian Gjiknuri",
+    "date_of_birth": "2022-01-15",
+    "place_of_birth": "Tiranë",
+    "electoral_zone": "Vlorë",
+    "email": "Damian.Gjiknuri@parlament.al",
+    "photo_url": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/Damian Gjiknuri.jpg"
+  },
+  "Hatixhe Konomi": {
+    "full_name": "Hatixhe Konomi",
+    "date_of_birth": "1978-02-02",
+    "place_of_birth": "Berat",
+    "electoral_zone": "Berat",
+    "email": "hatixhe.konomi@parlament.al",
+    "photo_url": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/hatixhe konomi.jpg"
+  },
+  "Klevis Balliu": {
+    "full_name": "Klevis Balliu",
+    "date_of_birth": "1989-08-22",
+    "place_of_birth": null,
+    "electoral_zone": null,
+    "email": "klevis.balliu@parlament.al",
+    "photo_url": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202509250834503128BHPH3516.JPG"
+  },
+  "Fatmir Xhafaj": {
+    "full_name": "Fatmir Xhafaj",
+    "date_of_birth": "2022-01-15",
+    "place_of_birth": "Vlorë",
+    "electoral_zone": null,
+    "email": "fatmir.xhafaj@parlament.al",
+    "photo_url": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/fatmirxhafaj.png"
+  },
+  "Ani Dyrmishi": {
+    "full_name": "Ani Dyrmishi",
+    "date_of_birth": "1983-10-24",
+    "place_of_birth": null,
+    "electoral_zone": "Durrës",
+    "email": "ani.dyrmishi@parlament.al",
+    "photo_url": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202509191006379639ANI DYRMISHI.JPG"
+  },
+  "Piro Dhima": {
+    "full_name": "Piro Dhima",
+    "date_of_birth": "1981-11-29",
+    "place_of_birth": null,
+    "electoral_zone": "Tiranë",
+    "email": "piro.dhima@parlament.al",
+    "photo_url": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202509191024441895PIRRO DHIMA.JPG"
+  },
+  "Alma Selami": {
+    "full_name": "Alma Selami",
+    "date_of_birth": "1978-10-29",
+    "place_of_birth": null,
+    "electoral_zone": "Dibër",
+    "email": "alma.selami@parlament.al",
+    "photo_url": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202509191006045031ALMA SELAMI.JPG"
+  }
+}

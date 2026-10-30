@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="sq">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-DQQGM45EB1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+  
+    gtag('config', 'G-DQQGM45EB1');
+  </script>
+  <meta charset="UTF-8">
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-WZN3GQZT');</script>
+  <!-- End Google Tag Manager -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NOVARIC® AI-Powered News</title>
+  <link rel="canonical" href="https://media.novaric.al/" />
+  <!-- RSS autodiscovery -->
+  <link
+    rel="alternate"
+    type="application/rss+xml"
+    title="NOVARIC® Media RSS"
+    href="https://api.media.novaric.al/rss.xml"
+  />
+  <!-- Use direct, clean URL for favicons and social media images -->
+  <link rel="icon" href="https://novaric.co/wp-content/uploads/2025/07/NOVARIC-Logos_Master-WB-R_12062025_500x500.webp" type="image/webp">
+  <link rel="apple-touch-icon" href="https://novaric.co/wp-content/uploads/2025/07/NOVARIC-Logos_Master-WB-R_12062025_500x500.webp">
+  <meta name="google-site-verification" content="TXSFiWbtYsSNe1cMrDtQoKGwz3fQcYGLDaQye4IwnrI" />
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Helvetica', 'Arial', 'sans-serif'], // Prioritize Helvetica
+            mono: ['Courier New', 'Courier', 'monospace'], // Added for Clinical Data look
+          },
+          colors: {
+            primary: {
+              "50": "#fee2e2",  // Lighter red for shades
+              "100": "#fecaca",
+              "200": "#fca5a5",
+              "300": "#f87171",
+              "400": "#ef4444",
+              "500": "#e4191e",  // NOVARIC Base Red
+              "600": "#dc2626",  // Darker for hover/active
+              "700": "#b91c1c",
+              "800": "#991b1b",
+              "900": "#7f1d1d",
+              "950": "#450a0a"   // Darkest red
+            },
+            'action-border': '#37bdee', // Added custom border color
+            'process-cyan': '#49c0ef',
+            'academy-teal': '#006A6A',
+            'academy-teal-dark': '#005c5c',
+            'academy-blue': '#37BDEE',
+            // Panopticon Colors
+            'void-blue': '#020617', // Deep Void Blue
+            'sapphire': '#0ea5e9',  // Truth/Data
+            'caution': '#f97316',   // Risk
+          },
+          animation: {
+            'spin-slow': 'spin 3s linear infinite',
+          }
+        }
+      }
+    }
+  </script>
+<style>
+  html {
+    min-height: 100%;
+    min-height: 100dvh;
+    background-repeat: no-repeat;
+  }
+  body {
+    margin: 0; /* Remove default browser margins */
+    min-height: 100vh; /* Ensure body covers at least full viewport height */
+    min-height: 100dvh;
+    /* Set the background image for the application */
+    background-image: url('https://novaric.co/wp-content/uploads/2025/10/Nora-AI.jpeg');
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-color: #f1f5f9; /* Fallback color */
+    color: #0f172a; /* Default text color, slate-900 */
+    font-family: 'Helvetica', 'Arial', sans-serif; /* Explicit fallback */
+  }
+  @media (prefers-color-scheme: dark) {
+    body {
+      /* Add a semi-transparent overlay to the background image for better text readability in dark mode */
+      background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://novaric.co/wp-content/uploads/2025/10/Nora-AI.jpeg');
+      background-color: #0f172a; /* Fallback color */
+      color: #f1f5f9; /* Default dark text color, slate-100 */
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center center;
+      background-attachment: fixed;
+    }
+  }
+  
+  /* Dynamic Background for Media Personalities Page - Panopticon Mode */
+  body.media-personalities-bg {
+      background-image: radial-gradient(circle at center, #0f172a 0%, #020617 100%);
+      background-attachment: fixed;
+      background-repeat: no-repeat;
+      background-size: cover;
+  }
+
+  /* Mobile version background optimization: remove repeating background and fix mobile scaling */
+  @media (max-width: 1024px) {
+    html, body {
+      background-repeat: no-repeat !important;
+    }
+  }
+  @media (max-width: 768px) {
+    html {
+      background-repeat: no-repeat !important;
+    }
+    body {
+      background-repeat: no-repeat !important;
+      background-size: cover !important;
+      -webkit-background-size: cover !important;
+      background-position: center top !important;
+      background-attachment: scroll !important; /* Mobile WebKit fix: prevents repeating/tiling background and zoom glitch on scroll */
+    }
+    body.media-personalities-bg {
+      background-repeat: no-repeat !important;
+      background-size: cover !important;
+      background-attachment: scroll !important;
+    }
+  }
+
+  #app-wrapper {
+    position: relative;
+  }
+  .main-content-area > div {
+    border-left: 1px solid #e4191e; /* NOVARIC Base Red */
+    border-right: 1px solid #e4191e; /* NOVARIC Base Red */
+  }
+  .white-line-right::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: -1rem; /* In the middle of gap-8 (2rem) */
+    width: 1px;
+    background-color: rgba(255, 255, 255, 0.5);
+    box-shadow: 0 0 6px rgba(255, 255, 255, 0.5);
+    z-index: 49;
+  }
+  .white-line-left::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: -1rem; /* In the middle of gap-8 (2rem) */
+      width: 1px;
+      background-color: rgba(255, 255, 255, 0.5);
+      box-shadow: 0 0 6px rgba(255, 255, 255, 0.5);
+      z-index: 49;
+  }
+  .line-clamp-2 {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+  }
+  .line-clamp-3 {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+  }
+  .line-clamp-4 {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 4;
+  }
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  .animate-fadeIn {
+    animation: fadeIn 0.3s ease-out;
+  }
+  sup {
+    font-size: 60%;
+  }
+  /* Styles for the flippable card */
+  .card-container {
+    perspective: 1000px;
+    cursor: pointer;
+    min-height: 450px; /* Set a consistent height */
+  }
+  .perspective-1000 {
+      perspective: 1000px;
+  }
+  .card {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.8s cubic-bezier(0.4, 0.0, 0.2, 1); /* Smooth tech ease */
+    transform-style: preserve-3d;
+  }
+  .card.is-flipped {
+    transform: rotateY(180deg);
+  }
+  .card-face {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden; /* Safari */
+    display: flex;
+    flex-direction: column;
+    border-radius: 0.5rem; /* rounded-lg */
+  }
+  .card-back {
+    transform: rotateY(180deg);
+  }
+  .transform-style-3d {
+      transform-style: preserve-3d;
+  }
+  .backface-hidden {
+      backface-visibility: hidden;
+  }
+
+  /* Fog Flow Animation */
+  @keyframes fog-flow {
+    0% { background-position: 0% 0%; }
+    100% { background-position: 200% 0%; }
+  }
+  .animate-fog {
+    /* Simulating data fog with a subtle noise/gradient animation */
+    background: radial-gradient(circle at 50% 50%, rgba(255,255,255,0.05) 0%, transparent 60%),
+                repeating-linear-gradient(45deg, transparent, transparent 10px, rgba(0,255,255,0.02) 10px, rgba(0,255,255,0.02) 20px);
+    background-size: 200% 200%;
+    animation: fog-flow 20s linear infinite alternate;
+  }
+
+  /* Pulse Glow Animation */
+  @keyframes pulse-glow-green {
+    0% { box-shadow: 0 0 0 0 rgba(34, 197, 94, 0.4); border-color: rgba(34, 197, 94, 0.8); }
+    70% { box-shadow: 0 0 20px 10px rgba(34, 197, 94, 0); border-color: rgba(34, 197, 94, 1); }
+    100% { box-shadow: 0 0 0 0 rgba(34, 197, 94, 0); border-color: rgba(34, 197, 94, 0.8); }
+  }
+  @keyframes pulse-glow-yellow {
+      0% { box-shadow: 0 0 0 0 rgba(234, 179, 8, 0.4); border-color: rgba(234, 179, 8, 0.8); }
+      70% { box-shadow: 0 0 20px 10px rgba(234, 179, 8, 0); border-color: rgba(234, 179, 8, 1); }
+      100% { box-shadow: 0 0 0 0 rgba(234, 179, 8, 0); border-color: rgba(234, 179, 8, 0.8); }
+  }
+  @keyframes pulse-glow-red {
+      0% { box-shadow: 0 0 0 0 rgba(239, 68, 68, 0.4); border-color: rgba(239, 68, 68, 0.8); }
+      70% { box-shadow: 0 0 20px 10px rgba(239, 68, 68, 0); border-color: rgba(239, 68, 68, 1); }
+      100% { box-shadow: 0 0 0 0 rgba(239, 68, 68, 0); border-color: rgba(239, 68, 68, 0.8); }
+  }
+  .pulse-green {
+      animation: pulse-glow-green 3s infinite;
+  }
+  .pulse-yellow {
+      animation: pulse-glow-yellow 3s infinite;
+  }
+  .pulse-red {
+      animation: pulse-glow-red 3s infinite;
+  }
+
+  /* Technical Grid Background */
+  .bg-tech-grid {
+    background-size: 40px 40px;
+    background-image:
+      linear-gradient(to right, rgba(56, 189, 248, 0.03) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(56, 189, 248, 0.03) 1px, transparent 1px);
+    background-color: #020617; /* Slate 950 */
+  }
+  
+  .glow-text {
+      text-shadow: 0 0 5px currentColor;
+  }
+  
+  /* Triangle clip path for sliders */
+  .clip-triangle {
+      clip-path: polygon(50% 100%, 0 0, 100% 0);
+  }
+
+  @keyframes dynamicMarquee {
+    0% { transform: translateX(0%); }
+    100% { transform: translateX(-50%); }
+  }
+
+  .custom-animate-marquee {
+    animation: dynamicMarquee 40s linear infinite;
+    will-change: transform;
+  }
+
+  .hover\:pause-animation:hover,
+  .focus-within\:pause-animation:focus-within {
+    animation-play-state: paused;
+  }
+  
+  /* Improve background image handling on mobile devices */
+  @media (max-width: 768px) {
+    body,
+    body.media-personalities-bg {
+      background-attachment: scroll;
+    }
+  }
+</style>
+<script type="importmap">
+{
+  "imports": {
+    "react": "https://esm.sh/react@^19.1.1",
+    "react/": "https://esm.sh/react@^19.1.1/",
+    "react-dom/client": "https://esm.sh/react-dom@^19.1.1/client",
+    "react-dom": "https://esm.sh/react-dom@^19.1.1",
+    "@supabase/supabase-js": "https://esm.sh/@supabase/supabase-js@^2.50.2",
+    "@azure/storage-blob": "https://esm.sh/@azure/storage-blob@^12.27.0",
+    "dotenv": "https://esm.sh/dotenv@^17.0.0",
+    "axios": "https://esm.sh/axios@^1.10.0",
+    "xml-js": "https://esm.sh/xml-js@^1.6.11",
+    "@observablehq/plot": "https://esm.sh/@observablehq/plot@^0.6.13",
+    "chart.js": "https://esm.sh/chart.js@^4.4.3",
+    "react-chartjs-2": "https://esm.sh/react-chartjs-2@^5.2.0",
+    "react-dom/": "https://esm.sh/react-dom@^19.1.1/",
+    "zod": "https://esm.sh/zod@^3.24.1",
+    "lucide-react": "https://esm.sh/lucide-react@^0.561.0"
+  }
+}
+</script>
+<link rel="stylesheet" href="/styles/brand-tokens.css">
+<link rel="stylesheet" href="/index.css">
+</head>
+<body>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WZN3GQZT"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+  <div id="root"></div>
+  <div id="toast-portal"></div>
+  <script type="module" src="/index.tsx"></script>
+</body>
+</html>

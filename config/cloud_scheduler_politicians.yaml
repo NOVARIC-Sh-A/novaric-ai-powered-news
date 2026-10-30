@@ -1,0 +1,31 @@
+apiVersion: cloudscheduler.cnrm.cloud.google.com/v1beta1
+kind: CloudSchedulerJob
+metadata:
+  name: weekly-politicians-ingest
+  namespace: novaric-production
+  labels:
+    app.kubernetes.io/name: novaric-paragon
+    novaric.al/pipeline: politicians
+    novaric.al/tier: p1
+spec:
+  projectRef:
+    external: novaric-paragon
+  region: europe-west1
+  schedule: "0 4 * * 1"
+  timeZone: "Etc/UTC"
+  description: "Weekly Kuvendi politicians reconciliation, deactivation pass, image mirroring and active-MP count delta alerting."
+  httpTarget:
+    uri: "https://api.media.novaric.al/api/v1/politicians/ingest"
+    httpMethod: "POST"
+    headers:
+      Content-Type: "application/json"
+      Authorization: "Bearer ${OPS_METRICS_AUTH_TOKEN}"
+      User-Agent: "NOVARIC-CloudScheduler/1.0"
+    body: '{"dry_run": false}'
+  retryConfig:
+    retryCount: 5
+    minBackoffDuration: "10s"
+    maxBackoffDuration: "300s"
+    maxDoublings: 5
+    maxRetryDuration: "1800s"
+  attemptDeadline: "600s"

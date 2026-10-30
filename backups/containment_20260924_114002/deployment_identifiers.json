@@ -1,0 +1,22 @@
+{
+  "timestamp": "2026-09-24T11:42:00Z",
+  "project_path": "C:\\Users\\DrAlbanGjTHIKA\\novaric-ai-powered-news",
+  "incident_declaration": "CRITICAL INCIDENT — PARAGON® PRODUCTION DATASET CONTAMINATION",
+  "containment_status": "ACTIVE_CONTAINMENT",
+  "production_systems": {
+    "frontend": "https://media.novaric.al",
+    "backend": "https://api.media.novaric.al",
+    "supabase_project_ref": "rbrzzabhoqpzsqhlstka"
+  },
+  "runtime_applet_id": "38407c56-251a-464b-bd0a-f18aaf83b2a8",
+  "scoring_runs_marked_invalidated": [
+    "run-1",
+    "run-2",
+    "run-3",
+    "run-4",
+    "run-5"
+  ],
+  "invalidation_reason": "INVALIDATED — SYNTHETIC OR UNVERIFIED INPUT DATA",
+  "scoring_suspension_notice": "Vlerësimet PARAGON® janë përkohësisht të pezulluara për verifikimin e burimeve dhe integritetit të të dhënave.",
+  "audited_by": "Senior Data-Governance Architect & Production Remediation Team"
+}

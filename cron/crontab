@@ -1,0 +1,9 @@
+# ==============================================================================
+# NOVARIC® Figurat Politike — Linux POSIX Crontab Specification
+# Trigger: Nightly at 03:00 UTC
+# ==============================================================================
+SHELL=/bin/bash
+PATH=/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin
+
+# Daily run at 03:00 UTC
+0 3 * * * cd /app/applet && ./scripts/nightly_scorer.sh >> /var/log/novaric_scorer.log 2>&1
