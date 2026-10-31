@@ -101,7 +101,8 @@ export const ScoreRing: React.FC<ScoreRingProps> = ({
             alt={name}
             referrerPolicy="no-referrer"
             onError={() => setImgError(true)}
-            className="w-full h-full object-cover"
+            className="h-full w-full object-cover"
+            style={{ objectPosition: 'center 20%' }}
             loading="lazy"
           />
         ) : (

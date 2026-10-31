@@ -119,6 +119,12 @@ describe('NOVARIC® PARAGON Politicians Cards & Pipeline Contract (P1)', () => {
     assert.ok(grid.includes('AwaitingPhoto'));
     const ring = fs.readFileSync(path.resolve(process.cwd(), 'components/figurat-politike/primitives/ScoreRing.tsx'), 'utf-8');
     assert.ok(ring.includes('onError') && ring.includes('AwaitingPhoto'));
+    const strip = fs.readFileSync(path.resolve(process.cwd(), 'components/figurat-politike/DominantFiguresStrip.tsx'), 'utf-8');
+    for (const source of [grid, ring, strip]) {
+      assert.ok(source.includes('object-cover'));
+      assert.ok(source.includes("objectPosition: 'center 20%'"));
+    }
+    assert.ok(grid.includes('aspect-[3/4]'));
   });
 
   test('Cloud Scheduler JSON spec is valid and enforces retry/backoff policy', () => {

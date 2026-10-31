@@ -4652,7 +4652,7 @@
       "legalStatusAsOf": null,
       "legalStatusSummary": null,
       "imageUrl": "/politicians/official/vip32.jpg",
-      "photo_source_url": "https://commons.wikimedia.org/wiki/File:Jorida_Tabaku.jpg",
+      "photo_source_url": "https://commons.wikimedia.org/wiki/File:Jorida_Tabaku_(cropped).jpg",
       "photoPending": false,
       "photoStatus": "Foto zyrtare / Official photo",
       "shortBio": null,
@@ -4691,9 +4691,10 @@
         },
         "photo": {
           "value": "/politicians/official/vip32.jpg",
-          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Jorida_Tabaku.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Jorida_Tabaku_(cropped).jpg",
           "retrievedAt": "2026-10-31",
-          "licence": "CC BY-SA 3.0"
+          "licence": "Public domain",
+          "notes": "Replaced 200x250 File:Jorida_Tabaku.jpg. Commons category 'Jorida Tabaku' and 'Portraits of female politicians of Albania'; description is a crop of the embassy meeting photo. Retrieved 2026-10-31."
         },
         "parliamentaryGroup": {
           "value": "Grupi Parlamentar i Partisë Demokratike",
@@ -4787,15 +4788,16 @@
       "education": "Diplomat e fituara: Tetor 2005 deri me Mars 2009 Doktor i Shk encave, diplomuar me vlerësimin “shkëlqyer” Universiteti i Tiranës, Shqipëri Shtator 2004 deri me Shtator 2005 Master n ë fushën e menax",
       "email": "jorida.tabaku@parlament.al",
       "officialPhoto": {
-        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Jorida_Tabaku.jpg",
-        "fileUrl": "https://upload.wikimedia.org/wikipedia/commons/d/db/Jorida_Tabaku.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
-        "licence": "CC BY-SA 3.0",
-        "artist": "Salla74",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Jorida_Tabaku_(cropped).jpg",
+        "fileUrl": "https://upload.wikimedia.org/wikipedia/commons/d/dc/Jorida_Tabaku_%28cropped%29.jpg",
+        "licence": "Public domain",
+        "artist": "U.S. Embassy in Albania",
+        "retrievedAt": "2026-10-31",
         "copied": true,
         "localPath": "/politicians/official/vip32.jpg"
       },
       "officialPhotoPath": "/politicians/official/vip32.jpg",
-      "photoLicence": "CC BY-SA 3.0",
+      "photoLicence": "Public domain",
       "photoRetrievedAt": "2026-10-31"
     },
     {
@@ -29743,7 +29745,7 @@
       "legalStatusAsOf": null,
       "legalStatusSummary": null,
       "imageUrl": "/politicians/official/vip198.jpg",
-      "photo_source_url": "https://commons.wikimedia.org/wiki/File:Jorida_Tabaku.jpg",
+      "photo_source_url": "https://commons.wikimedia.org/wiki/File:Jorida_Tabaku_(cropped).jpg",
       "photoPending": false,
       "photoStatus": "Foto zyrtare / Official photo",
       "shortBio": null,
@@ -29782,9 +29784,10 @@
         },
         "photo": {
           "value": "/politicians/official/vip198.jpg",
-          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Jorida_Tabaku.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Jorida_Tabaku_(cropped).jpg",
           "retrievedAt": "2026-10-31",
-          "licence": "CC BY-SA 3.0"
+          "licence": "Public domain",
+          "notes": "Replaced 200x250 File:Jorida_Tabaku.jpg. Commons category 'Jorida Tabaku' and 'Portraits of female politicians of Albania'; description is a crop of the embassy meeting photo. Retrieved 2026-10-31."
         },
         "parliamentaryGroup": {
           "value": "Grupi Parlamentar i Partisë Demokratike",
@@ -29878,15 +29881,16 @@
       "education": "Diplomat e fituara: Tetor 2005 deri me Mars 2009 Doktor i Shk encave, diplomuar me vlerësimin “shkëlqyer” Universiteti i Tiranës, Shqipëri Shtator 2004 deri me Shtator 2005 Master n ë fushën e menax",
       "email": "jorida.tabaku@parlament.al",
       "officialPhoto": {
-        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Jorida_Tabaku.jpg",
-        "fileUrl": "https://upload.wikimedia.org/wikipedia/commons/d/db/Jorida_Tabaku.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
-        "licence": "CC BY-SA 3.0",
-        "artist": "Salla74",
+        "sourceUrl": "https://commons.wikimedia.org/wiki/File:Jorida_Tabaku_(cropped).jpg",
+        "fileUrl": "https://upload.wikimedia.org/wikipedia/commons/d/dc/Jorida_Tabaku_%28cropped%29.jpg",
+        "licence": "Public domain",
+        "artist": "U.S. Embassy in Albania",
+        "retrievedAt": "2026-10-31",
         "copied": true,
         "localPath": "/politicians/official/vip198.jpg"
       },
       "officialPhotoPath": "/politicians/official/vip198.jpg",
-      "photoLicence": "CC BY-SA 3.0",
+      "photoLicence": "Public domain",
       "photoRetrievedAt": "2026-10-31"
     },
     {
@@ -40968,7 +40972,8 @@
           "value": "/politicians/official/vip271.jpg",
           "sourceUrl": "https://commons.wikimedia.org/wiki/File:Edmond_Haxhinasto.jpg",
           "retrievedAt": "2026-10-31",
-          "licence": "Public domain"
+          "licence": "Public domain",
+          "notes": "cropped from https://commons.wikimedia.org/wiki/File:Edmond_Haxhinasto.jpg ; face-centred head-and-shoulders. Licence Public domain; artist US State Department. Retrieved 2026-10-31."
         },
         "parliamentaryGroup": {
           "value": "Grupi parlamentar \"Partia e Lirisë\"",
@@ -41066,7 +41071,10 @@
         "licence": "Public domain",
         "artist": "US State Department",
         "copied": true,
-        "localPath": "/politicians/official/vip271.jpg"
+        "localPath": "/politicians/official/vip271.jpg",
+        "croppedFrom": "https://commons.wikimedia.org/wiki/File:Edmond_Haxhinasto.jpg",
+        "retrievedAt": "2026-10-31",
+        "notes": "cropped from https://commons.wikimedia.org/wiki/File:Edmond_Haxhinasto.jpg ; face-centred head-and-shoulders. Licence Public domain; artist US State Department. Retrieved 2026-10-31."
       },
       "officialPhotoPath": "/politicians/official/vip271.jpg",
       "photoLicence": "Public domain",
