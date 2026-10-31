@@ -815,13 +815,20 @@ function novaricApiPlugin() {
               assetTimeline: [],
               assetDeclaration: null,
               rhetoric: null,
-              affiliations: politician.party ? [{ kind: 'party', label: politician.party, detail: null, url: null }] : [],
+              affiliations: Array.isArray(politician.affiliations) && politician.affiliations.length
+                ? politician.affiliations
+                : [],
               evidence: [],
               rightOfReply: [],
               scoreRevisions: [],
               recentActivity: [],
-              mandates: [],
+              mandates: Array.isArray(politician.mandates) ? politician.mandates : [],
               dimensionReadings: {},
+              officialLinks: Array.isArray(politician.officialLinks) ? politician.officialLinks : [],
+              fieldSources: politician.fieldSources || null,
+              parliamentaryGroup: politician.parliamentaryGroup || null,
+              officialPhotoPath: politician.officialPhotoPath || null,
+              photoLicence: politician.photoLicence || null,
             };
 
             const profilePayload = {
@@ -864,6 +871,7 @@ function novaricApiPlugin() {
               scoring_suspension_notice: politician.scoring_suspension_notice || "Vlerësimet PARAGON® janë përkohësisht të pezulluara për verifikimin e burimeve dhe integritetit të të dhënave.",
               bio: {
                 fullName: politician.name || null,
+                aliases: Array.isArray(politician.aliases) ? politician.aliases : [],
                 education: politician.education || politician.bio?.education || null,
                 profession: politician.profession || politician.bio?.profession || null,
                 email: politician.parliament_email || politician.email || politician.bio?.email || null,

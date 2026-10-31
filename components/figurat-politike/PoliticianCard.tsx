@@ -198,7 +198,7 @@ export const PoliticianCard: React.FC<PoliticianCardProps> = ({
           <ScoreRing
             score={scoringSuspended ? null : (typeof target.composite === 'number' ? target.composite : (target.dynamicScore ?? null))}
             coverage={coverageStr}
-            imageUrl={imageUrl}
+            imageUrl={target.officialPhotoPath || imageUrl}
             name={name}
             size={132}
             strokeWidth={5.5}

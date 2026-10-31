@@ -2,6 +2,7 @@
 import React, { useState } from 'react';
 import { VipProfile } from '../../types';
 import { partyColor, normalizePartySlug, band, bandLabel } from '../../lib/brand-tokens';
+import { AWAITING_DATA } from './primitives/awaiting';
 import { CANONICAL_PARAGON_DIMENSIONS } from '../../types/politician';
 import { ZodiacChip } from './primitives/ZodiacChip';
 import { useDotTooltip } from './SharedDotTooltip';
@@ -172,7 +173,7 @@ export const PoliticianGridCard: React.FC<PoliticianGridCardProps> = ({
             className="text-[11px] font-medium truncate text-blue-600 dark:text-blue-400 mt-0.5"
             title={(targetPolitician as any).primaryRole || ''}
           >
-            {(targetPolitician as any).primaryRole || ((targetPolitician as any).is_active_mp ? 'Deputet i Kuvendit' : 'Figurë Publike')}
+            {(targetPolitician as any).primaryRole || AWAITING_DATA}
           </div>
 
           {/* Meta line: zone · DOB. Zodiac is display-only. */}

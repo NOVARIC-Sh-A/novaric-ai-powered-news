@@ -2,6 +2,7 @@
 import React from 'react';
 import { VipProfile } from '../../types';
 import { partyColor, normalizePartySlug } from '../../lib/brand-tokens';
+import { AWAITING_DATA } from './primitives/awaiting';
 import { ZodiacChip } from './primitives/ZodiacChip';
 
 interface DominantFiguresStripProps {
@@ -38,7 +39,7 @@ export const DominantFiguresStrip: React.FC<DominantFiguresStripProps> = ({
           }
         };
 
-        const primaryRole = (item as any).primaryRole || (item.category || 'Figurë Publike');
+        const primaryRole = (item as any).primaryRole || AWAITING_DATA;
 
         return (
           <a

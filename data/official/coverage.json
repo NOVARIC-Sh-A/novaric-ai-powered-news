@@ -1,0 +1,78 @@
+{
+  "politicians": 279,
+  "fields": {
+    "fullName": {
+      "filled": 272,
+      "awaiting": 7
+    },
+    "currentRole": {
+      "filled": 264,
+      "awaiting": 15
+    },
+    "party": {
+      "filled": 259,
+      "awaiting": 20
+    },
+    "dateOfBirth": {
+      "filled": 245,
+      "awaiting": 34
+    },
+    "placeOfBirth": {
+      "filled": 206,
+      "awaiting": 73
+    },
+    "education": {
+      "filled": 180,
+      "awaiting": 99
+    },
+    "mandates": {
+      "filled": 242,
+      "awaiting": 37
+    },
+    "parliamentaryGroup": {
+      "filled": 245,
+      "awaiting": 34
+    },
+    "constituency": {
+      "filled": 229,
+      "awaiting": 50
+    },
+    "officialLinks": {
+      "filled": 261,
+      "awaiting": 18
+    },
+    "photo": {
+      "filled": 246,
+      "awaiting": 33
+    },
+    "alias": {
+      "filled": 1,
+      "awaiting": 278
+    }
+  },
+  "retrievedAt": "2026-10-31",
+  "browserFactsApplied": [
+    "Edi Rama",
+    "Adea Pirdeni",
+    "vip25",
+    "vip228",
+    "vip254",
+    "vip16",
+    "vip169",
+    "vip140",
+    "vip70",
+    "vip245",
+    "vip26",
+    "vip202"
+  ],
+  "browserFactsNotAdded": [
+    "diella",
+    "Ferit Hoxha",
+    "Enea Karakaci",
+    "Ermal Nufi",
+    "Andis Salla",
+    "Sofjan Jaupaj",
+    "Majlinda Dhuka",
+    "Bajram Begaj"
+  ]
+}

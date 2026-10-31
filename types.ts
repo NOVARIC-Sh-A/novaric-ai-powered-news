@@ -454,6 +454,12 @@ export interface VipProfile {
   rightOfReply?: any[];
   scoreRevisions?: any[];
   dimensionReadings?: Record<string, any>;
+  officialLinks?: { label?: string; url?: string }[];
+  fieldSources?: Record<string, any> | null;
+  aliases?: string[];
+  parliamentaryGroup?: string | null;
+  officialPhotoPath?: string | null;
+  photoLicence?: string | null;
 }
 
 export interface ArticleData {
