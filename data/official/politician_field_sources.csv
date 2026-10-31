@@ -1,6 +1,6 @@
 vip_id,name,field,value,source_url,retrieved_at,licence,notes
 vip1,Edi Rama,fullName,Edi Rama,https://kuvendiapi.azurewebsites.net/api/anetaret/c408857c-f316-41ff-8566-b99152469cdf,2026-10-31,,
-vip1,Edi Rama,currentRole,Deputet i Kuvendit të Shqipërisë,https://kuvendiapi.azurewebsites.net/api/anetaret/c408857c-f316-41ff-8566-b99152469cdf,2026-10-31,,
+vip1,Edi Rama,currentRole,"Kryeministër, njëherësh Kryetar i Partisë Socialiste",https://ps.al/,2026-10-31,,Party homepage uses this title in the present tense
 vip1,Edi Rama,party,Partia Socialiste,https://kuvendiapi.azurewebsites.net/api/anetaret/c408857c-f316-41ff-8566-b99152469cdf,2026-10-31,,
 vip1,Edi Rama,dateOfBirth,1964-07-04,https://www.wikidata.org/wiki/Q316901,2026-10-31,,
 vip1,Edi Rama,placeOfBirth,Tirana,https://www.wikidata.org/wiki/Q316901,2026-10-31,,
@@ -11,7 +11,7 @@ vip1,Edi Rama,constituency,Tiranë,https://kqz.gov.al,2026-10-31,,"KQZ Decision 
 vip1,Edi Rama,officialLinks,3,mailto:Edi.Rama@parlament.al,2026-10-31,,
 vip1,Edi Rama,photo,/politicians/official/vip1.jpg,https://commons.wikimedia.org/wiki/File:Edi_Rama_(2024-02-29).jpg,2026-10-31,CC BY 4.0,
 vip2,Sali Berisha,fullName,Sali Berisha,https://kuvendiapi.azurewebsites.net/api/anetaret/48dae152-e989-44ea-8dcf-71660705c687,2026-10-31,,
-vip2,Sali Berisha,currentRole,Deputet i Kuvendit të Shqipërisë,https://kuvendiapi.azurewebsites.net/api/anetaret/48dae152-e989-44ea-8dcf-71660705c687,2026-10-31,,
+vip2,Sali Berisha,currentRole,Kryetar i Partisë Demokratike,https://pd.al/,2026-10-31,,Party homepage uses this title in the present tense
 vip2,Sali Berisha,party,PD-ASHM,https://kuvendiapi.azurewebsites.net/api/anetaret/48dae152-e989-44ea-8dcf-71660705c687,2026-10-31,,
 vip2,Sali Berisha,dateOfBirth,1944-10-15,https://www.wikidata.org/wiki/Q57625,2026-10-31,,
 vip2,Sali Berisha,placeOfBirth,Viçidol,https://www.wikidata.org/wiki/Q57625,2026-10-31,,
@@ -22,7 +22,7 @@ vip2,Sali Berisha,constituency,Tiranë,https://kqz.gov.al,2026-10-31,,"KQZ Decis
 vip2,Sali Berisha,officialLinks,3,mailto:sali.berisha@parlament.al,2026-10-31,,
 vip2,Sali Berisha,photo,/politicians/official/vip2.jpg,https://commons.wikimedia.org/wiki/File:Sali_Berisha_2025.jpg,2026-10-31,CC BY 2.0,
 vip3,Ilir Meta,fullName,Ilir Meta,https://www.wikidata.org/wiki/Q727132,2026-10-31,,
-vip3,Ilir Meta,currentRole,,,,,no official source on this run
+vip3,Ilir Meta,currentRole,Kryeministri i Shqipërisë (1999-10-29 — 2002-02-22),https://www.wikidata.org/wiki/Q727132,2026-10-31,,former office; the period is taken from the cited source
 vip3,Ilir Meta,party,Lëvizja Socialiste për Integrim; Partia Socialiste e Qeretit,https://www.wikidata.org/wiki/Q727132,2026-10-31,,
 vip3,Ilir Meta,dateOfBirth,1969-03-24,https://www.wikidata.org/wiki/Q727132,2026-10-31,,
 vip3,Ilir Meta,placeOfBirth,Çorovoda,https://www.wikidata.org/wiki/Q727132,2026-10-31,,
@@ -33,7 +33,7 @@ vip3,Ilir Meta,constituency,,,,,no official source on this run
 vip3,Ilir Meta,officialLinks,1,https://www.wikidata.org/wiki/Q727132,2026-10-31,,
 vip3,Ilir Meta,photo,/politicians/official/vip3.jpg,https://commons.wikimedia.org/wiki/File:President_of_Albania_Ilir_Meta.jpg,2026-10-31,CC BY 4.0,
 vip4,Lulzim Basha,fullName,Lulzim Basha,https://kuvendiapi.azurewebsites.net/api/anetaret/6edeb262-f967-49f0-bb2a-ecdf967ae064,2026-10-31,,
-vip4,Lulzim Basha,currentRole,,,,,no official source on this run
+vip4,Lulzim Basha,currentRole,Ish-deputet i Kuvendit të Shqipërisë,https://kuvendiapi.azurewebsites.net/api/anetaret/6edeb262-f967-49f0-bb2a-ecdf967ae064,2026-10-31,,Kuvendi register row is not marked sitting and the person is not on the KQZ 2025 list of 140; the row has no mandate dates
 vip4,Lulzim Basha,party,"Partia Demokratike ""Aleanca për Ndryshim""",https://kuvendiapi.azurewebsites.net/api/anetaret/6edeb262-f967-49f0-bb2a-ecdf967ae064,2026-10-31,,
 vip4,Lulzim Basha,dateOfBirth,1974-06-12,https://www.wikidata.org/wiki/Q1877224,2026-10-31,,
 vip4,Lulzim Basha,placeOfBirth,Tirana,https://www.wikidata.org/wiki/Q1877224,2026-10-31,,
@@ -44,7 +44,7 @@ vip4,Lulzim Basha,constituency,,,,,no official source on this run
 vip4,Lulzim Basha,officialLinks,3,mailto:lulzim.basha@parlament.al,2026-10-31,,
 vip4,Lulzim Basha,photo,/politicians/official/vip4.jpg,"https://commons.wikimedia.org/wiki/File:EPP_Summit,_Maastricht,_October_2016_(30452537895)_(cropped).jpg",2026-10-31,CC BY 2.0,
 vip6,Erion Veliaj,fullName,Erion Veliaj,https://www.wikidata.org/wiki/Q16354049,2026-10-31,,
-vip6,Erion Veliaj,currentRole,,,,,no official source on this run
+vip6,Erion Veliaj,currentRole,Kryetar i Bashkisë së Tiranës,https://www.tirana.al/faqe/kryetari-i-bashkise,2026-10-31,,Municipality page states the present-tense office
 vip6,Erion Veliaj,party,Partia Socialiste e Qeretit,https://www.wikidata.org/wiki/Q16354049,2026-10-31,,
 vip6,Erion Veliaj,dateOfBirth,1979-12-17,https://www.wikidata.org/wiki/Q16354049,2026-10-31,,
 vip6,Erion Veliaj,placeOfBirth,Tirana,https://www.wikidata.org/wiki/Q16354049,2026-10-31,,
@@ -66,7 +66,7 @@ vip7,Belind Këlliçi,constituency,Tiranë,https://kqz.gov.al,2026-10-31,,"KQZ D
 vip7,Belind Këlliçi,officialLinks,3,mailto:belind.kellici@parlament.al,2026-10-31,,
 vip7,Belind Këlliçi,photo,/politicians/official/vip7.jpg,https://commons.wikimedia.org/wiki/File:Belind_K%C3%ABlli%C3%A7i_posing_for_a_picture.jpg,2026-10-31,CC BY-SA 4.0,
 vip9,Benet Beci,fullName,Benet Beci,https://kuvendiapi.azurewebsites.net/api/anetaret/7ad269fe-827a-4ed9-b2b5-41e531db2fb9,2026-10-31,,
-vip9,Benet Beci,currentRole,,,,,no official source on this run
+vip9,Benet Beci,currentRole,Ish-deputet i Kuvendit të Shqipërisë,https://kuvendiapi.azurewebsites.net/api/anetaret/7ad269fe-827a-4ed9-b2b5-41e531db2fb9,2026-10-31,,Kuvendi register row is not marked sitting and the person is not on the KQZ 2025 list of 140; the row has no mandate dates
 vip9,Benet Beci,party,Partia Socialiste,https://kuvendiapi.azurewebsites.net/api/anetaret/7ad269fe-827a-4ed9-b2b5-41e531db2fb9,2026-10-31,,
 vip9,Benet Beci,dateOfBirth,1965-01-25,https://kuvendiwebfiles.blob.core.windows.net/webfiles/Benet Beci.pdf,2026-10-31,,CV
 vip9,Benet Beci,placeOfBirth,Tiranë,https://kuvendiapi.azurewebsites.net/api/anetaret/7ad269fe-827a-4ed9-b2b5-41e531db2fb9,2026-10-31,,
@@ -81,7 +81,7 @@ vip10,Belinda Balluku,currentRole,Deputet i Kuvendit të Shqipërisë,https://ku
 vip10,Belinda Balluku,party,Partia Socialiste,https://kuvendiapi.azurewebsites.net/api/anetaret/b564889e-340b-495b-84bd-9949d279370e,2026-10-31,,
 vip10,Belinda Balluku,dateOfBirth,1973-10-09,https://www.wikidata.org/wiki/Q70480584,2026-10-31,,
 vip10,Belinda Balluku,placeOfBirth,Tirana,https://www.wikidata.org/wiki/Q70480584,2026-10-31,,
-vip10,Belinda Balluku,education,,,,,no official source on this run
+vip10,Belinda Balluku,education,"diplomuar në Institutin Teknologjik të Athinës, në degën Administrim Biznesi",https://kuvendiwebfiles.blob.core.windows.net/webfiles/202603090748523416CV BELINDA BALLUKU 2026.pdf,2026-10-31,,Parliament CV
 vip10,Belinda Balluku,mandates,1,https://kuvendiapi.azurewebsites.net/api/anetaret/b564889e-340b-495b-84bd-9949d279370e,2026-10-31,,
 vip10,Belinda Balluku,parliamentaryGroup,Grupi Parlamentar i Partisë Socialiste,https://kuvendiapi.azurewebsites.net/api/anetaret/b564889e-340b-495b-84bd-9949d279370e,2026-10-31,,
 vip10,Belinda Balluku,constituency,Fier,https://kqz.gov.al,2026-10-31,,"KQZ Decision No. 34, 28 August 2025, as compiled in CERTIFIED_2025_ROSTER"
@@ -121,7 +121,7 @@ vip13,Fatmir Xhafaj,constituency,Tiranë,https://kqz.gov.al,2026-10-31,,"KQZ Dec
 vip13,Fatmir Xhafaj,officialLinks,3,mailto:fatmir.xhafaj@parlament.al,2026-10-31,,
 vip13,Fatmir Xhafaj,photo,/politicians/official/vip13.jpg,"https://commons.wikimedia.org/wiki/File:Fatmir_Xhafaj_in_Tirana,_Albania_-_2018_(cropped).jpg",2026-10-31,CC BY 4.0,
 vip14,Etilda Gjonaj,fullName,Etilda Gjonaj,https://kuvendiapi.azurewebsites.net/api/anetaret/19acfd94-ff4f-495d-951e-29970b6aad82,2026-10-31,,
-vip14,Etilda Gjonaj,currentRole,,,,,no official source on this run
+vip14,Etilda Gjonaj,currentRole,Ish-deputet i Kuvendit të Shqipërisë,https://kuvendiapi.azurewebsites.net/api/anetaret/19acfd94-ff4f-495d-951e-29970b6aad82,2026-10-31,,Kuvendi register row is not marked sitting and the person is not on the KQZ 2025 list of 140; the row has no mandate dates
 vip14,Etilda Gjonaj,party,Partia Socialiste,https://kuvendiapi.azurewebsites.net/api/anetaret/19acfd94-ff4f-495d-951e-29970b6aad82,2026-10-31,,
 vip14,Etilda Gjonaj,dateOfBirth,1981-05-06,https://www.wikidata.org/wiki/Q41448850,2026-10-31,,
 vip14,Etilda Gjonaj,placeOfBirth,Puka,https://www.wikidata.org/wiki/Q41448850,2026-10-31,,
@@ -143,18 +143,18 @@ vip15,Elisa Spiropali,constituency,Tiranë,https://kqz.gov.al,2026-10-31,,"KQZ D
 vip15,Elisa Spiropali,officialLinks,3,mailto:elisa.spiropali@parlament.al,2026-10-31,,
 vip15,Elisa Spiropali,photo,/politicians/official/vip15.jpg,https://commons.wikimedia.org/wiki/File:Meinl-Reisinger-Spiropali_(cropped).jpg,2026-10-31,CC BY 4.0,
 vip16,Toni Gogu,fullName,Toni Gogu,https://kuvendiapi.azurewebsites.net/api/anetaret/3b4392b4-1ebf-4402-92fd-4dab790860b0,2026-10-31,,
-vip16,Toni Gogu,currentRole,,,,,no official source on this run
+vip16,Toni Gogu,currentRole,Ish-deputet i Kuvendit të Shqipërisë,https://kuvendiapi.azurewebsites.net/api/anetaret/3b4392b4-1ebf-4402-92fd-4dab790860b0,2026-10-31,,Kuvendi register row is not marked sitting and the person is not on the KQZ 2025 list of 140; the row has no mandate dates
 vip16,Toni Gogu,party,Partia Socialiste,https://kuvendiapi.azurewebsites.net/api/anetaret/3b4392b4-1ebf-4402-92fd-4dab790860b0,2026-10-31,,
 vip16,Toni Gogu,dateOfBirth,1972-07-24,https://www.wikidata.org/wiki/Q136351034,2026-10-31,,
 vip16,Toni Gogu,placeOfBirth,Fier,https://www.wikidata.org/wiki/Q136351034,2026-10-31,,
-vip16,Toni Gogu,education,,,,,no official source on this run
+vip16,Toni Gogu,education,diplomuar në Fakultetin e Drejtësisës dhe ka kryer studimet master në të drejtën publike në Universiteti n e Tiranës,https://kuvendiwebfiles.blob.core.windows.net/webfiles/202410111028459804TONI GOGU.docx,2026-10-31,,Parliament CV
 vip16,Toni Gogu,mandates,,,,,no official source on this run
 vip16,Toni Gogu,parliamentaryGroup,Grupi Parlamentar i Partisë Socialiste,https://kuvendiapi.azurewebsites.net/api/anetaret/3b4392b4-1ebf-4402-92fd-4dab790860b0,2026-10-31,,
 vip16,Toni Gogu,constituency,,,,,no official source on this run
 vip16,Toni Gogu,officialLinks,3,mailto:toni.gogu@parlament.al,2026-10-31,,
 vip16,Toni Gogu,photo,/politicians/official/vip16.jpg,https://commons.wikimedia.org/wiki/File:Handshake_between_Toni_Gogu_and_Michael_McGrath_(Cropped).jpg,2026-10-31,CC BY 4.0,
 vip17,Klotilda Bushka,fullName,Klotilda Bushka,https://kuvendiapi.azurewebsites.net/api/anetaret/70f01121-d62d-42a5-a847-5e81d80ace39,2026-10-31,,
-vip17,Klotilda Bushka,currentRole,,,,,no official source on this run
+vip17,Klotilda Bushka,currentRole,Ish-deputet i Kuvendit të Shqipërisë,https://kuvendiapi.azurewebsites.net/api/anetaret/70f01121-d62d-42a5-a847-5e81d80ace39,2026-10-31,,Kuvendi register row is not marked sitting and the person is not on the KQZ 2025 list of 140; the row has no mandate dates
 vip17,Klotilda Bushka,party,Partia Socialiste,https://kuvendiapi.azurewebsites.net/api/anetaret/70f01121-d62d-42a5-a847-5e81d80ace39,2026-10-31,,
 vip17,Klotilda Bushka,dateOfBirth,1979-04-11,https://www.wikidata.org/wiki/Q31965785,2026-10-31,,
 vip17,Klotilda Bushka,placeOfBirth,Tirana,https://www.wikidata.org/wiki/Q31965785,2026-10-31,,
@@ -165,7 +165,7 @@ vip17,Klotilda Bushka,constituency,,,,,no official source on this run
 vip17,Klotilda Bushka,officialLinks,3,mailto:klotilda.bushka@parlament.al,2026-10-31,,
 vip17,Klotilda Bushka,photo,https://kuvendiwebfiles.blob.core.windows.net/webfiles/Klotilda Bushka.png,https://kuvendiwebfiles.blob.core.windows.net/webfiles/Klotilda Bushka.png,2026-10-31,No reuse licence published by the Parliament of Albania. Referenced by URL; file not copied.,
 vip18,Arben Pëllumbi,fullName,Arben Pëllumbi,https://kuvendiapi.azurewebsites.net/api/anetaret/6849c66a-4fb7-4c76-b147-09e0bb96ef4b,2026-10-31,,
-vip18,Arben Pëllumbi,currentRole,,,,,no official source on this run
+vip18,Arben Pëllumbi,currentRole,Ish-deputet i Kuvendit të Shqipërisë,https://kuvendiapi.azurewebsites.net/api/anetaret/6849c66a-4fb7-4c76-b147-09e0bb96ef4b,2026-10-31,,Kuvendi register row is not marked sitting and the person is not on the KQZ 2025 list of 140; the row has no mandate dates
 vip18,Arben Pëllumbi,party,Partia Socialiste,https://kuvendiapi.azurewebsites.net/api/anetaret/6849c66a-4fb7-4c76-b147-09e0bb96ef4b,2026-10-31,,
 vip18,Arben Pëllumbi,dateOfBirth,1965-09-22,https://kuvendiwebfiles.blob.core.windows.net/webfiles/202409060956223922ARBEN PËLLUMBI.pdf,2026-10-31,,CV
 vip18,Arben Pëllumbi,placeOfBirth,Korçë,https://kuvendiapi.azurewebsites.net/api/anetaret/6849c66a-4fb7-4c76-b147-09e0bb96ef4b,2026-10-31,,
@@ -176,8 +176,8 @@ vip18,Arben Pëllumbi,constituency,,,,,no official source on this run
 vip18,Arben Pëllumbi,officialLinks,3,mailto:Arben.Pellumbi@parlament.al,2026-10-31,,
 vip18,Arben Pëllumbi,photo,https://kuvendiwebfiles.blob.core.windows.net/webfiles/Arben%20Pe%CC%88llumbi.JPG,https://kuvendiwebfiles.blob.core.windows.net/webfiles/Arben%20Pe%CC%88llumbi.JPG,2026-10-31,No reuse licence published by the Parliament of Albania. Referenced by URL; file not copied.,
 vip19,Tom Doshi,fullName,Tom Doshi,https://www.wikidata.org/wiki/Q13046875,2026-10-31,,unique Wikidata politician; secondary to a missing Kuvendi row
-vip19,Tom Doshi,currentRole,,,,,no official source on this run
-vip19,Tom Doshi,party,,,,,no official source on this run
+vip19,Tom Doshi,currentRole,Deputet i Kuvendit të Shqipërisë,https://kqz.gov.al,2026-10-31,,"KQZ Decision No. 34, 28 August 2025; certified elected member"
+vip19,Tom Doshi,party,PSD,https://kqz.gov.al,2026-10-31,,"KQZ Decision No. 34, 28 August 2025; electoral subject on the certified list"
 vip19,Tom Doshi,dateOfBirth,1966-06-06,https://www.wikidata.org/wiki/Q13046875,2026-10-31,,secondary Wikidata
 vip19,Tom Doshi,placeOfBirth,,,,,no official source on this run
 vip19,Tom Doshi,education,,,,,no official source on this run
@@ -187,7 +187,7 @@ vip19,Tom Doshi,constituency,Shkodër,https://kqz.gov.al,2026-10-31,,"KQZ Decisi
 vip19,Tom Doshi,officialLinks,,,,,no official source on this run
 vip19,Tom Doshi,photo,,,,,no official source on this run
 vip20,Xhemal Qefalia,fullName,Xhemal Qefalia,https://kuvendiapi.azurewebsites.net/api/anetaret/086409b2-4df1-47af-ba2c-0689f8dbf688,2026-10-31,,
-vip20,Xhemal Qefalia,currentRole,,,,,no official source on this run
+vip20,Xhemal Qefalia,currentRole,Ish-deputet i Kuvendit të Shqipërisë,https://kuvendiapi.azurewebsites.net/api/anetaret/086409b2-4df1-47af-ba2c-0689f8dbf688,2026-10-31,,Kuvendi register row is not marked sitting and the person is not on the KQZ 2025 list of 140; the row has no mandate dates
 vip20,Xhemal Qefalia,party,Partia Socialiste,https://kuvendiapi.azurewebsites.net/api/anetaret/086409b2-4df1-47af-ba2c-0689f8dbf688,2026-10-31,,
 vip20,Xhemal Qefalia,dateOfBirth,1963-02-27,https://www.wikidata.org/wiki/Q13047931,2026-10-31,,
 vip20,Xhemal Qefalia,placeOfBirth,Tirana,https://www.wikidata.org/wiki/Q13047931,2026-10-31,,
@@ -198,7 +198,7 @@ vip20,Xhemal Qefalia,constituency,,,,,no official source on this run
 vip20,Xhemal Qefalia,officialLinks,3,mailto:xhemal.qefalia@parlament.al,2026-10-31,,
 vip20,Xhemal Qefalia,photo,https://kuvendiwebfiles.blob.core.windows.net/webfiles/xhemalqefalia_foto.jpg,https://kuvendiwebfiles.blob.core.windows.net/webfiles/xhemalqefalia_foto.jpg,2026-10-31,No reuse licence published by the Parliament of Albania. Referenced by URL; file not copied.,
 vip21,Plarent Ndreca,fullName,Plarent Ndreca,https://kuvendiapi.azurewebsites.net/api/anetaret/814c1eb3-f4d5-40a6-914e-123403b4c1cf,2026-10-31,,
-vip21,Plarent Ndreca,currentRole,,,,,no official source on this run
+vip21,Plarent Ndreca,currentRole,Ish-deputet i Kuvendit të Shqipërisë,https://kuvendiapi.azurewebsites.net/api/anetaret/814c1eb3-f4d5-40a6-914e-123403b4c1cf,2026-10-31,,Kuvendi register row is not marked sitting and the person is not on the KQZ 2025 list of 140; the row has no mandate dates
 vip21,Plarent Ndreca,party,Socialiste e Shqipërisë,https://kuvendiapi.azurewebsites.net/api/anetaret/814c1eb3-f4d5-40a6-914e-123403b4c1cf,2026-10-31,,
 vip21,Plarent Ndreca,dateOfBirth,1977-05-27,https://kuvendiwebfiles.blob.core.windows.net/webfiles/202409260940190454PLARENT  NDRECA.pdf,2026-10-31,,CV
 vip21,Plarent Ndreca,placeOfBirth,"Rrëshen, Mirditë",https://kuvendiapi.azurewebsites.net/api/anetaret/814c1eb3-f4d5-40a6-914e-123403b4c1cf,2026-10-31,,
@@ -231,7 +231,7 @@ vip23,Ornaldo Rakipi,constituency,Tiranë,https://kqz.gov.al,2026-10-31,,"KQZ De
 vip23,Ornaldo Rakipi,officialLinks,2,mailto:Ornaldo.Rakipi@parlament.al,2026-10-31,,
 vip23,Ornaldo Rakipi,photo,https://kuvendiwebfiles.blob.core.windows.net/webfiles/orlando rakipi.png,https://kuvendiwebfiles.blob.core.windows.net/webfiles/orlando rakipi.png,2026-10-31,No reuse licence published by the Parliament of Albania. Referenced by URL; file not copied.,
 vip24,Lavdrim Krashi,fullName,Lavdrim Krashi,https://kuvendiapi.azurewebsites.net/api/anetaret/0ef5f38a-d74d-4039-a484-6a7303202a0a,2026-10-31,,unique spelling or patronymic variant
-vip24,Lavdrim Krashi,currentRole,,,,,no official source on this run
+vip24,Lavdrim Krashi,currentRole,Ish-deputet i Kuvendit të Shqipërisë,https://kuvendiapi.azurewebsites.net/api/anetaret/0ef5f38a-d74d-4039-a484-6a7303202a0a,2026-10-31,,Kuvendi register row is not marked sitting and the person is not on the KQZ 2025 list of 140; the row has no mandate dates
 vip24,Lavdrim Krashi,party,Partia Socialiste e Shqipërisë,https://kuvendiapi.azurewebsites.net/api/anetaret/0ef5f38a-d74d-4039-a484-6a7303202a0a,2026-10-31,,unique spelling or patronymic variant
 vip24,Lavdrim Krashi,dateOfBirth,1969-09-05,https://kuvendiwebfiles.blob.core.windows.net/webfiles/202409240832269378LAVDRIM KRRASHI.pdf,2026-10-31,,CV
 vip24,Lavdrim Krashi,placeOfBirth,Peshkopi,https://kuvendiwebfiles.blob.core.windows.net/webfiles/202409240832269378LAVDRIM KRRASHI.pdf,2026-10-31,,CV
@@ -312,7 +312,7 @@ vip31,Flamur Noka,currentRole,Deputet i Kuvendit të Shqipërisë,https://kuvend
 vip31,Flamur Noka,party,Partia Demokratike,https://kuvendiapi.azurewebsites.net/api/anetaret/c19e8646-1360-410a-82db-79c62e7354ca,2026-10-31,,
 vip31,Flamur Noka,dateOfBirth,1971-03-03,https://www.wikidata.org/wiki/Q5457338,2026-10-31,,
 vip31,Flamur Noka,placeOfBirth,Kukës,https://www.wikidata.org/wiki/Q5457338,2026-10-31,,
-vip31,Flamur Noka,education,,,,,no official source on this run
+vip31,Flamur Noka,education,"arsimin e lartë në Universitetin e Tiranës, dega “ Mjekë si” dhe është specializuar si mjek onkolog",https://kuvendiwebfiles.blob.core.windows.net/webfiles/202409180952379135FLAMUR NOKA.pdf,2026-10-31,,Parliament CV
 vip31,Flamur Noka,mandates,2,https://kuvendiwebfiles.blob.core.windows.net/webfiles/202409180952379135FLAMUR NOKA.pdf,2026-10-31,,Parliament CV biography
 vip31,Flamur Noka,parliamentaryGroup,Grupi Parlamentar i Partisë Demokratike,https://kuvendiapi.azurewebsites.net/api/anetaret/c19e8646-1360-410a-82db-79c62e7354ca,2026-10-31,,
 vip31,Flamur Noka,constituency,Tiranë,https://kqz.gov.al,2026-10-31,,"KQZ Decision No. 34, 28 August 2025, as compiled in CERTIFIED_2025_ROSTER"
@@ -352,7 +352,7 @@ vip34,Ina Zhupa,constituency,Vlorë,https://kqz.gov.al,2026-10-31,,"KQZ Decision
 vip34,Ina Zhupa,officialLinks,3,mailto:ina.zhupa@parlament.al,2026-10-31,,
 vip34,Ina Zhupa,photo,/politicians/official/vip34.jpg,https://commons.wikimedia.org/wiki/File:IZH-Img-154664.jpg,2026-10-31,CC BY-SA 4.0,
 vip35,Agron Gjekmarkaj,fullName,Agron Gjekmarkaj,https://kuvendiapi.azurewebsites.net/api/anetaret/cf7f3fe9-0994-4de8-9819-dc40f6ae1650,2026-10-31,,
-vip35,Agron Gjekmarkaj,currentRole,Deputet i Kuvendit të Shqipërisë,https://kuvendiapi.azurewebsites.net/api/anetaret/cf7f3fe9-0994-4de8-9819-dc40f6ae1650,2026-10-31,,
+vip35,Agron Gjekmarkaj,currentRole,Zëvendëskryetar i Kuvendit të Shqipërisë,https://kuvendiapi.azurewebsites.net/api/strukturat/eeae17fc-a34c-49f9-a9c2-cc7d8e13b940/anetaret,2026-10-31,,Current Kuvendi structure 'Zëvendëskryetarët' lists this sitting member
 vip35,Agron Gjekmarkaj,party,Partia Demokratike,https://kuvendiapi.azurewebsites.net/api/anetaret/cf7f3fe9-0994-4de8-9819-dc40f6ae1650,2026-10-31,,
 vip35,Agron Gjekmarkaj,dateOfBirth,1974-05-21,https://www.wikidata.org/wiki/Q123847867,2026-10-31,,
 vip35,Agron Gjekmarkaj,placeOfBirth,Lezhë,https://www.wikidata.org/wiki/Q123847867,2026-10-31,,
@@ -374,7 +374,7 @@ vip36,Fatmir Mediu,constituency,Tiranë,https://kqz.gov.al,2026-10-31,,"KQZ Deci
 vip36,Fatmir Mediu,officialLinks,3,mailto:Fatmir.Mediu@parlament.al,2026-10-31,,
 vip36,Fatmir Mediu,photo,/politicians/official/vip36.jpg,https://commons.wikimedia.org/wiki/File:Mediu_-_Rumsfeld_060926-F-5586B-311.jpg,2026-10-31,Public domain,
 vip37,Mimi Kodheli,fullName,Mimi Kodheli,https://kuvendiapi.azurewebsites.net/api/anetaret/396cc580-4b84-4e43-96e3-f87465648d98,2026-10-31,,
-vip37,Mimi Kodheli,currentRole,,,,,no official source on this run
+vip37,Mimi Kodheli,currentRole,Ish-deputet i Kuvendit të Shqipërisë,https://kuvendiapi.azurewebsites.net/api/anetaret/396cc580-4b84-4e43-96e3-f87465648d98,2026-10-31,,Kuvendi register row is not marked sitting and the person is not on the KQZ 2025 list of 140; the row has no mandate dates
 vip37,Mimi Kodheli,party,Partia Socialiste,https://kuvendiapi.azurewebsites.net/api/anetaret/396cc580-4b84-4e43-96e3-f87465648d98,2026-10-31,,
 vip37,Mimi Kodheli,dateOfBirth,1964-09-11,https://www.wikidata.org/wiki/Q16855243,2026-10-31,,
 vip37,Mimi Kodheli,placeOfBirth,Tirana,https://www.wikidata.org/wiki/Q16855243,2026-10-31,,
@@ -407,7 +407,7 @@ vip39,Vangjel Dule,constituency,Vlorë,https://kqz.gov.al,2026-10-31,,"KQZ Decis
 vip39,Vangjel Dule,officialLinks,2,mailto:vangjel.dule@parlament.al,2026-10-31,,
 vip39,Vangjel Dule,photo,https://kuvendiwebfiles.blob.core.windows.net/webfiles/202511191308232319LRPH8974.JPG,https://kuvendiwebfiles.blob.core.windows.net/webfiles/202511191308232319LRPH8974.JPG,2026-10-31,No reuse licence published by the Parliament of Albania. Referenced by URL; file not copied.,
 vip40,Asllan Dogjani,fullName,Asllan Dogjani,https://kuvendiapi.azurewebsites.net/api/anetaret/b6e99b8b-313c-42ee-bfee-2173e54b31a6,2026-10-31,,
-vip40,Asllan Dogjani,currentRole,,,,,no official source on this run
+vip40,Asllan Dogjani,currentRole,Ish-deputet i Kuvendit të Shqipërisë,https://kuvendiapi.azurewebsites.net/api/anetaret/b6e99b8b-313c-42ee-bfee-2173e54b31a6,2026-10-31,,Kuvendi register row is not marked sitting and the person is not on the KQZ 2025 list of 140; the row has no mandate dates
 vip40,Asllan Dogjani,party,,,,,no official source on this run
 vip40,Asllan Dogjani,dateOfBirth,1967-11-15,https://kuvendiapi.azurewebsites.net/api/anetaret/b6e99b8b-313c-42ee-bfee-2173e54b31a6,2026-10-31,,
 vip40,Asllan Dogjani,placeOfBirth,Kukës,https://kuvendiapi.azurewebsites.net/api/anetaret/b6e99b8b-313c-42ee-bfee-2173e54b31a6,2026-10-31,,
@@ -418,7 +418,7 @@ vip40,Asllan Dogjani,constituency,,,,,no official source on this run
 vip40,Asllan Dogjani,officialLinks,2,mailto:asllan.dogjani@parlament.al,2026-10-31,,
 vip40,Asllan Dogjani,photo,https://kuvendiwebfiles.blob.core.windows.net/webfiles/202305301156283156asllan dogjani.PNG,https://kuvendiwebfiles.blob.core.windows.net/webfiles/202305301156283156asllan dogjani.PNG,2026-10-31,No reuse licence published by the Parliament of Albania. Referenced by URL; file not copied.,
 vip41,Orjola Pampuri,fullName,Orjola Pampuri,https://kuvendiapi.azurewebsites.net/api/anetaret/1960bd80-4632-41c7-9c12-5f4841e16e7f,2026-10-31,,
-vip41,Orjola Pampuri,currentRole,,,,,no official source on this run
+vip41,Orjola Pampuri,currentRole,Ish-deputet i Kuvendit të Shqipërisë,https://kuvendiapi.azurewebsites.net/api/anetaret/1960bd80-4632-41c7-9c12-5f4841e16e7f,2026-10-31,,Kuvendi register row is not marked sitting and the person is not on the KQZ 2025 list of 140; the row has no mandate dates
 vip41,Orjola Pampuri,party,"Partia Demokratike ""Aleanca për Ndryshim""",https://kuvendiapi.azurewebsites.net/api/anetaret/1960bd80-4632-41c7-9c12-5f4841e16e7f,2026-10-31,,
 vip41,Orjola Pampuri,dateOfBirth,1981-11-13,https://kuvendiapi.azurewebsites.net/api/anetaret/1960bd80-4632-41c7-9c12-5f4841e16e7f,2026-10-31,,
 vip41,Orjola Pampuri,placeOfBirth,Tirane,https://kuvendiapi.azurewebsites.net/api/anetaret/1960bd80-4632-41c7-9c12-5f4841e16e7f,2026-10-31,,
@@ -429,7 +429,7 @@ vip41,Orjola Pampuri,constituency,,,,,no official source on this run
 vip41,Orjola Pampuri,officialLinks,2,mailto:Orjola.Pampuri@parlament.al,2026-10-31,,
 vip41,Orjola Pampuri,photo,https://kuvendiwebfiles.blob.core.windows.net/webfiles/Orjola Pampuri.jpg,https://kuvendiwebfiles.blob.core.windows.net/webfiles/Orjola Pampuri.jpg,2026-10-31,No reuse licence published by the Parliament of Albania. Referenced by URL; file not copied.,
 vip42,Ervin Salianji,fullName,Ervin Salianji,https://kuvendiapi.azurewebsites.net/api/anetaret/e581a002-65ec-4906-99f9-da9a2b642f2b,2026-10-31,,
-vip42,Ervin Salianji,currentRole,,,,,no official source on this run
+vip42,Ervin Salianji,currentRole,Ish-deputet i Kuvendit të Shqipërisë,https://kuvendiapi.azurewebsites.net/api/anetaret/e581a002-65ec-4906-99f9-da9a2b642f2b,2026-10-31,,Kuvendi register row is not marked sitting and the person is not on the KQZ 2025 list of 140; the row has no mandate dates
 vip42,Ervin Salianji,party,Partia Demokratike,https://kuvendiapi.azurewebsites.net/api/anetaret/e581a002-65ec-4906-99f9-da9a2b642f2b,2026-10-31,,
 vip42,Ervin Salianji,dateOfBirth,1988-01-16,https://www.wikidata.org/wiki/Q31969345,2026-10-31,,
 vip42,Ervin Salianji,placeOfBirth,Korçë,https://www.wikidata.org/wiki/Q31969345,2026-10-31,,
@@ -440,7 +440,7 @@ vip42,Ervin Salianji,constituency,Korçë,https://kuvendiapi.azurewebsites.net/a
 vip42,Ervin Salianji,officialLinks,3,mailto:Ervin.Salianji@parlament.al,2026-10-31,,
 vip42,Ervin Salianji,photo,https://kuvendiwebfiles.blob.core.windows.net/webfiles/Ervin-Salianji.jpg,https://kuvendiwebfiles.blob.core.windows.net/webfiles/Ervin-Salianji.jpg,2026-10-31,No reuse licence published by the Parliament of Albania. Referenced by URL; file not copied.,
 vip43,Petrit Vasili,fullName,Petrit Vasili,https://kuvendiapi.azurewebsites.net/api/anetaret/c3ce1073-200c-4328-ae6a-29e58eafddaf,2026-10-31,,
-vip43,Petrit Vasili,currentRole,,,,,no official source on this run
+vip43,Petrit Vasili,currentRole,Ish-deputet i Kuvendit të Shqipërisë,https://kuvendiapi.azurewebsites.net/api/anetaret/c3ce1073-200c-4328-ae6a-29e58eafddaf,2026-10-31,,Kuvendi register row is not marked sitting and the person is not on the KQZ 2025 list of 140; the row has no mandate dates
 vip43,Petrit Vasili,party,Lëvizja Socialiste për Integrim,https://kuvendiapi.azurewebsites.net/api/anetaret/c3ce1073-200c-4328-ae6a-29e58eafddaf,2026-10-31,,
 vip43,Petrit Vasili,dateOfBirth,1958-06-04,https://www.wikidata.org/wiki/Q7178838,2026-10-31,,
 vip43,Petrit Vasili,placeOfBirth,Tirana,https://www.wikidata.org/wiki/Q7178838,2026-10-31,,
@@ -484,7 +484,7 @@ vip46,Taulant Balla,constituency,Tiranë,https://kqz.gov.al,2026-10-31,,"KQZ Dec
 vip46,Taulant Balla,officialLinks,3,mailto:taulant.balla@parlament.al,2026-10-31,,
 vip46,Taulant Balla,photo,/politicians/official/vip46.jpg,https://commons.wikimedia.org/wiki/File:Taulant_Balla_-_2023_(cropped).jpg,2026-10-31,CC BY 2.0,
 vip47,Petro Koçi,fullName,Petro Koçi,https://kuvendiapi.azurewebsites.net/api/anetaret/a7630930-9812-404d-a4c2-e4f07650a9b1,2026-10-31,,
-vip47,Petro Koçi,currentRole,,,,,no official source on this run
+vip47,Petro Koçi,currentRole,Representative of the Parliamentary Assembly of the Council of Europe (2001-09-24 — 2005-12-31),https://www.wikidata.org/wiki/Q13044168,2026-10-31,,former office; the period is taken from the cited source
 vip47,Petro Koçi,party,Partia Socialiste e Shqipërisë,https://kuvendiapi.azurewebsites.net/api/anetaret/a7630930-9812-404d-a4c2-e4f07650a9b1,2026-10-31,,
 vip47,Petro Koçi,dateOfBirth,1961-02-15,https://www.wikidata.org/wiki/Q13044168,2026-10-31,,
 vip47,Petro Koçi,placeOfBirth,Vlora,https://www.wikidata.org/wiki/Q13044168,2026-10-31,,
@@ -495,7 +495,7 @@ vip47,Petro Koçi,constituency,Fier,https://kuvendiapi.azurewebsites.net/api/ane
 vip47,Petro Koçi,officialLinks,3,mailto:Petro.Koçi@parlament.al,2026-10-31,,
 vip47,Petro Koçi,photo,https://kuvendiwebfiles.blob.core.windows.net/webfiles/Petro Koci.png,https://kuvendiwebfiles.blob.core.windows.net/webfiles/Petro Koci.png,2026-10-31,No reuse licence published by the Parliament of Albania. Referenced by URL; file not copied.,
 vip48,Baftjar Zeqaj,fullName,Baftjar Zeqaj,https://kuvendiapi.azurewebsites.net/api/anetaret/e166b57b-be0b-45d0-869b-f3d90430bca1,2026-10-31,,
-vip48,Baftjar Zeqaj,currentRole,,,,,no official source on this run
+vip48,Baftjar Zeqaj,currentRole,Ish-deputet i Kuvendit të Shqipërisë,https://kuvendiapi.azurewebsites.net/api/anetaret/e166b57b-be0b-45d0-869b-f3d90430bca1,2026-10-31,,Kuvendi register row is not marked sitting and the person is not on the KQZ 2025 list of 140; the row has no mandate dates
 vip48,Baftjar Zeqaj,party,PS,https://kuvendiapi.azurewebsites.net/api/anetaret/e166b57b-be0b-45d0-869b-f3d90430bca1,2026-10-31,,
 vip48,Baftjar Zeqaj,dateOfBirth,1961-02-15,https://kuvendiwebfiles.blob.core.windows.net/webfiles/202409061027104949BAFTJAR ZEQAJ.pdf,2026-10-31,,CV
 vip48,Baftjar Zeqaj,placeOfBirth,Fier,https://kuvendiapi.azurewebsites.net/api/anetaret/e166b57b-be0b-45d0-869b-f3d90430bca1,2026-10-31,,
@@ -517,7 +517,7 @@ vip49,Antoneta Dhima,constituency,Fier,https://kqz.gov.al,2026-10-31,,"KQZ Decis
 vip49,Antoneta Dhima,officialLinks,3,mailto:Antoneta.Dhima@parlament.al,2026-10-31,,
 vip49,Antoneta Dhima,photo,https://kuvendiwebfiles.blob.core.windows.net/webfiles/antonetadhima_foto.jpg.png,https://kuvendiwebfiles.blob.core.windows.net/webfiles/antonetadhima_foto.jpg.png,2026-10-31,No reuse licence published by the Parliament of Albania. Referenced by URL; file not copied.,
 vip50,Bujar Çela,fullName,Bujar Çela,https://kuvendiapi.azurewebsites.net/api/anetaret/203d220b-75d5-45e6-8826-174fe2506572,2026-10-31,,
-vip50,Bujar Çela,currentRole,,,,,no official source on this run
+vip50,Bujar Çela,currentRole,Ish-deputet i Kuvendit të Shqipërisë,https://kuvendiapi.azurewebsites.net/api/anetaret/203d220b-75d5-45e6-8826-174fe2506572,2026-10-31,,Kuvendi register row is not marked sitting and the person is not on the KQZ 2025 list of 140; the row has no mandate dates
 vip50,Bujar Çela,party,Partia Socialiste,https://kuvendiapi.azurewebsites.net/api/anetaret/203d220b-75d5-45e6-8826-174fe2506572,2026-10-31,,
 vip50,Bujar Çela,dateOfBirth,1960-05-14,https://www.wikidata.org/wiki/Q31967216,2026-10-31,,
 vip50,Bujar Çela,placeOfBirth,Lushnjë,https://www.wikidata.org/wiki/Q31967216,2026-10-31,,
@@ -539,7 +539,7 @@ vip51,Tatjana Pirro,constituency,,,,,no official source on this run
 vip51,Tatjana Pirro,officialLinks,1,https://www.wikidata.org/wiki/Q31880092,2026-10-31,,
 vip51,Tatjana Pirro,photo,,,,,no official source on this run
 vip52,Ismet Beqiraj,fullName,Ismet Beqiraj,https://kuvendiapi.azurewebsites.net/api/anetaret/9d4381bc-13c7-4a95-83fd-7456cc323657,2026-10-31,,
-vip52,Ismet Beqiraj,currentRole,,,,,no official source on this run
+vip52,Ismet Beqiraj,currentRole,Ish-deputet i Kuvendit të Shqipërisë,https://kuvendiapi.azurewebsites.net/api/anetaret/9d4381bc-13c7-4a95-83fd-7456cc323657,2026-10-31,,Kuvendi register row is not marked sitting and the person is not on the KQZ 2025 list of 140; the row has no mandate dates
 vip52,Ismet Beqiraj,party,Partia Socialiste,https://kuvendiapi.azurewebsites.net/api/anetaret/9d4381bc-13c7-4a95-83fd-7456cc323657,2026-10-31,,
 vip52,Ismet Beqiraj,dateOfBirth,1958-05-10,https://www.wikidata.org/wiki/Q31880767,2026-10-31,,
 vip52,Ismet Beqiraj,placeOfBirth,Fier,https://kuvendiapi.azurewebsites.net/api/anetaret/9d4381bc-13c7-4a95-83fd-7456cc323657,2026-10-31,,
@@ -550,13 +550,13 @@ vip52,Ismet Beqiraj,constituency,Fier,https://kuvendiapi.azurewebsites.net/api/a
 vip52,Ismet Beqiraj,officialLinks,3,mailto:ismet.beqiraj@parlament.al,2026-10-31,,
 vip52,Ismet Beqiraj,photo,https://kuvendiwebfiles.blob.core.windows.net/webfiles/IsmetBeqiraj.png,https://kuvendiwebfiles.blob.core.windows.net/webfiles/IsmetBeqiraj.png,2026-10-31,No reuse licence published by the Parliament of Albania. Referenced by URL; file not copied.,
 vip53,Lindita Buxhelaj,fullName,Lindita Buxhelaj,https://kuvendiapi.azurewebsites.net/api/anetaret/2199bb7c-891b-4deb-9a1b-875af4ffb29e,2026-10-31,,documented unique Kuvendi spelling
-vip53,Lindita Buxhelaj,currentRole,,,,,no official source on this run
-vip53,Lindita Buxhelaj,party,,,,,no official source on this run
+vip53,Lindita Buxhelaj,currentRole,Ish-deputet i Kuvendit të Shqipërisë,https://kuvendiapi.azurewebsites.net/api/anetaret/2199bb7c-891b-4deb-9a1b-875af4ffb29e,2026-10-31,,Kuvendi register row is not marked sitting and the person is not on the KQZ 2025 list of 140; the row has no mandate dates
+vip53,Lindita Buxhelaj,party,Partia Socialiste,https://kuvendiapi.azurewebsites.net/api/anetaret/2199bb7c-891b-4deb-9a1b-875af4ffb29e,2026-10-31,,Kuvendi register
 vip53,Lindita Buxhelaj,dateOfBirth,1966-08-03,https://kuvendiwebfiles.blob.core.windows.net/webfiles/202409240845366932LINDITA BUXHELI.pdf,2026-10-31,,CV
-vip53,Lindita Buxhelaj,placeOfBirth,,,,,no official source on this run
+vip53,Lindita Buxhelaj,placeOfBirth,Lushnjë,https://kuvendiapi.azurewebsites.net/api/anetaret/2199bb7c-891b-4deb-9a1b-875af4ffb29e,2026-10-31,,Kuvendi register
 vip53,Lindita Buxhelaj,education,studimet në Universitetin e Tiranës dega “Ekonomi-Financë”,https://kuvendiwebfiles.blob.core.windows.net/webfiles/202409240845366932LINDITA BUXHELI.pdf,2026-10-31,,Parliament CV
 vip53,Lindita Buxhelaj,mandates,1,https://kuvendiwebfiles.blob.core.windows.net/webfiles/202409240845366932LINDITA BUXHELI.pdf,2026-10-31,,Parliament CV biography
-vip53,Lindita Buxhelaj,parliamentaryGroup,,,,,no official source on this run
+vip53,Lindita Buxhelaj,parliamentaryGroup,Grupi Parlamentar i Partisë Socialiste,https://kuvendiapi.azurewebsites.net/api/anetaret/2199bb7c-891b-4deb-9a1b-875af4ffb29e,2026-10-31,,Kuvendi register
 vip53,Lindita Buxhelaj,constituency,,,,,no official source on this run
 vip53,Lindita Buxhelaj,officialLinks,,,,,no official source on this run
 vip53,Lindita Buxhelaj,photo,,,,,no official source on this run
@@ -616,7 +616,7 @@ vip58,Saimir Korreshi,constituency,Fier,https://kqz.gov.al,2026-10-31,,"KQZ Deci
 vip58,Saimir Korreshi,officialLinks,3,mailto:Saimir.Korreshi@parlament.al,2026-10-31,,
 vip58,Saimir Korreshi,photo,https://kuvendiwebfiles.blob.core.windows.net/webfiles/202510031154366767LRPH1156.JPG,https://kuvendiwebfiles.blob.core.windows.net/webfiles/202510031154366767LRPH1156.JPG,2026-10-31,No reuse licence published by the Parliament of Albania. Referenced by URL; file not copied.,
 vip59,Ilda Dhori,fullName,Ilda Dhori,https://kuvendiapi.azurewebsites.net/api/anetaret/6e11440f-915e-495a-af9a-dc90c84365c4,2026-10-31,,
-vip59,Ilda Dhori,currentRole,,,,,no official source on this run
+vip59,Ilda Dhori,currentRole,Ish-deputet i Kuvendit të Shqipërisë,https://kuvendiapi.azurewebsites.net/api/anetaret/6e11440f-915e-495a-af9a-dc90c84365c4,2026-10-31,,Kuvendi register row is not marked sitting and the person is not on the KQZ 2025 list of 140; the row has no mandate dates
 vip59,Ilda Dhori,party,"Partia Demokratike ""Aleanca për Ndryshim""",https://kuvendiapi.azurewebsites.net/api/anetaret/6e11440f-915e-495a-af9a-dc90c84365c4,2026-10-31,,
 vip59,Ilda Dhori,dateOfBirth,1990-05-18,https://kuvendiapi.azurewebsites.net/api/anetaret/6e11440f-915e-495a-af9a-dc90c84365c4,2026-10-31,,
 vip59,Ilda Dhori,placeOfBirth,Divjake,https://kuvendiapi.azurewebsites.net/api/anetaret/6e11440f-915e-495a-af9a-dc90c84365c4,2026-10-31,,
@@ -627,7 +627,7 @@ vip59,Ilda Dhori,constituency,Fier,https://kuvendiapi.azurewebsites.net/api/anet
 vip59,Ilda Dhori,officialLinks,2,mailto:Ilda.Dhori@parlament.al,2026-10-31,,
 vip59,Ilda Dhori,photo,https://kuvendiwebfiles.blob.core.windows.net/webfiles/Ilda Dhori.jpg,https://kuvendiwebfiles.blob.core.windows.net/webfiles/Ilda Dhori.jpg,2026-10-31,No reuse licence published by the Parliament of Albania. Referenced by URL; file not copied.,
 vip60,Nustret Avdulla,fullName,Nustret Avdulla,https://kuvendiapi.azurewebsites.net/api/anetaret/f143fca8-df58-4a9a-b898-e33a2a0aa271,2026-10-31,,
-vip60,Nustret Avdulla,currentRole,,,,,no official source on this run
+vip60,Nustret Avdulla,currentRole,Ish-deputet i Kuvendit të Shqipërisë,https://kuvendiapi.azurewebsites.net/api/anetaret/f143fca8-df58-4a9a-b898-e33a2a0aa271,2026-10-31,,Kuvendi register row is not marked sitting and the person is not on the KQZ 2025 list of 140; the row has no mandate dates
 vip60,Nustret Avdulla,party,Partia Demokratike,https://kuvendiapi.azurewebsites.net/api/anetaret/f143fca8-df58-4a9a-b898-e33a2a0aa271,2026-10-31,,
 vip60,Nustret Avdulla,dateOfBirth,1962-10-18,https://kuvendiwebfiles.blob.core.windows.net/webfiles/202409260812047945NUSTRET AVDULLA.pdf,2026-10-31,,CV
 vip60,Nustret Avdulla,placeOfBirth,Fier,https://kuvendiapi.azurewebsites.net/api/anetaret/f143fca8-df58-4a9a-b898-e33a2a0aa271,2026-10-31,,
@@ -638,7 +638,7 @@ vip60,Nustret Avdulla,constituency,Fier,https://kuvendiapi.azurewebsites.net/api
 vip60,Nustret Avdulla,officialLinks,2,mailto:Nustret.Avdulla@parlament.al,2026-10-31,,
 vip60,Nustret Avdulla,photo,https://kuvendiwebfiles.blob.core.windows.net/webfiles/Nustret Avdulla.png,https://kuvendiwebfiles.blob.core.windows.net/webfiles/Nustret Avdulla.png,2026-10-31,No reuse licence published by the Parliament of Albania. Referenced by URL; file not copied.,
 vip61,Eralda Bano,fullName,Eralda Bano,https://kuvendiapi.azurewebsites.net/api/anetaret/79f4ae21-3e30-4e52-9f8c-232cfab820cc,2026-10-31,,
-vip61,Eralda Bano,currentRole,,,,,no official source on this run
+vip61,Eralda Bano,currentRole,Ish-deputet i Kuvendit të Shqipërisë,https://kuvendiapi.azurewebsites.net/api/anetaret/79f4ae21-3e30-4e52-9f8c-232cfab820cc,2026-10-31,,Kuvendi register row is not marked sitting and the person is not on the KQZ 2025 list of 140; the row has no mandate dates
 vip61,Eralda Bano,party,Partia Demokratike,https://kuvendiapi.azurewebsites.net/api/anetaret/79f4ae21-3e30-4e52-9f8c-232cfab820cc,2026-10-31,,
 vip61,Eralda Bano,dateOfBirth,1975-05-24,https://kuvendiwebfiles.blob.core.windows.net/webfiles/202409171003499255ERALDA BANO.pdf,2026-10-31,,CV
 vip61,Eralda Bano,placeOfBirth,Fier,https://kuvendiapi.azurewebsites.net/api/anetaret/79f4ae21-3e30-4e52-9f8c-232cfab820cc,2026-10-31,,
@@ -671,7 +671,7 @@ vip63,Milva Ekonomi,constituency,Durrës,https://kqz.gov.al,2026-10-31,,"KQZ Dec
 vip63,Milva Ekonomi,officialLinks,3,mailto:milva.ekonomi@parlament.al,2026-10-31,,
 vip63,Milva Ekonomi,photo,/politicians/official/vip63.jpg,"https://commons.wikimedia.org/wiki/File:Milva_Ekonomi,_Minister_of_Economic_Development,_Tourism,_Trade_and_Entrepreneurship.JPG",2026-10-31,CC BY-SA 4.0,
 vip64,Jurgis Çyrbja,fullName,Jurgis Çyrbja,https://kuvendiapi.azurewebsites.net/api/anetaret/ed3f4f2d-90b8-44f4-afe6-ddcd23a37fd9,2026-10-31,,
-vip64,Jurgis Çyrbja,currentRole,,,,,no official source on this run
+vip64,Jurgis Çyrbja,currentRole,Ish-deputet i Kuvendit të Shqipërisë,https://kuvendiapi.azurewebsites.net/api/anetaret/ed3f4f2d-90b8-44f4-afe6-ddcd23a37fd9,2026-10-31,,Kuvendi register row is not marked sitting and the person is not on the KQZ 2025 list of 140; the row has no mandate dates
 vip64,Jurgis Çyrbja,party,Partia Socialiste,https://kuvendiapi.azurewebsites.net/api/anetaret/ed3f4f2d-90b8-44f4-afe6-ddcd23a37fd9,2026-10-31,,
 vip64,Jurgis Çyrbja,dateOfBirth,1985-07-15,https://www.wikidata.org/wiki/Q31966848,2026-10-31,,
 vip64,Jurgis Çyrbja,placeOfBirth,Shijaku,https://www.wikidata.org/wiki/Q31966848,2026-10-31,,
@@ -704,7 +704,7 @@ vip66,Ana Dhamo,constituency,,,,,no official source on this run
 vip66,Ana Dhamo,officialLinks,,,,,no official source on this run
 vip66,Ana Dhamo,photo,,,,,no official source on this run
 vip67,Denis Deliu,fullName,Denis Deliu,https://kuvendiapi.azurewebsites.net/api/anetaret/4a7058be-8979-4d69-9265-38b5387652b8,2026-10-31,,
-vip67,Denis Deliu,currentRole,,,,,no official source on this run
+vip67,Denis Deliu,currentRole,Ish-deputet i Kuvendit të Shqipërisë,https://kuvendiapi.azurewebsites.net/api/anetaret/4a7058be-8979-4d69-9265-38b5387652b8,2026-10-31,,Kuvendi register row is not marked sitting and the person is not on the KQZ 2025 list of 140; the row has no mandate dates
 vip67,Denis Deliu,party,Partia Socialiste,https://kuvendiapi.azurewebsites.net/api/anetaret/4a7058be-8979-4d69-9265-38b5387652b8,2026-10-31,,
 vip67,Denis Deliu,dateOfBirth,1986-05-17,https://kuvendiwebfiles.blob.core.windows.net/webfiles/202409170851253794DENIS DELIU.pdf,2026-10-31,,CV
 vip67,Denis Deliu,placeOfBirth,Krujë,https://kuvendiapi.azurewebsites.net/api/anetaret/4a7058be-8979-4d69-9265-38b5387652b8,2026-10-31,,
@@ -726,7 +726,7 @@ vip68,Artur Bushaj,constituency,,,,,no official source on this run
 vip68,Artur Bushaj,officialLinks,,,,,no official source on this run
 vip68,Artur Bushaj,photo,,,,,no official source on this run
 vip69,Alban Xhelili,fullName,Alban Xhelili,https://kuvendiapi.azurewebsites.net/api/anetaret/71a77b46-62bb-4a5a-a1ab-133a868828a2,2026-10-31,,
-vip69,Alban Xhelili,currentRole,,,,,no official source on this run
+vip69,Alban Xhelili,currentRole,Ish-deputet i Kuvendit të Shqipërisë,https://kuvendiapi.azurewebsites.net/api/anetaret/71a77b46-62bb-4a5a-a1ab-133a868828a2,2026-10-31,,Kuvendi register row is not marked sitting and the person is not on the KQZ 2025 list of 140; the row has no mandate dates
 vip69,Alban Xhelili,party,Partia Socialiste,https://kuvendiapi.azurewebsites.net/api/anetaret/71a77b46-62bb-4a5a-a1ab-133a868828a2,2026-10-31,,
 vip69,Alban Xhelili,dateOfBirth,1972-08-23,https://kuvendiwebfiles.blob.core.windows.net/webfiles/202409060918344853ALBAN XHELILI.pdf,2026-10-31,,CV
 vip69,Alban Xhelili,placeOfBirth,Durrës,https://kuvendiapi.azurewebsites.net/api/anetaret/71a77b46-62bb-4a5a-a1ab-133a868828a2,2026-10-31,,
@@ -759,18 +759,18 @@ vip71,Edi Paloka,constituency,Tiranë,https://kqz.gov.al,2026-10-31,,"KQZ Decisi
 vip71,Edi Paloka,officialLinks,3,mailto:Edi.Paloka@parlament.al,2026-10-31,,
 vip71,Edi Paloka,photo,https://kuvendiwebfiles.blob.core.windows.net/webfiles/edipaloka_foto.jpg,https://kuvendiwebfiles.blob.core.windows.net/webfiles/edipaloka_foto.jpg,2026-10-31,No reuse licence published by the Parliament of Albania. Referenced by URL; file not copied.,
 vip72,Ferdinand Xhaferaj,fullName,Ferdinand Xhaferaj,https://kuvendiapi.azurewebsites.net/api/anetaret/de5708dd-f45c-40ee-9037-c5e86515ce18,2026-10-31,,unique spelling or patronymic variant
-vip72,Ferdinand Xhaferaj,currentRole,,,,,no official source on this run
+vip72,Ferdinand Xhaferaj,currentRole,Ish-deputet i Kuvendit të Shqipërisë,https://kuvendiapi.azurewebsites.net/api/anetaret/de5708dd-f45c-40ee-9037-c5e86515ce18,2026-10-31,,Kuvendi register row is not marked sitting and the person is not on the KQZ 2025 list of 140; the row has no mandate dates
 vip72,Ferdinand Xhaferaj,party,"Partia Demokratike ""Aleanca për Ndryshim""",https://kuvendiapi.azurewebsites.net/api/anetaret/de5708dd-f45c-40ee-9037-c5e86515ce18,2026-10-31,,unique spelling or patronymic variant
 vip72,Ferdinand Xhaferaj,dateOfBirth,1964-01-23,https://kuvendiwebfiles.blob.core.windows.net/webfiles/202409171254068672FERDINANT XHAFERAJ.pdf,2026-10-31,,CV
 vip72,Ferdinand Xhaferaj,placeOfBirth,Durrës,https://kuvendiwebfiles.blob.core.windows.net/webfiles/202409171254068672FERDINANT XHAFERAJ.pdf,2026-10-31,,CV
-vip72,Ferdinand Xhaferaj,education,,,,,no official source on this run
+vip72,Ferdinand Xhaferaj,education,"është diplomuar në degën “Inxhinieri Mekanike”, ka kryer studimet master “Për marrëdhënie ndërkombëtare”, në Naval Postgraduate School, CA , USA dhe master “Për çështje të sigurisë kombëtare”, në Naval Postgraduate School, CA, USA",https://kuvendiwebfiles.blob.core.windows.net/webfiles/202409171254068672FERDINANT XHAFERAJ.pdf,2026-10-31,,Parliament CV
 vip72,Ferdinand Xhaferaj,mandates,1,https://kuvendiwebfiles.blob.core.windows.net/webfiles/202409171254068672FERDINANT XHAFERAJ.pdf,2026-10-31,,Parliament CV biography
 vip72,Ferdinand Xhaferaj,parliamentaryGroup,Grupi Parlamentar i Partisë Demokratike,https://kuvendiapi.azurewebsites.net/api/anetaret/de5708dd-f45c-40ee-9037-c5e86515ce18,2026-10-31,,
 vip72,Ferdinand Xhaferaj,constituency,,,,,no official source on this run
 vip72,Ferdinand Xhaferaj,officialLinks,1,https://kuvendiapi.azurewebsites.net/api/anetaret/de5708dd-f45c-40ee-9037-c5e86515ce18,2026-10-31,,
 vip72,Ferdinand Xhaferaj,photo,https://kuvendiwebfiles.blob.core.windows.net/webfiles/Ferdinand Xhaferaj.jpg,https://kuvendiwebfiles.blob.core.windows.net/webfiles/Ferdinand Xhaferaj.jpg,2026-10-31,No reuse licence published by the Parliament of Albania. Referenced by URL; file not copied.,
 vip73,Andia Ulliri,fullName,Andia Ulliri,https://kuvendiapi.azurewebsites.net/api/anetaret/00b45e15-45b0-4b08-bc43-47ba718872c0,2026-10-31,,
-vip73,Andia Ulliri,currentRole,,,,,no official source on this run
+vip73,Andia Ulliri,currentRole,Ish-deputet i Kuvendit të Shqipërisë,https://kuvendiapi.azurewebsites.net/api/anetaret/00b45e15-45b0-4b08-bc43-47ba718872c0,2026-10-31,,Kuvendi register row is not marked sitting and the person is not on the KQZ 2025 list of 140; the row has no mandate dates
 vip73,Andia Ulliri,party,Partia Demokratike,https://kuvendiapi.azurewebsites.net/api/anetaret/00b45e15-45b0-4b08-bc43-47ba718872c0,2026-10-31,,
 vip73,Andia Ulliri,dateOfBirth,1999-02-01,https://www.wikidata.org/wiki/Q130337373,2026-10-31,,
 vip73,Andia Ulliri,placeOfBirth,Durrës,https://kuvendiapi.azurewebsites.net/api/anetaret/00b45e15-45b0-4b08-bc43-47ba718872c0,2026-10-31,,
@@ -781,7 +781,7 @@ vip73,Andia Ulliri,constituency,Durrës,https://kuvendiapi.azurewebsites.net/api
 vip73,Andia Ulliri,officialLinks,3,mailto:Andia.Ulliri@parlament.al,2026-10-31,,
 vip73,Andia Ulliri,photo,https://kuvendiwebfiles.blob.core.windows.net/webfiles/Andia Ulliri.png,https://kuvendiwebfiles.blob.core.windows.net/webfiles/Andia Ulliri.png,2026-10-31,No reuse licence published by the Parliament of Albania. Referenced by URL; file not copied.,
 vip74,Merita Bakiu,fullName,Merita Bakiu,https://kuvendiapi.azurewebsites.net/api/anetaret/95eff96d-3902-41e7-bf9a-ec1c6431d3d4,2026-10-31,,
-vip74,Merita Bakiu,currentRole,,,,,no official source on this run
+vip74,Merita Bakiu,currentRole,Ish-deputet i Kuvendit të Shqipërisë,https://kuvendiapi.azurewebsites.net/api/anetaret/95eff96d-3902-41e7-bf9a-ec1c6431d3d4,2026-10-31,,Kuvendi register row is not marked sitting and the person is not on the KQZ 2025 list of 140; the row has no mandate dates
 vip74,Merita Bakiu,party,Partia Demokratike,https://kuvendiapi.azurewebsites.net/api/anetaret/95eff96d-3902-41e7-bf9a-ec1c6431d3d4,2026-10-31,,
 vip74,Merita Bakiu,dateOfBirth,1972-02-24,https://kuvendiwebfiles.blob.core.windows.net/webfiles/202409241006074211MERITA BAKIU.pdf,2026-10-31,,CV
 vip74,Merita Bakiu,placeOfBirth,Krujë,https://kuvendiapi.azurewebsites.net/api/anetaret/95eff96d-3902-41e7-bf9a-ec1c6431d3d4,2026-10-31,,
@@ -803,7 +803,7 @@ vip75,Damian Gjiknuri,constituency,Vlorë,https://kqz.gov.al,2026-10-31,,"KQZ De
 vip75,Damian Gjiknuri,officialLinks,3,mailto:Damian.Gjiknuri@parlament.al,2026-10-31,,
 vip75,Damian Gjiknuri,photo,/politicians/official/vip75.jpg,https://commons.wikimedia.org/wiki/File:Dan_Brouillette_meets_with_Damian_Gjiknuri_at_Energy_HQ_(2)_(cropped).jpg,2026-10-31,Public domain,
 vip76,Klevis Xhoxhi,fullName,Klevis Xhoxhi,https://kuvendiapi.azurewebsites.net/api/anetaret/47f0c62f-6737-4004-b364-b482a1297644,2026-10-31,,
-vip76,Klevis Xhoxhi,currentRole,,,,,no official source on this run
+vip76,Klevis Xhoxhi,currentRole,Ish-deputet i Kuvendit të Shqipërisë,https://kuvendiapi.azurewebsites.net/api/anetaret/47f0c62f-6737-4004-b364-b482a1297644,2026-10-31,,Kuvendi register row is not marked sitting and the person is not on the KQZ 2025 list of 140; the row has no mandate dates
 vip76,Klevis Xhoxhi,party,Partia Socialiste e Shqipërisë,https://kuvendiapi.azurewebsites.net/api/anetaret/47f0c62f-6737-4004-b364-b482a1297644,2026-10-31,,
 vip76,Klevis Xhoxhi,dateOfBirth,1978-11-30,https://kuvendiapi.azurewebsites.net/api/anetaret/47f0c62f-6737-4004-b364-b482a1297644,2026-10-31,,
 vip76,Klevis Xhoxhi,placeOfBirth,Elbasan,https://kuvendiapi.azurewebsites.net/api/anetaret/47f0c62f-6737-4004-b364-b482a1297644,2026-10-31,,
@@ -814,7 +814,7 @@ vip76,Klevis Xhoxhi,constituency,Elbasan,https://kuvendiapi.azurewebsites.net/ap
 vip76,Klevis Xhoxhi,officialLinks,2,mailto:Klevis.Xhoxhi@parlament.al,2026-10-31,,
 vip76,Klevis Xhoxhi,photo,https://kuvendiwebfiles.blob.core.windows.net/webfiles/Klevis Xhoxhi 01.png,https://kuvendiwebfiles.blob.core.windows.net/webfiles/Klevis Xhoxhi 01.png,2026-10-31,No reuse licence published by the Parliament of Albania. Referenced by URL; file not copied.,
 vip77,Besian Ajazi,fullName,Besian Ajazi,https://kuvendiapi.azurewebsites.net/api/anetaret/307ee057-cda2-4e08-950f-bcaef37a4f71,2026-10-31,,unique spelling or patronymic variant
-vip77,Besian Ajazi,currentRole,,,,,no official source on this run
+vip77,Besian Ajazi,currentRole,Ish-deputet i Kuvendit të Shqipërisë,https://kuvendiapi.azurewebsites.net/api/anetaret/307ee057-cda2-4e08-950f-bcaef37a4f71,2026-10-31,,Kuvendi register row is not marked sitting and the person is not on the KQZ 2025 list of 140; the row has no mandate dates
 vip77,Besian Ajazi,party,Partia Socialiste,https://kuvendiapi.azurewebsites.net/api/anetaret/307ee057-cda2-4e08-950f-bcaef37a4f71,2026-10-31,,unique spelling or patronymic variant
 vip77,Besian Ajazi,dateOfBirth,,,,,no official source on this run
 vip77,Besian Ajazi,placeOfBirth,Gramsh,https://kuvendiapi.azurewebsites.net/api/anetaret/307ee057-cda2-4e08-950f-bcaef37a4f71,2026-10-31,,
@@ -825,7 +825,7 @@ vip77,Besian Ajazi,constituency,,,,,no official source on this run
 vip77,Besian Ajazi,officialLinks,1,https://kuvendiapi.azurewebsites.net/api/anetaret/307ee057-cda2-4e08-950f-bcaef37a4f71,2026-10-31,,
 vip77,Besian Ajazi,photo,https://kuvendiwebfiles.blob.core.windows.net/webfiles/BesianAjazi.png,https://kuvendiwebfiles.blob.core.windows.net/webfiles/BesianAjazi.png,2026-10-31,No reuse licence published by the Parliament of Albania. Referenced by URL; file not copied.,
 vip78,Desantila Tahiraj,fullName,Desantila Tahiraj,https://kuvendiapi.azurewebsites.net/api/anetaret/136d1eac-6f97-4284-bd09-c3c7e1473b3b,2026-10-31,,unique spelling or patronymic variant
-vip78,Desantila Tahiraj,currentRole,,,,,no official source on this run
+vip78,Desantila Tahiraj,currentRole,Ish-deputet i Kuvendit të Shqipërisë,https://kuvendiapi.azurewebsites.net/api/anetaret/136d1eac-6f97-4284-bd09-c3c7e1473b3b,2026-10-31,,Kuvendi register row is not marked sitting and the person is not on the KQZ 2025 list of 140; the row has no mandate dates
 vip78,Desantila Tahiraj,party,Partia Socialiste,https://kuvendiapi.azurewebsites.net/api/anetaret/136d1eac-6f97-4284-bd09-c3c7e1473b3b,2026-10-31,,unique spelling or patronymic variant
 vip78,Desantila Tahiraj,dateOfBirth,1972-10-18,https://kuvendiwebfiles.blob.core.windows.net/webfiles/202409170813209415DASANTILA TAHIRAJ.pdf,2026-10-31,,CV
 vip78,Desantila Tahiraj,placeOfBirth,Elbasan,https://kuvendiwebfiles.blob.core.windows.net/webfiles/202409170813209415DASANTILA TAHIRAJ.pdf,2026-10-31,,CV
@@ -847,7 +847,7 @@ vip79,Saimir Hasalla,constituency,Elbasan,https://kqz.gov.al,2026-10-31,,"KQZ De
 vip79,Saimir Hasalla,officialLinks,2,mailto:saimir.hasalla@parlament.al,2026-10-31,,
 vip79,Saimir Hasalla,photo,https://kuvendiwebfiles.blob.core.windows.net/webfiles/SaimirHasalla.png,https://kuvendiwebfiles.blob.core.windows.net/webfiles/SaimirHasalla.png,2026-10-31,No reuse licence published by the Parliament of Albania. Referenced by URL; file not copied.,
 vip80,Florenca Spaho,fullName,Florenca Spaho,https://kuvendiapi.azurewebsites.net/api/anetaret/8e679100-7669-421e-815c-495c8fa65386,2026-10-31,,unique spelling or patronymic variant
-vip80,Florenca Spaho,currentRole,,,,,no official source on this run
+vip80,Florenca Spaho,currentRole,Ish-deputet i Kuvendit të Shqipërisë,https://kuvendiapi.azurewebsites.net/api/anetaret/8e679100-7669-421e-815c-495c8fa65386,2026-10-31,,Kuvendi register row is not marked sitting and the person is not on the KQZ 2025 list of 140; the row has no mandate dates
 vip80,Florenca Spaho,party,Partia Socialiste,https://kuvendiapi.azurewebsites.net/api/anetaret/8e679100-7669-421e-815c-495c8fa65386,2026-10-31,,unique spelling or patronymic variant
 vip80,Florenca Spaho,dateOfBirth,1984-06-09,https://kuvendiwebfiles.blob.core.windows.net/webfiles/202409171307367640FLORENC SPAHO.pdf,2026-10-31,,CV
 vip80,Florenca Spaho,placeOfBirth,Elbasan,https://kuvendiwebfiles.blob.core.windows.net/webfiles/202409171307367640FLORENC SPAHO.pdf,2026-10-31,,CV
@@ -858,7 +858,7 @@ vip80,Florenca Spaho,constituency,,,,,no official source on this run
 vip80,Florenca Spaho,officialLinks,1,https://kuvendiapi.azurewebsites.net/api/anetaret/8e679100-7669-421e-815c-495c8fa65386,2026-10-31,,
 vip80,Florenca Spaho,photo,https://kuvendiwebfiles.blob.core.windows.net/webfiles/Florenc Spaho.jpg,https://kuvendiwebfiles.blob.core.windows.net/webfiles/Florenc Spaho.jpg,2026-10-31,No reuse licence published by the Parliament of Albania. Referenced by URL; file not copied.,
 vip81,Agron Cela,fullName,Agron Cela,https://kuvendiapi.azurewebsites.net/api/anetaret/bb36dea7-6f00-48f2-a98f-71dbf7b10d2a,2026-10-31,,
-vip81,Agron Cela,currentRole,,,,,no official source on this run
+vip81,Agron Cela,currentRole,Ish-deputet i Kuvendit të Shqipërisë,https://kuvendiapi.azurewebsites.net/api/anetaret/bb36dea7-6f00-48f2-a98f-71dbf7b10d2a,2026-10-31,,Kuvendi register row is not marked sitting and the person is not on the KQZ 2025 list of 140; the row has no mandate dates
 vip81,Agron Cela,party,LSI,https://kuvendiapi.azurewebsites.net/api/anetaret/bb36dea7-6f00-48f2-a98f-71dbf7b10d2a,2026-10-31,,
 vip81,Agron Cela,dateOfBirth,1969-02-05,https://www.wikidata.org/wiki/Q31970047,2026-10-31,,
 vip81,Agron Cela,placeOfBirth,Shkodra,https://www.wikidata.org/wiki/Q31970047,2026-10-31,,
@@ -869,7 +869,7 @@ vip81,Agron Cela,constituency,Shkodër,https://kuvendiapi.azurewebsites.net/api/
 vip81,Agron Cela,officialLinks,3,mailto:Agron.Çela@parlament.al,2026-10-31,,
 vip81,Agron Cela,photo,https://kuvendiwebfiles.blob.core.windows.net/webfiles/Agron Cela foto Cv faqe.jpg,https://kuvendiwebfiles.blob.core.windows.net/webfiles/Agron Cela foto Cv faqe.jpg,2026-10-31,No reuse licence published by the Parliament of Albania. Referenced by URL; file not copied.,
 vip82,Shkëlqim Bullari,fullName,Shkëlqim Bullari,https://kuvendiapi.azurewebsites.net/api/anetaret/2f191184-c02c-45ad-ac5d-86d8e64b9165,2026-10-31,,
-vip82,Shkëlqim Bullari,currentRole,,,,,no official source on this run
+vip82,Shkëlqim Bullari,currentRole,Ish-deputet i Kuvendit të Shqipërisë,https://kuvendiapi.azurewebsites.net/api/anetaret/2f191184-c02c-45ad-ac5d-86d8e64b9165,2026-10-31,,Kuvendi register row is not marked sitting and the person is not on the KQZ 2025 list of 140; the row has no mandate dates
 vip82,Shkëlqim Bullari,party,,,,,no official source on this run
 vip82,Shkëlqim Bullari,dateOfBirth,1969-04-26,https://kuvendiwebfiles.blob.core.windows.net/webfiles/202409300927507082SHKËLQIM BULLARI.pdf,2026-10-31,,CV
 vip82,Shkëlqim Bullari,placeOfBirth,"Cërrik, Elbasan",https://kuvendiapi.azurewebsites.net/api/anetaret/2f191184-c02c-45ad-ac5d-86d8e64b9165,2026-10-31,,
@@ -891,7 +891,7 @@ vip83,Kastriot Piroli,constituency,Lezhë,https://kqz.gov.al,2026-10-31,,"KQZ De
 vip83,Kastriot Piroli,officialLinks,2,mailto:kastriot.piroli@parlament.al,2026-10-31,,
 vip83,Kastriot Piroli,photo,https://kuvendiwebfiles.blob.core.windows.net/webfiles/KastriotPiroli.png,https://kuvendiwebfiles.blob.core.windows.net/webfiles/KastriotPiroli.png,2026-10-31,No reuse licence published by the Parliament of Albania. Referenced by URL; file not copied.,
 vip84,Dashnor Sula,fullName,Dashnor Sula,https://kuvendiapi.azurewebsites.net/api/anetaret/03328ada-a847-4a65-83e0-0118ebeb1649,2026-10-31,,
-vip84,Dashnor Sula,currentRole,,,,,no official source on this run
+vip84,Dashnor Sula,currentRole,Ish-deputet i Kuvendit të Shqipërisë,https://kuvendiapi.azurewebsites.net/api/anetaret/03328ada-a847-4a65-83e0-0118ebeb1649,2026-10-31,,Kuvendi register row is not marked sitting and the person is not on the KQZ 2025 list of 140; the row has no mandate dates
 vip84,Dashnor Sula,party,Partia Demokratike,https://kuvendiapi.azurewebsites.net/api/anetaret/03328ada-a847-4a65-83e0-0118ebeb1649,2026-10-31,,
 vip84,Dashnor Sula,dateOfBirth,1969-03-12,https://kuvendiwebfiles.blob.core.windows.net/webfiles/202409170845351622DASHNOR SULA.pdf,2026-10-31,,CV
 vip84,Dashnor Sula,placeOfBirth,Peqini,https://www.wikidata.org/wiki/Q5226652,2026-10-31,,
@@ -901,19 +901,19 @@ vip84,Dashnor Sula,parliamentaryGroup,Grupi Parlamentar i Partisë Demokratike,h
 vip84,Dashnor Sula,constituency,Elbasan,https://kuvendiapi.azurewebsites.net/api/anetaret/03328ada-a847-4a65-83e0-0118ebeb1649,2026-10-31,,qarku=1
 vip84,Dashnor Sula,officialLinks,3,mailto:dashnor.sula@parlament.al,2026-10-31,,
 vip84,Dashnor Sula,photo,/politicians/official/vip84.png,https://commons.wikimedia.org/wiki/File:Dashnor-sula.png,2026-10-31,CC BY-SA 4.0,
-vip85,Luçiano Boçi,fullName,Luçiano Boçi,https://www.wikidata.org/wiki/Q6706730,2026-10-31,,
-vip85,Luçiano Boçi,currentRole,,,,,no official source on this run
-vip85,Luçiano Boçi,party,Partia Demokratike e Shqipërisë,https://www.wikidata.org/wiki/Q6706730,2026-10-31,,
+vip85,Luçiano Boçi,fullName,Luçiano Boçi,https://kuvendiapi.azurewebsites.net/api/anetaret/25f82491-5ed2-4a78-bc05-5396a65097b9,2026-10-31,,current Kuvendi row whose district matches the certified constituency Shkodër
+vip85,Luçiano Boçi,currentRole,Deputet i Kuvendit të Shqipërisë,https://kuvendiapi.azurewebsites.net/api/anetaret/25f82491-5ed2-4a78-bc05-5396a65097b9,2026-10-31,,current Kuvendi row whose district matches the certified constituency Shkodër
+vip85,Luçiano Boçi,party,PD-AMSH,https://kqz.gov.al,2026-10-31,,"KQZ Decision No. 34, 28 August 2025; electoral subject. The Kuvendi register spells this subject PD-ASHM."
 vip85,Luçiano Boçi,dateOfBirth,1967-03-26,https://www.wikidata.org/wiki/Q6706730,2026-10-31,,
 vip85,Luçiano Boçi,placeOfBirth,Elbasani,https://www.wikidata.org/wiki/Q6706730,2026-10-31,,
 vip85,Luçiano Boçi,education,"Universiteti ""Aleksandër Xhuvani""",https://www.wikidata.org/wiki/Q6706730,2026-10-31,,
-vip85,Luçiano Boçi,mandates,,,,,no official source on this run
-vip85,Luçiano Boçi,parliamentaryGroup,,,,,no official source on this run
+vip85,Luçiano Boçi,mandates,1,https://kuvendiapi.azurewebsites.net/api/strukturat/7d899ce1-2a7e-4b04-bdca-ffe2f447c148/anetaret,2026-10-31,,Current Kuvendi committee membership
+vip85,Luçiano Boçi,parliamentaryGroup,Grupi Parlamentar i Partisë Demokratike,https://kuvendiapi.azurewebsites.net/api/anetaret/25f82491-5ed2-4a78-bc05-5396a65097b9,2026-10-31,,Kuvendi register
 vip85,Luçiano Boçi,constituency,Shkodër,https://kqz.gov.al,2026-10-31,,"KQZ Decision No. 34, 28 August 2025, as compiled in CERTIFIED_2025_ROSTER"
 vip85,Luçiano Boçi,officialLinks,1,https://www.wikidata.org/wiki/Q6706730,2026-10-31,,
 vip85,Luçiano Boçi,photo,/politicians/official/vip85.jpg,https://commons.wikimedia.org/wiki/File:Luciano_Boci.jpg,2026-10-31,CC BY-SA 4.0,
 vip86,Zheni Gjergji,fullName,Zheni Gjergji,https://kuvendiapi.azurewebsites.net/api/anetaret/e82e7483-3e43-4e97-83e7-d170c47abdb5,2026-10-31,,
-vip86,Zheni Gjergji,currentRole,,,,,no official source on this run
+vip86,Zheni Gjergji,currentRole,Ish-deputet i Kuvendit të Shqipërisë,https://kuvendiapi.azurewebsites.net/api/anetaret/e82e7483-3e43-4e97-83e7-d170c47abdb5,2026-10-31,,Kuvendi register row is not marked sitting and the person is not on the KQZ 2025 list of 140; the row has no mandate dates
 vip86,Zheni Gjergji,party,Partia Demokratike,https://kuvendiapi.azurewebsites.net/api/anetaret/e82e7483-3e43-4e97-83e7-d170c47abdb5,2026-10-31,,
 vip86,Zheni Gjergji,dateOfBirth,,,,,no official source on this run
 vip86,Zheni Gjergji,placeOfBirth,Elbasan,https://kuvendiapi.azurewebsites.net/api/anetaret/e82e7483-3e43-4e97-83e7-d170c47abdb5,2026-10-31,,
@@ -935,7 +935,7 @@ vip87,Niko Peleshi,constituency,Korçë,https://kqz.gov.al,2026-10-31,,"KQZ Deci
 vip87,Niko Peleshi,officialLinks,3,mailto:speaker@parlament.al,2026-10-31,,
 vip87,Niko Peleshi,photo,/politicians/official/vip87.jpg,https://commons.wikimedia.org/wiki/File:Niko_Peleshi_2013_(cropped).jpg,2026-10-31,CC BY-SA 2.0,
 vip88,Lefter Gështenja,fullName,Lefter Gështenja,https://kuvendiapi.azurewebsites.net/api/anetaret/d4d3dcb3-868a-479e-afec-62e2b3619bb0,2026-10-31,,
-vip88,Lefter Gështenja,currentRole,,,,,no official source on this run
+vip88,Lefter Gështenja,currentRole,Ish-deputet i Kuvendit të Shqipërisë,https://kuvendiapi.azurewebsites.net/api/anetaret/d4d3dcb3-868a-479e-afec-62e2b3619bb0,2026-10-31,,Kuvendi register row is not marked sitting and the person is not on the KQZ 2025 list of 140; the row has no mandate dates
 vip88,Lefter Gështenja,party,Partia Demokratike,https://kuvendiapi.azurewebsites.net/api/anetaret/d4d3dcb3-868a-479e-afec-62e2b3619bb0,2026-10-31,,
 vip88,Lefter Gështenja,dateOfBirth,1972-04-07,https://kuvendiwebfiles.blob.core.windows.net/webfiles/202409240835265356LEFTER GËSHTENJA.pdf,2026-10-31,,CV
 vip88,Lefter Gështenja,placeOfBirth,Librazhd,https://kuvendiapi.azurewebsites.net/api/anetaret/d4d3dcb3-868a-479e-afec-62e2b3619bb0,2026-10-31,,
@@ -946,7 +946,7 @@ vip88,Lefter Gështenja,constituency,Elbasan,https://kuvendiapi.azurewebsites.ne
 vip88,Lefter Gështenja,officialLinks,2,mailto:lefter.geshtenja@parlament.al,2026-10-31,,
 vip88,Lefter Gështenja,photo,https://kuvendiwebfiles.blob.core.windows.net/webfiles/Lefter_Geshtenja.png,https://kuvendiwebfiles.blob.core.windows.net/webfiles/Lefter_Geshtenja.png,2026-10-31,No reuse licence published by the Parliament of Albania. Referenced by URL; file not copied.,
 vip89,Qani Xhafa,fullName,Qani Xhafa,https://kuvendiapi.azurewebsites.net/api/anetaret/9b9aed40-ad12-47e3-b6c9-522635bc4321,2026-10-31,,
-vip89,Qani Xhafa,currentRole,,,,,no official source on this run
+vip89,Qani Xhafa,currentRole,Ish-deputet i Kuvendit të Shqipërisë,https://kuvendiapi.azurewebsites.net/api/anetaret/9b9aed40-ad12-47e3-b6c9-522635bc4321,2026-10-31,,Kuvendi register row is not marked sitting and the person is not on the KQZ 2025 list of 140; the row has no mandate dates
 vip89,Qani Xhafa,party,,,,,no official source on this run
 vip89,Qani Xhafa,dateOfBirth,1969-10-11,https://kuvendiwebfiles.blob.core.windows.net/webfiles/202409300730529072QANI XHAFA.pdf,2026-10-31,,CV
 vip89,Qani Xhafa,placeOfBirth,Elbasan,https://kuvendiwebfiles.blob.core.windows.net/webfiles/202409300730529072QANI XHAFA.pdf,2026-10-31,,CV
@@ -1005,7 +1005,7 @@ vip106,Zija Ismaili,currentRole,Deputet i Kuvendit të Shqipërisë,https://kuve
 vip106,Zija Ismaili,party,PD-ASHM,https://kuvendiapi.azurewebsites.net/api/anetaret/077c2b3b-11b6-4cb4-99a3-060a00fc752a,2026-10-31,,
 vip106,Zija Ismaili,dateOfBirth,1970-08-20,https://kuvendiapi.azurewebsites.net/api/anetaret/077c2b3b-11b6-4cb4-99a3-060a00fc752a,2026-10-31,,
 vip106,Zija Ismaili,placeOfBirth,,,,,no official source on this run
-vip106,Zija Ismaili,education,,,,,no official source on this run
+vip106,Zija Ismaili,education,"studimet në degën “ Mjekësi e p ërgjithshme ”, në Fakultetin e Mjekësisë në Universit etin e Tiranës",https://kuvendiwebfiles.blob.core.windows.net/webfiles/202510210732576591jeteshkrim Zija Ismaili_.docx,2026-10-31,,Parliament CV
 vip106,Zija Ismaili,mandates,1,https://kuvendiapi.azurewebsites.net/api/anetaret/077c2b3b-11b6-4cb4-99a3-060a00fc752a,2026-10-31,,
 vip106,Zija Ismaili,parliamentaryGroup,"Grupi parlamentar ""Aleanca për Ndryshim""",https://kuvendiapi.azurewebsites.net/api/anetaret/077c2b3b-11b6-4cb4-99a3-060a00fc752a,2026-10-31,,
 vip106,Zija Ismaili,constituency,Berat,https://kqz.gov.al,2026-10-31,,"KQZ Decision No. 34, 28 August 2025, as compiled in CERTIFIED_2025_ROSTER"
@@ -1016,14 +1016,14 @@ vip93,Pirro Vengu,currentRole,Deputet i Kuvendit të Shqipërisë,https://kuvend
 vip93,Pirro Vengu,party,PS,https://kuvendiapi.azurewebsites.net/api/anetaret/b7015705-fdab-4242-878e-79da87ec1df3,2026-10-31,,
 vip93,Pirro Vengu,dateOfBirth,1986-04-24,https://www.wikidata.org/wiki/Q130427369,2026-10-31,,
 vip93,Pirro Vengu,placeOfBirth,Elbasani,https://www.wikidata.org/wiki/Q130427369,2026-10-31,,
-vip93,Pirro Vengu,education,,,,,no official source on this run
+vip93,Pirro Vengu,education,"diplomuar në Master në Marrëdhënie Ndërkombëtare, Institut National des Langues et Civilizations Orientales, (Paris, Francë)",https://kuvendiwebfiles.blob.core.windows.net/webfiles/202603090751254042CV PIRRO VENGU MARS 2026.pdf,2026-10-31,,Parliament CV
 vip93,Pirro Vengu,mandates,1,https://kuvendiapi.azurewebsites.net/api/anetaret/b7015705-fdab-4242-878e-79da87ec1df3,2026-10-31,,
 vip93,Pirro Vengu,parliamentaryGroup,Grupi Parlamentar i Partisë Socialiste,https://kuvendiapi.azurewebsites.net/api/anetaret/b7015705-fdab-4242-878e-79da87ec1df3,2026-10-31,,
 vip93,Pirro Vengu,constituency,Vlorë,https://kqz.gov.al,2026-10-31,,"KQZ Decision No. 34, 28 August 2025, as compiled in CERTIFIED_2025_ROSTER"
 vip93,Pirro Vengu,officialLinks,3,mailto:pirro.vengu@parlament.al,2026-10-31,,
 vip93,Pirro Vengu,photo,/politicians/official/vip93.jpg,https://commons.wikimedia.org/wiki/File:Z.Pirro-Vengu--scaled.jpg,2026-10-31,CC BY-SA 4.0,
 vip94,Teuta Ramaj,fullName,Teuta Ramaj,https://kuvendiapi.azurewebsites.net/api/anetaret/5c377258-f990-490a-8f66-10aaa904a4ce,2026-10-31,,
-vip94,Teuta Ramaj,currentRole,,,,,no official source on this run
+vip94,Teuta Ramaj,currentRole,Ish-deputet i Kuvendit të Shqipërisë,https://kuvendiapi.azurewebsites.net/api/anetaret/5c377258-f990-490a-8f66-10aaa904a4ce,2026-10-31,,Kuvendi register row is not marked sitting and the person is not on the KQZ 2025 list of 140; the row has no mandate dates
 vip94,Teuta Ramaj,party,Partia Socialiste,https://kuvendiapi.azurewebsites.net/api/anetaret/5c377258-f990-490a-8f66-10aaa904a4ce,2026-10-31,,
 vip94,Teuta Ramaj,dateOfBirth,1982-12-25,https://kuvendiwebfiles.blob.core.windows.net/webfiles/202410010847528247TEUTA RAMAJ.pdf,2026-10-31,,CV
 vip94,Teuta Ramaj,placeOfBirth,Vlorë,https://kuvendiapi.azurewebsites.net/api/anetaret/5c377258-f990-490a-8f66-10aaa904a4ce,2026-10-31,,
@@ -1078,7 +1078,7 @@ vip98,Bujar Leskaj,constituency,Vlorë,https://kqz.gov.al,2026-10-31,,"KQZ Decis
 vip98,Bujar Leskaj,officialLinks,2,mailto:Bujar.Leskaj@parlament.al,2026-10-31,,
 vip98,Bujar Leskaj,photo,https://kuvendiwebfiles.blob.core.windows.net/webfiles/Bujar Leskaj.png,https://kuvendiwebfiles.blob.core.windows.net/webfiles/Bujar Leskaj.png,2026-10-31,No reuse licence published by the Parliament of Albania. Referenced by URL; file not copied.,
 vip99,Fation Veizaj,fullName,Fation Veizaj,https://kuvendiapi.azurewebsites.net/api/anetaret/d05c12bc-ca95-41b9-bca8-c70ff494b48f,2026-10-31,,
-vip99,Fation Veizaj,currentRole,,,,,no official source on this run
+vip99,Fation Veizaj,currentRole,Ish-deputet i Kuvendit të Shqipërisë,https://kuvendiapi.azurewebsites.net/api/anetaret/d05c12bc-ca95-41b9-bca8-c70ff494b48f,2026-10-31,,Kuvendi register row is not marked sitting and the person is not on the KQZ 2025 list of 140; the row has no mandate dates
 vip99,Fation Veizaj,party,Partia Demokratike,https://kuvendiapi.azurewebsites.net/api/anetaret/d05c12bc-ca95-41b9-bca8-c70ff494b48f,2026-10-31,,
 vip99,Fation Veizaj,dateOfBirth,1966-09-18,https://kuvendiwebfiles.blob.core.windows.net/webfiles/FationVeizaj.pdf,2026-10-31,,CV
 vip99,Fation Veizaj,placeOfBirth,Vlorë,https://kuvendiapi.azurewebsites.net/api/anetaret/d05c12bc-ca95-41b9-bca8-c70ff494b48f,2026-10-31,,
@@ -1089,7 +1089,7 @@ vip99,Fation Veizaj,constituency,Vlorë,https://kuvendiapi.azurewebsites.net/api
 vip99,Fation Veizaj,officialLinks,2,mailto:fation.veizaj@parlament.al,2026-10-31,,
 vip99,Fation Veizaj,photo,https://kuvendiwebfiles.blob.core.windows.net/webfiles/FationVeizaj.png,https://kuvendiwebfiles.blob.core.windows.net/webfiles/FationVeizaj.png,2026-10-31,No reuse licence published by the Parliament of Albania. Referenced by URL; file not copied.,
 vip100,Arbi Agalliu,fullName,Arbi Agalliu,https://kuvendiapi.azurewebsites.net/api/anetaret/08b934df-c995-497f-8a14-d51dc5425f46,2026-10-31,,
-vip100,Arbi Agalliu,currentRole,,,,,no official source on this run
+vip100,Arbi Agalliu,currentRole,Ish-deputet i Kuvendit të Shqipërisë,https://kuvendiapi.azurewebsites.net/api/anetaret/08b934df-c995-497f-8a14-d51dc5425f46,2026-10-31,,Kuvendi register row is not marked sitting and the person is not on the KQZ 2025 list of 140; the row has no mandate dates
 vip100,Arbi Agalliu,party,Partia Demokratike,https://kuvendiapi.azurewebsites.net/api/anetaret/08b934df-c995-497f-8a14-d51dc5425f46,2026-10-31,,
 vip100,Arbi Agalliu,dateOfBirth,1984-08-01,https://kuvendiwebfiles.blob.core.windows.net/webfiles/202409061006200834ARBI AGALLIU.pdf,2026-10-31,,CV
 vip100,Arbi Agalliu,placeOfBirth,Vlorë,https://kuvendiapi.azurewebsites.net/api/anetaret/08b934df-c995-497f-8a14-d51dc5425f46,2026-10-31,,
@@ -1100,7 +1100,7 @@ vip100,Arbi Agalliu,constituency,Vlorë,https://kuvendiapi.azurewebsites.net/api
 vip100,Arbi Agalliu,officialLinks,2,mailto:Arbi.Agalliu@parlament.al,2026-10-31,,
 vip100,Arbi Agalliu,photo,https://kuvendiwebfiles.blob.core.windows.net/webfiles/arbi.png,https://kuvendiwebfiles.blob.core.windows.net/webfiles/arbi.png,2026-10-31,No reuse licence published by the Parliament of Albania. Referenced by URL; file not copied.,
 vip101,Helidon Bushati,fullName,Helidon Bushati,https://kuvendiapi.azurewebsites.net/api/anetaret/5cefd79c-bc82-4fd8-a618-2f176078529e,2026-10-31,,
-vip101,Helidon Bushati,currentRole,,,,,no official source on this run
+vip101,Helidon Bushati,currentRole,Ish-deputet i Kuvendit të Shqipërisë,https://kuvendiapi.azurewebsites.net/api/anetaret/5cefd79c-bc82-4fd8-a618-2f176078529e,2026-10-31,,Kuvendi register row is not marked sitting and the person is not on the KQZ 2025 list of 140; the row has no mandate dates
 vip101,Helidon Bushati,party,Partia Demokratike,https://kuvendiapi.azurewebsites.net/api/anetaret/5cefd79c-bc82-4fd8-a618-2f176078529e,2026-10-31,,
 vip101,Helidon Bushati,dateOfBirth,1973-04-08,https://kuvendiwebfiles.blob.core.windows.net/webfiles/202409230721519871HELIDON BUSHATI.pdf,2026-10-31,,CV
 vip101,Helidon Bushati,placeOfBirth,Shkodër,https://kuvendiapi.azurewebsites.net/api/anetaret/5cefd79c-bc82-4fd8-a618-2f176078529e,2026-10-31,,
@@ -1126,14 +1126,14 @@ vip103,Ramadan Likaj,currentRole,Deputet i Kuvendit të Shqipërisë,https://kuv
 vip103,Ramadan Likaj,party,PD-ASHM,https://kuvendiapi.azurewebsites.net/api/anetaret/d17bfae5-a0d7-4b27-ba80-62ab4475c262,2026-10-31,,
 vip103,Ramadan Likaj,dateOfBirth,,,,,no official source on this run
 vip103,Ramadan Likaj,placeOfBirth,Zagore,https://kuvendiapi.azurewebsites.net/api/anetaret/d17bfae5-a0d7-4b27-ba80-62ab4475c262,2026-10-31,,
-vip103,Ramadan Likaj,education,,,,,no official source on this run
+vip103,Ramadan Likaj,education,është diplomuar për “D rejtësi”,https://kuvendiwebfiles.blob.core.windows.net/webfiles/202409300744076412RAMADAN LIKAJ.pdf,2026-10-31,,Parliament CV
 vip103,Ramadan Likaj,mandates,2,https://kuvendiwebfiles.blob.core.windows.net/webfiles/202409300744076412RAMADAN LIKAJ.pdf,2026-10-31,,Parliament CV biography
 vip103,Ramadan Likaj,parliamentaryGroup,Grupi Parlamentar i Partisë Demokratike,https://kuvendiapi.azurewebsites.net/api/anetaret/d17bfae5-a0d7-4b27-ba80-62ab4475c262,2026-10-31,,
 vip103,Ramadan Likaj,constituency,Shkodër,https://kqz.gov.al,2026-10-31,,"KQZ Decision No. 34, 28 August 2025, as compiled in CERTIFIED_2025_ROSTER"
 vip103,Ramadan Likaj,officialLinks,2,mailto:ramadan.likaj@parlament.al,2026-10-31,,
 vip103,Ramadan Likaj,photo,https://kuvendiwebfiles.blob.core.windows.net/webfiles/RamadanLikaj.png,https://kuvendiwebfiles.blob.core.windows.net/webfiles/RamadanLikaj.png,2026-10-31,No reuse licence published by the Parliament of Albania. Referenced by URL; file not copied.,
 vip104,Emilja Koliqi,fullName,Emilja Koliqi,https://kuvendiapi.azurewebsites.net/api/anetaret/93d36849-bbdf-40ea-8e0d-00aca823f64d,2026-10-31,,
-vip104,Emilja Koliqi,currentRole,,,,,no official source on this run
+vip104,Emilja Koliqi,currentRole,Ish-deputet i Kuvendit të Shqipërisë,https://kuvendiapi.azurewebsites.net/api/anetaret/93d36849-bbdf-40ea-8e0d-00aca823f64d,2026-10-31,,Kuvendi register row is not marked sitting and the person is not on the KQZ 2025 list of 140; the row has no mandate dates
 vip104,Emilja Koliqi,party,Partia Demokratike,https://kuvendiapi.azurewebsites.net/api/anetaret/93d36849-bbdf-40ea-8e0d-00aca823f64d,2026-10-31,,
 vip104,Emilja Koliqi,dateOfBirth,1963-09-24,https://kuvendiwebfiles.blob.core.windows.net/webfiles/202409170950218303EMILJA KOLIQI.pdf,2026-10-31,,CV
 vip104,Emilja Koliqi,placeOfBirth,Shkodër,https://kuvendiapi.azurewebsites.net/api/anetaret/93d36849-bbdf-40ea-8e0d-00aca823f64d,2026-10-31,,
@@ -1144,7 +1144,7 @@ vip104,Emilja Koliqi,constituency,Shkodër,https://kuvendiapi.azurewebsites.net/
 vip104,Emilja Koliqi,officialLinks,2,mailto:Emilja.Koliqi@parlament.al,2026-10-31,,
 vip104,Emilja Koliqi,photo,https://kuvendiwebfiles.blob.core.windows.net/webfiles/Emilja Koliqi.png,https://kuvendiwebfiles.blob.core.windows.net/webfiles/Emilja Koliqi.png,2026-10-31,No reuse licence published by the Parliament of Albania. Referenced by URL; file not copied.,
 vip105,Zef Hila,fullName,Zef Hila,https://kuvendiapi.azurewebsites.net/api/anetaret/2aac2c68-44f4-4f93-b55d-1ab0ea0ffaed,2026-10-31,,
-vip105,Zef Hila,currentRole,,,,,no official source on this run
+vip105,Zef Hila,currentRole,Ish-deputet i Kuvendit të Shqipërisë,https://kuvendiapi.azurewebsites.net/api/anetaret/2aac2c68-44f4-4f93-b55d-1ab0ea0ffaed,2026-10-31,,Kuvendi register row is not marked sitting and the person is not on the KQZ 2025 list of 140; the row has no mandate dates
 vip105,Zef Hila,party,Partia Demokratike,https://kuvendiapi.azurewebsites.net/api/anetaret/2aac2c68-44f4-4f93-b55d-1ab0ea0ffaed,2026-10-31,,
 vip105,Zef Hila,dateOfBirth,1961-02-23,https://kuvendiwebfiles.blob.core.windows.net/webfiles/ZefHila.pdf,2026-10-31,,CV
 vip105,Zef Hila,placeOfBirth,Barbullush,https://kuvendiapi.azurewebsites.net/api/anetaret/2aac2c68-44f4-4f93-b55d-1ab0ea0ffaed,2026-10-31,,
@@ -1155,7 +1155,7 @@ vip105,Zef Hila,constituency,Shkodër,https://kuvendiapi.azurewebsites.net/api/a
 vip105,Zef Hila,officialLinks,2,mailto:zef.hila@parlament.al,2026-10-31,,
 vip105,Zef Hila,photo,https://kuvendiwebfiles.blob.core.windows.net/webfiles/ZefHila.png,https://kuvendiwebfiles.blob.core.windows.net/webfiles/ZefHila.png,2026-10-31,No reuse licence published by the Parliament of Albania. Referenced by URL; file not copied.,
 vip107,Benet Beci (Elected),fullName,Benet Beci (Elected),https://kuvendiapi.azurewebsites.net/api/anetaret/7ad269fe-827a-4ed9-b2b5-41e531db2fb9,2026-10-31,,exact
-vip107,Benet Beci (Elected),currentRole,,,,,no official source on this run
+vip107,Benet Beci (Elected),currentRole,Ish-deputet i Kuvendit të Shqipërisë,https://kuvendiapi.azurewebsites.net/api/anetaret/7ad269fe-827a-4ed9-b2b5-41e531db2fb9,2026-10-31,,Kuvendi register row is not marked sitting and the person is not on the KQZ 2025 list of 140; the row has no mandate dates
 vip107,Benet Beci (Elected),party,Partia Socialiste,https://kuvendiapi.azurewebsites.net/api/anetaret/7ad269fe-827a-4ed9-b2b5-41e531db2fb9,2026-10-31,,exact
 vip107,Benet Beci (Elected),dateOfBirth,1965-01-25,https://kuvendiwebfiles.blob.core.windows.net/webfiles/Benet Beci.pdf,2026-10-31,,CV
 vip107,Benet Beci (Elected),placeOfBirth,Tiranë,https://kuvendiwebfiles.blob.core.windows.net/webfiles/Benet Beci.pdf,2026-10-31,,CV
@@ -1166,7 +1166,7 @@ vip107,Benet Beci (Elected),constituency,,,,,no official source on this run
 vip107,Benet Beci (Elected),officialLinks,1,https://kuvendiapi.azurewebsites.net/api/anetaret/7ad269fe-827a-4ed9-b2b5-41e531db2fb9,2026-10-31,,
 vip107,Benet Beci (Elected),photo,https://kuvendiwebfiles.blob.core.windows.net/webfiles/Benet Beci.jpg,https://kuvendiwebfiles.blob.core.windows.net/webfiles/Benet Beci.jpg,2026-10-31,No reuse licence published by the Parliament of Albania. Referenced by URL; file not copied.,
 vip108,Edona Bilali,fullName,Edona Bilali,https://kuvendiapi.azurewebsites.net/api/anetaret/12350da2-4d4f-4d96-8a34-a31e51ce37b4,2026-10-31,,
-vip108,Edona Bilali,currentRole,,,,,no official source on this run
+vip108,Edona Bilali,currentRole,Ish-deputet i Kuvendit të Shqipërisë,https://kuvendiapi.azurewebsites.net/api/anetaret/12350da2-4d4f-4d96-8a34-a31e51ce37b4,2026-10-31,,Kuvendi register row is not marked sitting and the person is not on the KQZ 2025 list of 140; the row has no mandate dates
 vip108,Edona Bilali,party,Partia Socialiste,https://kuvendiapi.azurewebsites.net/api/anetaret/12350da2-4d4f-4d96-8a34-a31e51ce37b4,2026-10-31,,
 vip108,Edona Bilali,dateOfBirth,1989-06-13,https://www.wikidata.org/wiki/Q109179095,2026-10-31,,
 vip108,Edona Bilali,placeOfBirth,Shkodra,https://www.wikidata.org/wiki/Q109179095,2026-10-31,,
@@ -1188,7 +1188,7 @@ vip109,Ilir Beqaj,constituency,,,,,no official source on this run
 vip109,Ilir Beqaj,officialLinks,,,,,no official source on this run
 vip109,Ilir Beqaj,photo,,,,,no official source on this run
 vip110,Meri Markiçi,fullName,Meri Markiçi,https://kuvendiapi.azurewebsites.net/api/anetaret/7672b12f-3be9-4a6f-9f33-5396fa685a8f,2026-10-31,,
-vip110,Meri Markiçi,currentRole,,,,,no official source on this run
+vip110,Meri Markiçi,currentRole,Ish-deputet i Kuvendit të Shqipërisë,https://kuvendiapi.azurewebsites.net/api/anetaret/7672b12f-3be9-4a6f-9f33-5396fa685a8f,2026-10-31,,Kuvendi register row is not marked sitting and the person is not on the KQZ 2025 list of 140; the row has no mandate dates
 vip110,Meri Markiçi,party,Partia Socialdemokrate,https://kuvendiapi.azurewebsites.net/api/anetaret/7672b12f-3be9-4a6f-9f33-5396fa685a8f,2026-10-31,,
 vip110,Meri Markiçi,dateOfBirth,1983-07-22,https://kuvendiapi.azurewebsites.net/api/anetaret/7672b12f-3be9-4a6f-9f33-5396fa685a8f,2026-10-31,,
 vip110,Meri Markiçi,placeOfBirth,Shkodër,https://kuvendiapi.azurewebsites.net/api/anetaret/7672b12f-3be9-4a6f-9f33-5396fa685a8f,2026-10-31,,
@@ -1221,7 +1221,7 @@ vip112,Ilir Pendavinji,constituency,Korçë,https://kqz.gov.al,2026-10-31,,"KQZ 
 vip112,Ilir Pendavinji,officialLinks,1,https://kuvendiapi.azurewebsites.net/api/anetaret/f501ec3a-3d5d-4110-b274-14025126f067,2026-10-31,,
 vip112,Ilir Pendavinji,photo,https://kuvendiwebfiles.blob.core.windows.net/webfiles/pendavinji.png,https://kuvendiwebfiles.blob.core.windows.net/webfiles/pendavinji.png,2026-10-31,No reuse licence published by the Parliament of Albania. Referenced by URL; file not copied.,
 vip114,Adriatik Lapaj,fullName,Adriatik Lapaj,https://www.wikidata.org/wiki/Q132444990,2026-10-31,,
-vip114,Adriatik Lapaj,currentRole,,,,,no official source on this run
+vip114,Adriatik Lapaj,currentRole,Deputet i Kuvendit të Shqipërisë,https://kqz.gov.al,2026-10-31,,"KQZ Decision No. 34, 28 August 2025; certified elected member"
 vip114,Adriatik Lapaj,party,Lëvizja Shqipëria Bëhet,https://www.wikidata.org/wiki/Q132444990,2026-10-31,,
 vip114,Adriatik Lapaj,dateOfBirth,1988-06-09,https://www.wikidata.org/wiki/Q132444990,2026-10-31,,
 vip114,Adriatik Lapaj,placeOfBirth,Saranda,https://www.wikidata.org/wiki/Q132444990,2026-10-31,,
@@ -1232,7 +1232,7 @@ vip114,Adriatik Lapaj,constituency,Tiranë,https://kqz.gov.al,2026-10-31,,"KQZ D
 vip114,Adriatik Lapaj,officialLinks,1,https://www.wikidata.org/wiki/Q132444990,2026-10-31,,
 vip114,Adriatik Lapaj,photo,/politicians/official/vip114.jpg,https://commons.wikimedia.org/wiki/File:Lapaj_in_2025_in_Election_Campaign.jpg,2026-10-31,CC0,
 vip115,Dashamir Shehi,fullName,Dashamir Shehi,https://kuvendiapi.azurewebsites.net/api/anetaret/c4dfeed3-d6d3-4597-9bce-ba31923f7697,2026-10-31,,
-vip115,Dashamir Shehi,currentRole,,,,,no official source on this run
+vip115,Dashamir Shehi,currentRole,Ish-deputet i Kuvendit të Shqipërisë,https://kuvendiapi.azurewebsites.net/api/anetaret/c4dfeed3-d6d3-4597-9bce-ba31923f7697,2026-10-31,,Kuvendi register row is not marked sitting and the person is not on the KQZ 2025 list of 140; the row has no mandate dates
 vip115,Dashamir Shehi,party,Partia Demokratike,https://kuvendiapi.azurewebsites.net/api/anetaret/c4dfeed3-d6d3-4597-9bce-ba31923f7697,2026-10-31,,
 vip115,Dashamir Shehi,dateOfBirth,1957-10-28,https://kuvendiwebfiles.blob.core.windows.net/webfiles/202409170817033436DASHAMIR SHEHI.pdf,2026-10-31,,CV
 vip115,Dashamir Shehi,placeOfBirth,Tirana,https://www.wikidata.org/wiki/Q13038081,2026-10-31,,
@@ -1243,7 +1243,7 @@ vip115,Dashamir Shehi,constituency,,,,,no official source on this run
 vip115,Dashamir Shehi,officialLinks,3,mailto:Dashamir.Shehi@parlament.al,2026-10-31,,
 vip115,Dashamir Shehi,photo,https://kuvendiwebfiles.blob.core.windows.net/webfiles/Dashamir Shehi 01.png,https://kuvendiwebfiles.blob.core.windows.net/webfiles/Dashamir Shehi 01.png,2026-10-31,No reuse licence published by the Parliament of Albania. Referenced by URL; file not copied.,
 vip116,Blerina Gjylameti,fullName,Blerina Gjylameti,https://kuvendiapi.azurewebsites.net/api/anetaret/7a9bc222-45a9-46de-8e38-6b18029784b3,2026-10-31,,
-vip116,Blerina Gjylameti,currentRole,,,,,no official source on this run
+vip116,Blerina Gjylameti,currentRole,Ish-deputet i Kuvendit të Shqipërisë,https://kuvendiapi.azurewebsites.net/api/anetaret/7a9bc222-45a9-46de-8e38-6b18029784b3,2026-10-31,,Kuvendi register row is not marked sitting and the person is not on the KQZ 2025 list of 140; the row has no mandate dates
 vip116,Blerina Gjylameti,party,Partia Socialiste,https://kuvendiapi.azurewebsites.net/api/anetaret/7a9bc222-45a9-46de-8e38-6b18029784b3,2026-10-31,,
 vip116,Blerina Gjylameti,dateOfBirth,1980-01-23,https://www.wikidata.org/wiki/Q16351009,2026-10-31,,
 vip116,Blerina Gjylameti,placeOfBirth,Tirana,https://www.wikidata.org/wiki/Q16351009,2026-10-31,,
@@ -1254,7 +1254,7 @@ vip116,Blerina Gjylameti,constituency,Korçë,https://kuvendiapi.azurewebsites.n
 vip116,Blerina Gjylameti,officialLinks,3,mailto:blerina.gjylameti@parlament.al,2026-10-31,,
 vip116,Blerina Gjylameti,photo,https://kuvendiwebfiles.blob.core.windows.net/webfiles/BlerinaGjylameti.png,https://kuvendiwebfiles.blob.core.windows.net/webfiles/BlerinaGjylameti.png,2026-10-31,No reuse licence published by the Parliament of Albania. Referenced by URL; file not copied.,
 vip117,Enslemvera Zake,fullName,Enslemvera Zake,https://kuvendiapi.azurewebsites.net/api/anetaret/e36ff2fb-1e77-4c6c-a573-1508a8c7be80,2026-10-31,,
-vip117,Enslemvera Zake,currentRole,,,,,no official source on this run
+vip117,Enslemvera Zake,currentRole,Ish-deputet i Kuvendit të Shqipërisë,https://kuvendiapi.azurewebsites.net/api/anetaret/e36ff2fb-1e77-4c6c-a573-1508a8c7be80,2026-10-31,,Kuvendi register row is not marked sitting and the person is not on the KQZ 2025 list of 140; the row has no mandate dates
 vip117,Enslemvera Zake,party,Partia Socialiste,https://kuvendiapi.azurewebsites.net/api/anetaret/e36ff2fb-1e77-4c6c-a573-1508a8c7be80,2026-10-31,,
 vip117,Enslemvera Zake,dateOfBirth,1981-02-12,https://kuvendiwebfiles.blob.core.windows.net/webfiles/202409170959262440ENSLEMVERA ZAKE.pdf,2026-10-31,,CV
 vip117,Enslemvera Zake,placeOfBirth,Korçë,https://kuvendiapi.azurewebsites.net/api/anetaret/e36ff2fb-1e77-4c6c-a573-1508a8c7be80,2026-10-31,,
@@ -1276,7 +1276,7 @@ vip118,Bledjon Nallbati,constituency,Korçë,https://kqz.gov.al,2026-10-31,,"KQZ
 vip118,Bledjon Nallbati,officialLinks,2,mailto:Bledjon.Nallbati@parlament.al,2026-10-31,,
 vip118,Bledjon Nallbati,photo,https://kuvendiwebfiles.blob.core.windows.net/webfiles/202509250835368885LRPH9507.JPG,https://kuvendiwebfiles.blob.core.windows.net/webfiles/202509250835368885LRPH9507.JPG,2026-10-31,No reuse licence published by the Parliament of Albania. Referenced by URL; file not copied.,
 vip119,Edmond Spaho,fullName,Edmond Spaho,https://kuvendiapi.azurewebsites.net/api/anetaret/cfec0f81-8dd1-4e10-87c7-17d7d85d85cf,2026-10-31,,
-vip119,Edmond Spaho,currentRole,,,,,no official source on this run
+vip119,Edmond Spaho,currentRole,Ish-deputet i Kuvendit të Shqipërisë,https://kuvendiapi.azurewebsites.net/api/anetaret/cfec0f81-8dd1-4e10-87c7-17d7d85d85cf,2026-10-31,,Kuvendi register row is not marked sitting and the person is not on the KQZ 2025 list of 140; the row has no mandate dates
 vip119,Edmond Spaho,party,Partia Demokratike,https://kuvendiapi.azurewebsites.net/api/anetaret/cfec0f81-8dd1-4e10-87c7-17d7d85d85cf,2026-10-31,,
 vip119,Edmond Spaho,dateOfBirth,1958-11-14,https://www.wikidata.org/wiki/Q13038485,2026-10-31,,
 vip119,Edmond Spaho,placeOfBirth,Tirana,https://www.wikidata.org/wiki/Q13038485,2026-10-31,,
@@ -1287,7 +1287,7 @@ vip119,Edmond Spaho,constituency,Korçë,https://kuvendiapi.azurewebsites.net/ap
 vip119,Edmond Spaho,officialLinks,3,mailto:edmond.spaho@parlament.al,2026-10-31,,
 vip119,Edmond Spaho,photo,/politicians/official/vip119.jpg,https://commons.wikimedia.org/wiki/File:Edmond_Spaho.jpg,2026-10-31,CC BY-SA 4.0,
 vip120,Sorina Koti,fullName,Sorina Koti,https://kuvendiapi.azurewebsites.net/api/anetaret/7c27cb6e-3252-4051-8a65-ca7f57b1c6ff,2026-10-31,,
-vip120,Sorina Koti,currentRole,,,,,no official source on this run
+vip120,Sorina Koti,currentRole,Ish-deputet i Kuvendit të Shqipërisë,https://kuvendiapi.azurewebsites.net/api/anetaret/7c27cb6e-3252-4051-8a65-ca7f57b1c6ff,2026-10-31,,Kuvendi register row is not marked sitting and the person is not on the KQZ 2025 list of 140; the row has no mandate dates
 vip120,Sorina Koti,party,Partia Demokratike,https://kuvendiapi.azurewebsites.net/api/anetaret/7c27cb6e-3252-4051-8a65-ca7f57b1c6ff,2026-10-31,,
 vip120,Sorina Koti,dateOfBirth,1984-08-03,https://kuvendiwebfiles.blob.core.windows.net/webfiles/202409301034108174SORINA KOTI.pdf,2026-10-31,,CV
 vip120,Sorina Koti,placeOfBirth,Korce,https://kuvendiapi.azurewebsites.net/api/anetaret/7c27cb6e-3252-4051-8a65-ca7f57b1c6ff,2026-10-31,,
@@ -1298,7 +1298,7 @@ vip120,Sorina Koti,constituency,Korçë,https://kuvendiapi.azurewebsites.net/api
 vip120,Sorina Koti,officialLinks,2,mailto:sorina.koti@parlament.al,2026-10-31,,
 vip120,Sorina Koti,photo,https://kuvendiwebfiles.blob.core.windows.net/webfiles/Sorina Koti.jpg,https://kuvendiwebfiles.blob.core.windows.net/webfiles/Sorina Koti.jpg,2026-10-31,No reuse licence published by the Parliament of Albania. Referenced by URL; file not copied.,
 vip121,Andrea Mano,fullName,Andrea Mano,https://kuvendiapi.azurewebsites.net/api/anetaret/8eeaafe5-4ac6-4251-be7e-7872f4debd4a,2026-10-31,,
-vip121,Andrea Mano,currentRole,,,,,no official source on this run
+vip121,Andrea Mano,currentRole,Ish-deputet i Kuvendit të Shqipërisë,https://kuvendiapi.azurewebsites.net/api/anetaret/8eeaafe5-4ac6-4251-be7e-7872f4debd4a,2026-10-31,,Kuvendi register row is not marked sitting and the person is not on the KQZ 2025 list of 140; the row has no mandate dates
 vip121,Andrea Mano,party,PARTIA DEMOKRATIKE,https://kuvendiapi.azurewebsites.net/api/anetaret/8eeaafe5-4ac6-4251-be7e-7872f4debd4a,2026-10-31,,
 vip121,Andrea Mano,dateOfBirth,1971-07-07,https://kuvendiapi.azurewebsites.net/api/anetaret/8eeaafe5-4ac6-4251-be7e-7872f4debd4a,2026-10-31,,
 vip121,Andrea Mano,placeOfBirth,,,,,no official source on this run
@@ -1309,7 +1309,7 @@ vip121,Andrea Mano,constituency,Korçë,https://kuvendiapi.azurewebsites.net/api
 vip121,Andrea Mano,officialLinks,2,mailto:andrea.mano@parlament.al,2026-10-31,,
 vip121,Andrea Mano,photo,https://kuvendiwebfiles.blob.core.windows.net/webfiles/202411131021523561Andrea Mano.jpg,https://kuvendiwebfiles.blob.core.windows.net/webfiles/202411131021523561Andrea Mano.jpg,2026-10-31,No reuse licence published by the Parliament of Albania. Referenced by URL; file not copied.,
 vip122,Ervin Salianji (Korçë),fullName,Ervin Salianji (Korçë),https://kuvendiapi.azurewebsites.net/api/anetaret/e581a002-65ec-4906-99f9-da9a2b642f2b,2026-10-31,,exact
-vip122,Ervin Salianji (Korçë),currentRole,,,,,no official source on this run
+vip122,Ervin Salianji (Korçë),currentRole,Ish-deputet i Kuvendit të Shqipërisë,https://kuvendiapi.azurewebsites.net/api/anetaret/e581a002-65ec-4906-99f9-da9a2b642f2b,2026-10-31,,Kuvendi register row is not marked sitting and the person is not on the KQZ 2025 list of 140; the row has no mandate dates
 vip122,Ervin Salianji (Korçë),party,Partia Demokratike,https://kuvendiapi.azurewebsites.net/api/anetaret/e581a002-65ec-4906-99f9-da9a2b642f2b,2026-10-31,,exact
 vip122,Ervin Salianji (Korçë),dateOfBirth,1988-01-16,https://kuvendiwebfiles.blob.core.windows.net/webfiles/202409171022346986ERVIN SALIANJI.pdf,2026-10-31,,CV
 vip122,Ervin Salianji (Korçë),placeOfBirth,Tiranë,https://kuvendiwebfiles.blob.core.windows.net/webfiles/202409171022346986ERVIN SALIANJI.pdf,2026-10-31,,CV
@@ -1320,7 +1320,7 @@ vip122,Ervin Salianji (Korçë),constituency,,,,,no official source on this run
 vip122,Ervin Salianji (Korçë),officialLinks,1,https://kuvendiapi.azurewebsites.net/api/anetaret/e581a002-65ec-4906-99f9-da9a2b642f2b,2026-10-31,,
 vip122,Ervin Salianji (Korçë),photo,https://kuvendiwebfiles.blob.core.windows.net/webfiles/Ervin-Salianji.jpg,https://kuvendiwebfiles.blob.core.windows.net/webfiles/Ervin-Salianji.jpg,2026-10-31,No reuse licence published by the Parliament of Albania. Referenced by URL; file not copied.,
 vip123,Nasip Naço,fullName,Nasip Naço,https://kuvendiapi.azurewebsites.net/api/anetaret/c7e46e48-3ef4-49b5-9098-05d9c2c386c6,2026-10-31,,
-vip123,Nasip Naço,currentRole,,,,,no official source on this run
+vip123,Nasip Naço,currentRole,Ish-deputet i Kuvendit të Shqipërisë,https://kuvendiapi.azurewebsites.net/api/anetaret/c7e46e48-3ef4-49b5-9098-05d9c2c386c6,2026-10-31,,Kuvendi register row is not marked sitting and the person is not on the KQZ 2025 list of 140; the row has no mandate dates
 vip123,Nasip Naço,party,Partia Socialiste,https://kuvendiapi.azurewebsites.net/api/anetaret/c7e46e48-3ef4-49b5-9098-05d9c2c386c6,2026-10-31,,
 vip123,Nasip Naço,dateOfBirth,1961-04-05,https://www.wikidata.org/wiki/Q6967109,2026-10-31,,
 vip123,Nasip Naço,placeOfBirth,Rrethi i Skraparit,https://www.wikidata.org/wiki/Q6967109,2026-10-31,,
@@ -1331,7 +1331,7 @@ vip123,Nasip Naço,constituency,Berat,https://kuvendiapi.azurewebsites.net/api/a
 vip123,Nasip Naço,officialLinks,3,mailto:Nasip.Naço@parlament.al,2026-10-31,,
 vip123,Nasip Naço,photo,https://kuvendiwebfiles.blob.core.windows.net/webfiles/NasipNaco.png,https://kuvendiwebfiles.blob.core.windows.net/webfiles/NasipNaco.png,2026-10-31,No reuse licence published by the Parliament of Albania. Referenced by URL; file not copied.,
 vip124,Bardhyl Kollçaku,fullName,Bardhyl Kollçaku,https://kuvendiapi.azurewebsites.net/api/anetaret/335f1969-e7c9-4205-b31b-7894cbf90245,2026-10-31,,
-vip124,Bardhyl Kollçaku,currentRole,,,,,no official source on this run
+vip124,Bardhyl Kollçaku,currentRole,Ish-deputet i Kuvendit të Shqipërisë,https://kuvendiapi.azurewebsites.net/api/anetaret/335f1969-e7c9-4205-b31b-7894cbf90245,2026-10-31,,Kuvendi register row is not marked sitting and the person is not on the KQZ 2025 list of 140; the row has no mandate dates
 vip124,Bardhyl Kollçaku,party,Partia Socialiste,https://kuvendiapi.azurewebsites.net/api/anetaret/335f1969-e7c9-4205-b31b-7894cbf90245,2026-10-31,,
 vip124,Bardhyl Kollçaku,dateOfBirth,1967-06-05,https://kuvendiwebfiles.blob.core.windows.net/webfiles/202409061036048258BARDHYL KOLLÇAKU.pdf,2026-10-31,,CV
 vip124,Bardhyl Kollçaku,placeOfBirth,Berat,https://kuvendiapi.azurewebsites.net/api/anetaret/335f1969-e7c9-4205-b31b-7894cbf90245,2026-10-31,,
@@ -1375,7 +1375,7 @@ vip127,Blendi Klosi (Berat),constituency,,,,,no official source on this run
 vip127,Blendi Klosi (Berat),officialLinks,1,https://kuvendiapi.azurewebsites.net/api/anetaret/9a35866f-1087-414e-aaec-3d15271241e1,2026-10-31,,
 vip127,Blendi Klosi (Berat),photo,https://kuvendiwebfiles.blob.core.windows.net/webfiles/Blendi Klosi.png,https://kuvendiwebfiles.blob.core.windows.net/webfiles/Blendi Klosi.png,2026-10-31,No reuse licence published by the Parliament of Albania. Referenced by URL; file not copied.,
 vip128,Kasëm Mahmutaj,fullName,Kasëm Mahmutaj,https://kuvendiapi.azurewebsites.net/api/anetaret/5e12b6fb-0d86-4f66-8bb0-0093a1873222,2026-10-31,,
-vip128,Kasëm Mahmutaj,currentRole,,,,,no official source on this run
+vip128,Kasëm Mahmutaj,currentRole,Ish-deputet i Kuvendit të Shqipërisë,https://kuvendiapi.azurewebsites.net/api/anetaret/5e12b6fb-0d86-4f66-8bb0-0093a1873222,2026-10-31,,Kuvendi register row is not marked sitting and the person is not on the KQZ 2025 list of 140; the row has no mandate dates
 vip128,Kasëm Mahmutaj,party,"Partia Demokratike ""Aleanca për Ndryshim""",https://kuvendiapi.azurewebsites.net/api/anetaret/5e12b6fb-0d86-4f66-8bb0-0093a1873222,2026-10-31,,
 vip128,Kasëm Mahmutaj,dateOfBirth,1962-04-16,https://kuvendiapi.azurewebsites.net/api/anetaret/5e12b6fb-0d86-4f66-8bb0-0093a1873222,2026-10-31,,
 vip128,Kasëm Mahmutaj,placeOfBirth,Berat,https://kuvendiapi.azurewebsites.net/api/anetaret/5e12b6fb-0d86-4f66-8bb0-0093a1873222,2026-10-31,,
@@ -1390,7 +1390,7 @@ vip129,Zija Ismaili (Berat),currentRole,Deputet i Kuvendit të Shqipërisë,http
 vip129,Zija Ismaili (Berat),party,PD-ASHM,https://kuvendiapi.azurewebsites.net/api/anetaret/077c2b3b-11b6-4cb4-99a3-060a00fc752a,2026-10-31,,exact
 vip129,Zija Ismaili (Berat),dateOfBirth,1970-08-20,https://kuvendiapi.azurewebsites.net/api/anetaret/077c2b3b-11b6-4cb4-99a3-060a00fc752a,2026-10-31,,Kuvendi register
 vip129,Zija Ismaili (Berat),placeOfBirth,,,,,no official source on this run
-vip129,Zija Ismaili (Berat),education,,,,,no official source on this run
+vip129,Zija Ismaili (Berat),education,"studimet në degën “ Mjekësi e p ërgjithshme ”, në Fakultetin e Mjekësisë në Universit etin e Tiranës",https://kuvendiwebfiles.blob.core.windows.net/webfiles/202510210732576591jeteshkrim Zija Ismaili_.docx,2026-10-31,,Parliament CV
 vip129,Zija Ismaili (Berat),mandates,1,https://kuvendiapi.azurewebsites.net/api/anetaret/077c2b3b-11b6-4cb4-99a3-060a00fc752a,2026-10-31,,
 vip129,Zija Ismaili (Berat),parliamentaryGroup,"Grupi parlamentar ""Aleanca për Ndryshim""",https://kuvendiapi.azurewebsites.net/api/anetaret/077c2b3b-11b6-4cb4-99a3-060a00fc752a,2026-10-31,,
 vip129,Zija Ismaili (Berat),constituency,,,,,no official source on this run
@@ -1408,7 +1408,7 @@ vip130,Agron Gjekmarkaj (Lezhë),constituency,,,,,no official source on this run
 vip130,Agron Gjekmarkaj (Lezhë),officialLinks,1,https://kuvendiapi.azurewebsites.net/api/anetaret/cf7f3fe9-0994-4de8-9819-dc40f6ae1650,2026-10-31,,
 vip130,Agron Gjekmarkaj (Lezhë),photo,https://kuvendiwebfiles.blob.core.windows.net/webfiles/202510171019165389WhatsApp Image 2025-10-17 at 12.17.06 PM.jpeg,https://kuvendiwebfiles.blob.core.windows.net/webfiles/202510171019165389WhatsApp Image 2025-10-17 at 12.17.06 PM.jpeg,2026-10-31,No reuse licence published by the Parliament of Albania. Referenced by URL; file not copied.,
 vip131,Lindita Metaliaj,fullName,Lindita Metaliaj,https://kuvendiapi.azurewebsites.net/api/anetaret/dea6a918-2082-4d3b-b690-23b49dd7ade4,2026-10-31,,
-vip131,Lindita Metaliaj,currentRole,,,,,no official source on this run
+vip131,Lindita Metaliaj,currentRole,Ish-deputet i Kuvendit të Shqipërisë,https://kuvendiapi.azurewebsites.net/api/anetaret/dea6a918-2082-4d3b-b690-23b49dd7ade4,2026-10-31,,Kuvendi register row is not marked sitting and the person is not on the KQZ 2025 list of 140; the row has no mandate dates
 vip131,Lindita Metaliaj,party,Partia Demokratike,https://kuvendiapi.azurewebsites.net/api/anetaret/dea6a918-2082-4d3b-b690-23b49dd7ade4,2026-10-31,,
 vip131,Lindita Metaliaj,dateOfBirth,1977-09-22,https://kuvendiwebfiles.blob.core.windows.net/webfiles/202409240853253140LINDITA METALIAJ.pdf,2026-10-31,,CV
 vip131,Lindita Metaliaj,placeOfBirth,Lezhë,https://www.wikidata.org/wiki/Q31965611,2026-10-31,,
@@ -1441,7 +1441,7 @@ vip133,Gjek Celaj,constituency,,,,,no official source on this run
 vip133,Gjek Celaj,officialLinks,,,,,no official source on this run
 vip133,Gjek Celaj,photo,,,,,no official source on this run
 vip134,Eduard Ndreca,fullName,Eduard Ndreca,https://kuvendiapi.azurewebsites.net/api/anetaret/9f603a93-e6d7-429d-91a9-02acd643bd28,2026-10-31,,
-vip134,Eduard Ndreca,currentRole,,,,,no official source on this run
+vip134,Eduard Ndreca,currentRole,Ish-deputet i Kuvendit të Shqipërisë,https://kuvendiapi.azurewebsites.net/api/anetaret/9f603a93-e6d7-429d-91a9-02acd643bd28,2026-10-31,,Kuvendi register row is not marked sitting and the person is not on the KQZ 2025 list of 140; the row has no mandate dates
 vip134,Eduard Ndreca,party,Partia Socialiste,https://kuvendiapi.azurewebsites.net/api/anetaret/9f603a93-e6d7-429d-91a9-02acd643bd28,2026-10-31,,
 vip134,Eduard Ndreca,dateOfBirth,1983-02-11,https://kuvendiwebfiles.blob.core.windows.net/webfiles/202409170941585059EDUARD NDREC1.pdf,2026-10-31,,CV
 vip134,Eduard Ndreca,placeOfBirth,Lezhe,https://kuvendiapi.azurewebsites.net/api/anetaret/9f603a93-e6d7-429d-91a9-02acd643bd28,2026-10-31,,
@@ -1474,7 +1474,7 @@ vip136,Gjovalin Kadeli,constituency,,,,,no official source on this run
 vip136,Gjovalin Kadeli,officialLinks,,,,,no official source on this run
 vip136,Gjovalin Kadeli,photo,,,,,no official source on this run
 vip137,Lavdrim Krashi (Dibër),fullName,Lavdrim Krashi (Dibër),https://kuvendiapi.azurewebsites.net/api/anetaret/0ef5f38a-d74d-4039-a484-6a7303202a0a,2026-10-31,,unique spelling or patronymic variant
-vip137,Lavdrim Krashi (Dibër),currentRole,,,,,no official source on this run
+vip137,Lavdrim Krashi (Dibër),currentRole,Ish-deputet i Kuvendit të Shqipërisë,https://kuvendiapi.azurewebsites.net/api/anetaret/0ef5f38a-d74d-4039-a484-6a7303202a0a,2026-10-31,,Kuvendi register row is not marked sitting and the person is not on the KQZ 2025 list of 140; the row has no mandate dates
 vip137,Lavdrim Krashi (Dibër),party,Partia Socialiste e Shqipërisë,https://kuvendiapi.azurewebsites.net/api/anetaret/0ef5f38a-d74d-4039-a484-6a7303202a0a,2026-10-31,,unique spelling or patronymic variant
 vip137,Lavdrim Krashi (Dibër),dateOfBirth,1969-09-05,https://kuvendiwebfiles.blob.core.windows.net/webfiles/202409240832269378LAVDRIM KRRASHI.pdf,2026-10-31,,CV
 vip137,Lavdrim Krashi (Dibër),placeOfBirth,Peshkopi,https://kuvendiwebfiles.blob.core.windows.net/webfiles/202409240832269378LAVDRIM KRRASHI.pdf,2026-10-31,,CV
@@ -1496,7 +1496,7 @@ vip138,Anila Agalliu,constituency,,,,,no official source on this run
 vip138,Anila Agalliu,officialLinks,,,,,no official source on this run
 vip138,Anila Agalliu,photo,,,,,no official source on this run
 vip139,Kreshnik Çollaku,fullName,Kreshnik Çollaku,https://kuvendiapi.azurewebsites.net/api/anetaret/aef9facb-6eda-428e-a99d-b90faaaff744,2026-10-31,,
-vip139,Kreshnik Çollaku,currentRole,,,,,no official source on this run
+vip139,Kreshnik Çollaku,currentRole,Ish-deputet i Kuvendit të Shqipërisë,https://kuvendiapi.azurewebsites.net/api/anetaret/aef9facb-6eda-428e-a99d-b90faaaff744,2026-10-31,,Kuvendi register row is not marked sitting and the person is not on the KQZ 2025 list of 140; the row has no mandate dates
 vip139,Kreshnik Çollaku,party,Partia Demokratike,https://kuvendiapi.azurewebsites.net/api/anetaret/aef9facb-6eda-428e-a99d-b90faaaff744,2026-10-31,,
 vip139,Kreshnik Çollaku,dateOfBirth,1970-09-07,https://kuvendiwebfiles.blob.core.windows.net/webfiles/202409230905418891KRESHNIK ÇOLLAKU.pdf,2026-10-31,,CV
 vip139,Kreshnik Çollaku,placeOfBirth,Tiranë,https://kuvendiapi.azurewebsites.net/api/anetaret/aef9facb-6eda-428e-a99d-b90faaaff744,2026-10-31,,
@@ -1518,7 +1518,7 @@ vip140,Mirela Kumbaro,constituency,Gjirokastër,https://kqz.gov.al,2026-10-31,,"
 vip140,Mirela Kumbaro,officialLinks,3,mailto:mirela.furxhi@parlament.al,2026-10-31,,
 vip140,Mirela Kumbaro,photo,/politicians/official/vip140.jpg,https://commons.wikimedia.org/wiki/File:Mirela_Kumbaro-Furxhi_(cropped).jpg,2026-10-31,Public domain,
 vip141,Laert Duraj,fullName,Laert Duraj,https://kuvendiapi.azurewebsites.net/api/anetaret/d627ef66-e220-48b8-a63b-cf8ecfd0a2aa,2026-10-31,,
-vip141,Laert Duraj,currentRole,,,,,no official source on this run
+vip141,Laert Duraj,currentRole,Ish-deputet i Kuvendit të Shqipërisë,https://kuvendiapi.azurewebsites.net/api/anetaret/d627ef66-e220-48b8-a63b-cf8ecfd0a2aa,2026-10-31,,Kuvendi register row is not marked sitting and the person is not on the KQZ 2025 list of 140; the row has no mandate dates
 vip141,Laert Duraj,party,Partia Socialiste e Shqipërisë,https://kuvendiapi.azurewebsites.net/api/anetaret/d627ef66-e220-48b8-a63b-cf8ecfd0a2aa,2026-10-31,,
 vip141,Laert Duraj,dateOfBirth,1972-11-10,https://kuvendiapi.azurewebsites.net/api/anetaret/d627ef66-e220-48b8-a63b-cf8ecfd0a2aa,2026-10-31,,
 vip141,Laert Duraj,placeOfBirth,Tepelene,https://kuvendiapi.azurewebsites.net/api/anetaret/d627ef66-e220-48b8-a63b-cf8ecfd0a2aa,2026-10-31,,
@@ -1573,7 +1573,7 @@ vip145,Isuf Çelaj,constituency,Kukës,https://kqz.gov.al,2026-10-31,,"KQZ Decis
 vip145,Isuf Çelaj,officialLinks,3,mailto:isuf.celaj@parlament.al,2026-10-31,,
 vip145,Isuf Çelaj,photo,https://kuvendiwebfiles.blob.core.windows.net/webfiles/isufcela.png,https://kuvendiwebfiles.blob.core.windows.net/webfiles/isufcela.png,2026-10-31,No reuse licence published by the Parliament of Albania. Referenced by URL; file not copied.,
 vip146,Gerta Duraku,fullName,Gerta Duraku,https://kuvendiapi.azurewebsites.net/api/anetaret/8174b4a3-b3d5-461a-aaf8-28ca7b29bca2,2026-10-31,,
-vip146,Gerta Duraku,currentRole,,,,,no official source on this run
+vip146,Gerta Duraku,currentRole,Ish-deputet i Kuvendit të Shqipërisë,https://kuvendiapi.azurewebsites.net/api/anetaret/8174b4a3-b3d5-461a-aaf8-28ca7b29bca2,2026-10-31,,Kuvendi register row is not marked sitting and the person is not on the KQZ 2025 list of 140; the row has no mandate dates
 vip146,Gerta Duraku,party,Partia Socialiste,https://kuvendiapi.azurewebsites.net/api/anetaret/8174b4a3-b3d5-461a-aaf8-28ca7b29bca2,2026-10-31,,
 vip146,Gerta Duraku,dateOfBirth,1984-06-29,https://kuvendiwebfiles.blob.core.windows.net/webfiles/202409181009270787GERTA DURAKU.pdf,2026-10-31,,CV
 vip146,Gerta Duraku,placeOfBirth,Kukës,https://kuvendiapi.azurewebsites.net/api/anetaret/8174b4a3-b3d5-461a-aaf8-28ca7b29bca2,2026-10-31,,
@@ -1584,7 +1584,7 @@ vip146,Gerta Duraku,constituency,Kukës,https://kuvendiapi.azurewebsites.net/api
 vip146,Gerta Duraku,officialLinks,2,mailto:gerta.duraku@parlament.al,2026-10-31,,
 vip146,Gerta Duraku,photo,https://kuvendiwebfiles.blob.core.windows.net/webfiles/GertaDuraku.png,https://kuvendiwebfiles.blob.core.windows.net/webfiles/GertaDuraku.png,2026-10-31,No reuse licence published by the Parliament of Albania. Referenced by URL; file not copied.,
 vip147,Rrahman Rraja,fullName,Rrahman Rraja,https://kuvendiapi.azurewebsites.net/api/anetaret/a8a15f44-5189-4010-8b1b-374a103ef8e6,2026-10-31,,
-vip147,Rrahman Rraja,currentRole,,,,,no official source on this run
+vip147,Rrahman Rraja,currentRole,Ish-deputet i Kuvendit të Shqipërisë,https://kuvendiapi.azurewebsites.net/api/anetaret/a8a15f44-5189-4010-8b1b-374a103ef8e6,2026-10-31,,Kuvendi register row is not marked sitting and the person is not on the KQZ 2025 list of 140; the row has no mandate dates
 vip147,Rrahman Rraja,party,Partia Socialiste e Shqipërisë,https://kuvendiapi.azurewebsites.net/api/anetaret/a8a15f44-5189-4010-8b1b-374a103ef8e6,2026-10-31,,
 vip147,Rrahman Rraja,dateOfBirth,1961-04-07,https://kuvendiapi.azurewebsites.net/api/anetaret/a8a15f44-5189-4010-8b1b-374a103ef8e6,2026-10-31,,
 vip147,Rrahman Rraja,placeOfBirth,"Zeze, Kruje",https://kuvendiapi.azurewebsites.net/api/anetaret/a8a15f44-5189-4010-8b1b-374a103ef8e6,2026-10-31,,
@@ -1617,7 +1617,7 @@ vip149,Bujar Rexha,constituency,Shkodër,https://kqz.gov.al,2026-10-31,,"KQZ Dec
 vip149,Bujar Rexha,officialLinks,2,mailto:bujar.rexha@parlament.al,2026-10-31,,
 vip149,Bujar Rexha,photo,https://kuvendiwebfiles.blob.core.windows.net/webfiles/202509191009056524BUJAR REXHA.JPG,https://kuvendiwebfiles.blob.core.windows.net/webfiles/202509191009056524BUJAR REXHA.JPG,2026-10-31,No reuse licence published by the Parliament of Albania. Referenced by URL; file not copied.,
 vip150,Denis Deliu,fullName,Denis Deliu,https://kuvendiapi.azurewebsites.net/api/anetaret/4a7058be-8979-4d69-9265-38b5387652b8,2026-10-31,,
-vip150,Denis Deliu,currentRole,,,,,no official source on this run
+vip150,Denis Deliu,currentRole,Ish-deputet i Kuvendit të Shqipërisë,https://kuvendiapi.azurewebsites.net/api/anetaret/4a7058be-8979-4d69-9265-38b5387652b8,2026-10-31,,Kuvendi register row is not marked sitting and the person is not on the KQZ 2025 list of 140; the row has no mandate dates
 vip150,Denis Deliu,party,Partia Socialiste,https://kuvendiapi.azurewebsites.net/api/anetaret/4a7058be-8979-4d69-9265-38b5387652b8,2026-10-31,,
 vip150,Denis Deliu,dateOfBirth,1986-05-17,https://kuvendiwebfiles.blob.core.windows.net/webfiles/202409170851253794DENIS DELIU.pdf,2026-10-31,,CV
 vip150,Denis Deliu,placeOfBirth,Krujë,https://kuvendiapi.azurewebsites.net/api/anetaret/4a7058be-8979-4d69-9265-38b5387652b8,2026-10-31,,
@@ -1628,7 +1628,7 @@ vip150,Denis Deliu,constituency,Durrës,https://kuvendiapi.azurewebsites.net/api
 vip150,Denis Deliu,officialLinks,2,mailto:Denis.deliu@parlament.al,2026-10-31,,
 vip150,Denis Deliu,photo,https://kuvendiwebfiles.blob.core.windows.net/webfiles/Denis Deliu.png,https://kuvendiwebfiles.blob.core.windows.net/webfiles/Denis Deliu.png,2026-10-31,No reuse licence published by the Parliament of Albania. Referenced by URL; file not copied.,
 vip151,Frrok Gjini,fullName,Frrok Gjini,https://kuvendiapi.azurewebsites.net/api/anetaret/4b9cf0c0-fef6-45ce-bb4e-38f80275d40f,2026-10-31,,
-vip151,Frrok Gjini,currentRole,,,,,no official source on this run
+vip151,Frrok Gjini,currentRole,Ish-deputet i Kuvendit të Shqipërisë,https://kuvendiapi.azurewebsites.net/api/anetaret/4b9cf0c0-fef6-45ce-bb4e-38f80275d40f,2026-10-31,,Kuvendi register row is not marked sitting and the person is not on the KQZ 2025 list of 140; the row has no mandate dates
 vip151,Frrok Gjini,party,,,,,no official source on this run
 vip151,Frrok Gjini,dateOfBirth,1960-09-06,https://kuvendiwebfiles.blob.core.windows.net/webfiles/202409181004241048FRROK GJINI.pdf,2026-10-31,,CV
 vip151,Frrok Gjini,placeOfBirth,Puke,https://kuvendiapi.azurewebsites.net/api/anetaret/4b9cf0c0-fef6-45ce-bb4e-38f80275d40f,2026-10-31,,
@@ -1650,7 +1650,7 @@ vip152,Bora Muzhaqi,constituency,Elbasan,https://kqz.gov.al,2026-10-31,,"KQZ Dec
 vip152,Bora Muzhaqi,officialLinks,3,mailto:bora.muzhaqi@parlament.al,2026-10-31,,
 vip152,Bora Muzhaqi,photo,https://kuvendiwebfiles.blob.core.windows.net/webfiles/202509240707118074LRPH9986.JPG,https://kuvendiwebfiles.blob.core.windows.net/webfiles/202509240707118074LRPH9986.JPG,2026-10-31,No reuse licence published by the Parliament of Albania. Referenced by URL; file not copied.,
 vip153,Flutura Açka,fullName,Flutura Açka,https://kuvendiapi.azurewebsites.net/api/anetaret/a4bdb693-0398-4e24-9094-39942e028aeb,2026-10-31,,
-vip153,Flutura Açka,currentRole,,,,,no official source on this run
+vip153,Flutura Açka,currentRole,Ish-deputet i Kuvendit të Shqipërisë,https://kuvendiapi.azurewebsites.net/api/anetaret/a4bdb693-0398-4e24-9094-39942e028aeb,2026-10-31,,Kuvendi register row is not marked sitting and the person is not on the KQZ 2025 list of 140; the row has no mandate dates
 vip153,Flutura Açka,party,"Partia Demokratike ""Aleanca për Ndryshim""",https://kuvendiapi.azurewebsites.net/api/anetaret/a4bdb693-0398-4e24-9094-39942e028aeb,2026-10-31,,
 vip153,Flutura Açka,dateOfBirth,1966-06-04,https://www.wikidata.org/wiki/Q11698365,2026-10-31,,
 vip153,Flutura Açka,placeOfBirth,Elbasani,https://www.wikidata.org/wiki/Q11698365,2026-10-31,,
@@ -1749,7 +1749,7 @@ vip161,Vangjel Dule,constituency,Vlorë,https://kqz.gov.al,2026-10-31,,"KQZ Deci
 vip161,Vangjel Dule,officialLinks,2,mailto:vangjel.dule@parlament.al,2026-10-31,,
 vip161,Vangjel Dule,photo,https://kuvendiwebfiles.blob.core.windows.net/webfiles/202511191308232319LRPH8974.JPG,https://kuvendiwebfiles.blob.core.windows.net/webfiles/202511191308232319LRPH8974.JPG,2026-10-31,No reuse licence published by the Parliament of Albania. Referenced by URL; file not copied.,
 vip162,Petrit Doda,fullName,Petrit Doda,https://kuvendiapi.azurewebsites.net/api/anetaret/a40ac5f9-9a4c-4f96-9cf0-463bd9e29057,2026-10-31,,
-vip162,Petrit Doda,currentRole,,,,,no official source on this run
+vip162,Petrit Doda,currentRole,Ish-deputet i Kuvendit të Shqipërisë,https://kuvendiapi.azurewebsites.net/api/anetaret/a40ac5f9-9a4c-4f96-9cf0-463bd9e29057,2026-10-31,,Kuvendi register row is not marked sitting and the person is not on the KQZ 2025 list of 140; the row has no mandate dates
 vip162,Petrit Doda,party,Partia Demokratike - Aleanca për Ndryshim,https://kuvendiapi.azurewebsites.net/api/anetaret/a40ac5f9-9a4c-4f96-9cf0-463bd9e29057,2026-10-31,,
 vip162,Petrit Doda,dateOfBirth,1961-03-01,https://kuvendiapi.azurewebsites.net/api/anetaret/a40ac5f9-9a4c-4f96-9cf0-463bd9e29057,2026-10-31,,
 vip162,Petrit Doda,placeOfBirth,Vajmëdhej-Muhurr,https://kuvendiapi.azurewebsites.net/api/anetaret/a40ac5f9-9a4c-4f96-9cf0-463bd9e29057,2026-10-31,,
@@ -1760,7 +1760,7 @@ vip162,Petrit Doda,constituency,,,,,no official source on this run
 vip162,Petrit Doda,officialLinks,2,mailto:petrit.doda@parlament.al,2026-10-31,,
 vip162,Petrit Doda,photo,https://kuvendiwebfiles.blob.core.windows.net/webfiles/petrit_doda.jpg,https://kuvendiwebfiles.blob.core.windows.net/webfiles/petrit_doda.jpg,2026-10-31,No reuse licence published by the Parliament of Albania. Referenced by URL; file not copied.,
 vip163,Luljeta Bozo,fullName,Luljeta Bozo,https://kuvendiapi.azurewebsites.net/api/anetaret/9156d54b-429b-46c2-a484-46d937806e3f,2026-10-31,,
-vip163,Luljeta Bozo,currentRole,,,,,no official source on this run
+vip163,Luljeta Bozo,currentRole,Ish-deputet i Kuvendit të Shqipërisë,https://kuvendiapi.azurewebsites.net/api/anetaret/9156d54b-429b-46c2-a484-46d937806e3f,2026-10-31,,Kuvendi register row is not marked sitting and the person is not on the KQZ 2025 list of 140; the row has no mandate dates
 vip163,Luljeta Bozo,party,Partia Socialiste e Shqipërisë,https://kuvendiapi.azurewebsites.net/api/anetaret/9156d54b-429b-46c2-a484-46d937806e3f,2026-10-31,,
 vip163,Luljeta Bozo,dateOfBirth,1942-10-02,https://www.wikidata.org/wiki/Q85966319,2026-10-31,,
 vip163,Luljeta Bozo,placeOfBirth,Tirana,https://www.wikidata.org/wiki/Q85966319,2026-10-31,,
@@ -1771,7 +1771,7 @@ vip163,Luljeta Bozo,constituency,,,,,no official source on this run
 vip163,Luljeta Bozo,officialLinks,3,mailto:Luljeta.Bozo@parlament.al,2026-10-31,,
 vip163,Luljeta Bozo,photo,https://kuvendiwebfiles.blob.core.windows.net/webfiles/LuljetaBozo.png,https://kuvendiwebfiles.blob.core.windows.net/webfiles/LuljetaBozo.png,2026-10-31,No reuse licence published by the Parliament of Albania. Referenced by URL; file not copied.,
 vip164,Andia Ulliri,fullName,Andia Ulliri,https://kuvendiapi.azurewebsites.net/api/anetaret/00b45e15-45b0-4b08-bc43-47ba718872c0,2026-10-31,,
-vip164,Andia Ulliri,currentRole,,,,,no official source on this run
+vip164,Andia Ulliri,currentRole,Ish-deputet i Kuvendit të Shqipërisë,https://kuvendiapi.azurewebsites.net/api/anetaret/00b45e15-45b0-4b08-bc43-47ba718872c0,2026-10-31,,Kuvendi register row is not marked sitting and the person is not on the KQZ 2025 list of 140; the row has no mandate dates
 vip164,Andia Ulliri,party,Partia Demokratike,https://kuvendiapi.azurewebsites.net/api/anetaret/00b45e15-45b0-4b08-bc43-47ba718872c0,2026-10-31,,
 vip164,Andia Ulliri,dateOfBirth,1999-02-01,https://www.wikidata.org/wiki/Q130337373,2026-10-31,,
 vip164,Andia Ulliri,placeOfBirth,Durrës,https://kuvendiapi.azurewebsites.net/api/anetaret/00b45e15-45b0-4b08-bc43-47ba718872c0,2026-10-31,,
@@ -1793,7 +1793,7 @@ vip165,Gazment Bardhi,constituency,Fier,https://kqz.gov.al,2026-10-31,,"KQZ Deci
 vip165,Gazment Bardhi,officialLinks,3,mailto:Gazment.Bardhi@parlament.al,2026-10-31,,
 vip165,Gazment Bardhi,photo,https://kuvendiwebfiles.blob.core.windows.net/webfiles/Gazment_Bardhi_(portret).jpg,https://kuvendiwebfiles.blob.core.windows.net/webfiles/Gazment_Bardhi_(portret).jpg,2026-10-31,No reuse licence published by the Parliament of Albania. Referenced by URL; file not copied.,
 vip166,Florenc Spaho,fullName,Florenc Spaho,https://kuvendiapi.azurewebsites.net/api/anetaret/8e679100-7669-421e-815c-495c8fa65386,2026-10-31,,
-vip166,Florenc Spaho,currentRole,,,,,no official source on this run
+vip166,Florenc Spaho,currentRole,Ish-deputet i Kuvendit të Shqipërisë,https://kuvendiapi.azurewebsites.net/api/anetaret/8e679100-7669-421e-815c-495c8fa65386,2026-10-31,,Kuvendi register row is not marked sitting and the person is not on the KQZ 2025 list of 140; the row has no mandate dates
 vip166,Florenc Spaho,party,Partia Socialiste,https://kuvendiapi.azurewebsites.net/api/anetaret/8e679100-7669-421e-815c-495c8fa65386,2026-10-31,,
 vip166,Florenc Spaho,dateOfBirth,1984-06-09,https://kuvendiwebfiles.blob.core.windows.net/webfiles/202409171307367640FLORENC SPAHO.pdf,2026-10-31,,CV
 vip166,Florenc Spaho,placeOfBirth,Elbasan,https://kuvendiapi.azurewebsites.net/api/anetaret/8e679100-7669-421e-815c-495c8fa65386,2026-10-31,,
@@ -1826,11 +1826,11 @@ vip168,Adi Qose,constituency,Elbasan,https://kqz.gov.al,2026-10-31,,"KQZ Decisio
 vip168,Adi Qose,officialLinks,2,mailto:adi.qose@parlament.al,2026-10-31,,
 vip168,Adi Qose,photo,https://kuvendiwebfiles.blob.core.windows.net/webfiles/202509191004596363ADI QOSE.JPG,https://kuvendiwebfiles.blob.core.windows.net/webfiles/202509191004596363ADI QOSE.JPG,2026-10-31,No reuse licence published by the Parliament of Albania. Referenced by URL; file not copied.,
 vip169,Toni Gogu,fullName,Toni Gogu,https://kuvendiapi.azurewebsites.net/api/anetaret/3b4392b4-1ebf-4402-92fd-4dab790860b0,2026-10-31,,
-vip169,Toni Gogu,currentRole,,,,,no official source on this run
+vip169,Toni Gogu,currentRole,Ish-deputet i Kuvendit të Shqipërisë,https://kuvendiapi.azurewebsites.net/api/anetaret/3b4392b4-1ebf-4402-92fd-4dab790860b0,2026-10-31,,Kuvendi register row is not marked sitting and the person is not on the KQZ 2025 list of 140; the row has no mandate dates
 vip169,Toni Gogu,party,Partia Socialiste,https://kuvendiapi.azurewebsites.net/api/anetaret/3b4392b4-1ebf-4402-92fd-4dab790860b0,2026-10-31,,
 vip169,Toni Gogu,dateOfBirth,1972-07-24,https://www.wikidata.org/wiki/Q136351034,2026-10-31,,
 vip169,Toni Gogu,placeOfBirth,Fier,https://www.wikidata.org/wiki/Q136351034,2026-10-31,,
-vip169,Toni Gogu,education,,,,,no official source on this run
+vip169,Toni Gogu,education,diplomuar në Fakultetin e Drejtësisës dhe ka kryer studimet master në të drejtën publike në Universiteti n e Tiranës,https://kuvendiwebfiles.blob.core.windows.net/webfiles/202410111028459804TONI GOGU.docx,2026-10-31,,Parliament CV
 vip169,Toni Gogu,mandates,,,,,no official source on this run
 vip169,Toni Gogu,parliamentaryGroup,Grupi Parlamentar i Partisë Socialiste,https://kuvendiapi.azurewebsites.net/api/anetaret/3b4392b4-1ebf-4402-92fd-4dab790860b0,2026-10-31,,
 vip169,Toni Gogu,constituency,,,,,no official source on this run
@@ -1859,7 +1859,7 @@ vip171,Isuf Çelaj,constituency,Kukës,https://kqz.gov.al,2026-10-31,,"KQZ Decis
 vip171,Isuf Çelaj,officialLinks,3,mailto:isuf.celaj@parlament.al,2026-10-31,,
 vip171,Isuf Çelaj,photo,https://kuvendiwebfiles.blob.core.windows.net/webfiles/isufcela.png,https://kuvendiwebfiles.blob.core.windows.net/webfiles/isufcela.png,2026-10-31,No reuse licence published by the Parliament of Albania. Referenced by URL; file not copied.,
 vip172,Qani Xhafa,fullName,Qani Xhafa,https://kuvendiapi.azurewebsites.net/api/anetaret/9b9aed40-ad12-47e3-b6c9-522635bc4321,2026-10-31,,
-vip172,Qani Xhafa,currentRole,,,,,no official source on this run
+vip172,Qani Xhafa,currentRole,Ish-deputet i Kuvendit të Shqipërisë,https://kuvendiapi.azurewebsites.net/api/anetaret/9b9aed40-ad12-47e3-b6c9-522635bc4321,2026-10-31,,Kuvendi register row is not marked sitting and the person is not on the KQZ 2025 list of 140; the row has no mandate dates
 vip172,Qani Xhafa,party,,,,,no official source on this run
 vip172,Qani Xhafa,dateOfBirth,1969-10-11,https://kuvendiwebfiles.blob.core.windows.net/webfiles/202409300730529072QANI XHAFA.pdf,2026-10-31,,CV
 vip172,Qani Xhafa,placeOfBirth,Elbasan,https://kuvendiwebfiles.blob.core.windows.net/webfiles/202409300730529072QANI XHAFA.pdf,2026-10-31,,CV
@@ -1892,7 +1892,7 @@ vip174,Luçiano Boçi,constituency,Shkodër,https://kqz.gov.al,2026-10-31,,"KQZ 
 vip174,Luçiano Boçi,officialLinks,1,https://www.wikidata.org/wiki/Q6706730,2026-10-31,,
 vip174,Luçiano Boçi,photo,/politicians/official/vip174.jpg,https://commons.wikimedia.org/wiki/File:Luciano_Boci.jpg,2026-10-31,CC BY-SA 4.0,
 vip175,Meri Markiçi,fullName,Meri Markiçi,https://kuvendiapi.azurewebsites.net/api/anetaret/7672b12f-3be9-4a6f-9f33-5396fa685a8f,2026-10-31,,
-vip175,Meri Markiçi,currentRole,,,,,no official source on this run
+vip175,Meri Markiçi,currentRole,Ish-deputet i Kuvendit të Shqipërisë,https://kuvendiapi.azurewebsites.net/api/anetaret/7672b12f-3be9-4a6f-9f33-5396fa685a8f,2026-10-31,,Kuvendi register row is not marked sitting and the person is not on the KQZ 2025 list of 140; the row has no mandate dates
 vip175,Meri Markiçi,party,Partia Socialdemokrate,https://kuvendiapi.azurewebsites.net/api/anetaret/7672b12f-3be9-4a6f-9f33-5396fa685a8f,2026-10-31,,
 vip175,Meri Markiçi,dateOfBirth,1983-07-22,https://kuvendiapi.azurewebsites.net/api/anetaret/7672b12f-3be9-4a6f-9f33-5396fa685a8f,2026-10-31,,
 vip175,Meri Markiçi,placeOfBirth,Shkodër,https://kuvendiapi.azurewebsites.net/api/anetaret/7672b12f-3be9-4a6f-9f33-5396fa685a8f,2026-10-31,,
@@ -1925,7 +1925,7 @@ vip177,Admir Kadeli,constituency,Lezhë,https://kuvendiapi.azurewebsites.net/api
 vip177,Admir Kadeli,officialLinks,2,mailto:admir.kadeli@parlament.al,2026-10-31,,
 vip177,Admir Kadeli,photo,https://kuvendiwebfiles.blob.core.windows.net/webfiles/202509191005235240ADMIR KADELI.JPG,https://kuvendiwebfiles.blob.core.windows.net/webfiles/202509191005235240ADMIR KADELI.JPG,2026-10-31,No reuse licence published by the Parliament of Albania. Referenced by URL; file not copied.,
 vip178,Ilir Metaj,fullName,Ilir Metaj,https://kuvendiapi.azurewebsites.net/api/anetaret/e0eaab19-2008-407c-bfdc-5754bc027104,2026-10-31,,
-vip178,Ilir Metaj,currentRole,,,,,no official source on this run
+vip178,Ilir Metaj,currentRole,Ish-deputet i Kuvendit të Shqipërisë,https://kuvendiapi.azurewebsites.net/api/anetaret/e0eaab19-2008-407c-bfdc-5754bc027104,2026-10-31,,Kuvendi register row is not marked sitting and the person is not on the KQZ 2025 list of 140; the row has no mandate dates
 vip178,Ilir Metaj,party,Partia Socialiste,https://kuvendiapi.azurewebsites.net/api/anetaret/e0eaab19-2008-407c-bfdc-5754bc027104,2026-10-31,,
 vip178,Ilir Metaj,dateOfBirth,1973-12-01,https://kuvendiwebfiles.blob.core.windows.net/webfiles/202409230731125159ILIR METAJ.pdf,2026-10-31,,CV
 vip178,Ilir Metaj,placeOfBirth,Çorovoda,https://kuvendiapi.azurewebsites.net/api/anetaret/e0eaab19-2008-407c-bfdc-5754bc027104,2026-10-31,,
@@ -1980,7 +1980,7 @@ vip182,Shkurt Lasku,constituency,,,,,no official source on this run
 vip182,Shkurt Lasku,officialLinks,2,mailto:shkurt.lasku@parlament.al,2026-10-31,,
 vip182,Shkurt Lasku,photo,https://kuvendiwebfiles.blob.core.windows.net/webfiles/202511100949178629DSC_0296.JPG,https://kuvendiwebfiles.blob.core.windows.net/webfiles/202511100949178629DSC_0296.JPG,2026-10-31,No reuse licence published by the Parliament of Albania. Referenced by URL; file not copied.,
 vip183,Klotilda Bushka,fullName,Klotilda Bushka,https://kuvendiapi.azurewebsites.net/api/anetaret/70f01121-d62d-42a5-a847-5e81d80ace39,2026-10-31,,
-vip183,Klotilda Bushka,currentRole,,,,,no official source on this run
+vip183,Klotilda Bushka,currentRole,Ish-deputet i Kuvendit të Shqipërisë,https://kuvendiapi.azurewebsites.net/api/anetaret/70f01121-d62d-42a5-a847-5e81d80ace39,2026-10-31,,Kuvendi register row is not marked sitting and the person is not on the KQZ 2025 list of 140; the row has no mandate dates
 vip183,Klotilda Bushka,party,Partia Socialiste,https://kuvendiapi.azurewebsites.net/api/anetaret/70f01121-d62d-42a5-a847-5e81d80ace39,2026-10-31,,
 vip183,Klotilda Bushka,dateOfBirth,1979-04-11,https://www.wikidata.org/wiki/Q31965785,2026-10-31,,
 vip183,Klotilda Bushka,placeOfBirth,Tirana,https://www.wikidata.org/wiki/Q31965785,2026-10-31,,
@@ -2002,7 +2002,7 @@ vip184,Fatmir Mediu,constituency,Tiranë,https://kqz.gov.al,2026-10-31,,"KQZ Dec
 vip184,Fatmir Mediu,officialLinks,3,mailto:Fatmir.Mediu@parlament.al,2026-10-31,,
 vip184,Fatmir Mediu,photo,/politicians/official/vip184.jpg,https://commons.wikimedia.org/wiki/File:Mediu_-_Rumsfeld_060926-F-5586B-311.jpg,2026-10-31,Public domain,
 vip185,Orjola Pampuri,fullName,Orjola Pampuri,https://kuvendiapi.azurewebsites.net/api/anetaret/1960bd80-4632-41c7-9c12-5f4841e16e7f,2026-10-31,,
-vip185,Orjola Pampuri,currentRole,,,,,no official source on this run
+vip185,Orjola Pampuri,currentRole,Ish-deputet i Kuvendit të Shqipërisë,https://kuvendiapi.azurewebsites.net/api/anetaret/1960bd80-4632-41c7-9c12-5f4841e16e7f,2026-10-31,,Kuvendi register row is not marked sitting and the person is not on the KQZ 2025 list of 140; the row has no mandate dates
 vip185,Orjola Pampuri,party,"Partia Demokratike ""Aleanca për Ndryshim""",https://kuvendiapi.azurewebsites.net/api/anetaret/1960bd80-4632-41c7-9c12-5f4841e16e7f,2026-10-31,,
 vip185,Orjola Pampuri,dateOfBirth,1981-11-13,https://kuvendiapi.azurewebsites.net/api/anetaret/1960bd80-4632-41c7-9c12-5f4841e16e7f,2026-10-31,,
 vip185,Orjola Pampuri,placeOfBirth,Tirane,https://kuvendiapi.azurewebsites.net/api/anetaret/1960bd80-4632-41c7-9c12-5f4841e16e7f,2026-10-31,,
@@ -2024,7 +2024,7 @@ vip186,Enriketa Jaho,constituency,Berat,https://kqz.gov.al,2026-10-31,,"KQZ Deci
 vip186,Enriketa Jaho,officialLinks,2,mailto:enriketa.jaho@parlament.al,2026-10-31,,
 vip186,Enriketa Jaho,photo,https://kuvendiwebfiles.blob.core.windows.net/webfiles/202509191010152311ENRIKETA JAHO.JPG,https://kuvendiwebfiles.blob.core.windows.net/webfiles/202509191010152311ENRIKETA JAHO.JPG,2026-10-31,No reuse licence published by the Parliament of Albania. Referenced by URL; file not copied.,
 vip187,Ilir Ndraxhi,fullName,Ilir Ndraxhi,https://kuvendiapi.azurewebsites.net/api/anetaret/eeb7cb25-d2bc-4d4c-9359-600fbc579d7e,2026-10-31,,
-vip187,Ilir Ndraxhi,currentRole,,,,,no official source on this run
+vip187,Ilir Ndraxhi,currentRole,Ish-deputet i Kuvendit të Shqipërisë,https://kuvendiapi.azurewebsites.net/api/anetaret/eeb7cb25-d2bc-4d4c-9359-600fbc579d7e,2026-10-31,,Kuvendi register row is not marked sitting and the person is not on the KQZ 2025 list of 140; the row has no mandate dates
 vip187,Ilir Ndraxhi,party,Partia Socialiste,https://kuvendiapi.azurewebsites.net/api/anetaret/eeb7cb25-d2bc-4d4c-9359-600fbc579d7e,2026-10-31,,
 vip187,Ilir Ndraxhi,dateOfBirth,1964-01-28,https://www.wikidata.org/wiki/Q31966756,2026-10-31,,
 vip187,Ilir Ndraxhi,placeOfBirth,Shijaku,https://www.wikidata.org/wiki/Q31966756,2026-10-31,,
@@ -2035,7 +2035,7 @@ vip187,Ilir Ndraxhi,constituency,Durrës,https://kuvendiapi.azurewebsites.net/ap
 vip187,Ilir Ndraxhi,officialLinks,3,mailto:ilir.ndraxhi@parlament.al,2026-10-31,,
 vip187,Ilir Ndraxhi,photo,https://kuvendiwebfiles.blob.core.windows.net/webfiles/ilirndraxhi.png,https://kuvendiwebfiles.blob.core.windows.net/webfiles/ilirndraxhi.png,2026-10-31,No reuse licence published by the Parliament of Albania. Referenced by URL; file not copied.,
 vip188,Arben Ahmetaj,fullName,Arben Ahmetaj,https://kuvendiapi.azurewebsites.net/api/anetaret/cf401945-7b52-4aad-9c3d-6201dcbba9c3,2026-10-31,,
-vip188,Arben Ahmetaj,currentRole,,,,,no official source on this run
+vip188,Arben Ahmetaj,currentRole,Ish-deputet i Kuvendit të Shqipërisë,https://kuvendiapi.azurewebsites.net/api/anetaret/cf401945-7b52-4aad-9c3d-6201dcbba9c3,2026-10-31,,Kuvendi register row is not marked sitting and the person is not on the KQZ 2025 list of 140; the row has no mandate dates
 vip188,Arben Ahmetaj,party,Partia Socialiste,https://kuvendiapi.azurewebsites.net/api/anetaret/cf401945-7b52-4aad-9c3d-6201dcbba9c3,2026-10-31,,
 vip188,Arben Ahmetaj,dateOfBirth,1969-06-28,https://www.wikidata.org/wiki/Q13037063,2026-10-31,,
 vip188,Arben Ahmetaj,placeOfBirth,Gjirokastra,https://www.wikidata.org/wiki/Q13037063,2026-10-31,,
@@ -2046,11 +2046,11 @@ vip188,Arben Ahmetaj,constituency,,,,,no official source on this run
 vip188,Arben Ahmetaj,officialLinks,3,mailto:Arben.Ahmetaj@parlament.al,2026-10-31,,
 vip188,Arben Ahmetaj,photo,/politicians/official/vip188.jpg,https://commons.wikimedia.org/wiki/File:%CE%95%CF%80%CE%AF%CF%83%CE%BA%CE%B5%CF%88%CE%B7_%CE%A5%CF%80%CE%BF%CF%85%CF%81%CE%B3%CE%BF%CF%8D_%CE%95%CE%BE%CF%89%CF%84%CE%B5%CF%81%CE%B9%CE%BA%CF%8E%CE%BD_%CE%9D._%CE%9A%CE%BF%CF%84%CE%B6%CE%B9%CE%AC_%CF%83%CF%84%CE%B7%CE%BD_%CE%91%CE%BB%CE%B2%CE%B1%CE%BD%CE%AF%CE%B1_(14-16.07.2015)_(19719282911)_(cropped).jpg,2026-10-31,CC BY-SA 2.0,
 vip189,Paulin Sterkaj,fullName,Paulin Sterkaj,https://kuvendiapi.azurewebsites.net/api/anetaret/ebd8f495-6f7f-45ce-91e6-628da475b8d6,2026-10-31,,
-vip189,Paulin Sterkaj,currentRole,,,,,no official source on this run
+vip189,Paulin Sterkaj,currentRole,Ish-deputet i Kuvendit të Shqipërisë,https://kuvendiapi.azurewebsites.net/api/anetaret/ebd8f495-6f7f-45ce-91e6-628da475b8d6,2026-10-31,,Kuvendi register row is not marked sitting and the person is not on the KQZ 2025 list of 140; the row has no mandate dates
 vip189,Paulin Sterkaj,party,Partia Socialiste e Shqipërisë,https://kuvendiapi.azurewebsites.net/api/anetaret/ebd8f495-6f7f-45ce-91e6-628da475b8d6,2026-10-31,,
 vip189,Paulin Sterkaj,dateOfBirth,1961-07-05,https://www.wikidata.org/wiki/Q7154916,2026-10-31,,
 vip189,Paulin Sterkaj,placeOfBirth,Shkodra,https://www.wikidata.org/wiki/Q7154916,2026-10-31,,
-vip189,Paulin Sterkaj,education,,,,,no official source on this run
+vip189,Paulin Sterkaj,education,studimet në Institutin e Fiskulturës “Vojo Kushi” në Tiranë,https://kuvendiwebfiles.blob.core.windows.net/webfiles/202409260856206615PAULIN STERKAJ.pdf,2026-10-31,,Parliament CV
 vip189,Paulin Sterkaj,mandates,1,https://kuvendiwebfiles.blob.core.windows.net/webfiles/202409260856206615PAULIN STERKAJ.pdf,2026-10-31,,Parliament CV biography
 vip189,Paulin Sterkaj,parliamentaryGroup,Grupi Parlamentar i Partisë Socialiste,https://kuvendiapi.azurewebsites.net/api/anetaret/ebd8f495-6f7f-45ce-91e6-628da475b8d6,2026-10-31,,
 vip189,Paulin Sterkaj,constituency,Shkodër,https://kuvendiapi.azurewebsites.net/api/anetaret/ebd8f495-6f7f-45ce-91e6-628da475b8d6,2026-10-31,,qarku=7
@@ -2061,14 +2061,14 @@ vip190,Ramadan Likaj,currentRole,Deputet i Kuvendit të Shqipërisë,https://kuv
 vip190,Ramadan Likaj,party,PD-ASHM,https://kuvendiapi.azurewebsites.net/api/anetaret/d17bfae5-a0d7-4b27-ba80-62ab4475c262,2026-10-31,,
 vip190,Ramadan Likaj,dateOfBirth,,,,,no official source on this run
 vip190,Ramadan Likaj,placeOfBirth,Zagore,https://kuvendiapi.azurewebsites.net/api/anetaret/d17bfae5-a0d7-4b27-ba80-62ab4475c262,2026-10-31,,
-vip190,Ramadan Likaj,education,,,,,no official source on this run
+vip190,Ramadan Likaj,education,është diplomuar për “D rejtësi”,https://kuvendiwebfiles.blob.core.windows.net/webfiles/202409300744076412RAMADAN LIKAJ.pdf,2026-10-31,,Parliament CV
 vip190,Ramadan Likaj,mandates,2,https://kuvendiwebfiles.blob.core.windows.net/webfiles/202409300744076412RAMADAN LIKAJ.pdf,2026-10-31,,Parliament CV biography
 vip190,Ramadan Likaj,parliamentaryGroup,Grupi Parlamentar i Partisë Demokratike,https://kuvendiapi.azurewebsites.net/api/anetaret/d17bfae5-a0d7-4b27-ba80-62ab4475c262,2026-10-31,,
 vip190,Ramadan Likaj,constituency,Shkodër,https://kqz.gov.al,2026-10-31,,"KQZ Decision No. 34, 28 August 2025, as compiled in CERTIFIED_2025_ROSTER"
 vip190,Ramadan Likaj,officialLinks,2,mailto:ramadan.likaj@parlament.al,2026-10-31,,
 vip190,Ramadan Likaj,photo,https://kuvendiwebfiles.blob.core.windows.net/webfiles/RamadanLikaj.png,https://kuvendiwebfiles.blob.core.windows.net/webfiles/RamadanLikaj.png,2026-10-31,No reuse licence published by the Parliament of Albania. Referenced by URL; file not copied.,
 vip191,Lefter Gështenja,fullName,Lefter Gështenja,https://kuvendiapi.azurewebsites.net/api/anetaret/d4d3dcb3-868a-479e-afec-62e2b3619bb0,2026-10-31,,
-vip191,Lefter Gështenja,currentRole,,,,,no official source on this run
+vip191,Lefter Gështenja,currentRole,Ish-deputet i Kuvendit të Shqipërisë,https://kuvendiapi.azurewebsites.net/api/anetaret/d4d3dcb3-868a-479e-afec-62e2b3619bb0,2026-10-31,,Kuvendi register row is not marked sitting and the person is not on the KQZ 2025 list of 140; the row has no mandate dates
 vip191,Lefter Gështenja,party,Partia Demokratike,https://kuvendiapi.azurewebsites.net/api/anetaret/d4d3dcb3-868a-479e-afec-62e2b3619bb0,2026-10-31,,
 vip191,Lefter Gështenja,dateOfBirth,1972-04-07,https://kuvendiwebfiles.blob.core.windows.net/webfiles/202409240835265356LEFTER GËSHTENJA.pdf,2026-10-31,,CV
 vip191,Lefter Gështenja,placeOfBirth,Librazhd,https://kuvendiapi.azurewebsites.net/api/anetaret/d4d3dcb3-868a-479e-afec-62e2b3619bb0,2026-10-31,,
@@ -2079,7 +2079,7 @@ vip191,Lefter Gështenja,constituency,Elbasan,https://kuvendiapi.azurewebsites.n
 vip191,Lefter Gështenja,officialLinks,2,mailto:lefter.geshtenja@parlament.al,2026-10-31,,
 vip191,Lefter Gështenja,photo,https://kuvendiwebfiles.blob.core.windows.net/webfiles/Lefter_Geshtenja.png,https://kuvendiwebfiles.blob.core.windows.net/webfiles/Lefter_Geshtenja.png,2026-10-31,No reuse licence published by the Parliament of Albania. Referenced by URL; file not copied.,
 vip192,Erjon Meka,fullName,Erjon Meka,https://kuvendiapi.azurewebsites.net/api/anetaret/e2d7e28b-a136-40fb-9259-63d53bbbe9da,2026-10-31,,
-vip192,Erjon Meka,currentRole,,,,,no official source on this run
+vip192,Erjon Meka,currentRole,Ish-deputet i Kuvendit të Shqipërisë,https://kuvendiapi.azurewebsites.net/api/anetaret/e2d7e28b-a136-40fb-9259-63d53bbbe9da,2026-10-31,,Kuvendi register row is not marked sitting and the person is not on the KQZ 2025 list of 140; the row has no mandate dates
 vip192,Erjon Meka,party,PARTIA SOCIALISTE,https://kuvendiapi.azurewebsites.net/api/anetaret/e2d7e28b-a136-40fb-9259-63d53bbbe9da,2026-10-31,,
 vip192,Erjon Meka,dateOfBirth,1977-05-08,https://kuvendiwebfiles.blob.core.windows.net/webfiles/202411111017412708ERJON MEKA.pdf,2026-10-31,,CV
 vip192,Erjon Meka,placeOfBirth,Durrës,https://kuvendiapi.azurewebsites.net/api/anetaret/e2d7e28b-a136-40fb-9259-63d53bbbe9da,2026-10-31,,
@@ -2090,7 +2090,7 @@ vip192,Erjon Meka,constituency,Durrës,https://kuvendiapi.azurewebsites.net/api/
 vip192,Erjon Meka,officialLinks,2,mailto:erjon.meka@parlament.al,2026-10-31,,
 vip192,Erjon Meka,photo,https://kuvendiwebfiles.blob.core.windows.net/webfiles/202411111017553588Erjon Meka.jpg,https://kuvendiwebfiles.blob.core.windows.net/webfiles/202411111017553588Erjon Meka.jpg,2026-10-31,No reuse licence published by the Parliament of Albania. Referenced by URL; file not copied.,
 vip193,Lodovik Hasani,fullName,Lodovik Hasani,https://kuvendiapi.azurewebsites.net/api/anetaret/ddcb68e3-fe2e-4f6f-928f-6421df9cb17a,2026-10-31,,
-vip193,Lodovik Hasani,currentRole,,,,,no official source on this run
+vip193,Lodovik Hasani,currentRole,Ish-deputet i Kuvendit të Shqipërisë,https://kuvendiapi.azurewebsites.net/api/anetaret/ddcb68e3-fe2e-4f6f-928f-6421df9cb17a,2026-10-31,,Kuvendi register row is not marked sitting and the person is not on the KQZ 2025 list of 140; the row has no mandate dates
 vip193,Lodovik Hasani,party,,,,,no official source on this run
 vip193,Lodovik Hasani,dateOfBirth,1967-06-23,https://kuvendiwebfiles.blob.core.windows.net/webfiles/202409240910473064LODOVIK HASAN1.pdf,2026-10-31,,CV
 vip193,Lodovik Hasani,placeOfBirth,Pukë,https://kuvendiapi.azurewebsites.net/api/anetaret/ddcb68e3-fe2e-4f6f-928f-6421df9cb17a,2026-10-31,,
@@ -2156,7 +2156,7 @@ vip198,Jorida Tabaku,constituency,Tiranë,https://kqz.gov.al,2026-10-31,,"KQZ De
 vip198,Jorida Tabaku,officialLinks,3,mailto:jorida.tabaku@parlament.al,2026-10-31,,
 vip198,Jorida Tabaku,photo,/politicians/official/vip198.jpg,https://commons.wikimedia.org/wiki/File:Jorida_Tabaku.jpg,2026-10-31,CC BY-SA 3.0,
 vip199,Lavdrim Krrashi,fullName,Lavdrim Krrashi,https://kuvendiapi.azurewebsites.net/api/anetaret/0ef5f38a-d74d-4039-a484-6a7303202a0a,2026-10-31,,
-vip199,Lavdrim Krrashi,currentRole,,,,,no official source on this run
+vip199,Lavdrim Krrashi,currentRole,Ish-deputet i Kuvendit të Shqipërisë,https://kuvendiapi.azurewebsites.net/api/anetaret/0ef5f38a-d74d-4039-a484-6a7303202a0a,2026-10-31,,Kuvendi register row is not marked sitting and the person is not on the KQZ 2025 list of 140; the row has no mandate dates
 vip199,Lavdrim Krrashi,party,Partia Socialiste e Shqipërisë,https://kuvendiapi.azurewebsites.net/api/anetaret/0ef5f38a-d74d-4039-a484-6a7303202a0a,2026-10-31,,
 vip199,Lavdrim Krrashi,dateOfBirth,1969-09-05,https://kuvendiapi.azurewebsites.net/api/anetaret/0ef5f38a-d74d-4039-a484-6a7303202a0a,2026-10-31,,
 vip199,Lavdrim Krrashi,placeOfBirth,Diber,https://kuvendiapi.azurewebsites.net/api/anetaret/0ef5f38a-d74d-4039-a484-6a7303202a0a,2026-10-31,,
@@ -2167,7 +2167,7 @@ vip199,Lavdrim Krrashi,constituency,Dibër,https://kuvendiapi.azurewebsites.net/
 vip199,Lavdrim Krrashi,officialLinks,2,mailto:Lavdrim.Krrashi@parlament.al,2026-10-31,,
 vip199,Lavdrim Krrashi,photo,https://kuvendiwebfiles.blob.core.windows.net/webfiles/Lavdrim Krashi.png,https://kuvendiwebfiles.blob.core.windows.net/webfiles/Lavdrim Krashi.png,2026-10-31,No reuse licence published by the Parliament of Albania. Referenced by URL; file not copied.,
 vip200,Blerina Gjylameti,fullName,Blerina Gjylameti,https://kuvendiapi.azurewebsites.net/api/anetaret/7a9bc222-45a9-46de-8e38-6b18029784b3,2026-10-31,,
-vip200,Blerina Gjylameti,currentRole,,,,,no official source on this run
+vip200,Blerina Gjylameti,currentRole,Ish-deputet i Kuvendit të Shqipërisë,https://kuvendiapi.azurewebsites.net/api/anetaret/7a9bc222-45a9-46de-8e38-6b18029784b3,2026-10-31,,Kuvendi register row is not marked sitting and the person is not on the KQZ 2025 list of 140; the row has no mandate dates
 vip200,Blerina Gjylameti,party,Partia Socialiste,https://kuvendiapi.azurewebsites.net/api/anetaret/7a9bc222-45a9-46de-8e38-6b18029784b3,2026-10-31,,
 vip200,Blerina Gjylameti,dateOfBirth,1980-01-23,https://www.wikidata.org/wiki/Q16351009,2026-10-31,,
 vip200,Blerina Gjylameti,placeOfBirth,Tirana,https://www.wikidata.org/wiki/Q16351009,2026-10-31,,
@@ -2178,7 +2178,7 @@ vip200,Blerina Gjylameti,constituency,Korçë,https://kuvendiapi.azurewebsites.n
 vip200,Blerina Gjylameti,officialLinks,3,mailto:blerina.gjylameti@parlament.al,2026-10-31,,
 vip200,Blerina Gjylameti,photo,https://kuvendiwebfiles.blob.core.windows.net/webfiles/BlerinaGjylameti.png,https://kuvendiwebfiles.blob.core.windows.net/webfiles/BlerinaGjylameti.png,2026-10-31,No reuse licence published by the Parliament of Albania. Referenced by URL; file not copied.,
 vip201,Shpetim Idrizi,fullName,Shpetim Idrizi,https://kuvendiapi.azurewebsites.net/api/anetaret/16cb7ce2-0082-4406-a3b2-6b1a6b05966a,2026-10-31,,
-vip201,Shpetim Idrizi,currentRole,,,,,no official source on this run
+vip201,Shpetim Idrizi,currentRole,Ish-deputet i Kuvendit të Shqipërisë,https://kuvendiapi.azurewebsites.net/api/anetaret/16cb7ce2-0082-4406-a3b2-6b1a6b05966a,2026-10-31,,Kuvendi register row is not marked sitting and the person is not on the KQZ 2025 list of 140; the row has no mandate dates
 vip201,Shpetim Idrizi,party,Partia Demokratike,https://kuvendiapi.azurewebsites.net/api/anetaret/16cb7ce2-0082-4406-a3b2-6b1a6b05966a,2026-10-31,,
 vip201,Shpetim Idrizi,dateOfBirth,1967-07-07,https://www.wikidata.org/wiki/Q1713423,2026-10-31,,
 vip201,Shpetim Idrizi,placeOfBirth,Tirana,https://www.wikidata.org/wiki/Q1713423,2026-10-31,,
@@ -2233,7 +2233,7 @@ vip205,Asfloral Haxhiu,constituency,Fier,https://kqz.gov.al,2026-10-31,,"KQZ Dec
 vip205,Asfloral Haxhiu,officialLinks,2,mailto:asfloral.haxhiu@parlament.al,2026-10-31,,
 vip205,Asfloral Haxhiu,photo,https://kuvendiwebfiles.blob.core.windows.net/webfiles/202509191007427037ASFLORAL HAXHIU.JPG,https://kuvendiwebfiles.blob.core.windows.net/webfiles/202509191007427037ASFLORAL HAXHIU.JPG,2026-10-31,No reuse licence published by the Parliament of Albania. Referenced by URL; file not copied.,
 vip206,Agron Çela,fullName,Agron Çela,https://kuvendiapi.azurewebsites.net/api/anetaret/bb36dea7-6f00-48f2-a98f-71dbf7b10d2a,2026-10-31,,
-vip206,Agron Çela,currentRole,,,,,no official source on this run
+vip206,Agron Çela,currentRole,Ish-deputet i Kuvendit të Shqipërisë,https://kuvendiapi.azurewebsites.net/api/anetaret/bb36dea7-6f00-48f2-a98f-71dbf7b10d2a,2026-10-31,,Kuvendi register row is not marked sitting and the person is not on the KQZ 2025 list of 140; the row has no mandate dates
 vip206,Agron Çela,party,LSI,https://kuvendiapi.azurewebsites.net/api/anetaret/bb36dea7-6f00-48f2-a98f-71dbf7b10d2a,2026-10-31,,
 vip206,Agron Çela,dateOfBirth,1969-02-05,https://www.wikidata.org/wiki/Q31970047,2026-10-31,,
 vip206,Agron Çela,placeOfBirth,Shkodra,https://www.wikidata.org/wiki/Q31970047,2026-10-31,,
@@ -2244,7 +2244,7 @@ vip206,Agron Çela,constituency,Shkodër,https://kuvendiapi.azurewebsites.net/ap
 vip206,Agron Çela,officialLinks,3,mailto:Agron.Çela@parlament.al,2026-10-31,,
 vip206,Agron Çela,photo,https://kuvendiwebfiles.blob.core.windows.net/webfiles/Agron Cela foto Cv faqe.jpg,https://kuvendiwebfiles.blob.core.windows.net/webfiles/Agron Cela foto Cv faqe.jpg,2026-10-31,No reuse licence published by the Parliament of Albania. Referenced by URL; file not copied.,
 vip207,Gëzim Ademaj,fullName,Gëzim Ademaj,https://kuvendiapi.azurewebsites.net/api/anetaret/80fa112c-913c-4b4b-94af-73539cfc948e,2026-10-31,,
-vip207,Gëzim Ademaj,currentRole,,,,,no official source on this run
+vip207,Gëzim Ademaj,currentRole,Ish-deputet i Kuvendit të Shqipërisë,https://kuvendiapi.azurewebsites.net/api/anetaret/80fa112c-913c-4b4b-94af-73539cfc948e,2026-10-31,,Kuvendi register row is not marked sitting and the person is not on the KQZ 2025 list of 140; the row has no mandate dates
 vip207,Gëzim Ademaj,party,,,,,no official source on this run
 vip207,Gëzim Ademaj,dateOfBirth,1966-11-24,https://kuvendiapi.azurewebsites.net/api/anetaret/80fa112c-913c-4b4b-94af-73539cfc948e,2026-10-31,,
 vip207,Gëzim Ademaj,placeOfBirth,Vlorë,https://kuvendiapi.azurewebsites.net/api/anetaret/80fa112c-913c-4b4b-94af-73539cfc948e,2026-10-31,,
@@ -2255,7 +2255,7 @@ vip207,Gëzim Ademaj,constituency,Vlorë,https://kuvendiapi.azurewebsites.net/ap
 vip207,Gëzim Ademaj,officialLinks,2,mailto:gezim.ademaj@parlament.al,2026-10-31,,
 vip207,Gëzim Ademaj,photo,https://kuvendiwebfiles.blob.core.windows.net/webfiles/202305301132047025gezim ademaj.PNG,https://kuvendiwebfiles.blob.core.windows.net/webfiles/202305301132047025gezim ademaj.PNG,2026-10-31,No reuse licence published by the Parliament of Albania. Referenced by URL; file not copied.,
 vip208,Ismet Beqiraj,fullName,Ismet Beqiraj,https://kuvendiapi.azurewebsites.net/api/anetaret/9d4381bc-13c7-4a95-83fd-7456cc323657,2026-10-31,,
-vip208,Ismet Beqiraj,currentRole,,,,,no official source on this run
+vip208,Ismet Beqiraj,currentRole,Ish-deputet i Kuvendit të Shqipërisë,https://kuvendiapi.azurewebsites.net/api/anetaret/9d4381bc-13c7-4a95-83fd-7456cc323657,2026-10-31,,Kuvendi register row is not marked sitting and the person is not on the KQZ 2025 list of 140; the row has no mandate dates
 vip208,Ismet Beqiraj,party,Partia Socialiste,https://kuvendiapi.azurewebsites.net/api/anetaret/9d4381bc-13c7-4a95-83fd-7456cc323657,2026-10-31,,
 vip208,Ismet Beqiraj,dateOfBirth,1958-05-10,https://www.wikidata.org/wiki/Q31880767,2026-10-31,,
 vip208,Ismet Beqiraj,placeOfBirth,Fier,https://kuvendiapi.azurewebsites.net/api/anetaret/9d4381bc-13c7-4a95-83fd-7456cc323657,2026-10-31,,
@@ -2288,7 +2288,7 @@ vip210,Ana Nako,constituency,Fier,https://kqz.gov.al,2026-10-31,,"KQZ Decision N
 vip210,Ana Nako,officialLinks,2,mailto:ana.nako@parlament.al,2026-10-31,,
 vip210,Ana Nako,photo,,,,,no official source on this run
 vip211,Andrea Mano,fullName,Andrea Mano,https://kuvendiapi.azurewebsites.net/api/anetaret/8eeaafe5-4ac6-4251-be7e-7872f4debd4a,2026-10-31,,
-vip211,Andrea Mano,currentRole,,,,,no official source on this run
+vip211,Andrea Mano,currentRole,Ish-deputet i Kuvendit të Shqipërisë,https://kuvendiapi.azurewebsites.net/api/anetaret/8eeaafe5-4ac6-4251-be7e-7872f4debd4a,2026-10-31,,Kuvendi register row is not marked sitting and the person is not on the KQZ 2025 list of 140; the row has no mandate dates
 vip211,Andrea Mano,party,PARTIA DEMOKRATIKE,https://kuvendiapi.azurewebsites.net/api/anetaret/8eeaafe5-4ac6-4251-be7e-7872f4debd4a,2026-10-31,,
 vip211,Andrea Mano,dateOfBirth,1971-07-07,https://kuvendiapi.azurewebsites.net/api/anetaret/8eeaafe5-4ac6-4251-be7e-7872f4debd4a,2026-10-31,,
 vip211,Andrea Mano,placeOfBirth,,,,,no official source on this run
@@ -2299,7 +2299,7 @@ vip211,Andrea Mano,constituency,Korçë,https://kuvendiapi.azurewebsites.net/api
 vip211,Andrea Mano,officialLinks,2,mailto:andrea.mano@parlament.al,2026-10-31,,
 vip211,Andrea Mano,photo,https://kuvendiwebfiles.blob.core.windows.net/webfiles/202411131021523561Andrea Mano.jpg,https://kuvendiwebfiles.blob.core.windows.net/webfiles/202411131021523561Andrea Mano.jpg,2026-10-31,No reuse licence published by the Parliament of Albania. Referenced by URL; file not copied.,
 vip212,Bardhyl Kollçaku,fullName,Bardhyl Kollçaku,https://kuvendiapi.azurewebsites.net/api/anetaret/335f1969-e7c9-4205-b31b-7894cbf90245,2026-10-31,,
-vip212,Bardhyl Kollçaku,currentRole,,,,,no official source on this run
+vip212,Bardhyl Kollçaku,currentRole,Ish-deputet i Kuvendit të Shqipërisë,https://kuvendiapi.azurewebsites.net/api/anetaret/335f1969-e7c9-4205-b31b-7894cbf90245,2026-10-31,,Kuvendi register row is not marked sitting and the person is not on the KQZ 2025 list of 140; the row has no mandate dates
 vip212,Bardhyl Kollçaku,party,Partia Socialiste,https://kuvendiapi.azurewebsites.net/api/anetaret/335f1969-e7c9-4205-b31b-7894cbf90245,2026-10-31,,
 vip212,Bardhyl Kollçaku,dateOfBirth,1967-06-05,https://kuvendiwebfiles.blob.core.windows.net/webfiles/202409061036048258BARDHYL KOLLÇAKU.pdf,2026-10-31,,CV
 vip212,Bardhyl Kollçaku,placeOfBirth,Berat,https://kuvendiapi.azurewebsites.net/api/anetaret/335f1969-e7c9-4205-b31b-7894cbf90245,2026-10-31,,
@@ -2332,7 +2332,7 @@ vip214,Briseida Çakërri,constituency,Vlorë,https://kuvendiapi.azurewebsites.n
 vip214,Briseida Çakërri,officialLinks,2,mailto:briseida.cakerri@parlament.al,2026-10-31,,
 vip214,Briseida Çakërri,photo,,,,,no official source on this run
 vip215,Brunilda Mersini,fullName,Brunilda Mersini,https://kuvendiapi.azurewebsites.net/api/anetaret/d334b80a-5047-4bc0-8fe0-7926a9c4af33,2026-10-31,,
-vip215,Brunilda Mersini,currentRole,,,,,no official source on this run
+vip215,Brunilda Mersini,currentRole,Deputet i Kuvendit të Shqipërisë,https://kqz.gov.al,2026-10-31,,"KQZ Decision No. 34, 28 August 2025; certified elected member"
 vip215,Brunilda Mersini,party,PS,https://kuvendiapi.azurewebsites.net/api/anetaret/d334b80a-5047-4bc0-8fe0-7926a9c4af33,2026-10-31,,
 vip215,Brunilda Mersini,dateOfBirth,1969-09-19,https://www.wikidata.org/wiki/Q139717990,2026-10-31,,
 vip215,Brunilda Mersini,placeOfBirth,Sofja,https://www.wikidata.org/wiki/Q139717990,2026-10-31,,
@@ -2347,7 +2347,7 @@ vip216,Flamur Noka,currentRole,Deputet i Kuvendit të Shqipërisë,https://kuven
 vip216,Flamur Noka,party,Partia Demokratike,https://kuvendiapi.azurewebsites.net/api/anetaret/c19e8646-1360-410a-82db-79c62e7354ca,2026-10-31,,
 vip216,Flamur Noka,dateOfBirth,1971-03-03,https://www.wikidata.org/wiki/Q5457338,2026-10-31,,
 vip216,Flamur Noka,placeOfBirth,Kukës,https://www.wikidata.org/wiki/Q5457338,2026-10-31,,
-vip216,Flamur Noka,education,,,,,no official source on this run
+vip216,Flamur Noka,education,"arsimin e lartë në Universitetin e Tiranës, dega “ Mjekë si” dhe është specializuar si mjek onkolog",https://kuvendiwebfiles.blob.core.windows.net/webfiles/202409180952379135FLAMUR NOKA.pdf,2026-10-31,,Parliament CV
 vip216,Flamur Noka,mandates,2,https://kuvendiwebfiles.blob.core.windows.net/webfiles/202409180952379135FLAMUR NOKA.pdf,2026-10-31,,Parliament CV biography
 vip216,Flamur Noka,parliamentaryGroup,Grupi Parlamentar i Partisë Demokratike,https://kuvendiapi.azurewebsites.net/api/anetaret/c19e8646-1360-410a-82db-79c62e7354ca,2026-10-31,,
 vip216,Flamur Noka,constituency,Tiranë,https://kqz.gov.al,2026-10-31,,"KQZ Decision No. 34, 28 August 2025, as compiled in CERTIFIED_2025_ROSTER"
@@ -2358,7 +2358,7 @@ vip217,Pirro Vengu,currentRole,Deputet i Kuvendit të Shqipërisë,https://kuven
 vip217,Pirro Vengu,party,PS,https://kuvendiapi.azurewebsites.net/api/anetaret/b7015705-fdab-4242-878e-79da87ec1df3,2026-10-31,,
 vip217,Pirro Vengu,dateOfBirth,1986-04-24,https://www.wikidata.org/wiki/Q130427369,2026-10-31,,
 vip217,Pirro Vengu,placeOfBirth,Elbasani,https://www.wikidata.org/wiki/Q130427369,2026-10-31,,
-vip217,Pirro Vengu,education,,,,,no official source on this run
+vip217,Pirro Vengu,education,"diplomuar në Master në Marrëdhënie Ndërkombëtare, Institut National des Langues et Civilizations Orientales, (Paris, Francë)",https://kuvendiwebfiles.blob.core.windows.net/webfiles/202603090751254042CV PIRRO VENGU MARS 2026.pdf,2026-10-31,,Parliament CV
 vip217,Pirro Vengu,mandates,1,https://kuvendiapi.azurewebsites.net/api/anetaret/b7015705-fdab-4242-878e-79da87ec1df3,2026-10-31,,
 vip217,Pirro Vengu,parliamentaryGroup,Grupi Parlamentar i Partisë Socialiste,https://kuvendiapi.azurewebsites.net/api/anetaret/b7015705-fdab-4242-878e-79da87ec1df3,2026-10-31,,
 vip217,Pirro Vengu,constituency,Vlorë,https://kqz.gov.al,2026-10-31,,"KQZ Decision No. 34, 28 August 2025, as compiled in CERTIFIED_2025_ROSTER"
@@ -2420,7 +2420,7 @@ vip222,Flamur Hoxha,constituency,Kukës,https://kqz.gov.al,2026-10-31,,"KQZ Deci
 vip222,Flamur Hoxha,officialLinks,3,mailto:flamur.hoxha@parlament.al,2026-10-31,,
 vip222,Flamur Hoxha,photo,https://kuvendiwebfiles.blob.core.windows.net/webfiles/FlamurHoxha.png,https://kuvendiwebfiles.blob.core.windows.net/webfiles/FlamurHoxha.png,2026-10-31,No reuse licence published by the Parliament of Albania. Referenced by URL; file not copied.,
 vip223,Shkelqim Bullari,fullName,Shkelqim Bullari,https://kuvendiapi.azurewebsites.net/api/anetaret/2f191184-c02c-45ad-ac5d-86d8e64b9165,2026-10-31,,
-vip223,Shkelqim Bullari,currentRole,,,,,no official source on this run
+vip223,Shkelqim Bullari,currentRole,Ish-deputet i Kuvendit të Shqipërisë,https://kuvendiapi.azurewebsites.net/api/anetaret/2f191184-c02c-45ad-ac5d-86d8e64b9165,2026-10-31,,Kuvendi register row is not marked sitting and the person is not on the KQZ 2025 list of 140; the row has no mandate dates
 vip223,Shkelqim Bullari,party,,,,,no official source on this run
 vip223,Shkelqim Bullari,dateOfBirth,1969-04-26,https://kuvendiwebfiles.blob.core.windows.net/webfiles/202409300927507082SHKËLQIM BULLARI.pdf,2026-10-31,,CV
 vip223,Shkelqim Bullari,placeOfBirth,"Cërrik, Elbasan",https://kuvendiapi.azurewebsites.net/api/anetaret/2f191184-c02c-45ad-ac5d-86d8e64b9165,2026-10-31,,
@@ -2431,7 +2431,7 @@ vip223,Shkelqim Bullari,constituency,Elbasan,https://kuvendiapi.azurewebsites.ne
 vip223,Shkelqim Bullari,officialLinks,2,mailto:Shkelqim.bullari@parlament.al,2026-10-31,,
 vip223,Shkelqim Bullari,photo,https://kuvendiwebfiles.blob.core.windows.net/webfiles/202309281137186825Shkelqim Bullari.jpg,https://kuvendiwebfiles.blob.core.windows.net/webfiles/202309281137186825Shkelqim Bullari.jpg,2026-10-31,No reuse licence published by the Parliament of Albania. Referenced by URL; file not copied.,
 vip224,Lindita Buxheli,fullName,Lindita Buxheli,https://kuvendiapi.azurewebsites.net/api/anetaret/2199bb7c-891b-4deb-9a1b-875af4ffb29e,2026-10-31,,
-vip224,Lindita Buxheli,currentRole,,,,,no official source on this run
+vip224,Lindita Buxheli,currentRole,Ish-deputet i Kuvendit të Shqipërisë,https://kuvendiapi.azurewebsites.net/api/anetaret/2199bb7c-891b-4deb-9a1b-875af4ffb29e,2026-10-31,,Kuvendi register row is not marked sitting and the person is not on the KQZ 2025 list of 140; the row has no mandate dates
 vip224,Lindita Buxheli,party,Partia Socialiste,https://kuvendiapi.azurewebsites.net/api/anetaret/2199bb7c-891b-4deb-9a1b-875af4ffb29e,2026-10-31,,
 vip224,Lindita Buxheli,dateOfBirth,1966-08-03,https://kuvendiwebfiles.blob.core.windows.net/webfiles/202409240845366932LINDITA BUXHELI.pdf,2026-10-31,,CV
 vip224,Lindita Buxheli,placeOfBirth,Lushnjë,https://kuvendiapi.azurewebsites.net/api/anetaret/2199bb7c-891b-4deb-9a1b-875af4ffb29e,2026-10-31,,
@@ -2584,9 +2584,9 @@ vip237,Xhenis Çela,parliamentaryGroup,Grupi Parlamentar i Partisë Socialiste,h
 vip237,Xhenis Çela,constituency,Shkodër,https://kqz.gov.al,2026-10-31,,"KQZ Decision No. 34, 28 August 2025, as compiled in CERTIFIED_2025_ROSTER"
 vip237,Xhenis Çela,officialLinks,2,mailto:xhenis.cela@parlament.al,2026-10-31,,
 vip237,Xhenis Çela,photo,https://kuvendiwebfiles.blob.core.windows.net/webfiles/202510011205519878DSC_0464.JPG,https://kuvendiwebfiles.blob.core.windows.net/webfiles/202510011205519878DSC_0464.JPG,2026-10-31,No reuse licence published by the Parliament of Albania. Referenced by URL; file not copied.,
-vip238,Sabina Jorgo,fullName,,,,,no official source on this run
-vip238,Sabina Jorgo,currentRole,,,,,no official source on this run
-vip238,Sabina Jorgo,party,,,,,no official source on this run
+vip238,Sabina Jorgo,fullName,Sabina Jorgo,https://kqz.gov.al,2026-10-31,,"KQZ Decision No. 34, 28 August 2025"
+vip238,Sabina Jorgo,currentRole,Deputet i Kuvendit të Shqipërisë,https://kqz.gov.al,2026-10-31,,"KQZ Decision No. 34, 28 August 2025; certified elected member"
+vip238,Sabina Jorgo,party,PSD,https://kqz.gov.al,2026-10-31,,"KQZ Decision No. 34, 28 August 2025; electoral subject on the certified list"
 vip238,Sabina Jorgo,dateOfBirth,,,,,no official source on this run
 vip238,Sabina Jorgo,placeOfBirth,,,,,no official source on this run
 vip238,Sabina Jorgo,education,,,,,no official source on this run
@@ -2606,9 +2606,9 @@ vip239,Enno Bozdo,parliamentaryGroup,Grupi Parlamentar i Partisë Demokratike,ht
 vip239,Enno Bozdo,constituency,Berat,https://kqz.gov.al,2026-10-31,,"KQZ Decision No. 34, 28 August 2025, as compiled in CERTIFIED_2025_ROSTER"
 vip239,Enno Bozdo,officialLinks,2,mailto:enno.bozdo@parlament.al,2026-10-31,,
 vip239,Enno Bozdo,photo,https://kuvendiwebfiles.blob.core.windows.net/webfiles/202509250836017510LRPH9530.JPG,https://kuvendiwebfiles.blob.core.windows.net/webfiles/202509250836017510LRPH9530.JPG,2026-10-31,No reuse licence published by the Parliament of Albania. Referenced by URL; file not copied.,
-vip240,Marjeta Neli,fullName,,,,,no official source on this run
-vip240,Marjeta Neli,currentRole,,,,,no official source on this run
-vip240,Marjeta Neli,party,,,,,no official source on this run
+vip240,Marjeta Neli,fullName,Marjeta Neli,https://kqz.gov.al,2026-10-31,,"KQZ Decision No. 34, 28 August 2025"
+vip240,Marjeta Neli,currentRole,Deputet i Kuvendit të Shqipërisë,https://kqz.gov.al,2026-10-31,,"KQZ Decision No. 34, 28 August 2025; certified elected member"
+vip240,Marjeta Neli,party,PS,https://kqz.gov.al,2026-10-31,,"KQZ Decision No. 34, 28 August 2025; electoral subject on the certified list"
 vip240,Marjeta Neli,dateOfBirth,,,,,no official source on this run
 vip240,Marjeta Neli,placeOfBirth,,,,,no official source on this run
 vip240,Marjeta Neli,education,,,,,no official source on this run
@@ -2666,7 +2666,7 @@ vip245,Delina Ibrahimaj,currentRole,Deputet i Kuvendit të Shqipërisë,https://
 vip245,Delina Ibrahimaj,party,PS,https://kuvendiapi.azurewebsites.net/api/anetaret/25eed889-dd3f-4db3-9061-f23d4666e915,2026-10-31,,
 vip245,Delina Ibrahimaj,dateOfBirth,1983-12-23,https://www.wikidata.org/wiki/Q108698181,2026-10-31,,
 vip245,Delina Ibrahimaj,placeOfBirth,Tirana,https://www.wikidata.org/wiki/Q108698181,2026-10-31,,
-vip245,Delina Ibrahimaj,education,,,,,no official source on this run
+vip245,Delina Ibrahimaj,education,"ka kryer detyrën e Drejtorit të Përgjithshëm të Tatimeve, në 2016 -2019 ka kryer detyrën e Drejtorit të Përgjithshëm të Institutit të Statistikave dhe në 2015 -2016 koordinator për Çështjet Financiare dhe Ekono",https://kuvendiwebfiles.blob.core.windows.net/webfiles/202511110847145005Delina Ibrahimaj.pdf,2026-10-31,,Parliament CV
 vip245,Delina Ibrahimaj,mandates,1,https://kuvendiapi.azurewebsites.net/api/anetaret/25eed889-dd3f-4db3-9061-f23d4666e915,2026-10-31,,
 vip245,Delina Ibrahimaj,parliamentaryGroup,Grupi Parlamentar i Partisë Socialiste,https://kuvendiapi.azurewebsites.net/api/anetaret/25eed889-dd3f-4db3-9061-f23d4666e915,2026-10-31,,
 vip245,Delina Ibrahimaj,constituency,Tiranë,https://kqz.gov.al,2026-10-31,,"KQZ Decision No. 34, 28 August 2025, as compiled in CERTIFIED_2025_ROSTER"
@@ -2738,9 +2738,9 @@ vip251,Klevis Balliu,parliamentaryGroup,Grupi Parlamentar i Partisë Demokratike
 vip251,Klevis Balliu,constituency,Tiranë,https://kqz.gov.al,2026-10-31,,"KQZ Decision No. 34, 28 August 2025, as compiled in CERTIFIED_2025_ROSTER"
 vip251,Klevis Balliu,officialLinks,3,mailto:klevis.balliu@parlament.al,2026-10-31,,
 vip251,Klevis Balliu,photo,https://kuvendiwebfiles.blob.core.windows.net/webfiles/202509250834503128BHPH3516.JPG,https://kuvendiwebfiles.blob.core.windows.net/webfiles/202509250834503128BHPH3516.JPG,2026-10-31,No reuse licence published by the Parliament of Albania. Referenced by URL; file not copied.,
-vip252,Albana Pëllumbi,fullName,,,,,no official source on this run
-vip252,Albana Pëllumbi,currentRole,,,,,no official source on this run
-vip252,Albana Pëllumbi,party,,,,,no official source on this run
+vip252,Albana Pëllumbi,fullName,Albana Pëllumbi,https://kqz.gov.al,2026-10-31,,"KQZ Decision No. 34, 28 August 2025"
+vip252,Albana Pëllumbi,currentRole,Deputet i Kuvendit të Shqipërisë,https://kqz.gov.al,2026-10-31,,"KQZ Decision No. 34, 28 August 2025; certified elected member"
+vip252,Albana Pëllumbi,party,PSD,https://kqz.gov.al,2026-10-31,,"KQZ Decision No. 34, 28 August 2025; electoral subject on the certified list"
 vip252,Albana Pëllumbi,dateOfBirth,,,,,no official source on this run
 vip252,Albana Pëllumbi,placeOfBirth,,,,,no official source on this run
 vip252,Albana Pëllumbi,education,,,,,no official source on this run
@@ -2750,7 +2750,7 @@ vip252,Albana Pëllumbi,constituency,Tiranë,https://kqz.gov.al,2026-10-31,,"KQZ
 vip252,Albana Pëllumbi,officialLinks,,,,,no official source on this run
 vip252,Albana Pëllumbi,photo,,,,,no official source on this run
 vip253,Arlind Qori,fullName,Arlind Qori,https://www.wikidata.org/wiki/Q133796967,2026-10-31,,
-vip253,Arlind Qori,currentRole,,,,,no official source on this run
+vip253,Arlind Qori,currentRole,Deputet i Kuvendit të Shqipërisë,https://kqz.gov.al,2026-10-31,,"KQZ Decision No. 34, 28 August 2025; certified elected member"
 vip253,Arlind Qori,party,Lëvizja Bashkë,https://www.wikidata.org/wiki/Q133796967,2026-10-31,,
 vip253,Arlind Qori,dateOfBirth,1981-11-11,https://www.wikidata.org/wiki/Q133796967,2026-10-31,,
 vip253,Arlind Qori,placeOfBirth,Tirana,https://www.wikidata.org/wiki/Q133796967,2026-10-31,,
@@ -2804,9 +2804,9 @@ vip257,Elton Korreshi,parliamentaryGroup,Grupi Parlamentar i Partisë Socialiste
 vip257,Elton Korreshi,constituency,Fier,https://kqz.gov.al,2026-10-31,,"KQZ Decision No. 34, 28 August 2025, as compiled in CERTIFIED_2025_ROSTER"
 vip257,Elton Korreshi,officialLinks,2,mailto:elton.korreshi@parlament.al,2026-10-31,,
 vip257,Elton Korreshi,photo,https://kuvendiwebfiles.blob.core.windows.net/webfiles/202509191009550313ELTON KORRESHI.JPG,https://kuvendiwebfiles.blob.core.windows.net/webfiles/202509191009550313ELTON KORRESHI.JPG,2026-10-31,No reuse licence published by the Parliament of Albania. Referenced by URL; file not copied.,
-vip258,Dhimitër Kruti,fullName,,,,,no official source on this run
-vip258,Dhimitër Kruti,currentRole,,,,,no official source on this run
-vip258,Dhimitër Kruti,party,,,,,no official source on this run
+vip258,Dhimitër Kruti,fullName,Dhimitër Kruti,https://kqz.gov.al,2026-10-31,,"KQZ Decision No. 34, 28 August 2025"
+vip258,Dhimitër Kruti,currentRole,Deputet i Kuvendit të Shqipërisë,https://kqz.gov.al,2026-10-31,,"KQZ Decision No. 34, 28 August 2025; certified elected member"
+vip258,Dhimitër Kruti,party,PS,https://kqz.gov.al,2026-10-31,,"KQZ Decision No. 34, 28 August 2025; electoral subject on the certified list"
 vip258,Dhimitër Kruti,dateOfBirth,,,,,no official source on this run
 vip258,Dhimitër Kruti,placeOfBirth,,,,,no official source on this run
 vip258,Dhimitër Kruti,education,,,,,no official source on this run
@@ -2915,7 +2915,7 @@ vip267,Arjan Ndoja,constituency,Durrës,https://kqz.gov.al,2026-10-31,,"KQZ Deci
 vip267,Arjan Ndoja,officialLinks,1,https://kuvendiapi.azurewebsites.net/api/anetaret/88a8b709-fa82-496d-88c1-0f937d6f8d15,2026-10-31,,
 vip267,Arjan Ndoja,photo,https://kuvendiwebfiles.blob.core.windows.net/webfiles/202509250836320629BHPH3504.JPG,https://kuvendiwebfiles.blob.core.windows.net/webfiles/202509250836320629BHPH3504.JPG,2026-10-31,No reuse licence published by the Parliament of Albania. Referenced by URL; file not copied.,
 vip268,Evis Kushi,fullName,Evis Kushi,https://kuvendiapi.azurewebsites.net/api/anetaret/714a4417-46e2-41a9-a128-b3dd76c70eba,2026-10-31,,
-vip268,Evis Kushi,currentRole,Deputet i Kuvendit të Shqipërisë,https://kuvendiapi.azurewebsites.net/api/anetaret/714a4417-46e2-41a9-a128-b3dd76c70eba,2026-10-31,,
+vip268,Evis Kushi,currentRole,Zëvendëskryetar i Kuvendit të Shqipërisë,https://kuvendiapi.azurewebsites.net/api/strukturat/eeae17fc-a34c-49f9-a9c2-cc7d8e13b940/anetaret,2026-10-31,,Current Kuvendi structure 'Zëvendëskryetarët' lists this sitting member
 vip268,Evis Kushi,party,Partia Socialiste,https://kuvendiapi.azurewebsites.net/api/anetaret/714a4417-46e2-41a9-a128-b3dd76c70eba,2026-10-31,,
 vip268,Evis Kushi,dateOfBirth,1975-10-07,https://www.wikidata.org/wiki/Q31880612,2026-10-31,,
 vip268,Evis Kushi,placeOfBirth,Elbasani,https://www.wikidata.org/wiki/Q31880612,2026-10-31,,

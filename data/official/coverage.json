@@ -2,36 +2,36 @@
   "politicians": 279,
   "fields": {
     "fullName": {
-      "filled": 268,
-      "awaiting": 11
+      "filled": 272,
+      "awaiting": 7
     },
     "currentRole": {
-      "filled": 160,
-      "awaiting": 119
+      "filled": 264,
+      "awaiting": 15
     },
     "party": {
-      "filled": 253,
-      "awaiting": 26
+      "filled": 259,
+      "awaiting": 20
     },
     "dateOfBirth": {
       "filled": 245,
       "awaiting": 34
     },
     "placeOfBirth": {
-      "filled": 205,
-      "awaiting": 74
+      "filled": 206,
+      "awaiting": 73
     },
     "education": {
-      "filled": 166,
-      "awaiting": 113
+      "filled": 180,
+      "awaiting": 99
     },
     "mandates": {
-      "filled": 241,
-      "awaiting": 38
+      "filled": 242,
+      "awaiting": 37
     },
     "parliamentaryGroup": {
-      "filled": 243,
-      "awaiting": 36
+      "filled": 245,
+      "awaiting": 34
     },
     "constituency": {
       "filled": 229,
@@ -47,5 +47,5 @@
     }
   },
   "retrievedAt": "2026-10-31",
-  "unresolved": 11
+  "unresolved": 8
 }

@@ -64,6 +64,7 @@ OFFICIAL_HOSTS = (
     "ps.al",
     "pd.al",
     "partiasocialiste.al",
+    "tirana.al",
 )
 OPEN_LICENCE = re.compile(
     r"cc0|cc[-\s]?by(?!-nc)|creative commons attribution(?!.*noncommercial)|public domain|\bpd\b",
@@ -510,19 +511,26 @@ def roster_constituency(name: str) -> Optional[str]:
 
 
 def repair_open_ended_roles(profile: Dict[str, Any]) -> None:
-    """Do not treat an old Wikidata office with no end date as the current role."""
+    """Do not treat an old Wikidata office with no end date as the current role.
+
+    A role already cited to an official host is left as recorded. This pass only
+    fills a missing role from a current mandate, or clears a stale Wikidata role.
+    """
     mandates = profile.get("mandates") or []
     for mandate in mandates:
         source = mandate.get("sourceUrl") or ""
         period = (mandate.get("period") or "").split("—")[0].strip()
         if "wikidata.org" in source and mandate.get("current") and (not period or period < "2021-09-01"):
             mandate["current"] = False
+    sources = profile.setdefault("fieldSources", {})
+    existing_url = (sources.get("currentRole") or {}).get("sourceUrl") or ""
+    if (sources.get("currentRole") or {}).get("value") and "wikidata.org" not in existing_url:
+        return
     current = [mandate for mandate in mandates if mandate.get("current")]
     wiki_current = [mandate for mandate in current if "wikidata.org" in (mandate.get("sourceUrl") or "")]
     kuvendi_current = [mandate for mandate in current if "kuvendiapi" in (mandate.get("sourceUrl") or "")]
     chosen = sorted(wiki_current, key=lambda item: item.get("period") or "")[-1] if wiki_current else (kuvendi_current[0] if kuvendi_current else None)
-    sources = profile.setdefault("fieldSources", {})
-    if chosen:
+    if chosen and not (sources.get("currentRole") or {}).get("value"):
         profile["primaryRole"] = chosen["role"]
         sources["currentRole"] = {
             "value": chosen["role"],
@@ -531,9 +539,13 @@ def repair_open_ended_roles(profile: Dict[str, Any]) -> None:
         }
         profile["secondaryRoles"] = [mandate["role"] for mandate in current if mandate is not chosen][:3]
     else:
-        profile["primaryRole"] = None
-        profile["secondaryRoles"] = []
-        sources.pop("currentRole", None)
+        source = existing_url
+        recorded = (sources.get("currentRole") or {}).get("value") or ""
+        # A Wikidata office is kept only when the recorded value includes the dated period.
+        if "wikidata.org" in source and not re.search(r"\d{4}", recorded):
+            profile["primaryRole"] = None
+            profile["secondaryRoles"] = []
+            sources.pop("currentRole", None)
 
 
 def rewrite_outputs_from_export() -> Dict[str, Any]:
@@ -833,12 +845,18 @@ def parse_cv_text(text: str) -> Dict[str, Optional[str]]:
     if place:
         parsed["placeOfBirth"] = place.group(1).strip(" .;-")
     education = re.search(
-        r"((?:studim\w*|diplom\w*|ka kryer|ka mbaruar)[^.]{0,220}(?:Universitet\w*|Fakultet\w*|Akadem\w*)[^.]{0,80})",
+        r"((?:studim\w*|diplom\w*|ka kryer|ka mbaruar)[^.]{0,220}(?:Universitet\w*|Fakultet\w*|Akadem\w*|Institut\w*)[^.]{0,80})",
         flat,
         re.I,
     )
+    if not education:
+        education = re.search(
+            r"((?:është diplomuar|diplomuar në|arsimin e lartë)[^.]{8,220})",
+            flat,
+            re.I,
+        )
     if education:
-        parsed["education"] = education.group(1).strip()
+        parsed["education"] = education.group(1).strip()[:500]
     career = re.search(r"Jet[eë]shkrimi\s*:\s*(.{40,900})", flat, re.I)
     if career:
         parsed["career"] = career.group(1).strip()
@@ -881,6 +899,8 @@ def set_field(profile: Dict[str, Any], field: str, value: str, source_url: str, 
         profile["primaryRole"] = value
     elif field == "party":
         profile.setdefault("bio", {})["party"] = value
+        if not profile.get("party"):
+            profile["party"] = value
     elif field == "constituency":
         profile["electoralZone"] = value
     elif field == "parliamentaryGroup":
@@ -1188,13 +1208,447 @@ def apply_residual_matches() -> Dict[str, Any]:
     return summary
 
 
+def html_to_text(payload: bytes) -> str:
+    import html as html_lib
+    page = payload.decode("utf-8", "replace")
+    page = re.sub(r"<script[\s\S]*?</script>", " ", page, flags=re.I)
+    page = re.sub(r"<style[\s\S]*?</style>", " ", page, flags=re.I)
+    page = re.sub(r"<[^>]+>", " ", page)
+    return re.sub(r"\s+", " ", html_lib.unescape(page)).strip()
+
+
+def fetch_bytes(url: str, accept: str) -> bytes:
+    request = urllib.request.Request(url, headers={"User-Agent": UA, "Accept": accept})
+    with urllib.request.urlopen(request, timeout=30) as response:
+        return response.read(2_000_000)
+
+
+def fetch_text(url: str) -> str:
+    return html_to_text(fetch_bytes(url, "text/html"))
+
+
+def fetch_json(url: str) -> Any:
+    return json.loads(fetch_bytes(url, "application/json").decode("utf-8"))
+
+
+def read_document_text(url: str) -> str:
+    """Read a Parliament CV. PDF goes through pypdf. A docx zip yields its document XML."""
+    import io
+    import zipfile
+    payload = fetch_bytes(quote_url(url), "*/*")
+    if payload[:2] == b"PK":
+        with zipfile.ZipFile(io.BytesIO(payload)) as archive:
+            xml = archive.read("word/document.xml").decode("utf-8", "replace")
+        return re.sub(r"\s+", " ", re.sub(r"<[^>]+>", " ", xml))
+    from pypdf import PdfReader
+    reader = PdfReader(io.BytesIO(payload))
+    return "\n".join((page.extract_text() or "") for page in reader.pages)
+
+
+_OFFICE_NAME = r"([A-ZÇË][\wËÇëç'’.\-]+(?:\s+[A-ZÇË][\wËÇëç'’.\-]+){1,3})"
+
+
+def offices_from_public_pages(pages: Dict[str, str]) -> List[Dict[str, str]]:
+    """Titles copied from pages fetched on this run. No office is inferred from memory."""
+    found: List[Dict[str, str]] = []
+    socialist = pages.get("https://ps.al/") or ""
+    match = re.search(
+        rf"Kryeministr\w+,\s*njëherësh Kryetar i Partisë Socialiste,\s*{_OFFICE_NAME}",
+        socialist,
+    )
+    if match:
+        found.append({
+            "name": match.group(1).strip(),
+            "role": "Kryeministër, njëherësh Kryetar i Partisë Socialiste",
+            "sourceUrl": "https://ps.al/",
+            "notes": "Party homepage uses this title in the present tense",
+        })
+    democrat = pages.get("https://pd.al/") or ""
+    match = re.search(
+        rf"Kryetari i Partisë Demokratike,\s*(?:Prof\.\s*Dr\.\s*)?{_OFFICE_NAME}",
+        democrat,
+    )
+    if match:
+        found.append({
+            "name": match.group(1).strip(),
+            "role": "Kryetar i Partisë Demokratike",
+            "sourceUrl": "https://pd.al/",
+            "notes": "Party homepage uses this title in the present tense",
+        })
+    tirana = pages.get("https://www.tirana.al/faqe/kryetari-i-bashkise") or ""
+    if "Erion Veliaj është Kryetar i Bashkisë së Tiranës" in tirana:
+        found.append({
+            "name": "Erion Veliaj",
+            "role": "Kryetar i Bashkisë së Tiranës",
+            "sourceUrl": "https://www.tirana.al/faqe/kryetari-i-bashkise",
+            "notes": "Municipality page states the present-tense office",
+        })
+    return found
+
+
+def roster_member(name: str) -> Optional[Dict[str, Any]]:
+    import sys
+    root = str(ROOT)
+    if root not in sys.path:
+        sys.path.insert(0, root)
+    from services.parliament_roster_service import CERTIFIED_2025_ROSTER
+    target = fold(name)
+    for member in CERTIFIED_2025_ROSTER:
+        if fold(member.get("name") or "") == target:
+            return member
+    return None
+
+
+def kuvendi_id_of(profile: Dict[str, Any]) -> str:
+    url = ((profile.get("fieldSources") or {}).get("fullName") or {}).get("sourceUrl") or ""
+    marker = "/api/anetaret/"
+    if marker not in url:
+        return ""
+    return url.rstrip("/").split("/")[-1]
+
+
+def former_role_from_mandates(mandates: List[Dict[str, Any]]) -> Optional[Dict[str, Any]]:
+    dated = [
+        mandate for mandate in mandates
+        if mandate.get("period")
+        and len(mandate.get("role") or "") <= 80
+        and not str(mandate.get("role") or "").startswith("Lista ")
+    ]
+    if not dated:
+        return None
+    return sorted(dated, key=lambda item: item.get("period") or "")[-1]
+
+
+def profile_for_office(name: str, profiles: List[Dict[str, Any]]) -> Optional[Dict[str, Any]]:
+    """Use an exact name. If several cards share it, keep the single active one."""
+    target = fold(name)
+    exact = [profile for profile in profiles if fold(profile.get("name") or "") == target]
+    if len(exact) == 1:
+        return exact[0]
+    active = [profile for profile in exact if profile.get("parliamentaryStatus") == "active_mp"]
+    if len(active) == 1:
+        return active[0]
+    return None
+
+
+def remember_link(profile: Dict[str, Any], label: str, url: str) -> None:
+    links = profile.setdefault("officialLinks", [])
+    if url and not any((link.get("url") or "") == url for link in links):
+        links.append({"label": label, "url": url})
+
+
+def apply_specific_role(profile: Dict[str, Any], role: str, source_url: str, retrieved_at: str, notes: str) -> None:
+    previous = profile.get("primaryRole")
+    set_field(profile, "currentRole", role, source_url, retrieved_at, notes)
+    if previous and previous != role and len(str(previous)) <= 80:
+        secondary = [item for item in (profile.get("secondaryRoles") or []) if item != previous and item != role]
+        profile["secondaryRoles"] = [previous, *secondary][:4]
+    remember_link(profile, role, source_url)
+
+
+def fill_cached_register_fields(profile: Dict[str, Any], detail: Dict[str, Any], api_url: str, retrieved_at: str) -> None:
+    if not detail:
+        return
+    sources = profile.get("fieldSources") or {}
+    if not profile.get("placeOfBirth") and (detail.get("vendlindje") or "").strip():
+        set_field(profile, "placeOfBirth", title_case_source(detail["vendlindje"].strip()), api_url, retrieved_at, "Kuvendi register")
+    if not profile.get("parliamentaryGroup"):
+        for struct in detail.get("strukturat") or []:
+            title = (struct.get("emer") or "").strip()
+            if struct.get("tip") == 6 or "grupi parlamentar" in title.casefold():
+                set_field(profile, "parliamentaryGroup", title, api_url, retrieved_at, "Kuvendi register")
+                break
+    if not (sources.get("party") or {}).get("value") and (detail.get("partia") or "").strip():
+        set_field(profile, "party", detail["partia"].strip(), api_url, retrieved_at, "Kuvendi register")
+
+
+def fill_cv_gaps(profile: Dict[str, Any], detail: Dict[str, Any], retrieved_at: str, stats: Dict[str, int]) -> None:
+    if profile.get("education"):
+        return
+    cv_url = cv_document(detail)
+    if not cv_url:
+        return
+    try:
+        parsed = parse_cv_text(read_document_text(cv_url))
+    except Exception:
+        stats["cvFailed"] = stats.get("cvFailed", 0) + 1
+        return
+    stats["cvRead"] = stats.get("cvRead", 0) + 1
+    if parsed.get("education"):
+        set_field(profile, "education", parsed["education"], cv_url, retrieved_at, "Parliament CV")
+        stats["educationFilled"] = stats.get("educationFilled", 0) + 1
+    if parsed.get("placeOfBirth") and not profile.get("placeOfBirth"):
+        set_field(profile, "placeOfBirth", parsed["placeOfBirth"], cv_url, retrieved_at, "Parliament CV")
+    if parsed.get("dateOfBirth") and not profile.get("dateOfBirth"):
+        set_field(profile, "dateOfBirth", parsed["dateOfBirth"], cv_url, retrieved_at, "Parliament CV")
+    if parsed.get("career") and not profile.get("careerSummary"):
+        profile.setdefault("mandates", []).append({
+            "period": None,
+            "role": parsed["career"],
+            "current": False,
+            "sourceUrl": cv_url,
+        })
+        profile["careerSummary"] = parsed["career"]
+        profile.setdefault("fieldSources", {})["mandates"] = {
+            "value": str(len(profile["mandates"])),
+            "sourceUrl": cv_url,
+            "retrievedAt": retrieved_at,
+            "notes": "Parliament CV biography",
+        }
+
+
+def kuvendi_rows_for_name(name: str, records: List[Dict[str, Any]]) -> List[Dict[str, Any]]:
+    target = base_name(name)
+    return [record for record in records if fold(f"{record.get('emer') or ''} {record.get('mbiemer') or ''}") == target]
+
+
+def choose_boci_row(name: str, zone: Optional[str], sitting: bool, records: List[Dict[str, Any]]) -> Tuple[Optional[Dict[str, Any]], str]:
+    """Two Kuvendi rows share this name. Keep a row only when district and sitting status agree."""
+    rows = kuvendi_rows_for_name(name, records)
+    if fold(name) not in ("luciano boci", "luçiano boci"):
+        return None, "not the duplicated Boçi register name"
+    matched = []
+    for record in rows:
+        district = QARK_MAP.get(record.get("qarku"))
+        if zone and district and fold(district) != fold(zone):
+            continue
+        matched.append(record)
+    if sitting:
+        current = [record for record in matched if record.get("status") == 0]
+        if len(current) == 1:
+            return current[0], "current Kuvendi row whose district matches the certified constituency Shkodër"
+        return None, "no single current Shkodër row"
+    return None, "the other Kuvendi row is Elbasan, which does not match this profile's Shkodër district"
+
+
+EXHAUSTED_IDENTITY = (
+    "No row in the current Kuvendi register, not on the KQZ Decision No. 34 list of 140, "
+    "and Wikidata search returned no entity. kryeministria.al and the ministry hosts on that "
+    "network return an Incapsula challenge, kqz.gov.al has no public candidate-list search "
+    "(/rezultatet and the 2023 local path return 404), and Fletorja Zyrtare (qbz.gov.al) is a "
+    "JavaScript application whose act-search API is not in the public page. Earlier-legislature "
+    "biography files are not in the current register snapshot."
+)
+BOCI_FORMER_REASON = (
+    "Two Kuvendi rows share this name. The sitting row is Shkodër, status 0, and is used only "
+    "for the active Shkodër profile. The other row is Elbasan, status 1, which does not match "
+    "this profile's Shkodër district, so it was not used. Wikidata Q6706730 has one undated "
+    "office and supplies no former-role dates."
+)
+
+
+def apply_role_round() -> Dict[str, Any]:
+    """Fill current and former roles from sources that could be read on this run."""
+    retrieved_at = datetime.now(timezone.utc).strftime("%Y-%m-%d")
+    export = json.loads(EXPORT_PATH.read_text(encoding="utf-8"))
+    records = json.loads(SNAPSHOT_PATH.read_text(encoding="utf-8"))
+    by_id = {record.get("id"): record for record in records}
+    detail_path = OUT_DIR / "kuvendi_details.snapshot.json"
+    details = json.loads(detail_path.read_text(encoding="utf-8")) if detail_path.exists() else {}
+    cv_stats: Dict[str, int] = {}
+    for profile in export["profiles"]:
+        sources = profile.setdefault("fieldSources", {})
+        certified = roster_member(profile.get("name") or "")
+        if certified and certified.get("party") and not (sources.get("party") or {}).get("value"):
+            set_field(
+                profile,
+                "party",
+                certified["party"],
+                "https://kqz.gov.al",
+                retrieved_at,
+                "KQZ Decision No. 34, 28 August 2025; electoral subject on the certified list",
+            )
+        if fold(profile.get("name") or "") in ("luciano boci", "luçiano boci"):
+            sitting = profile.get("parliamentaryStatus") == "active_mp"
+            chosen, note = choose_boci_row(profile.get("name") or "", profile.get("electoralZone"), sitting, records)
+            if chosen:
+                api_url = f"{KUVENDI_API}/{chosen.get('id')}"
+                detail = details.get(chosen.get("id")) or {}
+                if not detail:
+                    try:
+                        detail = fetch_json(api_url)
+                    except Exception:
+                        detail = {}
+                set_field(profile, "fullName", profile.get("name") or "", api_url, retrieved_at, note)
+                if not profile.get("primaryRole"):
+                    set_field(profile, "currentRole", "Deputet i Kuvendit të Shqipërisë", api_url, retrieved_at, note)
+                fill_cached_register_fields(profile, detail, api_url, retrieved_at)
+                # Keep the certified electoral-subject code. The register may spell the same
+                # subject differently (PD-ASHM versus PD-AMSH) and must not replace it.
+                certified_party = (roster_member(profile.get("name") or "") or {}).get("party")
+                if certified_party:
+                    set_field(
+                        profile,
+                        "party",
+                        certified_party,
+                        "https://kqz.gov.al",
+                        retrieved_at,
+                        "KQZ Decision No. 34, 28 August 2025; electoral subject. The Kuvendi register spells this subject PD-ASHM.",
+                    )
+                    profile["party"] = certified_party
+                fill_cv_gaps(profile, detail, retrieved_at, cv_stats)
+                remember_link(profile, "Regjistri i Kuvendit / Parliament register", api_url)
+            continue
+        record_id = kuvendi_id_of(profile)
+        record = by_id.get(record_id)
+        if record_id:
+            api_url = f"{KUVENDI_API}/{record_id}"
+            fill_cached_register_fields(profile, details.get(record_id) or {}, api_url, retrieved_at)
+            fill_cv_gaps(profile, details.get(record_id) or {}, retrieved_at, cv_stats)
+        if profile.get("primaryRole"):
+            continue
+        if profile.get("parliamentaryStatus") == "active_mp" and roster_constituency(profile.get("name") or ""):
+            set_field(
+                profile,
+                "currentRole",
+                "Deputet i Kuvendit të Shqipërisë",
+                "https://kqz.gov.al",
+                retrieved_at,
+                "KQZ Decision No. 34, 28 August 2025; certified elected member",
+            )
+            if not (sources.get("fullName") or {}).get("value"):
+                set_field(profile, "fullName", profile.get("name") or "", "https://kqz.gov.al", retrieved_at, "KQZ Decision No. 34, 28 August 2025")
+            continue
+        if profile.get("parliamentaryStatus") != "active_mp":
+            latest = former_role_from_mandates(profile.get("mandates") or [])
+            if latest:
+                set_field(
+                    profile,
+                    "currentRole",
+                    f"{latest['role']} ({latest['period']})",
+                    latest.get("sourceUrl") or "",
+                    retrieved_at,
+                    "former office; the period is taken from the cited source",
+                )
+                continue
+        if record and record.get("status") != 0 and profile.get("parliamentaryStatus") != "active_mp":
+            api_url = f"{KUVENDI_API}/{record.get('id')}"
+            set_field(
+                profile,
+                "currentRole",
+                "Ish-deputet i Kuvendit të Shqipërisë",
+                api_url,
+                retrieved_at,
+                "Kuvendi register row is not marked sitting and the person is not on the KQZ 2025 list of 140; the row has no mandate dates",
+            )
+        elif record and record.get("status") == 0 and not profile.get("primaryRole"):
+            api_url = f"{KUVENDI_API}/{record.get('id')}"
+            set_field(
+                profile,
+                "currentRole",
+                "Deputet i Kuvendit të Shqipërisë",
+                api_url,
+                retrieved_at,
+                "Kuvendi register status marks a sitting member",
+            )
+
+    page_errors: List[str] = []
+    pages: Dict[str, str] = {}
+    for url in ("https://ps.al/", "https://pd.al/", "https://www.tirana.al/faqe/kryetari-i-bashkise"):
+        try:
+            pages[url] = fetch_text(url)
+        except Exception as exc:
+            page_errors.append(f"{url}: {exc.__class__.__name__}")
+    for office in offices_from_public_pages(pages):
+        profile = profile_for_office(office["name"], export["profiles"])
+        if profile:
+            apply_specific_role(profile, office["role"], office["sourceUrl"], retrieved_at, office["notes"])
+    try:
+        structures = fetch_json("https://kuvendiapi.azurewebsites.net/api/strukturat")
+        deputies = next((item for item in structures if item.get("status") == 0 and fold(item.get("emer") or "") == "zevendeskryetaret"), None)
+        if deputies:
+            source_url = f"https://kuvendiapi.azurewebsites.net/api/strukturat/{deputies['id']}/anetaret"
+            for member in fetch_json(source_url):
+                full = f"{member.get('emer') or ''} {member.get('mbiemer') or ''}".strip()
+                holders = [profile for profile in export["profiles"] if kuvendi_id_of(profile) == member.get("id")]
+                profile = holders[0] if len(holders) == 1 else None
+                if not profile or profile.get("parliamentaryStatus") != "active_mp":
+                    profile = profile_for_office(full, export["profiles"])
+                if profile and profile.get("parliamentaryStatus") == "active_mp":
+                    apply_specific_role(
+                        profile,
+                        "Zëvendëskryetar i Kuvendit të Shqipërisë",
+                        source_url,
+                        retrieved_at,
+                        "Current Kuvendi structure 'Zëvendëskryetarët' lists this sitting member",
+                    )
+        id_to_profiles: Dict[str, List[Dict[str, Any]]] = {}
+        for profile in export["profiles"]:
+            record_id = kuvendi_id_of(profile)
+            if record_id:
+                id_to_profiles.setdefault(record_id, []).append(profile)
+        for structure in structures:
+            if structure.get("tip") != 1 or structure.get("status") != 0:
+                continue
+            source_url = f"https://kuvendiapi.azurewebsites.net/api/strukturat/{structure['id']}/anetaret"
+            try:
+                members = fetch_json(source_url)
+            except Exception:
+                continue
+            label = f"Anëtar, {structure.get('emer')}"
+            for member in members:
+                holders = id_to_profiles.get(member.get("id")) or []
+                if len(holders) != 1:
+                    continue
+                profile = holders[0]
+                secondary = [
+                    ("Anëtar, " + item[len("Anëtar i "):]) if isinstance(item, str) and item.startswith("Anëtar i ") else item
+                    for item in (profile.get("secondaryRoles") or [])
+                ]
+                secondary = [item for item in secondary if item != label]
+                if len(secondary) < 4:
+                    profile["secondaryRoles"] = [*secondary, label][:4]
+                mandates = profile.setdefault("mandates", [])
+                for item in mandates:
+                    if isinstance(item.get("role"), str) and item["role"].startswith("Anëtar i "):
+                        item["role"] = "Anëtar, " + item["role"][len("Anëtar i "):]
+                if not any(item.get("role") == label and item.get("sourceUrl") == source_url for item in mandates):
+                    mandates.append({"period": None, "role": label, "current": False, "sourceUrl": source_url})
+                sources = profile.setdefault("fieldSources", {})
+                if not (sources.get("mandates") or {}).get("value"):
+                    sources["mandates"] = {
+                        "value": str(len(mandates)),
+                        "sourceUrl": source_url,
+                        "retrievedAt": retrieved_at,
+                        "notes": "Current Kuvendi committee membership",
+                    }
+    except Exception as exc:
+        page_errors.append(f"kuvendi strukturat: {exc.__class__.__name__}")
+
+    unresolved = []
+    for profile in export["profiles"]:
+        sourced_name = (profile.get("fieldSources") or {}).get("fullName", {}).get("value")
+        if fold(profile.get("name") or "") in ("luciano boci", "luçiano boci") and profile.get("parliamentaryStatus") != "active_mp":
+            unresolved.append({"vip_id": profile["id"], "name": profile["name"], "reason": BOCI_FORMER_REASON})
+            continue
+        if sourced_name:
+            continue
+        unresolved.append({"vip_id": profile["id"], "name": profile["name"], "reason": EXHAUSTED_IDENTITY})
+    EXPORT_PATH.write_text(json.dumps(export, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+    with (OUT_DIR / "unresolved_names.csv").open("w", encoding="utf-8", newline="") as handle:
+        writer = csv.DictWriter(handle, fieldnames=["vip_id", "name", "reason"])
+        writer.writeheader()
+        writer.writerows(unresolved)
+    summary = rewrite_outputs_from_export()
+    summary["unresolved"] = len(unresolved)
+    summary["cvGaps"] = cv_stats
+    summary["pageErrors"] = page_errors
+    non_null_scores = sum(1 for profile in export["profiles"] if profile.get("composite") is not None or profile.get("dynamicScore") is not None)
+    summary["nonNullScores"] = non_null_scores
+    COVERAGE_PATH.write_text(json.dumps(summary, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+    return summary
+
+
 def main() -> None:
     parser = argparse.ArgumentParser(description="Collect citable official politician fields")
     parser.add_argument("--offline", action="store_true", help="Reuse the Kuvendi snapshot and skip network lookups")
     parser.add_argument("--enrich", action="store_true", help="Fill gaps with unique name variants and Parliament CVs")
     parser.add_argument("--residual", action="store_true", help="Match remaining names by documented spellings and unique Wikidata identities")
+    parser.add_argument("--roles", action="store_true", help="Fill current and former roles from KQZ and the Kuvendi register")
     args = parser.parse_args()
-    if args.residual:
+    if args.roles:
+        summary = apply_role_round()
+    elif args.residual:
         summary = apply_residual_matches()
     elif args.enrich:
         summary = enrich()
