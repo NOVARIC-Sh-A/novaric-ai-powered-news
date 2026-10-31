@@ -4,6 +4,7 @@ import { VipProfile } from '../../types';
 import { partyColor, normalizePartySlug } from '../../lib/brand-tokens';
 import { AWAITING_DATA } from './primitives/awaiting';
 import { ZodiacChip } from './primitives/ZodiacChip';
+import { resolveOfficialPhotoUrl } from '../../utils/officialPhoto';
 
 interface DominantFiguresStripProps {
   politicians: VipProfile[];
@@ -25,6 +26,7 @@ export const DominantFiguresStrip: React.FC<DominantFiguresStripProps> = ({
         const partySlug = (item as any).party || normalizePartySlug(item.category);
         const pc = partyColor(partySlug);
         const dob = (item as any).dateOfBirth || item.dateOfBirth;
+        const photoUrl = resolveOfficialPhotoUrl(item);
         const targetId = item.numericId || item.id;
         const linkHref = `/figurat-politike/${targetId}`;
 
@@ -78,15 +80,16 @@ export const DominantFiguresStrip: React.FC<DominantFiguresStripProps> = ({
             {/* Profile Avatar & Name */}
             <div className="flex items-center gap-2.5 mb-2">
               <div
-                className="w-10 h-10 rounded-full overflow-hidden shrink-0 border relative"
+                className="w-10 h-10 rounded-full overflow-hidden shrink-0 border relative bg-slate-200 dark:bg-slate-800"
                 style={{ borderColor: pc }}
               >
-                {item.imageUrl ? (
+                {photoUrl ? (
                   <img
-                    src={item.imageUrl}
+                    src={photoUrl}
                     alt={item.name}
                     loading="lazy"
-                    className="w-full h-full object-cover object-top"
+                    className="h-full w-full object-cover"
+                    style={{ objectPosition: 'center 20%' }}
                     onError={(e) => {
                       e.currentTarget.style.display = 'none';
                       const fallback = e.currentTarget.nextElementSibling as HTMLElement;
@@ -95,8 +98,8 @@ export const DominantFiguresStrip: React.FC<DominantFiguresStripProps> = ({
                   />
                 ) : null}
                 <div
-                  className="w-full h-full items-center justify-center bg-slate-200 dark:bg-slate-700 text-slate-500"
-                  style={{ display: item.imageUrl ? 'none' : 'flex' }}
+                  className="w-full h-full items-center justify-center bg-slate-200 dark:bg-slate-800 text-slate-500"
+                  style={{ display: photoUrl ? 'none' : 'flex' }}
                 >
                   <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
                     <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z" />

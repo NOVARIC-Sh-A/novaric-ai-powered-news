@@ -113,9 +113,9 @@ export const PoliticianGridCard: React.FC<PoliticianGridCardProps> = ({
         e.currentTarget.style.boxShadow = 'none';
       }}
     >
-      {/* Photo Area (96px strip) with 2px party-color underline */}
+      {/* Fixed portrait frame. Cover + face bias; no stretch, no letterbox. */}
       <div
-        className="relative w-full h-24 overflow-hidden bg-slate-100 dark:bg-slate-800"
+        className="relative w-full aspect-[3/4] overflow-hidden bg-slate-200 dark:bg-slate-800"
         style={{
           borderBottom: '2px solid var(--pc)',
         }}
@@ -127,7 +127,8 @@ export const PoliticianGridCard: React.FC<PoliticianGridCardProps> = ({
             loading="lazy"
             referrerPolicy="no-referrer"
             onError={() => setImageFailed(true)}
-            className="w-full h-full object-cover object-top transition-transform duration-300 group-hover:scale-105"
+            className="absolute inset-0 h-full w-full object-cover"
+            style={{ objectPosition: 'center 20%' }}
           />
         ) : (
           <AwaitingPhoto />
