@@ -132,6 +132,86 @@ def http_json(url: str, timeout: int = 40) -> Any:
         return json.loads(response.read().decode("utf-8"))
 
 
+def levenshtein(left: str, right: str) -> int:
+    if left == right:
+        return 0
+    if not left or not right:
+        return max(len(left), len(right))
+    previous = list(range(len(right) + 1))
+    for i, char in enumerate(left, 1):
+        current = [i]
+        for j, other in enumerate(right, 1):
+            current.append(min(
+                previous[j] + 1,
+                current[j - 1] + 1,
+                previous[j - 1] + (char != other),
+            ))
+        previous = current
+    return previous[-1]
+
+
+def doubled_letter_variant(left: str, right: str) -> bool:
+    """Allow krashi/krrashi, not meta/metaj or beqaj/metaj."""
+    if abs(len(left) - len(right)) != 1 or levenshtein(left, right) != 1:
+        return False
+    short, long = (left, right) if len(left) < len(right) else (right, left)
+    for index, char in enumerate(long):
+        if short == long[:index] + long[index + 1:] and index > 0 and long[index] == long[index - 1]:
+            return True
+    return False
+
+
+def base_name(name: str) -> str:
+    stripped = re.sub(r"\s*\([^)]*\)", " ", name or "")
+    return fold(stripped)
+
+
+def match_kuvendi_record(name: str, records: List[Dict[str, Any]]) -> Tuple[Optional[Dict[str, Any]], str]:
+    """Return a unique Kuvendi row, or a reason the name stays unresolved."""
+    target = base_name(name)
+    parts = target.split()
+    if len(parts) < 2:
+        return None, "name has no first and last token after removing parentheticals"
+    first, last = parts[0], parts[-1]
+    exact = []
+    variants = []
+    for record in records:
+        record_first = fold(record.get("emer") or "")
+        record_last = fold(record.get("mbiemer") or "")
+        record_name = f"{record_first} {record_last}".strip()
+        if record_name == target:
+            exact.append(record)
+            continue
+        surname_close = record_last == last or doubled_letter_variant(record_last, last)
+        prefix = (
+            len(first) >= 4
+            and len(record_first) >= 4
+            and (record_first.startswith(first) or first.startswith(record_first))
+        )
+        given_close = record_first == first or prefix or levenshtein(record_first, first) <= 1
+        if surname_close and given_close and record_first and record_last:
+            variants.append(record)
+    if len(exact) == 1:
+        return exact[0], "exact"
+    if len(exact) > 1:
+        return None, f"ambiguous: {len(exact)} exact Kuvendi rows"
+    if len(variants) == 1:
+        return variants[0], "unique spelling or patronymic variant"
+    if len(variants) > 1:
+        return None, f"ambiguous: {len(variants)} close Kuvendi rows"
+    # Spellings confirmed against a single Kuvendi row. Not inferred biographies.
+    documented = {
+        "lindita buxhelaj": "lindita buxheli",
+    }
+    alias = documented.get(target)
+    if alias:
+        for record in records:
+            official = fold(f"{record.get('emer') or ''} {record.get('mbiemer') or ''}")
+            if official == alias:
+                return record, "documented unique Kuvendi spelling"
+    return None, "not in the current Kuvendi member register"
+
+
 def index_kuvendi(records: List[Dict[str, Any]]) -> Dict[str, Dict[str, Any]]:
     grouped: Dict[str, List[Dict[str, Any]]] = {}
     for record in records:
@@ -417,6 +497,10 @@ def build_sourced(profile: Dict[str, Any], kuvendi: Optional[Dict[str, Any]], de
 
 
 def roster_constituency(name: str) -> Optional[str]:
+    import sys
+    root = str(ROOT)
+    if root not in sys.path:
+        sys.path.insert(0, root)
     from services.parliament_roster_service import CERTIFIED_2025_ROSTER
     target = fold(name)
     for member in CERTIFIED_2025_ROSTER:
@@ -732,11 +816,390 @@ def collect(offline: bool = False) -> Dict[str, Any]:
     return summary
 
 
+def quote_url(url: str) -> str:
+    parts = urllib.parse.urlsplit(url)
+    return urllib.parse.urlunsplit((parts.scheme, parts.netloc, urllib.parse.quote(parts.path), parts.query, parts.fragment))
+
+
+def parse_cv_text(text: str) -> Dict[str, Optional[str]]:
+    flat = re.sub(r"\s+", " ", text or "").strip()
+    parsed: Dict[str, Optional[str]] = {"dateOfBirth": None, "placeOfBirth": None, "education": None, "career": None}
+    birth = re.search(r"Dat[eë]lindja\s*:\s*(\d{1,2})[./](\d{1,2})[./](\d{4})", flat, re.I)
+    if birth:
+        day, month, year = int(birth.group(1)), int(birth.group(2)), int(birth.group(3))
+        if 1930 <= year <= 2005 and 1 <= month <= 12 and 1 <= day <= 31:
+            parsed["dateOfBirth"] = f"{year:04d}-{month:02d}-{day:02d}"
+    place = re.search(r"Vendlindja\s*:\s*([^:]{2,60}?)(?:\s+E-?mail|\s+Jet[eë]shkrimi|$)", flat, re.I)
+    if place:
+        parsed["placeOfBirth"] = place.group(1).strip(" .;-")
+    education = re.search(
+        r"((?:studim\w*|diplom\w*|ka kryer|ka mbaruar)[^.]{0,220}(?:Universitet\w*|Fakultet\w*|Akadem\w*)[^.]{0,80})",
+        flat,
+        re.I,
+    )
+    if education:
+        parsed["education"] = education.group(1).strip()
+    career = re.search(r"Jet[eë]shkrimi\s*:\s*(.{40,900})", flat, re.I)
+    if career:
+        parsed["career"] = career.group(1).strip()
+    return parsed
+
+
+def cv_document(detail: Optional[Dict[str, Any]]) -> Optional[str]:
+    if not detail:
+        return None
+    for document in detail.get("dokumentat") or []:
+        tip = ((document.get("tipDokument") or {}).get("emer") or "").casefold()
+        url = document.get("url") or ""
+        if url.startswith("http") and ("cv" in tip or "jetëshkrim" in tip or "jeteskrim" in tip or url.lower().endswith(".pdf")):
+            if "cv" in tip or "jet" in tip:
+                return url
+    return None
+
+
+def read_pdf_text(url: str) -> str:
+    import io
+    from pypdf import PdfReader
+    request = urllib.request.Request(quote_url(url), headers={"User-Agent": UA})
+    with urllib.request.urlopen(request, timeout=40) as response:
+        payload = response.read(2_000_000)
+    reader = PdfReader(io.BytesIO(payload))
+    return "\n".join((page.extract_text() or "") for page in reader.pages)
+
+
+def set_field(profile: Dict[str, Any], field: str, value: str, source_url: str, retrieved_at: str, notes: str = "") -> None:
+    sources = profile.setdefault("fieldSources", {})
+    sources[field] = {"value": value, "sourceUrl": source_url, "retrievedAt": retrieved_at, "notes": notes}
+    if field == "dateOfBirth":
+        profile["dateOfBirth"] = value
+        profile["dateOfBirthSourceUrl"] = source_url
+        profile["dateOfBirthVerifiedAt"] = retrieved_at
+        profile["dateOfBirthVerificationStatus"] = "verified"
+    elif field == "placeOfBirth":
+        profile["placeOfBirth"] = value
+    elif field == "currentRole":
+        profile["primaryRole"] = value
+    elif field == "party":
+        profile.setdefault("bio", {})["party"] = value
+    elif field == "constituency":
+        profile["electoralZone"] = value
+    elif field == "parliamentaryGroup":
+        profile["parliamentaryGroup"] = value
+    elif field == "education":
+        profile["education"] = value
+        profile.setdefault("bio", {})["education"] = value
+    elif field == "fullName":
+        profile.setdefault("bio", {})["fullName"] = profile.get("name")
+
+
+def enrich(limit_details: Optional[int] = None) -> Dict[str, Any]:
+    """Fill gaps from unique Kuvendi variants, official CV PDFs, and secondary Wikidata."""
+    retrieved_at = datetime.now(timezone.utc).strftime("%Y-%m-%d")
+    export = json.loads(EXPORT_PATH.read_text(encoding="utf-8"))
+    records = json.loads(SNAPSHOT_PATH.read_text(encoding="utf-8"))
+    conflicts: List[Dict[str, str]] = []
+    unresolved: List[Dict[str, str]] = []
+    matched = 0
+    cv_used = 0
+    detail_cache_path = OUT_DIR / "kuvendi_details.snapshot.json"
+    details: Dict[str, Any] = {}
+    if detail_cache_path.exists():
+        details = json.loads(detail_cache_path.read_text(encoding="utf-8"))
+
+    assignments: Dict[str, Tuple[Dict[str, Any], str]] = {}
+    for profile in export["profiles"]:
+        record, reason = match_kuvendi_record(profile.get("name") or "", records)
+        if record:
+            assignments[profile["id"]] = (record, reason)
+        else:
+            unresolved.append({"vip_id": profile["id"], "name": profile["name"], "reason": reason})
+
+    missing_ids = [record["id"] for record, _reason in assignments.values() if record.get("id") and record["id"] not in details]
+    if limit_details is not None:
+        missing_ids = missing_ids[:limit_details]
+
+    def fetch_detail(record_id: str) -> Tuple[str, Optional[Dict[str, Any]]]:
+        try:
+            return record_id, http_json(f"{KUVENDI_API}/{record_id}", timeout=30)
+        except Exception:
+            return record_id, None
+
+    if missing_ids:
+        with ThreadPoolExecutor(max_workers=6) as pool:
+            for future in as_completed(pool.submit(fetch_detail, record_id) for record_id in missing_ids):
+                record_id, payload = future.result()
+                if payload:
+                    details[record_id] = payload
+        detail_cache_path.write_text(json.dumps(details, ensure_ascii=False), encoding="utf-8")
+
+    for profile in export["profiles"]:
+        assignment = assignments.get(profile["id"])
+        if not assignment:
+            continue
+        record, reason = assignment
+        matched += 1
+        api_url = f"{KUVENDI_API}/{record.get('id')}"
+        sources = profile.setdefault("fieldSources", {})
+        if not (sources.get("fullName") or {}).get("value"):
+            set_field(profile, "fullName", profile.get("name") or "", api_url, retrieved_at, reason)
+        if not (sources.get("party") or {}).get("value") and (record.get("partia") or "").strip():
+            set_field(profile, "party", record["partia"].strip(), api_url, retrieved_at, reason)
+        if not profile.get("officialLinks"):
+            profile["officialLinks"] = [{"label": "Regjistri i Kuvendit / Parliament register", "url": api_url}]
+            sources["officialLinks"] = {"value": "1", "sourceUrl": api_url, "retrievedAt": retrieved_at}
+        email = (record.get("email") or "").strip()
+        if email and "@" in email and not (profile.get("bio") or {}).get("email"):
+            profile.setdefault("bio", {})["email"] = email
+            sources["email"] = {"value": email, "sourceUrl": api_url, "retrievedAt": retrieved_at}
+        if record.get("status") == 0 and not profile.get("primaryRole"):
+            set_field(profile, "currentRole", "Deputet i Kuvendit të Shqipërisë", api_url, retrieved_at, reason)
+            profile.setdefault("mandates", []).append({
+                "period": None,
+                "role": "Deputet i Kuvendit të Shqipërisë",
+                "current": True,
+                "sourceUrl": api_url,
+            })
+            sources["mandates"] = {"value": str(len(profile["mandates"])), "sourceUrl": api_url, "retrievedAt": retrieved_at}
+        photo_url = (record.get("fotoProfil") or "").strip()
+        if photo_url.startswith("http") and not (sources.get("photo") or {}).get("value"):
+            profile["officialPhoto"] = {
+                "sourceUrl": photo_url,
+                "licence": "No reuse licence published by the Parliament of Albania. Referenced by URL; file not copied.",
+                "retrievedAt": retrieved_at,
+                "copied": False,
+                "localPath": None,
+            }
+            profile["photoLicence"] = profile["officialPhoto"]["licence"]
+            if not profile.get("photo_source_url"):
+                profile["photo_source_url"] = photo_url
+            sources["photo"] = {"value": photo_url, "sourceUrl": photo_url, "retrievedAt": retrieved_at, "licence": profile["photoLicence"]}
+        detail = details.get(record.get("id"))
+        if detail and not profile.get("parliamentaryGroup"):
+            for struct in detail.get("strukturat") or []:
+                title = (struct.get("emer") or "").strip()
+                if struct.get("tip") == 6 or "grupi parlamentar" in title.casefold():
+                    set_field(profile, "parliamentaryGroup", title, api_url, retrieved_at)
+                    profile.setdefault("affiliations", []).append({"kind": "parliamentary-group", "label": title, "detail": None, "url": api_url})
+                    break
+        register_birth = civil_birth_date(record.get("ditlindje"))
+        cv_url = cv_document(detail)
+        cv_fields: Dict[str, Optional[str]] = {}
+        if cv_url:
+            try:
+                cv_fields = parse_cv_text(read_pdf_text(cv_url))
+                cv_used += 1
+            except Exception as exc:
+                conflicts.append({"vip_id": profile["id"], "name": profile["name"], "field": "cv", "chosen": "", "rejected": cv_url, "reason": str(exc)[:180]})
+        chosen_birth = cv_fields.get("dateOfBirth") or register_birth
+        existing_birth = profile.get("dateOfBirth")
+        if chosen_birth and existing_birth and chosen_birth != existing_birth:
+            conflicts.append({
+                "vip_id": profile["id"],
+                "name": profile["name"],
+                "field": "dateOfBirth",
+                "chosen": chosen_birth,
+                "rejected": existing_birth,
+                "reason": "official CV or Kuvendi register preferred over the previously stored date",
+            })
+        if chosen_birth and chosen_birth != existing_birth:
+            source = cv_url if cv_fields.get("dateOfBirth") else api_url
+            set_field(profile, "dateOfBirth", chosen_birth, source, retrieved_at, "CV" if cv_fields.get("dateOfBirth") else "Kuvendi register")
+        if cv_fields.get("placeOfBirth") and not profile.get("placeOfBirth"):
+            set_field(profile, "placeOfBirth", cv_fields["placeOfBirth"], cv_url or api_url, retrieved_at, "CV")
+        elif not profile.get("placeOfBirth") and (record.get("vendlindje") or "").strip():
+            set_field(profile, "placeOfBirth", title_case_source(record["vendlindje"].strip()), api_url, retrieved_at)
+        if cv_fields.get("education"):
+            previous = (sources.get("education") or {}).get("sourceUrl") or ""
+            if previous and "wikidata.org" in previous:
+                conflicts.append({"vip_id": profile["id"], "name": profile["name"], "field": "education", "chosen": cv_url or "", "rejected": previous, "reason": "Parliament CV preferred over Wikidata"})
+            set_field(profile, "education", cv_fields["education"], cv_url or api_url, retrieved_at, "Parliament CV")
+        if cv_fields.get("career"):
+            profile.setdefault("mandates", []).append({
+                "period": None,
+                "role": cv_fields["career"],
+                "current": False,
+                "sourceUrl": cv_url,
+            })
+            sources["mandates"] = {"value": str(len(profile["mandates"])), "sourceUrl": cv_url, "retrievedAt": retrieved_at, "notes": "Parliament CV biography"}
+            profile["careerSummary"] = cv_fields["career"]
+
+    still_open = [row for row in unresolved if "ambiguous" not in row["reason"] and "not in the current" in row["reason"]]
+    for row in still_open:
+        profile = next(item for item in export["profiles"] if item["id"] == row["vip_id"])
+        try:
+            qid = search_wikidata(re.sub(r"\s*\([^)]*\)", "", profile.get("name") or "").strip())
+        except Exception:
+            qid = None
+        time.sleep(0.15)
+        if not qid:
+            row["reason"] = row["reason"] + "; no unique Wikidata politician"
+            continue
+        row["reason"] = row["reason"] + f"; secondary Wikidata {qid} (not used as the identity source)"
+        # Secondary fill only for empty education, birth, and dated offices.
+        entity_url = f"https://www.wikidata.org/wiki/{qid}"
+        try:
+            entity = fetch_entities([qid]).get(qid) or {}
+        except Exception:
+            entity = {}
+        claims = entity.get("claims") or {}
+        if not profile.get("dateOfBirth"):
+            for statement in claims.get("P569") or []:
+                parsed = wd_time(statement.get("mainsnak", {}).get("datavalue", {}).get("value"))
+                if parsed:
+                    set_field(profile, "dateOfBirth", parsed, entity_url, retrieved_at, "secondary Wikidata")
+                    break
+        if not profile.get("education"):
+            labels = {item: label_of(ent) for item, ent in fetch_entities(claim_ids(claims, "P69")).items()} if claim_ids(claims, "P69") else {}
+            education = "; ".join(label for label in labels.values() if label)
+            if education:
+                set_field(profile, "education", education, entity_url, retrieved_at, "secondary Wikidata")
+        if not profile.get("mandates"):
+            labels = {item: label_of(ent) for item, ent in fetch_entities(claim_ids(claims, "P39")).items()} if claim_ids(claims, "P39") else {}
+            positions = positions_from_claims(claims, labels)
+            dated = [item for item in positions if item.get("start") or item.get("end")]
+            if dated:
+                profile["mandates"] = [{
+                    "period": " — ".join(part for part in (item.get("start"), item.get("end")) if part) or None,
+                    "role": item["role"],
+                    "current": bool(item.get("current")),
+                    "sourceUrl": entity_url,
+                } for item in dated[:8]]
+                profile.setdefault("fieldSources", {})["mandates"] = {"value": str(len(profile["mandates"])), "sourceUrl": entity_url, "retrievedAt": retrieved_at, "notes": "secondary Wikidata"}
+                current = [item for item in dated if item.get("current")]
+                if current and not profile.get("primaryRole"):
+                    set_field(profile, "currentRole", current[-1]["role"], entity_url, retrieved_at, "secondary Wikidata")
+
+    export["official_sources_retrieved_at"] = retrieved_at
+    EXPORT_PATH.write_text(json.dumps(export, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+    (OUT_DIR / "dob_conflicts.csv").write_text("", encoding="utf-8")
+    with (OUT_DIR / "dob_conflicts.csv").open("w", encoding="utf-8", newline="") as handle:
+        writer = csv.DictWriter(handle, fieldnames=["vip_id", "name", "field", "chosen", "rejected", "reason"])
+        writer.writeheader()
+        writer.writerows(conflicts)
+    with (OUT_DIR / "unresolved_names.csv").open("w", encoding="utf-8", newline="") as handle:
+        writer = csv.DictWriter(handle, fieldnames=["vip_id", "name", "reason"])
+        writer.writeheader()
+        writer.writerows(unresolved)
+    summary = rewrite_outputs_from_export()
+    summary["newlyMatchedKuvendi"] = matched
+    summary["cvDocumentsRead"] = cv_used
+    summary["unresolved"] = len(unresolved)
+    summary["conflicts"] = len(conflicts)
+    COVERAGE_PATH.write_text(json.dumps(summary, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+    return summary
+
+
+def is_politician_entity(claims: Dict[str, Any]) -> bool:
+    return "Q5" in claim_ids(claims, "P31") and bool(claim_ids(claims, "P106") or claim_ids(claims, "P39"))
+
+
+def apply_residual_matches() -> Dict[str, Any]:
+    """Second pass for spelling aliases and unique Wikidata identities still awaiting a name source."""
+    retrieved_at = datetime.now(timezone.utc).strftime("%Y-%m-%d")
+    export = json.loads(EXPORT_PATH.read_text(encoding="utf-8"))
+    records = json.loads(SNAPSHOT_PATH.read_text(encoding="utf-8"))
+    details = {}
+    detail_path = OUT_DIR / "kuvendi_details.snapshot.json"
+    if detail_path.exists():
+        details = json.loads(detail_path.read_text(encoding="utf-8"))
+    unresolved = []
+    for profile in export["profiles"]:
+        sources = profile.get("fieldSources") or {}
+        if (sources.get("fullName") or {}).get("value"):
+            continue
+        record, reason = match_kuvendi_record(profile.get("name") or "", records)
+        if record:
+            api_url = f"{KUVENDI_API}/{record.get('id')}"
+            set_field(profile, "fullName", profile.get("name") or "", api_url, retrieved_at, reason)
+            if record.get("status") == 0 and not profile.get("primaryRole"):
+                set_field(profile, "currentRole", "Deputet i Kuvendit të Shqipërisë", api_url, retrieved_at, reason)
+            if not profile.get("dateOfBirth"):
+                birth = civil_birth_date(record.get("ditlindje"))
+                if birth:
+                    set_field(profile, "dateOfBirth", birth, api_url, retrieved_at, "Kuvendi register")
+            detail = details.get(record.get("id"))
+            cv_url = cv_document(detail)
+            if cv_url and not profile.get("education"):
+                try:
+                    parsed = parse_cv_text(read_pdf_text(cv_url))
+                except Exception:
+                    parsed = {}
+                if parsed.get("education"):
+                    set_field(profile, "education", parsed["education"], cv_url, retrieved_at, "Parliament CV")
+                if parsed.get("dateOfBirth") and not profile.get("dateOfBirth"):
+                    set_field(profile, "dateOfBirth", parsed["dateOfBirth"], cv_url, retrieved_at, "CV")
+                if parsed.get("career") and not profile.get("careerSummary"):
+                    profile.setdefault("mandates", []).append({"period": None, "role": parsed["career"], "current": False, "sourceUrl": cv_url})
+                    profile["careerSummary"] = parsed["career"]
+                    profile.setdefault("fieldSources", {})["mandates"] = {"value": str(len(profile["mandates"])), "sourceUrl": cv_url, "retrievedAt": retrieved_at, "notes": "Parliament CV biography"}
+            continue
+        query = re.sub(r"\s*\([^)]*\)", "", profile.get("name") or "").strip()
+        qid = None
+        try:
+            data = http_json("https://www.wikidata.org/w/api.php?" + urllib.parse.urlencode({
+                "action": "wbsearchentities", "search": query, "language": "sq", "type": "item", "limit": 5, "format": "json",
+            }))
+            folded = fold(query)
+            candidates = []
+            for hit in data.get("search") or []:
+                label = fold(hit.get("label") or "")
+                if label == folded or levenshtein(label, folded) <= 2:
+                    candidates.append(hit.get("id"))
+            if len(candidates) == 1:
+                qid = candidates[0]
+        except Exception:
+            qid = None
+        time.sleep(0.15)
+        accepted = False
+        if qid:
+            entity = fetch_entities([qid]).get(qid) or {}
+            claims = entity.get("claims") or {}
+            if is_politician_entity(claims):
+                accepted = True
+                entity_url = f"https://www.wikidata.org/wiki/{qid}"
+                set_field(profile, "fullName", profile.get("name") or "", entity_url, retrieved_at, "unique Wikidata politician; secondary to a missing Kuvendi row")
+                if not profile.get("dateOfBirth"):
+                    for statement in claims.get("P569") or []:
+                        parsed = wd_time(statement.get("mainsnak", {}).get("datavalue", {}).get("value"))
+                        if parsed:
+                            set_field(profile, "dateOfBirth", parsed, entity_url, retrieved_at, "secondary Wikidata")
+                            break
+                if not profile.get("education") and claim_ids(claims, "P69"):
+                    labels = {item: label_of(ent) for item, ent in fetch_entities(claim_ids(claims, "P69")).items()}
+                    education = "; ".join(label for label in labels.values() if label)
+                    if education:
+                        set_field(profile, "education", education, entity_url, retrieved_at, "secondary Wikidata")
+                if not profile.get("primaryRole") and claim_ids(claims, "P39"):
+                    labels = {item: label_of(ent) for item, ent in fetch_entities(claim_ids(claims, "P39")).items()}
+                    positions = [item for item in positions_from_claims(claims, labels) if item.get("current")]
+                    if positions:
+                        set_field(profile, "currentRole", positions[-1]["role"], entity_url, retrieved_at, "secondary Wikidata")
+        if not accepted:
+            unresolved.append({"vip_id": profile["id"], "name": profile["name"], "reason": reason if not qid else f"Wikidata {qid} is not a unique human politician"})
+    with (OUT_DIR / "unresolved_names.csv").open("w", encoding="utf-8", newline="") as handle:
+        writer = csv.DictWriter(handle, fieldnames=["vip_id", "name", "reason"])
+        writer.writeheader()
+        writer.writerows(unresolved)
+    export["official_sources_retrieved_at"] = retrieved_at
+    EXPORT_PATH.write_text(json.dumps(export, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+    summary = rewrite_outputs_from_export()
+    summary["unresolved"] = len(unresolved)
+    COVERAGE_PATH.write_text(json.dumps(summary, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+    return summary
+
+
 def main() -> None:
     parser = argparse.ArgumentParser(description="Collect citable official politician fields")
     parser.add_argument("--offline", action="store_true", help="Reuse the Kuvendi snapshot and skip network lookups")
+    parser.add_argument("--enrich", action="store_true", help="Fill gaps with unique name variants and Parliament CVs")
+    parser.add_argument("--residual", action="store_true", help="Match remaining names by documented spellings and unique Wikidata identities")
     args = parser.parse_args()
-    summary = collect(offline=args.offline)
+    if args.residual:
+        summary = apply_residual_matches()
+    elif args.enrich:
+        summary = enrich()
+    else:
+        summary = collect(offline=args.offline)
     print(json.dumps(summary, ensure_ascii=False, indent=2))
 
 

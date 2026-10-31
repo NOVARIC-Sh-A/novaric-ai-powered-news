@@ -5,8 +5,10 @@ from scripts.collect_official_politician_sources import (
     fold,
     index_kuvendi,
     licence_allows_copy,
+    match_kuvendi_record,
     merge_profile,
     official_website,
+    parse_cv_text,
 )
 
 
@@ -47,6 +49,38 @@ class OfficialSourceRulesTest(unittest.TestCase):
         self.assertIsNone(merged["primaryRole"])
         self.assertIsNone(merged["shortBio"])
         self.assertIsNone(merged["electoralZone"])
+
+    def test_parenthetical_and_spelling_variants_match_once(self):
+        records = [
+            {"emer": "LAVDRIM", "mbiemer": "KRRASHI", "id": "1"},
+            {"emer": "FLORENC", "mbiemer": "SPAHO", "id": "2"},
+            {"emer": "ISUF", "mbiemer": "CELAJ", "id": "3"},
+            {"emer": "ARBI", "mbiemer": "AGALLIU", "id": "4"},
+        ]
+        record, reason = match_kuvendi_record("Lavdrim Krashi (Dibër)", records)
+        self.assertEqual(record["id"], "1")
+        self.assertIn("variant", reason)
+        record, reason = match_kuvendi_record("Florenca Spaho", records)
+        self.assertEqual(record["id"], "2")
+        record, reason = match_kuvendi_record("Gjek Celaj", records)
+        self.assertIsNone(record)
+        self.assertIn("not in the current", reason)
+        record, reason = match_kuvendi_record("Anila Agalliu", records)
+        self.assertIsNone(record)
+        records.append({"emer": "ILIR", "mbiemer": "METAJ", "id": "meta-wrong"})
+        record, reason = match_kuvendi_record("Ilir Meta", records)
+        self.assertIsNone(record)
+        self.assertIn("not in the current", reason)
+
+    def test_cv_text_extracts_official_birth_and_education(self):
+        parsed = parse_cv_text(
+            "Datëlindja: 16.4.1962 Vendlindja: Berat E-mail: a@parlament.al "
+            "Jetëshkrimi: Ka kryer studimet në Universitetin Buqësor të Tiranës dhe ka punuar si drejtor."
+        )
+        self.assertEqual(parsed["dateOfBirth"], "1962-04-16")
+        self.assertEqual(parsed["placeOfBirth"], "Berat")
+        self.assertIn("Universitetin Buqësor", parsed["education"])
+        self.assertIn("drejtor", parsed["career"])
 
     def test_licence_and_official_hosts(self):
         self.assertTrue(licence_allows_copy("CC BY-SA 4.0"))
