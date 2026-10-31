@@ -66,16 +66,20 @@ def fetch_json(url: str):
         return json.loads(resp.read().decode())
 
 
-def download(url: str, dest: Path) -> None:
+MAX_BYTES = 12_000_000
+
+
+def download(url: str, dest: Path) -> int:
     req = urllib.request.Request(quote_url(url), headers={"User-Agent": UA, "Referer": "https://www.parlament.al/"})
-    with urllib.request.urlopen(req, timeout=60) as resp:
-        length = resp.headers.get("Content-Length")
-        if length and int(length) > 1_500_000:
+    with urllib.request.urlopen(req, timeout=90) as resp:
+        length = int(resp.headers.get("Content-Length") or 0)
+        if length and length > MAX_BYTES:
             raise RuntimeError(f"skip large file {length}")
-        data = resp.read(1_500_001)
-        if len(data) > 1_500_000:
-            raise RuntimeError("skip large file")
+        data = resp.read(MAX_BYTES + 1)
+        if len(data) > MAX_BYTES:
+            raise RuntimeError(f"skip large file {len(data)}")
         dest.write_bytes(data)
+        return len(data)
 
 
 def classify_tail(folded_line: str):
@@ -96,37 +100,76 @@ def parse_page(text: str):
     rows = []
     for raw in text.splitlines():
         line = raw.strip()
-        if not re.match(r"^\d{3}\b", line):
+        ident = re.match(r"^(\d{3})\b", line)
+        if not ident:
             continue
         name, choice = classify_tail(fold(line))
         if name and choice:
-            rows.append((name, choice, vote_no))
+            rows.append((name, choice, vote_no, int(ident.group(1))))
     return rows
 
 
 def ocr_pdf(pdf_path: Path) -> list:
+    """OCR every page. Returns one list of rows per page so a bundle can be split into votes."""
+    info = subprocess.run(["pdfinfo", str(pdf_path)], check=False, stdout=subprocess.PIPE, stderr=subprocess.DEVNULL, text=True)
+    pages = 0
+    for line in (info.stdout or "").splitlines():
+        if line.startswith("Pages:"):
+            pages = int(line.split()[1])
+    if pages <= 0:
+        pages = 8
+    page_rows = []
     with tempfile.TemporaryDirectory() as tmp:
-        prefix = Path(tmp) / "page"
-        subprocess.run(
-            ["pdftoppm", "-png", "-r", "110", "-f", "1", "-l", "8", str(pdf_path), str(prefix)],
-            check=True,
-            stdout=subprocess.DEVNULL,
-            stderr=subprocess.DEVNULL,
-        )
-        rows = []
-        for image in sorted(Path(tmp).glob("page*.png")):
-            env = os.environ.copy()
-            env["OMP_THREAD_LIMIT"] = "1"
-            proc = subprocess.run(
-                ["timeout", "30", "tesseract", str(image), "stdout", "-l", "sqi", "--psm", "6", "--tessdata-dir", TESSDATA],
-                env=env,
-                check=False,
-                stdout=subprocess.PIPE,
+        start = 1
+        while start <= pages:
+            end = min(pages, start + 5)
+            prefix = Path(tmp) / f"p{start}"
+            subprocess.run(
+                ["pdftoppm", "-png", "-r", "110", "-f", str(start), "-l", str(end), str(pdf_path), str(prefix)],
+                check=True,
+                stdout=subprocess.DEVNULL,
                 stderr=subprocess.DEVNULL,
-                text=True,
             )
-            rows.extend(parse_page(proc.stdout or ""))
-        return rows
+            for image in sorted(Path(tmp).glob(f"p{start}*.png")):
+                env = os.environ.copy()
+                env["OMP_THREAD_LIMIT"] = "1"
+                proc = subprocess.run(
+                    ["timeout", "30", "tesseract", str(image), "stdout", "-l", "sqi", "--psm", "6", "--tessdata-dir", TESSDATA],
+                    env=env,
+                    check=False,
+                    stdout=subprocess.PIPE,
+                    stderr=subprocess.DEVNULL,
+                    text=True,
+                )
+                page_rows.append(parse_page(proc.stdout or ""))
+                image.unlink(missing_ok=True)
+            start = end + 1
+    return page_rows
+
+
+def split_vote_pages(page_rows: list) -> list:
+    """Split a multi-vote PDF when the member id restarts or the vote number changes."""
+    groups = []
+    current = []
+    current_vote = None
+    for page in page_rows:
+        if not page:
+            continue
+        vote_nos = {row[2] for row in page if row[2]}
+        vote_no = next(iter(vote_nos)) if len(vote_nos) == 1 else None
+        first_id = page[0][3]
+        last_id = current[-1][3] if current else 0
+        restarted = current and first_id <= 3 and last_id > 15
+        vote_changed = current and vote_no and current_vote and vote_no != current_vote
+        if restarted or vote_changed:
+            groups.append(current)
+            current = []
+        current.extend(page)
+        if vote_no:
+            current_vote = vote_no
+    if current:
+        groups.append(current)
+    return groups or [[]]
 
 
 def process_doc(doc: dict) -> dict:
@@ -136,15 +179,22 @@ def process_doc(doc: dict) -> dict:
         pdf = Path(tmp) / "vote.pdf"
         try:
             download(url, pdf)
-            rows = ocr_pdf(pdf)
+            page_rows = ocr_pdf(pdf)
         except Exception as exc:
-            return {"id": doc_id, "url": url, "error": str(exc)[:180], "rows": []}
+            return {"id": doc_id, "url": url, "error": str(exc)[:180], "rows": [], "votes": []}
+    votes = []
+    for group in split_vote_pages(page_rows):
+        flat = [(name, choice, vote_no) for name, choice, vote_no, _member_id in group]
+        if len(flat) >= 8:
+            votes.append(flat)
+    rows = [row for vote in votes for row in vote]
     return {
         "id": doc_id,
         "url": url,
         "fileName": doc.get("fileName"),
         "dateKrijimi": (doc.get("dateKrijimi") or "")[:10],
         "rows": rows,
+        "votes": votes,
     }
 
 
@@ -183,11 +233,21 @@ def match_name(folded_name: str, profiles: list, by_key: dict):
 
 
 def main():
+    import argparse
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--ids-file", help="JSON list of document ids or objects with id")
+    parser.add_argument("--merge", action="store_true", help="Add these votes onto the existing score file")
+    args = parser.parse_args()
+
     docs = fetch_json(DOCS_URL)
     selected = [
         d for d in docs
         if d.get("tipDokumentId") == VOTE_TYPE and (d.get("dateKrijimi") or "") >= SINCE and d.get("url")
     ]
+    if args.ids_file:
+        raw_ids = json.loads(Path(args.ids_file).read_text(encoding="utf-8"))
+        wanted = {item["id"] if isinstance(item, dict) else item for item in raw_ids}
+        selected = [d for d in selected if d["id"] in wanted]
     print(f"roll-call files since {SINCE}: {len(selected)}", flush=True)
     profiles = load_names()
     by_key = defaultdict(list)
@@ -215,10 +275,12 @@ def main():
         if len(doc["rows"]) < 8:
             continue
         day = doc.get("dateKrijimi") or "unknown"
-        vote_nos = {row[2] for row in doc["rows"] if row[2]}
-        vote_no = next(iter(vote_nos)) if len(vote_nos) == 1 else doc["id"]
-        for name, choice, _ in doc["rows"]:
-            votes[(day, str(vote_no), doc["url"])].append((name, choice, doc["url"]))
+        vote_groups = doc.get("votes") or [doc["rows"]]
+        for index, group in enumerate(vote_groups):
+            vote_nos = {row[2] for row in group if row[2]}
+            vote_no = next(iter(vote_nos)) if len(vote_nos) == 1 else f"{doc['id']}-{index}"
+            for name, choice, _ in group:
+                votes[(day, str(vote_no), doc["url"])].append((name, choice, doc["url"]))
 
     # A vote can span several PDFs. Merge by (day, vote number), keeping source URLs.
     merged = defaultdict(lambda: {"rows": [], "urls": set(), "day": None})
@@ -294,20 +356,44 @@ def main():
             "sourceUrls": sorted(stats["sources"])[:12],
         }
 
+    previous = None
+    if args.merge and OUT.exists():
+        previous = json.loads(OUT.read_text(encoding="utf-8"))
+        for pid, stats in people.items():
+            prev = previous["people"].get(pid)
+            if not prev:
+                previous["people"][pid] = stats
+                continue
+            for key in ("rollcalls", "present", "participated", "aligned", "comparable"):
+                prev[key] = int(prev.get(key) or 0) + int(stats[key])
+            urls = list(dict.fromkeys((prev.get("sourceUrls") or []) + stats["sourceUrls"]))
+            prev["sourceUrls"] = urls[:12]
+            prev["sourceCount"] = len(urls)
+        people = previous["people"]
+        used_votes += int(previous.get("votesUsed") or 0)
+        matched_rows += int(previous.get("matchedRows") or 0)
+        unmatched += int(previous.get("unmatchedRows") or 0)
+
+    listed = int(previous.get("filesListed") or 0) if previous else len(selected)
+    if previous:
+        listed = int(previous.get("filesListed") or listed)
+    failed_now = len(errors)
+    parsed_now = len(selected) - failed_now
     payload = {
         "retrievedAt": RETRIEVED,
         "source": DOCS_URL,
         "documentType": "Votimi i deputetëve",
         "documentTypeId": VOTE_TYPE,
         "since": SINCE,
-        "filesListed": len(selected),
-        "filesFailed": len(errors),
+        "filesListed": listed if previous else len(selected),
+        "filesFailed": failed_now if previous else len(errors),
+        "filesParsed": (int(previous.get("filesListed") or 0) - int(previous.get("filesFailed") or 0) + parsed_now) if previous else parsed_now,
         "votesUsed": used_votes,
         "matchedRows": matched_rows,
         "unmatchedRows": unmatched,
         "minimumRollcalls": 8,
         "people": people,
-        "failures": errors[:30],
+        "failures": errors[:40],
         "blocked": [
             {
                 "source": "http://www.ildkpki.al",

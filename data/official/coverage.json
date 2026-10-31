@@ -22,12 +22,12 @@
       "awaiting": 73
     },
     "education": {
-      "filled": 180,
-      "awaiting": 99
+      "filled": 194,
+      "awaiting": 85
     },
     "mandates": {
-      "filled": 242,
-      "awaiting": 37
+      "filled": 254,
+      "awaiting": 25
     },
     "parliamentaryGroup": {
       "filled": 245,
@@ -74,5 +74,6 @@
     "Sofjan Jaupaj",
     "Majlinda Dhuka",
     "Bajram Begaj"
-  ]
+  ],
+  "note": "NOVARIC® Sh.A. Education and mandate counts include Parliament CV and register rows added on 2026-10-31. Empty fields stay awaiting data."
 }

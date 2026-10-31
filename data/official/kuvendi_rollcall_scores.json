@@ -5,19 +5,20 @@
   "documentTypeId": "007c261b-d399-43d8-bb88-845aea26f354",
   "since": "2025-09-01",
   "filesListed": 291,
-  "filesFailed": 63,
-  "votesUsed": 218,
-  "matchedRows": 34999,
-  "unmatchedRows": 1738,
+  "filesFailed": 0,
+  "filesParsed": 291,
+  "votesUsed": 514,
+  "matchedRows": 71509,
+  "unmatchedRows": 3894,
   "minimumRollcalls": 8,
   "people": {
     "vip158": {
-      "rollcalls": 207,
-      "present": 198,
-      "participated": 198,
-      "aligned": 198,
-      "comparable": 198,
-      "sourceCount": 207,
+      "rollcalls": 482,
+      "present": 465,
+      "participated": 464,
+      "aligned": 452,
+      "comparable": 464,
+      "sourceCount": 24,
       "sourceUrls": [
         "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202510200910009778Fletë votimi.pdf",
         "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202510201055037455Fletë votimi.pdf",
@@ -34,12 +35,12 @@
       ]
     },
     "vip179": {
-      "rollcalls": 209,
-      "present": 209,
-      "participated": 206,
-      "aligned": 206,
-      "comparable": 206,
-      "sourceCount": 209,
+      "rollcalls": 497,
+      "present": 497,
+      "participated": 487,
+      "aligned": 486,
+      "comparable": 487,
+      "sourceCount": 24,
       "sourceUrls": [
         "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202510200910009778Fletë votimi.pdf",
         "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202510201055037455Fletë votimi.pdf",
@@ -56,12 +57,12 @@
       ]
     },
     "vip90": {
-      "rollcalls": 209,
-      "present": 202,
-      "participated": 198,
-      "aligned": 198,
-      "comparable": 198,
-      "sourceCount": 209,
+      "rollcalls": 496,
+      "present": 484,
+      "participated": 471,
+      "aligned": 469,
+      "comparable": 471,
+      "sourceCount": 24,
       "sourceUrls": [
         "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202510200910009778Fletë votimi.pdf",
         "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202510201055037455Fletë votimi.pdf",
@@ -78,12 +79,12 @@
       ]
     },
     "vip203": {
-      "rollcalls": 209,
-      "present": 202,
-      "participated": 198,
-      "aligned": 198,
-      "comparable": 198,
-      "sourceCount": 209,
+      "rollcalls": 496,
+      "present": 484,
+      "participated": 471,
+      "aligned": 469,
+      "comparable": 471,
+      "sourceCount": 24,
       "sourceUrls": [
         "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202510200910009778Fletë votimi.pdf",
         "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202510201055037455Fletë votimi.pdf",
@@ -100,12 +101,12 @@
       ]
     },
     "vip70": {
-      "rollcalls": 206,
-      "present": 206,
-      "participated": 202,
-      "aligned": 202,
-      "comparable": 202,
-      "sourceCount": 206,
+      "rollcalls": 475,
+      "present": 475,
+      "participated": 464,
+      "aligned": 464,
+      "comparable": 464,
+      "sourceCount": 24,
       "sourceUrls": [
         "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202510200910009778Fletë votimi.pdf",
         "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202510201055037455Fletë votimi.pdf",
@@ -122,12 +123,12 @@
       ]
     },
     "vip256": {
-      "rollcalls": 210,
-      "present": 191,
-      "participated": 191,
-      "aligned": 191,
-      "comparable": 191,
-      "sourceCount": 210,
+      "rollcalls": 489,
+      "present": 451,
+      "participated": 444,
+      "aligned": 444,
+      "comparable": 444,
+      "sourceCount": 24,
       "sourceUrls": [
         "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202510200910009778Fletë votimi.pdf",
         "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202510201055037455Fletë votimi.pdf",
@@ -144,12 +145,12 @@
       ]
     },
     "vip228": {
-      "rollcalls": 211,
-      "present": 211,
-      "participated": 145,
-      "aligned": 145,
-      "comparable": 145,
-      "sourceCount": 211,
+      "rollcalls": 499,
+      "present": 499,
+      "participated": 384,
+      "aligned": 384,
+      "comparable": 384,
+      "sourceCount": 24,
       "sourceUrls": [
         "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202510200910009778Fletë votimi.pdf",
         "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202510201055037455Fletë votimi.pdf",
@@ -166,12 +167,12 @@
       ]
     },
     "vip229": {
-      "rollcalls": 200,
-      "present": 200,
-      "participated": 12,
-      "aligned": 12,
-      "comparable": 12,
-      "sourceCount": 200,
+      "rollcalls": 469,
+      "present": 469,
+      "participated": 56,
+      "aligned": 56,
+      "comparable": 56,
+      "sourceCount": 24,
       "sourceUrls": [
         "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202510200910009778Fletë votimi.pdf",
         "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202510201055037455Fletë votimi.pdf",
@@ -188,12 +189,12 @@
       ]
     },
     "vip1": {
-      "rollcalls": 205,
-      "present": 174,
-      "participated": 34,
-      "aligned": 34,
-      "comparable": 34,
-      "sourceCount": 205,
+      "rollcalls": 470,
+      "present": 395,
+      "participated": 74,
+      "aligned": 74,
+      "comparable": 74,
+      "sourceCount": 24,
       "sourceUrls": [
         "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202510200910009778Fletë votimi.pdf",
         "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202510201055037455Fletë votimi.pdf",
@@ -210,12 +211,12 @@
       ]
     },
     "vip12": {
-      "rollcalls": 207,
-      "present": 204,
-      "participated": 185,
-      "aligned": 167,
-      "comparable": 185,
-      "sourceCount": 207,
+      "rollcalls": 483,
+      "present": 474,
+      "participated": 349,
+      "aligned": 308,
+      "comparable": 349,
+      "sourceCount": 24,
       "sourceUrls": [
         "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202510200910009778Fletë votimi.pdf",
         "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202510201055037455Fletë votimi.pdf",
@@ -232,12 +233,12 @@
       ]
     },
     "vip155": {
-      "rollcalls": 207,
-      "present": 204,
-      "participated": 185,
-      "aligned": 167,
-      "comparable": 185,
-      "sourceCount": 207,
+      "rollcalls": 483,
+      "present": 474,
+      "participated": 349,
+      "aligned": 308,
+      "comparable": 349,
+      "sourceCount": 24,
       "sourceUrls": [
         "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202510200910009778Fletë votimi.pdf",
         "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202510201055037455Fletë votimi.pdf",
@@ -254,12 +255,12 @@
       ]
     },
     "vip15": {
-      "rollcalls": 205,
-      "present": 194,
-      "participated": 135,
-      "aligned": 135,
-      "comparable": 135,
-      "sourceCount": 205,
+      "rollcalls": 478,
+      "present": 467,
+      "participated": 260,
+      "aligned": 260,
+      "comparable": 260,
+      "sourceCount": 24,
       "sourceUrls": [
         "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202510200910009778Fletë votimi.pdf",
         "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202510201055037455Fletë votimi.pdf",
@@ -276,12 +277,12 @@
       ]
     },
     "vip91": {
-      "rollcalls": 208,
-      "present": 206,
-      "participated": 205,
-      "aligned": 204,
-      "comparable": 205,
-      "sourceCount": 208,
+      "rollcalls": 484,
+      "present": 482,
+      "participated": 479,
+      "aligned": 478,
+      "comparable": 479,
+      "sourceCount": 24,
       "sourceUrls": [
         "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202510200910009778Fletë votimi.pdf",
         "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202510201055037455Fletë votimi.pdf",
@@ -298,12 +299,12 @@
       ]
     },
     "vip154": {
-      "rollcalls": 208,
-      "present": 206,
-      "participated": 205,
-      "aligned": 204,
-      "comparable": 205,
-      "sourceCount": 208,
+      "rollcalls": 484,
+      "present": 482,
+      "participated": 479,
+      "aligned": 478,
+      "comparable": 479,
+      "sourceCount": 24,
       "sourceUrls": [
         "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202510200910009778Fletë votimi.pdf",
         "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202510201055037455Fletë votimi.pdf",
@@ -320,12 +321,12 @@
       ]
     },
     "vip248": {
-      "rollcalls": 210,
-      "present": 207,
-      "participated": 206,
-      "aligned": 206,
-      "comparable": 206,
-      "sourceCount": 210,
+      "rollcalls": 493,
+      "present": 466,
+      "participated": 458,
+      "aligned": 458,
+      "comparable": 458,
+      "sourceCount": 24,
       "sourceUrls": [
         "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202510200910009778Fletë votimi.pdf",
         "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202510201055037455Fletë votimi.pdf",
@@ -342,12 +343,12 @@
       ]
     },
     "vip10": {
-      "rollcalls": 206,
-      "present": 144,
-      "participated": 48,
-      "aligned": 48,
-      "comparable": 48,
-      "sourceCount": 206,
+      "rollcalls": 436,
+      "present": 247,
+      "participated": 79,
+      "aligned": 79,
+      "comparable": 79,
+      "sourceCount": 24,
       "sourceUrls": [
         "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202510200910009778Fletë votimi.pdf",
         "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202510201055037455Fletë votimi.pdf",
@@ -364,12 +365,12 @@
       ]
     },
     "vip11": {
-      "rollcalls": 182,
-      "present": 162,
-      "participated": 151,
-      "aligned": 151,
-      "comparable": 151,
-      "sourceCount": 182,
+      "rollcalls": 403,
+      "present": 373,
+      "participated": 353,
+      "aligned": 353,
+      "comparable": 353,
+      "sourceCount": 24,
       "sourceUrls": [
         "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202510200910009778Fletë votimi.pdf",
         "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202510201055037455Fletë votimi.pdf",
@@ -386,12 +387,12 @@
       ]
     },
     "vip231": {
-      "rollcalls": 182,
-      "present": 162,
-      "participated": 151,
-      "aligned": 151,
-      "comparable": 151,
-      "sourceCount": 182,
+      "rollcalls": 403,
+      "present": 373,
+      "participated": 353,
+      "aligned": 353,
+      "comparable": 353,
+      "sourceCount": 24,
       "sourceUrls": [
         "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202510200910009778Fletë votimi.pdf",
         "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202510201055037455Fletë votimi.pdf",
@@ -408,12 +409,12 @@
       ]
     },
     "vip62": {
-      "rollcalls": 205,
-      "present": 198,
-      "participated": 193,
-      "aligned": 192,
-      "comparable": 193,
-      "sourceCount": 205,
+      "rollcalls": 488,
+      "present": 466,
+      "participated": 399,
+      "aligned": 397,
+      "comparable": 399,
+      "sourceCount": 24,
       "sourceUrls": [
         "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202510200910009778Fletë votimi.pdf",
         "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202510201055037455Fletë votimi.pdf",
@@ -430,12 +431,12 @@
       ]
     },
     "vip127": {
-      "rollcalls": 205,
-      "present": 198,
-      "participated": 193,
-      "aligned": 192,
-      "comparable": 193,
-      "sourceCount": 205,
+      "rollcalls": 488,
+      "present": 466,
+      "participated": 399,
+      "aligned": 397,
+      "comparable": 399,
+      "sourceCount": 24,
       "sourceUrls": [
         "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202510200910009778Fletë votimi.pdf",
         "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202510201055037455Fletë votimi.pdf",
@@ -452,12 +453,12 @@
       ]
     },
     "vip156": {
-      "rollcalls": 205,
-      "present": 198,
-      "participated": 193,
-      "aligned": 192,
-      "comparable": 193,
-      "sourceCount": 205,
+      "rollcalls": 488,
+      "present": 466,
+      "participated": 399,
+      "aligned": 397,
+      "comparable": 399,
+      "sourceCount": 24,
       "sourceUrls": [
         "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202510200910009778Fletë votimi.pdf",
         "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202510201055037455Fletë votimi.pdf",
@@ -474,12 +475,12 @@
       ]
     },
     "vip218": {
-      "rollcalls": 200,
-      "present": 200,
-      "participated": 14,
-      "aligned": 14,
-      "comparable": 14,
-      "sourceCount": 200,
+      "rollcalls": 474,
+      "present": 474,
+      "participated": 33,
+      "aligned": 32,
+      "comparable": 32,
+      "sourceCount": 24,
       "sourceUrls": [
         "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202510200910009778Fletë votimi.pdf",
         "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202510201055037455Fletë votimi.pdf",
@@ -496,12 +497,12 @@
       ]
     },
     "vip263": {
-      "rollcalls": 210,
-      "present": 210,
-      "participated": 209,
-      "aligned": 209,
-      "comparable": 209,
-      "sourceCount": 210,
+      "rollcalls": 498,
+      "present": 498,
+      "participated": 494,
+      "aligned": 494,
+      "comparable": 494,
+      "sourceCount": 24,
       "sourceUrls": [
         "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202510200910009778Fletë votimi.pdf",
         "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202510201055037455Fletë votimi.pdf",
@@ -518,12 +519,12 @@
       ]
     },
     "vip276": {
-      "rollcalls": 201,
-      "present": 201,
-      "participated": 2,
-      "aligned": 2,
-      "comparable": 2,
-      "sourceCount": 201,
+      "rollcalls": 477,
+      "present": 477,
+      "participated": 13,
+      "aligned": 13,
+      "comparable": 13,
+      "sourceCount": 24,
       "sourceUrls": [
         "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202510200910009778Fletë votimi.pdf",
         "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202510201055037455Fletë votimi.pdf",
@@ -540,12 +541,12 @@
       ]
     },
     "vip257": {
-      "rollcalls": 204,
-      "present": 204,
-      "participated": 202,
-      "aligned": 202,
-      "comparable": 202,
-      "sourceCount": 204,
+      "rollcalls": 479,
+      "present": 479,
+      "participated": 467,
+      "aligned": 467,
+      "comparable": 467,
+      "sourceCount": 24,
       "sourceUrls": [
         "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202510200910009778Fletë votimi.pdf",
         "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202510201055037455Fletë votimi.pdf",
@@ -562,12 +563,12 @@
       ]
     },
     "vip250": {
-      "rollcalls": 196,
-      "present": 196,
-      "participated": 27,
-      "aligned": 27,
-      "comparable": 27,
-      "sourceCount": 196,
+      "rollcalls": 454,
+      "present": 454,
+      "participated": 83,
+      "aligned": 83,
+      "comparable": 83,
+      "sourceCount": 24,
       "sourceUrls": [
         "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202510200910009778Fletë votimi.pdf",
         "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202510201055037455Fletë votimi.pdf",
@@ -584,12 +585,12 @@
       ]
     },
     "vip232": {
-      "rollcalls": 209,
-      "present": 209,
-      "participated": 57,
-      "aligned": 55,
-      "comparable": 55,
-      "sourceCount": 209,
+      "rollcalls": 482,
+      "present": 482,
+      "participated": 186,
+      "aligned": 183,
+      "comparable": 183,
+      "sourceCount": 24,
       "sourceUrls": [
         "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202510200910009778Fletë votimi.pdf",
         "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202510201055037455Fletë votimi.pdf",
@@ -606,12 +607,12 @@
       ]
     },
     "vip181": {
-      "rollcalls": 204,
-      "present": 204,
-      "participated": 46,
-      "aligned": 45,
-      "comparable": 46,
-      "sourceCount": 204,
+      "rollcalls": 479,
+      "present": 479,
+      "participated": 151,
+      "aligned": 147,
+      "comparable": 150,
+      "sourceCount": 24,
       "sourceUrls": [
         "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202510200910009778Fletë votimi.pdf",
         "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202510201055037455Fletë votimi.pdf",
@@ -628,12 +629,12 @@
       ]
     },
     "vip2": {
-      "rollcalls": 210,
-      "present": 210,
-      "participated": 17,
-      "aligned": 16,
-      "comparable": 16,
-      "sourceCount": 210,
+      "rollcalls": 494,
+      "present": 485,
+      "participated": 48,
+      "aligned": 47,
+      "comparable": 47,
+      "sourceCount": 24,
       "sourceUrls": [
         "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202510200910009778Fletë votimi.pdf",
         "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202510201055037455Fletë votimi.pdf",
@@ -650,12 +651,12 @@
       ]
     },
     "vip45": {
-      "rollcalls": 203,
-      "present": 203,
-      "participated": 43,
-      "aligned": 43,
-      "comparable": 43,
-      "sourceCount": 203,
+      "rollcalls": 476,
+      "present": 476,
+      "participated": 64,
+      "aligned": 64,
+      "comparable": 64,
+      "sourceCount": 24,
       "sourceUrls": [
         "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202510200910009778Fletë votimi.pdf",
         "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202510201055037455Fletë votimi.pdf",
@@ -672,12 +673,12 @@
       ]
     },
     "vip83": {
-      "rollcalls": 199,
-      "present": 199,
-      "participated": 54,
-      "aligned": 54,
-      "comparable": 54,
-      "sourceCount": 199,
+      "rollcalls": 444,
+      "present": 444,
+      "participated": 176,
+      "aligned": 176,
+      "comparable": 176,
+      "sourceCount": 24,
       "sourceUrls": [
         "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202510200910009778Fletë votimi.pdf",
         "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202510201055037455Fletë votimi.pdf",
@@ -694,12 +695,12 @@
       ]
     },
     "vip132": {
-      "rollcalls": 199,
-      "present": 199,
-      "participated": 54,
-      "aligned": 54,
-      "comparable": 54,
-      "sourceCount": 199,
+      "rollcalls": 444,
+      "present": 444,
+      "participated": 176,
+      "aligned": 176,
+      "comparable": 176,
+      "sourceCount": 24,
       "sourceUrls": [
         "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202510200910009778Fletë votimi.pdf",
         "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202510201055037455Fletë votimi.pdf",
@@ -716,12 +717,12 @@
       ]
     },
     "vip246": {
-      "rollcalls": 209,
-      "present": 209,
-      "participated": 208,
-      "aligned": 208,
-      "comparable": 208,
-      "sourceCount": 209,
+      "rollcalls": 489,
+      "present": 489,
+      "participated": 484,
+      "aligned": 484,
+      "comparable": 484,
+      "sourceCount": 24,
       "sourceUrls": [
         "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202510200910009778Fletë votimi.pdf",
         "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202510201055037455Fletë votimi.pdf",
@@ -738,12 +739,12 @@
       ]
     },
     "vip235": {
-      "rollcalls": 209,
-      "present": 124,
-      "participated": 98,
-      "aligned": 95,
-      "comparable": 98,
-      "sourceCount": 209,
+      "rollcalls": 495,
+      "present": 382,
+      "participated": 332,
+      "aligned": 326,
+      "comparable": 332,
+      "sourceCount": 24,
       "sourceUrls": [
         "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202510200910009778Fletë votimi.pdf",
         "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202510201055037455Fletë votimi.pdf",
@@ -760,12 +761,12 @@
       ]
     },
     "vip209": {
-      "rollcalls": 209,
-      "present": 206,
-      "participated": 204,
-      "aligned": 203,
-      "comparable": 204,
-      "sourceCount": 209,
+      "rollcalls": 485,
+      "present": 482,
+      "participated": 466,
+      "aligned": 465,
+      "comparable": 466,
+      "sourceCount": 24,
       "sourceUrls": [
         "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202510200910009778Fletë votimi.pdf",
         "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202510201055037455Fletë votimi.pdf",
@@ -782,12 +783,12 @@
       ]
     },
     "vip196": {
-      "rollcalls": 209,
-      "present": 209,
-      "participated": 51,
-      "aligned": 50,
-      "comparable": 50,
-      "sourceCount": 209,
+      "rollcalls": 494,
+      "present": 494,
+      "participated": 149,
+      "aligned": 145,
+      "comparable": 148,
+      "sourceCount": 24,
       "sourceUrls": [
         "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202510200910009778Fletë votimi.pdf",
         "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202510201055037455Fletë votimi.pdf",
@@ -804,12 +805,12 @@
       ]
     },
     "vip143": {
-      "rollcalls": 210,
-      "present": 210,
-      "participated": 33,
-      "aligned": 33,
-      "comparable": 33,
-      "sourceCount": 210,
+      "rollcalls": 489,
+      "present": 489,
+      "participated": 114,
+      "aligned": 114,
+      "comparable": 114,
+      "sourceCount": 24,
       "sourceUrls": [
         "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202510200910009778Fletë votimi.pdf",
         "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202510201055037455Fletë votimi.pdf",
@@ -826,12 +827,12 @@
       ]
     },
     "vip195": {
-      "rollcalls": 210,
-      "present": 210,
-      "participated": 33,
-      "aligned": 33,
-      "comparable": 33,
-      "sourceCount": 210,
+      "rollcalls": 489,
+      "present": 489,
+      "participated": 114,
+      "aligned": 114,
+      "comparable": 114,
+      "sourceCount": 24,
       "sourceUrls": [
         "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202510200910009778Fletë votimi.pdf",
         "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202510201055037455Fletë votimi.pdf",
@@ -848,12 +849,12 @@
       ]
     },
     "vip103": {
-      "rollcalls": 213,
-      "present": 213,
-      "participated": 15,
-      "aligned": 15,
-      "comparable": 15,
-      "sourceCount": 213,
+      "rollcalls": 480,
+      "present": 480,
+      "participated": 41,
+      "aligned": 41,
+      "comparable": 41,
+      "sourceCount": 24,
       "sourceUrls": [
         "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202510200910009778Fletë votimi.pdf",
         "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202510201055037455Fletë votimi.pdf",
@@ -870,12 +871,12 @@
       ]
     },
     "vip190": {
-      "rollcalls": 213,
-      "present": 213,
-      "participated": 15,
-      "aligned": 15,
-      "comparable": 15,
-      "sourceCount": 213,
+      "rollcalls": 480,
+      "present": 480,
+      "participated": 41,
+      "aligned": 41,
+      "comparable": 41,
+      "sourceCount": 24,
       "sourceUrls": [
         "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202510200910009778Fletë votimi.pdf",
         "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202510201055037455Fletë votimi.pdf",
@@ -892,12 +893,12 @@
       ]
     },
     "vip29": {
-      "rollcalls": 207,
-      "present": 202,
-      "participated": 55,
-      "aligned": 55,
-      "comparable": 55,
-      "sourceCount": 207,
+      "rollcalls": 480,
+      "present": 448,
+      "participated": 117,
+      "aligned": 117,
+      "comparable": 117,
+      "sourceCount": 24,
       "sourceUrls": [
         "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202510200910009778Fletë votimi.pdf",
         "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202510201055037455Fletë votimi.pdf",
@@ -914,12 +915,12 @@
       ]
     },
     "vip165": {
-      "rollcalls": 207,
-      "present": 202,
-      "participated": 55,
-      "aligned": 55,
-      "comparable": 55,
-      "sourceCount": 207,
+      "rollcalls": 480,
+      "present": 448,
+      "participated": 117,
+      "aligned": 117,
+      "comparable": 117,
+      "sourceCount": 24,
       "sourceUrls": [
         "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202510200910009778Fletë votimi.pdf",
         "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202510201055037455Fletë votimi.pdf",
@@ -936,12 +937,12 @@
       ]
     },
     "vip118": {
-      "rollcalls": 209,
-      "present": 198,
-      "participated": 43,
-      "aligned": 43,
-      "comparable": 43,
-      "sourceCount": 209,
+      "rollcalls": 493,
+      "present": 455,
+      "participated": 75,
+      "aligned": 75,
+      "comparable": 75,
+      "sourceCount": 24,
       "sourceUrls": [
         "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202510200910009778Fletë votimi.pdf",
         "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202510201055037455Fletë votimi.pdf",
@@ -958,12 +959,12 @@
       ]
     },
     "vip35": {
-      "rollcalls": 206,
-      "present": 206,
-      "participated": 54,
-      "aligned": 54,
-      "comparable": 54,
-      "sourceCount": 206,
+      "rollcalls": 486,
+      "present": 486,
+      "participated": 112,
+      "aligned": 111,
+      "comparable": 112,
+      "sourceCount": 24,
       "sourceUrls": [
         "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202510200910009778Fletë votimi.pdf",
         "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202510201055037455Fletë votimi.pdf",
@@ -980,12 +981,12 @@
       ]
     },
     "vip130": {
-      "rollcalls": 206,
-      "present": 206,
-      "participated": 54,
-      "aligned": 54,
-      "comparable": 54,
-      "sourceCount": 206,
+      "rollcalls": 486,
+      "present": 486,
+      "participated": 112,
+      "aligned": 111,
+      "comparable": 112,
+      "sourceCount": 24,
       "sourceUrls": [
         "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202510200910009778Fletë votimi.pdf",
         "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202510201055037455Fletë votimi.pdf",
@@ -1002,12 +1003,12 @@
       ]
     },
     "vip38": {
-      "rollcalls": 210,
-      "present": 210,
-      "participated": 209,
-      "aligned": 209,
-      "comparable": 209,
-      "sourceCount": 210,
+      "rollcalls": 495,
+      "present": 493,
+      "participated": 486,
+      "aligned": 486,
+      "comparable": 486,
+      "sourceCount": 24,
       "sourceUrls": [
         "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202510200910009778Fletë votimi.pdf",
         "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202510201055037455Fletë votimi.pdf",
@@ -1024,12 +1025,12 @@
       ]
     },
     "vip241": {
-      "rollcalls": 210,
-      "present": 205,
-      "participated": 43,
-      "aligned": 41,
-      "comparable": 41,
-      "sourceCount": 210,
+      "rollcalls": 491,
+      "present": 486,
+      "participated": 120,
+      "aligned": 117,
+      "comparable": 118,
+      "sourceCount": 24,
       "sourceUrls": [
         "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202510200910009778Fletë votimi.pdf",
         "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202510201055037455Fletë votimi.pdf",
@@ -1046,12 +1047,12 @@
       ]
     },
     "vip27": {
-      "rollcalls": 210,
-      "present": 210,
-      "participated": 209,
-      "aligned": 209,
-      "comparable": 209,
-      "sourceCount": 210,
+      "rollcalls": 495,
+      "present": 495,
+      "participated": 478,
+      "aligned": 474,
+      "comparable": 478,
+      "sourceCount": 24,
       "sourceUrls": [
         "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202510200910009778Fletë votimi.pdf",
         "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202510201055037455Fletë votimi.pdf",
@@ -1068,12 +1069,12 @@
       ]
     },
     "vip148": {
-      "rollcalls": 214,
-      "present": 214,
-      "participated": 89,
+      "rollcalls": 493,
+      "present": 493,
+      "participated": 149,
       "aligned": 0,
       "comparable": 0,
-      "sourceCount": 214,
+      "sourceCount": 24,
       "sourceUrls": [
         "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202510200910009778Fletë votimi.pdf",
         "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202510201055037455Fletë votimi.pdf",
@@ -1090,12 +1091,12 @@
       ]
     },
     "vip13": {
-      "rollcalls": 196,
-      "present": 194,
-      "participated": 188,
-      "aligned": 187,
-      "comparable": 188,
-      "sourceCount": 196,
+      "rollcalls": 451,
+      "present": 449,
+      "participated": 397,
+      "aligned": 393,
+      "comparable": 397,
+      "sourceCount": 24,
       "sourceUrls": [
         "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202510200910009778Fletë votimi.pdf",
         "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202510201055037455Fletë votimi.pdf",
@@ -1112,12 +1113,12 @@
       ]
     },
     "vip247": {
-      "rollcalls": 162,
-      "present": 147,
-      "participated": 136,
-      "aligned": 134,
-      "comparable": 136,
-      "sourceCount": 162,
+      "rollcalls": 355,
+      "present": 330,
+      "participated": 285,
+      "aligned": 283,
+      "comparable": 285,
+      "sourceCount": 24,
       "sourceUrls": [
         "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202510200910009778Fletë votimi.pdf",
         "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202510201112345476Fletë votimi.pdf",
@@ -1134,12 +1135,12 @@
       ]
     },
     "vip92": {
-      "rollcalls": 202,
-      "present": 202,
-      "participated": 194,
-      "aligned": 193,
-      "comparable": 194,
-      "sourceCount": 202,
+      "rollcalls": 469,
+      "present": 467,
+      "participated": 397,
+      "aligned": 396,
+      "comparable": 397,
+      "sourceCount": 24,
       "sourceUrls": [
         "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202510201055037455Fletë votimi.pdf",
         "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202510201112345476Fletë votimi.pdf",
@@ -1156,12 +1157,12 @@
       ]
     },
     "vip239": {
-      "rollcalls": 203,
-      "present": 203,
-      "participated": 56,
-      "aligned": 56,
-      "comparable": 56,
-      "sourceCount": 203,
+      "rollcalls": 464,
+      "present": 464,
+      "participated": 192,
+      "aligned": 192,
+      "comparable": 192,
+      "sourceCount": 24,
       "sourceUrls": [
         "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202510200910009778Fletë votimi.pdf",
         "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202510201055037455Fletë votimi.pdf",
@@ -1178,12 +1179,12 @@
       ]
     },
     "vip79": {
-      "rollcalls": 177,
-      "present": 172,
-      "participated": 158,
-      "aligned": 157,
-      "comparable": 158,
-      "sourceCount": 177,
+      "rollcalls": 409,
+      "present": 404,
+      "participated": 384,
+      "aligned": 381,
+      "comparable": 384,
+      "sourceCount": 24,
       "sourceUrls": [
         "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202510200910009778Fletë votimi.pdf",
         "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202510201055037455Fletë votimi.pdf",
@@ -1200,12 +1201,12 @@
       ]
     },
     "vip210": {
-      "rollcalls": 194,
-      "present": 194,
-      "participated": 193,
-      "aligned": 193,
-      "comparable": 193,
-      "sourceCount": 194,
+      "rollcalls": 461,
+      "present": 461,
+      "participated": 456,
+      "aligned": 456,
+      "comparable": 456,
+      "sourceCount": 24,
       "sourceUrls": [
         "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202510200910009778Fletë votimi.pdf",
         "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202510201055037455Fletë votimi.pdf",
@@ -1222,12 +1223,12 @@
       ]
     },
     "vip259": {
-      "rollcalls": 194,
-      "present": 194,
-      "participated": 41,
-      "aligned": 40,
-      "comparable": 40,
-      "sourceCount": 194,
+      "rollcalls": 454,
+      "present": 454,
+      "participated": 123,
+      "aligned": 122,
+      "comparable": 122,
+      "sourceCount": 24,
       "sourceUrls": [
         "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202510200910009778Fletë votimi.pdf",
         "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202510201055037455Fletë votimi.pdf",
@@ -1244,12 +1245,12 @@
       ]
     },
     "vip7": {
-      "rollcalls": 188,
-      "present": 172,
-      "participated": 22,
-      "aligned": 22,
-      "comparable": 22,
-      "sourceCount": 188,
+      "rollcalls": 435,
+      "present": 397,
+      "participated": 49,
+      "aligned": 49,
+      "comparable": 49,
+      "sourceCount": 24,
       "sourceUrls": [
         "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202510200910009778Fletë votimi.pdf",
         "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202510201055037455Fletë votimi.pdf",
@@ -1266,12 +1267,12 @@
       ]
     },
     "vip255": {
-      "rollcalls": 201,
-      "present": 194,
-      "participated": 179,
-      "aligned": 178,
-      "comparable": 179,
-      "sourceCount": 201,
+      "rollcalls": 473,
+      "present": 460,
+      "participated": 444,
+      "aligned": 443,
+      "comparable": 444,
+      "sourceCount": 24,
       "sourceUrls": [
         "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202510200910009778Fletë votimi.pdf",
         "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202510201055037455Fletë votimi.pdf",
@@ -1288,12 +1289,12 @@
       ]
     },
     "vip260": {
-      "rollcalls": 118,
-      "present": 118,
-      "participated": 107,
-      "aligned": 106,
-      "comparable": 107,
-      "sourceCount": 118,
+      "rollcalls": 262,
+      "present": 261,
+      "participated": 228,
+      "aligned": 227,
+      "comparable": 228,
+      "sourceCount": 24,
       "sourceUrls": [
         "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202510201055037455Fletë votimi.pdf",
         "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202511031029128488Fletë votimi.pdf",
@@ -1310,12 +1311,12 @@
       ]
     },
     "vip262": {
-      "rollcalls": 209,
-      "present": 209,
-      "participated": 206,
-      "aligned": 206,
-      "comparable": 206,
-      "sourceCount": 209,
+      "rollcalls": 496,
+      "present": 496,
+      "participated": 486,
+      "aligned": 485,
+      "comparable": 486,
+      "sourceCount": 24,
       "sourceUrls": [
         "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202510200910009778Fletë votimi.pdf",
         "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202510201055037455Fletë votimi.pdf",
@@ -1332,12 +1333,12 @@
       ]
     },
     "vip149": {
-      "rollcalls": 208,
-      "present": 208,
-      "participated": 205,
-      "aligned": 204,
-      "comparable": 205,
-      "sourceCount": 208,
+      "rollcalls": 496,
+      "present": 486,
+      "participated": 477,
+      "aligned": 476,
+      "comparable": 477,
+      "sourceCount": 24,
       "sourceUrls": [
         "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202510200910009778Fletë votimi.pdf",
         "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202510201055037455Fletë votimi.pdf",
@@ -1354,12 +1355,12 @@
       ]
     },
     "vip98": {
-      "rollcalls": 185,
-      "present": 185,
-      "participated": 75,
-      "aligned": 59,
-      "comparable": 63,
-      "sourceCount": 185,
+      "rollcalls": 436,
+      "present": 436,
+      "participated": 132,
+      "aligned": 106,
+      "comparable": 114,
+      "sourceCount": 24,
       "sourceUrls": [
         "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202510200910009778Fletë votimi.pdf",
         "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202510201118009162Fletë votimi.pdf",
@@ -1376,12 +1377,12 @@
       ]
     },
     "vip186": {
-      "rollcalls": 206,
-      "present": 206,
-      "participated": 205,
-      "aligned": 205,
-      "comparable": 205,
-      "sourceCount": 206,
+      "rollcalls": 489,
+      "present": 489,
+      "participated": 480,
+      "aligned": 480,
+      "comparable": 480,
+      "sourceCount": 24,
       "sourceUrls": [
         "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202510200910009778Fletë votimi.pdf",
         "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202510201055037455Fletë votimi.pdf",
@@ -1398,12 +1399,12 @@
       ]
     },
     "vip268": {
-      "rollcalls": 197,
-      "present": 197,
-      "participated": 197,
-      "aligned": 197,
-      "comparable": 197,
-      "sourceCount": 197,
+      "rollcalls": 448,
+      "present": 448,
+      "participated": 446,
+      "aligned": 446,
+      "comparable": 446,
+      "sourceCount": 24,
       "sourceUrls": [
         "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202510200910009778Fletë votimi.pdf",
         "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202510201055037455Fletë votimi.pdf",
@@ -1420,12 +1421,12 @@
       ]
     },
     "vip278": {
-      "rollcalls": 209,
-      "present": 209,
-      "participated": 207,
-      "aligned": 207,
-      "comparable": 207,
-      "sourceCount": 209,
+      "rollcalls": 493,
+      "present": 493,
+      "participated": 452,
+      "aligned": 445,
+      "comparable": 452,
+      "sourceCount": 24,
       "sourceUrls": [
         "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202510200910009778Fletë votimi.pdf",
         "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202510201055037455Fletë votimi.pdf",
@@ -1442,12 +1443,12 @@
       ]
     },
     "vip49": {
-      "rollcalls": 203,
-      "present": 203,
-      "participated": 199,
-      "aligned": 199,
-      "comparable": 199,
-      "sourceCount": 203,
+      "rollcalls": 451,
+      "present": 451,
+      "participated": 441,
+      "aligned": 441,
+      "comparable": 441,
+      "sourceCount": 24,
       "sourceUrls": [
         "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202510200910009778Fletë votimi.pdf",
         "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202510201055037455Fletë votimi.pdf",
@@ -1464,12 +1465,12 @@
       ]
     },
     "vip214": {
-      "rollcalls": 201,
-      "present": 201,
-      "participated": 200,
-      "aligned": 200,
-      "comparable": 200,
-      "sourceCount": 201,
+      "rollcalls": 475,
+      "present": 475,
+      "participated": 469,
+      "aligned": 469,
+      "comparable": 469,
+      "sourceCount": 24,
       "sourceUrls": [
         "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202511031029128488Fletë votimi.pdf",
         "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202511031031358453Fletë votimi.pdf",
@@ -1486,12 +1487,12 @@
       ]
     },
     "vip202": {
-      "rollcalls": 207,
-      "present": 207,
-      "participated": 196,
-      "aligned": 196,
-      "comparable": 196,
-      "sourceCount": 207,
+      "rollcalls": 494,
+      "present": 494,
+      "participated": 476,
+      "aligned": 475,
+      "comparable": 476,
+      "sourceCount": 24,
       "sourceUrls": [
         "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202510200910009778Fletë votimi.pdf",
         "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202510201055037455Fletë votimi.pdf",
@@ -1508,12 +1509,12 @@
       ]
     },
     "vip44": {
-      "rollcalls": 205,
-      "present": 205,
-      "participated": 9,
+      "rollcalls": 458,
+      "present": 458,
+      "participated": 31,
       "aligned": 0,
       "comparable": 0,
-      "sourceCount": 205,
+      "sourceCount": 24,
       "sourceUrls": [
         "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202510200910009778Fletë votimi.pdf",
         "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202510201055037455Fletë votimi.pdf",
@@ -1530,12 +1531,12 @@
       ]
     },
     "vip271": {
-      "rollcalls": 205,
-      "present": 205,
-      "participated": 70,
-      "aligned": 65,
-      "comparable": 66,
-      "sourceCount": 205,
+      "rollcalls": 483,
+      "present": 483,
+      "participated": 196,
+      "aligned": 164,
+      "comparable": 189,
+      "sourceCount": 24,
       "sourceUrls": [
         "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202510200910009778Fletë votimi.pdf",
         "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202510201055037455Fletë votimi.pdf",
@@ -1552,12 +1553,12 @@
       ]
     },
     "vip194": {
-      "rollcalls": 210,
-      "present": 210,
-      "participated": 210,
-      "aligned": 210,
-      "comparable": 210,
-      "sourceCount": 210,
+      "rollcalls": 491,
+      "present": 491,
+      "participated": 481,
+      "aligned": 480,
+      "comparable": 481,
+      "sourceCount": 24,
       "sourceUrls": [
         "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202510200910009778Fletë votimi.pdf",
         "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202510201055037455Fletë votimi.pdf",
@@ -1574,12 +1575,12 @@
       ]
     },
     "vip221": {
-      "rollcalls": 213,
-      "present": 213,
-      "participated": 0,
-      "aligned": 0,
-      "comparable": 0,
-      "sourceCount": 213,
+      "rollcalls": 497,
+      "present": 497,
+      "participated": 2,
+      "aligned": 2,
+      "comparable": 2,
+      "sourceCount": 24,
       "sourceUrls": [
         "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202510200910009778Fletë votimi.pdf",
         "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202510201055037455Fletë votimi.pdf",
@@ -1596,12 +1597,12 @@
       ]
     },
     "vip274": {
-      "rollcalls": 207,
-      "present": 205,
-      "participated": 205,
-      "aligned": 205,
-      "comparable": 205,
-      "sourceCount": 207,
+      "rollcalls": 488,
+      "present": 482,
+      "participated": 482,
+      "aligned": 482,
+      "comparable": 482,
+      "sourceCount": 24,
       "sourceUrls": [
         "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202510200910009778Fletë votimi.pdf",
         "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202510201055037455Fletë votimi.pdf",
@@ -1618,12 +1619,12 @@
       ]
     },
     "vip173": {
-      "rollcalls": 210,
-      "present": 210,
-      "participated": 210,
-      "aligned": 210,
-      "comparable": 210,
-      "sourceCount": 210,
+      "rollcalls": 497,
+      "present": 497,
+      "participated": 464,
+      "aligned": 460,
+      "comparable": 464,
+      "sourceCount": 24,
       "sourceUrls": [
         "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202510200910009778Fletë votimi.pdf",
         "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202510201055037455Fletë votimi.pdf",
@@ -1640,12 +1641,12 @@
       ]
     },
     "vip273": {
-      "rollcalls": 207,
-      "present": 205,
-      "participated": 205,
-      "aligned": 205,
-      "comparable": 205,
-      "sourceCount": 207,
+      "rollcalls": 495,
+      "present": 485,
+      "participated": 481,
+      "aligned": 481,
+      "comparable": 481,
+      "sourceCount": 24,
       "sourceUrls": [
         "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202510200910009778Fletë votimi.pdf",
         "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202510201055037455Fletë votimi.pdf",
@@ -1662,12 +1663,12 @@
       ]
     },
     "vip242": {
-      "rollcalls": 210,
-      "present": 210,
-      "participated": 200,
-      "aligned": 200,
-      "comparable": 200,
-      "sourceCount": 210,
+      "rollcalls": 497,
+      "present": 497,
+      "participated": 477,
+      "aligned": 477,
+      "comparable": 477,
+      "sourceCount": 24,
       "sourceUrls": [
         "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202510200910009778Fletë votimi.pdf",
         "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202510201055037455Fletë votimi.pdf",
@@ -1684,12 +1685,12 @@
       ]
     },
     "vip279": {
-      "rollcalls": 209,
-      "present": 209,
-      "participated": 205,
-      "aligned": 205,
-      "comparable": 205,
-      "sourceCount": 209,
+      "rollcalls": 491,
+      "present": 491,
+      "participated": 454,
+      "aligned": 454,
+      "comparable": 454,
+      "sourceCount": 24,
       "sourceUrls": [
         "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202510200910009778Fletë votimi.pdf",
         "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202510201055037455Fletë votimi.pdf",
@@ -1706,12 +1707,12 @@
       ]
     },
     "vip226": {
-      "rollcalls": 201,
-      "present": 197,
-      "participated": 41,
-      "aligned": 39,
-      "comparable": 39,
-      "sourceCount": 201,
+      "rollcalls": 448,
+      "present": 359,
+      "participated": 70,
+      "aligned": 68,
+      "comparable": 68,
+      "sourceCount": 24,
       "sourceUrls": [
         "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202510200910009778Fletë votimi.pdf",
         "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202510201055037455Fletë votimi.pdf",
@@ -1728,12 +1729,12 @@
       ]
     },
     "vip182": {
-      "rollcalls": 202,
-      "present": 200,
-      "participated": 182,
-      "aligned": 167,
-      "comparable": 167,
-      "sourceCount": 202,
+      "rollcalls": 480,
+      "present": 478,
+      "participated": 408,
+      "aligned": 370,
+      "comparable": 370,
+      "sourceCount": 24,
       "sourceUrls": [
         "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202511031029128488Fletë votimi.pdf",
         "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202511031031358453Fletë votimi.pdf",
@@ -1750,12 +1751,12 @@
       ]
     },
     "vip58": {
-      "rollcalls": 209,
-      "present": 209,
-      "participated": 28,
-      "aligned": 28,
-      "comparable": 28,
-      "sourceCount": 209,
+      "rollcalls": 487,
+      "present": 487,
+      "participated": 72,
+      "aligned": 70,
+      "comparable": 70,
+      "sourceCount": 24,
       "sourceUrls": [
         "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202510200910009778Fletë votimi.pdf",
         "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202510201055037455Fletë votimi.pdf",
@@ -1772,12 +1773,12 @@
       ]
     },
     "vip220": {
-      "rollcalls": 209,
-      "present": 209,
-      "participated": 28,
-      "aligned": 28,
-      "comparable": 28,
-      "sourceCount": 209,
+      "rollcalls": 487,
+      "present": 487,
+      "participated": 72,
+      "aligned": 70,
+      "comparable": 70,
+      "sourceCount": 24,
       "sourceUrls": [
         "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202510200910009778Fletë votimi.pdf",
         "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202510201055037455Fletë votimi.pdf",
@@ -1794,12 +1795,12 @@
       ]
     },
     "vip177": {
-      "rollcalls": 211,
-      "present": 196,
-      "participated": 195,
-      "aligned": 167,
-      "comparable": 167,
-      "sourceCount": 211,
+      "rollcalls": 489,
+      "present": 471,
+      "participated": 462,
+      "aligned": 370,
+      "comparable": 370,
+      "sourceCount": 24,
       "sourceUrls": [
         "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202510200910009778Fletë votimi.pdf",
         "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202510201055037455Fletë votimi.pdf",
@@ -1816,12 +1817,12 @@
       ]
     },
     "vip46": {
-      "rollcalls": 210,
-      "present": 210,
-      "participated": 210,
-      "aligned": 210,
-      "comparable": 210,
-      "sourceCount": 210,
+      "rollcalls": 493,
+      "present": 483,
+      "participated": 482,
+      "aligned": 482,
+      "comparable": 482,
+      "sourceCount": 24,
       "sourceUrls": [
         "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202510200910009778Fletë votimi.pdf",
         "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202510201055037455Fletë votimi.pdf",
@@ -1838,12 +1839,12 @@
       ]
     },
     "vip23": {
-      "rollcalls": 209,
-      "present": 192,
-      "participated": 191,
-      "aligned": 191,
-      "comparable": 191,
-      "sourceCount": 209,
+      "rollcalls": 478,
+      "present": 461,
+      "participated": 455,
+      "aligned": 454,
+      "comparable": 455,
+      "sourceCount": 24,
       "sourceUrls": [
         "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202510200910009778Fletë votimi.pdf",
         "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202510201055037455Fletë votimi.pdf",
@@ -1860,12 +1861,12 @@
       ]
     },
     "vip272": {
-      "rollcalls": 207,
-      "present": 207,
-      "participated": 63,
-      "aligned": 61,
-      "comparable": 61,
-      "sourceCount": 207,
+      "rollcalls": 471,
+      "present": 471,
+      "participated": 141,
+      "aligned": 139,
+      "comparable": 139,
+      "sourceCount": 24,
       "sourceUrls": [
         "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202510200910009778Fletë votimi.pdf",
         "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202510201055037455Fletë votimi.pdf",
@@ -1882,12 +1883,12 @@
       ]
     },
     "vip39": {
-      "rollcalls": 213,
-      "present": 213,
-      "participated": 30,
-      "aligned": 28,
-      "comparable": 28,
-      "sourceCount": 213,
+      "rollcalls": 475,
+      "present": 475,
+      "participated": 53,
+      "aligned": 51,
+      "comparable": 51,
+      "sourceCount": 24,
       "sourceUrls": [
         "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202510200910009778Fletë votimi.pdf",
         "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202510201055037455Fletë votimi.pdf",
@@ -1904,12 +1905,12 @@
       ]
     },
     "vip161": {
-      "rollcalls": 213,
-      "present": 213,
-      "participated": 30,
-      "aligned": 28,
-      "comparable": 28,
-      "sourceCount": 213,
+      "rollcalls": 475,
+      "present": 475,
+      "participated": 53,
+      "aligned": 51,
+      "comparable": 51,
+      "sourceCount": 24,
       "sourceUrls": [
         "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202510200910009778Fletë votimi.pdf",
         "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202510201055037455Fletë votimi.pdf",
@@ -1926,12 +1927,12 @@
       ]
     },
     "vip243": {
-      "rollcalls": 213,
-      "present": 202,
-      "participated": 14,
-      "aligned": 14,
-      "comparable": 14,
-      "sourceCount": 213,
+      "rollcalls": 504,
+      "present": 493,
+      "participated": 30,
+      "aligned": 30,
+      "comparable": 30,
+      "sourceCount": 24,
       "sourceUrls": [
         "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202510200910009778Fletë votimi.pdf",
         "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202510201055037455Fletë votimi.pdf",
@@ -1948,12 +1949,12 @@
       ]
     },
     "vip34": {
-      "rollcalls": 209,
-      "present": 209,
-      "participated": 15,
-      "aligned": 15,
-      "comparable": 15,
-      "sourceCount": 209,
+      "rollcalls": 474,
+      "present": 474,
+      "participated": 105,
+      "aligned": 104,
+      "comparable": 104,
+      "sourceCount": 24,
       "sourceUrls": [
         "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202510200910009778Fletë votimi.pdf",
         "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202510201055037455Fletë votimi.pdf",
@@ -1970,12 +1971,12 @@
       ]
     },
     "vip261": {
-      "rollcalls": 205,
-      "present": 205,
-      "participated": 188,
-      "aligned": 188,
-      "comparable": 188,
-      "sourceCount": 205,
+      "rollcalls": 479,
+      "present": 479,
+      "participated": 435,
+      "aligned": 435,
+      "comparable": 435,
+      "sourceCount": 24,
       "sourceUrls": [
         "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202510200910009778Fletë votimi.pdf",
         "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202510201055037455Fletë votimi.pdf",
@@ -1992,12 +1993,12 @@
       ]
     },
     "vip225": {
-      "rollcalls": 191,
-      "present": 191,
-      "participated": 47,
-      "aligned": 47,
-      "comparable": 47,
-      "sourceCount": 191,
+      "rollcalls": 426,
+      "present": 426,
+      "participated": 97,
+      "aligned": 97,
+      "comparable": 97,
+      "sourceCount": 24,
       "sourceUrls": [
         "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202510200910009778Fletë votimi.pdf",
         "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202510201055037455Fletë votimi.pdf",
@@ -2014,12 +2015,12 @@
       ]
     },
     "vip157": {
-      "rollcalls": 210,
-      "present": 209,
-      "participated": 209,
-      "aligned": 209,
-      "comparable": 209,
-      "sourceCount": 210,
+      "rollcalls": 496,
+      "present": 495,
+      "participated": 492,
+      "aligned": 492,
+      "comparable": 492,
+      "sourceCount": 24,
       "sourceUrls": [
         "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202510200910009778Fletë votimi.pdf",
         "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202510201055037455Fletë votimi.pdf",
@@ -2036,12 +2037,12 @@
       ]
     },
     "vip280": {
-      "rollcalls": 205,
-      "present": 189,
-      "participated": 186,
-      "aligned": 186,
-      "comparable": 186,
-      "sourceCount": 205,
+      "rollcalls": 478,
+      "present": 462,
+      "participated": 422,
+      "aligned": 422,
+      "comparable": 422,
+      "sourceCount": 24,
       "sourceUrls": [
         "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202510200910009778Fletë votimi.pdf",
         "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202510201055037455Fletë votimi.pdf",
@@ -2058,12 +2059,12 @@
       ]
     },
     "vip30": {
-      "rollcalls": 206,
-      "present": 139,
-      "participated": 2,
-      "aligned": 2,
-      "comparable": 2,
-      "sourceCount": 206,
+      "rollcalls": 474,
+      "present": 288,
+      "participated": 10,
+      "aligned": 10,
+      "comparable": 10,
+      "sourceCount": 24,
       "sourceUrls": [
         "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202510200910009778Fletë votimi.pdf",
         "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202510201055037455Fletë votimi.pdf",
@@ -2080,12 +2081,12 @@
       ]
     },
     "vip269": {
-      "rollcalls": 205,
-      "present": 205,
-      "participated": 205,
-      "aligned": 205,
-      "comparable": 205,
-      "sourceCount": 205,
+      "rollcalls": 466,
+      "present": 466,
+      "participated": 446,
+      "aligned": 446,
+      "comparable": 446,
+      "sourceCount": 24,
       "sourceUrls": [
         "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202510200910009778Fletë votimi.pdf",
         "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202510201055037455Fletë votimi.pdf",
@@ -2102,12 +2103,12 @@
       ]
     },
     "vip234": {
-      "rollcalls": 214,
-      "present": 214,
-      "participated": 54,
-      "aligned": 54,
-      "comparable": 54,
-      "sourceCount": 214,
+      "rollcalls": 494,
+      "present": 494,
+      "participated": 122,
+      "aligned": 121,
+      "comparable": 122,
+      "sourceCount": 24,
       "sourceUrls": [
         "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202510200910009778Fletë votimi.pdf",
         "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202510201055037455Fletë votimi.pdf",
@@ -2124,12 +2125,12 @@
       ]
     },
     "vip233": {
-      "rollcalls": 210,
-      "present": 210,
-      "participated": 0,
-      "aligned": 0,
-      "comparable": 0,
-      "sourceCount": 210,
+      "rollcalls": 478,
+      "present": 478,
+      "participated": 5,
+      "aligned": 5,
+      "comparable": 5,
+      "sourceCount": 24,
       "sourceUrls": [
         "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202510200910009778Fletë votimi.pdf",
         "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202510201055037455Fletë votimi.pdf",
@@ -2146,12 +2147,12 @@
       ]
     },
     "vip96": {
-      "rollcalls": 208,
-      "present": 208,
-      "participated": 195,
-      "aligned": 195,
-      "comparable": 195,
-      "sourceCount": 208,
+      "rollcalls": 486,
+      "present": 486,
+      "participated": 452,
+      "aligned": 452,
+      "comparable": 452,
+      "sourceCount": 24,
       "sourceUrls": [
         "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202510200910009778Fletë votimi.pdf",
         "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202510201055037455Fletë votimi.pdf",
@@ -2168,12 +2169,12 @@
       ]
     },
     "vip180": {
-      "rollcalls": 208,
-      "present": 208,
-      "participated": 206,
-      "aligned": 205,
-      "comparable": 206,
-      "sourceCount": 208,
+      "rollcalls": 472,
+      "present": 472,
+      "participated": 465,
+      "aligned": 464,
+      "comparable": 465,
+      "sourceCount": 24,
       "sourceUrls": [
         "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202510200910009778Fletë votimi.pdf",
         "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202510201055037455Fletë votimi.pdf",
@@ -2190,12 +2191,12 @@
       ]
     },
     "vip275": {
-      "rollcalls": 201,
-      "present": 201,
-      "participated": 37,
-      "aligned": 37,
-      "comparable": 37,
-      "sourceCount": 201,
+      "rollcalls": 480,
+      "present": 480,
+      "participated": 125,
+      "aligned": 125,
+      "comparable": 125,
+      "sourceCount": 24,
       "sourceUrls": [
         "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202510200910009778Fletë votimi.pdf",
         "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202510201055037455Fletë votimi.pdf",
@@ -2212,12 +2213,12 @@
       ]
     },
     "vip254": {
-      "rollcalls": 209,
-      "present": 209,
-      "participated": 193,
-      "aligned": 193,
-      "comparable": 193,
-      "sourceCount": 209,
+      "rollcalls": 500,
+      "present": 500,
+      "participated": 449,
+      "aligned": 449,
+      "comparable": 449,
+      "sourceCount": 24,
       "sourceUrls": [
         "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202510200910009778Fletë votimi.pdf",
         "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202510201055037455Fletë votimi.pdf",
@@ -2234,12 +2235,12 @@
       ]
     },
     "vip168": {
-      "rollcalls": 208,
-      "present": 200,
-      "participated": 170,
-      "aligned": 170,
-      "comparable": 170,
-      "sourceCount": 208,
+      "rollcalls": 492,
+      "present": 484,
+      "participated": 446,
+      "aligned": 445,
+      "comparable": 446,
+      "sourceCount": 24,
       "sourceUrls": [
         "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202510200910009778Fletë votimi.pdf",
         "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202510201055037455Fletë votimi.pdf",
@@ -2256,12 +2257,12 @@
       ]
     },
     "vip145": {
-      "rollcalls": 141,
-      "present": 136,
-      "participated": 55,
-      "aligned": 55,
-      "comparable": 55,
-      "sourceCount": 141,
+      "rollcalls": 374,
+      "present": 369,
+      "participated": 167,
+      "aligned": 166,
+      "comparable": 167,
+      "sourceCount": 24,
       "sourceUrls": [
         "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202510200910009778Fletë votimi.pdf",
         "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202510201055037455Fletë votimi.pdf",
@@ -2278,12 +2279,12 @@
       ]
     },
     "vip171": {
-      "rollcalls": 141,
-      "present": 136,
-      "participated": 55,
-      "aligned": 55,
-      "comparable": 55,
-      "sourceCount": 141,
+      "rollcalls": 374,
+      "present": 369,
+      "participated": 167,
+      "aligned": 166,
+      "comparable": 167,
+      "sourceCount": 24,
       "sourceUrls": [
         "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202510200910009778Fletë votimi.pdf",
         "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202510201055037455Fletë votimi.pdf",
@@ -2300,12 +2301,12 @@
       ]
     },
     "vip281": {
-      "rollcalls": 209,
-      "present": 209,
-      "participated": 208,
-      "aligned": 208,
-      "comparable": 208,
-      "sourceCount": 209,
+      "rollcalls": 495,
+      "present": 492,
+      "participated": 484,
+      "aligned": 484,
+      "comparable": 484,
+      "sourceCount": 24,
       "sourceUrls": [
         "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202510200910009778Fletë votimi.pdf",
         "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202510201055037455Fletë votimi.pdf",
@@ -2322,12 +2323,12 @@
       ]
     },
     "vip31": {
-      "rollcalls": 200,
-      "present": 199,
-      "participated": 29,
-      "aligned": 29,
-      "comparable": 29,
-      "sourceCount": 200,
+      "rollcalls": 482,
+      "present": 471,
+      "participated": 124,
+      "aligned": 122,
+      "comparable": 124,
+      "sourceCount": 24,
       "sourceUrls": [
         "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202510200910009778Fletë votimi.pdf",
         "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202510201055037455Fletë votimi.pdf",
@@ -2344,12 +2345,12 @@
       ]
     },
     "vip216": {
-      "rollcalls": 200,
-      "present": 199,
-      "participated": 29,
-      "aligned": 29,
-      "comparable": 29,
-      "sourceCount": 200,
+      "rollcalls": 482,
+      "present": 471,
+      "participated": 124,
+      "aligned": 122,
+      "comparable": 124,
+      "sourceCount": 24,
       "sourceUrls": [
         "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202510200910009778Fletë votimi.pdf",
         "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202510201055037455Fletë votimi.pdf",
@@ -2366,12 +2367,12 @@
       ]
     },
     "vip236": {
-      "rollcalls": 208,
-      "present": 208,
-      "participated": 206,
-      "aligned": 206,
-      "comparable": 206,
-      "sourceCount": 208,
+      "rollcalls": 492,
+      "present": 492,
+      "participated": 482,
+      "aligned": 482,
+      "comparable": 482,
+      "sourceCount": 24,
       "sourceUrls": [
         "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202510200910009778Fletë votimi.pdf",
         "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202510201055037455Fletë votimi.pdf",
@@ -2388,12 +2389,12 @@
       ]
     },
     "vip251": {
-      "rollcalls": 203,
-      "present": 203,
-      "participated": 40,
-      "aligned": 40,
-      "comparable": 40,
-      "sourceCount": 203,
+      "rollcalls": 469,
+      "present": 469,
+      "participated": 111,
+      "aligned": 108,
+      "comparable": 109,
+      "sourceCount": 24,
       "sourceUrls": [
         "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202510200910009778Fletë votimi.pdf",
         "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202510201055037455Fletë votimi.pdf",
@@ -2410,12 +2411,12 @@
       ]
     },
     "vip144": {
-      "rollcalls": 202,
-      "present": 202,
-      "participated": 41,
-      "aligned": 39,
-      "comparable": 39,
-      "sourceCount": 202,
+      "rollcalls": 473,
+      "present": 466,
+      "participated": 102,
+      "aligned": 100,
+      "comparable": 100,
+      "sourceCount": 24,
       "sourceUrls": [
         "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202510200910009778Fletë votimi.pdf",
         "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202510201055037455Fletë votimi.pdf",
@@ -2432,12 +2433,12 @@
       ]
     },
     "vip222": {
-      "rollcalls": 202,
-      "present": 202,
-      "participated": 41,
-      "aligned": 39,
-      "comparable": 39,
-      "sourceCount": 202,
+      "rollcalls": 473,
+      "present": 466,
+      "participated": 102,
+      "aligned": 100,
+      "comparable": 100,
+      "sourceCount": 24,
       "sourceUrls": [
         "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202510200910009778Fletë votimi.pdf",
         "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202510201055037455Fletë votimi.pdf",
@@ -2454,12 +2455,12 @@
       ]
     },
     "vip213": {
-      "rollcalls": 208,
-      "present": 202,
-      "participated": 189,
-      "aligned": 189,
-      "comparable": 189,
-      "sourceCount": 208,
+      "rollcalls": 487,
+      "present": 476,
+      "participated": 446,
+      "aligned": 446,
+      "comparable": 446,
+      "sourceCount": 24,
       "sourceUrls": [
         "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202510200910009778Fletë votimi.pdf",
         "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202510201055037455Fletë votimi.pdf",
@@ -2476,12 +2477,12 @@
       ]
     },
     "vip197": {
-      "rollcalls": 203,
-      "present": 187,
-      "participated": 185,
-      "aligned": 167,
-      "comparable": 167,
-      "sourceCount": 203,
+      "rollcalls": 481,
+      "present": 461,
+      "participated": 411,
+      "aligned": 370,
+      "comparable": 370,
+      "sourceCount": 24,
       "sourceUrls": [
         "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202511031029128488Fletë votimi.pdf",
         "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202511031031358453Fletë votimi.pdf",
@@ -2498,12 +2499,12 @@
       ]
     },
     "vip32": {
-      "rollcalls": 206,
-      "present": 206,
-      "participated": 62,
-      "aligned": 62,
-      "comparable": 62,
-      "sourceCount": 206,
+      "rollcalls": 484,
+      "present": 481,
+      "participated": 160,
+      "aligned": 157,
+      "comparable": 158,
+      "sourceCount": 24,
       "sourceUrls": [
         "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202510200910009778Fletë votimi.pdf",
         "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202510201055037455Fletë votimi.pdf",
@@ -2520,12 +2521,12 @@
       ]
     },
     "vip198": {
-      "rollcalls": 206,
-      "present": 206,
-      "participated": 62,
-      "aligned": 62,
-      "comparable": 62,
-      "sourceCount": 206,
+      "rollcalls": 484,
+      "present": 481,
+      "participated": 160,
+      "aligned": 157,
+      "comparable": 158,
+      "sourceCount": 24,
       "sourceUrls": [
         "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202510200910009778Fletë votimi.pdf",
         "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202510201055037455Fletë votimi.pdf",
@@ -2542,12 +2543,12 @@
       ]
     },
     "vip267": {
-      "rollcalls": 209,
-      "present": 209,
-      "participated": 30,
-      "aligned": 30,
-      "comparable": 30,
-      "sourceCount": 209,
+      "rollcalls": 484,
+      "present": 484,
+      "participated": 43,
+      "aligned": 42,
+      "comparable": 43,
+      "sourceCount": 24,
       "sourceUrls": [
         "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202510200910009778Fletë votimi.pdf",
         "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202510201055037455Fletë votimi.pdf",
@@ -2564,12 +2565,12 @@
       ]
     },
     "vip237": {
-      "rollcalls": 210,
-      "present": 210,
-      "participated": 193,
-      "aligned": 193,
-      "comparable": 193,
-      "sourceCount": 210,
+      "rollcalls": 497,
+      "present": 497,
+      "participated": 452,
+      "aligned": 451,
+      "comparable": 452,
+      "sourceCount": 24,
       "sourceUrls": [
         "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202510200910009778Fletë votimi.pdf",
         "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202510201055037455Fletë votimi.pdf",
@@ -2586,12 +2587,12 @@
       ]
     },
     "vip36": {
-      "rollcalls": 209,
-      "present": 209,
-      "participated": 10,
-      "aligned": 10,
-      "comparable": 10,
-      "sourceCount": 209,
+      "rollcalls": 489,
+      "present": 489,
+      "participated": 44,
+      "aligned": 44,
+      "comparable": 44,
+      "sourceCount": 24,
       "sourceUrls": [
         "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202510200910009778Fletë votimi.pdf",
         "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202510201055037455Fletë votimi.pdf",
@@ -2608,12 +2609,12 @@
       ]
     },
     "vip184": {
-      "rollcalls": 209,
-      "present": 209,
-      "participated": 10,
-      "aligned": 10,
-      "comparable": 10,
-      "sourceCount": 209,
+      "rollcalls": 489,
+      "present": 489,
+      "participated": 44,
+      "aligned": 44,
+      "comparable": 44,
+      "sourceCount": 24,
       "sourceUrls": [
         "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202510200910009778Fletë votimi.pdf",
         "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202510201055037455Fletë votimi.pdf",
@@ -2630,12 +2631,12 @@
       ]
     },
     "vip106": {
-      "rollcalls": 188,
-      "present": 188,
-      "participated": 67,
-      "aligned": 67,
-      "comparable": 67,
-      "sourceCount": 188,
+      "rollcalls": 442,
+      "present": 442,
+      "participated": 206,
+      "aligned": 204,
+      "comparable": 204,
+      "sourceCount": 24,
       "sourceUrls": [
         "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202510200910009778Fletë votimi.pdf",
         "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202510201055037455Fletë votimi.pdf",
@@ -2652,12 +2653,12 @@
       ]
     },
     "vip129": {
-      "rollcalls": 188,
-      "present": 188,
-      "participated": 67,
-      "aligned": 67,
-      "comparable": 67,
-      "sourceCount": 188,
+      "rollcalls": 442,
+      "present": 442,
+      "participated": 206,
+      "aligned": 204,
+      "comparable": 204,
+      "sourceCount": 24,
       "sourceUrls": [
         "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202510200910009778Fletë votimi.pdf",
         "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202510201055037455Fletë votimi.pdf",
@@ -2674,12 +2675,12 @@
       ]
     },
     "vip87": {
-      "rollcalls": 210,
-      "present": 200,
-      "participated": 199,
-      "aligned": 199,
-      "comparable": 199,
-      "sourceCount": 210,
+      "rollcalls": 497,
+      "present": 466,
+      "participated": 459,
+      "aligned": 459,
+      "comparable": 459,
+      "sourceCount": 24,
       "sourceUrls": [
         "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202510200910009778Fletë votimi.pdf",
         "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202510201055037455Fletë votimi.pdf",
@@ -2696,12 +2697,12 @@
       ]
     },
     "vip159": {
-      "rollcalls": 201,
-      "present": 201,
-      "participated": 69,
-      "aligned": 65,
-      "comparable": 65,
-      "sourceCount": 201,
+      "rollcalls": 474,
+      "present": 474,
+      "participated": 127,
+      "aligned": 122,
+      "comparable": 122,
+      "sourceCount": 24,
       "sourceUrls": [
         "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202510200910009778Fletë votimi.pdf",
         "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202510201055037455Fletë votimi.pdf",
@@ -2718,12 +2719,12 @@
       ]
     },
     "vip57": {
-      "rollcalls": 202,
-      "present": 202,
-      "participated": 36,
-      "aligned": 29,
-      "comparable": 29,
-      "sourceCount": 202,
+      "rollcalls": 470,
+      "present": 470,
+      "participated": 41,
+      "aligned": 33,
+      "comparable": 33,
+      "sourceCount": 24,
       "sourceUrls": [
         "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202510200910009778Fletë votimi.pdf",
         "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202510201055037455Fletë votimi.pdf",
@@ -2740,12 +2741,12 @@
       ]
     },
     "vip204": {
-      "rollcalls": 202,
-      "present": 202,
-      "participated": 36,
-      "aligned": 29,
-      "comparable": 29,
-      "sourceCount": 202,
+      "rollcalls": 470,
+      "present": 470,
+      "participated": 41,
+      "aligned": 33,
+      "comparable": 33,
+      "sourceCount": 24,
       "sourceUrls": [
         "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202510200910009778Fletë votimi.pdf",
         "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202510201055037455Fletë votimi.pdf",
@@ -2762,12 +2763,12 @@
       ]
     },
     "vip55": {
-      "rollcalls": 200,
-      "present": 200,
-      "participated": 193,
-      "aligned": 193,
-      "comparable": 193,
-      "sourceCount": 200,
+      "rollcalls": 476,
+      "present": 476,
+      "participated": 433,
+      "aligned": 432,
+      "comparable": 433,
+      "sourceCount": 24,
       "sourceUrls": [
         "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202510200910009778Fletë votimi.pdf",
         "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202510201055037455Fletë votimi.pdf",
@@ -2784,12 +2785,12 @@
       ]
     },
     "vip219": {
-      "rollcalls": 200,
-      "present": 200,
-      "participated": 193,
-      "aligned": 193,
-      "comparable": 193,
-      "sourceCount": 200,
+      "rollcalls": 476,
+      "present": 476,
+      "participated": 433,
+      "aligned": 432,
+      "comparable": 433,
+      "sourceCount": 24,
       "sourceUrls": [
         "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202510200910009778Fletë votimi.pdf",
         "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202510201055037455Fletë votimi.pdf",
@@ -2806,12 +2807,12 @@
       ]
     },
     "vip65": {
-      "rollcalls": 204,
-      "present": 204,
-      "participated": 203,
-      "aligned": 203,
-      "comparable": 203,
-      "sourceCount": 204,
+      "rollcalls": 487,
+      "present": 487,
+      "participated": 475,
+      "aligned": 475,
+      "comparable": 475,
+      "sourceCount": 24,
       "sourceUrls": [
         "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202510200910009778Fletë votimi.pdf",
         "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202510201055037455Fletë votimi.pdf",
@@ -2828,12 +2829,12 @@
       ]
     },
     "vip227": {
-      "rollcalls": 174,
-      "present": 173,
-      "participated": 173,
-      "aligned": 173,
-      "comparable": 173,
-      "sourceCount": 174,
+      "rollcalls": 419,
+      "present": 415,
+      "participated": 405,
+      "aligned": 405,
+      "comparable": 405,
+      "sourceCount": 24,
       "sourceUrls": [
         "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202510200910009778Fletë votimi.pdf",
         "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202510201055037455Fletë votimi.pdf",
@@ -2850,12 +2851,12 @@
       ]
     },
     "vip270": {
-      "rollcalls": 122,
-      "present": 122,
-      "participated": 121,
-      "aligned": 120,
-      "comparable": 121,
-      "sourceCount": 122,
+      "rollcalls": 310,
+      "present": 310,
+      "participated": 304,
+      "aligned": 303,
+      "comparable": 304,
+      "sourceCount": 24,
       "sourceUrls": [
         "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202510200910009778Fletë votimi.pdf",
         "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202510201113589412Fletë votimi.pdf",
@@ -2872,12 +2873,12 @@
       ]
     },
     "vip230": {
-      "rollcalls": 182,
-      "present": 180,
-      "participated": 180,
-      "aligned": 180,
-      "comparable": 180,
-      "sourceCount": 182,
+      "rollcalls": 427,
+      "present": 421,
+      "participated": 406,
+      "aligned": 406,
+      "comparable": 406,
+      "sourceCount": 24,
       "sourceUrls": [
         "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202510200910009778Fletë votimi.pdf",
         "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202510201055037455Fletë votimi.pdf",
@@ -2894,12 +2895,12 @@
       ]
     },
     "vip264": {
-      "rollcalls": 195,
-      "present": 195,
-      "participated": 22,
-      "aligned": 20,
-      "comparable": 20,
-      "sourceCount": 195,
+      "rollcalls": 471,
+      "present": 471,
+      "participated": 55,
+      "aligned": 52,
+      "comparable": 53,
+      "sourceCount": 24,
       "sourceUrls": [
         "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202510200910009778Fletë votimi.pdf",
         "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202510201055037455Fletë votimi.pdf",
@@ -2916,12 +2917,12 @@
       ]
     },
     "vip277": {
-      "rollcalls": 203,
-      "present": 203,
-      "participated": 201,
-      "aligned": 201,
-      "comparable": 201,
-      "sourceCount": 203,
+      "rollcalls": 469,
+      "present": 469,
+      "participated": 438,
+      "aligned": 437,
+      "comparable": 438,
+      "sourceCount": 24,
       "sourceUrls": [
         "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202510200910009778Fletë votimi.pdf",
         "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202510201055037455Fletë votimi.pdf",
@@ -2938,12 +2939,12 @@
       ]
     },
     "vip205": {
-      "rollcalls": 202,
-      "present": 185,
-      "participated": 184,
-      "aligned": 184,
-      "comparable": 184,
-      "sourceCount": 202,
+      "rollcalls": 474,
+      "present": 457,
+      "participated": 454,
+      "aligned": 454,
+      "comparable": 454,
+      "sourceCount": 24,
       "sourceUrls": [
         "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202510200910009778Fletë votimi.pdf",
         "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202510201055037455Fletë votimi.pdf",
@@ -2960,12 +2961,12 @@
       ]
     },
     "vip63": {
-      "rollcalls": 203,
-      "present": 187,
-      "participated": 179,
-      "aligned": 179,
-      "comparable": 179,
-      "sourceCount": 203,
+      "rollcalls": 481,
+      "present": 465,
+      "participated": 429,
+      "aligned": 420,
+      "comparable": 429,
+      "sourceCount": 24,
       "sourceUrls": [
         "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202510200910009778Fletë votimi.pdf",
         "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202510201055037455Fletë votimi.pdf",
@@ -2982,12 +2983,12 @@
       ]
     },
     "vip102": {
-      "rollcalls": 201,
-      "present": 201,
-      "participated": 55,
-      "aligned": 54,
-      "comparable": 54,
-      "sourceCount": 201,
+      "rollcalls": 468,
+      "present": 468,
+      "participated": 98,
+      "aligned": 97,
+      "comparable": 97,
+      "sourceCount": 24,
       "sourceUrls": [
         "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202510200910009778Fletë votimi.pdf",
         "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202510201055037455Fletë votimi.pdf",
@@ -3004,12 +3005,12 @@
       ]
     },
     "vip160": {
-      "rollcalls": 201,
-      "present": 201,
-      "participated": 55,
-      "aligned": 54,
-      "comparable": 54,
-      "sourceCount": 201,
+      "rollcalls": 468,
+      "present": 468,
+      "participated": 98,
+      "aligned": 97,
+      "comparable": 97,
+      "sourceCount": 24,
       "sourceUrls": [
         "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202510200910009778Fletë votimi.pdf",
         "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202510201055037455Fletë votimi.pdf",
@@ -3026,12 +3027,12 @@
       ]
     },
     "vip170": {
-      "rollcalls": 209,
-      "present": 209,
-      "participated": 209,
-      "aligned": 209,
-      "comparable": 209,
-      "sourceCount": 209,
+      "rollcalls": 490,
+      "present": 490,
+      "participated": 489,
+      "aligned": 489,
+      "comparable": 489,
+      "sourceCount": 24,
       "sourceUrls": [
         "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202510200910009778Fletë votimi.pdf",
         "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202510201055037455Fletë votimi.pdf",
@@ -3048,12 +3049,12 @@
       ]
     },
     "vip125": {
-      "rollcalls": 202,
-      "present": 202,
-      "participated": 202,
-      "aligned": 202,
-      "comparable": 202,
-      "sourceCount": 202,
+      "rollcalls": 464,
+      "present": 464,
+      "participated": 459,
+      "aligned": 456,
+      "comparable": 459,
+      "sourceCount": 24,
       "sourceUrls": [
         "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202510200910009778Fletë votimi.pdf",
         "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202510201055037455Fletë votimi.pdf",
@@ -3070,12 +3071,12 @@
       ]
     },
     "vip71": {
-      "rollcalls": 177,
-      "present": 177,
-      "participated": 4,
-      "aligned": 4,
-      "comparable": 4,
-      "sourceCount": 177,
+      "rollcalls": 393,
+      "present": 393,
+      "participated": 14,
+      "aligned": 14,
+      "comparable": 14,
+      "sourceCount": 24,
       "sourceUrls": [
         "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202510200910009778Fletë votimi.pdf",
         "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202510201055037455Fletë votimi.pdf",
@@ -3092,12 +3093,12 @@
       ]
     },
     "vip75": {
-      "rollcalls": 204,
-      "present": 195,
-      "participated": 193,
-      "aligned": 193,
-      "comparable": 193,
-      "sourceCount": 204,
+      "rollcalls": 476,
+      "present": 450,
+      "participated": 395,
+      "aligned": 389,
+      "comparable": 395,
+      "sourceCount": 24,
       "sourceUrls": [
         "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202510200910009778Fletë votimi.pdf",
         "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202510201055037455Fletë votimi.pdf",
@@ -3114,12 +3115,12 @@
       ]
     },
     "vip152": {
-      "rollcalls": 201,
-      "present": 181,
-      "participated": 178,
-      "aligned": 178,
-      "comparable": 178,
-      "sourceCount": 201,
+      "rollcalls": 455,
+      "present": 435,
+      "participated": 431,
+      "aligned": 431,
+      "comparable": 431,
+      "sourceCount": 24,
       "sourceUrls": [
         "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202510200910009778Fletë votimi.pdf",
         "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202510201055037455Fletë votimi.pdf",
@@ -3136,12 +3137,12 @@
       ]
     },
     "vip245": {
-      "rollcalls": 208,
-      "present": 208,
-      "participated": 186,
-      "aligned": 186,
-      "comparable": 186,
-      "sourceCount": 208,
+      "rollcalls": 480,
+      "present": 480,
+      "participated": 404,
+      "aligned": 404,
+      "comparable": 404,
+      "sourceCount": 24,
       "sourceUrls": [
         "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202510200910009778Fletë votimi.pdf",
         "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202510201055037455Fletë votimi.pdf",
@@ -3158,12 +3159,12 @@
       ]
     },
     "vip25": {
-      "rollcalls": 208,
-      "present": 208,
-      "participated": 197,
-      "aligned": 197,
-      "comparable": 197,
-      "sourceCount": 208,
+      "rollcalls": 496,
+      "present": 496,
+      "participated": 458,
+      "aligned": 458,
+      "comparable": 458,
+      "sourceCount": 24,
       "sourceUrls": [
         "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202510200910009778Fletë votimi.pdf",
         "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202510201055037455Fletë votimi.pdf",
@@ -3180,12 +3181,12 @@
       ]
     },
     "vip176": {
-      "rollcalls": 208,
-      "present": 202,
-      "participated": 200,
-      "aligned": 200,
-      "comparable": 200,
-      "sourceCount": 208,
+      "rollcalls": 489,
+      "present": 483,
+      "participated": 471,
+      "aligned": 471,
+      "comparable": 471,
+      "sourceCount": 24,
       "sourceUrls": [
         "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202510200910009778Fletë votimi.pdf",
         "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202510201055037455Fletë votimi.pdf",
@@ -3202,12 +3203,12 @@
       ]
     },
     "vip28": {
-      "rollcalls": 202,
-      "present": 202,
-      "participated": 172,
-      "aligned": 172,
-      "comparable": 172,
-      "sourceCount": 202,
+      "rollcalls": 472,
+      "present": 472,
+      "participated": 399,
+      "aligned": 399,
+      "comparable": 399,
+      "sourceCount": 24,
       "sourceUrls": [
         "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202510200910009778Fletë votimi.pdf",
         "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202510201055037455Fletë votimi.pdf",
@@ -3224,12 +3225,12 @@
       ]
     },
     "vip93": {
-      "rollcalls": 207,
-      "present": 207,
-      "participated": 199,
-      "aligned": 199,
-      "comparable": 199,
-      "sourceCount": 207,
+      "rollcalls": 493,
+      "present": 493,
+      "participated": 457,
+      "aligned": 457,
+      "comparable": 457,
+      "sourceCount": 24,
       "sourceUrls": [
         "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202510200910009778Fletë votimi.pdf",
         "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202510201055037455Fletë votimi.pdf",
@@ -3246,12 +3247,12 @@
       ]
     },
     "vip217": {
-      "rollcalls": 207,
-      "present": 207,
-      "participated": 199,
-      "aligned": 199,
-      "comparable": 199,
-      "sourceCount": 207,
+      "rollcalls": 493,
+      "present": 493,
+      "participated": 457,
+      "aligned": 457,
+      "comparable": 457,
+      "sourceCount": 24,
       "sourceUrls": [
         "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202510200910009778Fletë votimi.pdf",
         "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202510201055037455Fletë votimi.pdf",
@@ -3268,12 +3269,12 @@
       ]
     },
     "vip249": {
-      "rollcalls": 208,
-      "present": 208,
-      "participated": 184,
-      "aligned": 184,
-      "comparable": 184,
-      "sourceCount": 208,
+      "rollcalls": 493,
+      "present": 493,
+      "participated": 439,
+      "aligned": 438,
+      "comparable": 439,
+      "sourceCount": 24,
       "sourceUrls": [
         "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202510200910009778Fletë votimi.pdf",
         "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202510201055037455Fletë votimi.pdf",
@@ -3290,12 +3291,12 @@
       ]
     },
     "vip126": {
-      "rollcalls": 207,
-      "present": 202,
-      "participated": 201,
-      "aligned": 201,
-      "comparable": 201,
-      "sourceCount": 207,
+      "rollcalls": 456,
+      "present": 370,
+      "participated": 362,
+      "aligned": 362,
+      "comparable": 362,
+      "sourceCount": 24,
       "sourceUrls": [
         "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202510200910009778Fletë votimi.pdf",
         "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202510201055037455Fletë votimi.pdf",
@@ -3312,12 +3313,12 @@
       ]
     },
     "vip85": {
-      "rollcalls": 206,
-      "present": 206,
-      "participated": 23,
-      "aligned": 23,
-      "comparable": 23,
-      "sourceCount": 206,
+      "rollcalls": 466,
+      "present": 466,
+      "participated": 48,
+      "aligned": 46,
+      "comparable": 46,
+      "sourceCount": 24,
       "sourceUrls": [
         "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202510200910009778Fletë votimi.pdf",
         "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202510201055037455Fletë votimi.pdf",
@@ -3334,12 +3335,12 @@
       ]
     },
     "vip174": {
-      "rollcalls": 206,
-      "present": 206,
-      "participated": 23,
-      "aligned": 23,
-      "comparable": 23,
-      "sourceCount": 206,
+      "rollcalls": 466,
+      "present": 466,
+      "participated": 48,
+      "aligned": 46,
+      "comparable": 46,
+      "sourceCount": 24,
       "sourceUrls": [
         "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202510200910009778Fletë votimi.pdf",
         "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202510201055037455Fletë votimi.pdf",
@@ -3356,12 +3357,12 @@
       ]
     },
     "vip33": {
-      "rollcalls": 184,
-      "present": 183,
-      "participated": 43,
-      "aligned": 43,
-      "comparable": 43,
-      "sourceCount": 184,
+      "rollcalls": 433,
+      "present": 424,
+      "participated": 173,
+      "aligned": 171,
+      "comparable": 171,
+      "sourceCount": 24,
       "sourceUrls": [
         "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202510200910009778Fletë votimi.pdf",
         "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202510201112345476Fletë votimi.pdf",
@@ -3378,12 +3379,12 @@
       ]
     },
     "vip265": {
-      "rollcalls": 179,
-      "present": 179,
-      "participated": 16,
-      "aligned": 14,
-      "comparable": 16,
-      "sourceCount": 179,
+      "rollcalls": 399,
+      "present": 397,
+      "participated": 41,
+      "aligned": 38,
+      "comparable": 40,
+      "sourceCount": 24,
       "sourceUrls": [
         "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202510200910009778Fletë votimi.pdf",
         "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202510201055037455Fletë votimi.pdf",
@@ -3400,12 +3401,12 @@
       ]
     },
     "vip244": {
-      "rollcalls": 155,
-      "present": 154,
-      "participated": 154,
-      "aligned": 154,
-      "comparable": 154,
-      "sourceCount": 155,
+      "rollcalls": 382,
+      "present": 375,
+      "participated": 373,
+      "aligned": 373,
+      "comparable": 373,
+      "sourceCount": 24,
       "sourceUrls": [
         "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202510200910009778Fletë votimi.pdf",
         "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202510201112345476Fletë votimi.pdf",
@@ -3422,12 +3423,12 @@
       ]
     },
     "vip111": {
-      "rollcalls": 142,
-      "present": 142,
-      "participated": 140,
-      "aligned": 139,
-      "comparable": 140,
-      "sourceCount": 142,
+      "rollcalls": 299,
+      "present": 298,
+      "participated": 256,
+      "aligned": 254,
+      "comparable": 256,
+      "sourceCount": 24,
       "sourceUrls": [
         "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202510200910009778Fletë votimi.pdf",
         "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202510201055037455Fletë votimi.pdf",
@@ -3444,12 +3445,12 @@
       ]
     },
     "vip167": {
-      "rollcalls": 142,
-      "present": 142,
-      "participated": 140,
-      "aligned": 139,
-      "comparable": 140,
-      "sourceCount": 142,
+      "rollcalls": 299,
+      "present": 298,
+      "participated": 256,
+      "aligned": 254,
+      "comparable": 256,
+      "sourceCount": 24,
       "sourceUrls": [
         "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202510200910009778Fletë votimi.pdf",
         "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202510201055037455Fletë votimi.pdf",
@@ -3466,12 +3467,12 @@
       ]
     },
     "vip113": {
-      "rollcalls": 145,
-      "present": 143,
-      "participated": 39,
+      "rollcalls": 336,
+      "present": 333,
+      "participated": 82,
       "aligned": 0,
       "comparable": 0,
-      "sourceCount": 145,
+      "sourceCount": 24,
       "sourceUrls": [
         "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202510200910009778Fletë votimi.pdf",
         "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202510201055037455Fletë votimi.pdf",
@@ -3488,12 +3489,12 @@
       ]
     },
     "vip266": {
-      "rollcalls": 43,
-      "present": 43,
-      "participated": 1,
-      "aligned": 1,
-      "comparable": 1,
-      "sourceCount": 43,
+      "rollcalls": 133,
+      "present": 133,
+      "participated": 20,
+      "aligned": 20,
+      "comparable": 20,
+      "sourceCount": 24,
       "sourceUrls": [
         "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202510201055037455Fletë votimi.pdf",
         "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202510201113589412Fletë votimi.pdf",
@@ -3510,12 +3511,12 @@
       ]
     },
     "vip215": {
-      "rollcalls": 7,
-      "present": 0,
-      "participated": 0,
-      "aligned": 0,
-      "comparable": 0,
-      "sourceCount": 7,
+      "rollcalls": 13,
+      "present": 5,
+      "participated": 4,
+      "aligned": 4,
+      "comparable": 4,
+      "sourceCount": 13,
       "sourceUrls": [
         "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202510200910009778Fletë votimi.pdf",
         "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202510201055037455Fletë votimi.pdf",
@@ -3523,16 +3524,21 @@
         "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202510201113589412Fletë votimi.pdf",
         "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202510201118009162Fletë votimi.pdf",
         "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202510241228473849Fletë votimi.pdf",
-        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202510241425362908Fletë votimi.pdf"
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202510241425362908Fletë votimi.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202510091122213440Fletë votimi.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202510091122590021Fletë votimi.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202510091125030606Fletë votimi.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202510091125516221Fletë votimi.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202510311128262303Fletë votimi.pdf"
       ]
     },
     "vip238": {
-      "rollcalls": 7,
+      "rollcalls": 11,
       "present": 0,
       "participated": 0,
       "aligned": 0,
       "comparable": 0,
-      "sourceCount": 7,
+      "sourceCount": 11,
       "sourceUrls": [
         "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202510200910009778Fletë votimi.pdf",
         "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202510201055037455Fletë votimi.pdf",
@@ -3540,16 +3546,20 @@
         "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202510201113589412Fletë votimi.pdf",
         "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202510201118009162Fletë votimi.pdf",
         "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202510241228473849Fletë votimi.pdf",
-        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202510241425362908Fletë votimi.pdf"
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202510241425362908Fletë votimi.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202510091122213440Fletë votimi.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202510091122590021Fletë votimi.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202510091125030606Fletë votimi.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202510091125516221Fletë votimi.pdf"
       ]
     },
     "vip19": {
-      "rollcalls": 7,
+      "rollcalls": 11,
       "present": 0,
       "participated": 0,
       "aligned": 0,
       "comparable": 0,
-      "sourceCount": 7,
+      "sourceCount": 11,
       "sourceUrls": [
         "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202510200910009778Fletë votimi.pdf",
         "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202510201055037455Fletë votimi.pdf",
@@ -3557,162 +3567,15 @@
         "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202510201113589412Fletë votimi.pdf",
         "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202510201118009162Fletë votimi.pdf",
         "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202510241228473849Fletë votimi.pdf",
-        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202510241425362908Fletë votimi.pdf"
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202510241425362908Fletë votimi.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202510091122213440Fletë votimi.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202510091122590021Fletë votimi.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202510091125030606Fletë votimi.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202510091125516221Fletë votimi.pdf"
       ]
     }
   },
-  "failures": [
-    {
-      "id": "0d84b236-4e82-4420-8cf9-01a6f6863e57",
-      "error": "skip large file 1694523",
-      "url": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202610091156454834Fletë votimi%2C datë 8 tetor 2026-51-60.pdf"
-    },
-    {
-      "id": "dd82da63-b37a-4e8d-9e09-0600f269c25e",
-      "error": "skip large file 1761864",
-      "url": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202605081006367095Fletë votimi%2C datë 7 maj 2026-081-090.pdf"
-    },
-    {
-      "id": "8cd0146c-e1df-4160-b3ea-0a1556f64b1c",
-      "error": "skip large file 1726698",
-      "url": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202604171044207530Fletë votimi%2C datë 16 prill 2026-06-15.pdf"
-    },
-    {
-      "id": "b3a4d429-85a8-4eb3-8d3e-0a1f0ba001ed",
-      "error": "skip large file 1530479",
-      "url": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202512051320080481Fletë votimi.pdf"
-    },
-    {
-      "id": "8978bfc6-b9d8-4e42-bdcd-0fda9e7abded",
-      "error": "skip large file 4191656",
-      "url": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202610020940089513Fletë votimi%2C datë 24 shtator 2026.pdf"
-    },
-    {
-      "id": "3a0c6ddf-388b-4668-acc2-164141963d92",
-      "error": "skip large file 1673993",
-      "url": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202605080953541940Fletë votimi%2C datë 7 maj 2026-041-050.pdf"
-    },
-    {
-      "id": "532fac54-bb23-496c-932d-1d19ae54d817",
-      "error": "skip large file 2925448",
-      "url": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202510091125030606Fletë votimi.pdf"
-    },
-    {
-      "id": "bbf5da53-b8b8-4803-b061-26dc778cada6",
-      "error": "skip large file 1672928",
-      "url": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202610091155496054Fletë votimi%2C datë 8 tetor 2026-41-50.pdf"
-    },
-    {
-      "id": "e66bc475-65e2-4652-b908-27b27609f4f1",
-      "error": "skip large file 1511202",
-      "url": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202511031052283503Fletë votimi.pdf"
-    },
-    {
-      "id": "3dfeee8e-c045-4e97-998f-2a0a7dbc3647",
-      "error": "skip large file 6904359",
-      "url": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202606011618009361Fletë votimi%2C datë 1 qershor 2026.pdf"
-    },
-    {
-      "id": "45c82a92-d4b8-4a1c-aa10-2b6fdfad2ae5",
-      "error": "skip large file 1683360",
-      "url": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202605221053078061Fletë votimi%2C datë 21 maj 2026-36-45.pdf"
-    },
-    {
-      "id": "159f2699-1062-43d4-ada4-2db905e99037",
-      "error": "skip large file 1749270",
-      "url": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202605080951143494Fletë votimi%2C datë 7 maj 2026-011-020.pdf"
-    },
-    {
-      "id": "792b2d95-9084-4679-ae47-2e0493a1cbfd",
-      "error": "skip large file 1679562",
-      "url": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202604240946242353Fletë votimi%2C datë 23 prill 2026-006-015.pdf"
-    },
-    {
-      "id": "01d404b7-7c89-4583-b080-32e8b99023e1",
-      "error": "skip large file 3388407",
-      "url": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202605080952570420Fletë votimi%2C datë 7 maj 2026-021-040.pdf"
-    },
-    {
-      "id": "8af35c17-a74b-47b5-b3f0-34e10bc5c276",
-      "error": "skip large file 2133713",
-      "url": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202512191340435508Fletë votimi%2C datë 11 dhjetor 2025-333-364.pdf"
-    },
-    {
-      "id": "b7c006c1-649a-48ba-99a3-31eba67c7fa9",
-      "error": "<urlopen error timed out>",
-      "url": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202512051307496895Fletë votimi.pdf"
-    },
-    {
-      "id": "9a98d540-946f-4090-9a22-41989f43334a",
-      "error": "skip large file 7841795",
-      "url": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202602061339487082Fletë votimi%2C datë 3 shkurt 2026-066-155.pdf"
-    },
-    {
-      "id": "cada2233-dc6f-464c-97c4-4528b882daef",
-      "error": "skip large file 1686155",
-      "url": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202610091150056455Fletë votimi%2C datë 8 tetor 2026-11-20.pdf"
-    },
-    {
-      "id": "50642eaf-d197-4861-bd62-50a20dfa6efe",
-      "error": "skip large file 1722617",
-      "url": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202605221046236370Fletë votimi%2C datë 21 maj 2026-16-25.pdf"
-    },
-    {
-      "id": "9336a19b-4909-44bf-8236-513074866180",
-      "error": "skip large file 1701756",
-      "url": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202604240950091037Fletë votimi%2C datë 23 prill 2026-036-045.pdf"
-    },
-    {
-      "id": "4d5ce118-8f2d-4b9d-87ea-518598f345e6",
-      "error": "skip large file 2133246",
-      "url": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202609101224417626Fletë votimi%2C datë 23 korrik 2026-051-085.pdf"
-    },
-    {
-      "id": "78a8071a-480c-4adf-a030-524c6903804f",
-      "error": "skip large file 1666316",
-      "url": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202602201257463225Fletë votimi%2C datë 19 shkurt 2026-66-75.pdf"
-    },
-    {
-      "id": "09303cfa-cf11-40d6-903b-526695570f9f",
-      "error": "skip large file 2896242",
-      "url": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202510091122590021Fletë votimi.pdf"
-    },
-    {
-      "id": "6adff395-c092-487e-87d3-5bddc3f3044d",
-      "error": "skip large file 1730893",
-      "url": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202605081001320843Fletë votimi%2C datë 7 maj 2026-061-070.pdf"
-    },
-    {
-      "id": "257de1fe-37ea-4588-9d02-5c0d811c2a09",
-      "error": "skip large file 1511202",
-      "url": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202511031053538526Fletë votimi.pdf"
-    },
-    {
-      "id": "f99a7a87-238d-41a4-b1a4-5f94f5455b53",
-      "error": "skip large file 1758518",
-      "url": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202604171033048981Fletë votimi%2C datë 16 prill 2026-36-45.pdf"
-    },
-    {
-      "id": "dc143d3f-11f8-48ee-ac14-689d4e394cd0",
-      "error": "skip large file 1687816",
-      "url": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202604101206487064Fletë votimi%2C datë 9 prill 2026-06-15.pdf"
-    },
-    {
-      "id": "2dc17c5b-cd1d-44ce-80b0-6b3adc8d3faf",
-      "error": "skip large file 1717515",
-      "url": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202605221045379338Fletë votimi%2C datë 21 maj 2026-06-15.pdf"
-    },
-    {
-      "id": "a0a0c55d-bf27-4c61-b96d-6bbac5b0a0cb",
-      "error": "skip large file 2604168",
-      "url": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202606191207071428Fletë votimi%2C datë 18 qershor 2026-036-075.pdf"
-    },
-    {
-      "id": "0bd685af-5d74-4868-b71d-6c7f82eda7fc",
-      "error": "skip large file 8971474",
-      "url": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202512191051506529Fletë votimi%2C datë 11 dhjetor 2025-365-629.pdf"
-    }
-  ],
+  "failures": [],
   "blocked": [
     {
       "source": "http://www.ildkpki.al",
