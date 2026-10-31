@@ -1421,14 +1421,183 @@ def choose_boci_row(name: str, zone: Optional[str], sitting: bool, records: List
     return None, "the other Kuvendi row is Elbasan, which does not match this profile's Shkodër district"
 
 
+MANUAL_RETRIEVED_AT = "2026-10-31"
+RAMA_CABINET_URL = "https://kryeministria.al/ministrat/edi-rama/"
+PIRDENI_OATH_URL = "https://president.al/adea-pirdeni-betohet-para-presidentit-te-republikes-si-minister-i-administrates-publike/"
+BEGAJ_BIO_URL = "https://president.al/jeteshkrimi-presidentit/"
+KQZ_CANDIDATE_DB_URL = "https://kqz.gov.al/kandidatet"
+KQZ_NEGATIVE_SENTENCE = (
+    "Manual search of https://kqz.gov.al/kandidatet on 2026-10-31 (filters 2023-09-24, 2024-08-04, "
+    "2025-05-11, 2025-11-09) did not find this name. That database has no 2021 parliamentary list "
+    "and no 2023-05-14 local list, and 2025 multi-name lists were not checked line by line. "
+    "This is a negative search log, not a fact stored on the profile."
+)
 EXHAUSTED_IDENTITY = (
     "No row in the current Kuvendi register, not on the KQZ Decision No. 34 list of 140, "
     "and Wikidata search returned no entity. kryeministria.al and the ministry hosts on that "
-    "network return an Incapsula challenge, kqz.gov.al has no public candidate-list search "
-    "(/rezultatet and the 2023 local path return 404), and Fletorja Zyrtare (qbz.gov.al) is a "
-    "JavaScript application whose act-search API is not in the public page. Earlier-legislature "
-    "biography files are not in the current register snapshot."
+    "network return an Incapsula challenge to this collector. " + KQZ_NEGATIVE_SENTENCE + " "
+    "Fletorja Zyrtare (qbz.gov.al) is a JavaScript application whose act-search API is not in the "
+    "public page. Earlier-legislature biography files are not in the current register snapshot."
 )
+
+# Titles on https://kryeministria.al/menu-qeveria/ were paired with names by page order and URL slug.
+# Only rows with an independent prose source, or a Wikidata office that names the same post, are stored.
+CONFIRMED_CABINET_ROLES = (
+    {
+        "name": "Adea Pirdeni",
+        "role": "Ministër i Administratës Publike",
+        "sourceUrl": PIRDENI_OATH_URL,
+        "notes": (
+            "president.al news of 23 October 2026 states that Adea Pirdeni takes the oath as "
+            "Ministër i Administratës Publike. Retrieved 2026-10-31. The cabinet slug "
+            "https://kryeministria.al/ministrat/adea-pirdeni/ was paired with that title by page order, "
+            "so the oath article is the source. Wikidata Q130357788 has an undated broader label and was not used as the title."
+        ),
+    },
+)
+CABINET_ROLES_NOT_ADDED = (
+    {"name": "diella", "reason": "Slug only. No person was created for this cabinet URL."},
+    {"name": "Albana Koçiu", "reason": "In the 279. Deputy-prime-minister title is page-order only. Wikidata Q131409942 records an undated health-and-welfare ministry, which does not confirm that title."},
+    {"name": "Ervin Demo", "reason": "In the 279. Interior-minister title is page-order only. Wikidata Q134542622 records an undated mayoralty of Berat, not this office."},
+    {"name": "Ferit Hoxha", "reason": "Not in the 279. No profile was created."},
+    {"name": "Petrit Malaj", "reason": "In the 279. Finance-minister title is page-order only. Wikidata Q135095772 has no position statement."},
+    {"name": "Enea Karakaci", "reason": "Not in the 279. No profile was created."},
+    {"name": "Ermal Nufi", "reason": "Not in the 279. No profile was created."},
+    {"name": "Toni Gogu", "reason": "In the 279 (two cards). Justice-minister title is page-order only. Wikidata Q136351034 has no position statement."},
+    {"name": "Mirela Kumbaro", "reason": "In the 279. Education-minister title is page-order only. Wikidata Q15724978 records undated culture and tourism posts, not education."},
+    {"name": "Klodiana Spahiu", "reason": "In the 279. Health-minister title is page-order only. Wikidata Q31965321 has no matching office."},
+    {"name": "Andis Salla", "reason": "Not in the 279. No profile was created."},
+    {"name": "Delina Ibrahimaj", "reason": "In the 279. Economy-and-innovation title is page-order only. Wikidata Q108698181 records an undated finance post, not this office."},
+    {"name": "Blendi Gonxhja", "reason": "In the 279. Tourism-culture-sport title is page-order only. Wikidata Q124972664 has no position statement."},
+    {"name": "Sofjan Jaupaj", "reason": "Not in the 279. No profile was created."},
+    {"name": "Majlinda Dhuka", "reason": "Not in the 279. No profile was created."},
+    {"name": "Erjona Ismaili", "reason": "In the 279. Parliamentary-relations title is page-order only. Wikidata Q139088605 has no position statement."},
+    {"name": "Bajram Begaj", "reason": "Verified biography on president.al was not attached because the 279 contains no profile with this name. No profile was created."},
+)
+KQZ_CANDIDATE_NEGATIVES = (
+    {"name": "Gëzim Bara", "query": "Bara", "result": "No Bara row except Barbara Doda, MUNDËSIA, Tiranë, who is a different person."},
+    {"name": "Ana Dhamo", "query": "Dhamo", "result": "No row."},
+    {"name": "Artur Bushaj", "query": "Bushaj", "result": "No row."},
+    {"name": "Prishela Gjoka", "query": "Gjoka", "result": "No row."},
+    {"name": "Shpresa Marnikollaj", "query": "Marnikollaj", "result": "No row."},
+    {"name": "Anila Agalliu", "query": "Agalliu", "result": "No row."},
+    {"name": "Artemis Dralo", "query": "Dralo", "result": "No row."},
+    {"name": "Sabina Jorgo", "query": "Jorgo", "result": "Only Jorgo Kaça, PARTIA SOCIALDEMOKRATE, Vlorë, a different person. Sabina Jorgo was not found."},
+    {"name": "Marjeta Neli", "query": "Neli", "result": "Only Neli Demi, KOALICIONI EUROATLANTIK, Tiranë, a different person. Marjeta Neli was not found."},
+    {"name": "Albana Pëllumbi", "query": "Pëllumbi", "result": "No row."},
+    {"name": "Dhimitër Kruti", "query": "Kruti", "result": "No row."},
+)
+
+
+def begaj_biography() -> Dict[str, str]:
+    """Quotes from the presidency biography. Applied only when a profile already has this name."""
+    return {
+        "name": "Bajram Begaj",
+        "role": "President i Republikës së Shqipërisë",
+        "dateOfBirth": "1967-03-20",
+        "placeOfBirth": "Rrogozhinë",
+        "education": "Ka përfunduar studimet për mjekësi në Universitetin e Tiranës; specializim Gastro-Hepatologji; studime doktorale; Profesor i Asociuar që nga 2016",
+        "career": "Mjek ushtarak në Forcat e Armatosura, karrierë 32-vjeçare; më 2020, një muaj pas gradës Gjeneral Major, Shefi i Shtabit të Përgjithshëm të Forcave të Armatosura. Presidenti i 8-të i Republikës së Shqipërisë prej 24 korrik 2022.",
+        "sourceUrl": BEGAJ_BIO_URL,
+        "notes": "Biography page retrieved 2026-10-31. Born 20 mars 1967 in Rrogozhinë; president since 24 korrik 2022.",
+    }
+
+
+def apply_confirmed_browser_facts(profiles: List[Dict[str, Any]], retrieved_at: str = MANUAL_RETRIEVED_AT) -> Dict[str, List[str]]:
+    """Store the 2026-10-31 browser reads that are independently confirmed. Do not create people."""
+    applied: List[str] = []
+    rama = profile_for_office("Edi Rama", profiles)
+    if rama:
+        remember_link(rama, "Kryeministër", RAMA_CABINET_URL)
+        role = (rama.get("fieldSources") or {}).get("currentRole") or {}
+        if role.get("value"):
+            note = (
+                f"Cabinet profile {RAMA_CABINET_URL} retrieved {retrieved_at} shows KRYEMINISTËR; the slug is edi-rama. "
+                "The stored title also includes the party chair, which is stated in prose at https://ps.al/."
+            )
+            if RAMA_CABINET_URL not in (role.get("notes") or ""):
+                role["notes"] = ((role.get("notes") or "").rstrip() + " " + note).strip()
+            role.setdefault("retrievedAt", retrieved_at)
+        applied.append("Edi Rama")
+    for office in CONFIRMED_CABINET_ROLES:
+        profile = profile_for_office(office["name"], profiles)
+        if not profile:
+            continue
+        apply_specific_role(profile, office["role"], office["sourceUrl"], retrieved_at, office["notes"])
+        applied.append(office["name"])
+    biography = begaj_biography()
+    president = profile_for_office(biography["name"], profiles)
+    if president:
+        set_field(president, "currentRole", biography["role"], biography["sourceUrl"], retrieved_at, biography["notes"])
+        set_field(president, "dateOfBirth", biography["dateOfBirth"], biography["sourceUrl"], retrieved_at, biography["notes"])
+        set_field(president, "placeOfBirth", biography["placeOfBirth"], biography["sourceUrl"], retrieved_at, biography["notes"])
+        set_field(president, "education", biography["education"], biography["sourceUrl"], retrieved_at, biography["notes"])
+        president["careerSummary"] = biography["career"]
+        mandates = president.setdefault("mandates", [])
+        if not any(item.get("sourceUrl") == biography["sourceUrl"] for item in mandates):
+            mandates.append({"period": "2022-07-24 —", "role": biography["role"], "current": True, "sourceUrl": biography["sourceUrl"]})
+        president.setdefault("fieldSources", {})["mandates"] = {
+            "value": str(len(mandates)),
+            "sourceUrl": biography["sourceUrl"],
+            "retrievedAt": retrieved_at,
+            "notes": biography["notes"],
+        }
+        remember_link(president, biography["role"], biography["sourceUrl"])
+        applied.append(biography["name"])
+    return {
+        "applied": applied,
+        "notAdded": [row["name"] for row in CABINET_ROLES_NOT_ADDED],
+    }
+
+
+def refresh_unresolved_kqz_note() -> None:
+    """Keep the candidate-database miss in the name log. It is not written onto a profile."""
+    path = OUT_DIR / "unresolved_names.csv"
+    if not path.exists():
+        return
+    with path.open(encoding="utf-8", newline="") as handle:
+        rows = list(csv.DictReader(handle))
+    watched = {row["name"] for row in KQZ_CANDIDATE_NEGATIVES}
+    stale = "kqz.gov.al has no public candidate-list search (/rezultatet and the 2023 local path return 404), and "
+    for row in rows:
+        if row.get("name") not in watched:
+            continue
+        reason = (row.get("reason") or "").replace(stale, "")
+        if KQZ_CANDIDATE_DB_URL not in reason:
+            reason = (reason.rstrip() + " " + KQZ_NEGATIVE_SENTENCE).strip()
+        row["reason"] = reason
+    with path.open("w", encoding="utf-8", newline="") as handle:
+        writer = csv.DictWriter(handle, fieldnames=["vip_id", "name", "reason"])
+        writer.writeheader()
+        writer.writerows(rows)
+
+
+def write_browser_finding_logs() -> None:
+    """Negative KQZ searches and cabinet rows that were not stored on a card."""
+    OUT_DIR.mkdir(parents=True, exist_ok=True)
+    with (OUT_DIR / "kqz_kandidatet_negatives.csv").open("w", encoding="utf-8", newline="") as handle:
+        writer = csv.DictWriter(handle, fieldnames=["name", "query", "result", "source_url", "retrieved_at", "scope"])
+        writer.writeheader()
+        for row in KQZ_CANDIDATE_NEGATIVES:
+            writer.writerow({
+                "name": row["name"],
+                "query": row["query"],
+                "result": row["result"],
+                "source_url": KQZ_CANDIDATE_DB_URL,
+                "retrieved_at": MANUAL_RETRIEVED_AT,
+                "scope": "kandidatet year filters 2023-09-24, 2024-08-04, 2025-05-11, 2025-11-09; not a 2021 or 2023-05-14 list; not written onto the profile",
+            })
+    with (OUT_DIR / "cabinet_roles_not_added.csv").open("w", encoding="utf-8", newline="") as handle:
+        writer = csv.DictWriter(handle, fieldnames=["name", "reason", "source_url", "retrieved_at"])
+        writer.writeheader()
+        for row in CABINET_ROLES_NOT_ADDED:
+            writer.writerow({
+                "name": row["name"],
+                "reason": row["reason"],
+                "source_url": "https://kryeministria.al/menu-qeveria/",
+                "retrieved_at": MANUAL_RETRIEVED_AT,
+            })
+    refresh_unresolved_kqz_note()
 BOCI_FORMER_REASON = (
     "Two Kuvendi rows share this name. The sitting row is Shkodër, status 0, and is used only "
     "for the active Shkodër profile. The other row is Elbasan, status 1, which does not match "
@@ -1615,6 +1784,9 @@ def apply_role_round() -> Dict[str, Any]:
     except Exception as exc:
         page_errors.append(f"kuvendi strukturat: {exc.__class__.__name__}")
 
+    browser = apply_confirmed_browser_facts(export["profiles"], retrieved_at)
+    write_browser_finding_logs()
+
     unresolved = []
     for profile in export["profiles"]:
         sourced_name = (profile.get("fieldSources") or {}).get("fullName", {}).get("value")
@@ -1633,6 +1805,8 @@ def apply_role_round() -> Dict[str, Any]:
     summary["unresolved"] = len(unresolved)
     summary["cvGaps"] = cv_stats
     summary["pageErrors"] = page_errors
+    summary["browserFactsApplied"] = browser["applied"]
+    summary["browserFactsNotAdded"] = browser["notAdded"]
     non_null_scores = sum(1 for profile in export["profiles"] if profile.get("composite") is not None or profile.get("dynamicScore") is not None)
     summary["nonNullScores"] = non_null_scores
     COVERAGE_PATH.write_text(json.dumps(summary, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
@@ -1645,8 +1819,18 @@ def main() -> None:
     parser.add_argument("--enrich", action="store_true", help="Fill gaps with unique name variants and Parliament CVs")
     parser.add_argument("--residual", action="store_true", help="Match remaining names by documented spellings and unique Wikidata identities")
     parser.add_argument("--roles", action="store_true", help="Fill current and former roles from KQZ and the Kuvendi register")
+    parser.add_argument("--browser", action="store_true", help="Apply the 2026-10-31 confirmed browser reads and write the negative logs")
     args = parser.parse_args()
-    if args.roles:
+    if args.browser:
+        export = json.loads(EXPORT_PATH.read_text(encoding="utf-8"))
+        browser = apply_confirmed_browser_facts(export["profiles"])
+        write_browser_finding_logs()
+        EXPORT_PATH.write_text(json.dumps(export, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+        summary = rewrite_outputs_from_export()
+        summary["browserFactsApplied"] = browser["applied"]
+        summary["browserFactsNotAdded"] = browser["notAdded"]
+        COVERAGE_PATH.write_text(json.dumps(summary, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+    elif args.roles:
         summary = apply_role_round()
     elif args.residual:
         summary = apply_residual_matches()

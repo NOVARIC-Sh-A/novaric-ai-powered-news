@@ -1,6 +1,10 @@
 import unittest
 
 from scripts.collect_official_politician_sources import (
+    CABINET_ROLES_NOT_ADDED,
+    KQZ_CANDIDATE_NEGATIVES,
+    RAMA_CABINET_URL,
+    apply_confirmed_browser_facts,
     choose_boci_row,
     civil_birth_date,
     fold,
@@ -142,6 +146,55 @@ class OfficialSourceRulesTest(unittest.TestCase):
         self.assertEqual(offices["Sali Berisha"], "Kryetar i Partisë Demokratike")
         self.assertEqual(offices["Erion Veliaj"], "Kryetar i Bashkisë së Tiranës")
         self.assertEqual(offices_from_public_pages({}), [])
+
+    def test_browser_reads_store_only_confirmed_matches(self):
+        profiles = [
+            {
+                "name": "Edi Rama",
+                "primaryRole": "Kryeministër, njëherësh Kryetar i Partisë Socialiste",
+                "fieldSources": {"currentRole": {"value": "Kryeministër, njëherësh Kryetar i Partisë Socialiste", "sourceUrl": "https://ps.al/", "notes": ""}},
+                "officialLinks": [],
+                "secondaryRoles": [],
+            },
+            {
+                "name": "Adea Pirdeni",
+                "primaryRole": "Deputet i Kuvendit të Shqipërisë",
+                "fieldSources": {"currentRole": {"value": "Deputet i Kuvendit të Shqipërisë", "sourceUrl": "https://kqz.gov.al"}},
+                "officialLinks": [],
+                "secondaryRoles": [],
+                "mandates": [],
+            },
+            {
+                "name": "Toni Gogu",
+                "primaryRole": "Ish-deputet i Kuvendit të Shqipërisë",
+                "fieldSources": {"currentRole": {"value": "Ish-deputet i Kuvendit të Shqipërisë", "sourceUrl": "https://kuvendiapi.azurewebsites.net/api/anetaret/example"}},
+                "officialLinks": [],
+                "secondaryRoles": [],
+            },
+            {"name": "Bajram Begaj", "primaryRole": None, "fieldSources": {}, "officialLinks": [], "mandates": []},
+        ]
+        result = apply_confirmed_browser_facts(profiles)
+        self.assertEqual([profile["name"] for profile in profiles], ["Edi Rama", "Adea Pirdeni", "Toni Gogu", "Bajram Begaj"])
+        self.assertNotIn("diella", result["applied"])
+        self.assertIn("diella", result["notAdded"])
+        rama = profiles[0]
+        self.assertEqual(rama["fieldSources"]["currentRole"]["sourceUrl"], "https://ps.al/")
+        self.assertIn(RAMA_CABINET_URL, rama["fieldSources"]["currentRole"]["notes"])
+        self.assertTrue(any(link["url"] == RAMA_CABINET_URL for link in rama["officialLinks"]))
+        pirdeni = profiles[1]
+        self.assertEqual(pirdeni["primaryRole"], "Ministër i Administratës Publike")
+        self.assertIn("president.al", pirdeni["fieldSources"]["currentRole"]["sourceUrl"])
+        self.assertIn("Deputet i Kuvendit të Shqipërisë", pirdeni["secondaryRoles"])
+        self.assertEqual(profiles[2]["primaryRole"], "Ish-deputet i Kuvendit të Shqipërisë")
+        begaj = profiles[3]
+        self.assertEqual(begaj["dateOfBirth"], "1967-03-20")
+        self.assertEqual(begaj["placeOfBirth"], "Rrogozhinë")
+        self.assertIn("Universitetin e Tiranës", begaj["education"])
+        self.assertEqual(begaj["primaryRole"], "President i Republikës së Shqipërisë")
+        repair_open_ended_roles(begaj)
+        self.assertEqual(begaj["primaryRole"], "President i Republikës së Shqipërisë")
+        self.assertEqual(len(KQZ_CANDIDATE_NEGATIVES), 11)
+        self.assertTrue(all(row["name"] != "diella" or row["reason"].startswith("Slug only") for row in CABINET_ROLES_NOT_ADDED))
 
     def test_boci_is_separated_by_district(self):
         records = [

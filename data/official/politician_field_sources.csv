@@ -1,6 +1,6 @@
 vip_id,name,field,value,source_url,retrieved_at,licence,notes
 vip1,Edi Rama,fullName,Edi Rama,https://kuvendiapi.azurewebsites.net/api/anetaret/c408857c-f316-41ff-8566-b99152469cdf,2026-10-31,,
-vip1,Edi Rama,currentRole,"Kryeministër, njëherësh Kryetar i Partisë Socialiste",https://ps.al/,2026-10-31,,Party homepage uses this title in the present tense
+vip1,Edi Rama,currentRole,"Kryeministër, njëherësh Kryetar i Partisë Socialiste",https://ps.al/,2026-10-31,,"Party homepage uses this title in the present tense Cabinet profile https://kryeministria.al/ministrat/edi-rama/ retrieved 2026-10-31 shows KRYEMINISTËR; the slug is edi-rama. The stored title also includes the party chair, which is stated in prose at https://ps.al/."
 vip1,Edi Rama,party,Partia Socialiste,https://kuvendiapi.azurewebsites.net/api/anetaret/c408857c-f316-41ff-8566-b99152469cdf,2026-10-31,,
 vip1,Edi Rama,dateOfBirth,1964-07-04,https://www.wikidata.org/wiki/Q316901,2026-10-31,,
 vip1,Edi Rama,placeOfBirth,Tirana,https://www.wikidata.org/wiki/Q316901,2026-10-31,,
@@ -275,7 +275,7 @@ vip27,Ulsi Manja,constituency,Lezhë,https://kqz.gov.al,2026-10-31,,"KQZ Decisio
 vip27,Ulsi Manja,officialLinks,3,mailto:ulsi.manja@parlament.al,2026-10-31,,
 vip27,Ulsi Manja,photo,/politicians/official/vip27.jpg,https://commons.wikimedia.org/wiki/File:Ulsi_Manja_(cropped).jpg,2026-10-31,CC BY 4.0,
 vip28,Adea Pirdeni,fullName,Adea Pirdeni,https://kuvendiapi.azurewebsites.net/api/anetaret/1fc7146b-273c-463d-8f26-f0720e8af271,2026-10-31,,
-vip28,Adea Pirdeni,currentRole,Deputet i Kuvendit të Shqipërisë,https://kuvendiapi.azurewebsites.net/api/anetaret/1fc7146b-273c-463d-8f26-f0720e8af271,2026-10-31,,
+vip28,Adea Pirdeni,currentRole,Ministër i Administratës Publike,https://president.al/adea-pirdeni-betohet-para-presidentit-te-republikes-si-minister-i-administrates-publike/,2026-10-31,,"president.al news of 23 October 2026 states that Adea Pirdeni takes the oath as Ministër i Administratës Publike. Retrieved 2026-10-31. The cabinet slug https://kryeministria.al/ministrat/adea-pirdeni/ was paired with that title by page order, so the oath article is the source. Wikidata Q130357788 has an undated broader label and was not used as the title."
 vip28,Adea Pirdeni,party,PS,https://kuvendiapi.azurewebsites.net/api/anetaret/1fc7146b-273c-463d-8f26-f0720e8af271,2026-10-31,,
 vip28,Adea Pirdeni,dateOfBirth,1983-10-01,https://www.wikidata.org/wiki/Q130357788,2026-10-31,,
 vip28,Adea Pirdeni,placeOfBirth,Tirana,https://www.wikidata.org/wiki/Q130357788,2026-10-31,,

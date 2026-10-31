@@ -94,7 +94,7 @@
           "value": "Kryeministër, njëherësh Kryetar i Partisë Socialiste",
           "sourceUrl": "https://ps.al/",
           "retrievedAt": "2026-10-31",
-          "notes": "Party homepage uses this title in the present tense"
+          "notes": "Party homepage uses this title in the present tense Cabinet profile https://kryeministria.al/ministrat/edi-rama/ retrieved 2026-10-31 shows KRYEMINISTËR; the slug is edi-rama. The stored title also includes the party chair, which is stated in prose at https://ps.al/."
         },
         "mandates": {
           "value": "2",
@@ -145,6 +145,10 @@
         {
           "label": "Kryeministër, njëherësh Kryetar i Partisë Socialiste",
           "url": "https://ps.al/"
+        },
+        {
+          "label": "Kryeministër",
+          "url": "https://kryeministria.al/ministrat/edi-rama/"
         }
       ],
       "affiliations": [
@@ -3918,8 +3922,10 @@
       "name": "Adea Pirdeni",
       "category": "Politikë (PS)",
       "party": "PS",
-      "primaryRole": "Deputet i Kuvendit të Shqipërisë",
-      "secondaryRoles": [],
+      "primaryRole": "Ministër i Administratës Publike",
+      "secondaryRoles": [
+        "Deputet i Kuvendit të Shqipërisë"
+      ],
       "parliamentaryStatus": "active_mp",
       "detentionStatus": "none",
       "caseStatus": "none",
@@ -3991,9 +3997,10 @@
           "retrievedAt": "2026-10-31"
         },
         "currentRole": {
-          "value": "Deputet i Kuvendit të Shqipërisë",
-          "sourceUrl": "https://kuvendiapi.azurewebsites.net/api/anetaret/1fc7146b-273c-463d-8f26-f0720e8af271",
-          "retrievedAt": "2026-10-31"
+          "value": "Ministër i Administratës Publike",
+          "sourceUrl": "https://president.al/adea-pirdeni-betohet-para-presidentit-te-republikes-si-minister-i-administrates-publike/",
+          "retrievedAt": "2026-10-31",
+          "notes": "president.al news of 23 October 2026 states that Adea Pirdeni takes the oath as Ministër i Administratës Publike. Retrieved 2026-10-31. The cabinet slug https://kryeministria.al/ministrat/adea-pirdeni/ was paired with that title by page order, so the oath article is the source. Wikidata Q130357788 has an undated broader label and was not used as the title."
         },
         "mandates": {
           "value": "1",
@@ -4034,6 +4041,10 @@
         {
           "label": "Wikidata Q130357788",
           "url": "https://www.wikidata.org/wiki/Q130357788"
+        },
+        {
+          "label": "Ministër i Administratës Publike",
+          "url": "https://president.al/adea-pirdeni-betohet-para-presidentit-te-republikes-si-minister-i-administrates-publike/"
         }
       ],
       "affiliations": [

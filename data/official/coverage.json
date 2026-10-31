@@ -47,5 +47,28 @@
     }
   },
   "retrievedAt": "2026-10-31",
+  "browserFactsApplied": [
+    "Edi Rama",
+    "Adea Pirdeni"
+  ],
+  "browserFactsNotAdded": [
+    "diella",
+    "Albana Koçiu",
+    "Ervin Demo",
+    "Ferit Hoxha",
+    "Petrit Malaj",
+    "Enea Karakaci",
+    "Ermal Nufi",
+    "Toni Gogu",
+    "Mirela Kumbaro",
+    "Klodiana Spahiu",
+    "Andis Salla",
+    "Delina Ibrahimaj",
+    "Blendi Gonxhja",
+    "Sofjan Jaupaj",
+    "Majlinda Dhuka",
+    "Erjona Ismaili",
+    "Bajram Begaj"
+  ],
   "unresolved": 8
 }
