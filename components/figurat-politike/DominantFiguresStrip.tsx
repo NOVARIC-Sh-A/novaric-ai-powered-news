@@ -2,7 +2,7 @@
 import React from 'react';
 import { VipProfile } from '../../types';
 import { partyColor, normalizePartySlug } from '../../lib/brand-tokens';
-import { zodiacSign } from '../../lib/zodiac';
+import { ZodiacChip } from './primitives/ZodiacChip';
 
 interface DominantFiguresStripProps {
   politicians: VipProfile[];
@@ -24,7 +24,6 @@ export const DominantFiguresStrip: React.FC<DominantFiguresStripProps> = ({
         const partySlug = (item as any).party || normalizePartySlug(item.category);
         const pc = partyColor(partySlug);
         const dob = (item as any).dateOfBirth || item.dateOfBirth;
-        const zodiac = zodiacSign(dob);
         const targetId = item.numericId || item.id;
         const linkHref = `/figurat-politike/${targetId}`;
 
@@ -118,18 +117,12 @@ export const DominantFiguresStrip: React.FC<DominantFiguresStripProps> = ({
               </div>
             </div>
 
-            {/* Status / Zodiac line */}
-            <div className="flex items-center text-xs mb-2 font-medium" style={{ color: 'var(--nv-navy-muted)' }}>
-              <span className="text-[11px] text-amber-700 dark:text-amber-400 font-semibold mr-1.5">
+            {/* Status / Zodiac line. The sign is display-only and is never a score input. */}
+            <div className="flex flex-wrap items-center gap-1 text-xs mb-2 font-medium" style={{ color: 'var(--nv-navy-muted)' }}>
+              <span className="text-[11px] text-amber-700 dark:text-amber-400 font-semibold">
                 PARAGON® i pezulluar
               </span>
-              {zodiac ? (
-                <>
-                  <span className="mx-1 opacity-50">·</span>
-                  <span className="text-purple-600 dark:text-purple-400 mr-1">{zodiac.glyph}</span>
-                  <span className="truncate">{zodiac.name}</span>
-                </>
-              ) : null}
+              <ZodiacChip dateOfBirth={dob} withStatus className="flex-wrap max-w-full px-1.5 py-0.5 text-[10px]" />
             </div>
 
             {/* Audit indicator bar */}

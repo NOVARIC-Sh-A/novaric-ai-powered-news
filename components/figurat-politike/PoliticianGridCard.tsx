@@ -2,8 +2,8 @@
 import React, { useState } from 'react';
 import { VipProfile } from '../../types';
 import { partyColor, normalizePartySlug, band, bandLabel } from '../../lib/brand-tokens';
-import { zodiacSign } from '../../lib/zodiac';
 import { CANONICAL_PARAGON_DIMENSIONS } from '../../types/politician';
+import { ZodiacChip } from './primitives/ZodiacChip';
 import { useDotTooltip } from './SharedDotTooltip';
 
 export interface PoliticianGridCardProps {
@@ -39,7 +39,6 @@ export const PoliticianGridCard: React.FC<PoliticianGridCardProps> = ({
   const delta = (targetPolitician as any).compositeDelta ?? null;
   const dob = (targetPolitician as any).dateOfBirth || targetPolitician.dateOfBirth || null;
   const zone = (targetPolitician as any).electoralZone || null;
-  const zodiac = zodiacSign(dob);
 
   // Parse 7 dimensions in fixed D1 -> D7 order
   const rawDims = (targetPolitician as any).paragonDimensions;
@@ -63,11 +62,10 @@ export const PoliticianGridCard: React.FC<PoliticianGridCardProps> = ({
     return dob;
   }, [dob]);
 
-  // Build meta line: "zone · zodiac · DOB", with "—" fallback for each missing segment
+  // Zone and date of birth only. The star sign is rendered separately and is not a score.
   const partZone = zone || '—';
-  const partZodiac = zodiac ? `${zodiac.glyph} ${zodiac.name}` : '—';
   const partDob = formattedDob || '—';
-  const metaLine = `${partZone} · ${partZodiac} · ${partDob}`;
+  const metaLine = `${partZone} · ${partDob}`;
 
   const handleClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
     if (onClick) {
@@ -177,7 +175,7 @@ export const PoliticianGridCard: React.FC<PoliticianGridCardProps> = ({
             {(targetPolitician as any).primaryRole || ((targetPolitician as any).is_active_mp ? 'Deputet i Kuvendit' : 'Figurë Publike')}
           </div>
 
-          {/* Meta line: 10.5px zone · zodiac · DOB */}
+          {/* Meta line: zone · DOB. Zodiac is display-only. */}
           <div
             className="text-[10px] truncate mt-0.5 opacity-80"
             style={{ color: 'var(--nv-text-secondary)' }}
@@ -185,6 +183,7 @@ export const PoliticianGridCard: React.FC<PoliticianGridCardProps> = ({
           >
             {metaLine}
           </div>
+          <ZodiacChip dateOfBirth={dob} withStatus className="flex-wrap max-w-full mt-1 px-1.5 py-0.5 text-[10px]" />
 
           {/* Strict Verified DOB Badge: requires status=verified + source_url + verified_at */}
           {(targetPolitician as any).dateOfBirthVerificationStatus === 'verified' &&
