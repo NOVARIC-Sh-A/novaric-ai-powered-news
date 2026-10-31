@@ -70,7 +70,7 @@ describe('NOVARIC® PARAGON Politicians Cards & Pipeline Contract (P1)', () => {
       assert.ok(!raw.includes('MaleProfile') && !raw.includes('FemaleProfile'), `${card.id} uses mock photo`);
     });
     assert.equal(official + awaiting, 279);
-    assert.equal(awaiting, 23, '22 audited profiles + Zija Ismaili (Commons match rejected)');
+    assert.equal(awaiting, 25, 'profiles with no formal party, government, or parliament portrait');
   });
 
   test('Approved replacements point at the official Parliament / Commons sources', () => {
@@ -80,11 +80,19 @@ describe('NOVARIC® PARAGON Politicians Cards & Pipeline Contract (P1)', () => {
       const c: any = byId.get(id);
       assert.ok(c.imageUrl.startsWith('https://kuvendiwebfiles.blob.core.windows.net/'), `${id}: ${c.imageUrl}`);
     });
-    ['vip19', 'vip54', 'vip232'].forEach((id) => {
+    ['vip2', 'vip7', 'vip233'].forEach((id) => {
+      const c: any = byId.get(id);
+      assert.equal(c.imageUrl, `/politicians/official/${id}.jpg`);
+      assert.ok(String(c.photo_source_url).includes('pd.al'), `${id} should cite pd.al`);
+    });
+    ['vip6', 'vip54', 'vip19', 'vip232'].forEach((id) => {
       const c: any = byId.get(id);
       assert.equal(c.imageUrl, `/politicians/official/${id}.jpg`);
       assert.ok(fs.existsSync(path.resolve(process.cwd(), `public/politicians/official/${id}.jpg`)));
     });
+    assert.ok(String((byId.get('vip6') as any).photo_source_url).includes('ps.al'));
+    assert.ok(String((byId.get('vip19') as any).photo_source_url).includes('psd.al'));
+    assert.ok(String((byId.get('vip232') as any).photo_source_url).includes('pd.al'));
     const zija: any = byId.get('vip106');
     assert.equal(zija.photoPending, true);
     assert.equal(zija.imageUrl, null);

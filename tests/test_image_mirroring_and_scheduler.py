@@ -72,7 +72,7 @@ class TestOfficialPhotos(unittest.TestCase):
             profiles = json.load(f)["profiles"]
         self.assertEqual(len(profiles), 279)
         pending = [p for p in profiles if p.get("photoPending")]
-        self.assertEqual(len(pending), 23)
+        self.assertEqual(len(pending), 25)
         for p in profiles:
             if p.get("photoPending"):
                 self.assertIsNone(p.get("imageUrl"))
@@ -87,11 +87,11 @@ class TestOfficialPhotos(unittest.TestCase):
         with open("data/official/politician_field_sources.csv", encoding="utf-8", newline="") as f:
             rows = list(csv.DictReader(f))
         text = json.dumps(rows)
-        for vip in ("vip19", "vip54", "vip232"):
+        for vip in ("vip2", "vip7", "vip233"):
             self.assertTrue(os.path.exists(f"public/politicians/official/{vip}.jpg"))
-        self.assertIn("commons.wikimedia.org", text)
+        self.assertIn("pd.al", text)
+        self.assertIn("kuvendiwebfiles.blob.core.windows.net", text)
         self.assertIn("2026-10-31", text)
-        self.assertIn("CC BY", text)
 
     def test_image_worker_idempotency(self):
         worker = ImageMirrorWorker()

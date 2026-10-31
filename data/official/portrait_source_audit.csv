@@ -1,0 +1,280 @@
+vip_id,name,source_class,action,previous_source
+vip1,Edi Rama,parliament,replaced,https://commons.wikimedia.org/wiki/File:Edi_Rama_(2024-02-29).jpg
+vip2,Sali Berisha,party,replaced,https://commons.wikimedia.org/wiki/File:Sali_Berisha_2025.jpg
+vip3,Ilir Meta,awaiting,cleared,https://commons.wikimedia.org/wiki/File:President_of_Albania_Ilir_Meta.jpg
+vip4,Lulzim Basha,parliament,replaced,"https://commons.wikimedia.org/wiki/File:EPP_Summit,_Maastricht,_October_2016_(30452537895)_(cropped).jpg"
+vip6,Erion Veliaj,awaiting,cleared,https://commons.wikimedia.org/wiki/File:Erion_Veliaj.jpg
+vip7,Belind Këlliçi,party,replaced,https://commons.wikimedia.org/wiki/File:Belind_K%C3%ABlli%C3%A7i_posing_for_a_picture.jpg
+vip9,Benet Beci,parliament,kept,https://kuvendiwebfiles.blob.core.windows.net/webfiles/Benet Beci.jpg
+vip10,Belinda Balluku,parliament,replaced,https://commons.wikimedia.org/wiki/File:Belinda_Balluku_(cropped).jpg
+vip11,Ogerta Manastirliu,parliament,replaced,https://commons.wikimedia.org/wiki/File:Ogerta_Manastirliu.png
+vip12,Erion Braçe,parliament,kept,https://kuvendiwebfiles.blob.core.windows.net/webfiles/202509250831320471LRPH9524.JPG
+vip13,Fatmir Xhafaj,parliament,replaced,"https://commons.wikimedia.org/wiki/File:Fatmir_Xhafaj_in_Tirana,_Albania_-_2018_(cropped).jpg"
+vip14,Etilda Gjonaj,parliament,replaced,"https://commons.wikimedia.org/wiki/File:Etilda_Gjonaj,_U.S._Ambassador_Yuri_Kim_and_Jorida_Tabaku_(cropped).jpg"
+vip15,Elisa Spiropali,parliament,replaced,https://commons.wikimedia.org/wiki/File:Meinl-Reisinger-Spiropali_(cropped).jpg
+vip16,Toni Gogu,parliament,replaced,https://commons.wikimedia.org/wiki/File:Handshake_between_Toni_Gogu_and_Michael_McGrath_(Cropped).jpg
+vip17,Klotilda Bushka,parliament,kept,https://kuvendiwebfiles.blob.core.windows.net/webfiles/Klotilda Bushka.png
+vip18,Arben Pëllumbi,parliament,kept,https://kuvendiwebfiles.blob.core.windows.net/webfiles/Arben%20Pe%CC%88llumbi.JPG
+vip19,Tom Doshi,awaiting,cleared,https://commons.wikimedia.org/wiki/File:Tom-Doshi-2021.jgp.jpg
+vip20,Xhemal Qefalia,parliament,kept,https://kuvendiwebfiles.blob.core.windows.net/webfiles/xhemalqefalia_foto.jpg
+vip21,Plarent Ndreca,parliament,kept,https://kuvendiwebfiles.blob.core.windows.net/webfiles/202401260946034147PLARENT NDRECA.jpg
+vip22,Ermonela Felaj,other,kept,
+vip23,Ornaldo Rakipi,parliament,kept,https://kuvendiwebfiles.blob.core.windows.net/webfiles/orlando rakipi.png
+vip24,Lavdrim Krashi,parliament,kept,https://kuvendiwebfiles.blob.core.windows.net/webfiles/Lavdrim Krashi.png
+vip25,Albana Koçiu,parliament,replaced,https://commons.wikimedia.org/wiki/File:Albana_Kociu_6Feb26_(cropped).jpg
+vip26,Blendi Gonxhja,parliament,replaced,https://commons.wikimedia.org/wiki/File:Blendi_Gonxhja.jpg
+vip27,Ulsi Manja,parliament,replaced,https://commons.wikimedia.org/wiki/File:Ulsi_Manja_(cropped).jpg
+vip28,Adea Pirdeni,parliament,kept,https://kuvendiwebfiles.blob.core.windows.net/webfiles/202511101435561918Foto %28Adea Pirdeni%29.jpeg
+vip29,Gazment Bardhi,parliament,kept,https://kuvendiwebfiles.blob.core.windows.net/webfiles/Gazment_Bardhi_(portret).jpg
+vip30,Albana Vokshi,parliament,replaced,"https://commons.wikimedia.org/wiki/File:OSCE_PA_member_Albana_Vokshi_(Albania),_Moscow,_16_September_2016_(29717182725).jpg"
+vip31,Flamur Noka,parliament,kept,https://kuvendiwebfiles.blob.core.windows.net/webfiles/Flamur Noka.jpg
+vip32,Jorida Tabaku,parliament,replaced,https://commons.wikimedia.org/wiki/File:Jorida_Tabaku_(cropped).jpg
+vip33,Xhelal Mziu,parliament,kept,https://kuvendiwebfiles.blob.core.windows.net/webfiles/202511191306165256LRPH9479.JPG
+vip34,Ina Zhupa,parliament,replaced,https://commons.wikimedia.org/wiki/File:IZH-Img-154664.jpg
+vip35,Agron Gjekmarkaj,parliament,kept,https://kuvendiwebfiles.blob.core.windows.net/webfiles/202510171019165389WhatsApp Image 2025-10-17 at 12.17.06 PM.jpeg
+vip36,Fatmir Mediu,parliament,replaced,https://commons.wikimedia.org/wiki/File:Mediu_-_Rumsfeld_060926-F-5586B-311.jpg
+vip37,Mimi Kodheli,parliament,replaced,https://commons.wikimedia.org/wiki/File:Mimi_Kodheli_(cropped).jpg
+vip38,Etleva Budini,parliament,kept,https://kuvendiwebfiles.blob.core.windows.net/webfiles/202509191013065563ETLEVA BUDINI.JPG
+vip39,Vangjel Dule,parliament,kept,https://kuvendiwebfiles.blob.core.windows.net/webfiles/202511191308232319LRPH8974.JPG
+vip40,Asllan Dogjani,parliament,kept,https://kuvendiwebfiles.blob.core.windows.net/webfiles/202305301156283156asllan dogjani.PNG
+vip41,Orjola Pampuri,parliament,kept,https://kuvendiwebfiles.blob.core.windows.net/webfiles/Orjola Pampuri.jpg
+vip42,Ervin Salianji,parliament,kept,https://kuvendiwebfiles.blob.core.windows.net/webfiles/Ervin-Salianji.jpg
+vip43,Petrit Vasili,parliament,replaced,https://commons.wikimedia.org/wiki/File:Petrit-Vasili-17.12.2016.jpg
+vip44,Agron Shehaj,parliament,replaced,https://commons.wikimedia.org/wiki/File:Agron_Shehaj_Portrait.jpg
+vip45,Oerd Bylykbashi,parliament,replaced,https://commons.wikimedia.org/wiki/File:Oerd_bylykbashi.jpg
+vip46,Taulant Balla,parliament,replaced,https://commons.wikimedia.org/wiki/File:Taulant_Balla_-_2023_(cropped).jpg
+vip47,Petro Koçi,parliament,kept,https://kuvendiwebfiles.blob.core.windows.net/webfiles/Petro Koci.png
+vip48,Baftjar Zeqaj,parliament,kept,https://kuvendiwebfiles.blob.core.windows.net/webfiles/BaftjarZeqo.png
+vip49,Antoneta Dhima,parliament,kept,https://kuvendiwebfiles.blob.core.windows.net/webfiles/antonetadhima_foto.jpg.png
+vip50,Bujar Çela,parliament,kept,https://kuvendiwebfiles.blob.core.windows.net/webfiles/BujarCela.png
+vip51,Tatjana Pirro,other,kept,
+vip52,Ismet Beqiraj,parliament,kept,https://kuvendiwebfiles.blob.core.windows.net/webfiles/IsmetBeqiraj.png
+vip53,Lindita Buxhelaj,other,kept,
+vip54,Erion Veliaj (Delegated),awaiting,cleared,https://commons.wikimedia.org/wiki/File:Erion_Veliaj.jpg
+vip55,Zegjine Çaushi,parliament,kept,https://kuvendiwebfiles.blob.core.windows.net/webfiles/202509191026212744ZEQINE ÇAUSHI.JPG
+vip56,Gëzim Bara,other,kept,
+vip57,Luan Baçi,parliament,kept,https://kuvendiwebfiles.blob.core.windows.net/webfiles/luan baci.png
+vip58,Saimir Korreshi,parliament,kept,https://kuvendiwebfiles.blob.core.windows.net/webfiles/202510031154366767LRPH1156.JPG
+vip59,Ilda Dhori,parliament,kept,https://kuvendiwebfiles.blob.core.windows.net/webfiles/Ilda Dhori.jpg
+vip60,Nustret Avdulla,parliament,kept,https://kuvendiwebfiles.blob.core.windows.net/webfiles/Nustret Avdulla.png
+vip61,Eralda Bano,parliament,kept,https://kuvendiwebfiles.blob.core.windows.net/webfiles/Eraldo Tase-Bano.png
+vip62,Blendi Klosi,parliament,replaced,https://commons.wikimedia.org/wiki/File:Takada_Mitsuyki_and_Blendi_Klosi_(cropped).jpg
+vip63,Milva Ekonomi,parliament,replaced,"https://commons.wikimedia.org/wiki/File:Milva_Ekonomi,_Minister_of_Economic_Development,_Tourism,_Trade_and_Entrepreneurship.JPG"
+vip64,Jurgis Çyrbja,parliament,kept,https://kuvendiwebfiles.blob.core.windows.net/webfiles/Jurgis%20C%CC%A7yrbja.JPG
+vip65,Arkend Balla,parliament,kept,https://kuvendiwebfiles.blob.core.windows.net/webfiles/202509191007188046ARKEND BALLA.JPG
+vip66,Ana Dhamo,other,kept,
+vip67,Denis Deliu,parliament,kept,https://kuvendiwebfiles.blob.core.windows.net/webfiles/Denis Deliu.png
+vip68,Artur Bushaj,other,kept,
+vip69,Alban Xhelili,parliament,kept,https://kuvendiwebfiles.blob.core.windows.net/webfiles/Alban Xhelili.png
+vip70,Klodiana Spahiu,parliament,kept,https://kuvendiwebfiles.blob.core.windows.net/webfiles/Klodiana Spahiu.png
+vip71,Edi Paloka,parliament,kept,https://kuvendiwebfiles.blob.core.windows.net/webfiles/edipaloka_foto.jpg
+vip72,Ferdinand Xhaferaj,parliament,kept,https://kuvendiwebfiles.blob.core.windows.net/webfiles/Ferdinand Xhaferaj.jpg
+vip73,Andia Ulliri,parliament,kept,https://kuvendiwebfiles.blob.core.windows.net/webfiles/Andia Ulliri.png
+vip74,Merita Bakiu,parliament,kept,https://kuvendiwebfiles.blob.core.windows.net/webfiles/Merita Bakiu.png
+vip75,Damian Gjiknuri,parliament,replaced,https://commons.wikimedia.org/wiki/File:Dan_Brouillette_meets_with_Damian_Gjiknuri_at_Energy_HQ_(2)_(cropped).jpg
+vip76,Klevis Xhoxhi,parliament,kept,https://kuvendiwebfiles.blob.core.windows.net/webfiles/Klevis Xhoxhi 01.png
+vip77,Besian Ajazi,parliament,kept,https://kuvendiwebfiles.blob.core.windows.net/webfiles/BesianAjazi.png
+vip78,Desantila Tahiraj,parliament,kept,https://kuvendiwebfiles.blob.core.windows.net/webfiles/Desantila Tahiraj.png
+vip79,Saimir Hasalla,parliament,kept,https://kuvendiwebfiles.blob.core.windows.net/webfiles/SaimirHasalla.png
+vip80,Florenca Spaho,parliament,kept,https://kuvendiwebfiles.blob.core.windows.net/webfiles/Florenc Spaho.jpg
+vip81,Agron Cela,parliament,kept,https://kuvendiwebfiles.blob.core.windows.net/webfiles/Agron Cela foto Cv faqe.jpg
+vip82,Shkëlqim Bullari,parliament,kept,https://kuvendiwebfiles.blob.core.windows.net/webfiles/202309281137186825Shkelqim Bullari.jpg
+vip83,Kastriot Piroli,parliament,kept,https://kuvendiwebfiles.blob.core.windows.net/webfiles/KastriotPiroli.png
+vip84,Dashnor Sula,parliament,replaced,https://commons.wikimedia.org/wiki/File:Dashnor-sula.png
+vip85,Luçiano Boçi,parliament,replaced,https://commons.wikimedia.org/wiki/File:Luciano_Boci.jpg
+vip86,Zheni Gjergji,parliament,kept,https://kuvendiwebfiles.blob.core.windows.net/webfiles/ZheniGjergji.png
+vip87,Niko Peleshi,parliament,replaced,https://commons.wikimedia.org/wiki/File:Niko_Peleshi_2013_(cropped).jpg
+vip88,Lefter Gështenja,parliament,kept,https://kuvendiwebfiles.blob.core.windows.net/webfiles/Lefter_Geshtenja.png
+vip89,Qani Xhafa,parliament,kept,https://kuvendiwebfiles.blob.core.windows.net/webfiles/202309201332505583qani xhafa foto.jpg
+vip90,Bledar Çuçi,parliament,kept,https://kuvendiwebfiles.blob.core.windows.net/webfiles/bledicuci_foto.jpg
+vip91,Anila Denaj,parliament,replaced,https://commons.wikimedia.org/wiki/File:Anila_Denaj_at_World_Economic_Forum.jpg
+vip92,Vullnet Sinaj,parliament,kept,https://kuvendiwebfiles.blob.core.windows.net/webfiles/Vullnet Sinaj.jpg
+vip113,Redi Muçi,other,kept,
+vip106,Zija Ismaili,other,kept,
+vip93,Pirro Vengu,parliament,replaced,https://commons.wikimedia.org/wiki/File:Z.Pirro-Vengu--scaled.jpg
+vip94,Teuta Ramaj,parliament,kept,https://kuvendiwebfiles.blob.core.windows.net/webfiles/TeutaRamaj.png
+vip95,Prishela Gjoka,other,kept,
+vip96,Ardit Bido,parliament,replaced,https://commons.wikimedia.org/wiki/File:Arditbido.jpg
+vip97,Andis Harasani,other,kept,
+vip98,Bujar Leskaj,parliament,kept,https://kuvendiwebfiles.blob.core.windows.net/webfiles/Bujar Leskaj.png
+vip99,Fation Veizaj,parliament,kept,https://kuvendiwebfiles.blob.core.windows.net/webfiles/FationVeizaj.png
+vip100,Arbi Agalliu,parliament,kept,https://kuvendiwebfiles.blob.core.windows.net/webfiles/arbi.png
+vip101,Helidon Bushati,parliament,kept,https://kuvendiwebfiles.blob.core.windows.net/webfiles/Helidon_Bushati.png
+vip102,Greta Bardeli,parliament,kept,https://kuvendiwebfiles.blob.core.windows.net/webfiles/GretaBardeli.png
+vip103,Ramadan Likaj,parliament,kept,https://kuvendiwebfiles.blob.core.windows.net/webfiles/RamadanLikaj.png
+vip104,Emilja Koliqi,parliament,kept,https://kuvendiwebfiles.blob.core.windows.net/webfiles/Emilja Koliqi.png
+vip105,Zef Hila,parliament,kept,https://kuvendiwebfiles.blob.core.windows.net/webfiles/ZefHila.png
+vip107,Benet Beci (Elected),parliament,kept,https://kuvendiwebfiles.blob.core.windows.net/webfiles/Benet Beci.jpg
+vip108,Edona Bilali,parliament,kept,https://kuvendiwebfiles.blob.core.windows.net/webfiles/Edona Bilali.jpg
+vip109,Ilir Beqaj,parliament,kept,https://kuvendiwebfiles.blob.core.windows.net/webfiles/orlando rakipi.png
+vip110,Meri Markiçi,parliament,kept,https://kuvendiwebfiles.blob.core.windows.net/webfiles/Meri%20Markic%CC%A7i.jpg
+vip111,Olta Xhaçka,parliament,replaced,https://commons.wikimedia.org/wiki/File:Olta_Xha%C3%A7ka_in_2018.jpg
+vip112,Ilir Pendavinji,parliament,kept,https://kuvendiwebfiles.blob.core.windows.net/webfiles/pendavinji.png
+vip114,Adriatik Lapaj,awaiting,cleared,https://commons.wikimedia.org/wiki/File:Lapaj_in_2025_in_Election_Campaign.jpg
+vip115,Dashamir Shehi,parliament,kept,https://kuvendiwebfiles.blob.core.windows.net/webfiles/Dashamir Shehi 01.png
+vip116,Blerina Gjylameti,parliament,kept,https://kuvendiwebfiles.blob.core.windows.net/webfiles/BlerinaGjylameti.png
+vip117,Enslemvera Zake,parliament,kept,https://kuvendiwebfiles.blob.core.windows.net/webfiles/eslenvera zake.png
+vip118,Bledjon Nallbati,parliament,kept,https://kuvendiwebfiles.blob.core.windows.net/webfiles/202509250835368885LRPH9507.JPG
+vip119,Edmond Spaho,parliament,replaced,https://commons.wikimedia.org/wiki/File:Edmond_Spaho.jpg
+vip120,Sorina Koti,parliament,kept,https://kuvendiwebfiles.blob.core.windows.net/webfiles/Sorina Koti.jpg
+vip121,Andrea Mano,parliament,kept,https://kuvendiwebfiles.blob.core.windows.net/webfiles/202411131021523561Andrea Mano.jpg
+vip122,Ervin Salianji (Korçë),parliament,kept,https://kuvendiwebfiles.blob.core.windows.net/webfiles/Ervin-Salianji.jpg
+vip123,Nasip Naço,parliament,kept,https://kuvendiwebfiles.blob.core.windows.net/webfiles/NasipNaco.png
+vip124,Bardhyl Kollçaku,parliament,kept,https://kuvendiwebfiles.blob.core.windows.net/webfiles/BardhylKollcaku.png
+vip125,Fadil Nasufi,parliament,kept,https://kuvendiwebfiles.blob.core.windows.net/webfiles/202509240713382642LRPH9983.JPG
+vip126,Hatixhe Konomi,parliament,kept,https://kuvendiwebfiles.blob.core.windows.net/webfiles/hatixhe konomi.jpg
+vip127,Blendi Klosi (Berat),parliament,kept,https://kuvendiwebfiles.blob.core.windows.net/webfiles/Blendi Klosi.png
+vip128,Kasëm Mahmutaj,parliament,kept,https://kuvendiwebfiles.blob.core.windows.net/webfiles/Kasem Mahmutaj.jpg
+vip129,Zija Ismaili (Berat),parliament,kept,https://kuvendiwebfiles.blob.core.windows.net/webfiles/202509191009550313ELTON KORRESHI.JPG
+vip130,Agron Gjekmarkaj (Lezhë),parliament,kept,https://kuvendiwebfiles.blob.core.windows.net/webfiles/202510171019165389WhatsApp Image 2025-10-17 at 12.17.06 PM.jpeg
+vip131,Lindita Metaliaj,parliament,kept,https://kuvendiwebfiles.blob.core.windows.net/webfiles/linditametaliaj.png
+vip132,Kastriot Piroli (Lezhë),parliament,kept,https://kuvendiwebfiles.blob.core.windows.net/webfiles/KastriotPiroli.png
+vip133,Gjek Celaj,parliament,kept,https://kuvendiwebfiles.blob.core.windows.net/webfiles/202509240713382642LRPH9983.JPG
+vip134,Eduard Ndreca,parliament,kept,https://kuvendiwebfiles.blob.core.windows.net/webfiles/Eduard Ndreca.png
+vip135,Shpresa Marnikollaj,parliament,kept,https://kuvendiwebfiles.blob.core.windows.net/webfiles/Eraldo Tase-Bano.png
+vip136,Gjovalin Kadeli,parliament,kept,https://kuvendiwebfiles.blob.core.windows.net/webfiles/linditametaliaj.png
+vip137,Lavdrim Krashi (Dibër),parliament,kept,https://kuvendiwebfiles.blob.core.windows.net/webfiles/Lavdrim Krashi.png
+vip138,Anila Agalliu,parliament,kept,https://kuvendiwebfiles.blob.core.windows.net/webfiles/202509191107272761BHPH3178.JPG
+vip139,Kreshnik Çollaku,parliament,kept,https://kuvendiwebfiles.blob.core.windows.net/webfiles/KreshnikCollaku.png
+vip140,Mirela Kumbaro,parliament,replaced,https://commons.wikimedia.org/wiki/File:Mirela_Kumbaro-Furxhi_(cropped).jpg
+vip141,Laert Duraj,parliament,kept,https://kuvendiwebfiles.blob.core.windows.net/webfiles/Laert Duraj.png
+vip142,Artemis Dralo,parliament,kept,https://kuvendiwebfiles.blob.core.windows.net/webfiles/EtildaGjonaj.png
+vip143,Tritan Shehu,parliament,kept,https://kuvendiwebfiles.blob.core.windows.net/webfiles/TritanShehu.png
+vip144,Flamur Hoxha,parliament,kept,https://kuvendiwebfiles.blob.core.windows.net/webfiles/FlamurHoxha.png
+vip145,Isuf Çelaj,parliament,kept,https://kuvendiwebfiles.blob.core.windows.net/webfiles/isufcela.png
+vip146,Gerta Duraku,parliament,kept,https://kuvendiwebfiles.blob.core.windows.net/webfiles/GertaDuraku.png
+vip147,Rrahman Rraja,parliament,kept,https://kuvendiwebfiles.blob.core.windows.net/webfiles/Rrahman Rraja.JPG
+vip148,Erald Kapri,parliament,kept,https://kuvendiwebfiles.blob.core.windows.net/webfiles/202509220802355303LRPH9956.JPG
+vip149,Bujar Rexha,parliament,kept,https://kuvendiwebfiles.blob.core.windows.net/webfiles/202509191009056524BUJAR REXHA.JPG
+vip150,Denis Deliu,parliament,kept,https://kuvendiwebfiles.blob.core.windows.net/webfiles/Denis Deliu.png
+vip151,Frrok Gjini,parliament,kept,https://kuvendiwebfiles.blob.core.windows.net/webfiles/202309201308192163Frrok Gjini.jpg
+vip152,Bora Muzhaqi,parliament,kept,https://kuvendiwebfiles.blob.core.windows.net/webfiles/202509240707118074LRPH9986.JPG
+vip153,Flutura Açka,parliament,replaced,https://commons.wikimedia.org/wiki/File:Flutura_A%C3%A7ka_in_the_video_%27-gjesi_%E2%80%93_Biri_i_Flutura_A%C3%A7k%C3%ABs_%E2%80%93_T7%27.png
+vip154,Anila Denaj,parliament,replaced,https://commons.wikimedia.org/wiki/File:Anila_Denaj_at_World_Economic_Forum.jpg
+vip155,Erion Braçe,parliament,kept,https://kuvendiwebfiles.blob.core.windows.net/webfiles/202509250831320471LRPH9524.JPG
+vip156,Blendi Klosi,parliament,replaced,https://commons.wikimedia.org/wiki/File:Takada_Mitsuyki_and_Blendi_Klosi_(cropped).jpg
+vip157,Klevis Jahaj,other,kept,
+vip158,Bledi Çomo,parliament,kept,https://kuvendiwebfiles.blob.core.windows.net/webfiles/202509191008292865BLEDI ÇOMO.JPG
+vip159,Gent Strazimiri,parliament,kept,https://kuvendiwebfiles.blob.core.windows.net/webfiles/202509250836539054BHPH3520.JPG
+vip160,Greta Bardeli,parliament,kept,https://kuvendiwebfiles.blob.core.windows.net/webfiles/GretaBardeli.png
+vip161,Vangjel Dule,parliament,kept,https://kuvendiwebfiles.blob.core.windows.net/webfiles/202511191308232319LRPH8974.JPG
+vip162,Petrit Doda,parliament,kept,https://kuvendiwebfiles.blob.core.windows.net/webfiles/petrit_doda.jpg
+vip163,Luljeta Bozo,parliament,kept,https://kuvendiwebfiles.blob.core.windows.net/webfiles/LuljetaBozo.png
+vip164,Andia Ulliri,parliament,kept,https://kuvendiwebfiles.blob.core.windows.net/webfiles/Andia Ulliri.png
+vip165,Gazment Bardhi,parliament,kept,https://kuvendiwebfiles.blob.core.windows.net/webfiles/Gazment_Bardhi_(portret).jpg
+vip166,Florenc Spaho,parliament,kept,https://kuvendiwebfiles.blob.core.windows.net/webfiles/Florenc Spaho.jpg
+vip167,Olta Xhaçka,parliament,replaced,https://commons.wikimedia.org/wiki/File:Olta_Xha%C3%A7ka_in_2018.jpg
+vip168,Adi Qose,parliament,kept,https://kuvendiwebfiles.blob.core.windows.net/webfiles/202509191004596363ADI QOSE.JPG
+vip169,Toni Gogu,parliament,replaced,https://commons.wikimedia.org/wiki/File:Handshake_between_Toni_Gogu_and_Michael_McGrath_(Cropped).jpg
+vip170,Lindita Nikolla,parliament,replaced,https://commons.wikimedia.org/wiki/File:Speaker_of_Parliament_Lindita_Nikolla_(cropped).jpg
+vip171,Isuf Çelaj,parliament,kept,https://kuvendiwebfiles.blob.core.windows.net/webfiles/isufcela.png
+vip172,Qani Xhafa,parliament,kept,https://kuvendiwebfiles.blob.core.windows.net/webfiles/202309201332505583qani xhafa foto.jpg
+vip173,Ermal Elezi,parliament,kept,https://kuvendiwebfiles.blob.core.windows.net/webfiles/202509191055162043LRPH9619.JPG
+vip174,Luçiano Boçi,parliament,replaced,https://commons.wikimedia.org/wiki/File:Luciano_Boci.jpg
+vip175,Meri Markiçi,parliament,kept,https://kuvendiwebfiles.blob.core.windows.net/webfiles/Meri%20Markic%CC%A7i.jpg
+vip176,Arbjan Mazniku,other,kept,
+vip177,Admir Kadeli,parliament,kept,https://kuvendiwebfiles.blob.core.windows.net/webfiles/202509191005235240ADMIR KADELI.JPG
+vip178,Ilir Metaj,parliament,kept,https://kuvendiwebfiles.blob.core.windows.net/webfiles/IlirMetaj.png
+vip179,Eduard Shalsi,parliament,replaced,https://commons.wikimedia.org/wiki/File:Eduard_Shalsi.jpg
+vip180,Vasil Llajo,parliament,kept,https://kuvendiwebfiles.blob.core.windows.net/webfiles/202509191025402924VASIL LLAJO.JPG
+vip181,Blendi Himçi,parliament,kept,https://kuvendiwebfiles.blob.core.windows.net/webfiles/202509220803150856LRPH9959.JPG
+vip182,Shkurt Lasku,parliament,kept,https://kuvendiwebfiles.blob.core.windows.net/webfiles/202511100949178629DSC_0296.JPG
+vip183,Klotilda Bushka,parliament,kept,https://kuvendiwebfiles.blob.core.windows.net/webfiles/Klotilda Bushka.png
+vip184,Fatmir Mediu,parliament,replaced,https://commons.wikimedia.org/wiki/File:Mediu_-_Rumsfeld_060926-F-5586B-311.jpg
+vip185,Orjola Pampuri,parliament,kept,https://kuvendiwebfiles.blob.core.windows.net/webfiles/Orjola Pampuri.jpg
+vip186,Enriketa Jaho,parliament,kept,https://kuvendiwebfiles.blob.core.windows.net/webfiles/202509191010152311ENRIKETA JAHO.JPG
+vip187,Ilir Ndraxhi,parliament,kept,https://kuvendiwebfiles.blob.core.windows.net/webfiles/ilirndraxhi.png
+vip188,Arben Ahmetaj,parliament,replaced,https://commons.wikimedia.org/wiki/File:%CE%95%CF%80%CE%AF%CF%83%CE%BA%CE%B5%CF%88%CE%B7_%CE%A5%CF%80%CE%BF%CF%85%CF%81%CE%B3%CE%BF%CF%8D_%CE%95%CE%BE%CF%89%CF%84%CE%B5%CF%81%CE%B9%CE%BA%CF%8E%CE%BD_%CE%9D._%CE%9A%CE%BF%CF%84%CE%B6%CE%B9%CE%AC_%CF%83%CF%84%CE%B7%CE%BD_%CE%91%CE%BB%CE%B2%CE%B1%CE%BD%CE%AF%CE%B1_(14-16.07.2015)_(19719282911)_(cropped).jpg
+vip189,Paulin Sterkaj,parliament,kept,https://kuvendiwebfiles.blob.core.windows.net/webfiles/paulin sterkaj.jpg
+vip190,Ramadan Likaj,parliament,kept,https://kuvendiwebfiles.blob.core.windows.net/webfiles/RamadanLikaj.png
+vip191,Lefter Gështenja,parliament,kept,https://kuvendiwebfiles.blob.core.windows.net/webfiles/Lefter_Geshtenja.png
+vip192,Erjon Meka,parliament,kept,https://kuvendiwebfiles.blob.core.windows.net/webfiles/202411111017553588Erjon Meka.jpg
+vip193,Lodovik Hasani,parliament,kept,https://kuvendiwebfiles.blob.core.windows.net/webfiles/202310022113378523LodovikHasani.jpg
+vip194,Aulona Bylykbashi,parliament,kept,https://kuvendiwebfiles.blob.core.windows.net/webfiles/202509191007583931AULONA BYLUKBASHI.JPG
+vip195,Tritan Shehu,parliament,kept,https://kuvendiwebfiles.blob.core.windows.net/webfiles/TritanShehu.png
+vip196,Tedi Blushi,parliament,kept,https://kuvendiwebfiles.blob.core.windows.net/webfiles/202509191025259204TEDI BLUSHI.JPG
+vip197,Besnik Brahimi,parliament,kept,https://kuvendiwebfiles.blob.core.windows.net/webfiles/202511100948212745DSC_0302.JPG
+vip198,Jorida Tabaku,parliament,replaced,https://commons.wikimedia.org/wiki/File:Jorida_Tabaku_(cropped).jpg
+vip199,Lavdrim Krrashi,parliament,kept,https://kuvendiwebfiles.blob.core.windows.net/webfiles/Lavdrim Krashi.png
+vip200,Blerina Gjylameti,parliament,kept,https://kuvendiwebfiles.blob.core.windows.net/webfiles/BlerinaGjylameti.png
+vip201,Shpetim Idrizi,parliament,kept,https://kuvendiwebfiles.blob.core.windows.net/webfiles/Shpe%CC%88tim%20Idrizi.jpg
+vip202,Erjona Ismaili,parliament,kept,https://kuvendiwebfiles.blob.core.windows.net/webfiles/202509240817240862LRPH9976.JPG
+vip203,Bledar Çuçi,parliament,kept,https://kuvendiwebfiles.blob.core.windows.net/webfiles/bledicuci_foto.jpg
+vip204,Luan Baçi,parliament,kept,https://kuvendiwebfiles.blob.core.windows.net/webfiles/luan baci.png
+vip205,Asfloral Haxhiu,parliament,kept,https://kuvendiwebfiles.blob.core.windows.net/webfiles/202509191007427037ASFLORAL HAXHIU.JPG
+vip206,Agron Çela,parliament,kept,https://kuvendiwebfiles.blob.core.windows.net/webfiles/Agron Cela foto Cv faqe.jpg
+vip207,Gëzim Ademaj,parliament,kept,https://kuvendiwebfiles.blob.core.windows.net/webfiles/202305301132047025gezim ademaj.PNG
+vip208,Ismet Beqiraj,parliament,kept,https://kuvendiwebfiles.blob.core.windows.net/webfiles/IsmetBeqiraj.png
+vip209,Erjo Mile,parliament,kept,https://kuvendiwebfiles.blob.core.windows.net/webfiles/202509191010388485ERIO MILE.JPG
+vip210,Ana Nako,other,kept,
+vip211,Andrea Mano,parliament,kept,https://kuvendiwebfiles.blob.core.windows.net/webfiles/202411131021523561Andrea Mano.jpg
+vip212,Bardhyl Kollçaku,parliament,kept,https://kuvendiwebfiles.blob.core.windows.net/webfiles/BardhylKollcaku.png
+vip213,Sara Mila,parliament,kept,https://kuvendiwebfiles.blob.core.windows.net/webfiles/202509191025119177SARA MILA .JPG
+vip214,Briseida Çakërri,other,kept,
+vip215,Brunilda Mersini,parliament,kept,https://kuvendiwebfiles.blob.core.windows.net/webfiles/202509191008489550BRUNILDA MERSINI.JPG
+vip216,Flamur Noka,parliament,kept,https://kuvendiwebfiles.blob.core.windows.net/webfiles/Flamur Noka.jpg
+vip217,Pirro Vengu,parliament,replaced,https://commons.wikimedia.org/wiki/File:Z.Pirro-Vengu--scaled.jpg
+vip218,Besart Xhaferi,other,kept,
+vip219,Zegjine Çaushi,parliament,kept,https://kuvendiwebfiles.blob.core.windows.net/webfiles/202509191026212744ZEQINE ÇAUSHI.JPG
+vip220,Saimir Korreshi,parliament,kept,https://kuvendiwebfiles.blob.core.windows.net/webfiles/202510031154366767LRPH1156.JPG
+vip221,Mesila Doda,parliament,replaced,"https://commons.wikimedia.org/wiki/File:Mesila_Doda_(born_1971)_in_the_video_%27PRESSING,_Mesila_Doda_-_27.06.2019%27.png"
+vip222,Flamur Hoxha,parliament,kept,https://kuvendiwebfiles.blob.core.windows.net/webfiles/FlamurHoxha.png
+vip223,Shkelqim Bullari,parliament,kept,https://kuvendiwebfiles.blob.core.windows.net/webfiles/202309281137186825Shkelqim Bullari.jpg
+vip224,Lindita Buxheli,parliament,kept,https://kuvendiwebfiles.blob.core.windows.net/webfiles/LinditaBuxheli.png
+vip225,Ivi Kaso,parliament,kept,https://kuvendiwebfiles.blob.core.windows.net/webfiles/202509250838028175LRPH9527.JPG
+vip226,Gjin Gjoni,parliament,kept,https://kuvendiwebfiles.blob.core.windows.net/webfiles/202509191055426408BHPH3227.JPG
+vip227,Romina Kuko,other,kept,
+vip228,Ervin Demo,parliament,replaced,"https://commons.wikimedia.org/wiki/File:Ervin_Demo_-_Mayor_of_Berat,_Albania.jpg"
+vip229,Denisa Vata,parliament,kept,https://kuvendiwebfiles.blob.core.windows.net/webfiles/202510011210100830DSC_0465.JPG
+vip230,Zamira Sinaj,parliament,kept,https://kuvendiwebfiles.blob.core.windows.net/webfiles/202509240817011955LRPH9973.JPG
+vip231,Ogerta Manastirliu,parliament,replaced,https://commons.wikimedia.org/wiki/File:Ogerta_Manastirliu.png
+vip232,Bardh Spahia,awaiting,cleared,https://commons.wikimedia.org/wiki/File:Bardh_Spahia.jpg
+vip233,Jozefina Topalli,party,replaced,https://commons.wikimedia.org/wiki/File:Jozefina_Topalli_Senate_of_Poland.jpg
+vip234,Kliti Hoti,parliament,kept,https://kuvendiwebfiles.blob.core.windows.net/webfiles/202509250839435652BHPH3535.JPG
+vip235,Marjana Koçeku,parliament,kept,https://kuvendiwebfiles.blob.core.windows.net/webfiles/202610190742271909Marjana Koçeku.jpg
+vip236,Onid Bejleri,parliament,kept,https://kuvendiwebfiles.blob.core.windows.net/webfiles/202509191023336421ONID BEJLERI.JPG
+vip237,Xhenis Çela,parliament,kept,https://kuvendiwebfiles.blob.core.windows.net/webfiles/202510011205519878DSC_0464.JPG
+vip238,Sabina Jorgo,other,kept,
+vip239,Enno Bozdo,parliament,kept,https://kuvendiwebfiles.blob.core.windows.net/webfiles/202509250836017510LRPH9530.JPG
+vip240,Marjeta Neli,other,kept,
+vip241,Elda Hoti,parliament,kept,https://kuvendiwebfiles.blob.core.windows.net/webfiles/Elda%20hoti.jpg
+vip242,Alma Selami,parliament,kept,https://kuvendiwebfiles.blob.core.windows.net/webfiles/202509191006045031ALMA SELAMI.JPG
+vip243,Tomor Alizoti,parliament,kept,https://kuvendiwebfiles.blob.core.windows.net/webfiles/TomorrAlizoti.png
+vip244,Igli Hasani,parliament,replaced,"https://commons.wikimedia.org/wiki/File:Igli_Hasani_in_Wien,_17_November_2023_Igli_Hasani_in_Vienna_(cropped).jpg"
+vip245,Delina Ibrahimaj,parliament,kept,https://kuvendiwebfiles.blob.core.windows.net/webfiles/202511110847029338ibrahimaj.png
+vip246,Ilva Gjuzi,parliament,kept,https://kuvendiwebfiles.blob.core.windows.net/webfiles/202509191015592481ILVA GJUZI.JPG
+vip247,Iris Luarasi,other,kept,
+vip248,Erjon Malaj,parliament,kept,https://kuvendiwebfiles.blob.core.windows.net/webfiles/202509191012458695ERION MALAJ.JPG
+vip249,Ervin Hoxha,parliament,kept,https://kuvendiwebfiles.blob.core.windows.net/webfiles/202509240705330015LRPH9990.JPG
+vip250,Erisa Xhixho,parliament,kept,https://kuvendiwebfiles.blob.core.windows.net/webfiles/Erisa_Xhixho-.png
+vip251,Klevis Balliu,parliament,kept,https://kuvendiwebfiles.blob.core.windows.net/webfiles/202509250834503128BHPH3516.JPG
+vip252,Albana Pëllumbi,other,kept,
+vip253,Arlind Qori,awaiting,cleared,https://commons.wikimedia.org/wiki/File:Arlind_Qori_in_2023.jpg
+vip254,Petrit Malaj,parliament,kept,https://kuvendiwebfiles.blob.core.windows.net/webfiles/202511110831152256malaj.png
+vip255,Kiduina Zaka,other,kept,
+vip256,Ceno Klosi,parliament,kept,https://kuvendiwebfiles.blob.core.windows.net/webfiles/202509191009209374CENO KLOSI.JPG
+vip257,Elton Korreshi,parliament,kept,https://kuvendiwebfiles.blob.core.windows.net/webfiles/202509191009550313ELTON KORRESHI.JPG
+vip258,Dhimitër Kruti,other,kept,
+vip259,Brunilda Haxhiu,parliament,kept,https://kuvendiwebfiles.blob.core.windows.net/webfiles/202510011210594850LRPH0535.JPG
+vip260,Loer Kume,parliament,replaced,https://commons.wikimedia.org/wiki/File:Loer_Kume.jpg
+vip261,Skënder Pashaj,parliament,kept,https://kuvendiwebfiles.blob.core.windows.net/webfiles/202509191059368176LRPH9617.JPG
+vip262,Aurora Mara,parliament,kept,https://kuvendiwebfiles.blob.core.windows.net/webfiles/AuroraMara.png
+vip263,Ani Dyrmishi,parliament,kept,https://kuvendiwebfiles.blob.core.windows.net/webfiles/202509191006379639ANI DYRMISHI.JPG
+vip264,Artan Luku,parliament,kept,https://kuvendiwebfiles.blob.core.windows.net/webfiles/202511211354247068BHPH1189.jpg
+vip265,Manjola Luku,parliament,kept,https://kuvendiwebfiles.blob.core.windows.net/webfiles/202509191106445814BHPH3217.JPG
+vip266,Igli Cara,parliament,replaced,https://commons.wikimedia.org/wiki/File:Igli_Cara.jpg
+vip267,Arjan Ndoja,parliament,kept,https://kuvendiwebfiles.blob.core.windows.net/webfiles/202509250836320629BHPH3504.JPG
+vip268,Evis Kushi,parliament,replaced,https://commons.wikimedia.org/wiki/File:Evis_Kushi.jpg
+vip269,Olsi Komici,parliament,kept,https://kuvendiwebfiles.blob.core.windows.net/webfiles/202509191017481488OLSI KOMICI.JPG
+vip270,Agron Gaxho,other,kept,
+vip271,Edmond Haxhinasto,parliament,replaced,https://commons.wikimedia.org/wiki/File:Edmond_Haxhinasto.jpg
+vip272,Klodiana Çapja,parliament,kept,https://kuvendiwebfiles.blob.core.windows.net/webfiles/202509191107028126BHPH3210.JPG
+vip273,Genti Lakollari,parliament,kept,https://kuvendiwebfiles.blob.core.windows.net/webfiles/202509191015212318GENTI LLAKOLLARI.JPG
+vip274,Besa Spaho,parliament,kept,https://kuvendiwebfiles.blob.core.windows.net/webfiles/202509240715366595LRPH9966.JPG
+vip275,Ledina Alolli,parliament,kept,https://kuvendiwebfiles.blob.core.windows.net/webfiles/202509191107272761BHPH3178.JPG
+vip276,Fidel Kreka,parliament,kept,https://kuvendiwebfiles.blob.core.windows.net/webfiles/202509191056002491BHPH3197.JPG
+vip277,Hysen Buzali,parliament,kept,https://kuvendiwebfiles.blob.core.windows.net/webfiles/202509191015362516HYSEN BUZALI.JPG
+vip278,Ermal Pacaj,parliament,kept,https://kuvendiwebfiles.blob.core.windows.net/webfiles/202509191056454036LRPH9615.JPG
+vip279,Agron Malaj,parliament,kept,https://kuvendiwebfiles.blob.core.windows.net/webfiles/202509191005448676AGRON MALAJ.JPG
+vip280,Tërmet Peçi,parliament,kept,https://kuvendiwebfiles.blob.core.windows.net/webfiles/202509191056289144LRPH9609.JPG
+vip281,Pirro Dhima,parliament,kept,https://kuvendiwebfiles.blob.core.windows.net/webfiles/202509191024441895PIRRO DHIMA.JPG
