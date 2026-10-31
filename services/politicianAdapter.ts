@@ -5,12 +5,14 @@
 
 import { VipProfile, PoliticianFullDto } from '../types';
 import { mapParagonToParagonAnalysis } from '../utils/paragonProfileUtils';
+import { resolveOfficialPhotoUrl } from '../utils/officialPhoto';
 
 /**
  * Default values for UI presentation
  */
 const UI_DEFAULTS = {
-    imageUrl: 'https://novaric.co/wp-content/uploads/2025/11/MaleProfile.jpg',
+    // No generic placeholder photo: missing photos render the 'Awaiting data' silhouette.
+    imageUrl: '',
     category: 'Politikë',
     bio: ''
 };
@@ -86,7 +88,7 @@ export function toPoliticianUI(dto: any): VipProfile {
         name: raw?.name || baseline?.name || 'I paidentifikuar',
         
         // Visuals
-        imageUrl: raw?.image_url || baseline?.imageUrl || UI_DEFAULTS.imageUrl,
+        imageUrl: resolveOfficialPhotoUrl({ officialPhotoPath: dto.officialPhotoPath, imageUrl: dto.imageUrl, image_url: raw?.image_url, photo_url: raw?.photo_url }) || UI_DEFAULTS.imageUrl,
         category: raw?.party ? `Politikë (${raw.party})` : (baseline?.category || raw?.category || UI_DEFAULTS.category),
         
         // Content
@@ -157,6 +159,9 @@ export function toPoliticianUI(dto: any): VipProfile {
         aliases: Array.isArray(dto.aliases) ? dto.aliases : (Array.isArray(dto.bio?.aliases) ? dto.bio.aliases : []),
         parliamentaryGroup: dto.parliamentaryGroup || raw?.parliamentary_group || null,
         officialPhotoPath: dto.officialPhotoPath || null,
+        photoPending: dto.photoPending ?? !resolveOfficialPhotoUrl({ officialPhotoPath: dto.officialPhotoPath, imageUrl: dto.imageUrl, image_url: raw?.image_url, photo_url: raw?.photo_url }),
+        photoStatus: dto.photoStatus || null,
+        photo_source_url: dto.photo_source_url || null,
         photoLicence: dto.photoLicence || (dto.officialPhoto && dto.officialPhoto.licence) || null,
         evidence: Array.isArray(dto.evidence) ? dto.evidence : [],
         rightOfReply: Array.isArray(dto.rightOfReply) ? dto.rightOfReply : [],

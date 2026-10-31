@@ -459,6 +459,9 @@ export interface VipProfile {
   aliases?: string[];
   parliamentaryGroup?: string | null;
   officialPhotoPath?: string | null;
+  photoPending?: boolean;
+  photoStatus?: string | null;
+  photo_source_url?: string | null;
   photoLicence?: string | null;
 }
 

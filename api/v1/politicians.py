@@ -42,6 +42,7 @@ from services.politician_dossier import (
     load_supabase_dossier,
 )
 from db.seed_politicians import generate_seeded_profiles
+from utils.official_photo import apply_official_photo
 
 logger = logging.getLogger("novaric.api.politicians")
 
@@ -63,6 +64,45 @@ CACHE_TTL_SECONDS = 3600
 _cards_cache: Dict[str, Any] = {"timestamp": 0, "data": []}
 _profile_cache: Dict[str, Dict[str, Any]] = {}
 
+
+_photo_registry_cache: Dict[str, Any] = {"mtime": None, "data": {}}
+
+
+def _photo_registry() -> Dict[str, Dict[str, Any]]:
+    """Audited official-photo registry (id -> export profile) from db/paragon_scores_export.json."""
+    export_path = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "..", "db", "paragon_scores_export.json"))
+    try:
+        mtime = os.path.getmtime(export_path)
+    except OSError:
+        return {}
+    if _photo_registry_cache["mtime"] != mtime:
+        try:
+            with open(export_path, "r", encoding="utf-8") as f:
+                profiles = json.load(f).get("profiles", [])
+            registry: Dict[str, Dict[str, Any]] = {}
+            for p in profiles:
+                if p.get("name"):
+                    registry.setdefault("name:" + str(p["name"]).strip().lower(), p)
+                if p.get("id"):
+                    registry[str(p["id"])] = p
+            _photo_registry_cache["data"] = registry
+            _photo_registry_cache["mtime"] = mtime
+        except Exception as e:  # pragma: no cover - defensive
+            logger.warning(f"Could not load photo registry: {e}")
+            return {}
+    return _photo_registry_cache["data"]
+
+
+def _with_official_photo(payload: Dict[str, Any]) -> Dict[str, Any]:
+    """Only official photo sources reach the UI; otherwise imageUrl is None (Awaiting data)."""
+    apply_official_photo(payload, _photo_registry())
+    pol = payload.get("politician")
+    if isinstance(pol, dict):
+        pol["photo_url"] = payload["imageUrl"]
+        pol["image_url"] = payload["imageUrl"]
+    return payload
+
+
 def get_seeded_fallback() -> List[Dict[str, Any]]:
     """
     Verified fallback dataset with guaranteed 104 cards and 10 required fields:
@@ -78,8 +118,6 @@ def get_seeded_fallback() -> List[Dict[str, Any]]:
                     for p in profiles:
                         if p.get("dynamicScore") is None:
                             p["dynamicScore"] = int(round(float(p["composite"]))) if p.get("composite") is not None else 50
-                        if "photo_source_url" not in p or not p.get("photo_source_url"):
-                            p["photo_source_url"] = p.get("imageUrl") or "https://media.novaric.al/mps/default.jpg"
                     return profiles[:104]
     except Exception as e:
         logger.warning(f"Could not load paragon_scores_export.json: {e}")
@@ -332,12 +370,13 @@ async def list_politician_cards():
             c["dimsSource"] = "db"
             if c.get("dynamicScore") is None:
                 c["dynamicScore"] = int(round(float(c["composite"]))) if c.get("composite") is not None else 50
-            if "photo_source_url" not in c or not c.get("photo_source_url"):
-                c["photo_source_url"] = c.get("imageUrl") or "https://media.novaric.al/mps/default.jpg"
 
     # Ensure exact 104-card contract per live revision novaric-backend-00226-csv
     if len(cards) > 104:
         cards = cards[:104]
+
+    for c in cards:
+        _with_official_photo(c)
 
     # Calculate paragonActive strictly matching cards with non-null composite
     scored_in_cards = sum(1 for c in cards if c.get("composite") is not None)
@@ -565,6 +604,7 @@ async def get_politician_profile(id_or_slug: str = Path(...)):
                     }
                 }
                 attach_dossier(response_payload, load_supabase_dossier(supabase, politician))
+                _with_official_photo(response_payload)
                 _profile_cache[cache_key] = {"timestamp": now, "data": response_payload}
                 return response_payload
         except Exception as e:
@@ -640,6 +680,7 @@ async def get_politician_profile(id_or_slug: str = Path(...)):
                 }
                 attach_dossier(response_payload, load_sqlite_dossier(conn, pol))
                 conn.close()
+                _with_official_photo(response_payload)
                 _profile_cache[cache_key] = {"timestamp": now, "data": response_payload}
                 return response_payload
             conn.close()
@@ -704,6 +745,7 @@ async def get_politician_profile(id_or_slug: str = Path(...)):
         }
     }
     attach_dossier(response_payload, identity_dossier(found))
+    _with_official_photo(response_payload)
 
     _profile_cache[cache_key] = {"timestamp": now, "data": response_payload}
     return response_payload

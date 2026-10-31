@@ -1,5 +1,6 @@
 // components/figurat-politike/PoliticianCard.tsx
 import React, { useState } from 'react';
+import { resolveOfficialPhotoUrl } from '../../utils/officialPhoto';
 import { VipProfile } from '../../types';
 import { PoliticianDetail, ParagonDimensionItem, CANONICAL_PARAGON_DIMENSIONS } from '../../types/politician';
 import { ScoreRing } from './primitives/ScoreRing';
@@ -198,7 +199,7 @@ export const PoliticianCard: React.FC<PoliticianCardProps> = ({
           <ScoreRing
             score={scoringSuspended ? null : (typeof target.composite === 'number' ? target.composite : (target.dynamicScore ?? null))}
             coverage={coverageStr}
-            imageUrl={target.officialPhotoPath || imageUrl}
+            imageUrl={resolveOfficialPhotoUrl(target) || undefined}
             name={name}
             size={132}
             strokeWidth={5.5}

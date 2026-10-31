@@ -2,7 +2,8 @@
 import React, { useState } from 'react';
 import { VipProfile } from '../../types';
 import { partyColor, normalizePartySlug, band, bandLabel } from '../../lib/brand-tokens';
-import { AWAITING_DATA } from './primitives/awaiting';
+import { AWAITING_DATA, AwaitingPhoto } from './primitives/awaiting';
+import { resolveOfficialPhotoUrl } from '../../utils/officialPhoto';
 import { CANONICAL_PARAGON_DIMENSIONS } from '../../types/politician';
 import { ZodiacChip } from './primitives/ZodiacChip';
 import { useDotTooltip } from './SharedDotTooltip';
@@ -29,6 +30,8 @@ export const PoliticianGridCard: React.FC<PoliticianGridCardProps> = ({
 
   const { showTooltip, hideTooltip } = useDotTooltip();
   const [imageFailed, setImageFailed] = useState(false);
+  const photoUrl = resolveOfficialPhotoUrl(targetPolitician);
+  React.useEffect(() => setImageFailed(false), [photoUrl]);
 
   const targetId = targetPolitician.numericId || targetPolitician.id;
   const linkHref = `/figurat-politike/${targetId}`;
@@ -117,20 +120,17 @@ export const PoliticianGridCard: React.FC<PoliticianGridCardProps> = ({
           borderBottom: '2px solid var(--pc)',
         }}
       >
-        {targetPolitician.imageUrl && !imageFailed ? (
+        {photoUrl && !imageFailed ? (
           <img
-            src={targetPolitician.imageUrl}
+            src={photoUrl}
             alt={targetPolitician.name}
             loading="lazy"
+            referrerPolicy="no-referrer"
             onError={() => setImageFailed(true)}
             className="w-full h-full object-cover object-top transition-transform duration-300 group-hover:scale-105"
           />
         ) : (
-          <div className="w-full h-full flex items-center justify-center text-slate-400 bg-slate-200 dark:bg-slate-700">
-            <svg className="w-10 h-10" fill="currentColor" viewBox="0 0 24 24">
-              <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z" />
-            </svg>
-          </div>
+          <AwaitingPhoto />
         )}
 
         {/* Top-Left: Party Chip (white 9.5px text per E14) */}

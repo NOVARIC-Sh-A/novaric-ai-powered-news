@@ -60,13 +60,12 @@ def sync_paragon_scores_export():
             parliamentary_status = "former_mp"
 
         # Image resolution
-        photo_url = p["photo_url"] or f"https://media.novaric.al/politicians/vip{nid}.jpg"
-        is_photo_pending = (nid in (106, 113)) or ("placeholder-pending" in photo_url)
-        if is_photo_pending:
-            photo_url = "https://media.novaric.al/politicians/placeholder-pending.jpg"
-            photo_status = "Foto në pritje"
-        else:
-            photo_status = "Foto aktive e pasqyruar"
+        # Official photo sources only (photo audit 2026-10-31); no NOVARIC copies/placeholders.
+        from ingestion.image_mirror import resolve_official_photo
+        from utils.official_photo import AWAITING_PHOTO_STATUS, OFFICIAL_PHOTO_STATUS
+        photo_url, _photo_src, is_photo_pending = resolve_official_photo(
+            f"vip{nid}", p["photo_url"], p["photo_source_url"] if "photo_source_url" in p.keys() else None, name)
+        photo_status = AWAITING_PHOTO_STATUS if is_photo_pending else OFFICIAL_PHOTO_STATUS
 
         # Retrieve existing metadata if available
         existing = existing_profiles_map.get(vip_id, {})
