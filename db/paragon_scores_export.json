@@ -26,8 +26,8 @@
       "presumptionOfInnocence": true,
       "legalStatusAsOf": null,
       "legalStatusSummary": null,
-      "imageUrl": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202511110859043587Edi%20Rama.png",
-      "photo_source_url": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202511110859043587Edi Rama.png",
+      "imageUrl": "/politicians/official/vip1.jpg",
+      "photo_source_url": "https://ps.al/wp-content/uploads/2023/02/edi1-e1677511785544.png",
       "photoPending": false,
       "photoStatus": "Foto zyrtare / Official photo",
       "shortBio": null,
@@ -65,11 +65,12 @@
           "retrievedAt": "2026-10-31"
         },
         "photo": {
-          "value": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202511110859043587Edi%20Rama.png",
-          "sourceUrl": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202511110859043587Edi Rama.png",
+          "value": "/politicians/official/vip1.jpg",
+          "sourceUrl": "https://ps.al/kryesia/",
+          "imageUrl": "https://ps.al/wp-content/uploads/2023/02/edi1-e1677511785544.png",
           "retrievedAt": "2026-10-31",
-          "licence": "No reuse licence published by the Parliament of Albania. Referenced by URL; file not copied.",
-          "notes": "Parliament member portrait (fotoProfil). Replaces a Commons file that was an event, meeting, news, or unverified upload. Publisher: Kuvendi i Shqipërisë."
+          "licence": "Published by the institution; local copy for display.",
+          "notes": "Formal head-and-shoulders on the PS leadership page. Party portrait preferred over the cabinet photo. Publisher: Partia Socialiste e Shqipërisë. Image https://ps.al/wp-content/uploads/2023/02/edi1-e1677511785544.png."
         },
         "parliamentaryGroup": {
           "value": "Grupi Parlamentar i Partisë Socialiste",
@@ -177,15 +178,16 @@
       "education": "Universiteti i Arteve; Beaux-Arts de Paris",
       "email": "Edi.Rama@parlament.al",
       "officialPhoto": {
-        "sourceUrl": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202511110859043587Edi Rama.png",
-        "publisher": "Kuvendi i Shqipërisë",
-        "licence": "No reuse licence published by the Parliament of Albania. Referenced by URL; file not copied.",
+        "sourceUrl": "https://ps.al/wp-content/uploads/2023/02/edi1-e1677511785544.png",
+        "pageUrl": "https://ps.al/kryesia/",
+        "publisher": "Partia Socialiste e Shqipërisë",
+        "licence": "Published by the institution; local copy for display.",
         "retrievedAt": "2026-10-31",
-        "copied": false,
-        "localPath": null
+        "copied": true,
+        "localPath": "/politicians/official/vip1.jpg"
       },
-      "officialPhotoPath": null,
-      "photoLicence": "No reuse licence published by the Parliament of Albania. Referenced by URL; file not copied.",
+      "officialPhotoPath": "/politicians/official/vip1.jpg",
+      "photoLicence": "Published by the institution; local copy for display.",
       "photoRetrievedAt": "2026-10-31"
     },
     {
@@ -693,10 +695,10 @@
       "presumptionOfInnocence": true,
       "legalStatusAsOf": "2026-09-24",
       "legalStatusSummary": "Kryetar i Bashkisë Tiranë. Sipas të dhënave të verifikuara në datën e përditësimit, ndodhet në paraburgim dhe përballet me akuza penale. Çështja është në proces gjyqësor dhe zbatohet parimi i prezumimit të pafajësisë deri në një vendim të formës së prerë.",
-      "imageUrl": null,
-      "photo_source_url": null,
-      "photoPending": true,
-      "photoStatus": "Në pritje të të dhënave / Awaiting data",
+      "imageUrl": "/politicians/official/vip6.jpg",
+      "photo_source_url": "https://ps.al/wp-content/uploads/2024/09/20180604085831_erion_veliaj.png",
+      "photoPending": false,
+      "photoStatus": "Foto zyrtare / Official photo",
       "shortBio": null,
       "detailedBio": null,
       "dynamicScore": null,
@@ -737,11 +739,12 @@
           "retrievedAt": "2026-10-31"
         },
         "photo": {
-          "value": "",
-          "sourceUrl": "",
+          "value": "/politicians/official/vip6.jpg",
+          "sourceUrl": "https://ps.al/kryesia/",
+          "imageUrl": "https://ps.al/wp-content/uploads/2024/09/20180604085831_erion_veliaj.png",
           "retrievedAt": "2026-10-31",
-          "licence": "",
-          "notes": "no official portrait; Commons file is a 2011 Medill News Service photo of a speech in Washington. tirana.al portrait file did not return an image."
+          "licence": "Published by the institution; local copy for display.",
+          "notes": "Formal head-and-shoulders on the PS leadership page, same file the Tirana mayor page uses. Cropped from the wide frame. Applied to both Veliaj cards. Publisher: Partia Socialiste e Shqipërisë. Image https://ps.al/wp-content/uploads/2024/09/20180604085831_erion_veliaj.png."
         },
         "fullName": {
           "value": "Erion Veliaj",
@@ -791,9 +794,17 @@
       },
       "education": "Grand Valley State University",
       "email": null,
-      "officialPhoto": null,
-      "officialPhotoPath": null,
-      "photoLicence": null,
+      "officialPhoto": {
+        "sourceUrl": "https://ps.al/wp-content/uploads/2024/09/20180604085831_erion_veliaj.png",
+        "pageUrl": "https://ps.al/kryesia/",
+        "publisher": "Partia Socialiste e Shqipërisë",
+        "licence": "Published by the institution; local copy for display.",
+        "retrievedAt": "2026-10-31",
+        "copied": true,
+        "localPath": "/politicians/official/vip6.jpg"
+      },
+      "officialPhotoPath": "/politicians/official/vip6.jpg",
+      "photoLicence": "Published by the institution; local copy for display.",
       "photoRetrievedAt": "2026-10-31"
     },
     {
@@ -984,8 +995,8 @@
       "presumptionOfInnocence": true,
       "legalStatusAsOf": null,
       "legalStatusSummary": null,
-      "imageUrl": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/Benet%20Beci.jpg",
-      "photo_source_url": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/Benet Beci.jpg",
+      "imageUrl": "/politicians/official/vip9.jpg",
+      "photo_source_url": "https://ps.al/wp-content/uploads/2024/09/benet_beci.jpg",
       "photoPending": false,
       "photoStatus": "Foto zyrtare / Official photo",
       "shortBio": null,
@@ -1029,10 +1040,12 @@
           "retrievedAt": "2026-10-31"
         },
         "photo": {
-          "value": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/Benet Beci.jpg",
-          "sourceUrl": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/Benet Beci.jpg",
+          "value": "/politicians/official/vip9.jpg",
+          "sourceUrl": "https://ps.al/kryesia/",
+          "imageUrl": "https://ps.al/wp-content/uploads/2024/09/benet_beci.jpg",
           "retrievedAt": "2026-10-31",
-          "licence": "No reuse licence published by the Parliament of Albania. Referenced by URL; file not copied."
+          "licence": "Published by the institution; local copy for display.",
+          "notes": "Posed head-and-shoulders portrait on the PS leadership page, no text overlay. Publisher: Partia Socialiste e Shqipërisë. Image https://ps.al/wp-content/uploads/2024/09/benet_beci.jpg."
         },
         "parliamentaryGroup": {
           "value": "Grupi Parlamentar i Partisë Socialiste",
@@ -1119,14 +1132,16 @@
       "education": "ka kryer studimet universitare në Fakulteti n e Ekonomisë në vitin 1987, master në Administrim Biznesi me temë mbi sistemin",
       "email": "Benet.Beci@parlament.al",
       "officialPhoto": {
-        "sourceUrl": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/Benet Beci.jpg",
-        "licence": "No reuse licence published by the Parliament of Albania. Referenced by URL; file not copied.",
+        "sourceUrl": "https://ps.al/wp-content/uploads/2024/09/benet_beci.jpg",
+        "pageUrl": "https://ps.al/kryesia/",
+        "publisher": "Partia Socialiste e Shqipërisë",
+        "licence": "Published by the institution; local copy for display.",
         "retrievedAt": "2026-10-31",
-        "copied": false,
-        "localPath": null
+        "copied": true,
+        "localPath": "/politicians/official/vip9.jpg"
       },
-      "officialPhotoPath": null,
-      "photoLicence": "No reuse licence published by the Parliament of Albania. Referenced by URL; file not copied.",
+      "officialPhotoPath": "/politicians/official/vip9.jpg",
+      "photoLicence": "Published by the institution; local copy for display.",
       "photoRetrievedAt": "2026-10-31",
       "careerSummary": "Ka lindur në Tiranë, më 25 janar 1965. Benet Beci ka kryer studimet universitare në Fakulteti n e Ekonomisë në vitin 1987, master në Administrim Biznesi me temë mbi sistemin bankar në vitin 2003 dhe doktoraturën në vitin 2015 me një temë mbi zhvillimin rajonal. Gjatë karrierës së tij, Benet Becit i janë besuar detyra të rëndësishme sidomos në sistemin bankar ku ka pasur disa pozicione, nga të cilat më i spikaturi ka qenë ai i anëtarit të Këshillit Mbikqyrës të Bankës së Shqipërisë. Gjithashtu ka një përvojë të gjerë edhe në menaxhim financiar në institucione të Financimit Rural. Detyra më e rëndësishme ka qenë ajo e drejtorit të Fondit Shqiptar të Zhvillimit, një institucion publik që implementon projekte zhvillimi në nivel lokal dhe kombëtar. Ai e ka mbajtur këtë post që prej vitit 2005 deri më 2019 . Ai ka mbajtur edhe detyrën e Administartorit në Korporatën Elektroenergjitike Shqipatr"
     },
@@ -1145,8 +1160,8 @@
       "presumptionOfInnocence": true,
       "legalStatusAsOf": null,
       "legalStatusSummary": null,
-      "imageUrl": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202511110909052319Belinda%20Balluku.jpg",
-      "photo_source_url": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202511110909052319Belinda Balluku.jpg",
+      "imageUrl": "/politicians/official/vip10.jpg",
+      "photo_source_url": "https://ps.al/wp-content/uploads/2024/09/belinda_balluku.jpg",
       "photoPending": false,
       "photoStatus": "Foto zyrtare / Official photo",
       "shortBio": null,
@@ -1190,11 +1205,12 @@
           "retrievedAt": "2026-10-31"
         },
         "photo": {
-          "value": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202511110909052319Belinda%20Balluku.jpg",
-          "sourceUrl": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202511110909052319Belinda Balluku.jpg",
+          "value": "/politicians/official/vip10.jpg",
+          "sourceUrl": "https://ps.al/kryesia/",
+          "imageUrl": "https://ps.al/wp-content/uploads/2024/09/belinda_balluku.jpg",
           "retrievedAt": "2026-10-31",
-          "licence": "No reuse licence published by the Parliament of Albania. Referenced by URL; file not copied.",
-          "notes": "Parliament member portrait (fotoProfil). Replaces a Commons file that was an event, meeting, news, or unverified upload. Publisher: Kuvendi i Shqipërisë."
+          "licence": "Published by the institution; local copy for display.",
+          "notes": "Formal head-and-shoulders on the PS leadership page; cropped from a wide frame. Publisher: Partia Socialiste e Shqipërisë. Image https://ps.al/wp-content/uploads/2024/09/belinda_balluku.jpg."
         },
         "parliamentaryGroup": {
           "value": "Grupi Parlamentar i Partisë Socialiste",
@@ -1282,15 +1298,16 @@
       "education": "diplomuar në Institutin Teknologjik të Athinës, në degën Administrim Biznesi",
       "email": "Belinda.Balluku@parlament.al",
       "officialPhoto": {
-        "sourceUrl": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202511110909052319Belinda Balluku.jpg",
-        "publisher": "Kuvendi i Shqipërisë",
-        "licence": "No reuse licence published by the Parliament of Albania. Referenced by URL; file not copied.",
+        "sourceUrl": "https://ps.al/wp-content/uploads/2024/09/belinda_balluku.jpg",
+        "pageUrl": "https://ps.al/kryesia/",
+        "publisher": "Partia Socialiste e Shqipërisë",
+        "licence": "Published by the institution; local copy for display.",
         "retrievedAt": "2026-10-31",
-        "copied": false,
-        "localPath": null
+        "copied": true,
+        "localPath": "/politicians/official/vip10.jpg"
       },
-      "officialPhotoPath": null,
-      "photoLicence": "No reuse licence published by the Parliament of Albania. Referenced by URL; file not copied.",
+      "officialPhotoPath": "/politicians/official/vip10.jpg",
+      "photoLicence": "Published by the institution; local copy for display.",
       "photoRetrievedAt": "2026-10-31"
     },
     {
@@ -1308,8 +1325,8 @@
       "presumptionOfInnocence": true,
       "legalStatusAsOf": null,
       "legalStatusSummary": null,
-      "imageUrl": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/Ogerta%20Manastirliu.JPG",
-      "photo_source_url": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/Ogerta Manastirliu.JPG",
+      "imageUrl": "/politicians/official/vip11.jpg",
+      "photo_source_url": "https://ps.al/wp-content/uploads/2024/09/ogerta_manastirliu.jpg",
       "photoPending": false,
       "photoStatus": "Foto zyrtare / Official photo",
       "shortBio": null,
@@ -1347,11 +1364,12 @@
           "retrievedAt": "2026-10-31"
         },
         "photo": {
-          "value": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/Ogerta%20Manastirliu.JPG",
-          "sourceUrl": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/Ogerta Manastirliu.JPG",
+          "value": "/politicians/official/vip11.jpg",
+          "sourceUrl": "https://ps.al/kryesia/",
+          "imageUrl": "https://ps.al/wp-content/uploads/2024/09/ogerta_manastirliu.jpg",
           "retrievedAt": "2026-10-31",
-          "licence": "No reuse licence published by the Parliament of Albania. Referenced by URL; file not copied.",
-          "notes": "Parliament member portrait (fotoProfil). Replaces a Commons file that was an event, meeting, news, or unverified upload. Publisher: Kuvendi i Shqipërisë."
+          "licence": "Published by the institution; local copy for display.",
+          "notes": "Formal head-and-shoulders on the PS leadership page; cropped from a wide frame. Publisher: Partia Socialiste e Shqipërisë. Image https://ps.al/wp-content/uploads/2024/09/ogerta_manastirliu.jpg."
         },
         "parliamentaryGroup": {
           "value": "Grupi Parlamentar i Partisë Socialiste",
@@ -1453,15 +1471,16 @@
       "education": "studimet e larta në Fakultetin e Shkencave të Natyrës, Kimi",
       "email": "Ogerta.Manastirliu@parlament.al",
       "officialPhoto": {
-        "sourceUrl": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/Ogerta Manastirliu.JPG",
-        "publisher": "Kuvendi i Shqipërisë",
-        "licence": "No reuse licence published by the Parliament of Albania. Referenced by URL; file not copied.",
+        "sourceUrl": "https://ps.al/wp-content/uploads/2024/09/ogerta_manastirliu.jpg",
+        "pageUrl": "https://ps.al/kryesia/",
+        "publisher": "Partia Socialiste e Shqipërisë",
+        "licence": "Published by the institution; local copy for display.",
         "retrievedAt": "2026-10-31",
-        "copied": false,
-        "localPath": null
+        "copied": true,
+        "localPath": "/politicians/official/vip11.jpg"
       },
-      "officialPhotoPath": null,
-      "photoLicence": "No reuse licence published by the Parliament of Albania. Referenced by URL; file not copied.",
+      "officialPhotoPath": "/politicians/official/vip11.jpg",
+      "photoLicence": "Published by the institution; local copy for display.",
       "photoRetrievedAt": "2026-10-31",
       "careerSummary": "Ka përfunduar studimet e larta në Fakultetin e Shkencave të Natyrës, Kimi. Ka titullin Doktor i Shkencave në “Kimi Analitike dhe Mjedis”. Në vitin 2004 ka nisur karrierën profesionale në Bashkinë e Tiranës, fillimisht në Drejtorinë e Koordinimit të Projekteve. Gjatë viteve 2005-2011, ka drejtuar Drejtorinë e Strehimit dhe Shërbimit Social, Bashkia Tiranë. Në periudhën 2011-2013, ajo është angazhuar si eksperte për menaxhimin dhe koordinimin e politikave sociale dhe burimeve njerëzore për organizata të ndryshme kombëtare dhe ndërkombëtare, si UNFPA, Friedrich Ebert Stiftung etj. Në periudhën shtator 2013 – mars 2017, znj. Manastirliu ka drejtuar Qendrën Spitalore Universitare “Nënë Tereza” në Tiranë. Ka mbajtur postin e Ministres së Shë ndetësisë dhe Mbrojtjes Sociale si dhe Ministres së Arsimit dhe Sportit."
     },
@@ -1820,8 +1839,8 @@
       "presumptionOfInnocence": true,
       "legalStatusAsOf": null,
       "legalStatusSummary": null,
-      "imageUrl": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/EtildaGjonaj.png",
-      "photo_source_url": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/EtildaGjonaj.png",
+      "imageUrl": "/politicians/official/vip14.jpg",
+      "photo_source_url": "https://ps.al/wp-content/uploads/2024/09/EtildaGjonaj.png",
       "photoPending": false,
       "photoStatus": "Foto zyrtare / Official photo",
       "shortBio": null,
@@ -1859,11 +1878,12 @@
           "retrievedAt": "2026-10-31"
         },
         "photo": {
-          "value": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/EtildaGjonaj.png",
-          "sourceUrl": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/EtildaGjonaj.png",
+          "value": "/politicians/official/vip14.jpg",
+          "sourceUrl": "https://ps.al/kryesia/",
+          "imageUrl": "https://ps.al/wp-content/uploads/2024/09/EtildaGjonaj.png",
           "retrievedAt": "2026-10-31",
-          "licence": "No reuse licence published by the Parliament of Albania. Referenced by URL; file not copied.",
-          "notes": "Parliament member portrait (fotoProfil). Replaces a Commons file that was an event, meeting, news, or unverified upload. Publisher: Kuvendi i Shqipërisë."
+          "licence": "Published by the institution; local copy for display.",
+          "notes": "Formal portrait on the PS leadership page, no text overlay. Publisher: Partia Socialiste e Shqipërisë. Image https://ps.al/wp-content/uploads/2024/09/EtildaGjonaj.png."
         },
         "parliamentaryGroup": {
           "value": "Grupi Parlamentar i Partisë Socialiste",
@@ -1953,15 +1973,16 @@
       "education": "diplomuar në Fakultetin e Drejtësisë, Universiteti i Tiranës (1999-2003)",
       "email": "etilda.gjonaj@parlament.al",
       "officialPhoto": {
-        "sourceUrl": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/EtildaGjonaj.png",
-        "publisher": "Kuvendi i Shqipërisë",
-        "licence": "No reuse licence published by the Parliament of Albania. Referenced by URL; file not copied.",
+        "sourceUrl": "https://ps.al/wp-content/uploads/2024/09/EtildaGjonaj.png",
+        "pageUrl": "https://ps.al/kryesia/",
+        "publisher": "Partia Socialiste e Shqipërisë",
+        "licence": "Published by the institution; local copy for display.",
         "retrievedAt": "2026-10-31",
-        "copied": false,
-        "localPath": null
+        "copied": true,
+        "localPath": "/politicians/official/vip14.jpg"
       },
-      "officialPhotoPath": null,
-      "photoLicence": "No reuse licence published by the Parliament of Albania. Referenced by URL; file not copied.",
+      "officialPhotoPath": "/politicians/official/vip14.jpg",
+      "photoLicence": "Published by the institution; local copy for display.",
       "photoRetrievedAt": "2026-10-31",
       "careerSummary": "Znj. Etilda Gjonaj është diplomuar në Fakultetin e Drejtësisë, Universiteti i Tiranës (1999-2003). Ka kryer studimet 2-vjeçare pasuniversitare në shkenca penale në Fakultetin e Drejtësisë, Universiteti i Tiranës (2009 – 2011). Ajo mban titullin “Doktor Shkencash” në shkenca penale, ndjekur pranë Fakultetit të Drejtësisë, Universiteti i Tiranës. Ka kryer një sërë trajnimesh dhe specializimesh brenda dhe jashtë vendit për çështjet e të drejtave të njeriut, sistemin e drejtësisë, sistemin penitenciar dhe shërbimit të provës, sistemin elektoral, ndihmën juridike për grupet në nevojë, në organizata ndërkombëtare, institucione të Bashkimit Evropian, etj. Znj. Gjonaj ka qenë zëvendësministër i Drejtësisë për periudhën maj - shtator 2017 dhe mbajti postin e Ministres së Drejtësisë në 2017-2021. Ajo ka ushtruar funksionin e komisionerit në institucionin e Avokatit të Popullit për një mandat 3- vj"
     },
@@ -2153,8 +2174,8 @@
       "presumptionOfInnocence": true,
       "legalStatusAsOf": null,
       "legalStatusSummary": null,
-      "imageUrl": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/Toni%20Gogu.jpg",
-      "photo_source_url": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/Toni Gogu.jpg",
+      "imageUrl": "/politicians/official/vip16.jpg",
+      "photo_source_url": "https://kryeministria.al/wp-content/uploads/2025/09/gogu.png",
       "photoPending": false,
       "photoStatus": "Foto zyrtare / Official photo",
       "shortBio": null,
@@ -2192,11 +2213,12 @@
           "retrievedAt": "2026-10-31"
         },
         "photo": {
-          "value": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/Toni%20Gogu.jpg",
-          "sourceUrl": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/Toni Gogu.jpg",
+          "value": "/politicians/official/vip16.jpg",
+          "sourceUrl": "https://kryeministria.al/menu-qeveria/",
+          "imageUrl": "https://kryeministria.al/wp-content/uploads/2025/09/gogu.png",
           "retrievedAt": "2026-10-31",
-          "licence": "No reuse licence published by the Parliament of Albania. Referenced by URL; file not copied.",
-          "notes": "Parliament member portrait (fotoProfil). Replaces a Commons file that was an event, meeting, news, or unverified upload. Publisher: Kuvendi i Shqipërisë."
+          "licence": "Published by the institution; local copy for display.",
+          "notes": "Cabinet portrait on kryeministria.al. No PS leadership file of sufficient quality. Publisher: Këshilli i Ministrave. Image https://kryeministria.al/wp-content/uploads/2025/09/gogu.png."
         },
         "parliamentaryGroup": {
           "value": "Grupi Parlamentar i Partisë Socialiste",
@@ -2277,15 +2299,16 @@
       "education": "diplomuar në Fakultetin e Drejtësisës dhe ka kryer studimet master në të drejtën publike në Universiteti n e Tiranës",
       "email": "toni.gogu@parlament.al",
       "officialPhoto": {
-        "sourceUrl": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/Toni Gogu.jpg",
-        "publisher": "Kuvendi i Shqipërisë",
-        "licence": "No reuse licence published by the Parliament of Albania. Referenced by URL; file not copied.",
+        "sourceUrl": "https://kryeministria.al/wp-content/uploads/2025/09/gogu.png",
+        "pageUrl": "https://kryeministria.al/menu-qeveria/",
+        "publisher": "Këshilli i Ministrave",
+        "licence": "Published by the institution; local copy for display.",
         "retrievedAt": "2026-10-31",
-        "copied": false,
-        "localPath": null
+        "copied": true,
+        "localPath": "/politicians/official/vip16.jpg"
       },
-      "officialPhotoPath": null,
-      "photoLicence": "No reuse licence published by the Parliament of Albania. Referenced by URL; file not copied.",
+      "officialPhotoPath": "/politicians/official/vip16.jpg",
+      "photoLicence": "Published by the institution; local copy for display.",
       "photoRetrievedAt": "2026-10-31"
     },
     {
@@ -2461,8 +2484,8 @@
       "presumptionOfInnocence": true,
       "legalStatusAsOf": null,
       "legalStatusSummary": null,
-      "imageUrl": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/Arben%20Pe%CC%88llumbi.JPG",
-      "photo_source_url": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/Arben%20Pe%CC%88llumbi.JPG",
+      "imageUrl": "/politicians/official/vip18.jpg",
+      "photo_source_url": "https://ps.al/wp-content/uploads/2024/09/Arben-Pellumbi-scaled.jpg",
       "photoPending": false,
       "photoStatus": "Foto zyrtare / Official photo",
       "shortBio": null,
@@ -2500,10 +2523,12 @@
           "retrievedAt": "2026-10-31"
         },
         "photo": {
-          "value": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/Arben%20Pe%CC%88llumbi.JPG",
-          "sourceUrl": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/Arben%20Pe%CC%88llumbi.JPG",
+          "value": "/politicians/official/vip18.jpg",
+          "sourceUrl": "https://ps.al/kryesia/",
+          "imageUrl": "https://ps.al/wp-content/uploads/2024/09/Arben-Pellumbi-scaled.jpg",
           "retrievedAt": "2026-10-31",
-          "licence": "No reuse licence published by the Parliament of Albania. Referenced by URL; file not copied."
+          "licence": "Published by the institution; local copy for display.",
+          "notes": "Formal head-and-shoulders on the PS leadership page. Filename matches Arben Pëllumbi. Publisher: Partia Socialiste e Shqipërisë. Image https://ps.al/wp-content/uploads/2024/09/Arben-Pellumbi-scaled.jpg."
         },
         "parliamentaryGroup": {
           "value": "Grupi Parlamentar i Partisë Socialiste",
@@ -2594,14 +2619,16 @@
       "education": "studimet e larta në Universitetin e Tiranës në Degën “Inxhinieri Elektrike”",
       "email": "Arben.Pellumbi@parlament.al",
       "officialPhoto": {
-        "sourceUrl": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/Arben%20Pe%CC%88llumbi.JPG",
-        "licence": "No reuse licence published by the Parliament of Albania. Referenced by URL; file not copied.",
+        "sourceUrl": "https://ps.al/wp-content/uploads/2024/09/Arben-Pellumbi-scaled.jpg",
+        "pageUrl": "https://ps.al/kryesia/",
+        "publisher": "Partia Socialiste e Shqipërisë",
+        "licence": "Published by the institution; local copy for display.",
         "retrievedAt": "2026-10-31",
-        "copied": false,
-        "localPath": null
+        "copied": true,
+        "localPath": "/politicians/official/vip18.jpg"
       },
-      "officialPhotoPath": null,
-      "photoLicence": "No reuse licence published by the Parliament of Albania. Referenced by URL; file not copied.",
+      "officialPhotoPath": "/politicians/official/vip18.jpg",
+      "photoLicence": "Published by the institution; local copy for display.",
       "photoRetrievedAt": "2026-10-31",
       "careerSummary": "Ka përfunduar studimet e larta në Universitetin e Tiranës në Degën “Inxhinieri Elektrike”. Fillimisht ka punuar si i nxhinier p rojektues, në Institutin e Studimeve Metalurgjike Elbasan (1988-1990). Më tej ka punuar si specialist në Institutin e Informacionit, Tiranë (19 90-1991), d rejtor e kzekutiv në kompaninë “Dea -Stt” (1991 -1992), i nxhinier administrator në kompaninë “ABA” sh.p.k (1993-2017). Z. Pëllumbi nga viti 2018 e në vazhdim ësh të angazhu ar pranë Partisë Socialiste si s ekretar i organizimit dhe koordinimit elektoral në Partinë Socialistë të Shqipërisë. Nga viti 2017-2021 ka qenë deputet i Kuvendit të Republikës së Shqipërisë."
     },
@@ -2620,10 +2647,10 @@
       "presumptionOfInnocence": true,
       "legalStatusAsOf": null,
       "legalStatusSummary": null,
-      "imageUrl": null,
-      "photo_source_url": null,
-      "photoPending": true,
-      "photoStatus": "Në pritje të të dhënave / Awaiting data",
+      "imageUrl": "/politicians/official/vip19.jpg",
+      "photo_source_url": "https://psd.al/wp-content/uploads/2025/04/tom-1.png",
+      "photoPending": false,
+      "photoStatus": "Foto zyrtare / Official photo",
       "shortBio": null,
       "detailedBio": null,
       "dynamicScore": null,
@@ -2674,11 +2701,12 @@
           "notes": "KQZ Decision No. 34, 28 August 2025; certified elected member"
         },
         "photo": {
-          "value": "",
-          "sourceUrl": "",
+          "value": "/politicians/official/vip19.jpg",
+          "sourceUrl": "https://psd.al/rreth-partise/",
+          "imageUrl": "https://psd.al/wp-content/uploads/2025/04/tom-1.png",
           "retrievedAt": "2026-10-31",
-          "licence": "",
-          "notes": "no official portrait; Commons file is an unverified user upload ('Own work'), not a PSD or government portrait."
+          "licence": "Published by the institution; local copy for display.",
+          "notes": "Knee-up white-studio portrait cropped to head-and-shoulders. No text overlay. Publisher: Partia Socialdemokrate e Shqipërisë. Image https://psd.al/wp-content/uploads/2025/04/tom-1.png."
         }
       },
       "sourceRetrievedAt": "2026-10-31",
@@ -2696,9 +2724,17 @@
       },
       "education": null,
       "email": null,
-      "officialPhoto": null,
-      "officialPhotoPath": null,
-      "photoLicence": null,
+      "officialPhoto": {
+        "sourceUrl": "https://psd.al/wp-content/uploads/2025/04/tom-1.png",
+        "pageUrl": "https://psd.al/rreth-partise/",
+        "publisher": "Partia Socialdemokrate e Shqipërisë",
+        "licence": "Published by the institution; local copy for display.",
+        "retrievedAt": "2026-10-31",
+        "copied": true,
+        "localPath": "/politicians/official/vip19.jpg"
+      },
+      "officialPhotoPath": "/politicians/official/vip19.jpg",
+      "photoLicence": "Published by the institution; local copy for display.",
       "photoRetrievedAt": "2026-10-31"
     },
     {
@@ -3448,8 +3484,8 @@
       "presumptionOfInnocence": true,
       "legalStatusAsOf": null,
       "legalStatusSummary": null,
-      "imageUrl": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202511110820456239kociu.png",
-      "photo_source_url": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202511110820456239kociu.png",
+      "imageUrl": "/politicians/official/vip25.jpg",
+      "photo_source_url": "https://ps.al/wp-content/uploads/2024/09/znj.Albana-Kociu-scaled-1.jpg",
       "photoPending": false,
       "photoStatus": "Foto zyrtare / Official photo",
       "shortBio": null,
@@ -3487,11 +3523,12 @@
           "retrievedAt": "2026-10-31"
         },
         "photo": {
-          "value": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202511110820456239kociu.png",
-          "sourceUrl": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202511110820456239kociu.png",
+          "value": "/politicians/official/vip25.jpg",
+          "sourceUrl": "https://ps.al/kryesia/",
+          "imageUrl": "https://ps.al/wp-content/uploads/2024/09/znj.Albana-Kociu-scaled-1.jpg",
           "retrievedAt": "2026-10-31",
-          "licence": "No reuse licence published by the Parliament of Albania. Referenced by URL; file not copied.",
-          "notes": "Parliament member portrait (fotoProfil). Replaces a Commons file that was an event, meeting, news, or unverified upload. Publisher: Kuvendi i Shqipërisë."
+          "licence": "Published by the institution; local copy for display.",
+          "notes": "Formal portrait on the PS leadership page; cropped to the subject. Party portrait preferred over the cabinet photo. Publisher: Partia Socialiste e Shqipërisë. Image https://ps.al/wp-content/uploads/2024/09/znj.Albana-Kociu-scaled-1.jpg."
         },
         "parliamentaryGroup": {
           "value": "Grupi Parlamentar i Partisë Socialiste",
@@ -3590,15 +3627,16 @@
       "education": "studimet e larta në Fakultetin e Shkencave Sociale (1996 -2000), në Universitetin e Tiranës me arritje të suksesshme duke u specializuar me një Master Shkencor m",
       "email": "albana.kociu@parlament.al",
       "officialPhoto": {
-        "sourceUrl": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202511110820456239kociu.png",
-        "publisher": "Kuvendi i Shqipërisë",
-        "licence": "No reuse licence published by the Parliament of Albania. Referenced by URL; file not copied.",
+        "sourceUrl": "https://ps.al/wp-content/uploads/2024/09/znj.Albana-Kociu-scaled-1.jpg",
+        "pageUrl": "https://ps.al/kryesia/",
+        "publisher": "Partia Socialiste e Shqipërisë",
+        "licence": "Published by the institution; local copy for display.",
         "retrievedAt": "2026-10-31",
-        "copied": false,
-        "localPath": null
+        "copied": true,
+        "localPath": "/politicians/official/vip25.jpg"
       },
-      "officialPhotoPath": null,
-      "photoLicence": "No reuse licence published by the Parliament of Albania. Referenced by URL; file not copied.",
+      "officialPhotoPath": "/politicians/official/vip25.jpg",
+      "photoLicence": "Published by the institution; local copy for display.",
       "photoRetrievedAt": "2026-10-31"
     },
     {
@@ -3618,8 +3656,8 @@
       "presumptionOfInnocence": true,
       "legalStatusAsOf": null,
       "legalStatusSummary": null,
-      "imageUrl": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202509220801290888LRPH8641-Edit.jpg",
-      "photo_source_url": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202509220801290888LRPH8641-Edit.jpg",
+      "imageUrl": "/politicians/official/vip26.jpg",
+      "photo_source_url": "https://ps.al/wp-content/uploads/2024/09/z.Blendi-Gonxhja-scaled-1.jpg",
       "photoPending": false,
       "photoStatus": "Foto zyrtare / Official photo",
       "shortBio": null,
@@ -3657,11 +3695,12 @@
           "retrievedAt": "2026-10-31"
         },
         "photo": {
-          "value": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202509220801290888LRPH8641-Edit.jpg",
-          "sourceUrl": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202509220801290888LRPH8641-Edit.jpg",
+          "value": "/politicians/official/vip26.jpg",
+          "sourceUrl": "https://ps.al/kryesia/",
+          "imageUrl": "https://ps.al/wp-content/uploads/2024/09/z.Blendi-Gonxhja-scaled-1.jpg",
           "retrievedAt": "2026-10-31",
-          "licence": "No reuse licence published by the Parliament of Albania. Referenced by URL; file not copied.",
-          "notes": "Parliament member portrait (fotoProfil). Replaces a Commons file that was an event, meeting, news, or unverified upload. Publisher: Kuvendi i Shqipërisë."
+          "licence": "Published by the institution; local copy for display.",
+          "notes": "Formal portrait on the PS leadership page; cropped to the subject. Party portrait preferred over the cabinet photo. Publisher: Partia Socialiste e Shqipërisë. Image https://ps.al/wp-content/uploads/2024/09/z.Blendi-Gonxhja-scaled-1.jpg."
         },
         "parliamentaryGroup": {
           "value": "Grupi Parlamentar i Partisë Socialiste",
@@ -3761,15 +3800,16 @@
       "education": "diplomua në Institutin e Lartë të Arteve (sot Universiteti i Arteve)",
       "email": "blendi.gonxhja@parlament.al",
       "officialPhoto": {
-        "sourceUrl": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202509220801290888LRPH8641-Edit.jpg",
-        "publisher": "Kuvendi i Shqipërisë",
-        "licence": "No reuse licence published by the Parliament of Albania. Referenced by URL; file not copied.",
+        "sourceUrl": "https://ps.al/wp-content/uploads/2024/09/z.Blendi-Gonxhja-scaled-1.jpg",
+        "pageUrl": "https://ps.al/kryesia/",
+        "publisher": "Partia Socialiste e Shqipërisë",
+        "licence": "Published by the institution; local copy for display.",
         "retrievedAt": "2026-10-31",
-        "copied": false,
-        "localPath": null
+        "copied": true,
+        "localPath": "/politicians/official/vip26.jpg"
       },
-      "officialPhotoPath": null,
-      "photoLicence": "No reuse licence published by the Parliament of Albania. Referenced by URL; file not copied.",
+      "officialPhotoPath": "/politicians/official/vip26.jpg",
+      "photoLicence": "Published by the institution; local copy for display.",
       "photoRetrievedAt": "2026-10-31"
     },
     {
@@ -3789,8 +3829,8 @@
       "presumptionOfInnocence": true,
       "legalStatusAsOf": null,
       "legalStatusSummary": null,
-      "imageUrl": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202509250833549745BHPH3498.JPG",
-      "photo_source_url": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202509250833549745BHPH3498.JPG",
+      "imageUrl": "/politicians/official/vip27.jpg",
+      "photo_source_url": "https://ps.al/wp-content/uploads/2024/09/ulsi_manja-1.jpg",
       "photoPending": false,
       "photoStatus": "Foto zyrtare / Official photo",
       "shortBio": null,
@@ -3834,11 +3874,12 @@
           "retrievedAt": "2026-10-31"
         },
         "photo": {
-          "value": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202509250833549745BHPH3498.JPG",
-          "sourceUrl": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202509250833549745BHPH3498.JPG",
+          "value": "/politicians/official/vip27.jpg",
+          "sourceUrl": "https://ps.al/kryesia/",
+          "imageUrl": "https://ps.al/wp-content/uploads/2024/09/ulsi_manja-1.jpg",
           "retrievedAt": "2026-10-31",
-          "licence": "No reuse licence published by the Parliament of Albania. Referenced by URL; file not copied.",
-          "notes": "Parliament member portrait (fotoProfil). Replaces a Commons file that was an event, meeting, news, or unverified upload. Publisher: Kuvendi i Shqipërisë."
+          "licence": "Published by the institution; local copy for display.",
+          "notes": "Formal head-and-shoulders on the PS leadership page; cropped from a wide frame. Publisher: Partia Socialiste e Shqipërisë. Image https://ps.al/wp-content/uploads/2024/09/ulsi_manja-1.jpg."
         },
         "parliamentaryGroup": {
           "value": "Grupi Parlamentar i Partisë Socialiste",
@@ -3939,15 +3980,16 @@
       "education": "diplomua me titullin “Jurist” në Fakultetin e Drejtësisë në Tiranë në vitin 1996",
       "email": "ulsi.manja@parlament.al",
       "officialPhoto": {
-        "sourceUrl": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202509250833549745BHPH3498.JPG",
-        "publisher": "Kuvendi i Shqipërisë",
-        "licence": "No reuse licence published by the Parliament of Albania. Referenced by URL; file not copied.",
+        "sourceUrl": "https://ps.al/wp-content/uploads/2024/09/ulsi_manja-1.jpg",
+        "pageUrl": "https://ps.al/kryesia/",
+        "publisher": "Partia Socialiste e Shqipërisë",
+        "licence": "Published by the institution; local copy for display.",
         "retrievedAt": "2026-10-31",
-        "copied": false,
-        "localPath": null
+        "copied": true,
+        "localPath": "/politicians/official/vip27.jpg"
       },
-      "officialPhotoPath": null,
-      "photoLicence": "No reuse licence published by the Parliament of Albania. Referenced by URL; file not copied.",
+      "officialPhotoPath": "/politicians/official/vip27.jpg",
+      "photoLicence": "Published by the institution; local copy for display.",
       "photoRetrievedAt": "2026-10-31",
       "careerSummary": "Z. Manja u diplomua me titullin “Jurist” në Fakultetin e Drejtësisë në Tiranë në vitin 1996. Në vijim, në vitin 2006 ai fitoi licencën e avokatit. P rej vitit 2018 mban titullin “Doktor shkencash” në fushën e të drejtës penale. Nga diplomimi dhe deri në zgjedhjen e tij të parë në Kuvendin e Shqipërisë, në vitin 2013, ka punuar në funksione të lidhura ngushtë me drejtësinë, si ndihmësgjyqtar, prokuror, drejtues prokurorie dhe avokat në disa rrethe të Shqipërisë, si Dibër, Shkodër, Mirditë, Lezhë dhe Tiranë. Njëkohësisht, për 10 vite me radhë ka shërbyer si pedagog i të drejtës penale dhe procedurës penale në Universitetin “Luigj Gurakuqi” Shkodër dhe dy universitete të tjera në Tiranë. Karriera akademike përfshin një numër të madh publikimesh shkencore në revista të ndryshme ndërkombëtare. Gjatë periudhës 1999-2006, ai ka kryer trajnime të ndryshme brenda dhe jashtë vendit, si në Poloni,"
     },
@@ -3968,8 +4010,8 @@
       "presumptionOfInnocence": true,
       "legalStatusAsOf": null,
       "legalStatusSummary": null,
-      "imageUrl": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202511101435561918Foto%20%28Adea%20Pirdeni%29.jpeg",
-      "photo_source_url": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202511101435561918Foto %28Adea Pirdeni%29.jpeg",
+      "imageUrl": "/politicians/official/vip28.jpg",
+      "photo_source_url": "https://kryeministria.al/wp-content/uploads/2025/09/pirdeni.png",
       "photoPending": false,
       "photoStatus": "Foto zyrtare / Official photo",
       "shortBio": null,
@@ -4007,10 +4049,12 @@
           "retrievedAt": "2026-10-31"
         },
         "photo": {
-          "value": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202511101435561918Foto %28Adea Pirdeni%29.jpeg",
-          "sourceUrl": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202511101435561918Foto %28Adea Pirdeni%29.jpeg",
+          "value": "/politicians/official/vip28.jpg",
+          "sourceUrl": "https://kryeministria.al/menu-qeveria/",
+          "imageUrl": "https://kryeministria.al/wp-content/uploads/2025/09/pirdeni.png",
           "retrievedAt": "2026-10-31",
-          "licence": "No reuse licence published by the Parliament of Albania. Referenced by URL; file not copied."
+          "licence": "Published by the institution; local copy for display.",
+          "notes": "Cabinet portrait on kryeministria.al. Filename pirdeni matches Adea Pirdeni. Publisher: Këshilli i Ministrave. Image https://kryeministria.al/wp-content/uploads/2025/09/pirdeni.png."
         },
         "parliamentaryGroup": {
           "value": "Grupi Parlamentar i Partisë Socialiste",
@@ -4108,14 +4152,16 @@
       "education": "Universiteti i Tiranës; Universiteti i Oksfordit",
       "email": "adea.pirdeni@parlament.al",
       "officialPhoto": {
-        "sourceUrl": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202511101435561918Foto %28Adea Pirdeni%29.jpeg",
-        "licence": "No reuse licence published by the Parliament of Albania. Referenced by URL; file not copied.",
+        "sourceUrl": "https://kryeministria.al/wp-content/uploads/2025/09/pirdeni.png",
+        "pageUrl": "https://kryeministria.al/menu-qeveria/",
+        "publisher": "Këshilli i Ministrave",
+        "licence": "Published by the institution; local copy for display.",
         "retrievedAt": "2026-10-31",
-        "copied": false,
-        "localPath": null
+        "copied": true,
+        "localPath": "/politicians/official/vip28.jpg"
       },
-      "officialPhotoPath": null,
-      "photoLicence": "No reuse licence published by the Parliament of Albania. Referenced by URL; file not copied.",
+      "officialPhotoPath": "/politicians/official/vip28.jpg",
+      "photoLicence": "Published by the institution; local copy for display.",
       "photoRetrievedAt": "2026-10-31"
     },
     {
@@ -6951,8 +6997,8 @@
       "presumptionOfInnocence": true,
       "legalStatusAsOf": null,
       "legalStatusSummary": null,
-      "imageUrl": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202509190847008991WhatsApp%20Image%202025-09-19%20at%2010.45.01%20AM.jpeg",
-      "photo_source_url": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202509190847008991WhatsApp Image 2025-09-19 at 10.45.01 AM.jpeg",
+      "imageUrl": "/politicians/official/vip46.jpg",
+      "photo_source_url": "https://ps.al/wp-content/uploads/2024/09/z.Taulant-Balla-01.jpg",
       "photoPending": false,
       "photoStatus": "Foto zyrtare / Official photo",
       "shortBio": null,
@@ -6990,11 +7036,12 @@
           "retrievedAt": "2026-10-31"
         },
         "photo": {
-          "value": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202509190847008991WhatsApp%20Image%202025-09-19%20at%2010.45.01%20AM.jpeg",
-          "sourceUrl": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202509190847008991WhatsApp Image 2025-09-19 at 10.45.01 AM.jpeg",
+          "value": "/politicians/official/vip46.jpg",
+          "sourceUrl": "https://ps.al/kryesia/",
+          "imageUrl": "https://ps.al/wp-content/uploads/2024/09/z.Taulant-Balla-01.jpg",
           "retrievedAt": "2026-10-31",
-          "licence": "No reuse licence published by the Parliament of Albania. Referenced by URL; file not copied.",
-          "notes": "Parliament member portrait (fotoProfil). Replaces a Commons file that was an event, meeting, news, or unverified upload. Publisher: Kuvendi i Shqipërisë."
+          "licence": "Published by the institution; local copy for display.",
+          "notes": "Formal portrait on the PS leadership page; cropped from a wide frame. Publisher: Partia Socialiste e Shqipërisë. Image https://ps.al/wp-content/uploads/2024/09/z.Taulant-Balla-01.jpg."
         },
         "parliamentaryGroup": {
           "value": "Grupi Parlamentar i Partisë Socialiste",
@@ -7101,15 +7148,16 @@
       "education": "studimet në Departamentin e Shkencave Politike në Universitetin “Al",
       "email": "taulant.balla@parlament.al",
       "officialPhoto": {
-        "sourceUrl": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202509190847008991WhatsApp Image 2025-09-19 at 10.45.01 AM.jpeg",
-        "publisher": "Kuvendi i Shqipërisë",
-        "licence": "No reuse licence published by the Parliament of Albania. Referenced by URL; file not copied.",
+        "sourceUrl": "https://ps.al/wp-content/uploads/2024/09/z.Taulant-Balla-01.jpg",
+        "pageUrl": "https://ps.al/kryesia/",
+        "publisher": "Partia Socialiste e Shqipërisë",
+        "licence": "Published by the institution; local copy for display.",
         "retrievedAt": "2026-10-31",
-        "copied": false,
-        "localPath": null
+        "copied": true,
+        "localPath": "/politicians/official/vip46.jpg"
       },
-      "officialPhotoPath": null,
-      "photoLicence": "No reuse licence published by the Parliament of Albania. Referenced by URL; file not copied.",
+      "officialPhotoPath": "/politicians/official/vip46.jpg",
+      "photoLicence": "Published by the institution; local copy for display.",
       "photoRetrievedAt": "2026-10-31",
       "careerSummary": "Zoti Taulant Balla ka lindur më 12 gusht 1977. Që prej shtatorit 2025, ai ushtron detyrën e Kryetarit të Grupit Parlamentar të Partisë Socialiste. Nga korriku 2024 deri në shtator 2025 ka mbajtur detyrën e Ministrit të Shtetit për Marrëdhëniet me Parlamentin, pas ushtrimit të funksionit të Ministrit të Brendshëm. Z. Balla u zgjodh për herë të parë deputet i Kuvendit të Shqipërisë në vitin 2005 dhe është rizgjedhur për herë të gjashtë më 11 maj 2025. Ai ka mbajtur funksione shumë të rëndësishme, ndër të cilat detyrën e Kryetarit të Grupit Parlamentar të Partisë Socialiste dhe bashkëkryetar i Komitetit Parlamentar të Stabilizim- Asociimit BE – Shqipëri. Z. Balla ka përfunduar studimet në Departamentin e Shkencave Politike në Universitetin “Al.I.Cuza” në Iași, Rumani, dhe më pas ka përfunduar studimet e doktoraturës me disertacionin me titull “Reforma e Sistemit të Vendimmarrjes në Bashkimi"
     },
@@ -8169,10 +8217,10 @@
       "presumptionOfInnocence": true,
       "legalStatusAsOf": null,
       "legalStatusSummary": null,
-      "imageUrl": null,
-      "photo_source_url": null,
-      "photoPending": true,
-      "photoStatus": "Në pritje të të dhënave / Awaiting data",
+      "imageUrl": "/politicians/official/vip54.jpg",
+      "photo_source_url": "https://ps.al/wp-content/uploads/2024/09/20180604085831_erion_veliaj.png",
+      "photoPending": false,
+      "photoStatus": "Foto zyrtare / Official photo",
       "shortBio": null,
       "detailedBio": null,
       "dynamicScore": null,
@@ -8211,11 +8259,12 @@
           "notes": "unique Wikidata politician; secondary to a missing Kuvendi row"
         },
         "photo": {
-          "value": "",
-          "sourceUrl": "",
+          "value": "/politicians/official/vip54.jpg",
+          "sourceUrl": "https://ps.al/kryesia/",
+          "imageUrl": "https://ps.al/wp-content/uploads/2024/09/20180604085831_erion_veliaj.png",
           "retrievedAt": "2026-10-31",
-          "licence": "",
-          "notes": "no official portrait; Same news photo as vip6. No official municipality portrait could be downloaded."
+          "licence": "Published by the institution; local copy for display.",
+          "notes": "Formal head-and-shoulders on the PS leadership page, same file the Tirana mayor page uses. Cropped from the wide frame. Applied to both Veliaj cards. Publisher: Partia Socialiste e Shqipërisë. Image https://ps.al/wp-content/uploads/2024/09/20180604085831_erion_veliaj.png."
         }
       },
       "sourceRetrievedAt": "2026-10-31",
@@ -8233,9 +8282,17 @@
       },
       "education": "Grand Valley State University",
       "email": null,
-      "officialPhoto": null,
-      "officialPhotoPath": null,
-      "photoLicence": null,
+      "officialPhoto": {
+        "sourceUrl": "https://ps.al/wp-content/uploads/2024/09/20180604085831_erion_veliaj.png",
+        "pageUrl": "https://ps.al/kryesia/",
+        "publisher": "Partia Socialiste e Shqipërisë",
+        "licence": "Published by the institution; local copy for display.",
+        "retrievedAt": "2026-10-31",
+        "copied": true,
+        "localPath": "/politicians/official/vip54.jpg"
+      },
+      "officialPhotoPath": "/politicians/official/vip54.jpg",
+      "photoLicence": "Published by the institution; local copy for display.",
       "photoRetrievedAt": "2026-10-31"
     },
     {
@@ -9291,8 +9348,8 @@
       "presumptionOfInnocence": true,
       "legalStatusAsOf": null,
       "legalStatusSummary": null,
-      "imageUrl": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/Blendi%20Klosi.png",
-      "photo_source_url": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/Blendi Klosi.png",
+      "imageUrl": "/politicians/official/vip62.jpg",
+      "photo_source_url": "https://ps.al/wp-content/uploads/2024/09/Blendi-Klosi.png",
       "photoPending": false,
       "photoStatus": "Foto zyrtare / Official photo",
       "shortBio": null,
@@ -9336,11 +9393,12 @@
           "retrievedAt": "2026-10-31"
         },
         "photo": {
-          "value": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/Blendi%20Klosi.png",
-          "sourceUrl": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/Blendi Klosi.png",
+          "value": "/politicians/official/vip62.jpg",
+          "sourceUrl": "https://ps.al/kryesia/",
+          "imageUrl": "https://ps.al/wp-content/uploads/2024/09/Blendi-Klosi.png",
           "retrievedAt": "2026-10-31",
-          "licence": "No reuse licence published by the Parliament of Albania. Referenced by URL; file not copied.",
-          "notes": "Parliament member portrait (fotoProfil). Replaces a Commons file that was an event, meeting, news, or unverified upload. Publisher: Kuvendi i Shqipërisë."
+          "licence": "Published by the institution; local copy for display.",
+          "notes": "Formal portrait on the PS leadership page, Parliament emblem backdrop, no text. Publisher: Partia Socialiste e Shqipërisë. Image https://ps.al/wp-content/uploads/2024/09/Blendi-Klosi.png."
         },
         "parliamentaryGroup": {
           "value": "Grupi Parlamentar i Partisë Socialiste",
@@ -9435,15 +9493,16 @@
       "education": "studimet në fushën e Inxhinierisë Elektronike, në Fakultetin e Inxhinierisë, pranë Universitetit të Tiranës (1988- 1993)",
       "email": "Blendi.Klosi@parlament.al",
       "officialPhoto": {
-        "sourceUrl": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/Blendi Klosi.png",
-        "publisher": "Kuvendi i Shqipërisë",
-        "licence": "No reuse licence published by the Parliament of Albania. Referenced by URL; file not copied.",
+        "sourceUrl": "https://ps.al/wp-content/uploads/2024/09/Blendi-Klosi.png",
+        "pageUrl": "https://ps.al/kryesia/",
+        "publisher": "Partia Socialiste e Shqipërisë",
+        "licence": "Published by the institution; local copy for display.",
         "retrievedAt": "2026-10-31",
-        "copied": false,
-        "localPath": null
+        "copied": true,
+        "localPath": "/politicians/official/vip62.jpg"
       },
-      "officialPhotoPath": null,
-      "photoLicence": "No reuse licence published by the Parliament of Albania. Referenced by URL; file not copied.",
+      "officialPhotoPath": "/politicians/official/vip62.jpg",
+      "photoLicence": "Published by the institution; local copy for display.",
       "photoRetrievedAt": "2026-10-31",
       "careerSummary": "Ka përfunduar studimet në fushën e Inxhinierisë Elektronike, në Fakultetin e Inxhinierisë, pranë Universitetit të Tiranës (1988- 1993). Z. Klosi ka mbajtur detyrën e përgjegjësit të s ektorit në Qendrën e Studimeve të Projektimeve Elektronike (1994 -1996). Veprimtaria politike e z. Klosi është mjaft e pasur me angazhime të rëndësishme si zëvendësministër i Pushtetit Lokal (1999-2001), kryetar i Komisionit për Reformën Zgjedhore, ministër i s htetit (2002-2004), ministër i R inisë, Kulturës dhe S porteve (2004-2005), ministër i Mirëqenies Sociale dhe Rinisë (2015 -2017), m inistër i Turizmit dhe Mjedisit (2017 - 2021). Gjithashtu, z. Klosi është anë tar i K ryesisë së Partisë Socialis te, ku ka mbajtur pozicionin e sekretarit organizativ në këtë parti (2005 -2016). Blendi Klosi ka një angazhim të gjat ë si deputet dhe përfaqësues i grupit parlamentar të Partisë Socialiste në 5 legjislatur"
     },
@@ -10411,8 +10470,8 @@
       "presumptionOfInnocence": true,
       "legalStatusAsOf": null,
       "legalStatusSummary": null,
-      "imageUrl": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/Klodiana%20Spahiu.png",
-      "photo_source_url": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/Klodiana Spahiu.png",
+      "imageUrl": "/politicians/official/vip70.jpg",
+      "photo_source_url": "https://kryeministria.al/wp-content/uploads/2026/09/KLodiana-Spahiu1-scaled.jpg",
       "photoPending": false,
       "photoStatus": "Foto zyrtare / Official photo",
       "shortBio": null,
@@ -10456,10 +10515,12 @@
           "retrievedAt": "2026-10-31"
         },
         "photo": {
-          "value": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/Klodiana Spahiu.png",
-          "sourceUrl": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/Klodiana Spahiu.png",
+          "value": "/politicians/official/vip70.jpg",
+          "sourceUrl": "https://kryeministria.al/menu-qeveria/",
+          "imageUrl": "https://kryeministria.al/wp-content/uploads/2026/09/KLodiana-Spahiu1-scaled.jpg",
           "retrievedAt": "2026-10-31",
-          "licence": "No reuse licence published by the Parliament of Albania. Referenced by URL; file not copied."
+          "licence": "Published by the institution; local copy for display.",
+          "notes": "Cabinet head-and-shoulders. The PS file is a small full-figure cutout on black, so it was not used. Publisher: Këshilli i Ministrave. Image https://kryeministria.al/wp-content/uploads/2026/09/KLodiana-Spahiu1-scaled.jpg."
         },
         "parliamentaryGroup": {
           "value": "Grupi Parlamentar i Partisë Socialiste",
@@ -10559,14 +10620,16 @@
       "education": "studimet në Universitetin e Tiranës, Fakulteti i Mjekësisë, dega “Mjekësi e Përgjithshme” në vitin 1997",
       "email": "Klodiana.Spahiu@parlament.al",
       "officialPhoto": {
-        "sourceUrl": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/Klodiana Spahiu.png",
-        "licence": "No reuse licence published by the Parliament of Albania. Referenced by URL; file not copied.",
+        "sourceUrl": "https://kryeministria.al/wp-content/uploads/2026/09/KLodiana-Spahiu1-scaled.jpg",
+        "pageUrl": "https://kryeministria.al/menu-qeveria/",
+        "publisher": "Këshilli i Ministrave",
+        "licence": "Published by the institution; local copy for display.",
         "retrievedAt": "2026-10-31",
-        "copied": false,
-        "localPath": null
+        "copied": true,
+        "localPath": "/politicians/official/vip70.jpg"
       },
-      "officialPhotoPath": null,
-      "photoLicence": "No reuse licence published by the Parliament of Albania. Referenced by URL; file not copied.",
+      "officialPhotoPath": "/politicians/official/vip70.jpg",
+      "photoLicence": "Published by the institution; local copy for display.",
       "photoRetrievedAt": "2026-10-31",
       "careerSummary": "Znj. Klodiana Spahiu k a përfunduar studimet në Universitetin e Tiranës, Fakulteti i Mjekësisë, dega “Mjekësi e Përgjithshme” në vitin 1997. Më pas, në vitin 1998 -2002 është specializuar në fushën e kardiologjisë, në po të njëjtin departament pranë QSUT-së “Nënë Tereza”, në Tiranë. Ajo ka kryer një sërë specializimesh ndër vite, si në fush ën e kardiologjisë joinvazive: ekokardiografi, PU-EKG, eko-doppler e karotideve, pranë Universitetit Katolik: “Sacro Cuore”, Facolta di Medicina e Chirurgia “Agostino Gemeli”, Romë, Itali. Në 2003-2004 kreu studimet pasuniversitare pranë Fakultetit të Mjekësisë, Departamenti i Lëndëve Paraklinike. Gjatë periudhës tetor 2005 - dhjetor 2005 ka kryer specializim në fushën e kardiologjisë invazive, kateterizimi i zemrës dhe k oronarografinë e zemrës, pranë s pitalit “Santa Chiara”, Pisa, Itali. Vite me vonë, 2012 -2014 ajo ka përfunduar edhe masterin prof"
     },
@@ -13085,8 +13148,8 @@
       "presumptionOfInnocence": true,
       "legalStatusAsOf": null,
       "legalStatusSummary": null,
-      "imageUrl": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202509251413091051final.jpg",
-      "photo_source_url": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202509251413091051final.jpg",
+      "imageUrl": "/politicians/official/vip87.jpg",
+      "photo_source_url": "https://ps.al/wp-content/uploads/2024/09/Niko-Peleshi-Profile.jpg",
       "photoPending": false,
       "photoStatus": "Foto zyrtare / Official photo",
       "shortBio": null,
@@ -13130,11 +13193,12 @@
           "retrievedAt": "2026-10-31"
         },
         "photo": {
-          "value": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202509251413091051final.jpg",
-          "sourceUrl": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202509251413091051final.jpg",
+          "value": "/politicians/official/vip87.jpg",
+          "sourceUrl": "https://ps.al/kryesia/",
+          "imageUrl": "https://ps.al/wp-content/uploads/2024/09/Niko-Peleshi-Profile.jpg",
           "retrievedAt": "2026-10-31",
-          "licence": "No reuse licence published by the Parliament of Albania. Referenced by URL; file not copied.",
-          "notes": "Parliament member portrait (fotoProfil). Replaces a Commons file that was an event, meeting, news, or unverified upload. Publisher: Kuvendi i Shqipërisë."
+          "licence": "Published by the institution; local copy for display.",
+          "notes": "Formal headshot on the PS leadership page, filename Niko Peleshi Profile. Publisher: Partia Socialiste e Shqipërisë. Image https://ps.al/wp-content/uploads/2024/09/Niko-Peleshi-Profile.jpg."
         },
         "parliamentaryGroup": {
           "value": "Grupi Parlamentar i Partisë Socialiste",
@@ -13229,15 +13293,16 @@
       "education": "Ka kryer studimet e larta për Inxhinieri Elektronike në Universitetin Politeknik të Tiranës me rezultate të shkëlqyera duke marrë titullin “Inxhinier",
       "email": "speaker@parlament.al",
       "officialPhoto": {
-        "sourceUrl": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202509251413091051final.jpg",
-        "publisher": "Kuvendi i Shqipërisë",
-        "licence": "No reuse licence published by the Parliament of Albania. Referenced by URL; file not copied.",
+        "sourceUrl": "https://ps.al/wp-content/uploads/2024/09/Niko-Peleshi-Profile.jpg",
+        "pageUrl": "https://ps.al/kryesia/",
+        "publisher": "Partia Socialiste e Shqipërisë",
+        "licence": "Published by the institution; local copy for display.",
         "retrievedAt": "2026-10-31",
-        "copied": false,
-        "localPath": null
+        "copied": true,
+        "localPath": "/politicians/official/vip87.jpg"
       },
-      "officialPhotoPath": null,
-      "photoLicence": "No reuse licence published by the Parliament of Albania. Referenced by URL; file not copied.",
+      "officialPhotoPath": "/politicians/official/vip87.jpg",
+      "photoLicence": "Published by the institution; local copy for display.",
       "photoRetrievedAt": "2026-10-31",
       "careerSummary": "Z. Niko Peleshi prej janarit 2021 deri në korrik 2024 ka mbajt ur funksionin e ministrit të Mbrojtjes së Republikës së Shqipërisë. Niko Peleshi ka lindur në Korçë, më 11 nëntor 1970. Ka kryer studimet e larta për Inxhinieri Elektronike në Universitetin Politeknik të Tiranës me rezultate të shkëlqyera duke marrë titullin “Inxhinier elektronik”. Në vitin 1989 ka përfunduar Shkollën e Mesme të Përgjithshme “Raqi Qirinxhi” në Korçë me medalje të artë. Z. Peleshi ka pasur një angazhim të gjatë në fushën e biznesit privat në qytetin e Korçës: në vitet 2001 – 2004 ka drejtuar me sukses Dhomën e Tregtisë dhe Industrisë, Korçë. Karriera politike e z. Peleshi fillon në tetor të viti t 2004, kur emërohet prefekt i q arkut Korçë dhe e ushtron këtë funksion për një vit. Në vitin 2005, ai u zgjodh kryetar i Partisë Socialiste të qytetit të Korçës. Në zgjedhjet lokale të shkurtit 2007. z.Peleshi u zgjo"
     },
@@ -16230,8 +16295,8 @@
       "presumptionOfInnocence": true,
       "legalStatusAsOf": null,
       "legalStatusSummary": null,
-      "imageUrl": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/Benet%20Beci.jpg",
-      "photo_source_url": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/Benet Beci.jpg",
+      "imageUrl": "/politicians/official/vip107.jpg",
+      "photo_source_url": "https://ps.al/wp-content/uploads/2024/09/benet_beci.jpg",
       "photoPending": false,
       "photoStatus": "Foto zyrtare / Official photo",
       "shortBio": null,
@@ -16276,10 +16341,12 @@
           "retrievedAt": "2026-10-31"
         },
         "photo": {
-          "value": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/Benet Beci.jpg",
-          "sourceUrl": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/Benet Beci.jpg",
+          "value": "/politicians/official/vip107.jpg",
+          "sourceUrl": "https://ps.al/kryesia/",
+          "imageUrl": "https://ps.al/wp-content/uploads/2024/09/benet_beci.jpg",
           "retrievedAt": "2026-10-31",
-          "licence": "No reuse licence published by the Parliament of Albania. Referenced by URL; file not copied."
+          "licence": "Published by the institution; local copy for display.",
+          "notes": "Posed head-and-shoulders portrait on the PS leadership page, no text overlay. Publisher: Partia Socialiste e Shqipërisë. Image https://ps.al/wp-content/uploads/2024/09/benet_beci.jpg."
         },
         "parliamentaryGroup": {
           "value": "Grupi Parlamentar i Partisë Socialiste",
@@ -16353,14 +16420,16 @@
       "education": "ka kryer studimet universitare në Fakulteti n e Ekonomisë në vitin 1987, master në Administrim Biznesi me temë mbi sistemin",
       "email": null,
       "officialPhoto": {
-        "sourceUrl": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/Benet Beci.jpg",
-        "licence": "No reuse licence published by the Parliament of Albania. Referenced by URL; file not copied.",
+        "sourceUrl": "https://ps.al/wp-content/uploads/2024/09/benet_beci.jpg",
+        "pageUrl": "https://ps.al/kryesia/",
+        "publisher": "Partia Socialiste e Shqipërisë",
+        "licence": "Published by the institution; local copy for display.",
         "retrievedAt": "2026-10-31",
-        "copied": false,
-        "localPath": null
+        "copied": true,
+        "localPath": "/politicians/official/vip107.jpg"
       },
-      "officialPhotoPath": null,
-      "photoLicence": "No reuse licence published by the Parliament of Albania. Referenced by URL; file not copied.",
+      "officialPhotoPath": "/politicians/official/vip107.jpg",
+      "photoLicence": "Published by the institution; local copy for display.",
       "careerSummary": "Ka lindur në Tiranë, më 25 janar 1965. Benet Beci ka kryer studimet universitare në Fakulteti n e Ekonomisë në vitin 1987, master në Administrim Biznesi me temë mbi sistemin bankar në vitin 2003 dhe doktoraturën në vitin 2015 me një temë mbi zhvillimin rajonal. Gjatë karrierës së tij, Benet Becit i janë besuar detyra të rëndësishme sidomos në sistemin bankar ku ka pasur disa pozicione, nga të cilat më i spikaturi ka qenë ai i anëtarit të Këshillit Mbikqyrës të Bankës së Shqipërisë. Gjithashtu ka një përvojë të gjerë edhe në menaxhim financiar në institucione të Financimit Rural. Detyra më e rëndësishme ka qenë ajo e drejtorit të Fondit Shqiptar të Zhvillimit, një institucion publik që implementon projekte zhvillimi në nivel lokal dhe kombëtar. Ai e ka mbajtur këtë post që prej vitit 2005 deri më 2019 . Ai ka mbajtur edhe detyrën e Administartorit në Korporatën Elektroenergjitike Shqipatr",
       "photoRetrievedAt": "2026-10-31"
     },
@@ -19122,8 +19191,8 @@
       "presumptionOfInnocence": true,
       "legalStatusAsOf": null,
       "legalStatusSummary": null,
-      "imageUrl": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/Blendi%20Klosi.png",
-      "photo_source_url": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/Blendi Klosi.png",
+      "imageUrl": "/politicians/official/vip127.jpg",
+      "photo_source_url": "https://ps.al/wp-content/uploads/2024/09/Blendi-Klosi.png",
       "photoPending": false,
       "photoStatus": "Foto zyrtare / Official photo",
       "shortBio": null,
@@ -19179,10 +19248,12 @@
           "notes": "Parliament CV biography"
         },
         "photo": {
-          "value": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/Blendi Klosi.png",
-          "sourceUrl": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/Blendi Klosi.png",
+          "value": "/politicians/official/vip127.jpg",
+          "sourceUrl": "https://ps.al/kryesia/",
+          "imageUrl": "https://ps.al/wp-content/uploads/2024/09/Blendi-Klosi.png",
           "retrievedAt": "2026-10-31",
-          "licence": "No reuse licence published by the Parliament of Albania. Referenced by URL; file not copied."
+          "licence": "Published by the institution; local copy for display.",
+          "notes": "Formal portrait on the PS leadership page, Parliament emblem backdrop, no text. Publisher: Partia Socialiste e Shqipërisë. Image https://ps.al/wp-content/uploads/2024/09/Blendi-Klosi.png."
         },
         "parliamentaryGroup": {
           "value": "Grupi Parlamentar i Partisë Socialiste",
@@ -19250,14 +19321,16 @@
       "education": "studimet në fushën e Inxhinierisë Elektronike, në Fakultetin e Inxhinierisë, pranë Universitetit të Tiranës (1988- 1993)",
       "email": null,
       "officialPhoto": {
-        "sourceUrl": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/Blendi Klosi.png",
-        "licence": "No reuse licence published by the Parliament of Albania. Referenced by URL; file not copied.",
+        "sourceUrl": "https://ps.al/wp-content/uploads/2024/09/Blendi-Klosi.png",
+        "pageUrl": "https://ps.al/kryesia/",
+        "publisher": "Partia Socialiste e Shqipërisë",
+        "licence": "Published by the institution; local copy for display.",
         "retrievedAt": "2026-10-31",
-        "copied": false,
-        "localPath": null
+        "copied": true,
+        "localPath": "/politicians/official/vip127.jpg"
       },
-      "officialPhotoPath": null,
-      "photoLicence": "No reuse licence published by the Parliament of Albania. Referenced by URL; file not copied.",
+      "officialPhotoPath": "/politicians/official/vip127.jpg",
+      "photoLicence": "Published by the institution; local copy for display.",
       "careerSummary": "Ka përfunduar studimet në fushën e Inxhinierisë Elektronike, në Fakultetin e Inxhinierisë, pranë Universitetit të Tiranës (1988- 1993). Z. Klosi ka mbajtur detyrën e përgjegjësit të s ektorit në Qendrën e Studimeve të Projektimeve Elektronike (1994 -1996). Veprimtaria politike e z. Klosi është mjaft e pasur me angazhime të rëndësishme si zëvendësministër i Pushtetit Lokal (1999-2001), kryetar i Komisionit për Reformën Zgjedhore, ministër i s htetit (2002-2004), ministër i R inisë, Kulturës dhe S porteve (2004-2005), ministër i Mirëqenies Sociale dhe Rinisë (2015 -2017), m inistër i Turizmit dhe Mjedisit (2017 - 2021). Gjithashtu, z. Klosi është anë tar i K ryesisë së Partisë Socialis te, ku ka mbajtur pozicionin e sekretarit organizativ në këtë parti (2005 -2016). Blendi Klosi ka një angazhim të gjat ë si deputet dhe përfaqësues i grupit parlamentar të Partisë Socialiste në 5 legjislatur",
       "photoRetrievedAt": "2026-10-31"
     },
@@ -20734,8 +20807,8 @@
       "presumptionOfInnocence": true,
       "legalStatusAsOf": null,
       "legalStatusSummary": null,
-      "imageUrl": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202511110844089529Mirela-Kumbaro.jpg",
-      "photo_source_url": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202511110844089529Mirela-Kumbaro.jpg",
+      "imageUrl": "/politicians/official/vip140.jpg",
+      "photo_source_url": "https://ps.al/wp-content/uploads/2024/09/znj.Mirela-Kumbaro-Furxhi.jpg",
       "photoPending": false,
       "photoStatus": "Foto zyrtare / Official photo",
       "shortBio": null,
@@ -20779,11 +20852,12 @@
           "retrievedAt": "2026-10-31"
         },
         "photo": {
-          "value": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202511110844089529Mirela-Kumbaro.jpg",
-          "sourceUrl": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202511110844089529Mirela-Kumbaro.jpg",
+          "value": "/politicians/official/vip140.jpg",
+          "sourceUrl": "https://ps.al/kryesia/",
+          "imageUrl": "https://ps.al/wp-content/uploads/2024/09/znj.Mirela-Kumbaro-Furxhi.jpg",
           "retrievedAt": "2026-10-31",
-          "licence": "No reuse licence published by the Parliament of Albania. Referenced by URL; file not copied.",
-          "notes": "Parliament member portrait (fotoProfil). Replaces a Commons file that was an event, meeting, news, or unverified upload. Publisher: Kuvendi i Shqipërisë."
+          "licence": "Published by the institution; local copy for display.",
+          "notes": "Formal head-and-shoulders on the PS leadership page. Filename matches Mirela Kumbaro Furxhi. Publisher: Partia Socialiste e Shqipërisë. Image https://ps.al/wp-content/uploads/2024/09/znj.Mirela-Kumbaro-Furxhi.jpg."
         },
         "parliamentaryGroup": {
           "value": "Grupi Parlamentar i Partisë Socialiste",
@@ -20882,15 +20956,16 @@
       "education": "studimeve ndërkulturore, pasi kishte fituar më parë titullin Doktor i Shkencave në fushën e Studimeve Përkthimore, pranë Universitetit të Tiranës në vitin 2009",
       "email": "mirela.furxhi@parlament.al",
       "officialPhoto": {
-        "sourceUrl": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202511110844089529Mirela-Kumbaro.jpg",
-        "publisher": "Kuvendi i Shqipërisë",
-        "licence": "No reuse licence published by the Parliament of Albania. Referenced by URL; file not copied.",
+        "sourceUrl": "https://ps.al/wp-content/uploads/2024/09/znj.Mirela-Kumbaro-Furxhi.jpg",
+        "pageUrl": "https://ps.al/kryesia/",
+        "publisher": "Partia Socialiste e Shqipërisë",
+        "licence": "Published by the institution; local copy for display.",
         "retrievedAt": "2026-10-31",
-        "copied": false,
-        "localPath": null
+        "copied": true,
+        "localPath": "/politicians/official/vip140.jpg"
       },
-      "officialPhotoPath": null,
-      "photoLicence": "No reuse licence published by the Parliament of Albania. Referenced by URL; file not copied.",
+      "officialPhotoPath": "/politicians/official/vip140.jpg",
+      "photoLicence": "Published by the institution; local copy for display.",
       "photoRetrievedAt": "2026-10-31",
       "aliases": [
         "Mirela Kumbaro Furxhi"
@@ -23188,8 +23263,8 @@
       "presumptionOfInnocence": true,
       "legalStatusAsOf": null,
       "legalStatusSummary": null,
-      "imageUrl": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/Blendi%20Klosi.png",
-      "photo_source_url": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/Blendi Klosi.png",
+      "imageUrl": "/politicians/official/vip156.jpg",
+      "photo_source_url": "https://ps.al/wp-content/uploads/2024/09/Blendi-Klosi.png",
       "photoPending": false,
       "photoStatus": "Foto zyrtare / Official photo",
       "shortBio": null,
@@ -23233,11 +23308,12 @@
           "retrievedAt": "2026-10-31"
         },
         "photo": {
-          "value": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/Blendi%20Klosi.png",
-          "sourceUrl": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/Blendi Klosi.png",
+          "value": "/politicians/official/vip156.jpg",
+          "sourceUrl": "https://ps.al/kryesia/",
+          "imageUrl": "https://ps.al/wp-content/uploads/2024/09/Blendi-Klosi.png",
           "retrievedAt": "2026-10-31",
-          "licence": "No reuse licence published by the Parliament of Albania. Referenced by URL; file not copied.",
-          "notes": "Parliament member portrait (fotoProfil). Replaces a Commons file that was an event, meeting, news, or unverified upload. Publisher: Kuvendi i Shqipërisë."
+          "licence": "Published by the institution; local copy for display.",
+          "notes": "Formal portrait on the PS leadership page, Parliament emblem backdrop, no text. Publisher: Partia Socialiste e Shqipërisë. Image https://ps.al/wp-content/uploads/2024/09/Blendi-Klosi.png."
         },
         "parliamentaryGroup": {
           "value": "Grupi Parlamentar i Partisë Socialiste",
@@ -23332,15 +23408,16 @@
       "education": "studimet në fushën e Inxhinierisë Elektronike, në Fakultetin e Inxhinierisë, pranë Universitetit të Tiranës (1988- 1993)",
       "email": "Blendi.Klosi@parlament.al",
       "officialPhoto": {
-        "sourceUrl": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/Blendi Klosi.png",
-        "publisher": "Kuvendi i Shqipërisë",
-        "licence": "No reuse licence published by the Parliament of Albania. Referenced by URL; file not copied.",
+        "sourceUrl": "https://ps.al/wp-content/uploads/2024/09/Blendi-Klosi.png",
+        "pageUrl": "https://ps.al/kryesia/",
+        "publisher": "Partia Socialiste e Shqipërisë",
+        "licence": "Published by the institution; local copy for display.",
         "retrievedAt": "2026-10-31",
-        "copied": false,
-        "localPath": null
+        "copied": true,
+        "localPath": "/politicians/official/vip156.jpg"
       },
-      "officialPhotoPath": null,
-      "photoLicence": "No reuse licence published by the Parliament of Albania. Referenced by URL; file not copied.",
+      "officialPhotoPath": "/politicians/official/vip156.jpg",
+      "photoLicence": "Published by the institution; local copy for display.",
       "photoRetrievedAt": "2026-10-31",
       "careerSummary": "Ka përfunduar studimet në fushën e Inxhinierisë Elektronike, në Fakultetin e Inxhinierisë, pranë Universitetit të Tiranës (1988- 1993). Z. Klosi ka mbajtur detyrën e përgjegjësit të s ektorit në Qendrën e Studimeve të Projektimeve Elektronike (1994 -1996). Veprimtaria politike e z. Klosi është mjaft e pasur me angazhime të rëndësishme si zëvendësministër i Pushtetit Lokal (1999-2001), kryetar i Komisionit për Reformën Zgjedhore, ministër i s htetit (2002-2004), ministër i R inisë, Kulturës dhe S porteve (2004-2005), ministër i Mirëqenies Sociale dhe Rinisë (2015 -2017), m inistër i Turizmit dhe Mjedisit (2017 - 2021). Gjithashtu, z. Klosi është anë tar i K ryesisë së Partisë Socialis te, ku ka mbajtur pozicionin e sekretarit organizativ në këtë parti (2005 -2016). Blendi Klosi ka një angazhim të gjat ë si deputet dhe përfaqësues i grupit parlamentar të Partisë Socialiste në 5 legjislatur"
     },
@@ -25242,8 +25319,8 @@
       "presumptionOfInnocence": true,
       "legalStatusAsOf": null,
       "legalStatusSummary": null,
-      "imageUrl": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/Toni%20Gogu.jpg",
-      "photo_source_url": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/Toni Gogu.jpg",
+      "imageUrl": "/politicians/official/vip169.jpg",
+      "photo_source_url": "https://kryeministria.al/wp-content/uploads/2025/09/gogu.png",
       "photoPending": false,
       "photoStatus": "Foto zyrtare / Official photo",
       "shortBio": null,
@@ -25281,11 +25358,12 @@
           "retrievedAt": "2026-10-31"
         },
         "photo": {
-          "value": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/Toni%20Gogu.jpg",
-          "sourceUrl": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/Toni Gogu.jpg",
+          "value": "/politicians/official/vip169.jpg",
+          "sourceUrl": "https://kryeministria.al/menu-qeveria/",
+          "imageUrl": "https://kryeministria.al/wp-content/uploads/2025/09/gogu.png",
           "retrievedAt": "2026-10-31",
-          "licence": "No reuse licence published by the Parliament of Albania. Referenced by URL; file not copied.",
-          "notes": "Parliament member portrait (fotoProfil). Replaces a Commons file that was an event, meeting, news, or unverified upload. Publisher: Kuvendi i Shqipërisë."
+          "licence": "Published by the institution; local copy for display.",
+          "notes": "Cabinet portrait on kryeministria.al. No PS leadership file of sufficient quality. Publisher: Këshilli i Ministrave. Image https://kryeministria.al/wp-content/uploads/2025/09/gogu.png."
         },
         "parliamentaryGroup": {
           "value": "Grupi Parlamentar i Partisë Socialiste",
@@ -25366,15 +25444,16 @@
       "education": "diplomuar në Fakultetin e Drejtësisës dhe ka kryer studimet master në të drejtën publike në Universiteti n e Tiranës",
       "email": "toni.gogu@parlament.al",
       "officialPhoto": {
-        "sourceUrl": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/Toni Gogu.jpg",
-        "publisher": "Kuvendi i Shqipërisë",
-        "licence": "No reuse licence published by the Parliament of Albania. Referenced by URL; file not copied.",
+        "sourceUrl": "https://kryeministria.al/wp-content/uploads/2025/09/gogu.png",
+        "pageUrl": "https://kryeministria.al/menu-qeveria/",
+        "publisher": "Këshilli i Ministrave",
+        "licence": "Published by the institution; local copy for display.",
         "retrievedAt": "2026-10-31",
-        "copied": false,
-        "localPath": null
+        "copied": true,
+        "localPath": "/politicians/official/vip169.jpg"
       },
-      "officialPhotoPath": null,
-      "photoLicence": "No reuse licence published by the Parliament of Albania. Referenced by URL; file not copied.",
+      "officialPhotoPath": "/politicians/official/vip169.jpg",
+      "photoLicence": "Published by the institution; local copy for display.",
       "photoRetrievedAt": "2026-10-31"
     },
     {
@@ -26310,10 +26389,10 @@
       "presumptionOfInnocence": true,
       "legalStatusAsOf": null,
       "legalStatusSummary": null,
-      "imageUrl": null,
-      "photo_source_url": null,
-      "photoPending": true,
-      "photoStatus": "Në pritje të të dhënave / Awaiting data",
+      "imageUrl": "/politicians/official/vip176.jpg",
+      "photo_source_url": "https://ps.al/wp-content/uploads/2024/09/Arbian-Mazniku.jpeg",
+      "photoPending": false,
+      "photoStatus": "Foto zyrtare / Official photo",
       "shortBio": null,
       "detailedBio": null,
       "dynamicScore": null,
@@ -26384,6 +26463,14 @@
           "sourceUrl": "https://kuvendiapi.azurewebsites.net/api/anetaret/3078298f-d296-4cbc-8611-53ef18fb6eba",
           "retrievedAt": "2026-10-31",
           "notes": "Kuvendi register"
+        },
+        "photo": {
+          "value": "/politicians/official/vip176.jpg",
+          "sourceUrl": "https://ps.al/kryesia/",
+          "imageUrl": "https://ps.al/wp-content/uploads/2024/09/Arbian-Mazniku.jpeg",
+          "retrievedAt": "2026-10-31",
+          "licence": "Published by the institution; local copy for display.",
+          "notes": "Formal portrait on the PS leadership page; filename Arbian Mazniku matches Arbjan Mazniku. Cropped to the subject. Publisher: Partia Socialiste e Shqipërisë. Image https://ps.al/wp-content/uploads/2024/09/Arbian-Mazniku.jpeg."
         }
       },
       "sourceRetrievedAt": "2026-10-31",
@@ -26440,9 +26527,18 @@
       },
       "education": null,
       "email": "arbjan.mazniku@parlament.al",
-      "officialPhoto": null,
-      "officialPhotoPath": null,
-      "photoLicence": null
+      "officialPhoto": {
+        "sourceUrl": "https://ps.al/wp-content/uploads/2024/09/Arbian-Mazniku.jpeg",
+        "pageUrl": "https://ps.al/kryesia/",
+        "publisher": "Partia Socialiste e Shqipërisë",
+        "licence": "Published by the institution; local copy for display.",
+        "retrievedAt": "2026-10-31",
+        "copied": true,
+        "localPath": "/politicians/official/vip176.jpg"
+      },
+      "officialPhotoPath": "/politicians/official/vip176.jpg",
+      "photoLicence": "Published by the institution; local copy for display.",
+      "photoRetrievedAt": "2026-10-31"
     },
     {
       "id": "vip177",
@@ -26776,8 +26872,8 @@
       "presumptionOfInnocence": true,
       "legalStatusAsOf": null,
       "legalStatusSummary": null,
-      "imageUrl": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/EduartShalsi.png",
-      "photo_source_url": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/EduartShalsi.png",
+      "imageUrl": "/politicians/official/vip179.jpg",
+      "photo_source_url": "https://ps.al/wp-content/uploads/2024/09/EduartShalsi.png",
       "photoPending": false,
       "photoStatus": "Foto zyrtare / Official photo",
       "shortBio": null,
@@ -26821,11 +26917,12 @@
           "retrievedAt": "2026-10-31"
         },
         "photo": {
-          "value": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/EduartShalsi.png",
-          "sourceUrl": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/EduartShalsi.png",
+          "value": "/politicians/official/vip179.jpg",
+          "sourceUrl": "https://ps.al/kryesia/",
+          "imageUrl": "https://ps.al/wp-content/uploads/2024/09/EduartShalsi.png",
           "retrievedAt": "2026-10-31",
-          "licence": "No reuse licence published by the Parliament of Albania. Referenced by URL; file not copied.",
-          "notes": "Parliament member portrait (fotoProfil). Replaces a Commons file that was an event, meeting, news, or unverified upload. Publisher: Kuvendi i Shqipërisë."
+          "licence": "Published by the institution; local copy for display.",
+          "notes": "Formal portrait on the PS leadership page. Filename Eduart Shalsi matches Eduard Shalsi. Publisher: Partia Socialiste e Shqipërisë. Image https://ps.al/wp-content/uploads/2024/09/EduartShalsi.png."
         },
         "parliamentaryGroup": {
           "value": "Grupi Parlamentar i Partisë Socialiste",
@@ -26927,15 +27024,16 @@
       "education": "studimet universitare në vitin 1990, në Fakultetin e Shkencave të Natyrës, në degën Biologji–Kimi",
       "email": "eduard.shalsi@parlament.al",
       "officialPhoto": {
-        "sourceUrl": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/EduartShalsi.png",
-        "publisher": "Kuvendi i Shqipërisë",
-        "licence": "No reuse licence published by the Parliament of Albania. Referenced by URL; file not copied.",
+        "sourceUrl": "https://ps.al/wp-content/uploads/2024/09/EduartShalsi.png",
+        "pageUrl": "https://ps.al/kryesia/",
+        "publisher": "Partia Socialiste e Shqipërisë",
+        "licence": "Published by the institution; local copy for display.",
         "retrievedAt": "2026-10-31",
-        "copied": false,
-        "localPath": null
+        "copied": true,
+        "localPath": "/politicians/official/vip179.jpg"
       },
-      "officialPhotoPath": null,
-      "photoLicence": "No reuse licence published by the Parliament of Albania. Referenced by URL; file not copied.",
+      "officialPhotoPath": "/politicians/official/vip179.jpg",
+      "photoLicence": "Published by the institution; local copy for display.",
       "photoRetrievedAt": "2026-10-31",
       "careerSummary": "Ka përfunduar studimet universitare në vitin 1990, në Fakultetin e Shkencave të Natyrës, në degën Biologji–Kimi. Fillimisht ka punuar si arsimtar në lëndën Biologji – Kimi në disa shkolla 8-vjeçare dhe të mesme. Në vitet 1992-1995 emigroi në Greqi. Ka ushtruar funksionin e Drejtorit të Përgjithshëm të INSIG sh.a dhe kryetar dhe anëtar i Bordit Ekzekutiv të Shoqërive të Sigurimit të Kosovës (2003 -2004). Z. Shalsi ka ushtruar edhe detyra të tjera si: shef kabineti i kryetarit të bashkisë Tiranë (2004-2007, nënkryetar i b ashkisë Tiranë (2007-2009), ka punuar në b ashkinë Tiranë (2004 -2009). Në vitin 2017 – 2021 ka ushtruar detyrën e Ministrit të Shtetit për Çështjet Vendore si dhe ka qenë Koordinator Kombëtar i Antikorrupsionit. Z. Shalsi në periudhën 1996 – 2002 ka marrë pjesë në seminare të shumta brenda dhe jashtë vendit për trajnim bankar në depozita, import-eksport, kredinë, kontabi"
     },
@@ -30405,8 +30503,8 @@
       "presumptionOfInnocence": true,
       "legalStatusAsOf": null,
       "legalStatusSummary": null,
-      "imageUrl": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202509240817240862LRPH9976.JPG",
-      "photo_source_url": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202509240817240862LRPH9976.JPG",
+      "imageUrl": "/politicians/official/vip202.jpg",
+      "photo_source_url": "https://kryeministria.al/wp-content/uploads/2026/03/55132072368_f71f07704e_6k-scaled-e1772801278305.jpg",
       "photoPending": false,
       "photoStatus": "Foto zyrtare / Official photo",
       "shortBio": null,
@@ -30450,10 +30548,12 @@
           "retrievedAt": "2026-10-31"
         },
         "photo": {
-          "value": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202509240817240862LRPH9976.JPG",
-          "sourceUrl": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202509240817240862LRPH9976.JPG",
+          "value": "/politicians/official/vip202.jpg",
+          "sourceUrl": "https://kryeministria.al/menu-qeveria/",
+          "imageUrl": "https://kryeministria.al/wp-content/uploads/2026/03/55132072368_f71f07704e_6k-scaled-e1772801278305.jpg",
           "retrievedAt": "2026-10-31",
-          "licence": "No reuse licence published by the Parliament of Albania. Referenced by URL; file not copied."
+          "licence": "Published by the institution; local copy for display.",
+          "notes": "Cabinet head-and-shoulders on kryeministria.al, listed as Erjona Ismaili. Publisher: Këshilli i Ministrave. Image https://kryeministria.al/wp-content/uploads/2026/03/55132072368_f71f07704e_6k-scaled-e1772801278305.jpg."
         },
         "parliamentaryGroup": {
           "value": "Grupi Parlamentar i Partisë Socialiste",
@@ -30545,14 +30645,16 @@
       "education": "Universiteti i Vlorës \"Ismail Qemali\"; Universiteti Europian i Tiranës",
       "email": "erjona.ismaili@parlament.al",
       "officialPhoto": {
-        "sourceUrl": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202509240817240862LRPH9976.JPG",
-        "licence": "No reuse licence published by the Parliament of Albania. Referenced by URL; file not copied.",
+        "sourceUrl": "https://kryeministria.al/wp-content/uploads/2026/03/55132072368_f71f07704e_6k-scaled-e1772801278305.jpg",
+        "pageUrl": "https://kryeministria.al/menu-qeveria/",
+        "publisher": "Këshilli i Ministrave",
+        "licence": "Published by the institution; local copy for display.",
         "retrievedAt": "2026-10-31",
-        "copied": false,
-        "localPath": null
+        "copied": true,
+        "localPath": "/politicians/official/vip202.jpg"
       },
-      "officialPhotoPath": null,
-      "photoLicence": "No reuse licence published by the Parliament of Albania. Referenced by URL; file not copied.",
+      "officialPhotoPath": "/politicians/official/vip202.jpg",
+      "photoLicence": "Published by the institution; local copy for display.",
       "photoRetrievedAt": "2026-10-31"
     },
     {
@@ -34455,8 +34557,8 @@
       "presumptionOfInnocence": true,
       "legalStatusAsOf": null,
       "legalStatusSummary": null,
-      "imageUrl": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202511110852505098Ervin%20Demo.png",
-      "photo_source_url": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202511110852505098Ervin Demo.png",
+      "imageUrl": "/politicians/official/vip228.jpg",
+      "photo_source_url": "https://ps.al/wp-content/uploads/2024/09/Ervin_Demo_-_Mayor_of_Berat_Albania.jpg",
       "photoPending": false,
       "photoStatus": "Foto zyrtare / Official photo",
       "shortBio": null,
@@ -34500,11 +34602,12 @@
           "retrievedAt": "2026-10-31"
         },
         "photo": {
-          "value": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202511110852505098Ervin%20Demo.png",
-          "sourceUrl": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202511110852505098Ervin Demo.png",
+          "value": "/politicians/official/vip228.jpg",
+          "sourceUrl": "https://ps.al/kryesia/",
+          "imageUrl": "https://ps.al/wp-content/uploads/2024/09/Ervin_Demo_-_Mayor_of_Berat_Albania.jpg",
           "retrievedAt": "2026-10-31",
-          "licence": "No reuse licence published by the Parliament of Albania. Referenced by URL; file not copied.",
-          "notes": "Parliament member portrait (fotoProfil). Replaces a Commons file that was an event, meeting, news, or unverified upload. Publisher: Kuvendi i Shqipërisë."
+          "licence": "Published by the institution; local copy for display.",
+          "notes": "Formal studio head-and-shoulders on the PS leadership page. Same portrait as the cabinet profile. Publisher: Partia Socialiste e Shqipërisë. Image https://ps.al/wp-content/uploads/2024/09/Ervin_Demo_-_Mayor_of_Berat_Albania.jpg."
         },
         "parliamentaryGroup": {
           "value": "Grupi Parlamentar i Partisë Socialiste",
@@ -34597,15 +34700,16 @@
       "education": "studime postdoktorale në Universitetin e Bolonjës, Itali, duke u specializuar në fushën e menaxhimit dhe zhvillimit akademik",
       "email": "ervin.demo@parlament.al",
       "officialPhoto": {
-        "sourceUrl": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202511110852505098Ervin Demo.png",
-        "publisher": "Kuvendi i Shqipërisë",
-        "licence": "No reuse licence published by the Parliament of Albania. Referenced by URL; file not copied.",
+        "sourceUrl": "https://ps.al/wp-content/uploads/2024/09/Ervin_Demo_-_Mayor_of_Berat_Albania.jpg",
+        "pageUrl": "https://ps.al/kryesia/",
+        "publisher": "Partia Socialiste e Shqipërisë",
+        "licence": "Published by the institution; local copy for display.",
         "retrievedAt": "2026-10-31",
-        "copied": false,
-        "localPath": null
+        "copied": true,
+        "localPath": "/politicians/official/vip228.jpg"
       },
-      "officialPhotoPath": null,
-      "photoLicence": "No reuse licence published by the Parliament of Albania. Referenced by URL; file not copied.",
+      "officialPhotoPath": "/politicians/official/vip228.jpg",
+      "photoLicence": "Published by the institution; local copy for display.",
       "photoRetrievedAt": "2026-10-31"
     },
     {
@@ -34933,8 +35037,8 @@
       "presumptionOfInnocence": true,
       "legalStatusAsOf": null,
       "legalStatusSummary": null,
-      "imageUrl": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/Ogerta%20Manastirliu.JPG",
-      "photo_source_url": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/Ogerta Manastirliu.JPG",
+      "imageUrl": "/politicians/official/vip231.jpg",
+      "photo_source_url": "https://ps.al/wp-content/uploads/2024/09/ogerta_manastirliu.jpg",
       "photoPending": false,
       "photoStatus": "Foto zyrtare / Official photo",
       "shortBio": null,
@@ -34972,11 +35076,12 @@
           "retrievedAt": "2026-10-31"
         },
         "photo": {
-          "value": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/Ogerta%20Manastirliu.JPG",
-          "sourceUrl": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/Ogerta Manastirliu.JPG",
+          "value": "/politicians/official/vip231.jpg",
+          "sourceUrl": "https://ps.al/kryesia/",
+          "imageUrl": "https://ps.al/wp-content/uploads/2024/09/ogerta_manastirliu.jpg",
           "retrievedAt": "2026-10-31",
-          "licence": "No reuse licence published by the Parliament of Albania. Referenced by URL; file not copied.",
-          "notes": "Parliament member portrait (fotoProfil). Replaces a Commons file that was an event, meeting, news, or unverified upload. Publisher: Kuvendi i Shqipërisë."
+          "licence": "Published by the institution; local copy for display.",
+          "notes": "Formal head-and-shoulders on the PS leadership page; cropped from a wide frame. Publisher: Partia Socialiste e Shqipërisë. Image https://ps.al/wp-content/uploads/2024/09/ogerta_manastirliu.jpg."
         },
         "parliamentaryGroup": {
           "value": "Grupi Parlamentar i Partisë Socialiste",
@@ -35078,15 +35183,16 @@
       "education": "studimet e larta në Fakultetin e Shkencave të Natyrës, Kimi",
       "email": "Ogerta.Manastirliu@parlament.al",
       "officialPhoto": {
-        "sourceUrl": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/Ogerta Manastirliu.JPG",
-        "publisher": "Kuvendi i Shqipërisë",
-        "licence": "No reuse licence published by the Parliament of Albania. Referenced by URL; file not copied.",
+        "sourceUrl": "https://ps.al/wp-content/uploads/2024/09/ogerta_manastirliu.jpg",
+        "pageUrl": "https://ps.al/kryesia/",
+        "publisher": "Partia Socialiste e Shqipërisë",
+        "licence": "Published by the institution; local copy for display.",
         "retrievedAt": "2026-10-31",
-        "copied": false,
-        "localPath": null
+        "copied": true,
+        "localPath": "/politicians/official/vip231.jpg"
       },
-      "officialPhotoPath": null,
-      "photoLicence": "No reuse licence published by the Parliament of Albania. Referenced by URL; file not copied.",
+      "officialPhotoPath": "/politicians/official/vip231.jpg",
+      "photoLicence": "Published by the institution; local copy for display.",
       "photoRetrievedAt": "2026-10-31",
       "careerSummary": "Ka përfunduar studimet e larta në Fakultetin e Shkencave të Natyrës, Kimi. Ka titullin Doktor i Shkencave në “Kimi Analitike dhe Mjedis”. Në vitin 2004 ka nisur karrierën profesionale në Bashkinë e Tiranës, fillimisht në Drejtorinë e Koordinimit të Projekteve. Gjatë viteve 2005-2011, ka drejtuar Drejtorinë e Strehimit dhe Shërbimit Social, Bashkia Tiranë. Në periudhën 2011-2013, ajo është angazhuar si eksperte për menaxhimin dhe koordinimin e politikave sociale dhe burimeve njerëzore për organizata të ndryshme kombëtare dhe ndërkombëtare, si UNFPA, Friedrich Ebert Stiftung etj. Në periudhën shtator 2013 – mars 2017, znj. Manastirliu ka drejtuar Qendrën Spitalore Universitare “Nënë Tereza” në Tiranë. Ka mbajtur postin e Ministres së Shë ndetësisë dhe Mbrojtjes Sociale si dhe Ministres së Arsimit dhe Sportit."
     },
@@ -35107,10 +35213,10 @@
       "presumptionOfInnocence": true,
       "legalStatusAsOf": null,
       "legalStatusSummary": null,
-      "imageUrl": null,
-      "photo_source_url": null,
-      "photoPending": true,
-      "photoStatus": "Në pritje të të dhënave / Awaiting data",
+      "imageUrl": "/politicians/official/vip232.jpg",
+      "photo_source_url": "https://pd.al/wp-content/uploads/2026/06/bardhspahia.jpeg",
+      "photoPending": false,
+      "photoStatus": "Foto zyrtare / Official photo",
       "shortBio": null,
       "detailedBio": null,
       "dynamicScore": null,
@@ -35172,11 +35278,12 @@
           "retrievedAt": "2026-10-31"
         },
         "photo": {
-          "value": "",
-          "sourceUrl": "",
+          "value": "/politicians/official/vip232.jpg",
+          "sourceUrl": "https://pd.al/strukturat/kryesia/",
+          "imageUrl": "https://pd.al/wp-content/uploads/2026/06/bardhspahia.jpeg",
           "retrievedAt": "2026-10-31",
-          "licence": "",
-          "notes": "no official portrait; Commons file is an unverified user upload. The PD media image is a podium speech in front of a slogan backdrop, so it was not used."
+          "licence": "Published by the institution; local copy for display.",
+          "notes": "Head-and-shoulders on the PD leadership page, party flag backdrop, no text. Publisher: Partia Demokratike e Shqipërisë. Image https://pd.al/wp-content/uploads/2026/06/bardhspahia.jpeg."
         }
       },
       "sourceRetrievedAt": "2026-10-31",
@@ -35233,9 +35340,17 @@
       },
       "education": null,
       "email": "bardh.spahia@parlament.al",
-      "officialPhoto": null,
-      "officialPhotoPath": null,
-      "photoLicence": null,
+      "officialPhoto": {
+        "sourceUrl": "https://pd.al/wp-content/uploads/2026/06/bardhspahia.jpeg",
+        "pageUrl": "https://pd.al/strukturat/kryesia/",
+        "publisher": "Partia Demokratike e Shqipërisë",
+        "licence": "Published by the institution; local copy for display.",
+        "retrievedAt": "2026-10-31",
+        "copied": true,
+        "localPath": "/politicians/official/vip232.jpg"
+      },
+      "officialPhotoPath": "/politicians/official/vip232.jpg",
+      "photoLicence": "Published by the institution; local copy for display.",
       "photoRetrievedAt": "2026-10-31"
     },
     {
@@ -36852,8 +36967,8 @@
       "presumptionOfInnocence": true,
       "legalStatusAsOf": null,
       "legalStatusSummary": null,
-      "imageUrl": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202509191054551260LRPH9462.JPG",
-      "photo_source_url": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202509191054551260LRPH9462.JPG",
+      "imageUrl": "/politicians/official/vip244.jpg",
+      "photo_source_url": "https://ps.al/wp-content/uploads/2024/09/z.Igli_Hasani.jpeg",
       "photoPending": false,
       "photoStatus": "Foto zyrtare / Official photo",
       "shortBio": null,
@@ -36891,11 +37006,12 @@
           "retrievedAt": "2026-10-31"
         },
         "photo": {
-          "value": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202509191054551260LRPH9462.JPG",
-          "sourceUrl": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202509191054551260LRPH9462.JPG",
+          "value": "/politicians/official/vip244.jpg",
+          "sourceUrl": "https://ps.al/kryesia/",
+          "imageUrl": "https://ps.al/wp-content/uploads/2024/09/z.Igli_Hasani.jpeg",
           "retrievedAt": "2026-10-31",
-          "licence": "No reuse licence published by the Parliament of Albania. Referenced by URL; file not copied.",
-          "notes": "Parliament member portrait (fotoProfil). Replaces a Commons file that was an event, meeting, news, or unverified upload. Publisher: Kuvendi i Shqipërisë."
+          "licence": "Published by the institution; local copy for display.",
+          "notes": "Formal head-and-shoulders on the PS leadership page. Filename matches Igli Hasani. Publisher: Partia Socialiste e Shqipërisë. Image https://ps.al/wp-content/uploads/2024/09/z.Igli_Hasani.jpeg."
         },
         "parliamentaryGroup": {
           "value": "Grupi Parlamentar i Partisë Socialiste",
@@ -36989,15 +37105,16 @@
       "education": null,
       "email": "igli.hasani@parlament.al",
       "officialPhoto": {
-        "sourceUrl": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202509191054551260LRPH9462.JPG",
-        "publisher": "Kuvendi i Shqipërisë",
-        "licence": "No reuse licence published by the Parliament of Albania. Referenced by URL; file not copied.",
+        "sourceUrl": "https://ps.al/wp-content/uploads/2024/09/z.Igli_Hasani.jpeg",
+        "pageUrl": "https://ps.al/kryesia/",
+        "publisher": "Partia Socialiste e Shqipërisë",
+        "licence": "Published by the institution; local copy for display.",
         "retrievedAt": "2026-10-31",
-        "copied": false,
-        "localPath": null
+        "copied": true,
+        "localPath": "/politicians/official/vip244.jpg"
       },
-      "officialPhotoPath": null,
-      "photoLicence": "No reuse licence published by the Parliament of Albania. Referenced by URL; file not copied.",
+      "officialPhotoPath": "/politicians/official/vip244.jpg",
+      "photoLicence": "Published by the institution; local copy for display.",
       "photoRetrievedAt": "2026-10-31"
     },
     {
@@ -37017,8 +37134,8 @@
       "presumptionOfInnocence": true,
       "legalStatusAsOf": null,
       "legalStatusSummary": null,
-      "imageUrl": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202511110847029338ibrahimaj.png",
-      "photo_source_url": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202511110847029338ibrahimaj.png",
+      "imageUrl": "/politicians/official/vip245.jpg",
+      "photo_source_url": "https://kryeministria.al/wp-content/uploads/2025/09/ibrahimaj-1.png",
       "photoPending": false,
       "photoStatus": "Foto zyrtare / Official photo",
       "shortBio": null,
@@ -37056,10 +37173,12 @@
           "retrievedAt": "2026-10-31"
         },
         "photo": {
-          "value": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202511110847029338ibrahimaj.png",
-          "sourceUrl": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202511110847029338ibrahimaj.png",
+          "value": "/politicians/official/vip245.jpg",
+          "sourceUrl": "https://kryeministria.al/menu-qeveria/",
+          "imageUrl": "https://kryeministria.al/wp-content/uploads/2025/09/ibrahimaj-1.png",
           "retrievedAt": "2026-10-31",
-          "licence": "No reuse licence published by the Parliament of Albania. Referenced by URL; file not copied."
+          "licence": "Published by the institution; local copy for display.",
+          "notes": "Cabinet portrait on kryeministria.al. Filename ibrahimaj matches Delina Ibrahimaj. Publisher: Këshilli i Ministrave. Image https://kryeministria.al/wp-content/uploads/2025/09/ibrahimaj-1.png."
         },
         "parliamentaryGroup": {
           "value": "Grupi Parlamentar i Partisë Socialiste",
@@ -37158,14 +37277,16 @@
       "education": "ka kryer detyrën e Drejtorit të Përgjithshëm të Tatimeve, në 2016 -2019 ka kryer detyrën e Drejtorit të Përgjithshëm të Institutit të Statistikave dhe në 2015 -2016 koordinator për Çështjet Financiare dhe Ekono",
       "email": "delina.ibrahimaj@parlament.al",
       "officialPhoto": {
-        "sourceUrl": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202511110847029338ibrahimaj.png",
-        "licence": "No reuse licence published by the Parliament of Albania. Referenced by URL; file not copied.",
+        "sourceUrl": "https://kryeministria.al/wp-content/uploads/2025/09/ibrahimaj-1.png",
+        "pageUrl": "https://kryeministria.al/menu-qeveria/",
+        "publisher": "Këshilli i Ministrave",
+        "licence": "Published by the institution; local copy for display.",
         "retrievedAt": "2026-10-31",
-        "copied": false,
-        "localPath": null
+        "copied": true,
+        "localPath": "/politicians/official/vip245.jpg"
       },
-      "officialPhotoPath": null,
-      "photoLicence": "No reuse licence published by the Parliament of Albania. Referenced by URL; file not copied.",
+      "officialPhotoPath": "/politicians/official/vip245.jpg",
+      "photoLicence": "Published by the institution; local copy for display.",
       "photoRetrievedAt": "2026-10-31"
     },
     {
@@ -38339,8 +38460,8 @@
       "presumptionOfInnocence": true,
       "legalStatusAsOf": null,
       "legalStatusSummary": null,
-      "imageUrl": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202511110831152256malaj.png",
-      "photo_source_url": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202511110831152256malaj.png",
+      "imageUrl": "/politicians/official/vip254.jpg",
+      "photo_source_url": "https://kryeministria.al/wp-content/uploads/2025/09/malaj-2.png",
       "photoPending": false,
       "photoStatus": "Foto zyrtare / Official photo",
       "shortBio": null,
@@ -38384,10 +38505,12 @@
           "retrievedAt": "2026-10-31"
         },
         "photo": {
-          "value": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202511110831152256malaj.png",
-          "sourceUrl": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202511110831152256malaj.png",
+          "value": "/politicians/official/vip254.jpg",
+          "sourceUrl": "https://kryeministria.al/menu-qeveria/",
+          "imageUrl": "https://kryeministria.al/wp-content/uploads/2025/09/malaj-2.png",
           "retrievedAt": "2026-10-31",
-          "licence": "No reuse licence published by the Parliament of Albania. Referenced by URL; file not copied."
+          "licence": "Published by the institution; local copy for display.",
+          "notes": "Cabinet portrait on kryeministria.al. Filename malaj matches Petrit Malaj. Publisher: Këshilli i Ministrave. Image https://kryeministria.al/wp-content/uploads/2025/09/malaj-2.png."
         },
         "parliamentaryGroup": {
           "value": "Grupi Parlamentar i Partisë Socialiste",
@@ -38480,14 +38603,16 @@
       "education": "studimet Master i kreu në “Business Administration” në Universitetin e Wisconsin – La Crosse, SHBA",
       "email": "petrit.malaj@parlament.al",
       "officialPhoto": {
-        "sourceUrl": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202511110831152256malaj.png",
-        "licence": "No reuse licence published by the Parliament of Albania. Referenced by URL; file not copied.",
+        "sourceUrl": "https://kryeministria.al/wp-content/uploads/2025/09/malaj-2.png",
+        "pageUrl": "https://kryeministria.al/menu-qeveria/",
+        "publisher": "Këshilli i Ministrave",
+        "licence": "Published by the institution; local copy for display.",
         "retrievedAt": "2026-10-31",
-        "copied": false,
-        "localPath": null
+        "copied": true,
+        "localPath": "/politicians/official/vip254.jpg"
       },
-      "officialPhotoPath": null,
-      "photoLicence": "No reuse licence published by the Parliament of Albania. Referenced by URL; file not copied.",
+      "officialPhotoPath": "/politicians/official/vip254.jpg",
+      "photoLicence": "Published by the institution; local copy for display.",
       "photoRetrievedAt": "2026-10-31"
     },
     {

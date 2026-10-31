@@ -9,7 +9,7 @@ vip1,Edi Rama,mandates,2,https://kuvendiapi.azurewebsites.net/api/anetaret/c4088
 vip1,Edi Rama,parliamentaryGroup,Grupi Parlamentar i Partisë Socialiste,https://kuvendiapi.azurewebsites.net/api/anetaret/c408857c-f316-41ff-8566-b99152469cdf,2026-10-31,,
 vip1,Edi Rama,constituency,Tiranë,https://kqz.gov.al,2026-10-31,,"KQZ Decision No. 34, 28 August 2025, as compiled in CERTIFIED_2025_ROSTER"
 vip1,Edi Rama,officialLinks,3,mailto:Edi.Rama@parlament.al,2026-10-31,,
-vip1,Edi Rama,photo,https://kuvendiwebfiles.blob.core.windows.net/webfiles/202511110859043587Edi%20Rama.png,https://kuvendiwebfiles.blob.core.windows.net/webfiles/202511110859043587Edi Rama.png,2026-10-31,No reuse licence published by the Parliament of Albania. Referenced by URL; file not copied.,"Parliament member portrait (fotoProfil). Replaces a Commons file that was an event, meeting, news, or unverified upload. Publisher: Kuvendi i Shqipërisë."
+vip1,Edi Rama,photo,/politicians/official/vip1.jpg,https://ps.al/kryesia/,2026-10-31,Published by the institution; local copy for display.,Formal head-and-shoulders on the PS leadership page. Party portrait preferred over the cabinet photo. Publisher: Partia Socialiste e Shqipërisë. Image https://ps.al/wp-content/uploads/2023/02/edi1-e1677511785544.png.
 vip1,Edi Rama,alias,,,,,no official source on this run
 vip2,Sali Berisha,fullName,Sali Berisha,https://kuvendiapi.azurewebsites.net/api/anetaret/48dae152-e989-44ea-8dcf-71660705c687,2026-10-31,,
 vip2,Sali Berisha,currentRole,Kryetar i Partisë Demokratike,https://pd.al/,2026-10-31,,Party homepage uses this title in the present tense
@@ -57,7 +57,7 @@ vip6,Erion Veliaj,mandates,,,,,no official source on this run
 vip6,Erion Veliaj,parliamentaryGroup,,,,,no official source on this run
 vip6,Erion Veliaj,constituency,,,,,no official source on this run
 vip6,Erion Veliaj,officialLinks,1,https://www.wikidata.org/wiki/Q16354049,2026-10-31,,
-vip6,Erion Veliaj,photo,,,2026-10-31,,no official portrait; Commons file is a 2011 Medill News Service photo of a speech in Washington. tirana.al portrait file did not return an image.
+vip6,Erion Veliaj,photo,/politicians/official/vip6.jpg,https://ps.al/kryesia/,2026-10-31,Published by the institution; local copy for display.,"Formal head-and-shoulders on the PS leadership page, same file the Tirana mayor page uses. Cropped from the wide frame. Applied to both Veliaj cards. Publisher: Partia Socialiste e Shqipërisë. Image https://ps.al/wp-content/uploads/2024/09/20180604085831_erion_veliaj.png."
 vip6,Erion Veliaj,alias,,,,,no official source on this run
 vip7,Belind Këlliçi,fullName,Belind Këlliçi,https://kuvendiapi.azurewebsites.net/api/anetaret/ba651771-4c82-4353-97c3-ee24ef9ef2f8,2026-10-31,,
 vip7,Belind Këlliçi,currentRole,Deputet i Kuvendit të Shqipërisë,https://kuvendiapi.azurewebsites.net/api/anetaret/ba651771-4c82-4353-97c3-ee24ef9ef2f8,2026-10-31,,
@@ -81,7 +81,7 @@ vip9,Benet Beci,mandates,1,https://kuvendiwebfiles.blob.core.windows.net/webfile
 vip9,Benet Beci,parliamentaryGroup,Grupi Parlamentar i Partisë Socialiste,https://kuvendiapi.azurewebsites.net/api/anetaret/7ad269fe-827a-4ed9-b2b5-41e531db2fb9,2026-10-31,,
 vip9,Benet Beci,constituency,Shkodër,https://kuvendiapi.azurewebsites.net/api/anetaret/7ad269fe-827a-4ed9-b2b5-41e531db2fb9,2026-10-31,,qarku=7
 vip9,Benet Beci,officialLinks,2,mailto:Benet.Beci@parlament.al,2026-10-31,,
-vip9,Benet Beci,photo,https://kuvendiwebfiles.blob.core.windows.net/webfiles/Benet Beci.jpg,https://kuvendiwebfiles.blob.core.windows.net/webfiles/Benet Beci.jpg,2026-10-31,No reuse licence published by the Parliament of Albania. Referenced by URL; file not copied.,
+vip9,Benet Beci,photo,/politicians/official/vip9.jpg,https://ps.al/kryesia/,2026-10-31,Published by the institution; local copy for display.,"Posed head-and-shoulders portrait on the PS leadership page, no text overlay. Publisher: Partia Socialiste e Shqipërisë. Image https://ps.al/wp-content/uploads/2024/09/benet_beci.jpg."
 vip9,Benet Beci,alias,,,,,no official source on this run
 vip10,Belinda Balluku,fullName,Belinda Balluku,https://kuvendiapi.azurewebsites.net/api/anetaret/b564889e-340b-495b-84bd-9949d279370e,2026-10-31,,
 vip10,Belinda Balluku,currentRole,Deputet i Kuvendit të Shqipërisë,https://kuvendiapi.azurewebsites.net/api/anetaret/b564889e-340b-495b-84bd-9949d279370e,2026-10-31,,
@@ -93,7 +93,7 @@ vip10,Belinda Balluku,mandates,1,https://kuvendiapi.azurewebsites.net/api/anetar
 vip10,Belinda Balluku,parliamentaryGroup,Grupi Parlamentar i Partisë Socialiste,https://kuvendiapi.azurewebsites.net/api/anetaret/b564889e-340b-495b-84bd-9949d279370e,2026-10-31,,
 vip10,Belinda Balluku,constituency,Fier,https://kqz.gov.al,2026-10-31,,"KQZ Decision No. 34, 28 August 2025, as compiled in CERTIFIED_2025_ROSTER"
 vip10,Belinda Balluku,officialLinks,3,mailto:Belinda.Balluku@parlament.al,2026-10-31,,
-vip10,Belinda Balluku,photo,https://kuvendiwebfiles.blob.core.windows.net/webfiles/202511110909052319Belinda%20Balluku.jpg,https://kuvendiwebfiles.blob.core.windows.net/webfiles/202511110909052319Belinda Balluku.jpg,2026-10-31,No reuse licence published by the Parliament of Albania. Referenced by URL; file not copied.,"Parliament member portrait (fotoProfil). Replaces a Commons file that was an event, meeting, news, or unverified upload. Publisher: Kuvendi i Shqipërisë."
+vip10,Belinda Balluku,photo,/politicians/official/vip10.jpg,https://ps.al/kryesia/,2026-10-31,Published by the institution; local copy for display.,Formal head-and-shoulders on the PS leadership page; cropped from a wide frame. Publisher: Partia Socialiste e Shqipërisë. Image https://ps.al/wp-content/uploads/2024/09/belinda_balluku.jpg.
 vip10,Belinda Balluku,alias,,,,,no official source on this run
 vip11,Ogerta Manastirliu,fullName,Ogerta Manastirliu,https://kuvendiapi.azurewebsites.net/api/anetaret/52f41dce-5a54-4b4b-903f-92ee6332ae20,2026-10-31,,
 vip11,Ogerta Manastirliu,currentRole,Deputet i Kuvendit të Shqipërisë,https://kuvendiapi.azurewebsites.net/api/anetaret/52f41dce-5a54-4b4b-903f-92ee6332ae20,2026-10-31,,
@@ -105,7 +105,7 @@ vip11,Ogerta Manastirliu,mandates,2,https://kuvendiwebfiles.blob.core.windows.ne
 vip11,Ogerta Manastirliu,parliamentaryGroup,Grupi Parlamentar i Partisë Socialiste,https://kuvendiapi.azurewebsites.net/api/anetaret/52f41dce-5a54-4b4b-903f-92ee6332ae20,2026-10-31,,
 vip11,Ogerta Manastirliu,constituency,Tiranë,https://kqz.gov.al,2026-10-31,,"KQZ Decision No. 34, 28 August 2025, as compiled in CERTIFIED_2025_ROSTER"
 vip11,Ogerta Manastirliu,officialLinks,3,mailto:Ogerta.Manastirliu@parlament.al,2026-10-31,,
-vip11,Ogerta Manastirliu,photo,https://kuvendiwebfiles.blob.core.windows.net/webfiles/Ogerta%20Manastirliu.JPG,https://kuvendiwebfiles.blob.core.windows.net/webfiles/Ogerta Manastirliu.JPG,2026-10-31,No reuse licence published by the Parliament of Albania. Referenced by URL; file not copied.,"Parliament member portrait (fotoProfil). Replaces a Commons file that was an event, meeting, news, or unverified upload. Publisher: Kuvendi i Shqipërisë."
+vip11,Ogerta Manastirliu,photo,/politicians/official/vip11.jpg,https://ps.al/kryesia/,2026-10-31,Published by the institution; local copy for display.,Formal head-and-shoulders on the PS leadership page; cropped from a wide frame. Publisher: Partia Socialiste e Shqipërisë. Image https://ps.al/wp-content/uploads/2024/09/ogerta_manastirliu.jpg.
 vip11,Ogerta Manastirliu,alias,,,,,no official source on this run
 vip12,Erion Braçe,fullName,Erion Braçe,https://kuvendiapi.azurewebsites.net/api/anetaret/2e4cc8e5-6cf4-41ea-ab67-3ceedd1ffe5d,2026-10-31,,
 vip12,Erion Braçe,currentRole,Deputet i Kuvendit të Shqipërisë,https://kuvendiapi.azurewebsites.net/api/anetaret/2e4cc8e5-6cf4-41ea-ab67-3ceedd1ffe5d,2026-10-31,,
@@ -141,7 +141,7 @@ vip14,Etilda Gjonaj,mandates,1,https://kuvendiwebfiles.blob.core.windows.net/web
 vip14,Etilda Gjonaj,parliamentaryGroup,Grupi Parlamentar i Partisë Socialiste,https://kuvendiapi.azurewebsites.net/api/anetaret/19acfd94-ff4f-495d-951e-29970b6aad82,2026-10-31,,
 vip14,Etilda Gjonaj,constituency,,,,,no official source on this run
 vip14,Etilda Gjonaj,officialLinks,3,mailto:etilda.gjonaj@parlament.al,2026-10-31,,
-vip14,Etilda Gjonaj,photo,https://kuvendiwebfiles.blob.core.windows.net/webfiles/EtildaGjonaj.png,https://kuvendiwebfiles.blob.core.windows.net/webfiles/EtildaGjonaj.png,2026-10-31,No reuse licence published by the Parliament of Albania. Referenced by URL; file not copied.,"Parliament member portrait (fotoProfil). Replaces a Commons file that was an event, meeting, news, or unverified upload. Publisher: Kuvendi i Shqipërisë."
+vip14,Etilda Gjonaj,photo,/politicians/official/vip14.jpg,https://ps.al/kryesia/,2026-10-31,Published by the institution; local copy for display.,"Formal portrait on the PS leadership page, no text overlay. Publisher: Partia Socialiste e Shqipërisë. Image https://ps.al/wp-content/uploads/2024/09/EtildaGjonaj.png."
 vip14,Etilda Gjonaj,alias,,,,,no official source on this run
 vip15,Elisa Spiropali,fullName,Elisa Spiropali,https://kuvendiapi.azurewebsites.net/api/anetaret/afb72233-f771-4b06-a51a-a42eaef51077,2026-10-31,,
 vip15,Elisa Spiropali,currentRole,Deputet i Kuvendit të Shqipërisë,https://kuvendiapi.azurewebsites.net/api/anetaret/afb72233-f771-4b06-a51a-a42eaef51077,2026-10-31,,
@@ -165,7 +165,7 @@ vip16,Toni Gogu,mandates,,,,,no official source on this run
 vip16,Toni Gogu,parliamentaryGroup,Grupi Parlamentar i Partisë Socialiste,https://kuvendiapi.azurewebsites.net/api/anetaret/3b4392b4-1ebf-4402-92fd-4dab790860b0,2026-10-31,,
 vip16,Toni Gogu,constituency,,,,,no official source on this run
 vip16,Toni Gogu,officialLinks,3,mailto:toni.gogu@parlament.al,2026-10-31,,
-vip16,Toni Gogu,photo,https://kuvendiwebfiles.blob.core.windows.net/webfiles/Toni%20Gogu.jpg,https://kuvendiwebfiles.blob.core.windows.net/webfiles/Toni Gogu.jpg,2026-10-31,No reuse licence published by the Parliament of Albania. Referenced by URL; file not copied.,"Parliament member portrait (fotoProfil). Replaces a Commons file that was an event, meeting, news, or unverified upload. Publisher: Kuvendi i Shqipërisë."
+vip16,Toni Gogu,photo,/politicians/official/vip16.jpg,https://kryeministria.al/menu-qeveria/,2026-10-31,Published by the institution; local copy for display.,Cabinet portrait on kryeministria.al. No PS leadership file of sufficient quality. Publisher: Këshilli i Ministrave. Image https://kryeministria.al/wp-content/uploads/2025/09/gogu.png.
 vip16,Toni Gogu,alias,,,,,no official source on this run
 vip17,Klotilda Bushka,fullName,Klotilda Bushka,https://kuvendiapi.azurewebsites.net/api/anetaret/70f01121-d62d-42a5-a847-5e81d80ace39,2026-10-31,,
 vip17,Klotilda Bushka,currentRole,Ish-deputet i Kuvendit të Shqipërisë,https://kuvendiapi.azurewebsites.net/api/anetaret/70f01121-d62d-42a5-a847-5e81d80ace39,2026-10-31,,Kuvendi register row is not marked sitting and the person is not on the KQZ 2025 list of 140; the row has no mandate dates
@@ -189,7 +189,7 @@ vip18,Arben Pëllumbi,mandates,1,https://kuvendiwebfiles.blob.core.windows.net/w
 vip18,Arben Pëllumbi,parliamentaryGroup,Grupi Parlamentar i Partisë Socialiste,https://kuvendiapi.azurewebsites.net/api/anetaret/6849c66a-4fb7-4c76-b147-09e0bb96ef4b,2026-10-31,,
 vip18,Arben Pëllumbi,constituency,,,,,no official source on this run
 vip18,Arben Pëllumbi,officialLinks,3,mailto:Arben.Pellumbi@parlament.al,2026-10-31,,
-vip18,Arben Pëllumbi,photo,https://kuvendiwebfiles.blob.core.windows.net/webfiles/Arben%20Pe%CC%88llumbi.JPG,https://kuvendiwebfiles.blob.core.windows.net/webfiles/Arben%20Pe%CC%88llumbi.JPG,2026-10-31,No reuse licence published by the Parliament of Albania. Referenced by URL; file not copied.,
+vip18,Arben Pëllumbi,photo,/politicians/official/vip18.jpg,https://ps.al/kryesia/,2026-10-31,Published by the institution; local copy for display.,Formal head-and-shoulders on the PS leadership page. Filename matches Arben Pëllumbi. Publisher: Partia Socialiste e Shqipërisë. Image https://ps.al/wp-content/uploads/2024/09/Arben-Pellumbi-scaled.jpg.
 vip18,Arben Pëllumbi,alias,,,,,no official source on this run
 vip19,Tom Doshi,fullName,Tom Doshi,https://www.wikidata.org/wiki/Q13046875,2026-10-31,,unique Wikidata politician; secondary to a missing Kuvendi row
 vip19,Tom Doshi,currentRole,Deputet i Kuvendit të Shqipërisë,https://kqz.gov.al,2026-10-31,,"KQZ Decision No. 34, 28 August 2025; certified elected member"
@@ -201,7 +201,7 @@ vip19,Tom Doshi,mandates,,,,,no official source on this run
 vip19,Tom Doshi,parliamentaryGroup,,,,,no official source on this run
 vip19,Tom Doshi,constituency,Shkodër,https://kqz.gov.al,2026-10-31,,"KQZ Decision No. 34, 28 August 2025, as compiled in CERTIFIED_2025_ROSTER"
 vip19,Tom Doshi,officialLinks,,,,,no official source on this run
-vip19,Tom Doshi,photo,,,2026-10-31,,"no official portrait; Commons file is an unverified user upload ('Own work'), not a PSD or government portrait."
+vip19,Tom Doshi,photo,/politicians/official/vip19.jpg,https://psd.al/rreth-partise/,2026-10-31,Published by the institution; local copy for display.,Knee-up white-studio portrait cropped to head-and-shoulders. No text overlay. Publisher: Partia Socialdemokrate e Shqipërisë. Image https://psd.al/wp-content/uploads/2025/04/tom-1.png.
 vip19,Tom Doshi,alias,,,,,no official source on this run
 vip20,Xhemal Qefalia,fullName,Xhemal Qefalia,https://kuvendiapi.azurewebsites.net/api/anetaret/086409b2-4df1-47af-ba2c-0689f8dbf688,2026-10-31,,
 vip20,Xhemal Qefalia,currentRole,Ish-deputet i Kuvendit të Shqipërisë,https://kuvendiapi.azurewebsites.net/api/anetaret/086409b2-4df1-47af-ba2c-0689f8dbf688,2026-10-31,,Kuvendi register row is not marked sitting and the person is not on the KQZ 2025 list of 140; the row has no mandate dates
@@ -273,7 +273,7 @@ vip25,Albana Koçiu,mandates,1,https://kuvendiapi.azurewebsites.net/api/anetaret
 vip25,Albana Koçiu,parliamentaryGroup,Grupi Parlamentar i Partisë Socialiste,https://kuvendiapi.azurewebsites.net/api/anetaret/7caf691b-e5ed-47f1-8502-bb96e8082dba,2026-10-31,,
 vip25,Albana Koçiu,constituency,Tiranë,https://kqz.gov.al,2026-10-31,,"KQZ Decision No. 34, 28 August 2025, as compiled in CERTIFIED_2025_ROSTER"
 vip25,Albana Koçiu,officialLinks,3,mailto:albana.kociu@parlament.al,2026-10-31,,
-vip25,Albana Koçiu,photo,https://kuvendiwebfiles.blob.core.windows.net/webfiles/202511110820456239kociu.png,https://kuvendiwebfiles.blob.core.windows.net/webfiles/202511110820456239kociu.png,2026-10-31,No reuse licence published by the Parliament of Albania. Referenced by URL; file not copied.,"Parliament member portrait (fotoProfil). Replaces a Commons file that was an event, meeting, news, or unverified upload. Publisher: Kuvendi i Shqipërisë."
+vip25,Albana Koçiu,photo,/politicians/official/vip25.jpg,https://ps.al/kryesia/,2026-10-31,Published by the institution; local copy for display.,Formal portrait on the PS leadership page; cropped to the subject. Party portrait preferred over the cabinet photo. Publisher: Partia Socialiste e Shqipërisë. Image https://ps.al/wp-content/uploads/2024/09/znj.Albana-Kociu-scaled-1.jpg.
 vip25,Albana Koçiu,alias,,,,,no official source on this run
 vip26,Blendi Gonxhja,fullName,Blendi Gonxhja,https://kuvendiapi.azurewebsites.net/api/anetaret/acbe8c96-9047-4276-8b15-0a7aceebf715,2026-10-31,,
 vip26,Blendi Gonxhja,currentRole,"Ministër i Turizmit, Kulturës dhe Sportit",https://kryeministria.al/ministrat/blendi-gonxhja/,2026-10-31,,"Ministry profile header retrieved 2026-10-31: MINISTËR I TURIZMIT, KULTURËS DHE SPORTIT."
@@ -285,7 +285,7 @@ vip26,Blendi Gonxhja,mandates,1,https://kuvendiapi.azurewebsites.net/api/anetare
 vip26,Blendi Gonxhja,parliamentaryGroup,Grupi Parlamentar i Partisë Socialiste,https://kuvendiapi.azurewebsites.net/api/anetaret/acbe8c96-9047-4276-8b15-0a7aceebf715,2026-10-31,,
 vip26,Blendi Gonxhja,constituency,Tiranë,https://kqz.gov.al,2026-10-31,,"KQZ Decision No. 34, 28 August 2025, as compiled in CERTIFIED_2025_ROSTER"
 vip26,Blendi Gonxhja,officialLinks,3,mailto:blendi.gonxhja@parlament.al,2026-10-31,,
-vip26,Blendi Gonxhja,photo,https://kuvendiwebfiles.blob.core.windows.net/webfiles/202509220801290888LRPH8641-Edit.jpg,https://kuvendiwebfiles.blob.core.windows.net/webfiles/202509220801290888LRPH8641-Edit.jpg,2026-10-31,No reuse licence published by the Parliament of Albania. Referenced by URL; file not copied.,"Parliament member portrait (fotoProfil). Replaces a Commons file that was an event, meeting, news, or unverified upload. Publisher: Kuvendi i Shqipërisë."
+vip26,Blendi Gonxhja,photo,/politicians/official/vip26.jpg,https://ps.al/kryesia/,2026-10-31,Published by the institution; local copy for display.,Formal portrait on the PS leadership page; cropped to the subject. Party portrait preferred over the cabinet photo. Publisher: Partia Socialiste e Shqipërisë. Image https://ps.al/wp-content/uploads/2024/09/z.Blendi-Gonxhja-scaled-1.jpg.
 vip26,Blendi Gonxhja,alias,,,,,no official source on this run
 vip27,Ulsi Manja,fullName,Ulsi Manja,https://kuvendiapi.azurewebsites.net/api/anetaret/f0cde389-a94f-48ec-a340-4360aee99929,2026-10-31,,
 vip27,Ulsi Manja,currentRole,Deputet i Kuvendit të Shqipërisë,https://kuvendiapi.azurewebsites.net/api/anetaret/f0cde389-a94f-48ec-a340-4360aee99929,2026-10-31,,
@@ -297,7 +297,7 @@ vip27,Ulsi Manja,mandates,2,https://kuvendiwebfiles.blob.core.windows.net/webfil
 vip27,Ulsi Manja,parliamentaryGroup,Grupi Parlamentar i Partisë Socialiste,https://kuvendiapi.azurewebsites.net/api/anetaret/f0cde389-a94f-48ec-a340-4360aee99929,2026-10-31,,
 vip27,Ulsi Manja,constituency,Lezhë,https://kqz.gov.al,2026-10-31,,"KQZ Decision No. 34, 28 August 2025, as compiled in CERTIFIED_2025_ROSTER"
 vip27,Ulsi Manja,officialLinks,3,mailto:ulsi.manja@parlament.al,2026-10-31,,
-vip27,Ulsi Manja,photo,https://kuvendiwebfiles.blob.core.windows.net/webfiles/202509250833549745BHPH3498.JPG,https://kuvendiwebfiles.blob.core.windows.net/webfiles/202509250833549745BHPH3498.JPG,2026-10-31,No reuse licence published by the Parliament of Albania. Referenced by URL; file not copied.,"Parliament member portrait (fotoProfil). Replaces a Commons file that was an event, meeting, news, or unverified upload. Publisher: Kuvendi i Shqipërisë."
+vip27,Ulsi Manja,photo,/politicians/official/vip27.jpg,https://ps.al/kryesia/,2026-10-31,Published by the institution; local copy for display.,Formal head-and-shoulders on the PS leadership page; cropped from a wide frame. Publisher: Partia Socialiste e Shqipërisë. Image https://ps.al/wp-content/uploads/2024/09/ulsi_manja-1.jpg.
 vip27,Ulsi Manja,alias,,,,,no official source on this run
 vip28,Adea Pirdeni,fullName,Adea Pirdeni,https://kuvendiapi.azurewebsites.net/api/anetaret/1fc7146b-273c-463d-8f26-f0720e8af271,2026-10-31,,
 vip28,Adea Pirdeni,currentRole,Ministër i Administratës Publike,https://president.al/adea-pirdeni-betohet-para-presidentit-te-republikes-si-minister-i-administrates-publike/,2026-10-31,,president.al news of 23 October 2026 states that Adea Pirdeni takes the oath as Ministër i Administratës Publike. Retrieved 2026-10-31.
@@ -309,7 +309,7 @@ vip28,Adea Pirdeni,mandates,1,https://kuvendiapi.azurewebsites.net/api/anetaret/
 vip28,Adea Pirdeni,parliamentaryGroup,Grupi Parlamentar i Partisë Socialiste,https://kuvendiapi.azurewebsites.net/api/anetaret/1fc7146b-273c-463d-8f26-f0720e8af271,2026-10-31,,
 vip28,Adea Pirdeni,constituency,Tiranë,https://kqz.gov.al,2026-10-31,,"KQZ Decision No. 34, 28 August 2025, as compiled in CERTIFIED_2025_ROSTER"
 vip28,Adea Pirdeni,officialLinks,3,mailto:adea.pirdeni@parlament.al,2026-10-31,,
-vip28,Adea Pirdeni,photo,https://kuvendiwebfiles.blob.core.windows.net/webfiles/202511101435561918Foto %28Adea Pirdeni%29.jpeg,https://kuvendiwebfiles.blob.core.windows.net/webfiles/202511101435561918Foto %28Adea Pirdeni%29.jpeg,2026-10-31,No reuse licence published by the Parliament of Albania. Referenced by URL; file not copied.,
+vip28,Adea Pirdeni,photo,/politicians/official/vip28.jpg,https://kryeministria.al/menu-qeveria/,2026-10-31,Published by the institution; local copy for display.,Cabinet portrait on kryeministria.al. Filename pirdeni matches Adea Pirdeni. Publisher: Këshilli i Ministrave. Image https://kryeministria.al/wp-content/uploads/2025/09/pirdeni.png.
 vip28,Adea Pirdeni,alias,,,,,no official source on this run
 vip29,Gazment Bardhi,fullName,Gazment Bardhi,https://kuvendiapi.azurewebsites.net/api/anetaret/1baf3b36-e669-4bbf-8919-47d8fa91cb60,2026-10-31,,
 vip29,Gazment Bardhi,currentRole,Deputet i Kuvendit të Shqipërisë,https://kuvendiapi.azurewebsites.net/api/anetaret/1baf3b36-e669-4bbf-8919-47d8fa91cb60,2026-10-31,,
@@ -525,7 +525,7 @@ vip46,Taulant Balla,mandates,2,https://kuvendiwebfiles.blob.core.windows.net/web
 vip46,Taulant Balla,parliamentaryGroup,Grupi Parlamentar i Partisë Socialiste,https://kuvendiapi.azurewebsites.net/api/anetaret/b379c2a9-2438-4ab5-b4d2-d3880f4392d5,2026-10-31,,
 vip46,Taulant Balla,constituency,Tiranë,https://kqz.gov.al,2026-10-31,,"KQZ Decision No. 34, 28 August 2025, as compiled in CERTIFIED_2025_ROSTER"
 vip46,Taulant Balla,officialLinks,3,mailto:taulant.balla@parlament.al,2026-10-31,,
-vip46,Taulant Balla,photo,https://kuvendiwebfiles.blob.core.windows.net/webfiles/202509190847008991WhatsApp%20Image%202025-09-19%20at%2010.45.01%20AM.jpeg,https://kuvendiwebfiles.blob.core.windows.net/webfiles/202509190847008991WhatsApp Image 2025-09-19 at 10.45.01 AM.jpeg,2026-10-31,No reuse licence published by the Parliament of Albania. Referenced by URL; file not copied.,"Parliament member portrait (fotoProfil). Replaces a Commons file that was an event, meeting, news, or unverified upload. Publisher: Kuvendi i Shqipërisë."
+vip46,Taulant Balla,photo,/politicians/official/vip46.jpg,https://ps.al/kryesia/,2026-10-31,Published by the institution; local copy for display.,Formal portrait on the PS leadership page; cropped from a wide frame. Publisher: Partia Socialiste e Shqipërisë. Image https://ps.al/wp-content/uploads/2024/09/z.Taulant-Balla-01.jpg.
 vip46,Taulant Balla,alias,,,,,no official source on this run
 vip47,Petro Koçi,fullName,Petro Koçi,https://kuvendiapi.azurewebsites.net/api/anetaret/a7630930-9812-404d-a4c2-e4f07650a9b1,2026-10-31,,
 vip47,Petro Koçi,currentRole,Representative of the Parliamentary Assembly of the Council of Europe (2001-09-24 — 2005-12-31),https://www.wikidata.org/wiki/Q13044168,2026-10-31,,former office; the period is taken from the cited source
@@ -621,7 +621,7 @@ vip54,Erion Veliaj (Delegated),mandates,,,,,no official source on this run
 vip54,Erion Veliaj (Delegated),parliamentaryGroup,,,,,no official source on this run
 vip54,Erion Veliaj (Delegated),constituency,,,,,no official source on this run
 vip54,Erion Veliaj (Delegated),officialLinks,,,,,no official source on this run
-vip54,Erion Veliaj (Delegated),photo,,,2026-10-31,,no official portrait; Same news photo as vip6. No official municipality portrait could be downloaded.
+vip54,Erion Veliaj (Delegated),photo,/politicians/official/vip54.jpg,https://ps.al/kryesia/,2026-10-31,Published by the institution; local copy for display.,"Formal head-and-shoulders on the PS leadership page, same file the Tirana mayor page uses. Cropped from the wide frame. Applied to both Veliaj cards. Publisher: Partia Socialiste e Shqipërisë. Image https://ps.al/wp-content/uploads/2024/09/20180604085831_erion_veliaj.png."
 vip54,Erion Veliaj (Delegated),alias,,,,,no official source on this run
 vip55,Zegjine Çaushi,fullName,Zegjine Çaushi,https://kuvendiapi.azurewebsites.net/api/anetaret/db9b7c5f-0459-4bfd-830c-838a09067adc,2026-10-31,,
 vip55,Zegjine Çaushi,currentRole,Deputet i Kuvendit të Shqipërisë,https://kuvendiapi.azurewebsites.net/api/anetaret/db9b7c5f-0459-4bfd-830c-838a09067adc,2026-10-31,,
@@ -717,7 +717,7 @@ vip62,Blendi Klosi,mandates,2,https://kuvendiwebfiles.blob.core.windows.net/webf
 vip62,Blendi Klosi,parliamentaryGroup,Grupi Parlamentar i Partisë Socialiste,https://kuvendiapi.azurewebsites.net/api/anetaret/9a35866f-1087-414e-aaec-3d15271241e1,2026-10-31,,
 vip62,Blendi Klosi,constituency,Dibër,https://kqz.gov.al,2026-10-31,,"KQZ Decision No. 34, 28 August 2025, as compiled in CERTIFIED_2025_ROSTER"
 vip62,Blendi Klosi,officialLinks,3,mailto:Blendi.Klosi@parlament.al,2026-10-31,,
-vip62,Blendi Klosi,photo,https://kuvendiwebfiles.blob.core.windows.net/webfiles/Blendi%20Klosi.png,https://kuvendiwebfiles.blob.core.windows.net/webfiles/Blendi Klosi.png,2026-10-31,No reuse licence published by the Parliament of Albania. Referenced by URL; file not copied.,"Parliament member portrait (fotoProfil). Replaces a Commons file that was an event, meeting, news, or unverified upload. Publisher: Kuvendi i Shqipërisë."
+vip62,Blendi Klosi,photo,/politicians/official/vip62.jpg,https://ps.al/kryesia/,2026-10-31,Published by the institution; local copy for display.,"Formal portrait on the PS leadership page, Parliament emblem backdrop, no text. Publisher: Partia Socialiste e Shqipërisë. Image https://ps.al/wp-content/uploads/2024/09/Blendi-Klosi.png."
 vip62,Blendi Klosi,alias,,,,,no official source on this run
 vip63,Milva Ekonomi,fullName,Milva Ekonomi,https://kuvendiapi.azurewebsites.net/api/anetaret/f7678810-127b-4a39-81a6-c631c0c137ee,2026-10-31,,
 vip63,Milva Ekonomi,currentRole,Deputet i Kuvendit të Shqipërisë,https://kuvendiapi.azurewebsites.net/api/anetaret/f7678810-127b-4a39-81a6-c631c0c137ee,2026-10-31,,
@@ -813,7 +813,7 @@ vip70,Klodiana Spahiu,mandates,2,https://kuvendiwebfiles.blob.core.windows.net/w
 vip70,Klodiana Spahiu,parliamentaryGroup,Grupi Parlamentar i Partisë Socialiste,https://kuvendiapi.azurewebsites.net/api/anetaret/d9f9c715-8fae-44c6-9b0f-adb012b6073e,2026-10-31,,
 vip70,Klodiana Spahiu,constituency,Durrës,https://kqz.gov.al,2026-10-31,,"KQZ Decision No. 34, 28 August 2025, as compiled in CERTIFIED_2025_ROSTER"
 vip70,Klodiana Spahiu,officialLinks,3,mailto:Klodiana.Spahiu@parlament.al,2026-10-31,,
-vip70,Klodiana Spahiu,photo,https://kuvendiwebfiles.blob.core.windows.net/webfiles/Klodiana Spahiu.png,https://kuvendiwebfiles.blob.core.windows.net/webfiles/Klodiana Spahiu.png,2026-10-31,No reuse licence published by the Parliament of Albania. Referenced by URL; file not copied.,
+vip70,Klodiana Spahiu,photo,/politicians/official/vip70.jpg,https://kryeministria.al/menu-qeveria/,2026-10-31,Published by the institution; local copy for display.,"Cabinet head-and-shoulders. The PS file is a small full-figure cutout on black, so it was not used. Publisher: Këshilli i Ministrave. Image https://kryeministria.al/wp-content/uploads/2026/09/KLodiana-Spahiu1-scaled.jpg."
 vip70,Klodiana Spahiu,alias,,,,,no official source on this run
 vip71,Edi Paloka,fullName,Edi Paloka,https://kuvendiapi.azurewebsites.net/api/anetaret/60d75a36-9398-4598-8f38-a5cc21f866ce,2026-10-31,,
 vip71,Edi Paloka,currentRole,Deputet i Kuvendit të Shqipërisë,https://kuvendiapi.azurewebsites.net/api/anetaret/60d75a36-9398-4598-8f38-a5cc21f866ce,2026-10-31,,
@@ -1017,7 +1017,7 @@ vip87,Niko Peleshi,mandates,2,https://kuvendiwebfiles.blob.core.windows.net/webf
 vip87,Niko Peleshi,parliamentaryGroup,Grupi Parlamentar i Partisë Socialiste,https://kuvendiapi.azurewebsites.net/api/anetaret/f06cc726-852f-4ee8-81f0-445317fff432,2026-10-31,,
 vip87,Niko Peleshi,constituency,Korçë,https://kqz.gov.al,2026-10-31,,"KQZ Decision No. 34, 28 August 2025, as compiled in CERTIFIED_2025_ROSTER"
 vip87,Niko Peleshi,officialLinks,3,mailto:speaker@parlament.al,2026-10-31,,
-vip87,Niko Peleshi,photo,https://kuvendiwebfiles.blob.core.windows.net/webfiles/202509251413091051final.jpg,https://kuvendiwebfiles.blob.core.windows.net/webfiles/202509251413091051final.jpg,2026-10-31,No reuse licence published by the Parliament of Albania. Referenced by URL; file not copied.,"Parliament member portrait (fotoProfil). Replaces a Commons file that was an event, meeting, news, or unverified upload. Publisher: Kuvendi i Shqipërisë."
+vip87,Niko Peleshi,photo,/politicians/official/vip87.jpg,https://ps.al/kryesia/,2026-10-31,Published by the institution; local copy for display.,"Formal headshot on the PS leadership page, filename Niko Peleshi Profile. Publisher: Partia Socialiste e Shqipërisë. Image https://ps.al/wp-content/uploads/2024/09/Niko-Peleshi-Profile.jpg."
 vip87,Niko Peleshi,alias,,,,,no official source on this run
 vip88,Lefter Gështenja,fullName,Lefter Gështenja,https://kuvendiapi.azurewebsites.net/api/anetaret/d4d3dcb3-868a-479e-afec-62e2b3619bb0,2026-10-31,,
 vip88,Lefter Gështenja,currentRole,Ish-deputet i Kuvendit të Shqipërisë,https://kuvendiapi.azurewebsites.net/api/anetaret/d4d3dcb3-868a-479e-afec-62e2b3619bb0,2026-10-31,,Kuvendi register row is not marked sitting and the person is not on the KQZ 2025 list of 140; the row has no mandate dates
@@ -1269,7 +1269,7 @@ vip107,Benet Beci (Elected),mandates,1,https://kuvendiwebfiles.blob.core.windows
 vip107,Benet Beci (Elected),parliamentaryGroup,Grupi Parlamentar i Partisë Socialiste,https://kuvendiapi.azurewebsites.net/api/anetaret/7ad269fe-827a-4ed9-b2b5-41e531db2fb9,2026-10-31,,
 vip107,Benet Beci (Elected),constituency,,,,,no official source on this run
 vip107,Benet Beci (Elected),officialLinks,1,https://kuvendiapi.azurewebsites.net/api/anetaret/7ad269fe-827a-4ed9-b2b5-41e531db2fb9,2026-10-31,,
-vip107,Benet Beci (Elected),photo,https://kuvendiwebfiles.blob.core.windows.net/webfiles/Benet Beci.jpg,https://kuvendiwebfiles.blob.core.windows.net/webfiles/Benet Beci.jpg,2026-10-31,No reuse licence published by the Parliament of Albania. Referenced by URL; file not copied.,
+vip107,Benet Beci (Elected),photo,/politicians/official/vip107.jpg,https://ps.al/kryesia/,2026-10-31,Published by the institution; local copy for display.,"Posed head-and-shoulders portrait on the PS leadership page, no text overlay. Publisher: Partia Socialiste e Shqipërisë. Image https://ps.al/wp-content/uploads/2024/09/benet_beci.jpg."
 vip107,Benet Beci (Elected),alias,,,,,no official source on this run
 vip108,Edona Bilali,fullName,Edona Bilali,https://kuvendiapi.azurewebsites.net/api/anetaret/12350da2-4d4f-4d96-8a34-a31e51ce37b4,2026-10-31,,
 vip108,Edona Bilali,currentRole,Ish-deputet i Kuvendit të Shqipërisë,https://kuvendiapi.azurewebsites.net/api/anetaret/12350da2-4d4f-4d96-8a34-a31e51ce37b4,2026-10-31,,Kuvendi register row is not marked sitting and the person is not on the KQZ 2025 list of 140; the row has no mandate dates
@@ -1497,7 +1497,7 @@ vip127,Blendi Klosi (Berat),mandates,2,https://kuvendiwebfiles.blob.core.windows
 vip127,Blendi Klosi (Berat),parliamentaryGroup,Grupi Parlamentar i Partisë Socialiste,https://kuvendiapi.azurewebsites.net/api/anetaret/9a35866f-1087-414e-aaec-3d15271241e1,2026-10-31,,
 vip127,Blendi Klosi (Berat),constituency,,,,,no official source on this run
 vip127,Blendi Klosi (Berat),officialLinks,1,https://kuvendiapi.azurewebsites.net/api/anetaret/9a35866f-1087-414e-aaec-3d15271241e1,2026-10-31,,
-vip127,Blendi Klosi (Berat),photo,https://kuvendiwebfiles.blob.core.windows.net/webfiles/Blendi Klosi.png,https://kuvendiwebfiles.blob.core.windows.net/webfiles/Blendi Klosi.png,2026-10-31,No reuse licence published by the Parliament of Albania. Referenced by URL; file not copied.,
+vip127,Blendi Klosi (Berat),photo,/politicians/official/vip127.jpg,https://ps.al/kryesia/,2026-10-31,Published by the institution; local copy for display.,"Formal portrait on the PS leadership page, Parliament emblem backdrop, no text. Publisher: Partia Socialiste e Shqipërisë. Image https://ps.al/wp-content/uploads/2024/09/Blendi-Klosi.png."
 vip127,Blendi Klosi (Berat),alias,,,,,no official source on this run
 vip128,Kasëm Mahmutaj,fullName,Kasëm Mahmutaj,https://kuvendiapi.azurewebsites.net/api/anetaret/5e12b6fb-0d86-4f66-8bb0-0093a1873222,2026-10-31,,
 vip128,Kasëm Mahmutaj,currentRole,Ish-deputet i Kuvendit të Shqipërisë,https://kuvendiapi.azurewebsites.net/api/anetaret/5e12b6fb-0d86-4f66-8bb0-0093a1873222,2026-10-31,,Kuvendi register row is not marked sitting and the person is not on the KQZ 2025 list of 140; the row has no mandate dates
@@ -1653,7 +1653,7 @@ vip140,Mirela Kumbaro,mandates,1,https://kuvendiapi.azurewebsites.net/api/anetar
 vip140,Mirela Kumbaro,parliamentaryGroup,Grupi Parlamentar i Partisë Socialiste,https://kuvendiapi.azurewebsites.net/api/anetaret/f3a68a4a-c3a3-45e3-9002-9a89c7426d44,2026-10-31,,
 vip140,Mirela Kumbaro,constituency,Gjirokastër,https://kqz.gov.al,2026-10-31,,"KQZ Decision No. 34, 28 August 2025, as compiled in CERTIFIED_2025_ROSTER"
 vip140,Mirela Kumbaro,officialLinks,3,mailto:mirela.furxhi@parlament.al,2026-10-31,,
-vip140,Mirela Kumbaro,photo,https://kuvendiwebfiles.blob.core.windows.net/webfiles/202511110844089529Mirela-Kumbaro.jpg,https://kuvendiwebfiles.blob.core.windows.net/webfiles/202511110844089529Mirela-Kumbaro.jpg,2026-10-31,No reuse licence published by the Parliament of Albania. Referenced by URL; file not copied.,"Parliament member portrait (fotoProfil). Replaces a Commons file that was an event, meeting, news, or unverified upload. Publisher: Kuvendi i Shqipërisë."
+vip140,Mirela Kumbaro,photo,/politicians/official/vip140.jpg,https://ps.al/kryesia/,2026-10-31,Published by the institution; local copy for display.,Formal head-and-shoulders on the PS leadership page. Filename matches Mirela Kumbaro Furxhi. Publisher: Partia Socialiste e Shqipërisë. Image https://ps.al/wp-content/uploads/2024/09/znj.Mirela-Kumbaro-Furxhi.jpg.
 vip140,Mirela Kumbaro,alias,Mirela Kumbaro Furxhi,https://kryeministria.al/ministrat/mirela-kumbaro-furxhi/,2026-10-31,,Official name on the ministry profile. The card name is unchanged.
 vip141,Laert Duraj,fullName,Laert Duraj,https://kuvendiapi.azurewebsites.net/api/anetaret/d627ef66-e220-48b8-a63b-cf8ecfd0a2aa,2026-10-31,,
 vip141,Laert Duraj,currentRole,Ish-deputet i Kuvendit të Shqipërisë,https://kuvendiapi.azurewebsites.net/api/anetaret/d627ef66-e220-48b8-a63b-cf8ecfd0a2aa,2026-10-31,,Kuvendi register row is not marked sitting and the person is not on the KQZ 2025 list of 140; the row has no mandate dates
@@ -1845,7 +1845,7 @@ vip156,Blendi Klosi,mandates,2,https://kuvendiwebfiles.blob.core.windows.net/web
 vip156,Blendi Klosi,parliamentaryGroup,Grupi Parlamentar i Partisë Socialiste,https://kuvendiapi.azurewebsites.net/api/anetaret/9a35866f-1087-414e-aaec-3d15271241e1,2026-10-31,,
 vip156,Blendi Klosi,constituency,Dibër,https://kqz.gov.al,2026-10-31,,"KQZ Decision No. 34, 28 August 2025, as compiled in CERTIFIED_2025_ROSTER"
 vip156,Blendi Klosi,officialLinks,3,mailto:Blendi.Klosi@parlament.al,2026-10-31,,
-vip156,Blendi Klosi,photo,https://kuvendiwebfiles.blob.core.windows.net/webfiles/Blendi%20Klosi.png,https://kuvendiwebfiles.blob.core.windows.net/webfiles/Blendi Klosi.png,2026-10-31,No reuse licence published by the Parliament of Albania. Referenced by URL; file not copied.,"Parliament member portrait (fotoProfil). Replaces a Commons file that was an event, meeting, news, or unverified upload. Publisher: Kuvendi i Shqipërisë."
+vip156,Blendi Klosi,photo,/politicians/official/vip156.jpg,https://ps.al/kryesia/,2026-10-31,Published by the institution; local copy for display.,"Formal portrait on the PS leadership page, Parliament emblem backdrop, no text. Publisher: Partia Socialiste e Shqipërisë. Image https://ps.al/wp-content/uploads/2024/09/Blendi-Klosi.png."
 vip156,Blendi Klosi,alias,,,,,no official source on this run
 vip157,Klevis Jahaj,fullName,Klevis Jahaj,https://kuvendiapi.azurewebsites.net/api/anetaret/f9c198f6-1617-4be0-af57-3e1d58d9747f,2026-10-31,,
 vip157,Klevis Jahaj,currentRole,Deputet i Kuvendit të Shqipërisë,https://kuvendiapi.azurewebsites.net/api/anetaret/f9c198f6-1617-4be0-af57-3e1d58d9747f,2026-10-31,,
@@ -2001,7 +2001,7 @@ vip169,Toni Gogu,mandates,,,,,no official source on this run
 vip169,Toni Gogu,parliamentaryGroup,Grupi Parlamentar i Partisë Socialiste,https://kuvendiapi.azurewebsites.net/api/anetaret/3b4392b4-1ebf-4402-92fd-4dab790860b0,2026-10-31,,
 vip169,Toni Gogu,constituency,,,,,no official source on this run
 vip169,Toni Gogu,officialLinks,3,mailto:toni.gogu@parlament.al,2026-10-31,,
-vip169,Toni Gogu,photo,https://kuvendiwebfiles.blob.core.windows.net/webfiles/Toni%20Gogu.jpg,https://kuvendiwebfiles.blob.core.windows.net/webfiles/Toni Gogu.jpg,2026-10-31,No reuse licence published by the Parliament of Albania. Referenced by URL; file not copied.,"Parliament member portrait (fotoProfil). Replaces a Commons file that was an event, meeting, news, or unverified upload. Publisher: Kuvendi i Shqipërisë."
+vip169,Toni Gogu,photo,/politicians/official/vip169.jpg,https://kryeministria.al/menu-qeveria/,2026-10-31,Published by the institution; local copy for display.,Cabinet portrait on kryeministria.al. No PS leadership file of sufficient quality. Publisher: Këshilli i Ministrave. Image https://kryeministria.al/wp-content/uploads/2025/09/gogu.png.
 vip169,Toni Gogu,alias,,,,,no official source on this run
 vip170,Lindita Nikolla,fullName,Lindita Nikolla,https://kuvendiapi.azurewebsites.net/api/anetaret/9578af56-9174-4dcb-a1f9-4ed1121307c3,2026-10-31,,
 vip170,Lindita Nikolla,currentRole,Deputet i Kuvendit të Shqipërisë,https://kuvendiapi.azurewebsites.net/api/anetaret/9578af56-9174-4dcb-a1f9-4ed1121307c3,2026-10-31,,
@@ -2085,7 +2085,7 @@ vip176,Arbjan Mazniku,mandates,1,https://kuvendiapi.azurewebsites.net/api/anetar
 vip176,Arbjan Mazniku,parliamentaryGroup,Grupi Parlamentar i Partisë Socialiste,https://kuvendiapi.azurewebsites.net/api/anetaret/3078298f-d296-4cbc-8611-53ef18fb6eba,2026-10-31,,
 vip176,Arbjan Mazniku,constituency,Elbasan,https://kqz.gov.al,2026-10-31,,"KQZ Decision No. 34, 28 August 2025, as compiled in CERTIFIED_2025_ROSTER"
 vip176,Arbjan Mazniku,officialLinks,3,mailto:arbjan.mazniku@parlament.al,2026-10-31,,
-vip176,Arbjan Mazniku,photo,,,,,no official source on this run
+vip176,Arbjan Mazniku,photo,/politicians/official/vip176.jpg,https://ps.al/kryesia/,2026-10-31,Published by the institution; local copy for display.,Formal portrait on the PS leadership page; filename Arbian Mazniku matches Arbjan Mazniku. Cropped to the subject. Publisher: Partia Socialiste e Shqipërisë. Image https://ps.al/wp-content/uploads/2024/09/Arbian-Mazniku.jpeg.
 vip176,Arbjan Mazniku,alias,,,,,no official source on this run
 vip177,Admir Kadeli,fullName,Admir Kadeli,https://kuvendiapi.azurewebsites.net/api/anetaret/feb260ee-4668-4793-bf3e-55762d3ccbad,2026-10-31,,
 vip177,Admir Kadeli,currentRole,Deputet i Kuvendit të Shqipërisë,https://kuvendiapi.azurewebsites.net/api/anetaret/feb260ee-4668-4793-bf3e-55762d3ccbad,2026-10-31,,
@@ -2121,7 +2121,7 @@ vip179,Eduard Shalsi,mandates,2,https://kuvendiwebfiles.blob.core.windows.net/we
 vip179,Eduard Shalsi,parliamentaryGroup,Grupi Parlamentar i Partisë Socialiste,https://kuvendiapi.azurewebsites.net/api/anetaret/05d018c7-5088-4565-9b92-57fe617bcad3,2026-10-31,,
 vip179,Eduard Shalsi,constituency,Kukës,https://kqz.gov.al,2026-10-31,,"KQZ Decision No. 34, 28 August 2025, as compiled in CERTIFIED_2025_ROSTER"
 vip179,Eduard Shalsi,officialLinks,3,mailto:eduard.shalsi@parlament.al,2026-10-31,,
-vip179,Eduard Shalsi,photo,https://kuvendiwebfiles.blob.core.windows.net/webfiles/EduartShalsi.png,https://kuvendiwebfiles.blob.core.windows.net/webfiles/EduartShalsi.png,2026-10-31,No reuse licence published by the Parliament of Albania. Referenced by URL; file not copied.,"Parliament member portrait (fotoProfil). Replaces a Commons file that was an event, meeting, news, or unverified upload. Publisher: Kuvendi i Shqipërisë."
+vip179,Eduard Shalsi,photo,/politicians/official/vip179.jpg,https://ps.al/kryesia/,2026-10-31,Published by the institution; local copy for display.,Formal portrait on the PS leadership page. Filename Eduart Shalsi matches Eduard Shalsi. Publisher: Partia Socialiste e Shqipërisë. Image https://ps.al/wp-content/uploads/2024/09/EduartShalsi.png.
 vip179,Eduard Shalsi,alias,,,,,no official source on this run
 vip180,Vasil Llajo,fullName,Vasil Llajo,https://kuvendiapi.azurewebsites.net/api/anetaret/d556c3a1-89d9-4cc5-8d2f-584ac91a8711,2026-10-31,,
 vip180,Vasil Llajo,currentRole,Deputet i Kuvendit të Shqipërisë,https://kuvendiapi.azurewebsites.net/api/anetaret/d556c3a1-89d9-4cc5-8d2f-584ac91a8711,2026-10-31,,
@@ -2397,7 +2397,7 @@ vip202,Erjona Ismaili,mandates,1,https://kuvendiapi.azurewebsites.net/api/anetar
 vip202,Erjona Ismaili,parliamentaryGroup,Grupi Parlamentar i Partisë Socialiste,https://kuvendiapi.azurewebsites.net/api/anetaret/a3a1e759-bcae-4b01-8269-6b5ffecd0bef,2026-10-31,,
 vip202,Erjona Ismaili,constituency,Vlorë,https://kqz.gov.al,2026-10-31,,"KQZ Decision No. 34, 28 August 2025, as compiled in CERTIFIED_2025_ROSTER"
 vip202,Erjona Ismaili,officialLinks,3,mailto:erjona.ismaili@parlament.al,2026-10-31,,
-vip202,Erjona Ismaili,photo,https://kuvendiwebfiles.blob.core.windows.net/webfiles/202509240817240862LRPH9976.JPG,https://kuvendiwebfiles.blob.core.windows.net/webfiles/202509240817240862LRPH9976.JPG,2026-10-31,No reuse licence published by the Parliament of Albania. Referenced by URL; file not copied.,
+vip202,Erjona Ismaili,photo,/politicians/official/vip202.jpg,https://kryeministria.al/menu-qeveria/,2026-10-31,Published by the institution; local copy for display.,"Cabinet head-and-shoulders on kryeministria.al, listed as Erjona Ismaili. Publisher: Këshilli i Ministrave. Image https://kryeministria.al/wp-content/uploads/2026/03/55132072368_f71f07704e_6k-scaled-e1772801278305.jpg."
 vip202,Erjona Ismaili,alias,,,,,no official source on this run
 vip203,Bledar Çuçi,fullName,Bledar Çuçi,https://kuvendiapi.azurewebsites.net/api/anetaret/37bbf5fb-bd98-4073-b8a7-6d8e5855a51c,2026-10-31,,
 vip203,Bledar Çuçi,currentRole,Deputet i Kuvendit të Shqipërisë,https://kuvendiapi.azurewebsites.net/api/anetaret/37bbf5fb-bd98-4073-b8a7-6d8e5855a51c,2026-10-31,,
@@ -2709,7 +2709,7 @@ vip228,Ervin Demo,mandates,1,https://kuvendiapi.azurewebsites.net/api/anetaret/5
 vip228,Ervin Demo,parliamentaryGroup,Grupi Parlamentar i Partisë Socialiste,https://kuvendiapi.azurewebsites.net/api/anetaret/56bb951f-a40d-49a4-b2d7-8dedda22fc35,2026-10-31,,
 vip228,Ervin Demo,constituency,Berat,https://kqz.gov.al,2026-10-31,,"KQZ Decision No. 34, 28 August 2025, as compiled in CERTIFIED_2025_ROSTER"
 vip228,Ervin Demo,officialLinks,3,mailto:ervin.demo@parlament.al,2026-10-31,,
-vip228,Ervin Demo,photo,https://kuvendiwebfiles.blob.core.windows.net/webfiles/202511110852505098Ervin%20Demo.png,https://kuvendiwebfiles.blob.core.windows.net/webfiles/202511110852505098Ervin Demo.png,2026-10-31,No reuse licence published by the Parliament of Albania. Referenced by URL; file not copied.,"Parliament member portrait (fotoProfil). Replaces a Commons file that was an event, meeting, news, or unverified upload. Publisher: Kuvendi i Shqipërisë."
+vip228,Ervin Demo,photo,/politicians/official/vip228.jpg,https://ps.al/kryesia/,2026-10-31,Published by the institution; local copy for display.,Formal studio head-and-shoulders on the PS leadership page. Same portrait as the cabinet profile. Publisher: Partia Socialiste e Shqipërisë. Image https://ps.al/wp-content/uploads/2024/09/Ervin_Demo_-_Mayor_of_Berat_Albania.jpg.
 vip228,Ervin Demo,alias,,,,,no official source on this run
 vip229,Denisa Vata,fullName,Denisa Vata,https://kuvendiapi.azurewebsites.net/api/anetaret/7f65a1b3-76f4-48b6-9019-8fc3af06f598,2026-10-31,,
 vip229,Denisa Vata,currentRole,Deputet i Kuvendit të Shqipërisë,https://kuvendiapi.azurewebsites.net/api/anetaret/7f65a1b3-76f4-48b6-9019-8fc3af06f598,2026-10-31,,
@@ -2745,7 +2745,7 @@ vip231,Ogerta Manastirliu,mandates,2,https://kuvendiwebfiles.blob.core.windows.n
 vip231,Ogerta Manastirliu,parliamentaryGroup,Grupi Parlamentar i Partisë Socialiste,https://kuvendiapi.azurewebsites.net/api/anetaret/52f41dce-5a54-4b4b-903f-92ee6332ae20,2026-10-31,,
 vip231,Ogerta Manastirliu,constituency,Tiranë,https://kqz.gov.al,2026-10-31,,"KQZ Decision No. 34, 28 August 2025, as compiled in CERTIFIED_2025_ROSTER"
 vip231,Ogerta Manastirliu,officialLinks,3,mailto:Ogerta.Manastirliu@parlament.al,2026-10-31,,
-vip231,Ogerta Manastirliu,photo,https://kuvendiwebfiles.blob.core.windows.net/webfiles/Ogerta%20Manastirliu.JPG,https://kuvendiwebfiles.blob.core.windows.net/webfiles/Ogerta Manastirliu.JPG,2026-10-31,No reuse licence published by the Parliament of Albania. Referenced by URL; file not copied.,"Parliament member portrait (fotoProfil). Replaces a Commons file that was an event, meeting, news, or unverified upload. Publisher: Kuvendi i Shqipërisë."
+vip231,Ogerta Manastirliu,photo,/politicians/official/vip231.jpg,https://ps.al/kryesia/,2026-10-31,Published by the institution; local copy for display.,Formal head-and-shoulders on the PS leadership page; cropped from a wide frame. Publisher: Partia Socialiste e Shqipërisë. Image https://ps.al/wp-content/uploads/2024/09/ogerta_manastirliu.jpg.
 vip231,Ogerta Manastirliu,alias,,,,,no official source on this run
 vip232,Bardh Spahia,fullName,Bardh Spahia,https://kuvendiapi.azurewebsites.net/api/anetaret/83115dbb-7eab-458a-b8bd-92f9758dca7d,2026-10-31,,
 vip232,Bardh Spahia,currentRole,Deputet i Kuvendit të Shqipërisë,https://kuvendiapi.azurewebsites.net/api/anetaret/83115dbb-7eab-458a-b8bd-92f9758dca7d,2026-10-31,,
@@ -2757,7 +2757,7 @@ vip232,Bardh Spahia,mandates,1,https://kuvendiapi.azurewebsites.net/api/anetaret
 vip232,Bardh Spahia,parliamentaryGroup,Grupi Parlamentar i Partisë Demokratike,https://kuvendiapi.azurewebsites.net/api/anetaret/83115dbb-7eab-458a-b8bd-92f9758dca7d,2026-10-31,,
 vip232,Bardh Spahia,constituency,Shkodër,https://kqz.gov.al,2026-10-31,,"KQZ Decision No. 34, 28 August 2025, as compiled in CERTIFIED_2025_ROSTER"
 vip232,Bardh Spahia,officialLinks,3,mailto:bardh.spahia@parlament.al,2026-10-31,,
-vip232,Bardh Spahia,photo,,,2026-10-31,,"no official portrait; Commons file is an unverified user upload. The PD media image is a podium speech in front of a slogan backdrop, so it was not used."
+vip232,Bardh Spahia,photo,/politicians/official/vip232.jpg,https://pd.al/strukturat/kryesia/,2026-10-31,Published by the institution; local copy for display.,"Head-and-shoulders on the PD leadership page, party flag backdrop, no text. Publisher: Partia Demokratike e Shqipërisë. Image https://pd.al/wp-content/uploads/2026/06/bardhspahia.jpeg."
 vip232,Bardh Spahia,alias,,,,,no official source on this run
 vip233,Jozefina Topalli,fullName,Jozefina Topalli,https://kuvendiapi.azurewebsites.net/api/anetaret/0398f89d-7109-4fc2-8454-944471a66a27,2026-10-31,,
 vip233,Jozefina Topalli,currentRole,Deputet i Kuvendit të Shqipërisë,https://kuvendiapi.azurewebsites.net/api/anetaret/0398f89d-7109-4fc2-8454-944471a66a27,2026-10-31,,
@@ -2901,7 +2901,7 @@ vip244,Igli Hasani,mandates,1,https://kuvendiapi.azurewebsites.net/api/anetaret/
 vip244,Igli Hasani,parliamentaryGroup,Grupi Parlamentar i Partisë Socialiste,https://kuvendiapi.azurewebsites.net/api/anetaret/74653296-a2d6-4b6a-a6a8-f67be1489fa9,2026-10-31,,
 vip244,Igli Hasani,constituency,Tiranë,https://kqz.gov.al,2026-10-31,,"KQZ Decision No. 34, 28 August 2025, as compiled in CERTIFIED_2025_ROSTER"
 vip244,Igli Hasani,officialLinks,3,mailto:igli.hasani@parlament.al,2026-10-31,,
-vip244,Igli Hasani,photo,https://kuvendiwebfiles.blob.core.windows.net/webfiles/202509191054551260LRPH9462.JPG,https://kuvendiwebfiles.blob.core.windows.net/webfiles/202509191054551260LRPH9462.JPG,2026-10-31,No reuse licence published by the Parliament of Albania. Referenced by URL; file not copied.,"Parliament member portrait (fotoProfil). Replaces a Commons file that was an event, meeting, news, or unverified upload. Publisher: Kuvendi i Shqipërisë."
+vip244,Igli Hasani,photo,/politicians/official/vip244.jpg,https://ps.al/kryesia/,2026-10-31,Published by the institution; local copy for display.,Formal head-and-shoulders on the PS leadership page. Filename matches Igli Hasani. Publisher: Partia Socialiste e Shqipërisë. Image https://ps.al/wp-content/uploads/2024/09/z.Igli_Hasani.jpeg.
 vip244,Igli Hasani,alias,,,,,no official source on this run
 vip245,Delina Ibrahimaj,fullName,Delina Ibrahimaj,https://kuvendiapi.azurewebsites.net/api/anetaret/25eed889-dd3f-4db3-9061-f23d4666e915,2026-10-31,,
 vip245,Delina Ibrahimaj,currentRole,Ministër i Ekonomisë dhe Inovacionit,https://kryeministria.al/ministrat/delina-ibrahimaj/,2026-10-31,,Ministry profile header retrieved 2026-10-31: MINISTËR I EKONOMISË DHE INOVACIONIT.
@@ -2913,7 +2913,7 @@ vip245,Delina Ibrahimaj,mandates,1,https://kuvendiapi.azurewebsites.net/api/anet
 vip245,Delina Ibrahimaj,parliamentaryGroup,Grupi Parlamentar i Partisë Socialiste,https://kuvendiapi.azurewebsites.net/api/anetaret/25eed889-dd3f-4db3-9061-f23d4666e915,2026-10-31,,
 vip245,Delina Ibrahimaj,constituency,Tiranë,https://kqz.gov.al,2026-10-31,,"KQZ Decision No. 34, 28 August 2025, as compiled in CERTIFIED_2025_ROSTER"
 vip245,Delina Ibrahimaj,officialLinks,3,mailto:delina.ibrahimaj@parlament.al,2026-10-31,,
-vip245,Delina Ibrahimaj,photo,https://kuvendiwebfiles.blob.core.windows.net/webfiles/202511110847029338ibrahimaj.png,https://kuvendiwebfiles.blob.core.windows.net/webfiles/202511110847029338ibrahimaj.png,2026-10-31,No reuse licence published by the Parliament of Albania. Referenced by URL; file not copied.,
+vip245,Delina Ibrahimaj,photo,/politicians/official/vip245.jpg,https://kryeministria.al/menu-qeveria/,2026-10-31,Published by the institution; local copy for display.,Cabinet portrait on kryeministria.al. Filename ibrahimaj matches Delina Ibrahimaj. Publisher: Këshilli i Ministrave. Image https://kryeministria.al/wp-content/uploads/2025/09/ibrahimaj-1.png.
 vip245,Delina Ibrahimaj,alias,,,,,no official source on this run
 vip246,Ilva Gjuzi,fullName,Ilva Gjuzi,https://kuvendiapi.azurewebsites.net/api/anetaret/800d226e-852a-49ac-8ac4-ee9112058c0e,2026-10-31,,
 vip246,Ilva Gjuzi,currentRole,Deputet i Kuvendit të Shqipërisë,https://kuvendiapi.azurewebsites.net/api/anetaret/800d226e-852a-49ac-8ac4-ee9112058c0e,2026-10-31,,
@@ -3021,7 +3021,7 @@ vip254,Petrit Malaj,mandates,1,https://kuvendiapi.azurewebsites.net/api/anetaret
 vip254,Petrit Malaj,parliamentaryGroup,Grupi Parlamentar i Partisë Socialiste,https://kuvendiapi.azurewebsites.net/api/anetaret/cc56ba0c-3c2f-4b75-97ad-f9080b544cef,2026-10-31,,
 vip254,Petrit Malaj,constituency,Fier,https://kqz.gov.al,2026-10-31,,"KQZ Decision No. 34, 28 August 2025, as compiled in CERTIFIED_2025_ROSTER"
 vip254,Petrit Malaj,officialLinks,3,mailto:petrit.malaj@parlament.al,2026-10-31,,
-vip254,Petrit Malaj,photo,https://kuvendiwebfiles.blob.core.windows.net/webfiles/202511110831152256malaj.png,https://kuvendiwebfiles.blob.core.windows.net/webfiles/202511110831152256malaj.png,2026-10-31,No reuse licence published by the Parliament of Albania. Referenced by URL; file not copied.,
+vip254,Petrit Malaj,photo,/politicians/official/vip254.jpg,https://kryeministria.al/menu-qeveria/,2026-10-31,Published by the institution; local copy for display.,Cabinet portrait on kryeministria.al. Filename malaj matches Petrit Malaj. Publisher: Këshilli i Ministrave. Image https://kryeministria.al/wp-content/uploads/2025/09/malaj-2.png.
 vip254,Petrit Malaj,alias,,,,,no official source on this run
 vip255,Kiduina Zaka,fullName,Kiduina Zaka,https://kuvendiapi.azurewebsites.net/api/anetaret/53453ab8-7a87-4ae9-b1c2-e1347f5e48c3,2026-10-31,,
 vip255,Kiduina Zaka,currentRole,Deputet i Kuvendit të Shqipërisë,https://kuvendiapi.azurewebsites.net/api/anetaret/53453ab8-7a87-4ae9-b1c2-e1347f5e48c3,2026-10-31,,

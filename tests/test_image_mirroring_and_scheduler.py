@@ -72,7 +72,7 @@ class TestOfficialPhotos(unittest.TestCase):
             profiles = json.load(f)["profiles"]
         self.assertEqual(len(profiles), 279)
         pending = [p for p in profiles if p.get("photoPending")]
-        self.assertEqual(len(pending), 30)
+        self.assertEqual(len(pending), 25)
         for p in profiles:
             if p.get("photoPending"):
                 self.assertIsNone(p.get("imageUrl"))
