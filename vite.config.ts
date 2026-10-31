@@ -18,6 +18,31 @@ import {
   RSS_FEEDS,
 } from './services/rssIngestor';
 
+function paragonRatingsEnabled(): boolean {
+  try {
+    const flagPath = path.resolve(__dirname, 'public/paragon-ratings.json');
+    if (fs.existsSync(flagPath)) {
+      const flag = JSON.parse(fs.readFileSync(flagPath, 'utf-8'));
+      if (flag && flag.enabled === false) return false;
+    }
+  } catch {
+    /* missing flag keeps the export's own switch */
+  }
+  return true;
+}
+
+function hideParagonScores<T extends Record<string, any>>(card: T): T {
+  return {
+    ...card,
+    composite: null,
+    dynamicScore: null,
+    paragonDimensions: null,
+    scoring_suspended: true,
+    scoringSuspended: true,
+    ratingsEnabled: false,
+  };
+}
+
 function novaricApiPlugin() {
   const imageCache = new Map<string, { at: number; value: any }>();
   const TTL = 1000 * 60 * 30; // 30 minutes
@@ -589,6 +614,10 @@ function novaricApiPlugin() {
               }
             });
 
+            if (!paragonRatingsEnabled()) {
+              cards = cards.map(hideParagonScores);
+            }
+
             const scoredCount = cards.filter(c => c.composite != null).length;
             const scoringStatus = scoredCount > 0 ? "active" : "awaiting_first_run";
 
@@ -742,15 +771,17 @@ function novaricApiPlugin() {
               { key: "D7", id: 7, label: "Narrativa" }
             ];
 
-            const dimsPayload = canonicalDims.map(d => ({
+            const ratingsOn = paragonRatingsEnabled() && politician?.scoring_suspended === false;
+            const stored = Array.isArray(politician?.paragonDimensions) ? politician.paragonDimensions : [];
+            const dimsPayload = canonicalDims.map((d, idx) => ({
               key: d.key,
               id: d.id,
               label: d.label,
-              score: null, // Strict null during audit suspension
+              score: ratingsOn && typeof stored[idx] === 'number' ? stored[idx] : null,
               peerAverage: null,
               benchmark: null,
-              verificationStatus: "under_review",
-              coverage: null
+              verificationStatus: ratingsOn && typeof stored[idx] === 'number' ? 'sourced' : 'awaiting_data',
+              coverage: politician?.coverage || null
             }));
 
             const payload = {
@@ -758,16 +789,17 @@ function novaricApiPlugin() {
               uuid: politician?.uuid || `p-${String(numericId).padStart(4, '0')}`,
               id: `vip${numericId}`,
               name,
-              scoringStatus: "audit_pending",
-              scoringSuspended: true,
-              publicScoreVisible: false,
-              suspensionNotice: "Vlerësimet PARAGON® janë përkohësisht të pezulluara për verifikimin e burimeve dhe integritetit të të dhënave.",
+              scoringStatus: ratingsOn && politician?.composite != null ? 'partial' : 'awaiting_data',
+              scoringSuspended: !ratingsOn,
+              publicScoreVisible: ratingsOn && politician?.composite != null,
+              suspensionNotice: ratingsOn ? (politician?.scoring_note || null) : "Vlerësimet PARAGON® janë përkohësisht të pezulluara për verifikimin e burimeve dhe integritetit të të dhënave.",
               modelVersion: "v1.0",
               dimensions: dimsPayload,
-              composite: null,
+              composite: ratingsOn ? (politician?.composite ?? null) : null,
               compositeDelta: null,
-              calculatedAt: null,
-              periodEnd: null
+              coverage: politician?.coverage || null,
+              calculatedAt: politician?.last_updated || null,
+              periodEnd: politician?.periodEnd || null
             };
 
             res.setHeader('Content-Type', 'application/json');
@@ -824,9 +856,12 @@ function novaricApiPlugin() {
               { key: "D7", id: 7, label: "Narrativa", dimension: "Narrativa", score: null, peerAverage: null, benchmark: null, globalBenchmark: null, confidenceLow: null, confidenceHigh: null, completeness: null }
             ];
 
-            const storedDims = Array.isArray(politician.paragonAnalysis) && politician.paragonAnalysis.length
-              ? politician.paragonAnalysis
-              : canonicalDims;
+            const ratingsOn = paragonRatingsEnabled() && politician.scoring_suspended === false;
+            const storedScores = Array.isArray(politician.paragonDimensions) ? politician.paragonDimensions : [];
+            const storedDims = canonicalDims.map((dim, idx) => ({
+              ...dim,
+              score: ratingsOn && typeof storedScores[idx] === 'number' ? storedScores[idx] : null,
+            }));
             const emptyDossier = {
               promises: [],
               consistencyFlags: [],
@@ -871,11 +906,11 @@ function novaricApiPlugin() {
               photoStatus: resolveOfficialPhotoUrl(politician) ? 'Foto zyrtare / Official photo' : 'Në pritje të të dhënave / Awaiting data',
               shortBio: politician.shortBio || null,
               detailedBio: politician.detailedBio || "",
-              dynamicScore: politician.dynamicScore ?? null,
-              composite: politician.composite ?? null,
+              dynamicScore: ratingsOn ? (politician.dynamicScore ?? null) : null,
+              composite: ratingsOn ? (politician.composite ?? null) : null,
               compositeDelta: politician.compositeDelta ?? null,
               periodEnd: politician.periodEnd ?? null,
-              paragonDimensions: politician.paragonDimensions ?? null,
+              paragonDimensions: ratingsOn ? (politician.paragonDimensions ?? null) : null,
               paragonAnalysis: storedDims,
               dimensions: storedDims,
               commentary: politician.commentary || null,
@@ -887,9 +922,12 @@ function novaricApiPlugin() {
               electoralZone: politician.electoralZone || null,
               dimsSource: "db",
               last_updated: politician.last_updated || null,
-              scoring_suspended: politician.scoring_suspended !== false,
-              scoringSuspended: politician.scoring_suspended !== false,
-              scoring_suspension_notice: politician.scoring_suspension_notice || "Vlerësimet PARAGON® janë përkohësisht të pezulluara për verifikimin e burimeve dhe integritetit të të dhënave.",
+              scoring_suspended: !ratingsOn,
+              scoringSuspended: !ratingsOn,
+              ratingsEnabled: ratingsOn,
+              coverage: politician.coverage || null,
+              scoring_note: politician.scoring_note || null,
+              scoring_suspension_notice: ratingsOn ? null : (politician.scoring_suspension_notice || "Vlerësimet PARAGON® janë përkohësisht të pezulluara për verifikimin e burimeve dhe integritetit të të dhënave."),
               bio: {
                 fullName: politician.name || null,
                 aliases: Array.isArray(politician.aliases) ? politician.aliases : [],
@@ -900,6 +938,7 @@ function novaricApiPlugin() {
                 activeStatus: politician.parliamentaryStatus === 'active_mp' ? true : (politician.parliamentaryStatus ? false : null),
               },
               ...emptyDossier,
+              evidence: Array.isArray(politician.evidence) ? politician.evidence : [],
               politician: {
                 ...politician,
                 id: `vip${numericId}`,

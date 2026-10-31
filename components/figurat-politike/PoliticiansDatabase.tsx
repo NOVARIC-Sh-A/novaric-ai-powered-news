@@ -11,8 +11,10 @@ import { PoliticianGridCard } from './PoliticianGridCard';
 import { SharedDotTooltipProvider } from './SharedDotTooltip';
 import { getSurname, albanianAlphabet } from '../../utils/paragonProfileUtils';
 import { normalizePartySlug } from '../../lib/brand-tokens';
-import { AlertTriangle } from 'lucide-react';
+import { AlertTriangle, Info } from 'lucide-react';
+import { PARTIAL_RANKING_LABEL, PARTIAL_RATING_NOTE, PartialRatingBadge } from './primitives/awaiting';
 import paragonScoresExport from '../../db/paragon_scores_export.json';
+import { useParagonRatingsEnabled } from './useParagonRatings';
 
 interface PoliticiansDatabaseProps {
   onSelectPolitician?: (id: string | number) => void;
@@ -49,6 +51,7 @@ export const PoliticiansDatabase: React.FC<PoliticiansDatabaseProps> = ({
   onSelectPolitician,
   initialData,
 }) => {
+  const ratingsOn = useParagonRatingsEnabled();
   const seedList = (initialData && initialData.length > 0) ? initialData : defaultSeedProfiles;
   const [politicians, setPoliticians] = useState<VipProfile[]>(seedList);
   const [loading, setLoading] = useState(seedList.length === 0);
@@ -170,10 +173,17 @@ export const PoliticiansDatabase: React.FC<PoliticiansDatabaseProps> = ({
   // Sort politicians
   const sorted = useMemo(() => {
     return [...filtered].sort((a, b) => {
-      const scoreA = (a as any).composite ?? a.dynamicScore ?? 0;
-      const scoreB = (b as any).composite ?? b.dynamicScore ?? 0;
+      const readScore = (person: typeof a): number | null => {
+        const value = (person as any).composite ?? person.dynamicScore;
+        return typeof value === 'number' ? value : null;
+      };
+      const scoreA = readScore(a);
+      const scoreB = readScore(b);
 
       if (sortMode === 'score') {
+        if (scoreA == null && scoreB == null) return 0;
+        if (scoreA == null) return 1;
+        if (scoreB == null) return -1;
         return scoreB - scoreA;
       }
       if (sortMode === 'surname') {
@@ -186,6 +196,9 @@ export const PoliticiansDatabase: React.FC<PoliticiansDatabaseProps> = ({
         const partyB = (b as any).party || normalizePartySlug(b.category);
         const partyCompare = partyA.localeCompare(partyB, 'sq');
         if (partyCompare !== 0) return partyCompare;
+        if (scoreA == null && scoreB == null) return 0;
+        if (scoreA == null) return 1;
+        if (scoreB == null) return -1;
         return scoreB - scoreA;
       }
       return 0;
@@ -206,24 +219,36 @@ export const PoliticiansDatabase: React.FC<PoliticiansDatabaseProps> = ({
   return (
     <SharedDotTooltipProvider>
       <div className="w-full max-w-7xl mx-auto px-2 sm:px-4 py-4 space-y-5" id="figurat-politike-database">
-        {/* MANDATORY CONTAINMENT & SUSPENSION BANNER (Remediation Mandate §2 & §8) */}
-        <div className="p-4 rounded-2xl bg-amber-50/90 dark:bg-amber-950/40 border border-amber-200 dark:border-amber-800/60 shadow-xs flex items-start gap-3.5">
-          <AlertTriangle className="w-5 h-5 text-amber-600 dark:text-amber-400 shrink-0 mt-0.5" />
-          <div className="flex-1 text-xs leading-relaxed text-amber-900 dark:text-amber-200">
-            <div className="font-bold text-sm text-amber-800 dark:text-amber-300 mb-0.5">
-              Njoftim Zyrtar mbi Integritetin e të Dhënave
+        {ratingsOn ? (
+          <div className="p-4 rounded-2xl bg-sky-50/90 dark:bg-sky-950/40 border border-sky-200 dark:border-sky-800/60 shadow-xs flex items-start gap-3.5">
+            <Info className="w-5 h-5 text-sky-700 dark:text-sky-300 shrink-0 mt-0.5" />
+            <div className="flex-1 text-xs leading-relaxed text-sky-950 dark:text-sky-100">
+              <div className="font-bold text-sm text-sky-900 dark:text-sky-200 mb-0.5">
+                <PartialRatingBadge />
+              </div>
+              <p>{PARTIAL_RATING_NOTE}</p>
+              <p className="mt-1 font-semibold">{PARTIAL_RANKING_LABEL}</p>
             </div>
-            <p>
-              Vlerësimet PARAGON® janë përkohësisht të pezulluara për verifikimin e burimeve dhe integritetit të të dhënave.
-            </p>
           </div>
-        </div>
+        ) : (
+          <div className="p-4 rounded-2xl bg-amber-50/90 dark:bg-amber-950/40 border border-amber-200 dark:border-amber-800/60 shadow-xs flex items-start gap-3.5">
+            <AlertTriangle className="w-5 h-5 text-amber-600 dark:text-amber-400 shrink-0 mt-0.5" />
+            <div className="flex-1 text-xs leading-relaxed text-amber-900 dark:text-amber-200">
+              <div className="font-bold text-sm text-amber-800 dark:text-amber-300 mb-0.5">
+                Njoftim Zyrtar mbi Integritetin e të Dhënave
+              </div>
+              <p>
+                Vlerësimet PARAGON® janë përkohësisht të pezulluara për verifikimin e burimeve dhe integritetit të të dhënave.
+              </p>
+            </div>
+          </div>
+        )}
 
         {/* SECTION A: Stats Strip */}
         <StatsStrip
           totalProfiles={loading ? null : totalProfilesCount}
           activeMps={loading ? null : activeMpsCount}
-          paragonActive={loading ? null : paragonActiveCount}
+          paragonActive={loading ? null : (ratingsOn ? paragonActiveCount : 0)}
           loading={loading}
         />
 
@@ -232,7 +257,7 @@ export const PoliticiansDatabase: React.FC<PoliticiansDatabaseProps> = ({
           <div className="space-y-2.5">
             <SectionBar
               title="FIGURA KRYESORE POLITIKE"
-              subtitle="Renditja PARAGON® për periudhën 2026 është e pezulluar për verifikim"
+              subtitle={ratingsOn ? PARTIAL_RANKING_LABEL : 'Renditja PARAGON® për periudhën 2026 është e pezulluar për verifikim'}
               rightNote="Burime zyrtare"
             />
             <DominantFiguresStrip
@@ -270,7 +295,7 @@ export const PoliticiansDatabase: React.FC<PoliticiansDatabaseProps> = ({
         <div className="space-y-3">
           <SectionBar
             title="TË GJITHA PROFILET"
-            subtitle="kuadri i ngjyrës = partia politike"
+            subtitle={ratingsOn && sortMode === 'score' ? PARTIAL_RANKING_LABEL : 'kuadri i ngjyrës = partia politike'}
             rightNote={`${sorted.length} ${sorted.length === 1 ? 'profil' : 'profile'} (të gjitha në një faqe)`}
           />
 

@@ -129,7 +129,7 @@ export const Toolbar: React.FC<ToolbarProps> = ({
               color: 'var(--nv-text-primary)',
             }}
           >
-            <option value="score">Sipas vlerësimit</option>
+            <option value="score">Sipas vlerësimit të pjesshëm</option>
             <option value="surname">Sipas mbiemrit</option>
             <option value="party">Sipas partisë</option>
           </select>

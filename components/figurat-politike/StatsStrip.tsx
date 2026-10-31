@@ -31,10 +31,10 @@ export const StatsStrip: React.FC<StatsStripProps> = ({
     },
     {
       id: 'stat-paragon',
-      value: 'Pezulluar',
-      label: 'Auditimi PARAGON®',
-      sublabel: 'Integriteti i burimeve',
-      isRed: true,
+      value: paragonActive != null && paragonActive > 0 ? String(paragonActive) : 'Pezulluar',
+      label: paragonActive != null && paragonActive > 0 ? 'Indeks i pjesshëm' : 'Auditimi PARAGON®',
+      sublabel: paragonActive != null && paragonActive > 0 ? 'Me mbulim të mjaftueshëm' : 'Integriteti i burimeve',
+      isRed: !(paragonActive != null && paragonActive > 0),
     },
     {
       id: 'stat-monitoring',

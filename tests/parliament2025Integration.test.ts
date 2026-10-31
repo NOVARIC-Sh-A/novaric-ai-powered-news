@@ -69,13 +69,25 @@ describe('NOVARIC® Parliament 2025 & PARAGON® Integration Suite (Phase 34)', (
     assert.equal(seenUuids.size, 140);
   });
 
-  test('4. PARAGON global scoring suspension is active and notice is preserved', () => {
+  test('4. PARAGON ratings are on, partial, and can be switched off', () => {
     const data = JSON.parse(fs.readFileSync(exportPath, 'utf-8'));
-    assert.equal(data.scoring_suspended, true, 'Global scoring suspension must be true');
-    assert.ok(
-      data.scoring_suspension_notice && data.scoring_suspension_notice.includes('Vlerësimet PARAGON®'),
-      'Official suspension notice must be present'
-    );
+    const flag = JSON.parse(fs.readFileSync(path.resolve(process.cwd(), 'public/paragon-ratings.json'), 'utf-8'));
+    assert.equal(flag.enabled, true);
+    assert.equal(data.ratings_enabled, true);
+    assert.equal(data.scoring_suspended, false);
+    assert.ok(data.scoring_note && data.scoring_note.includes('Kuvendit'));
+    assert.ok(data.scored_count > 0);
+    const scored = data.profiles.filter((p: any) => typeof p.composite === 'number');
+    assert.equal(scored.length, data.scored_count);
+    scored.forEach((p: any) => {
+      assert.equal(p.scoring_suspended, false);
+      assert.ok(p.paragonSources?.pageUrl?.includes('kuvendiapi.azurewebsites.net'));
+      assert.equal(p.paragonSources.retrievedAt, '2026-10-31');
+      assert.ok(Array.isArray(p.paragonDimensions) && p.paragonDimensions.length === 7);
+      assert.equal(p.paragonDimensions[6], null, 'Narrativa stays awaiting without a sourced sentiment corpus');
+    });
+    const meta = data.profiles.find((p: any) => p.name === 'Ilir Meta');
+    assert.equal(meta.composite, null);
   });
 
   test('5. Shkodër district strictly matches authoritative KQZ 2025 certified roster (11 seats)', () => {

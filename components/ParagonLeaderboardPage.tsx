@@ -8,6 +8,7 @@ import {
   getCrisisAlerts,
 } from "../services/paragonEngine";
 import { formatVipName, getProfilePhotoUrl } from "../utils/paragonProfileUtils";
+import { PARTIAL_RANKING_LABEL, PARTIAL_RATING_NOTE, PartialRatingBadge } from "./figurat-politike/primitives/awaiting";
 
 interface ParagonLeaderboardPageProps {
   onNavigate: (page: string, data?: any) => void;
@@ -172,7 +173,7 @@ export const ParagonLeaderboardPage: React.FC<ParagonLeaderboardPageProps> = ({
           className="text-3xl sm:text-4xl font-extrabold text-white mb-8 text-center leading-tight drop-shadow-md"
           style={{ textShadow: "0 2px 4px rgba(0,0,0,0.8)" }}
         >
-          Renditja PARAGON<sup className="text-white ml-1">®</sup> — Performanca Politike
+          Renditja PARAGON<sup className="text-white ml-1">®</sup> — {PARTIAL_RANKING_LABEL}
         </h1>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
@@ -227,12 +228,16 @@ export const ParagonLeaderboardPage: React.FC<ParagonLeaderboardPageProps> = ({
                 <div className={`text-2xl font-bold ${rankColor(p.liveScore)}`}>
                   {p.liveScore}
                 </div>
+                <div className="text-[10px] font-semibold text-slate-600 dark:text-slate-300 max-w-[12rem] text-right leading-snug">
+                  <PartialRatingBadge coverage={(p as any).coverage} />
+                </div>
                 <div>{renderTrendArrow(p.trendDelta)}</div>
               </div>
             </div>
           ))}
         </div>
 
+        <p className="text-xs text-slate-300 mt-6 leading-relaxed">{PARTIAL_RATING_NOTE}</p>
         {profiles.length === 0 && (
           <p className="text-center text-slate-300 mt-10">
             Nuk u gjetën të dhëna për renditje.
