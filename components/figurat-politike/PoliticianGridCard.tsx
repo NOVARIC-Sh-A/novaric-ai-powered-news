@@ -2,7 +2,7 @@
 import React, { useState } from 'react';
 import { VipProfile } from '../../types';
 import { partyColor, normalizePartySlug, band, bandLabel } from '../../lib/brand-tokens';
-import { AWAITING_DATA, AwaitingPhoto } from './primitives/awaiting';
+import { AWAITING_DATA, AwaitingPhoto, PARTIAL_RATING_BADGE, PartialRatingBadge } from './primitives/awaiting';
 import { resolveOfficialPhotoUrl } from '../../utils/officialPhoto';
 import { CANONICAL_PARAGON_DIMENSIONS } from '../../types/politician';
 import { ZodiacChip } from './primitives/ZodiacChip';
@@ -159,9 +159,9 @@ export const PoliticianGridCard: React.FC<PoliticianGridCardProps> = ({
           ) : composite != null ? (
             <div
               className="px-1.5 py-0.5 rounded text-[10px] font-bold text-sky-900 dark:text-sky-100 bg-sky-100/90 dark:bg-sky-950/80 border border-sky-300 dark:border-sky-700 shadow-sm"
-              title="Indeks i pjesshëm. Dimensionet pa burim nuk hyjnë në pikë."
+              title={PARTIAL_RATING_BADGE}
             >
-              {Math.round(composite)} · {coverage || 'pjesshëm'}
+              {Math.round(composite)}
             </div>
           ) : (
             <div
@@ -195,6 +195,12 @@ export const PoliticianGridCard: React.FC<PoliticianGridCardProps> = ({
           >
             {(targetPolitician as any).primaryRole || AWAITING_DATA}
           </div>
+          {!ratingsOff && composite != null && (
+            <p className="mt-1 text-[10px] leading-snug font-semibold text-sky-900 dark:text-sky-100">
+              <span className="font-black tabular-nums">{Math.round(composite)}</span>{' '}
+              <PartialRatingBadge coverage={coverage} />
+            </p>
+          )}
 
           {/* Meta line: zone · DOB. Zodiac is display-only. */}
           <div

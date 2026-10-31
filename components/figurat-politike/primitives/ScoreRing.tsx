@@ -114,7 +114,7 @@ export const ScoreRing: React.FC<ScoreRingProps> = ({
       {/* Score Badge Overlay */}
       <div
         className={`absolute -bottom-1 z-20 px-2.5 py-0.5 rounded-full text-[11px] font-black shadow-md border-2 border-white dark:border-slate-900 tabular-nums whitespace-nowrap ${badgeBgClass}`}
-        title={numericScore !== null ? `PARAGON® Score: ${numericScore}%` : 'PARAGON® Score: në pritje'}
+        title={numericScore !== null ? `Vlerësim i pjesshëm – vetëm aktiviteti parlamentar / Partial rating – parliamentary activity only${coverage ? ` · ${coverage} dimensions` : ''}` : 'Në pritje të të dhënave / Awaiting data'}
       >
         {formattedScoreText}
       </div>

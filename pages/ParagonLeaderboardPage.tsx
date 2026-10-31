@@ -7,6 +7,7 @@ import {
   getCrisisAlerts,
 } from "../services/paragonEngine";
 import { formatVipName, getProfilePhotoUrl } from "../utils/paragonProfileUtils";
+import { PARTIAL_RANKING_LABEL, PARTIAL_RATING_NOTE, PartialRatingBadge } from "../components/figurat-politike/primitives/awaiting";
 
 interface ParagonLeaderboardPageProps {
   onNavigate: (page: string, data?: any) => void;
@@ -201,8 +202,11 @@ export const ParagonLeaderboardPage: React.FC<ParagonLeaderboardPageProps> = ({
             Renditja PARAGON<sup className="text-white ml-0.5">®</sup>
           </h1>
           <div className="h-1 w-24 bg-primary-600 mx-auto rounded-full mb-4"></div>
-          <p className="text-slate-300 text-sm uppercase tracking-[0.3em] font-mono opacity-80">
-            Live Legislative Performance Metrics
+          <p className="text-slate-200 text-sm font-semibold max-w-3xl mx-auto">
+            {PARTIAL_RANKING_LABEL}
+          </p>
+          <p className="text-slate-400 text-xs mt-2 max-w-3xl mx-auto">
+            {PARTIAL_RATING_NOTE}
           </p>
         </header>
 
@@ -268,8 +272,8 @@ export const ParagonLeaderboardPage: React.FC<ParagonLeaderboardPageProps> = ({
                 <div className={`text-3xl sm:text-4xl font-black font-mono tracking-tighter ${rankColor(p.liveScore)}`}>
                   {Math.round(p.liveScore)}
                 </div>
-                <div className="text-[8px] font-bold text-slate-500 uppercase tracking-widest mt-1">
-                  INDEX SCORE
+                <div className="text-[9px] font-semibold text-slate-300 mt-1 max-w-[14rem] text-right leading-snug">
+                  <PartialRatingBadge coverage={(p as any).coverage} />
                 </div>
               </div>
               
@@ -293,7 +297,7 @@ export const ParagonLeaderboardPage: React.FC<ParagonLeaderboardPageProps> = ({
       {/* Methodology Disclaimer */}
       <div className="mt-8 text-center px-4">
         <p className="text-[10px] text-slate-500 font-mono uppercase tracking-widest leading-relaxed max-w-2xl mx-auto">
-          Sistemi PARAGON® sinkronizon të dhënat çdo 24 orë. Pikët bazohen në aktivitetin legjislativ, integritetin financiar dhe rezonancën mediatike.
+          {PARTIAL_RATING_NOTE}
         </p>
       </div>
       <style>{`

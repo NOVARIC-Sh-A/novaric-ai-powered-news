@@ -9,7 +9,7 @@ import { BulletRow } from './primitives/BulletRow';
 import { Sparkline } from './primitives/Sparkline';
 import { ZodiacChip } from './primitives/ZodiacChip';
 import { TabPanel } from './primitives/TabPanel';
-import { AWAITING_DATA } from './primitives/awaiting';
+import { AWAITING_DATA, PARTIAL_RATING_NOTE, PartialRatingBadge } from './primitives/awaiting';
 import { ScoreLineagePanel } from '../analytics/ScoreLineagePanel';
 import { ProfileRecordSections } from './ProfileRecordSections';
 import { EvidenceDrawer } from './EvidenceDrawer';
@@ -196,10 +196,10 @@ export const PoliticianCard: React.FC<PoliticianCardProps> = ({
           <Info className="w-5 h-5 text-sky-600 dark:text-sky-400 shrink-0 mt-0.5" />
           <div className="flex-1 text-xs leading-relaxed text-sky-950 dark:text-sky-100">
             <div className="font-bold text-sm text-sky-800 dark:text-sky-300 mb-0.5">
-              PARAGON® · mbulim {coverageLabel}
+              <PartialRatingBadge coverage={coverageLabel} />
             </div>
             <p>
-              {target.scoring_note || 'Pikët vijnë vetëm nga burime zyrtare. Dimensionet pa të dhëna mbeten në pritje dhe nuk hyjnë në indeks. Shenja e horoskopit nuk pikëzohet.'}
+              {PARTIAL_RATING_NOTE}
             </p>
           </div>
         </div>
@@ -211,15 +211,23 @@ export const PoliticianCard: React.FC<PoliticianCardProps> = ({
       <div className="bg-white dark:bg-slate-900 rounded-3xl p-6 md:p-8 border border-slate-200 dark:border-slate-800 shadow-sm mb-6">
         <div className="flex flex-col md:flex-row items-center md:items-start gap-6">
           {/* Photo wrapped in SVG Score Ring (Score presentation suspended) */}
-          <ScoreRing
-            score={scoringSuspended ? null : (typeof target.composite === 'number' ? target.composite : (target.dynamicScore ?? null))}
-            coverage={coverageStr}
-            imageUrl={resolveOfficialPhotoUrl(target) || undefined}
-            name={name}
-            size={132}
-            strokeWidth={5.5}
-            suspended={scoringSuspended}
-          />
+          <div className="flex flex-col items-center gap-2 shrink-0 max-w-[16rem]">
+            <ScoreRing
+              score={scoringSuspended ? null : (typeof target.composite === 'number' ? target.composite : (target.dynamicScore ?? null))}
+              coverage={coverageLabel}
+              imageUrl={resolveOfficialPhotoUrl(target) || undefined}
+              name={name}
+              size={132}
+              strokeWidth={5.5}
+              suspended={scoringSuspended}
+            />
+            {!scoringSuspended && typeof target.composite === 'number' && (
+              <PartialRatingBadge
+                coverage={coverageLabel}
+                className="text-[11px] leading-snug font-semibold text-sky-900 dark:text-sky-100 text-center"
+              />
+            )}
+          </div>
 
           {/* Details & Chips */}
           <div className="flex-grow text-center md:text-left">
@@ -247,7 +255,7 @@ export const PoliticianCard: React.FC<PoliticianCardProps> = ({
               {/* Verified Status Tag */}
               <span className="inline-flex items-center gap-1 px-2.5 py-1 rounded-full text-xs font-semibold bg-slate-100 text-slate-700 dark:bg-slate-800 dark:text-slate-300 border border-slate-200 dark:border-slate-700 shadow-xs">
                 <Info className="w-3.5 h-3.5 text-slate-500 shrink-0" />
-                {scoringSuspended ? 'Auditimi i Burimeve në Proces' : `Mbulim ${coverageLabel}`}
+                {scoringSuspended ? 'Auditimi i Burimeve në Proces' : `Mbulim ${coverageLabel} dimensions`}
               </span>
             </div>
 
@@ -340,7 +348,7 @@ export const PoliticianCard: React.FC<PoliticianCardProps> = ({
                 </p>
               </div>
               <span className="text-[10px] font-mono font-bold text-slate-500 bg-slate-100 dark:bg-slate-800 px-2.5 py-1 rounded-md">
-                {scoringSuspended ? 'Auditimi në Proces' : `Mbulim ${coverageLabel}`}
+                {scoringSuspended ? 'Auditimi në Proces' : `Mbulim ${coverageLabel} dimensions`}
               </span>
             </div>
 

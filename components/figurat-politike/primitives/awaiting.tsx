@@ -4,6 +4,34 @@ import React from 'react';
 export const AWAITING_DATA = 'Në pritje të të dhënave / Awaiting data';
 export const NOT_SCORED = 'Nuk pikëzohet / Not scored';
 
+/** Shown beside every published PARAGON overall score. */
+export const PARTIAL_RATING_BADGE =
+  'Vlerësim i pjesshëm – vetëm aktiviteti parlamentar / Partial rating – parliamentary activity only';
+
+export const PARTIAL_RANKING_LABEL =
+  'Renditja e pjesshme – vetëm aktiviteti parlamentar / Partial ranking – parliamentary activity only';
+
+export const PARTIAL_RATING_NOTE =
+  'Ky vlerësim mbulon vetëm prezencën, pjesëmarrjen në votim dhe kohezionin e grupit nga fletët zyrtare të votimit të Kuvendit që nga 1 shtator 2025. This score covers only presence, voting participation and group cohesion from official Kuvendi roll calls since 1 Sep 2025. Dimensionet e tjera janë Në pritje të të dhënave / Awaiting data.';
+
+export function formatPartialCoverage(coverage?: string | null): string {
+  if (coverage && /^\d+\/7$/.test(coverage)) return `${coverage} dimensions`;
+  return '';
+}
+
+export const PartialRatingBadge: React.FC<{ coverage?: string | null; className?: string }> = ({
+  coverage,
+  className = '',
+}) => {
+  const coverageText = formatPartialCoverage(coverage);
+  return (
+    <span className={className} data-partial-rating="true">
+      {PARTIAL_RATING_BADGE}
+      {coverageText ? ` · ${coverageText}` : ''}
+    </span>
+  );
+};
+
 export function hasText(value: unknown): value is string {
   return typeof value === 'string' && value.trim().length > 0;
 }

@@ -2,7 +2,7 @@
 import React from 'react';
 import { VipProfile } from '../../types';
 import { partyColor, normalizePartySlug } from '../../lib/brand-tokens';
-import { AWAITING_DATA } from './primitives/awaiting';
+import { AWAITING_DATA, PartialRatingBadge } from './primitives/awaiting';
 import { ZodiacChip } from './primitives/ZodiacChip';
 import { resolveOfficialPhotoUrl } from '../../utils/officialPhoto';
 import { useParagonRatingsEnabled } from './useParagonRatings';
@@ -127,9 +127,16 @@ export const DominantFiguresStrip: React.FC<DominantFiguresStripProps> = ({
 
             {/* Status / Zodiac line. The sign is display-only and is never a score input. */}
             <div className="flex flex-wrap items-center gap-1 text-xs mb-2 font-medium" style={{ color: 'var(--nv-navy-muted)' }}>
-              <span className="text-[11px] text-amber-700 dark:text-amber-400 font-semibold">
-                PARAGON® i pezulluar
-              </span>
+              {ratingsOn && typeof (item as any).composite === 'number' && (item as any).scoring_suspended !== true ? (
+                <span className="text-[11px] leading-snug font-semibold text-sky-900 dark:text-sky-100">
+                  <span className="font-black tabular-nums">{Math.round((item as any).composite)}</span>{' '}
+                  <PartialRatingBadge coverage={(item as any).coverage} />
+                </span>
+              ) : (
+                <span className="text-[11px] text-slate-600 dark:text-slate-300 font-semibold">
+                  Në pritje të të dhënave / Awaiting data
+                </span>
+              )}
               <ZodiacChip dateOfBirth={dob} withStatus className="flex-wrap max-w-full px-1.5 py-0.5 text-[10px]" />
             </div>
 
