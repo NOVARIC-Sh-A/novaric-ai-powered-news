@@ -462,10 +462,13 @@ def run_scorer(
             has_dims = False
             cov_str = "0/7"
 
-        is_pending = (numeric_id in (106, 113)) or ("placeholder-pending.jpg" in (person["photo_url"] or ""))
-        resolved_photo_url = "https://media.novaric.al/politicians/placeholder-pending.jpg" if is_pending else f"https://media.novaric.al/politicians/vip{numeric_id}.jpg"
-        photo_src = person["photo_source_url"] if ("photo_source_url" in person.keys() and person["photo_source_url"]) else (person["photo_url"] or "https://novaric.co/wp-content/uploads/2025/11/MaleProfile.jpg")
-        photo_status = "Foto në pritje" if is_pending else "Foto aktive e pasqyruar"
+        # Official photo sources only (photo audit 2026-10-31); no NOVARIC copies/placeholders.
+        from ingestion.image_mirror import resolve_official_photo
+        from utils.official_photo import AWAITING_PHOTO_STATUS, OFFICIAL_PHOTO_STATUS
+        resolved_photo_url, photo_src, is_pending = resolve_official_photo(
+            f"vip{numeric_id}", person["photo_url"],
+            person["photo_source_url"] if "photo_source_url" in person.keys() else None, name)
+        photo_status = AWAITING_PHOTO_STATUS if is_pending else OFFICIAL_PHOTO_STATUS
 
         sec_roles = []
         if person["secondary_roles"]:

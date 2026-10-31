@@ -32,6 +32,13 @@ from api.v1.politicians import (
 )
 
 
+
+class _HeaderRequest:
+    """Minimal request stand-in exposing only .headers (starlette>=0.4x Request needs an ASGI scope)."""
+
+    def __init__(self, headers=None):
+        self.headers = dict(headers or {})
+
 class TestVipIdIdempotency(unittest.TestCase):
     """Verifies that VIP IDs are keyed deterministically on stable Kuvendi Person ID."""
 
@@ -205,11 +212,17 @@ class TestRlsSecurityMatrix(unittest.TestCase):
         for idx, card in enumerate(res["cards"]):
             for field in required_fields:
                 self.assertIn(field, card, f"Card {idx} ({card.get('name')}) missing required field: {field}")
+                if field == "imageUrl" and card.get("photoPending"):
+                    # Official photo not available: null + 'Awaiting data' state, never a copy/mock.
+                    self.assertIsNone(card[field])
+                    continue
+                if field in ("shortBio", "detailedBio"):
+                    continue  # bios may be null (awaiting data); no mock text
                 self.assertIsNotNone(card[field], f"Card {idx} ({card.get('name')}) has null required field: {field}")
 
     def test_ingest_no_token_returns_401(self):
         """Unauthenticated call to POST /ingest must fail with HTTP 401."""
-        req = Request(headers={})
+        req = _HeaderRequest(headers={})
         loop = asyncio.new_event_loop()
         asyncio.set_event_loop(loop)
         with self.assertRaises(HTTPException) as ctx:
@@ -219,7 +232,7 @@ class TestRlsSecurityMatrix(unittest.TestCase):
 
     def test_ingest_wrong_token_returns_403(self):
         """Call to POST /ingest with wrong token must fail with HTTP 403."""
-        req = Request(headers={"Authorization": "Bearer fraudulent-unauthorized-token"})
+        req = _HeaderRequest(headers={"Authorization": "Bearer fraudulent-unauthorized-token"})
         loop = asyncio.new_event_loop()
         asyncio.set_event_loop(loop)
         with self.assertRaises(HTTPException) as ctx:
@@ -230,7 +243,7 @@ class TestRlsSecurityMatrix(unittest.TestCase):
     def test_ingest_valid_token_returns_200(self):
         """Call to POST /ingest with valid token succeeds with HTTP 200."""
         valid_token = os.environ.setdefault("OPS_METRICS_AUTH_TOKEN", "test-only-ops-token")
-        req = Request(headers={"Authorization": f"Bearer {valid_token}"})
+        req = _HeaderRequest(headers={"Authorization": f"Bearer {valid_token}"})
         loop = asyncio.new_event_loop()
         asyncio.set_event_loop(loop)
         res = loop.run_until_complete(trigger_kuvendi_ingest(request=req, dry_run=True))

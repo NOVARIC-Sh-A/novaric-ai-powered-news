@@ -232,11 +232,11 @@ export const processVipProfile = (
   return { ...profile, processedAnalysis };
 };
 
-export function getProfilePhotoUrl(profile: any) {
-    if (profile?.photoPending || profile?.photoStatus === "Foto në pritje") {
-        return "https://media.novaric.al/politicians/placeholder-pending.jpg";
-    }
-    const url = profile?.image_url || profile?.imageUrl;
-    if (url && (url.startsWith("http") || url.startsWith("/"))) return url;
-    return "https://media.novaric.al/politicians/placeholder-pending.jpg";
+export function getProfilePhotoUrl(profile: any): string | undefined {
+    // Never fall back to NOVARIC copies or generic placeholders (photo audit 2026-10-31).
+    if (profile?.photoPending) return undefined;
+    const url = profile?.officialPhotoPath || profile?.image_url || profile?.imageUrl;
+    if (typeof url !== "string" || !(url.startsWith("http") || url.startsWith("/"))) return undefined;
+    if (url.includes("media.novaric.al/politicians/") || /\/(Male|Female)Profile\.jpg/i.test(url)) return undefined;
+    return url;
 }

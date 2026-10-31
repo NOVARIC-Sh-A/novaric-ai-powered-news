@@ -1,12 +1,11 @@
 """
 NOVARIC® PARAGON Politicians Pipeline P1 Hardening Test Suite
 Verifies:
-1. Image Mirroring:
-   - All Kuvendi photos mirrored to media.novaric.al/politicians/{id}.jpg
-   - Original URL preserved as photo_source_url
-   - Exactly 2 missing photos mapped to documented placeholder + 'Foto në pritje' path
+1. Official photos (photo audit 2026-10-31):
+   - Photos load directly from the official source (Kuvendi / Wikimedia Commons local copy)
+   - No media.novaric.al copies, no NOVARIC mock photos
+   - Profiles without an official photo are null + 'Në pritje të të dhënave / Awaiting data'
    - Strict idempotency (0 mutations on re-run)
-   - Target 104/104 resolved in production cards view
 2. Weekly Cloud Scheduler Spec & Retry/Backoff:
    - Cron schedule 0 4 * * 1 (weekly Monday 04:00 UTC)
    - Retry count 5, exponential backoff (min 10s, max 300s)
@@ -27,14 +26,10 @@ from datetime import datetime, timezone
 
 from ingestion.image_mirror import (
     ImageMirrorWorker,
-    resolve_mirrored_photo,
+    resolve_official_photo,
     is_missing_or_generic_photo,
-    MEDIA_DOMAIN,
-    POLITICIANS_MEDIA_BASE,
-    PLACEHOLDER_PENDING_URL,
-    FOTO_NE_PRITJE_PATH,
-    DOCUMENTED_MISSING_PHOTO_VIP_IDS
 )
+from utils.official_photo import AWAITING_PHOTO_STATUS, is_official_photo_source
 from ingestion.alerts import (
     dispatch_pipeline_alert,
     record_run_and_evaluate_alerts,
@@ -51,78 +46,73 @@ from api.v1.politicians import (
 )
 
 
-class TestImageMirroring(unittest.TestCase):
-    """Verifies image mirroring to media.novaric.al, placeholder paths, and idempotency."""
+class TestOfficialPhotos(unittest.TestCase):
+    """Verifies official-source photos, awaiting-data state and idempotency."""
 
-    def test_mirrored_url_structure_and_source_retention(self):
-        """Standard profile photo maps to media.novaric.al and retains original source URL."""
-        photo_url, source_url, is_pending = resolve_mirrored_photo(
-            vip_id="vip1",
-            current_photo_url="https://novaricstorage.blob.core.windows.net/media/Profile-Photos/Edi-RAMA.jfif",
-            current_source_url=None,
-            name="Edi Rama"
-        )
-        self.assertEqual(photo_url, "https://media.novaric.al/politicians/vip1.jpg")
-        self.assertEqual(source_url, "https://novaricstorage.blob.core.windows.net/media/Profile-Photos/Edi-RAMA.jfif")
+    def test_official_url_is_kept(self):
+        url = "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202509/x.jpg"
+        photo_url, source_url, is_pending = resolve_official_photo("vip1", url, url, "Edi Rama")
+        self.assertEqual(photo_url, url)
         self.assertFalse(is_pending)
 
-    def test_documented_missing_photos_resolution(self):
-        """The 2 documented missing photos (vip106, vip113) resolve to placeholder-pending and is_pending=True."""
-        for vip_id, name in [("vip106", "Zija Ismaili"), ("vip113", "Redi Muçi")]:
-            photo_url, source_url, is_pending = resolve_mirrored_photo(
-                vip_id=vip_id,
-                current_photo_url="https://novaric.co/wp-content/uploads/2025/11/MaleProfile.jpg",
-                current_source_url=None,
-                name=name
-            )
-            self.assertEqual(photo_url, PLACEHOLDER_PENDING_URL)
+    def test_novaric_copies_and_mock_photos_are_rejected(self):
+        for bad in (
+            "https://media.novaric.al/politicians/vip999.jpg",
+            "https://novaric.co/wp-content/uploads/2025/11/MaleProfile.jpg",
+            "https://novaricstorage.blob.core.windows.net/media/Profile-Photos/X.jfif",
+            None,
+        ):
+            photo_url, _src, is_pending = resolve_official_photo("vip999", bad, None, "Nobody")
+            self.assertIsNone(photo_url, bad)
             self.assertTrue(is_pending)
-            self.assertIn(vip_id, DOCUMENTED_MISSING_PHOTO_VIP_IDS)
+            self.assertTrue(is_missing_or_generic_photo(bad))
 
-    def test_image_mirror_idempotency(self):
-        """Proves that executing image mirroring worker multiple times produces 0 updates on re-run."""
+    def test_export_contains_only_official_photos(self):
+        with open("db/paragon_scores_export.json", encoding="utf-8") as f:
+            profiles = json.load(f)["profiles"]
+        self.assertEqual(len(profiles), 279)
+        pending = [p for p in profiles if p.get("photoPending")]
+        self.assertEqual(len(pending), 23)
+        for p in profiles:
+            if p.get("photoPending"):
+                self.assertIsNone(p.get("imageUrl"))
+                self.assertEqual(p.get("photoStatus"), AWAITING_PHOTO_STATUS)
+            else:
+                url = p["imageUrl"]
+                self.assertTrue(url.startswith("/politicians/official/") or is_official_photo_source(url), url)
+            self.assertNotIn("media.novaric.al/politicians", json.dumps(p))
+
+    def test_commons_replacements_recorded_with_licence(self):
+        import csv
+        with open("data/official/politician_field_sources.csv", encoding="utf-8", newline="") as f:
+            rows = list(csv.DictReader(f))
+        text = json.dumps(rows)
+        for vip in ("vip19", "vip54", "vip232"):
+            self.assertTrue(os.path.exists(f"public/politicians/official/{vip}.jpg"))
+        self.assertIn("commons.wikimedia.org", text)
+        self.assertIn("2026-10-31", text)
+        self.assertIn("CC BY", text)
+
+    def test_image_worker_idempotency(self):
         worker = ImageMirrorWorker()
-        # First execution (ensure populated)
-        res1 = worker.execute_all(dry_run=False)
-        self.assertTrue(res1["target_104_resolved"])
-
-        # Second execution (strict re-run)
+        worker.execute_all(dry_run=False)
         res2 = worker.execute_all(dry_run=False)
-        self.assertEqual(res2["sqlite"]["updated_count"], 0, "Second run must perform 0 updates in SQLite")
-        self.assertEqual(res2["json_export"]["updated_count"], 0, "Second run must perform 0 updates in JSON export")
-        self.assertTrue(res2["target_104_resolved"])
+        self.assertEqual(res2["sqlite"]["updated_count"], 0)
+        self.assertEqual(res2["json_export"]["updated_count"], 0)
 
-    def test_top_104_cards_image_resolution(self):
-        """Verifies that all 104 cards served by the cards endpoint resolve their images to media.novaric.al."""
+    def test_cards_endpoint_serves_official_or_awaiting(self):
         loop = asyncio.new_event_loop()
         asyncio.set_event_loop(loop)
         try:
             resp = loop.run_until_complete(list_politician_cards())
             cards = resp["cards"] if isinstance(resp, dict) else resp
-            self.assertEqual(len(cards), 104, "Must return exactly 104 politician cards")
-
-            mirrored_count = 0
-            pending_count = 0
-            source_url_count = 0
-
+            self.assertEqual(len(cards), 104)
             for c in cards:
-                img = c.get("imageUrl", "")
-                self.assertTrue(
-                    img.startswith("https://media.novaric.al/politicians/"),
-                    f"Card {c.get('id')} has non-mirrored image: {img}"
-                )
-                if "placeholder-pending" in img or c.get("photoPending"):
-                    pending_count += 1
+                img = c.get("imageUrl")
+                if img is None:
+                    self.assertEqual(c.get("photoStatus"), AWAITING_PHOTO_STATUS)
                 else:
-                    mirrored_count += 1
-
-                if c.get("photo_source_url"):
-                    source_url_count += 1
-
-            self.assertEqual(mirrored_count + pending_count, 104)
-            self.assertEqual(pending_count, 2, "Must have exactly 2 documented pending photos")
-            self.assertEqual(mirrored_count, 102, "Must have exactly 102 active mirrored photos")
-            self.assertEqual(source_url_count, 104, "All 104 cards must preserve their photo_source_url")
+                    self.assertTrue(img.startswith("/politicians/official/") or is_official_photo_source(img), img)
         finally:
             loop.close()
 
@@ -259,8 +249,9 @@ class TestCardsContractPreservation(unittest.TestCase):
                 self.assertIsInstance(card["numericId"], int)
                 self.assertTrue(card["id"].startswith("vip"))
                 # Bio strings
-                self.assertTrue(len(card["shortBio"]) > 0)
-                self.assertTrue(len(card["detailedBio"]) > 0)
+                # No mock data: bios are either real text or null (awaiting data)
+                for bio in ("shortBio", "detailedBio"):
+                    self.assertTrue(card[bio] is None or len(card[bio]) > 0)
         finally:
             loop.close()
 

@@ -3,6 +3,7 @@ import react from '@vitejs/plugin-react';
 import fs from 'fs';
 import path from 'path';
 import { pickFeedImage, pickArticleOpenGraphImage } from './services/imageResolverService';
+import { resolveOfficialPhotoUrl } from './utils/officialPhoto';
 import {
   processNewsFeedQuery,
   getNewsFeedOpsMetrics,
@@ -303,7 +304,7 @@ function novaricApiPlugin() {
                   dob_verified: true,
                   pob: "Tiranë",
                   zone: "Durrës",
-                  photo: "https://novaricstorage.blob.core.windows.net/media/Profile-Photos/Edi-RAMA.jfif",
+                  photo: null, // official photo resolved from db/paragon_scores_export.json
                   primaryRole: "Prime Minister of Albania",
                   secondaryRoles: ["Chair of the Socialist Party of Albania", "Member of Parliament (Durrës)"],
                   shortBio: "Kryeministër i Republikës së Shqipërisë dhe Kryetar i Partisë Socialiste të Shqipërisë.",
@@ -318,7 +319,7 @@ function novaricApiPlugin() {
                   dob_verified: true,
                   pob: "Tropojë",
                   zone: "Tiranë",
-                  photo: "https://novaricstorage.blob.core.windows.net/media/Profile-Photos/Sali-BERISHA.jpg",
+                  photo: null, // official photo resolved from db/paragon_scores_export.json
                   primaryRole: "Member of Parliament & Chair of PD",
                   secondaryRoles: ["Former Prime Minister of Albania", "Former President of Albania"],
                   shortBio: "Deputet i Kuvendit të Shqipërisë, Kryetar i Partisë Demokratike.",
@@ -333,7 +334,7 @@ function novaricApiPlugin() {
                   dob_verified: true,
                   pob: "Çorovodë, Skrapar",
                   zone: "Tiranë",
-                  photo: "https://novaric.co/wp-content/uploads/2025/11/MaleProfile.jpg",
+                  photo: null, // official photo resolved from db/paragon_scores_export.json
                   primaryRole: "Chair of Freedom Party & Former President",
                   secondaryRoles: ["Former President of Albania", "Former Speaker of Parliament"],
                   parliamentaryStatus: "not_an_active_mp",
@@ -353,7 +354,7 @@ function novaricApiPlugin() {
                   dob_verified: true,
                   pob: "Tiranë",
                   zone: "Tiranë",
-                  photo: "https://novaric.co/wp-content/uploads/2025/11/MaleProfile.jpg",
+                  photo: null, // official photo resolved from db/paragon_scores_export.json
                   primaryRole: "Member of Parliament",
                   secondaryRoles: ["Former Minister of Foreign Affairs", "Former Mayor of Tirana"],
                   shortBio: "Deputet i Kuvendit të Shqipërisë, Qarku Tiranë.",
@@ -368,7 +369,7 @@ function novaricApiPlugin() {
                   dob_verified: true,
                   pob: "Tiranë",
                   zone: "Tiranë",
-                  photo: "https://novaric.co/wp-content/uploads/2025/11/ErionVELIAJ.jpg",
+                  photo: null, // official photo resolved from db/paragon_scores_export.json
                   primaryRole: "Mayor of Tirana",
                   secondaryRoles: ["Former Minister of Social Welfare and Youth"],
                   parliamentaryStatus: "not_an_active_mp",
@@ -388,7 +389,7 @@ function novaricApiPlugin() {
                   dob_verified: true,
                   pob: "Tiranë",
                   zone: "Tiranë",
-                  photo: "https://novaric.co/wp-content/uploads/2025/11/BelindKELLICI.jpg",
+                  photo: null, // official photo resolved from db/paragon_scores_export.json
                   primaryRole: "Political Leader & Former MP",
                   secondaryRoles: ["Member of PD Presidency"],
                   shortBio: "Anëtar i Kryesisë së Partisë Demokratike, ish-deputet i Kuvendit të Shqipërisë.",
@@ -403,7 +404,7 @@ function novaricApiPlugin() {
                   dob_verified: true,
                   pob: "Tiranë",
                   zone: "Shkodër",
-                  photo: "https://novaricstorage.blob.core.windows.net/media/Profile-Photos/Benet-BECI",
+                  photo: null, // official photo resolved from db/paragon_scores_export.json
                   primaryRole: "Mayor of Shkodër",
                   secondaryRoles: ["Former Member of Parliament (Shkodër)"],
                   shortBio: "Kryetar i Bashkisë Shkodër, ish-deputet i Kuvendit të Shqipërisë.",
@@ -418,7 +419,7 @@ function novaricApiPlugin() {
                   dob_verified: true,
                   pob: "Shkodër",
                   zone: "Shkodër",
-                  photo: "https://novaric.co/wp-content/uploads/2025/11/TomDOSHI.jpg",
+                  photo: null, // official photo resolved from db/paragon_scores_export.json
                   primaryRole: "Chair of Social Democratic Party (PSD)",
                   secondaryRoles: ["Former Member of Parliament"],
                   shortBio: "Kryetar i Partisë Socialdemokrate (PSD), ish-deputet i Kuvendit të Shqipërisë.",
@@ -433,7 +434,7 @@ function novaricApiPlugin() {
                   dob_verified: true,
                   pob: "Dibër",
                   zone: "Dibër",
-                  photo: "https://novaric.co/wp-content/uploads/2025/11/MaleProfile.jpg",
+                  photo: null, // official photo resolved from db/paragon_scores_export.json
                   primaryRole: "Minister of Justice & Member of Parliament",
                   secondaryRoles: ["Member of PS Presidency"],
                   shortBio: "Ministër i Drejtësisë dhe Deputet i Kuvendit të Shqipërisë (Qarku Dibër).",
@@ -448,7 +449,7 @@ function novaricApiPlugin() {
                   dob_verified: true,
                   pob: "Dibër",
                   zone: "Dibër",
-                  photo: "https://novaricstorage.blob.core.windows.net/media/Profile-Photos/Xhelal-MZIU.jpg",
+                  photo: null, // official photo resolved from db/paragon_scores_export.json
                   primaryRole: "Member of Parliament",
                   secondaryRoles: ["Former Mayor of Kamëz"],
                   shortBio: "Deputet i Kuvendit të Shqipërisë, Qarku Dibër.",
@@ -463,7 +464,7 @@ function novaricApiPlugin() {
                   dob_verified: true,
                   pob: "Durrës",
                   zone: "Durrës",
-                  photo: "https://novaric.co/wp-content/uploads/2025/11/OerdBYLYKBASHI.jpg",
+                  photo: null, // official photo resolved from db/paragon_scores_export.json
                   primaryRole: "Member of Parliament",
                   secondaryRoles: ["Vice-Chair of the Democratic Party"],
                   shortBio: "Deputet i Kuvendit të Shqipërisë, Qarku Durrës.",
@@ -478,7 +479,7 @@ function novaricApiPlugin() {
                   dob_verified: true,
                   pob: "Korçë",
                   zone: "Korçë",
-                  photo: "https://novaric.co/wp-content/uploads/2025/11/NikoPELESHI.jpg",
+                  photo: null, // official photo resolved from db/paragon_scores_export.json
                   primaryRole: "Speaker of the Parliament of Albania",
                   secondaryRoles: ["Member of Parliament (Korçë)", "Former Minister of Defense"],
                   shortBio: "Kryetar i Kuvendit të Shqipërisë, deputet i Qarkut Korçë.",
@@ -541,7 +542,7 @@ function novaricApiPlugin() {
                   caseStatus: "none",
                   presumptionOfInnocence: true,
                   legalStatusSummary: null,
-                  imageUrl: (val as any).photo_url || "https://novaric.co/wp-content/uploads/2025/11/MaleProfile.jpg",
+                  imageUrl: (val as any).photo_url || null,
                   shortBio: `Deputet i Kuvendit të Shqipërisë, Qarku ${zone}.`,
                   detailedBio: `${name} shërben si deputet në Kuvendin e Shqipërisë (Legjislatura X) për Qarkun ${zone}.`,
                   dynamicScore: null,
@@ -563,6 +564,24 @@ function novaricApiPlugin() {
                 extraId++;
               }
             }
+
+            // Official photo sources only (audit 2026-10-31): take the audited photo from the export
+            // by id/name; anything else (NOVARIC copies, placeholders) becomes "Awaiting data".
+            const photoRegistry = new Map<string, any>();
+            for (const p of (exportData?.profiles || [])) {
+              if (p?.id) photoRegistry.set(String(p.id).toLowerCase(), p);
+              if (p?.name) photoRegistry.set(`name:${String(p.name).trim().toLowerCase()}`, p);
+            }
+            cards.forEach(c => {
+              const ref = photoRegistry.get(String(c.id).toLowerCase()) || photoRegistry.get(`name:${String(c.name || '').trim().toLowerCase()}`);
+              const photo = ref ? resolveOfficialPhotoUrl(ref) : resolveOfficialPhotoUrl(c);
+              c.imageUrl = photo;
+              c.officialPhotoPath = ref ? (ref.officialPhotoPath || null) : (c.officialPhotoPath || null);
+              c.photo_source_url = photo ? ((ref && ref.photo_source_url) || c.photo_source_url || null) : null;
+              c.photoLicence = photo ? ((ref && ref.photoLicence) || c.photoLicence || null) : null;
+              c.photoPending = !photo;
+              c.photoStatus = photo ? 'Foto zyrtare / Official photo' : 'Në pritje të të dhënave / Awaiting data';
+            });
 
             cards.forEach(c => {
               if (c.politicianId == null) {
@@ -846,8 +865,10 @@ function novaricApiPlugin() {
               caseStatus: politician.caseStatus ?? null,
               presumptionOfInnocence: politician.presumptionOfInnocence ?? null,
               legalStatusSummary: politician.legalStatusSummary || null,
-              imageUrl: politician.imageUrl || null,
-              photo_source_url: politician.photo_source_url || politician.imageUrl || null,
+              imageUrl: resolveOfficialPhotoUrl(politician),
+              photo_source_url: resolveOfficialPhotoUrl(politician) ? (politician.photo_source_url || null) : null,
+              photoPending: !resolveOfficialPhotoUrl(politician),
+              photoStatus: resolveOfficialPhotoUrl(politician) ? 'Foto zyrtare / Official photo' : 'Në pritje të të dhënave / Awaiting data',
               shortBio: politician.shortBio || null,
               detailedBio: politician.detailedBio || "",
               dynamicScore: politician.dynamicScore ?? null,

@@ -349,10 +349,12 @@ def compute_d1_pipeline(
         paragon_dims = [d1_score, d2_score, d3_score, d4_score, d5_score, d6_score, d7_score]
         has_dims = any(d is not None for d in paragon_dims)
 
-        is_pending = (num_id in (106, 113)) or ("placeholder-pending.jpg" in (mp["photo_url"] or ""))
-        resolved_photo_url = "https://media.novaric.al/politicians/placeholder-pending.jpg" if is_pending else (mp["photo_url"] or f"https://media.novaric.al/politicians/vip{num_id}.jpg")
-        photo_src = mp.get("photo_source_url") or "https://novaric.co/wp-content/uploads/2025/11/MaleProfile.jpg"
-        photo_status = "Foto në pritje" if is_pending else "Foto aktive e pasqyruar"
+        # Official photo sources only (photo audit 2026-10-31); no NOVARIC copies/placeholders.
+        from ingestion.image_mirror import resolve_official_photo
+        from utils.official_photo import AWAITING_PHOTO_STATUS, OFFICIAL_PHOTO_STATUS
+        resolved_photo_url, photo_src, is_pending = resolve_official_photo(
+            f"vip{num_id}", mp["photo_url"], mp.get("photo_source_url"), mp.get("full_name"))
+        photo_status = AWAITING_PHOTO_STATUS if is_pending else OFFICIAL_PHOTO_STATUS
 
         scored_profiles_export.append({
             "id": f"vip{num_id}",

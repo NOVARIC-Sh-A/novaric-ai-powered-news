@@ -3,6 +3,9 @@ import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import path from 'node:path';
 import { getProfilePhotoUrl } from '../utils/paragonProfileUtils';
+import { isOfficialPhotoUrl, resolveOfficialPhotoUrl } from '../utils/officialPhoto';
+
+const AWAITING_DATA = 'Në pritje të të dhënave / Awaiting data';
 
 describe('NOVARIC® PARAGON Politicians Cards & Pipeline Contract (P1)', () => {
   const exportPath = path.resolve(process.cwd(), 'db/paragon_scores_export.json');
@@ -44,72 +47,78 @@ describe('NOVARIC® PARAGON Politicians Cards & Pipeline Contract (P1)', () => {
       });
       assert.ok(typeof card.numericId === 'number', 'numericId must be number');
       assert.ok(card.id.startsWith('vip'), 'id must start with vip');
-      assert.ok(card.imageUrl && card.imageUrl.length > 0, 'imageUrl must not be empty');
-      assert.ok(card.photo_source_url, 'photo_source_url must be preserved');
+      assert.ok(card.photoPending ? card.imageUrl === null : card.imageUrl.length > 0, 'imageUrl official or null');
     });
   });
 
-  test('Image Mirroring: 104/104 profiles resolved to media.novaric.al domain', () => {
+  test('Official photos only: every card loads from the official source or awaits data', () => {
     const data = JSON.parse(fs.readFileSync(exportPath, 'utf-8'));
-    const top104 = data.profiles.slice(0, 104);
-
-    let mirroredCount = 0;
-    let pendingCount = 0;
-
-    top104.forEach((card: any) => {
+    let official = 0;
+    let awaiting = 0;
+    data.profiles.forEach((card: any) => {
       const url = card.imageUrl;
-      assert.ok(
-        url.startsWith('https://media.novaric.al/politicians/'),
-        `Card ${card.id} imageUrl is not mirrored: ${url}`
-      );
-
-      if (card.photoPending || url.includes('placeholder-pending.jpg')) {
-        pendingCount++;
-        assert.equal(card.photoStatus, 'Foto në pritje');
+      if (card.photoPending) {
+        awaiting++;
+        assert.equal(url, null, `${card.id} awaiting card must not carry a photo`);
+        assert.equal(card.photoStatus, AWAITING_DATA);
       } else {
-        mirroredCount++;
+        official++;
+        assert.ok(isOfficialPhotoUrl(url), `${card.id} imageUrl is not official: ${url}`);
       }
+      const raw = JSON.stringify(card);
+      assert.ok(!raw.includes('media.novaric.al/politicians'), `${card.id} references a NOVARIC copy`);
+      assert.ok(!raw.includes('MaleProfile') && !raw.includes('FemaleProfile'), `${card.id} uses mock photo`);
     });
-
-    assert.equal(mirroredCount + pendingCount, 104, 'Total resolved must be 104');
-    assert.equal(pendingCount, 2, 'Must have exactly 2 documented pending photos');
-    assert.equal(mirroredCount, 102, 'Must have exactly 102 active mirrored photos');
+    assert.equal(official + awaiting, 279);
+    assert.equal(awaiting, 23, '22 audited profiles + Zija Ismaili (Commons match rejected)');
   });
 
-  test('Documented missing photos strictly match vip106 (Zija Ismaili) and vip113 (Redi Muçi)', () => {
+  test('Approved replacements point at the official Parliament / Commons sources', () => {
     const data = JSON.parse(fs.readFileSync(exportPath, 'utf-8'));
-    const top104 = data.profiles.slice(0, 104);
-    const pendingCards = top104.filter((c: any) => c.photoPending);
-
-    assert.equal(pendingCards.length, 2);
-    const pendingIds = pendingCards.map((c: any) => c.id).sort();
-    assert.deepEqual(pendingIds, ['vip106', 'vip113']);
-
-    pendingCards.forEach((c: any) => {
-      assert.equal(c.imageUrl, 'https://media.novaric.al/politicians/placeholder-pending.jpg');
-      assert.equal(c.photoStatus, 'Foto në pritje');
+    const byId = new Map(data.profiles.map((c: any) => [c.id, c]));
+    ['vip24', 'vip72', 'vip77', 'vip78', 'vip80', 'vip248', 'vip267', 'vip281', 'vip112'].forEach((id) => {
+      const c: any = byId.get(id);
+      assert.ok(c.imageUrl.startsWith('https://kuvendiwebfiles.blob.core.windows.net/'), `${id}: ${c.imageUrl}`);
     });
+    ['vip19', 'vip54', 'vip232'].forEach((id) => {
+      const c: any = byId.get(id);
+      assert.equal(c.imageUrl, `/politicians/official/${id}.jpg`);
+      assert.ok(fs.existsSync(path.resolve(process.cwd(), `public/politicians/official/${id}.jpg`)));
+    });
+    const zija: any = byId.get('vip106');
+    assert.equal(zija.photoPending, true);
+    assert.equal(zija.imageUrl, null);
   });
 
-  test('getProfilePhotoUrl handles mirrored and pending photos gracefully', () => {
-    const standardProfile = {
-      imageUrl: 'https://media.novaric.al/politicians/vip1.jpg',
-      photoPending: false,
-    };
+  test('getProfilePhotoUrl never returns NOVARIC copies or placeholders', () => {
+    const official = 'https://kuvendiwebfiles.blob.core.windows.net/webfiles/x.jpg';
+    assert.equal(getProfilePhotoUrl({ imageUrl: official, photoPending: false }), official);
     assert.equal(
-      getProfilePhotoUrl(standardProfile),
-      'https://media.novaric.al/politicians/vip1.jpg'
+      getProfilePhotoUrl({ imageUrl: 'https://media.novaric.al/politicians/vip1.jpg' }),
+      undefined
     );
+    assert.equal(getProfilePhotoUrl({ imageUrl: null, photoPending: true }), undefined);
+  });
 
-    const pendingProfile = {
-      imageUrl: 'https://media.novaric.al/politicians/placeholder-pending.jpg',
-      photoPending: true,
-      photoStatus: 'Foto në pritje',
-    };
-    assert.equal(
-      getProfilePhotoUrl(pendingProfile),
-      'https://media.novaric.al/politicians/placeholder-pending.jpg'
-    );
+  test('resolveOfficialPhotoUrl prefers official paths and rejects non-official hosts', () => {
+    assert.equal(resolveOfficialPhotoUrl({ officialPhotoPath: '/politicians/official/vip19.jpg' }), '/politicians/official/vip19.jpg');
+    assert.equal(resolveOfficialPhotoUrl({ imageUrl: 'https://upload.wikimedia.org/a.jpg' }), 'https://upload.wikimedia.org/a.jpg');
+    assert.equal(resolveOfficialPhotoUrl({ imageUrl: 'https://media.novaric.al/politicians/vip1.jpg' }), null);
+    assert.equal(resolveOfficialPhotoUrl({ imageUrl: 'https://novaric.co/wp-content/uploads/2025/11/MaleProfile.jpg' }), null);
+    assert.equal(resolveOfficialPhotoUrl({ imageUrl: 'https://example.com/a.jpg' }), null);
+    assert.equal(resolveOfficialPhotoUrl({}), null);
+  });
+
+  test('Awaiting-data label and untouched zodiac label', () => {
+    const src = fs.readFileSync(path.resolve(process.cwd(), 'components/figurat-politike/primitives/awaiting.tsx'), 'utf-8');
+    assert.ok(src.includes('Në pritje të të dhënave / Awaiting data'));
+    assert.ok(src.includes('Nuk pikëzohet / Not scored'));
+    assert.ok(src.includes('export function AwaitingPhoto') || src.includes('export const AwaitingPhoto'));
+    const grid = fs.readFileSync(path.resolve(process.cwd(), 'components/figurat-politike/PoliticianGridCard.tsx'), 'utf-8');
+    assert.ok(grid.includes('onError'));
+    assert.ok(grid.includes('AwaitingPhoto'));
+    const ring = fs.readFileSync(path.resolve(process.cwd(), 'components/figurat-politike/primitives/ScoreRing.tsx'), 'utf-8');
+    assert.ok(ring.includes('onError') && ring.includes('AwaitingPhoto'));
   });
 
   test('Cloud Scheduler JSON spec is valid and enforces retry/backoff policy', () => {
