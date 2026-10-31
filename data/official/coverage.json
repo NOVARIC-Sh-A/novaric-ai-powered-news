@@ -44,31 +44,35 @@
     "photo": {
       "filled": 246,
       "awaiting": 33
+    },
+    "alias": {
+      "filled": 1,
+      "awaiting": 278
     }
   },
   "retrievedAt": "2026-10-31",
   "browserFactsApplied": [
     "Edi Rama",
-    "Adea Pirdeni"
+    "Adea Pirdeni",
+    "vip25",
+    "vip228",
+    "vip254",
+    "vip16",
+    "vip169",
+    "vip140",
+    "vip70",
+    "vip245",
+    "vip26",
+    "vip202"
   ],
   "browserFactsNotAdded": [
     "diella",
-    "Albana Koçiu",
-    "Ervin Demo",
     "Ferit Hoxha",
-    "Petrit Malaj",
     "Enea Karakaci",
     "Ermal Nufi",
-    "Toni Gogu",
-    "Mirela Kumbaro",
-    "Klodiana Spahiu",
     "Andis Salla",
-    "Delina Ibrahimaj",
-    "Blendi Gonxhja",
     "Sofjan Jaupaj",
     "Majlinda Dhuka",
-    "Erjona Ismaili",
     "Bajram Begaj"
-  ],
-  "unresolved": 8
+  ]
 }

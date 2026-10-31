@@ -2142,8 +2142,10 @@
       "name": "Toni Gogu",
       "category": "Politikë (PS)",
       "party": "PS",
-      "primaryRole": "Ish-deputet i Kuvendit të Shqipërisë",
-      "secondaryRoles": [],
+      "primaryRole": "Ministër i Drejtësisë",
+      "secondaryRoles": [
+        "Ish-deputet i Kuvendit të Shqipërisë"
+      ],
       "parliamentaryStatus": "former_mp",
       "detentionStatus": "none",
       "caseStatus": "none",
@@ -2221,10 +2223,10 @@
           "notes": "Parliament CV"
         },
         "currentRole": {
-          "value": "Ish-deputet i Kuvendit të Shqipërisë",
-          "sourceUrl": "https://kuvendiapi.azurewebsites.net/api/anetaret/3b4392b4-1ebf-4402-92fd-4dab790860b0",
+          "value": "Ministër i Drejtësisë",
+          "sourceUrl": "https://kryeministria.al/ministrat/toni-gogu/",
           "retrievedAt": "2026-10-31",
-          "notes": "Kuvendi register row is not marked sitting and the person is not on the KQZ 2025 list of 140; the row has no mandate dates"
+          "notes": "Ministry profile header retrieved 2026-10-31: MINISTËR I DREJTËSISË. Applied to every card with this exact name."
         }
       },
       "sourceRetrievedAt": "2026-10-31",
@@ -2242,6 +2244,10 @@
         {
           "label": "Wikidata Q136351034",
           "url": "https://www.wikidata.org/wiki/Q136351034"
+        },
+        {
+          "label": "Ministër i Drejtësisë",
+          "url": "https://kryeministria.al/ministrat/toni-gogu/"
         }
       ],
       "affiliations": [
@@ -3419,8 +3425,10 @@
       "name": "Albana Koçiu",
       "category": "Politikë (PS)",
       "party": "PS",
-      "primaryRole": "Deputet i Kuvendit të Shqipërisë",
-      "secondaryRoles": [],
+      "primaryRole": "Zëvendëskryeministër",
+      "secondaryRoles": [
+        "Deputet i Kuvendit të Shqipërisë"
+      ],
       "parliamentaryStatus": "active_mp",
       "detentionStatus": "none",
       "caseStatus": "none",
@@ -3493,9 +3501,10 @@
           "notes": "Parliament CV"
         },
         "currentRole": {
-          "value": "Deputet i Kuvendit të Shqipërisë",
-          "sourceUrl": "https://kuvendiapi.azurewebsites.net/api/anetaret/7caf691b-e5ed-47f1-8502-bb96e8082dba",
-          "retrievedAt": "2026-10-31"
+          "value": "Zëvendëskryeministër",
+          "sourceUrl": "https://kryeministria.al/ministrat/albana-kociu/",
+          "retrievedAt": "2026-10-31",
+          "notes": "Ministry profile header retrieved 2026-10-31: ZËVENDËSKRYEMINISTËR."
         },
         "mandates": {
           "value": "1",
@@ -3536,6 +3545,10 @@
         {
           "label": "Wikidata Q131409942",
           "url": "https://www.wikidata.org/wiki/Q131409942"
+        },
+        {
+          "label": "Zëvendëskryeministër",
+          "url": "https://kryeministria.al/ministrat/albana-kociu/"
         }
       ],
       "affiliations": [
@@ -3581,8 +3594,10 @@
       "name": "Blendi Gonxhja",
       "category": "Politikë (PS)",
       "party": "PS",
-      "primaryRole": "Deputet i Kuvendit të Shqipërisë",
-      "secondaryRoles": [],
+      "primaryRole": "Ministër i Turizmit, Kulturës dhe Sportit",
+      "secondaryRoles": [
+        "Deputet i Kuvendit të Shqipërisë"
+      ],
       "parliamentaryStatus": "active_mp",
       "detentionStatus": "none",
       "caseStatus": "none",
@@ -3644,9 +3659,10 @@
           "retrievedAt": "2026-10-31"
         },
         "currentRole": {
-          "value": "Deputet i Kuvendit të Shqipërisë",
-          "sourceUrl": "https://kuvendiapi.azurewebsites.net/api/anetaret/acbe8c96-9047-4276-8b15-0a7aceebf715",
-          "retrievedAt": "2026-10-31"
+          "value": "Ministër i Turizmit, Kulturës dhe Sportit",
+          "sourceUrl": "https://kryeministria.al/ministrat/blendi-gonxhja/",
+          "retrievedAt": "2026-10-31",
+          "notes": "Ministry profile header retrieved 2026-10-31: MINISTËR I TURIZMIT, KULTURËS DHE SPORTIT."
         },
         "mandates": {
           "value": "1",
@@ -3699,6 +3715,10 @@
         {
           "label": "Wikidata Q124972664",
           "url": "https://www.wikidata.org/wiki/Q124972664"
+        },
+        {
+          "label": "Ministër i Turizmit, Kulturës dhe Sportit",
+          "url": "https://kryeministria.al/ministrat/blendi-gonxhja/"
         }
       ],
       "affiliations": [
@@ -4000,7 +4020,7 @@
           "value": "Ministër i Administratës Publike",
           "sourceUrl": "https://president.al/adea-pirdeni-betohet-para-presidentit-te-republikes-si-minister-i-administrates-publike/",
           "retrievedAt": "2026-10-31",
-          "notes": "president.al news of 23 October 2026 states that Adea Pirdeni takes the oath as Ministër i Administratës Publike. Retrieved 2026-10-31. The cabinet slug https://kryeministria.al/ministrat/adea-pirdeni/ was paired with that title by page order, so the oath article is the source. Wikidata Q130357788 has an undated broader label and was not used as the title."
+          "notes": "president.al news of 23 October 2026 states that Adea Pirdeni takes the oath as Ministër i Administratës Publike. Retrieved 2026-10-31."
         },
         "mandates": {
           "value": "1",
@@ -10340,8 +10360,10 @@
       "name": "Klodiana Spahiu",
       "category": "Politikë (PS)",
       "party": "PS",
-      "primaryRole": "Deputet i Kuvendit të Shqipërisë",
-      "secondaryRoles": [],
+      "primaryRole": "Ministre e Shëndetësisë dhe Mirëqenies Sociale",
+      "secondaryRoles": [
+        "Deputet i Kuvendit të Shqipërisë"
+      ],
       "parliamentaryStatus": "active_mp",
       "detentionStatus": "none",
       "caseStatus": "none",
@@ -10414,9 +10436,10 @@
           "retrievedAt": "2026-10-31"
         },
         "currentRole": {
-          "value": "Deputet i Kuvendit të Shqipërisë",
-          "sourceUrl": "https://kuvendiapi.azurewebsites.net/api/anetaret/d9f9c715-8fae-44c6-9b0f-adb012b6073e",
-          "retrievedAt": "2026-10-31"
+          "value": "Ministre e Shëndetësisë dhe Mirëqenies Sociale",
+          "sourceUrl": "https://kryeministria.al/ministrat/klodiana-spahiu/",
+          "retrievedAt": "2026-10-31",
+          "notes": "No header title. Profile bio retrieved 2026-10-31: Prej shtatorit 2026, Dr. Klodiana Spahiu ushtron detyrën e Ministres së Shëndetësisë dhe Mirëqenies Sociale."
         },
         "mandates": {
           "value": "2",
@@ -10464,6 +10487,10 @@
         {
           "label": "Wikidata Q31965321",
           "url": "https://www.wikidata.org/wiki/Q31965321"
+        },
+        {
+          "label": "Ministre e Shëndetësisë dhe Mirëqenies Sociale",
+          "url": "https://kryeministria.al/ministrat/klodiana-spahiu/"
         }
       ],
       "affiliations": [
@@ -20632,8 +20659,10 @@
       "name": "Mirela Kumbaro",
       "category": "Politikë (PS)",
       "party": "PS",
-      "primaryRole": "Deputet i Kuvendit të Shqipërisë",
-      "secondaryRoles": [],
+      "primaryRole": "Ministër i Arsimit",
+      "secondaryRoles": [
+        "Deputet i Kuvendit të Shqipërisë"
+      ],
       "parliamentaryStatus": "active_mp",
       "detentionStatus": "none",
       "caseStatus": "none",
@@ -20712,9 +20741,10 @@
           "notes": "Parliament CV"
         },
         "currentRole": {
-          "value": "Deputet i Kuvendit të Shqipërisë",
-          "sourceUrl": "https://kuvendiapi.azurewebsites.net/api/anetaret/f3a68a4a-c3a3-45e3-9002-9a89c7426d44",
-          "retrievedAt": "2026-10-31"
+          "value": "Ministër i Arsimit",
+          "sourceUrl": "https://kryeministria.al/ministrat/mirela-kumbaro-furxhi/",
+          "retrievedAt": "2026-10-31",
+          "notes": "Ministry profile header retrieved 2026-10-31: MINISTËR I ARSIMIT. The page names her Mirela Kumbaro Furxhi; the card name stays Mirela Kumbaro."
         },
         "mandates": {
           "value": "1",
@@ -20725,6 +20755,12 @@
           "value": "3",
           "sourceUrl": "mailto:mirela.furxhi@parlament.al",
           "retrievedAt": "2026-10-31"
+        },
+        "alias": {
+          "value": "Mirela Kumbaro Furxhi",
+          "sourceUrl": "https://kryeministria.al/ministrat/mirela-kumbaro-furxhi/",
+          "retrievedAt": "2026-10-31",
+          "notes": "Official name on the ministry profile. The card name is unchanged."
         }
       },
       "sourceRetrievedAt": "2026-10-31",
@@ -20749,6 +20785,10 @@
         {
           "label": "Wikidata Q15724978",
           "url": "https://www.wikidata.org/wiki/Q15724978"
+        },
+        {
+          "label": "Ministër i Arsimit",
+          "url": "https://kryeministria.al/ministrat/mirela-kumbaro-furxhi/"
         }
       ],
       "affiliations": [
@@ -20785,7 +20825,10 @@
       },
       "officialPhotoPath": "/politicians/official/vip140.jpg",
       "photoLicence": "Public domain",
-      "photoRetrievedAt": "2026-10-31"
+      "photoRetrievedAt": "2026-10-31",
+      "aliases": [
+        "Mirela Kumbaro Furxhi"
+      ]
     },
     {
       "id": "vip141",
@@ -25117,8 +25160,10 @@
       "name": "Toni Gogu",
       "category": "Politikë (PS)",
       "party": "PS",
-      "primaryRole": "Ish-deputet i Kuvendit të Shqipërisë",
-      "secondaryRoles": [],
+      "primaryRole": "Ministër i Drejtësisë",
+      "secondaryRoles": [
+        "Ish-deputet i Kuvendit të Shqipërisë"
+      ],
       "parliamentaryStatus": "former_mp",
       "detentionStatus": "none",
       "caseStatus": "none",
@@ -25196,10 +25241,10 @@
           "notes": "Parliament CV"
         },
         "currentRole": {
-          "value": "Ish-deputet i Kuvendit të Shqipërisë",
-          "sourceUrl": "https://kuvendiapi.azurewebsites.net/api/anetaret/3b4392b4-1ebf-4402-92fd-4dab790860b0",
+          "value": "Ministër i Drejtësisë",
+          "sourceUrl": "https://kryeministria.al/ministrat/toni-gogu/",
           "retrievedAt": "2026-10-31",
-          "notes": "Kuvendi register row is not marked sitting and the person is not on the KQZ 2025 list of 140; the row has no mandate dates"
+          "notes": "Ministry profile header retrieved 2026-10-31: MINISTËR I DREJTËSISË. Applied to every card with this exact name."
         }
       },
       "sourceRetrievedAt": "2026-10-31",
@@ -25217,6 +25262,10 @@
         {
           "label": "Wikidata Q136351034",
           "url": "https://www.wikidata.org/wiki/Q136351034"
+        },
+        {
+          "label": "Ministër i Drejtësisë",
+          "url": "https://kryeministria.al/ministrat/toni-gogu/"
         }
       ],
       "affiliations": [
@@ -30266,8 +30315,10 @@
       "name": "Erjona Ismaili",
       "category": "Politikë (PS)",
       "party": "PS",
-      "primaryRole": "Deputet i Kuvendit të Shqipërisë",
-      "secondaryRoles": [],
+      "primaryRole": "Ministër Shteti për Marrëdhëniet me Parlamentin",
+      "secondaryRoles": [
+        "Deputet i Kuvendit të Shqipërisë"
+      ],
       "parliamentaryStatus": "active_mp",
       "detentionStatus": "none",
       "caseStatus": "none",
@@ -30345,9 +30396,10 @@
           "retrievedAt": "2026-10-31"
         },
         "currentRole": {
-          "value": "Deputet i Kuvendit të Shqipërisë",
-          "sourceUrl": "https://kuvendiapi.azurewebsites.net/api/anetaret/a3a1e759-bcae-4b01-8269-6b5ffecd0bef",
-          "retrievedAt": "2026-10-31"
+          "value": "Ministër Shteti për Marrëdhëniet me Parlamentin",
+          "sourceUrl": "https://kryeministria.al/ministrat/erjona-ismaili/",
+          "retrievedAt": "2026-10-31",
+          "notes": "Ministry profile header retrieved 2026-10-31: MINISTËR SHTETI PËR MARRËDHËNIET ME PARLAMENTIN."
         },
         "mandates": {
           "value": "1",
@@ -30382,6 +30434,10 @@
         {
           "label": "Wikidata Q139088605",
           "url": "https://www.wikidata.org/wiki/Q139088605"
+        },
+        {
+          "label": "Ministër Shteti për Marrëdhëniet me Parlamentin",
+          "url": "https://kryeministria.al/ministrat/erjona-ismaili/"
         }
       ],
       "affiliations": [
@@ -34303,8 +34359,10 @@
       "name": "Ervin Demo",
       "category": "Politikë (PS)",
       "party": "PS",
-      "primaryRole": "Deputet i Kuvendit të Shqipërisë",
-      "secondaryRoles": [],
+      "primaryRole": "Ministër i Punëve të Brendshme",
+      "secondaryRoles": [
+        "Deputet i Kuvendit të Shqipërisë"
+      ],
       "parliamentaryStatus": "active_mp",
       "detentionStatus": "none",
       "caseStatus": "none",
@@ -34377,9 +34435,10 @@
           "retrievedAt": "2026-10-31"
         },
         "currentRole": {
-          "value": "Deputet i Kuvendit të Shqipërisë",
-          "sourceUrl": "https://kuvendiapi.azurewebsites.net/api/anetaret/56bb951f-a40d-49a4-b2d7-8dedda22fc35",
-          "retrievedAt": "2026-10-31"
+          "value": "Ministër i Punëve të Brendshme",
+          "sourceUrl": "https://kryeministria.al/ministrat/ervin-demo/",
+          "retrievedAt": "2026-10-31",
+          "notes": "Ministry profile header retrieved 2026-10-31: MINISTËR I PUNËVE TË BRENDSHME."
         },
         "mandates": {
           "value": "1",
@@ -34420,6 +34479,10 @@
         {
           "label": "Wikidata Q134542622",
           "url": "https://www.wikidata.org/wiki/Q134542622"
+        },
+        {
+          "label": "Ministër i Punëve të Brendshme",
+          "url": "https://kryeministria.al/ministrat/ervin-demo/"
         }
       ],
       "affiliations": [
@@ -36841,8 +36904,10 @@
       "name": "Delina Ibrahimaj",
       "category": "Politikë (PS)",
       "party": "PS",
-      "primaryRole": "Deputet i Kuvendit të Shqipërisë",
-      "secondaryRoles": [],
+      "primaryRole": "Ministër i Ekonomisë dhe Inovacionit",
+      "secondaryRoles": [
+        "Deputet i Kuvendit të Shqipërisë"
+      ],
       "parliamentaryStatus": "active_mp",
       "detentionStatus": "none",
       "caseStatus": "none",
@@ -36909,9 +36974,10 @@
           "retrievedAt": "2026-10-31"
         },
         "currentRole": {
-          "value": "Deputet i Kuvendit të Shqipërisë",
-          "sourceUrl": "https://kuvendiapi.azurewebsites.net/api/anetaret/25eed889-dd3f-4db3-9061-f23d4666e915",
-          "retrievedAt": "2026-10-31"
+          "value": "Ministër i Ekonomisë dhe Inovacionit",
+          "sourceUrl": "https://kryeministria.al/ministrat/delina-ibrahimaj/",
+          "retrievedAt": "2026-10-31",
+          "notes": "Ministry profile header retrieved 2026-10-31: MINISTËR I EKONOMISË DHE INOVACIONIT."
         },
         "mandates": {
           "value": "1",
@@ -36958,6 +37024,10 @@
         {
           "label": "Wikidata Q108698181",
           "url": "https://www.wikidata.org/wiki/Q108698181"
+        },
+        {
+          "label": "Ministër i Ekonomisë dhe Inovacionit",
+          "url": "https://kryeministria.al/ministrat/delina-ibrahimaj/"
         }
       ],
       "affiliations": [
@@ -38159,8 +38229,10 @@
       "name": "Petrit Malaj",
       "category": "Politikë (PS)",
       "party": "PS",
-      "primaryRole": "Deputet i Kuvendit të Shqipërisë",
-      "secondaryRoles": [],
+      "primaryRole": "Ministër i Financave",
+      "secondaryRoles": [
+        "Deputet i Kuvendit të Shqipërisë"
+      ],
       "parliamentaryStatus": "active_mp",
       "detentionStatus": "none",
       "caseStatus": "none",
@@ -38239,9 +38311,10 @@
           "notes": "Parliament CV"
         },
         "currentRole": {
-          "value": "Deputet i Kuvendit të Shqipërisë",
-          "sourceUrl": "https://kuvendiapi.azurewebsites.net/api/anetaret/cc56ba0c-3c2f-4b75-97ad-f9080b544cef",
-          "retrievedAt": "2026-10-31"
+          "value": "Ministër i Financave",
+          "sourceUrl": "https://kryeministria.al/ministrat/petrit-malaj/",
+          "retrievedAt": "2026-10-31",
+          "notes": "Ministry profile header retrieved 2026-10-31: MINISTËR I FINANCAVE."
         },
         "mandates": {
           "value": "1",
@@ -38276,6 +38349,10 @@
         {
           "label": "Wikidata Q135095772",
           "url": "https://www.wikidata.org/wiki/Q135095772"
+        },
+        {
+          "label": "Ministër i Financave",
+          "url": "https://kryeministria.al/ministrat/petrit-malaj/"
         }
       ],
       "affiliations": [

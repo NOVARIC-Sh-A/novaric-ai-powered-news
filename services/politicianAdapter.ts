@@ -140,7 +140,9 @@ export function toPoliticianUI(dto: any): VipProfile {
             ? dto.paragonAnalysis.slice(0, 7).map((d: any) => typeof d?.score === 'number' ? d.score : null)
             : null),
         compositeHistory: dto.compositeHistory || (baseline as any)?.compositeHistory || null,
-        bio: dto.bio || null,
+        bio: dto.bio
+          ? { ...dto.bio, aliases: Array.isArray(dto.aliases) && dto.aliases.length ? dto.aliases : (dto.bio.aliases || []) }
+          : (Array.isArray(dto.aliases) && dto.aliases.length ? { aliases: dto.aliases } : null),
         recentActivity: Array.isArray(dto.recentActivity) ? dto.recentActivity : [],
         assetDeclaration: dto.assetDeclaration && (dto.assetDeclaration.year || dto.assetDeclaration.categories?.length) ? dto.assetDeclaration : null,
         assetTimeline: Array.isArray(dto.assetTimeline) ? dto.assetTimeline : [],
@@ -152,6 +154,7 @@ export function toPoliticianUI(dto: any): VipProfile {
         affiliations: Array.isArray(dto.affiliations) ? dto.affiliations : [],
         officialLinks: Array.isArray(dto.officialLinks) ? dto.officialLinks : [],
         fieldSources: dto.fieldSources && typeof dto.fieldSources === 'object' ? dto.fieldSources : null,
+        aliases: Array.isArray(dto.aliases) ? dto.aliases : (Array.isArray(dto.bio?.aliases) ? dto.bio.aliases : []),
         parliamentaryGroup: dto.parliamentaryGroup || raw?.parliamentary_group || null,
         officialPhotoPath: dto.officialPhotoPath || null,
         photoLicence: dto.photoLicence || (dto.officialPhoto && dto.officialPhoto.licence) || null,

@@ -871,6 +871,7 @@ function novaricApiPlugin() {
               scoring_suspension_notice: politician.scoring_suspension_notice || "Vlerësimet PARAGON® janë përkohësisht të pezulluara për verifikimin e burimeve dhe integritetit të të dhënave.",
               bio: {
                 fullName: politician.name || null,
+                aliases: Array.isArray(politician.aliases) ? politician.aliases : [],
                 education: politician.education || politician.bio?.education || null,
                 profession: politician.profession || politician.bio?.profession || null,
                 email: politician.parliament_email || politician.email || politician.bio?.email || null,

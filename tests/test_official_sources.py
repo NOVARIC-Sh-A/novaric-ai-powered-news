@@ -165,16 +165,42 @@ class OfficialSourceRulesTest(unittest.TestCase):
                 "mandates": [],
             },
             {
+                "id": "vip16",
                 "name": "Toni Gogu",
                 "primaryRole": "Ish-deputet i Kuvendit të Shqipërisë",
                 "fieldSources": {"currentRole": {"value": "Ish-deputet i Kuvendit të Shqipërisë", "sourceUrl": "https://kuvendiapi.azurewebsites.net/api/anetaret/example"}},
                 "officialLinks": [],
                 "secondaryRoles": [],
             },
+            {
+                "id": "vip169",
+                "name": "Toni Gogu",
+                "primaryRole": "Ish-deputet i Kuvendit të Shqipërisë",
+                "fieldSources": {"currentRole": {"value": "Ish-deputet i Kuvendit të Shqipërisë", "sourceUrl": "https://kuvendiapi.azurewebsites.net/api/anetaret/example"}},
+                "officialLinks": [],
+                "secondaryRoles": [],
+            },
+            {
+                "name": "Mirela Kumbaro",
+                "primaryRole": "Deputet i Kuvendit të Shqipërisë",
+                "fieldSources": {"currentRole": {"value": "Deputet i Kuvendit të Shqipërisë", "sourceUrl": "https://kqz.gov.al"}, "fullName": {"value": "Mirela Kumbaro", "sourceUrl": "https://kuvendiapi.azurewebsites.net/api/anetaret/example"}},
+                "officialLinks": [],
+                "secondaryRoles": [],
+            },
+            {
+                "name": "Klodiana Spahiu",
+                "primaryRole": "Deputet i Kuvendit të Shqipërisë",
+                "fieldSources": {"currentRole": {"value": "Deputet i Kuvendit të Shqipërisë", "sourceUrl": "https://kqz.gov.al"}},
+                "officialLinks": [],
+                "secondaryRoles": [],
+            },
             {"name": "Bajram Begaj", "primaryRole": None, "fieldSources": {}, "officialLinks": [], "mandates": []},
         ]
         result = apply_confirmed_browser_facts(profiles)
-        self.assertEqual([profile["name"] for profile in profiles], ["Edi Rama", "Adea Pirdeni", "Toni Gogu", "Bajram Begaj"])
+        self.assertEqual(
+            [profile["name"] for profile in profiles],
+            ["Edi Rama", "Adea Pirdeni", "Toni Gogu", "Toni Gogu", "Mirela Kumbaro", "Klodiana Spahiu", "Bajram Begaj"],
+        )
         self.assertNotIn("diella", result["applied"])
         self.assertIn("diella", result["notAdded"])
         rama = profiles[0]
@@ -185,8 +211,24 @@ class OfficialSourceRulesTest(unittest.TestCase):
         self.assertEqual(pirdeni["primaryRole"], "Ministër i Administratës Publike")
         self.assertIn("president.al", pirdeni["fieldSources"]["currentRole"]["sourceUrl"])
         self.assertIn("Deputet i Kuvendit të Shqipërisë", pirdeni["secondaryRoles"])
-        self.assertEqual(profiles[2]["primaryRole"], "Ish-deputet i Kuvendit të Shqipërisë")
-        begaj = profiles[3]
+        for gogu in (profiles[2], profiles[3]):
+            self.assertEqual(gogu["primaryRole"], "Ministër i Drejtësisë")
+            self.assertIn("kryeministria.al/ministrat/toni-gogu", gogu["fieldSources"]["currentRole"]["sourceUrl"])
+            self.assertIn("Ish-deputet i Kuvendit të Shqipërisë", gogu["secondaryRoles"])
+        mirela = profiles[4]
+        self.assertEqual(mirela["name"], "Mirela Kumbaro")
+        self.assertEqual(mirela["aliases"], ["Mirela Kumbaro Furxhi"])
+        self.assertEqual(mirela["fieldSources"]["alias"]["value"], "Mirela Kumbaro Furxhi")
+        self.assertIn("mirela-kumbaro-furxhi", mirela["fieldSources"]["alias"]["sourceUrl"])
+        self.assertEqual(mirela["fieldSources"]["fullName"]["value"], "Mirela Kumbaro")
+        self.assertEqual(mirela["primaryRole"], "Ministër i Arsimit")
+        self.assertIn("Deputet i Kuvendit të Shqipërisë", mirela["secondaryRoles"])
+        spahiu = profiles[5]
+        self.assertEqual(spahiu["primaryRole"], "Ministre e Shëndetësisë dhe Mirëqenies Sociale")
+        self.assertIn("shtatorit 2026", spahiu["fieldSources"]["currentRole"]["notes"])
+        self.assertIn("Deputet i Kuvendit të Shqipërisë", spahiu["secondaryRoles"])
+        self.assertNotIn("Albana Koçiu", result["notAdded"])
+        begaj = profiles[6]
         self.assertEqual(begaj["dateOfBirth"], "1967-03-20")
         self.assertEqual(begaj["placeOfBirth"], "Rrogozhinë")
         self.assertIn("Universitetin e Tiranës", begaj["education"])

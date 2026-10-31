@@ -82,6 +82,7 @@ FIELDS = (
     "constituency",
     "officialLinks",
     "photo",
+    "alias",
 )
 
 
@@ -1440,8 +1441,8 @@ EXHAUSTED_IDENTITY = (
     "public page. Earlier-legislature biography files are not in the current register snapshot."
 )
 
-# Titles on https://kryeministria.al/menu-qeveria/ were paired with names by page order and URL slug.
-# Only rows with an independent prose source, or a Wikidata office that names the same post, are stored.
+# Adea Pirdeni's title is the oath article. The other ministers below were read from
+# their own kryeministria.al profile pages on 2026-10-31, not from cabinet page order.
 CONFIRMED_CABINET_ROLES = (
     {
         "name": "Adea Pirdeni",
@@ -1449,29 +1450,29 @@ CONFIRMED_CABINET_ROLES = (
         "sourceUrl": PIRDENI_OATH_URL,
         "notes": (
             "president.al news of 23 October 2026 states that Adea Pirdeni takes the oath as "
-            "Ministër i Administratës Publike. Retrieved 2026-10-31. The cabinet slug "
-            "https://kryeministria.al/ministrat/adea-pirdeni/ was paired with that title by page order, "
-            "so the oath article is the source. Wikidata Q130357788 has an undated broader label and was not used as the title."
+            "Ministër i Administratës Publike. Retrieved 2026-10-31."
         ),
     },
 )
+VERIFIED_MINISTER_PROFILES = (
+    {"cardName": "Albana Koçiu", "role": "Zëvendëskryeministër", "sourceUrl": "https://kryeministria.al/ministrat/albana-kociu/", "notes": "Ministry profile header retrieved 2026-10-31: ZËVENDËSKRYEMINISTËR."},
+    {"cardName": "Ervin Demo", "role": "Ministër i Punëve të Brendshme", "sourceUrl": "https://kryeministria.al/ministrat/ervin-demo/", "notes": "Ministry profile header retrieved 2026-10-31: MINISTËR I PUNËVE TË BRENDSHME."},
+    {"cardName": "Petrit Malaj", "role": "Ministër i Financave", "sourceUrl": "https://kryeministria.al/ministrat/petrit-malaj/", "notes": "Ministry profile header retrieved 2026-10-31: MINISTËR I FINANCAVE."},
+    {"cardName": "Toni Gogu", "role": "Ministër i Drejtësisë", "sourceUrl": "https://kryeministria.al/ministrat/toni-gogu/", "notes": "Ministry profile header retrieved 2026-10-31: MINISTËR I DREJTËSISË. Applied to every card with this exact name."},
+    {"cardName": "Mirela Kumbaro", "alias": "Mirela Kumbaro Furxhi", "role": "Ministër i Arsimit", "sourceUrl": "https://kryeministria.al/ministrat/mirela-kumbaro-furxhi/", "notes": "Ministry profile header retrieved 2026-10-31: MINISTËR I ARSIMIT. The page names her Mirela Kumbaro Furxhi; the card name stays Mirela Kumbaro."},
+    {"cardName": "Klodiana Spahiu", "role": "Ministre e Shëndetësisë dhe Mirëqenies Sociale", "sourceUrl": "https://kryeministria.al/ministrat/klodiana-spahiu/", "notes": "No header title. Profile bio retrieved 2026-10-31: Prej shtatorit 2026, Dr. Klodiana Spahiu ushtron detyrën e Ministres së Shëndetësisë dhe Mirëqenies Sociale."},
+    {"cardName": "Delina Ibrahimaj", "role": "Ministër i Ekonomisë dhe Inovacionit", "sourceUrl": "https://kryeministria.al/ministrat/delina-ibrahimaj/", "notes": "Ministry profile header retrieved 2026-10-31: MINISTËR I EKONOMISË DHE INOVACIONIT."},
+    {"cardName": "Blendi Gonxhja", "role": "Ministër i Turizmit, Kulturës dhe Sportit", "sourceUrl": "https://kryeministria.al/ministrat/blendi-gonxhja/", "notes": "Ministry profile header retrieved 2026-10-31: MINISTËR I TURIZMIT, KULTURËS DHE SPORTIT."},
+    {"cardName": "Erjona Ismaili", "role": "Ministër Shteti për Marrëdhëniet me Parlamentin", "sourceUrl": "https://kryeministria.al/ministrat/erjona-ismaili/", "notes": "Ministry profile header retrieved 2026-10-31: MINISTËR SHTETI PËR MARRËDHËNIET ME PARLAMENTIN."},
+)
 CABINET_ROLES_NOT_ADDED = (
     {"name": "diella", "reason": "Slug only. No person was created for this cabinet URL."},
-    {"name": "Albana Koçiu", "reason": "In the 279. Deputy-prime-minister title is page-order only. Wikidata Q131409942 records an undated health-and-welfare ministry, which does not confirm that title."},
-    {"name": "Ervin Demo", "reason": "In the 279. Interior-minister title is page-order only. Wikidata Q134542622 records an undated mayoralty of Berat, not this office."},
     {"name": "Ferit Hoxha", "reason": "Not in the 279. No profile was created."},
-    {"name": "Petrit Malaj", "reason": "In the 279. Finance-minister title is page-order only. Wikidata Q135095772 has no position statement."},
     {"name": "Enea Karakaci", "reason": "Not in the 279. No profile was created."},
     {"name": "Ermal Nufi", "reason": "Not in the 279. No profile was created."},
-    {"name": "Toni Gogu", "reason": "In the 279 (two cards). Justice-minister title is page-order only. Wikidata Q136351034 has no position statement."},
-    {"name": "Mirela Kumbaro", "reason": "In the 279. Education-minister title is page-order only. Wikidata Q15724978 records undated culture and tourism posts, not education."},
-    {"name": "Klodiana Spahiu", "reason": "In the 279. Health-minister title is page-order only. Wikidata Q31965321 has no matching office."},
     {"name": "Andis Salla", "reason": "Not in the 279. No profile was created."},
-    {"name": "Delina Ibrahimaj", "reason": "In the 279. Economy-and-innovation title is page-order only. Wikidata Q108698181 records an undated finance post, not this office."},
-    {"name": "Blendi Gonxhja", "reason": "In the 279. Tourism-culture-sport title is page-order only. Wikidata Q124972664 has no position statement."},
     {"name": "Sofjan Jaupaj", "reason": "Not in the 279. No profile was created."},
     {"name": "Majlinda Dhuka", "reason": "Not in the 279. No profile was created."},
-    {"name": "Erjona Ismaili", "reason": "In the 279. Parliamentary-relations title is page-order only. Wikidata Q139088605 has no position statement."},
     {"name": "Bajram Begaj", "reason": "Verified biography on president.al was not attached because the 279 contains no profile with this name. No profile was created."},
 )
 KQZ_CANDIDATE_NEGATIVES = (
@@ -1525,6 +1526,23 @@ def apply_confirmed_browser_facts(profiles: List[Dict[str, Any]], retrieved_at: 
             continue
         apply_specific_role(profile, office["role"], office["sourceUrl"], retrieved_at, office["notes"])
         applied.append(office["name"])
+    for office in VERIFIED_MINISTER_PROFILES:
+        cards = [profile for profile in profiles if fold(profile.get("name") or "") == fold(office["cardName"])]
+        for profile in cards:
+            apply_specific_role(profile, office["role"], office["sourceUrl"], retrieved_at, office["notes"])
+            remember_link(profile, office["role"], office["sourceUrl"])
+            alias = office.get("alias")
+            if alias:
+                aliases = profile.setdefault("aliases", [])
+                if alias not in aliases:
+                    aliases.append(alias)
+                profile.setdefault("fieldSources", {})["alias"] = {
+                    "value": alias,
+                    "sourceUrl": office["sourceUrl"],
+                    "retrievedAt": retrieved_at,
+                    "notes": "Official name on the ministry profile. The card name is unchanged.",
+                }
+            applied.append(profile.get("id") or office["cardName"])
     biography = begaj_biography()
     president = profile_for_office(biography["name"], profiles)
     if president:

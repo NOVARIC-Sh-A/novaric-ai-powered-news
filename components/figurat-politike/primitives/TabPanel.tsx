@@ -123,6 +123,11 @@ function FieldValue({ value }: { value?: string | null }) {
               <div className="flex flex-col py-1.5 border-b border-slate-100 dark:border-slate-800/80">
                 <span className="text-[11px] text-slate-400 dark:text-slate-500 font-medium">Emri i plotë / Full name</span>
                 <span className="mt-0.5"><FieldValue value={bio.fullName || name} /></span>
+                {Array.isArray((bio as any).aliases) && (bio as any).aliases.length > 0 && (
+                  <span className="mt-1 text-[11px] text-slate-500 dark:text-slate-400">
+                    Emër zyrtar / Official name: {(bio as any).aliases.join(', ')}
+                  </span>
+                )}
               </div>
 
               <div className="flex flex-col py-1.5 border-b border-slate-100 dark:border-slate-800/80">
