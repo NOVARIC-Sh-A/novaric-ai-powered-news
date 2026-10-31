@@ -7,6 +7,7 @@ import { resolveOfficialPhotoUrl } from '../../utils/officialPhoto';
 import { CANONICAL_PARAGON_DIMENSIONS } from '../../types/politician';
 import { ZodiacChip } from './primitives/ZodiacChip';
 import { useDotTooltip } from './SharedDotTooltip';
+import { useParagonRatingsEnabled } from './useParagonRatings';
 
 export interface PoliticianGridCardProps {
   politician?: VipProfile;
@@ -25,6 +26,7 @@ export const PoliticianGridCard: React.FC<PoliticianGridCardProps> = ({
   onClick,
   className = '',
 }) => {
+  const ratingsSwitch = useParagonRatingsEnabled();
   const targetPolitician = politician || profile;
   if (!targetPolitician) return null;
 
@@ -39,7 +41,9 @@ export const PoliticianGridCard: React.FC<PoliticianGridCardProps> = ({
   const partySlug = (targetPolitician as any).party || normalizePartySlug(targetPolitician.category);
   const pc = partyColor(partySlug);
 
-  const composite = (targetPolitician as any).composite ?? targetPolitician.dynamicScore ?? null;
+  const ratingsOff = !ratingsSwitch || (targetPolitician as any).ratingsEnabled === false || (targetPolitician as any).scoringSuspended === true || (targetPolitician as any).scoring_suspended === true;
+  const composite = ratingsOff ? null : ((targetPolitician as any).composite ?? targetPolitician.dynamicScore ?? null);
+  const coverage = (targetPolitician as any).coverage || null;
   const delta = (targetPolitician as any).compositeDelta ?? null;
   const dob = (targetPolitician as any).dateOfBirth || targetPolitician.dateOfBirth || null;
   const zone = (targetPolitician as any).electoralZone || null;
@@ -144,14 +148,29 @@ export const PoliticianGridCard: React.FC<PoliticianGridCardProps> = ({
           </span>
         </div>
 
-        {/* Top-Right: Audit / Suspension Badge */}
         <div className="absolute top-2 right-2">
-          <div
-            className="px-1.5 py-0.5 rounded text-[10px] font-bold text-amber-800 dark:text-amber-200 bg-amber-100/90 dark:bg-amber-950/80 border border-amber-300 dark:border-amber-700 shadow-sm"
-            title="Vlerësimet PARAGON® janë përkohësisht të pezulluara për verifikimin e burimeve dhe integritetit të të dhënave."
-          >
-            Audit
-          </div>
+          {ratingsOff ? (
+            <div
+              className="px-1.5 py-0.5 rounded text-[10px] font-bold text-amber-800 dark:text-amber-200 bg-amber-100/90 dark:bg-amber-950/80 border border-amber-300 dark:border-amber-700 shadow-sm"
+              title="Vlerësimet PARAGON® janë të fikura."
+            >
+              Fikur
+            </div>
+          ) : composite != null ? (
+            <div
+              className="px-1.5 py-0.5 rounded text-[10px] font-bold text-sky-900 dark:text-sky-100 bg-sky-100/90 dark:bg-sky-950/80 border border-sky-300 dark:border-sky-700 shadow-sm"
+              title="Indeks i pjesshëm. Dimensionet pa burim nuk hyjnë në pikë."
+            >
+              {Math.round(composite)} · {coverage || 'pjesshëm'}
+            </div>
+          ) : (
+            <div
+              className="px-1.5 py-0.5 rounded text-[10px] font-bold text-slate-700 dark:text-slate-200 bg-slate-100/90 dark:bg-slate-900/80 border border-slate-300 dark:border-slate-600 shadow-sm"
+              title="Në pritje të të dhënave / Awaiting data"
+            >
+              Në pritje
+            </div>
+          )}
         </div>
       </div>
 

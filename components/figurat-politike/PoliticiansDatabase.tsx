@@ -13,6 +13,7 @@ import { getSurname, albanianAlphabet } from '../../utils/paragonProfileUtils';
 import { normalizePartySlug } from '../../lib/brand-tokens';
 import { AlertTriangle } from 'lucide-react';
 import paragonScoresExport from '../../db/paragon_scores_export.json';
+import { useParagonRatingsEnabled } from './useParagonRatings';
 
 interface PoliticiansDatabaseProps {
   onSelectPolitician?: (id: string | number) => void;
@@ -49,6 +50,7 @@ export const PoliticiansDatabase: React.FC<PoliticiansDatabaseProps> = ({
   onSelectPolitician,
   initialData,
 }) => {
+  const ratingsOn = useParagonRatingsEnabled();
   const seedList = (initialData && initialData.length > 0) ? initialData : defaultSeedProfiles;
   const [politicians, setPoliticians] = useState<VipProfile[]>(seedList);
   const [loading, setLoading] = useState(seedList.length === 0);
@@ -223,7 +225,7 @@ export const PoliticiansDatabase: React.FC<PoliticiansDatabaseProps> = ({
         <StatsStrip
           totalProfiles={loading ? null : totalProfilesCount}
           activeMps={loading ? null : activeMpsCount}
-          paragonActive={loading ? null : paragonActiveCount}
+          paragonActive={loading ? null : (ratingsOn ? paragonActiveCount : 0)}
           loading={loading}
         />
 

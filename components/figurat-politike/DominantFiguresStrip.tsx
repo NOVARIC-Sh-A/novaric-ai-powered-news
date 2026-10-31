@@ -5,6 +5,7 @@ import { partyColor, normalizePartySlug } from '../../lib/brand-tokens';
 import { AWAITING_DATA } from './primitives/awaiting';
 import { ZodiacChip } from './primitives/ZodiacChip';
 import { resolveOfficialPhotoUrl } from '../../utils/officialPhoto';
+import { useParagonRatingsEnabled } from './useParagonRatings';
 
 interface DominantFiguresStripProps {
   politicians: VipProfile[];
@@ -16,6 +17,7 @@ export const DominantFiguresStrip: React.FC<DominantFiguresStripProps> = ({
   onSelectPolitician,
 }) => {
   // Key figures for overview strip
+  const ratingsOn = useParagonRatingsEnabled();
   const topFigures = politicians.slice(0, 4);
 
   if (topFigures.length === 0) return null;
@@ -70,10 +72,12 @@ export const DominantFiguresStrip: React.FC<DominantFiguresStripProps> = ({
               </span>
 
               <span
-                className="text-[10px] font-medium px-1.5 py-0.5 rounded bg-amber-50 text-amber-700 dark:bg-amber-950/40 dark:text-amber-300 border border-amber-200 dark:border-amber-800"
-                title="Vlerësimet PARAGON® janë përkohësisht të pezulluara për verifikimin e burimeve dhe integritetit të të dhënave."
+                className="text-[10px] font-medium px-1.5 py-0.5 rounded bg-sky-50 text-sky-800 dark:bg-sky-950/40 dark:text-sky-200 border border-sky-200 dark:border-sky-800"
+                title={(item as any).scoring_note || 'Indeks i pjesshëm nga fletët e votimit të Kuvendit.'}
               >
-                Auditimi në proces
+                {ratingsOn && typeof (item as any).composite === 'number' && (item as any).scoring_suspended !== true
+                  ? `${Math.round((item as any).composite)} · ${(item as any).coverage || 'pjesshëm'}`
+                  : 'Në pritje'}
               </span>
             </div>
 

@@ -67,6 +67,30 @@ class TestParagonScoring(unittest.TestCase):
         self.assertGreater(composite, 50.0)
         self.assertLessEqual(composite, 100.0)
 
+    def test_missing_inputs_are_excluded_not_invented(self):
+        only_votes = {"vote_participation_pct": 80.0}
+        dimensions, composite, envelope = calculate_paragon_dimensions(only_votes)
+        self.assertEqual(dimensions["Llogaridhënia"], 80.0)
+        self.assertIsNone(dimensions["Angazhimi Politik"])
+        self.assertIsNone(composite)
+        self.assertEqual(envelope["_composite_status"], "insufficient_coverage")
+
+        plenary_and_votes = {
+            "committee_attendance_pct": 90.0,
+            "vote_participation_pct": 70.0,
+            "party_vote_alignment_pct": 60.0,
+        }
+        dimensions, composite, envelope = calculate_paragon_dimensions(plenary_and_votes)
+        self.assertEqual(dimensions["Angazhimi Politik"], 90.0)
+        self.assertEqual(dimensions["Llogaridhënia"], 70.0)
+        self.assertEqual(dimensions["Kohësioni"], 60.0)
+        self.assertIsNone(dimensions["Narrativa"])
+        self.assertIsNone(dimensions["Përfaqësimi"])
+        self.assertEqual(envelope["_composite_status"], "partial")
+        self.assertIsNotNone(composite)
+        self.assertGreater(composite, 0.0)
+        self.assertLess(composite, 100.0)
+
     def test_zodiac_is_not_a_scoring_input(self):
         base = {
             "bills_sponsored_lead": 2,

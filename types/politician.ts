@@ -216,7 +216,10 @@ export interface PoliticianDetail extends VipProfile {
   roleHistory?: RoleHistoryItem[];
   scoringSuspended?: boolean;
   scoringSuspensionNotice?: string;
-  paragonDimensions: ParagonDimensionItem[];
+  ratingsEnabled?: boolean;
+  coverage?: string | null;
+  scoring_note?: string | null;
+  paragonDimensions: ParagonDimensionItem[] | Array<number | null> | null;
   dimensionReadings?: Record<string, DimensionReading>;
   compositeHistory: CompositeHistoryPoint[];
   bio: PoliticianBio;
@@ -258,6 +261,9 @@ export interface PoliticianCardItem extends VipProfile {
   dateOfBirthVerifiedAt?: string;
   scoringSuspended?: boolean;
   scoringSuspensionNotice?: string;
+  ratingsEnabled?: boolean;
+  coverage?: string | null;
+  scoring_note?: string | null;
   paragonDimensions?: number[] | null;
   composite?: number | null;
   compositeDelta?: number | null;

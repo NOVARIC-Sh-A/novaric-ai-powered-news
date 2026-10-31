@@ -118,49 +118,78 @@ def calculate_paragon_dimensions(
     w = weights or DEFAULT_WEIGHTS
 
     # 1. Angazhimi Politik (D1)
-    committee_att_pct = raw_metrics.get("committee_attendance_pct")
-    bills_lead = raw_metrics.get("bills_sponsored_lead", 0)
-    bills_coauthor = raw_metrics.get("bills_sponsored_coauthor", 0)
-    plenary_speeches = raw_metrics.get("plenary_speeches_count", 0)
+    # A missing input is excluded. It is not treated as zero and it is not filled
+    # with a midpoint. Weights of the inputs that exist are renormalised to 0–100.
+    committee_att_pct = raw_metrics.get("committee_attendance_pct") if "committee_attendance_pct" in raw_metrics else None
+    has_bills = "bills_sponsored_lead" in raw_metrics or "bills_sponsored_coauthor" in raw_metrics
+    bills_lead = int(raw_metrics.get("bills_sponsored_lead") or 0) if has_bills else 0
+    bills_coauthor = int(raw_metrics.get("bills_sponsored_coauthor") or 0) if has_bills else 0
+    has_speeches = "plenary_speeches_count" in raw_metrics
+    plenary_speeches = int(raw_metrics.get("plenary_speeches_count") or 0) if has_speeches else 0
 
-    has_d1_evidence = (
-        committee_att_pct is not None or
-        bills_lead > 0 or
-        bills_coauthor > 0 or
-        plenary_speeches > 0
-    )
+    d1_parts = []
+    if committee_att_pct is not None:
+        d1_parts.append((float(committee_att_pct), 0.40))
+    if has_bills:
+        bills_score = min(100.0, bills_lead * 25.0 + bills_coauthor * 8.0)
+        d1_parts.append((bills_score, 0.35))
+    if has_speeches:
+        d1_parts.append((min(100.0, plenary_speeches * 5.0), 0.25))
 
-    if has_d1_evidence:
-        d1, d1_envelope = compute_d1_from_attendance(
+    if d1_parts:
+        d1_weight = sum(weight for _, weight in d1_parts)
+        d1 = round(min(100.0, max(0.0, sum(value * weight for value, weight in d1_parts) / d1_weight)), 1)
+        _, d1_envelope = compute_d1_from_attendance(
             attendance_pct=committee_att_pct,
-            bills_lead=bills_lead,
-            bills_coauthor=bills_coauthor,
-            plenary_speeches=plenary_speeches,
+            bills_lead=bills_lead if has_bills else 0,
+            bills_coauthor=bills_coauthor if has_bills else 0,
+            plenary_speeches=plenary_speeches if has_speeches else 0,
             as_of=raw_metrics.get("as_of"),
             total_sessions=raw_metrics.get("attendance_sample_size"),
             attended_sessions=raw_metrics.get("attended_sessions"),
             absent_sessions=raw_metrics.get("absent_sessions"),
             attendance_status=raw_metrics.get("attendance_status")
         )
+        d1_envelope["computed_score"] = d1
+        d1_envelope["status"] = "computed"
+        d1_envelope["inputs_used"] = [name for name, present in (
+            ("attendance", committee_att_pct is not None),
+            ("bills", has_bills),
+            ("speeches", has_speeches),
+        ) if present]
         raw_metrics["_d1_envelope"] = d1_envelope
     else:
         d1 = None
 
     # 2. Llogaridhënia (D2)
-    # Strictly requires real asset filing or voting record
-    asset_on_time = raw_metrics.get("asset_declaration_on_time")
-    asset_audit_clean = raw_metrics.get("asset_audit_clean")
-    vote_participation_pct = raw_metrics.get("vote_participation_pct")
-    procurement_flag = raw_metrics.get("unjustified_procurement_flag")
+    # Each component keeps its published maximum (40 on-time, 30 audit, 30 votes).
+    # Missing components are left out and the available points are scaled to 0–100.
+    asset_on_time = raw_metrics.get("asset_declaration_on_time") if "asset_declaration_on_time" in raw_metrics else None
+    asset_audit_clean = raw_metrics.get("asset_audit_clean") if "asset_audit_clean" in raw_metrics else None
+    vote_participation_pct = raw_metrics.get("vote_participation_pct") if "vote_participation_pct" in raw_metrics else None
+    procurement_flag = raw_metrics.get("unjustified_procurement_flag") if "unjustified_procurement_flag" in raw_metrics else None
 
-    has_d2_evidence = (asset_on_time is not None or vote_participation_pct is not None or asset_audit_clean is not None)
-    if has_d2_evidence:
-        on_time_pts = 40.0 if asset_on_time is True else (10.0 if asset_on_time is False else 20.0)
-        audit_pts = 30.0 if asset_audit_clean is True else (5.0 if asset_audit_clean is False else 15.0)
-        vote_pts = (float(vote_participation_pct) * 0.3) if vote_participation_pct is not None else 15.0
-        proc_penalty = 25.0 if procurement_flag is True else 0.0
-        d2_raw = on_time_pts + audit_pts + vote_pts - proc_penalty
-        d2 = round(min(100.0, max(0.0, d2_raw)), 1)
+    d2_points = 0.0
+    d2_cap = 0.0
+    if asset_on_time is True:
+        d2_points += 40.0
+        d2_cap += 40.0
+    elif asset_on_time is False:
+        d2_points += 10.0
+        d2_cap += 40.0
+    if asset_audit_clean is True:
+        d2_points += 30.0
+        d2_cap += 30.0
+    elif asset_audit_clean is False:
+        d2_points += 5.0
+        d2_cap += 30.0
+    if vote_participation_pct is not None:
+        d2_points += float(vote_participation_pct) * 0.3
+        d2_cap += 30.0
+    if procurement_flag is True:
+        d2_points -= 25.0
+    if d2_cap > 0:
+        d2 = round(min(100.0, max(0.0, d2_points / d2_cap * 100.0)), 1)
     else:
         d2 = None
 
@@ -206,25 +235,29 @@ def calculate_paragon_dimensions(
     compliance_score = raw_metrics.get("constitutional_compliance_score")
     reform_inits = raw_metrics.get("institutional_reform_initiatives")
 
-    has_d5_evidence = (compliance_score is not None or reform_inits is not None)
-    if has_d5_evidence:
-        comp_val = compliance_score if compliance_score is not None else 50.0
-        reform_val = reform_inits or 0
-        d5_raw = (comp_val * 0.6) + min(40.0, reform_val * 15.0)
-        d5 = round(min(100.0, max(0.0, d5_raw)), 1)
+    d5_points = 0.0
+    d5_cap = 0.0
+    if compliance_score is not None:
+        d5_points += float(compliance_score) * 0.6
+        d5_cap += 60.0
+    if reform_inits is not None:
+        d5_points += min(40.0, float(reform_inits) * 15.0)
+        d5_cap += 40.0
+    if d5_cap > 0:
+        d5 = round(min(100.0, max(0.0, d5_points / d5_cap * 100.0)), 1)
     else:
         d5 = None
 
     # 6. Kohësioni (D6)
-    party_align = raw_metrics.get("party_vote_alignment_pct")
-    group_att = raw_metrics.get("group_meeting_attendance_pct")
+    party_align = raw_metrics.get("party_vote_alignment_pct") if "party_vote_alignment_pct" in raw_metrics else None
+    group_att = raw_metrics.get("group_meeting_attendance_pct") if "group_meeting_attendance_pct" in raw_metrics else None
 
-    has_d6_evidence = (party_align is not None or group_att is not None)
-    if has_d6_evidence:
-        align_val = party_align if party_align is not None else 50.0
-        att_val = group_att if group_att is not None else 50.0
-        d6_raw = (align_val * 0.6) + (att_val * 0.4)
-        d6 = round(min(100.0, max(0.0, d6_raw)), 1)
+    if party_align is not None and group_att is not None:
+        d6 = round(min(100.0, max(0.0, (float(party_align) * 0.6) + (float(group_att) * 0.4))), 1)
+    elif party_align is not None:
+        d6 = round(min(100.0, max(0.0, float(party_align))), 1)
+    elif group_att is not None:
+        d6 = round(min(100.0, max(0.0, float(group_att))), 1)
     else:
         d6 = None
 
@@ -269,7 +302,8 @@ def calculate_paragon_dimensions(
         "Narrativa": w["d7_narrative"]
     }
 
-    # Minimum threshold: require at least 1 verified dimension to compute weighted composite
+    # A single thin dimension is not an overall rating. Require at least two
+    # scored dimensions and a quarter of the published weight.
     avail_sum = 0.0
     weight_sum = 0.0
     scored_dim_count = 0
@@ -280,10 +314,15 @@ def calculate_paragon_dimensions(
             weight_sum += weight
             scored_dim_count += 1
 
-    if weight_sum > 0 and scored_dim_count >= 1:
+    coverage_pct = round(weight_sum * 100.0, 1)
+    raw_metrics["_scored_dimension_count"] = scored_dim_count
+    raw_metrics["_coverage_weight"] = coverage_pct
+    if weight_sum >= 0.25 and scored_dim_count >= 2:
         composite = round(min(100.0, max(0.0, avail_sum / weight_sum)), 1)
+        raw_metrics["_composite_status"] = "partial" if scored_dim_count < 7 else "complete"
     else:
         composite = None
+        raw_metrics["_composite_status"] = "insufficient_coverage"
 
     return dimensions, composite, raw_metrics
 

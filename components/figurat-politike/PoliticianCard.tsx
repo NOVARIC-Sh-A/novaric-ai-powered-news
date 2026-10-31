@@ -14,6 +14,7 @@ import { ScoreLineagePanel } from '../analytics/ScoreLineagePanel';
 import { ProfileRecordSections } from './ProfileRecordSections';
 import { EvidenceDrawer } from './EvidenceDrawer';
 import { AlertTriangle, ShieldCheck, Scale, Info } from 'lucide-react';
+import { useParagonRatingsEnabled } from './useParagonRatings';
 import { DimensionReading, ScoreEvidenceItem } from '../../types/politician';
 
 export interface PoliticianCardProps {
@@ -154,7 +155,10 @@ export const PoliticianCard: React.FC<PoliticianCardProps> = ({
 
   // Data-driven primary role & secondary roles
   const primaryRoleDisplay = target.primaryRole || AWAITING_DATA;
-  const scoringSuspended = target.scoringSuspended !== false;
+  const ratingsSwitch = useParagonRatingsEnabled();
+  const ratingsOff = !ratingsSwitch || target.ratingsEnabled === false;
+  const scoringSuspended = ratingsOff || target.scoringSuspended === true;
+  const coverageLabel = target.coverage || coverageStr;
   const secondaryRoles: string[] = Array.isArray(target.secondaryRoles)
     ? target.secondaryRoles
     : (typeof target.secondaryRoles === 'string'
@@ -175,20 +179,31 @@ export const PoliticianCard: React.FC<PoliticianCardProps> = ({
         </div>
       )}
 
-      {/* ========================================================
-          SUSPENSION BANNER (Remediation Mandate Sections 2 & 8)
-          ======================================================== */}
-      <div className="mb-6 p-4 rounded-2xl bg-amber-50/90 dark:bg-amber-950/40 border border-amber-200 dark:border-amber-800/60 shadow-xs flex items-start gap-3.5">
-        <AlertTriangle className="w-5 h-5 text-amber-600 dark:text-amber-400 shrink-0 mt-0.5" />
-        <div className="flex-1 text-xs leading-relaxed text-amber-900 dark:text-amber-200">
-          <div className="font-bold text-sm text-amber-800 dark:text-amber-300 mb-0.5">
-            Pezullim i Përkohshëm i Rezultateve PARAGON®
+      {scoringSuspended ? (
+        <div className="mb-6 p-4 rounded-2xl bg-amber-50/90 dark:bg-amber-950/40 border border-amber-200 dark:border-amber-800/60 shadow-xs flex items-start gap-3.5">
+          <AlertTriangle className="w-5 h-5 text-amber-600 dark:text-amber-400 shrink-0 mt-0.5" />
+          <div className="flex-1 text-xs leading-relaxed text-amber-900 dark:text-amber-200">
+            <div className="font-bold text-sm text-amber-800 dark:text-amber-300 mb-0.5">
+              Pezullim i Përkohshëm i Rezultateve PARAGON®
+            </div>
+            <p>
+              Vlerësimet PARAGON® janë përkohësisht të pezulluara për verifikimin e burimeve dhe integritetit të të dhënave.
+            </p>
           </div>
-          <p>
-            Vlerësimet PARAGON® janë përkohësisht të pezulluara për verifikimin e burimeve dhe integritetit të të dhënave.
-          </p>
         </div>
-      </div>
+      ) : (
+        <div className="mb-6 p-4 rounded-2xl bg-sky-50/90 dark:bg-sky-950/40 border border-sky-200 dark:border-sky-800/60 shadow-xs flex items-start gap-3.5">
+          <Info className="w-5 h-5 text-sky-600 dark:text-sky-400 shrink-0 mt-0.5" />
+          <div className="flex-1 text-xs leading-relaxed text-sky-950 dark:text-sky-100">
+            <div className="font-bold text-sm text-sky-800 dark:text-sky-300 mb-0.5">
+              PARAGON® · mbulim {coverageLabel}
+            </div>
+            <p>
+              {target.scoring_note || 'Pikët vijnë vetëm nga burime zyrtare. Dimensionet pa të dhëna mbeten në pritje dhe nuk hyjnë në indeks. Shenja e horoskopit nuk pikëzohet.'}
+            </p>
+          </div>
+        </div>
+      )}
 
       {/* ========================================================
           (a) HERO HEADER
@@ -232,7 +247,7 @@ export const PoliticianCard: React.FC<PoliticianCardProps> = ({
               {/* Verified Status Tag */}
               <span className="inline-flex items-center gap-1 px-2.5 py-1 rounded-full text-xs font-semibold bg-slate-100 text-slate-700 dark:bg-slate-800 dark:text-slate-300 border border-slate-200 dark:border-slate-700 shadow-xs">
                 <Info className="w-3.5 h-3.5 text-slate-500 shrink-0" />
-                Auditimi i Burimeve në Proces
+                {scoringSuspended ? 'Auditimi i Burimeve në Proces' : `Mbulim ${coverageLabel}`}
               </span>
             </div>
 
@@ -325,7 +340,7 @@ export const PoliticianCard: React.FC<PoliticianCardProps> = ({
                 </p>
               </div>
               <span className="text-[10px] font-mono font-bold text-slate-500 bg-slate-100 dark:bg-slate-800 px-2.5 py-1 rounded-md">
-                Auditimi në Proces
+                {scoringSuspended ? 'Auditimi në Proces' : `Mbulim ${coverageLabel}`}
               </span>
             </div>
 
