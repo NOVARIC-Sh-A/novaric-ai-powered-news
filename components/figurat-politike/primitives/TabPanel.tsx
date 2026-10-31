@@ -160,6 +160,11 @@ function FieldValue({ value }: { value?: string | null }) {
               </div>
 
               <div className="flex flex-col py-1.5 border-b border-slate-100 dark:border-slate-800/80">
+                <span className="text-[11px] text-slate-400 dark:text-slate-500 font-medium">Grupi parlamentar / Parliamentary group</span>
+                <span className="mt-0.5"><FieldValue value={(politician as any).parliamentaryGroup} /></span>
+              </div>
+
+              <div className="flex flex-col py-1.5 border-b border-slate-100 dark:border-slate-800/80">
                 <span className="text-[11px] text-slate-400 dark:text-slate-500 font-medium">Email zyrtar / Official email</span>
                 <span className="mt-0.5 font-mono"><FieldValue value={bio.email} /></span>
               </div>
@@ -176,6 +181,9 @@ function FieldValue({ value }: { value?: string | null }) {
                 )}
               </div>
             </div>
+
+            <OfficialLinks links={(politician as any).officialLinks} />
+            <FieldSourceList sources={(politician as any).fieldSources} photoLicence={(politician as any).photoLicence} />
 
             {politician.detailedBio && (
               <div className="mt-4 p-3 bg-slate-50 dark:bg-slate-800/50 rounded-xl border border-slate-200/60 dark:border-slate-700/60 text-xs text-slate-600 dark:text-slate-300 leading-relaxed">
@@ -270,6 +278,52 @@ function FieldValue({ value }: { value?: string | null }) {
           </div>
         )}
       </div>
+    </div>
+  );
+};
+
+const OfficialLinks: React.FC<{ links?: { label?: string; url?: string }[] }> = ({ links }) => {
+  const items = (links || []).filter((link) => hasText(link.url));
+  return (
+    <div className="mt-3">
+      <div className="text-[11px] text-slate-400 font-medium mb-1">Lidhje zyrtare / Official links</div>
+      {items.length === 0 ? <p className="text-xs text-slate-400">{AWAITING_DATA}</p> : (
+        <ul className="space-y-1">
+          {items.map((link) => (
+            <li key={link.url}>
+              <a href={link.url} target="_blank" rel="noopener noreferrer" className="text-blue-600 dark:text-blue-400 underline break-all">
+                {link.label || link.url}
+              </a>
+            </li>
+          ))}
+        </ul>
+      )}
+    </div>
+  );
+};
+
+const FieldSourceList: React.FC<{ sources?: Record<string, any>; photoLicence?: string | null }> = ({ sources, photoLicence }) => {
+  const rows = Object.entries(sources || {}).filter(([, source]) => source && (source.sourceUrl || source.value));
+  return (
+    <div className="mt-3 rounded-xl border border-slate-200 dark:border-slate-800 p-3">
+      <div className="text-[11px] font-bold uppercase tracking-wide text-slate-500 mb-2">Burimet / Sources</div>
+      {photoLicence && <p className="text-[11px] text-slate-500 mb-2">Foto / Photo: {photoLicence}</p>}
+      {rows.length === 0 ? <p className="text-xs text-slate-400">{AWAITING_DATA}</p> : (
+        <ul className="space-y-1 text-[11px] text-slate-600 dark:text-slate-300">
+          {rows.map(([field, source]) => (
+            <li key={field}>
+              <span className="font-semibold">{field}</span>
+              {source.retrievedAt ? ` · ${source.retrievedAt}` : ''}
+              {source.sourceUrl ? (
+                <>
+                  {' · '}
+                  <a href={source.sourceUrl} target="_blank" rel="noopener noreferrer" className="text-blue-600 dark:text-blue-400 underline break-all">{source.sourceUrl}</a>
+                </>
+              ) : null}
+            </li>
+          ))}
+        </ul>
+      )}
     </div>
   );
 };

@@ -815,13 +815,20 @@ function novaricApiPlugin() {
               assetTimeline: [],
               assetDeclaration: null,
               rhetoric: null,
-              affiliations: politician.party ? [{ kind: 'party', label: politician.party, detail: null, url: null }] : [],
+              affiliations: Array.isArray(politician.affiliations) && politician.affiliations.length
+                ? politician.affiliations
+                : [],
               evidence: [],
               rightOfReply: [],
               scoreRevisions: [],
               recentActivity: [],
-              mandates: [],
+              mandates: Array.isArray(politician.mandates) ? politician.mandates : [],
               dimensionReadings: {},
+              officialLinks: Array.isArray(politician.officialLinks) ? politician.officialLinks : [],
+              fieldSources: politician.fieldSources || null,
+              parliamentaryGroup: politician.parliamentaryGroup || null,
+              officialPhotoPath: politician.officialPhotoPath || null,
+              photoLicence: politician.photoLicence || null,
             };
 
             const profilePayload = {

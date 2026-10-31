@@ -140,7 +140,11 @@ describe('NOVARIC® Parliament 2025 & PARAGON® Integration Suite (Phase 34)', (
     const veliaj = data.profiles.find((p: any) => p.name === 'Erion Veliaj');
     assert.ok(veliaj, 'Erion Veliaj must exist in profiles');
     assert.equal(veliaj.parliamentaryStatus, 'not_an_active_mp');
-    assert.equal(veliaj.primaryRole, 'Mayor of Tirana');
+    if (veliaj.primaryRole) {
+      assert.ok(veliaj.fieldSources?.currentRole?.sourceUrl, 'A displayed role must cite an official source');
+    } else {
+      assert.equal(veliaj.primaryRole, null);
+    }
 
     const meta = data.profiles.find((p: any) => p.name === 'Ilir Meta');
     assert.ok(meta, 'Ilir Meta must exist in profiles');
