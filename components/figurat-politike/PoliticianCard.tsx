@@ -11,6 +11,7 @@ import { ZodiacChip } from './primitives/ZodiacChip';
 import { TabPanel } from './primitives/TabPanel';
 import { AWAITING_DATA, ratingNoteForCoverage, PartialRatingBadge } from './primitives/awaiting';
 import { EditorialRemarksCard, LIMITED_EVIDENCE_BADGE } from './EditorialRemarksCard';
+import { FactualObservatory } from './FactualObservatory';
 import { hasLimitedEvidence, publishedRemarkFor } from '../../utils/editorialRemarks';
 import { ScoreLineagePanel } from '../analytics/ScoreLineagePanel';
 import { ProfileRecordSections } from './ProfileRecordSections';
@@ -217,6 +218,8 @@ export const PoliticianCard: React.FC<PoliticianCardProps> = ({
         </div>
       )}
 
+      {scoringSuspended ? <FactualObservatory profileId={target.id || target.numericId} /> : null}
+
       {/* ========================================================
           (a) HERO HEADER
           ======================================================== */}
@@ -393,7 +396,7 @@ export const PoliticianCard: React.FC<PoliticianCardProps> = ({
 
           <div className="mt-4 pt-3 border-t border-slate-100 dark:border-slate-800 flex items-center justify-between text-[11px] text-slate-400">
             <span>Dekompozim me gjysmë-jetë 180 ditë</span>
-            <span className="font-mono text-blue-600 dark:text-blue-400 font-bold">Kuvendi + ILDKPKI + KQZ</span>
+            <span className="font-mono text-blue-600 dark:text-blue-400 font-bold">{scoringSuspended ? 'Kuvendi · klasa F [class F]' : 'Kuvendi + ILDKPKI + KQZ'}</span>
           </div>
         </div>
       </div>
