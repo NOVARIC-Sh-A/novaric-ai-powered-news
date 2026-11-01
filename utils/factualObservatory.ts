@@ -1,6 +1,7 @@
 import rollCalls from '../data/official/kuvendi_rollcall_scores.json';
 import plenary from '../data/official/plenary_assertiveness.json';
 import committees from '../data/official/committee_governance.json';
+import committeeGap from '../data/official/committee_attendance_gap.json';
 
 export const OBSERVATORY_METHODOLOGY_VERSION = 'methodology_v0.2_2026-11-01';
 export const AWAITING_DATA = 'Në pritje të të dhënave / Awaiting data';
@@ -74,6 +75,19 @@ function people(file: { people?: Record<string, CountRecord> }): Record<string, 
   return file.people ?? {};
 }
 
+function committeeCount(id: string): CountRecord | undefined {
+  const current = people(committees as { people?: Record<string, CountRecord> })[id];
+  if (current && typeof current.present === 'number' && typeof current.meetings === 'number' && current.meetings > 0) {
+    return current;
+  }
+  const gapPeople = (committeeGap as { people?: Record<string, CountRecord & { reason?: string | null }> }).people ?? {};
+  const gap = gapPeople[id];
+  if (gap && typeof gap.present === 'number' && typeof gap.meetings === 'number' && gap.meetings > 0) {
+    return gap;
+  }
+  return undefined;
+}
+
 function firstUrl(record: CountRecord | undefined): string | null {
   const url = record?.sourceUrls?.find((item) => typeof item === 'string' && item.startsWith('http'));
   return url ?? null;
@@ -98,7 +112,7 @@ export function buildFactualObservatory(profileId: string | number | null | unde
   const id = canonicalProfileId(profileId);
   const roll = people(rollCalls as { people?: Record<string, CountRecord> })[id];
   const speech = people(plenary as { people?: Record<string, CountRecord> })[id];
-  const committee = people(committees as { people?: Record<string, CountRecord> })[id];
+  const committee = committeeCount(id);
   const rollPeriod = {
     start: (rollCalls as { since?: string }).since ?? null,
     end: (rollCalls as { retrievedAt?: string }).retrievedAt ?? null,

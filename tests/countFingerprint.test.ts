@@ -67,6 +67,27 @@ describe('Count fingerprint', () => {
     assert.equal(gate.auditState, 'under_review');
   });
 
+  it('keeps a missing committee count null, including Berisha', () => {
+    const gap = JSON.parse(read('data/official/committee_attendance_gap.json'));
+    const berisha = gap.people.vip2;
+    assert.equal(berisha.reason, 'no_committee_membership');
+    assert.equal(berisha.present, null);
+    assert.equal(berisha.meetings, null);
+    const counted = Object.values(gap.people).filter((row: { present: number | null; meetings: number | null }) =>
+      typeof row.present === 'number' && typeof row.meetings === 'number');
+    assert.equal(counted.length, 0);
+    for (const row of Object.values(gap.people) as Array<{ present: number | null; meetings: number | null; reason: string | null }>) {
+      if (row.reason) {
+        assert.equal(row.present, null);
+        assert.equal(row.meetings, null);
+      }
+    }
+    const fingerprint = buildCountFingerprint('vip2');
+    const committee = fingerprint.axes.find((axis) => axis.id === 'committee_participation');
+    assert.equal(committee?.numerator, null);
+    assert.equal(committee?.ratioPercent, null);
+  });
+
   it('counts profiles with three verified axes separately from the rest', () => {
     const profiles = JSON.parse(read('db/paragon_scores_export.json')).profiles as Array<{ id: string }>;
     let threeOrMore = 0;

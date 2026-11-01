@@ -1,0 +1,2804 @@
+{
+  "retrievedAt": "2026-11-01",
+  "since": "2025-09-01",
+  "until": "2026-11-01",
+  "method": "committee_membership_exact_v1",
+  "source": "https://kuvendiapi.azurewebsites.net/api/strukturat",
+  "documents": "https://kuvendiapi.azurewebsites.net/api/dokumentet",
+  "note": "Exact folded name only. Profiles already present in committee_governance.json are not rewritten.",
+  "committees": [
+    {
+      "id": "79a12b70-68b1-4842-88b3-28f801154b4c",
+      "name": "Komisioni për Evropën dhe Punët e Jashtme"
+    },
+    {
+      "id": "d4bdce12-ff27-4ac8-8e16-2b0e42805ab7",
+      "name": "Komisioni për Çështjet e Brendshme dhe të Mbrojtjes"
+    },
+    {
+      "id": "6ac360ad-4c72-4f68-abf0-3a24913b4547",
+      "name": "Komisioni për Shëndetësinë dhe Mirëqenien Sociale"
+    },
+    {
+      "id": "0b3ed4f2-4dca-41b8-b82a-5c14ee4db9d7",
+      "name": "Komisioni Posaçëm Parlamentar për Reformën Administrativo-Territoriale në Republikën e Shqipërisë"
+    },
+    {
+      "id": "9102a23a-865c-43fb-b491-68238bee5b35",
+      "name": "Nënkomisioni për Integritetin e Informacionit Publik, Dezinformimin dhe Ndërhyrjet e Huaja"
+    },
+    {
+      "id": "e05ba580-b5ca-43e3-8b78-97e1d90ac7ad",
+      "name": "Komisioni për Kulturën, Turizmin dhe Diasporën"
+    },
+    {
+      "id": "bc859489-dc02-4943-94c5-a18503c0a195",
+      "name": "Komisioni Posaçëm Parlamentar për Realizimin e Reformës Zgjedhore"
+    },
+    {
+      "id": "8cbf532f-365a-4757-a11c-b27e573d7386",
+      "name": "Komisioni për të Drejtat e Njeriut dhe Mjetet e Informimit Publik"
+    },
+    {
+      "id": "9b45e1c9-cd13-4440-b1aa-b2bc685db025",
+      "name": "Komisioni për Ekonominë, Punësimin dhe Financat"
+    },
+    {
+      "id": "ade07d9e-e391-41b0-a1bf-bb505f6b3b06",
+      "name": "Komisioni për Çështjet Ligjore dhe Administratën Publike"
+    },
+    {
+      "id": "47fe240c-8972-457b-a05e-df3e67db1b26",
+      "name": "Komisioni për Burimet Natyrore, Infrastrukturën dhe Zhvillimin e Qëndrueshëm"
+    },
+    {
+      "id": "c6e6e070-54e5-466c-9e35-f0ec3f2237d8",
+      "name": "KOMISIONI HETIMOR PËR  TRAJTIMIN E TË DHËNAVE TË SISTEMIT TIMS"
+    },
+    {
+      "id": "7d899ce1-2a7e-4b04-bdca-ffe2f447c148",
+      "name": "Komisioni për Edukimin, Shkencën dhe Sportet"
+    }
+  ],
+  "minutesAssigned": 255,
+  "minutesParsed": 244,
+  "minutesFailed": [],
+  "unassignedFiles": [
+    {
+      "fileName": "Procesverbal-KKIE-26.06.2026.pdf",
+      "url": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202609031455091185Procesverbal-KKIE-26.06.2026.pdf"
+    },
+    {
+      "fileName": "Komisioni  Nismat Qytetare  20.1.2026.pdf",
+      "url": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202605051257348382Komisioni  Nismat Qytetare  20.1.2026.pdf"
+    },
+    {
+      "fileName": "Komisioni nisma qytetre datë 2.12.2025 (2).pdf",
+      "url": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202605051256379541Komisioni nisma qytetre datë 2.12.2025 %282%29.pdf"
+    },
+    {
+      "fileName": "Procesverbal-KKIE-04.02.2026.pdf",
+      "url": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202607210821193549Procesverbal-KKIE-04.02.2026.pdf"
+    },
+    {
+      "fileName": "Procesverbal-KKIE-26.06.2026.pdf",
+      "url": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202607210823025187Procesverbal-KKIE-26.06.2026.pdf"
+    },
+    {
+      "fileName": "Komisioni i Kultures, Turizmit dhe Diaspores 10.03.2026.pdf",
+      "url": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202607071247423777Komisioni i Kultures%2C Turizmit dhe Diaspores 10.03.2026.pdf"
+    },
+    {
+      "fileName": "Procesverbal-KKIE-26.06.2026.pdf",
+      "url": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202609031453083963Procesverbal-KKIE-26.06.2026.pdf"
+    },
+    {
+      "fileName": "Procesverbal-KKIE-9.12.2025.pdf",
+      "url": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202512170807025323Procesverbal-KKIE-9.12.2025.pdf"
+    },
+    {
+      "fileName": "Komisioni për Nismat Qytetare, Bashkëpunimin dhe Mbikëqyrjen Institucionale dt 20.5.2026.pdf",
+      "url": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202609100815402123Komisioni për Nismat Qytetare%2C Bashkëpunimin dhe Mbikëqyrjen Institucionale dt 20.5.2026.pdf"
+    },
+    {
+      "fileName": "Komisioni për Nismat Qytetare, Bashkëpunimin dhe Mbikëqyrjen Institucionale dt 9.2.2026.pdf",
+      "url": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202606191037393075Komisioni për Nismat Qytetare%2C Bashkëpunimin dhe Mbikëqyrjen Institucionale dt 9.2.2026.pdf"
+    },
+    {
+      "fileName": "Procesverbal-KKIE-25.5.2026.pdf",
+      "url": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202609031451491830Procesverbal-KKIE-25.5.2026.pdf"
+    },
+    {
+      "fileName": "Komisioni Nisma Qytetare 24.06.2026.pdf",
+      "url": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202610130919523592Komisioni Nisma Qytetare 24.06.2026.pdf"
+    },
+    {
+      "fileName": "Komisioni Nisma Qytetare 13.11.2025 pj 2.pdf",
+      "url": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202601281031350346Komisioni Nisma Qytetare 13.11.2025 pj 2.pdf"
+    },
+    {
+      "fileName": "Komisioni Nisma Qytetare Monitorim 4 .11.2025.mp3.pdf",
+      "url": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202601070956316128Komisioni Nisma Qytetare Monitorim 4 .11.2025.mp3.pdf"
+    },
+    {
+      "fileName": "Procesverbal-KKIE-04.02.2026.pdf",
+      "url": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202606091151420230Procesverbal-KKIE-04.02.2026.pdf"
+    },
+    {
+      "fileName": "Procesverbal-KKIE-11.02.2026.pdf",
+      "url": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202607210821443361Procesverbal-KKIE-11.02.2026.pdf"
+    },
+    {
+      "fileName": "Procesverbal-KKIE-26.06.2026.pdf",
+      "url": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202609031500016048Procesverbal-KKIE-26.06.2026.pdf"
+    },
+    {
+      "fileName": "Komisioni për Nismat Qytetare, Bashkëpunimin dhe Mbikëqyrjen Institucionale  11.12.2025 (1).pdf",
+      "url": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202605051257197125Komisioni për Nismat Qytetare%2C Bashkëpunimin dhe Mbikëqyrjen Institucionale  11.12.2025 %281%29.pdf"
+    },
+    {
+      "fileName": "Komisioni për Nismat Qytetare, Bashkëpunimin dhe Mbikëqyrjen Institucionale,17.3.2026.pdf",
+      "url": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202609091135052721Komisioni për Nismat Qytetare%2C Bashkëpunimin dhe Mbikëqyrjen Institucionale%2C17.3.2026.pdf"
+    },
+    {
+      "fileName": "Komisioni Nisma Qytetare 17.11.2025 pdf.pdf",
+      "url": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202602100940344139Komisioni Nisma Qytetare 17.11.2025 pdf.pdf"
+    },
+    {
+      "fileName": "Procesverbal-KKIE-10.12.2025.pdf",
+      "url": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202512221141245594Procesverbal-KKIE-10.12.2025.pdf"
+    },
+    {
+      "fileName": "Komisioni për Nismat Qytetare, Bashkëpunimin dhe Mbikëqyrjen Institucionale 21.1.2026 (1).pdf",
+      "url": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202605051257532149Komisioni për Nismat Qytetare%2C Bashkëpunimin dhe Mbikëqyrjen Institucionale 21.1.2026 %281%29.pdf"
+    },
+    {
+      "fileName": "Procesverbal-KKIE-26.06.2026.pdf",
+      "url": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202607100907154671Procesverbal-KKIE-26.06.2026.pdf"
+    },
+    {
+      "fileName": "Komisioni NISMAT 19 QERSHOR.pdf",
+      "url": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202609141158552065Komisioni NISMAT 19 QERSHOR.pdf"
+    },
+    {
+      "fileName": "Procesverbal N.komision Audit - 21.4.2026.pdf",
+      "url": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202609171312070209Procesverbal N.komision Audit - 21.4.2026.pdf"
+    },
+    {
+      "fileName": "Procesverbal-KKIE-08.05.2026.pdf",
+      "url": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202607210822392866Procesverbal-KKIE-08.05.2026.pdf"
+    },
+    {
+      "fileName": "Procesverbal N.komision Audit - 18.5.2026.pdf",
+      "url": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202609171312273765Procesverbal N.komision Audit - 18.5.2026.pdf"
+    },
+    {
+      "fileName": "Procesverbal N.komision Audit - 21.1. 2026.pdf",
+      "url": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202609171309575582Procesverbal N.komision Audit - 21.1. 2026.pdf"
+    },
+    {
+      "fileName": "Komisioni për Nismat Qytetare, Bashkëpunimin dhe Mbikëqyrjen Institucionale 7.5.2026.pdf",
+      "url": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202609100814423122Komisioni për Nismat Qytetare%2C Bashkëpunimin dhe Mbikëqyrjen Institucionale 7.5.2026.pdf"
+    },
+    {
+      "fileName": "Procesverbal-KKIE-17 .12.2025.pdf",
+      "url": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202602111310460999Procesverbal-KKIE-17 .12.2025.pdf"
+    },
+    {
+      "fileName": "Komisioni nisma qytetare 4.3.2026.pdf",
+      "url": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202607090741518700Komisioni nisma qytetare 4.3.2026.pdf"
+    },
+    {
+      "fileName": "Procesverbal N.komision Audit - 8.6.2026.pdf",
+      "url": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202609171311485021Procesverbal N.komision Audit - 8.6.2026.pdf"
+    },
+    {
+      "fileName": "Komisioni për Nismat Qytetare, Bashkëpunimin, Mbikëqyrjen Institucionale 16.12.2025.pdf",
+      "url": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202605051257013607Komisioni për Nismat Qytetare%2C Bashkëpunimin%2C Mbikëqyrjen Institucionale 16.12.2025.pdf"
+    },
+    {
+      "fileName": "Procesverbal N.komision Audit - 16.4.2026.pdf",
+      "url": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202609171309569833Procesverbal N.komision Audit - 16.4.2026.pdf"
+    },
+    {
+      "fileName": "Komisioni Nismat Qytetare  12.11.2025.pdf",
+      "url": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202601211238336580Komisioni Nismat Qytetare  12.11.2025.pdf"
+    },
+    {
+      "fileName": "Komisioni për Nismat Qytetare, Bashkëpunimin dhe Mbikëqyrjen Istitucionale 5.5. 2026.pdf",
+      "url": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202609100814132295Komisioni për Nismat Qytetare%2C Bashkëpunimin dhe Mbikëqyrjen Istitucionale 5.5. 2026.pdf"
+    },
+    {
+      "fileName": "Procesverbal-KKIE-17.04.2026.pdf",
+      "url": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202607210822130171Procesverbal-KKIE-17.04.2026.pdf"
+    },
+    {
+      "fileName": "Procesverbal-KKIE-11.2.2026.pdf",
+      "url": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202602121330406024Procesverbal-KKIE-11.2.2026.pdf"
+    },
+    {
+      "fileName": "Procesverbal-KKIE-19.11.2025.pdf",
+      "url": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202512151346506127Procesverbal-KKIE-19.11.2025.pdf"
+    },
+    {
+      "fileName": "Procesverbal N.komision Audit - 21.1. 2026.pdf",
+      "url": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202609171312069288Procesverbal N.komision Audit - 21.1. 2026.pdf"
+    },
+    {
+      "fileName": "Komisioni Nisma Qytetare 17.11.2025.pdf",
+      "url": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202602100932186720Komisioni Nisma Qytetare 17.11.2025.pdf"
+    },
+    {
+      "fileName": "Procesverbal-KKIE-17.04.2026.pdf",
+      "url": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202604230822404793Procesverbal-KKIE-17.04.2026.pdf"
+    },
+    {
+      "fileName": "Komisioni për Nismat Qytetare, Bashkëpunimin, Mbikëqyrjen Institucionale 12.2.2026.pdf",
+      "url": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202606191038021341Komisioni për Nismat Qytetare%2C Bashkëpunimin%2C Mbikëqyrjen Institucionale 12.2.2026.pdf"
+    },
+    {
+      "fileName": "Komisioni për Nismat Qytetare, Bashkëpunimin, Mbikëqyrjen Institucionaleqytetare 27.01.2026.pdf",
+      "url": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202605110907200089Komisioni për Nismat Qytetare%2C Bashkëpunimin%2C Mbikëqyrjen Institucionaleqytetare 27.01.2026.pdf"
+    },
+    {
+      "fileName": "Procesverbal N.komision Audit - 18.5.2026.pdf",
+      "url": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202609171309567719Procesverbal N.komision Audit - 18.5.2026.pdf"
+    },
+    {
+      "fileName": "Komisioni për Nismat Qytetare, Bashkëpunimin, Mbikëqyrjen Institucionale 19.2.2026.pdf",
+      "url": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202606291056409942Komisioni për Nismat Qytetare%2C Bashkëpunimin%2C Mbikëqyrjen Institucionale 19.2.2026.pdf"
+    },
+    {
+      "fileName": "Procesverbal N.komision Audit - 8.6.2026.pdf",
+      "url": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202609171309572609Procesverbal N.komision Audit - 8.6.2026.pdf"
+    },
+    {
+      "fileName": "Procesverbal-KKIE-25.5.2026.pdf",
+      "url": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202609031459300300Procesverbal-KKIE-25.5.2026.pdf"
+    },
+    {
+      "fileName": "Procesverbal N.komision Audit - 21.4.2026.pdf",
+      "url": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202609171309573911Procesverbal N.komision Audit - 21.4.2026.pdf"
+    },
+    {
+      "fileName": "Komisioni per nismat qytetare 3.3.2026.pdf",
+      "url": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202606241059406019Komisioni per nismat qytetare 3.3.2026.pdf"
+    },
+    {
+      "fileName": "Procesverbal N.komision Audit - 16.4.2026.pdf",
+      "url": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202609171312275026Procesverbal N.komision Audit - 16.4.2026.pdf"
+    },
+    {
+      "fileName": "Komisioni për Nismat Qytetare, Bashkëpunimin dhe Mbikëqyrjen Institucionale1.7.2026.pdf",
+      "url": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202610270838088966Komisioni për Nismat Qytetare%2C Bashkëpunimin dhe Mbikëqyrjen Institucionale1.7.2026.pdf"
+    },
+    {
+      "fileName": "Komisioni për Nismat Qytetare, Bashkëpunimin, Mbikëqyrjen Institucionale dt 11.5.2026.pdf",
+      "url": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202609100815095696Komisioni për Nismat Qytetare%2C Bashkëpunimin%2C Mbikëqyrjen Institucionale dt 11.5.2026.pdf"
+    },
+    {
+      "fileName": "Komisioni i Kultures,Turizmit, Diaspores 1.10  2025.pdf",
+      "url": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202511201107212360Komisioni i Kultures%2CTurizmit%2C Diaspores 1.10  2025.pdf"
+    },
+    {
+      "fileName": "Procesverbal-KKIE-9.12.2025.pdf",
+      "url": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202512170803334972Procesverbal-KKIE-9.12.2025.pdf"
+    },
+    {
+      "fileName": "Komisioni për Nismat Qytetare, Bashkëpunimin, Mbikëqyrjen Institucionale dt 4.2.2026.pdf",
+      "url": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202606191037215544Komisioni për Nismat Qytetare%2C Bashkëpunimin%2C Mbikëqyrjen Institucionale dt 4.2.2026.pdf"
+    },
+    {
+      "fileName": "Komisioni për Nismat Qytetare 25 .11.2025.pdf",
+      "url": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202603040811037856Komisioni për Nismat Qytetare 25 .11.2025.pdf"
+    },
+    {
+      "fileName": "Procesverbal-KKIE-25.5.2026.pdf",
+      "url": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202609031454357451Procesverbal-KKIE-25.5.2026.pdf"
+    },
+    {
+      "fileName": "Komisioni Nisma Qytetare 24.06.2026.pdf",
+      "url": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202610130929030381Komisioni Nisma Qytetare 24.06.2026.pdf"
+    },
+    {
+      "fileName": "Komisioni për Nismat Qytetare .2.10.2025.pdf",
+      "url": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202510070735181355Komisioni për Nismat Qytetare .2.10.2025.pdf"
+    },
+    {
+      "fileName": "Procesverbal N.komision Audit - 4.3.2026.pdf",
+      "url": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202609171309571713Procesverbal N.komision Audit - 4.3.2026.pdf"
+    },
+    {
+      "fileName": "Komisioni për Nismat Qytetare, Bashkëpunimin dhe Mbikëqyrjen Institucionale dt 29.6.2026.pdf",
+      "url": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202610270837435592Komisioni për Nismat Qytetare%2C Bashkëpunimin dhe Mbikëqyrjen Institucionale dt 29.6.2026.pdf"
+    },
+    {
+      "fileName": "Komisioni  Nisma Qytetare 21.11.2025.pdf",
+      "url": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202603030819055432Komisioni  Nisma Qytetare 21.11.2025.pdf"
+    },
+    {
+      "fileName": "Procesverbal N.komision Audit - 4.3.2026.pdf",
+      "url": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202609171311484454Procesverbal N.komision Audit - 4.3.2026.pdf"
+    },
+    {
+      "fileName": "Procesverbal-KKIE-04.02.2026.pdf",
+      "url": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202606051408559071Procesverbal-KKIE-04.02.2026.pdf"
+    }
+  ],
+  "ambiguousMembers": [
+    {
+      "name": "Zija Ismaili",
+      "memberId": "077c2b3b-11b6-4cb4-99a3-060a00fc752a",
+      "committee": "Komisioni për Shëndetësinë dhe Mirëqenien Sociale",
+      "profileIds": [
+        "vip106",
+        "vip129"
+      ],
+      "sourceUrl": "https://kuvendiapi.azurewebsites.net/api/strukturat/6ac360ad-4c72-4f68-abf0-3a24913b4547/anetaret"
+    },
+    {
+      "name": "Blendi Klosi",
+      "memberId": "9a35866f-1087-414e-aaec-3d15271241e1",
+      "committee": "Komisioni Posaçëm Parlamentar për Reformën Administrativo-Territoriale në Republikën e Shqipërisë",
+      "profileIds": [
+        "vip62",
+        "vip127",
+        "vip156"
+      ],
+      "sourceUrl": "https://kuvendiapi.azurewebsites.net/api/strukturat/0b3ed4f2-4dca-41b8-b82a-5c14ee4db9d7/anetaret"
+    },
+    {
+      "name": "Agron Gjekmarkaj",
+      "memberId": "cf7f3fe9-0994-4de8-9819-dc40f6ae1650",
+      "committee": "Nënkomisioni për Integritetin e Informacionit Publik, Dezinformimin dhe Ndërhyrjet e Huaja",
+      "profileIds": [
+        "vip35",
+        "vip130"
+      ],
+      "sourceUrl": "https://kuvendiapi.azurewebsites.net/api/strukturat/9102a23a-865c-43fb-b491-68238bee5b35/anetaret"
+    },
+    {
+      "name": "Agron Gjekmarkaj",
+      "memberId": "cf7f3fe9-0994-4de8-9819-dc40f6ae1650",
+      "committee": "Komisioni për Kulturën, Turizmin dhe Diasporën",
+      "profileIds": [
+        "vip35",
+        "vip130"
+      ],
+      "sourceUrl": "https://kuvendiapi.azurewebsites.net/api/strukturat/e05ba580-b5ca-43e3-8b78-97e1d90ac7ad/anetaret"
+    },
+    {
+      "name": "Kastriot Piroli",
+      "memberId": "791d8f94-3fe1-499f-b786-f052f3ff0daf",
+      "committee": "Komisioni për Edukimin, Shkencën dhe Sportet",
+      "profileIds": [
+        "vip83",
+        "vip132"
+      ],
+      "sourceUrl": "https://kuvendiapi.azurewebsites.net/api/strukturat/7d899ce1-2a7e-4b04-bdca-ffe2f447c148/anetaret"
+    }
+  ],
+  "unmatchedMembers": [
+    {
+      "name": "Ana Dajko",
+      "memberId": "4da0f36a-e5cb-4055-b9ef-aaf30f9dcae2",
+      "committee": "Komisioni për Kulturën, Turizmin dhe Diasporën",
+      "sourceUrl": "https://kuvendiapi.azurewebsites.net/api/strukturat/e05ba580-b5ca-43e3-8b78-97e1d90ac7ad/anetaret"
+    },
+    {
+      "name": "Ramion Kurti",
+      "memberId": "23bfc72d-88b8-4ef2-ac17-da9ab52e4ac9",
+      "committee": "Komisioni për Kulturën, Turizmin dhe Diasporën",
+      "sourceUrl": "https://kuvendiapi.azurewebsites.net/api/strukturat/e05ba580-b5ca-43e3-8b78-97e1d90ac7ad/anetaret"
+    },
+    {
+      "name": "Tedi  Mula",
+      "memberId": "6fe33d70-57e9-4984-8976-f4d1a1956cd9",
+      "committee": "Komisioni Posaçëm Parlamentar për Realizimin e Reformës Zgjedhore",
+      "sourceUrl": "https://kuvendiapi.azurewebsites.net/api/strukturat/bc859489-dc02-4943-94c5-a18503c0a195/anetaret"
+    },
+    {
+      "name": "Ramion Kurti",
+      "memberId": "23bfc72d-88b8-4ef2-ac17-da9ab52e4ac9",
+      "committee": "Komisioni për të Drejtat e Njeriut dhe Mjetet e Informimit Publik",
+      "sourceUrl": "https://kuvendiapi.azurewebsites.net/api/strukturat/8cbf532f-365a-4757-a11c-b27e573d7386/anetaret"
+    },
+    {
+      "name": "Tedi  Mula",
+      "memberId": "6fe33d70-57e9-4984-8976-f4d1a1956cd9",
+      "committee": "Komisioni për Çështjet Ligjore dhe Administratën Publike",
+      "sourceUrl": "https://kuvendiapi.azurewebsites.net/api/strukturat/ade07d9e-e391-41b0-a1bf-bb505f6b3b06/anetaret"
+    }
+  ],
+  "ambiguousMinuteNames": [],
+  "unmatchedMinuteNames": [
+    [
+      "Tedi Mula",
+      75
+    ],
+    [
+      "Erjona Ismaili",
+      49
+    ],
+    [
+      "Evis Kushi",
+      44
+    ],
+    [
+      "Erjo Mile",
+      42
+    ],
+    [
+      "Ramion Kurti",
+      41
+    ],
+    [
+      "Agron Gjekmarkaj",
+      40
+    ],
+    [
+      "Ana Dajko",
+      33
+    ],
+    [
+      "Kastriot Piroli",
+      33
+    ],
+    [
+      "Edmond Haxhinasto",
+      27
+    ],
+    [
+      "Olta Xhaçka",
+      25
+    ],
+    [
+      "Skënder Pashaj",
+      19
+    ],
+    [
+      "Klodiana Spahiu",
+      16
+    ],
+    [
+      "Admir Kadeli",
+      15
+    ],
+    [
+      "Arkend Balla",
+      14
+    ],
+    [
+      "Ceno Klosi",
+      13
+    ],
+    [
+      "Bledi Çomo",
+      13
+    ],
+    [
+      "Etleva Budini",
+      9
+    ],
+    [
+      "Agron Gaxho",
+      9
+    ],
+    [
+      "Aulona Bylykbashi",
+      7
+    ],
+    [
+      "Ermal Elezi",
+      6
+    ],
+    [
+      "Onid Bejleri",
+      6
+    ],
+    [
+      "Ermal Pacaj",
+      6
+    ],
+    [
+      "Ardit Bido",
+      5
+    ],
+    [
+      "Antoneta Dhima",
+      4
+    ],
+    [
+      "Mbikëqyrjen Institucionale",
+      4
+    ],
+    [
+      "Fatmir Xhafaj",
+      4
+    ],
+    [
+      "Belind Këlliçi",
+      4
+    ],
+    [
+      "Ivi Kaso",
+      4
+    ],
+    [
+      "Gjin Gjoni",
+      4
+    ],
+    [
+      "Admir Kadelli",
+      3
+    ],
+    [
+      "Erisa Xhixho",
+      3
+    ],
+    [
+      "Hatixhe Ikonomi",
+      3
+    ],
+    [
+      "Erjo Milo",
+      3
+    ],
+    [
+      "Romina Kuko",
+      3
+    ],
+    [
+      "Erion Malaj",
+      3
+    ],
+    [
+      "Elda Hoti",
+      3
+    ],
+    [
+      "Bledi Como",
+      2
+    ],
+    [
+      "Saimir Hasalla",
+      2
+    ],
+    [
+      "Flamur Hoxha",
+      2
+    ],
+    [
+      "Bujar Leskaj Adi Qose",
+      2
+    ],
+    [
+      "Brisedia Çakërri",
+      2
+    ],
+    [
+      "Klodiana Çapja",
+      2
+    ],
+    [
+      "Bujar Rexha",
+      2
+    ],
+    [
+      "Xhenis Çela",
+      2
+    ],
+    [
+      "Briseid Çakërri",
+      1
+    ],
+    [
+      "Marinela Ndria",
+      1
+    ],
+    [
+      "Armand Vogli",
+      1
+    ],
+    [
+      "Oerd Bylykbashi",
+      1
+    ],
+    [
+      "Arian Ndoja",
+      1
+    ],
+    [
+      "Ilirjan Pendavinji",
+      1
+    ],
+    [
+      "Marjana Koçeku",
+      1
+    ],
+    [
+      "Agron Shehaj",
+      1
+    ],
+    [
+      "Pirro Vëngu",
+      1
+    ],
+    [
+      "Damian Gjiknuri Oerd Bylykbashi",
+      1
+    ],
+    [
+      "Briseida Çakërri Skënder Pashaj",
+      1
+    ],
+    [
+      "Edmond Haxhinasto. Mungon",
+      1
+    ],
+    [
+      "Pirro Vengu",
+      1
+    ],
+    [
+      "Zamira Sina",
+      1
+    ],
+    [
+      "Besart Xhaferri",
+      1
+    ],
+    [
+      "A+ulona Bylykbashi",
+      1
+    ],
+    [
+      "Agron Gje kmarkaj",
+      1
+    ],
+    [
+      "Bujar Leskaj. Mungon",
+      1
+    ]
+  ],
+  "reasonCounts": {
+    "no_committee_membership": 114,
+    "no_kuvendi_id": 23,
+    "minutes_missing": 40
+  },
+  "people": {
+    "vip1": {
+      "present": null,
+      "meetings": null,
+      "periodStart": "2025-09-01",
+      "periodEnd": "2026-11-01",
+      "verifiedAt": "2026-11-01",
+      "sourceUrls": [],
+      "committees": [],
+      "membershipUrls": [],
+      "reason": "no_committee_membership"
+    },
+    "vip2": {
+      "present": null,
+      "meetings": null,
+      "periodStart": "2025-09-01",
+      "periodEnd": "2026-11-01",
+      "verifiedAt": "2026-11-01",
+      "sourceUrls": [],
+      "committees": [],
+      "membershipUrls": [],
+      "reason": "no_committee_membership"
+    },
+    "vip3": {
+      "present": null,
+      "meetings": null,
+      "periodStart": "2025-09-01",
+      "periodEnd": "2026-11-01",
+      "verifiedAt": "2026-11-01",
+      "sourceUrls": [],
+      "committees": [],
+      "membershipUrls": [],
+      "reason": "no_kuvendi_id"
+    },
+    "vip4": {
+      "present": null,
+      "meetings": null,
+      "periodStart": "2025-09-01",
+      "periodEnd": "2026-11-01",
+      "verifiedAt": "2026-11-01",
+      "sourceUrls": [],
+      "committees": [],
+      "membershipUrls": [],
+      "reason": "no_committee_membership"
+    },
+    "vip6": {
+      "present": null,
+      "meetings": null,
+      "periodStart": "2025-09-01",
+      "periodEnd": "2026-11-01",
+      "verifiedAt": "2026-11-01",
+      "sourceUrls": [],
+      "committees": [],
+      "membershipUrls": [],
+      "reason": "no_kuvendi_id"
+    },
+    "vip9": {
+      "present": null,
+      "meetings": null,
+      "periodStart": "2025-09-01",
+      "periodEnd": "2026-11-01",
+      "verifiedAt": "2026-11-01",
+      "sourceUrls": [],
+      "committees": [],
+      "membershipUrls": [],
+      "reason": "no_committee_membership"
+    },
+    "vip10": {
+      "present": null,
+      "meetings": null,
+      "periodStart": "2025-09-01",
+      "periodEnd": "2026-11-01",
+      "verifiedAt": "2026-11-01",
+      "sourceUrls": [],
+      "committees": [],
+      "membershipUrls": [],
+      "reason": "no_committee_membership"
+    },
+    "vip14": {
+      "present": null,
+      "meetings": null,
+      "periodStart": "2025-09-01",
+      "periodEnd": "2026-11-01",
+      "verifiedAt": "2026-11-01",
+      "sourceUrls": [],
+      "committees": [],
+      "membershipUrls": [],
+      "reason": "no_committee_membership"
+    },
+    "vip16": {
+      "present": null,
+      "meetings": null,
+      "periodStart": "2025-09-01",
+      "periodEnd": "2026-11-01",
+      "verifiedAt": "2026-11-01",
+      "sourceUrls": [],
+      "committees": [],
+      "membershipUrls": [],
+      "reason": "no_committee_membership"
+    },
+    "vip17": {
+      "present": null,
+      "meetings": null,
+      "periodStart": "2025-09-01",
+      "periodEnd": "2026-11-01",
+      "verifiedAt": "2026-11-01",
+      "sourceUrls": [],
+      "committees": [],
+      "membershipUrls": [],
+      "reason": "no_committee_membership"
+    },
+    "vip18": {
+      "present": null,
+      "meetings": null,
+      "periodStart": "2025-09-01",
+      "periodEnd": "2026-11-01",
+      "verifiedAt": "2026-11-01",
+      "sourceUrls": [],
+      "committees": [],
+      "membershipUrls": [],
+      "reason": "no_committee_membership"
+    },
+    "vip19": {
+      "present": null,
+      "meetings": null,
+      "periodStart": "2025-09-01",
+      "periodEnd": "2026-11-01",
+      "verifiedAt": "2026-11-01",
+      "sourceUrls": [],
+      "committees": [],
+      "membershipUrls": [],
+      "reason": "no_kuvendi_id"
+    },
+    "vip20": {
+      "present": null,
+      "meetings": null,
+      "periodStart": "2025-09-01",
+      "periodEnd": "2026-11-01",
+      "verifiedAt": "2026-11-01",
+      "sourceUrls": [],
+      "committees": [],
+      "membershipUrls": [],
+      "reason": "no_committee_membership"
+    },
+    "vip21": {
+      "present": null,
+      "meetings": null,
+      "periodStart": "2025-09-01",
+      "periodEnd": "2026-11-01",
+      "verifiedAt": "2026-11-01",
+      "sourceUrls": [],
+      "committees": [],
+      "membershipUrls": [],
+      "reason": "no_committee_membership"
+    },
+    "vip22": {
+      "present": null,
+      "meetings": null,
+      "periodStart": "2025-09-01",
+      "periodEnd": "2026-11-01",
+      "verifiedAt": "2026-11-01",
+      "sourceUrls": [],
+      "committees": [],
+      "membershipUrls": [],
+      "reason": "no_kuvendi_id"
+    },
+    "vip23": {
+      "present": null,
+      "meetings": null,
+      "periodStart": "2025-09-01",
+      "periodEnd": "2026-11-01",
+      "verifiedAt": "2026-11-01",
+      "sourceUrls": [],
+      "committees": [
+        "Komisioni për Burimet Natyrore, Infrastrukturën dhe Zhvillimin e Qëndrueshëm"
+      ],
+      "membershipUrls": [
+        "https://kuvendiapi.azurewebsites.net/api/strukturat/47fe240c-8972-457b-a05e-df3e67db1b26/anetaret"
+      ],
+      "reason": "minutes_missing"
+    },
+    "vip24": {
+      "present": null,
+      "meetings": null,
+      "periodStart": "2025-09-01",
+      "periodEnd": "2026-11-01",
+      "verifiedAt": "2026-11-01",
+      "sourceUrls": [],
+      "committees": [],
+      "membershipUrls": [],
+      "reason": "no_committee_membership"
+    },
+    "vip25": {
+      "present": null,
+      "meetings": null,
+      "periodStart": "2025-09-01",
+      "periodEnd": "2026-11-01",
+      "verifiedAt": "2026-11-01",
+      "sourceUrls": [],
+      "committees": [],
+      "membershipUrls": [],
+      "reason": "no_committee_membership"
+    },
+    "vip26": {
+      "present": null,
+      "meetings": null,
+      "periodStart": "2025-09-01",
+      "periodEnd": "2026-11-01",
+      "verifiedAt": "2026-11-01",
+      "sourceUrls": [],
+      "committees": [],
+      "membershipUrls": [],
+      "reason": "no_committee_membership"
+    },
+    "vip28": {
+      "present": null,
+      "meetings": null,
+      "periodStart": "2025-09-01",
+      "periodEnd": "2026-11-01",
+      "verifiedAt": "2026-11-01",
+      "sourceUrls": [],
+      "committees": [],
+      "membershipUrls": [],
+      "reason": "no_committee_membership"
+    },
+    "vip29": {
+      "present": null,
+      "meetings": null,
+      "periodStart": "2025-09-01",
+      "periodEnd": "2026-11-01",
+      "verifiedAt": "2026-11-01",
+      "sourceUrls": [],
+      "committees": [
+        "Komisioni për të Drejtat e Njeriut dhe Mjetet e Informimit Publik"
+      ],
+      "membershipUrls": [
+        "https://kuvendiapi.azurewebsites.net/api/strukturat/8cbf532f-365a-4757-a11c-b27e573d7386/anetaret"
+      ],
+      "reason": "minutes_missing"
+    },
+    "vip30": {
+      "present": null,
+      "meetings": null,
+      "periodStart": "2025-09-01",
+      "periodEnd": "2026-11-01",
+      "verifiedAt": "2026-11-01",
+      "sourceUrls": [],
+      "committees": [
+        "Komisioni për Evropën dhe Punët e Jashtme",
+        "Komisioni Posaçëm Parlamentar për Realizimin e Reformës Zgjedhore"
+      ],
+      "membershipUrls": [
+        "https://kuvendiapi.azurewebsites.net/api/strukturat/79a12b70-68b1-4842-88b3-28f801154b4c/anetaret",
+        "https://kuvendiapi.azurewebsites.net/api/strukturat/bc859489-dc02-4943-94c5-a18503c0a195/anetaret"
+      ],
+      "reason": "minutes_missing"
+    },
+    "vip32": {
+      "present": null,
+      "meetings": null,
+      "periodStart": "2025-09-01",
+      "periodEnd": "2026-11-01",
+      "verifiedAt": "2026-11-01",
+      "sourceUrls": [],
+      "committees": [
+        "Komisioni Posaçëm Parlamentar për Reformën Administrativo-Territoriale në Republikën e Shqipërisë",
+        "Komisioni për të Drejtat e Njeriut dhe Mjetet e Informimit Publik"
+      ],
+      "membershipUrls": [
+        "https://kuvendiapi.azurewebsites.net/api/strukturat/0b3ed4f2-4dca-41b8-b82a-5c14ee4db9d7/anetaret",
+        "https://kuvendiapi.azurewebsites.net/api/strukturat/8cbf532f-365a-4757-a11c-b27e573d7386/anetaret"
+      ],
+      "reason": "minutes_missing"
+    },
+    "vip37": {
+      "present": null,
+      "meetings": null,
+      "periodStart": "2025-09-01",
+      "periodEnd": "2026-11-01",
+      "verifiedAt": "2026-11-01",
+      "sourceUrls": [],
+      "committees": [],
+      "membershipUrls": [],
+      "reason": "no_committee_membership"
+    },
+    "vip39": {
+      "present": null,
+      "meetings": null,
+      "periodStart": "2025-09-01",
+      "periodEnd": "2026-11-01",
+      "verifiedAt": "2026-11-01",
+      "sourceUrls": [],
+      "committees": [
+        "Komisioni për Evropën dhe Punët e Jashtme",
+        "Komisioni Posaçëm Parlamentar për Reformën Administrativo-Territoriale në Republikën e Shqipërisë"
+      ],
+      "membershipUrls": [
+        "https://kuvendiapi.azurewebsites.net/api/strukturat/0b3ed4f2-4dca-41b8-b82a-5c14ee4db9d7/anetaret",
+        "https://kuvendiapi.azurewebsites.net/api/strukturat/79a12b70-68b1-4842-88b3-28f801154b4c/anetaret"
+      ],
+      "reason": "minutes_missing"
+    },
+    "vip40": {
+      "present": null,
+      "meetings": null,
+      "periodStart": "2025-09-01",
+      "periodEnd": "2026-11-01",
+      "verifiedAt": "2026-11-01",
+      "sourceUrls": [],
+      "committees": [],
+      "membershipUrls": [],
+      "reason": "no_committee_membership"
+    },
+    "vip41": {
+      "present": null,
+      "meetings": null,
+      "periodStart": "2025-09-01",
+      "periodEnd": "2026-11-01",
+      "verifiedAt": "2026-11-01",
+      "sourceUrls": [],
+      "committees": [],
+      "membershipUrls": [],
+      "reason": "no_committee_membership"
+    },
+    "vip42": {
+      "present": null,
+      "meetings": null,
+      "periodStart": "2025-09-01",
+      "periodEnd": "2026-11-01",
+      "verifiedAt": "2026-11-01",
+      "sourceUrls": [],
+      "committees": [],
+      "membershipUrls": [],
+      "reason": "no_committee_membership"
+    },
+    "vip43": {
+      "present": null,
+      "meetings": null,
+      "periodStart": "2025-09-01",
+      "periodEnd": "2026-11-01",
+      "verifiedAt": "2026-11-01",
+      "sourceUrls": [],
+      "committees": [],
+      "membershipUrls": [],
+      "reason": "no_committee_membership"
+    },
+    "vip47": {
+      "present": null,
+      "meetings": null,
+      "periodStart": "2025-09-01",
+      "periodEnd": "2026-11-01",
+      "verifiedAt": "2026-11-01",
+      "sourceUrls": [],
+      "committees": [],
+      "membershipUrls": [],
+      "reason": "no_committee_membership"
+    },
+    "vip48": {
+      "present": null,
+      "meetings": null,
+      "periodStart": "2025-09-01",
+      "periodEnd": "2026-11-01",
+      "verifiedAt": "2026-11-01",
+      "sourceUrls": [],
+      "committees": [],
+      "membershipUrls": [],
+      "reason": "no_committee_membership"
+    },
+    "vip50": {
+      "present": null,
+      "meetings": null,
+      "periodStart": "2025-09-01",
+      "periodEnd": "2026-11-01",
+      "verifiedAt": "2026-11-01",
+      "sourceUrls": [],
+      "committees": [],
+      "membershipUrls": [],
+      "reason": "no_committee_membership"
+    },
+    "vip51": {
+      "present": null,
+      "meetings": null,
+      "periodStart": "2025-09-01",
+      "periodEnd": "2026-11-01",
+      "verifiedAt": "2026-11-01",
+      "sourceUrls": [],
+      "committees": [],
+      "membershipUrls": [],
+      "reason": "no_kuvendi_id"
+    },
+    "vip52": {
+      "present": null,
+      "meetings": null,
+      "periodStart": "2025-09-01",
+      "periodEnd": "2026-11-01",
+      "verifiedAt": "2026-11-01",
+      "sourceUrls": [],
+      "committees": [],
+      "membershipUrls": [],
+      "reason": "no_committee_membership"
+    },
+    "vip53": {
+      "present": null,
+      "meetings": null,
+      "periodStart": "2025-09-01",
+      "periodEnd": "2026-11-01",
+      "verifiedAt": "2026-11-01",
+      "sourceUrls": [],
+      "committees": [],
+      "membershipUrls": [],
+      "reason": "no_committee_membership"
+    },
+    "vip54": {
+      "present": null,
+      "meetings": null,
+      "periodStart": "2025-09-01",
+      "periodEnd": "2026-11-01",
+      "verifiedAt": "2026-11-01",
+      "sourceUrls": [],
+      "committees": [],
+      "membershipUrls": [],
+      "reason": "no_kuvendi_id"
+    },
+    "vip56": {
+      "present": null,
+      "meetings": null,
+      "periodStart": "2025-09-01",
+      "periodEnd": "2026-11-01",
+      "verifiedAt": "2026-11-01",
+      "sourceUrls": [],
+      "committees": [],
+      "membershipUrls": [],
+      "reason": "no_kuvendi_id"
+    },
+    "vip59": {
+      "present": null,
+      "meetings": null,
+      "periodStart": "2025-09-01",
+      "periodEnd": "2026-11-01",
+      "verifiedAt": "2026-11-01",
+      "sourceUrls": [],
+      "committees": [],
+      "membershipUrls": [],
+      "reason": "no_committee_membership"
+    },
+    "vip60": {
+      "present": null,
+      "meetings": null,
+      "periodStart": "2025-09-01",
+      "periodEnd": "2026-11-01",
+      "verifiedAt": "2026-11-01",
+      "sourceUrls": [],
+      "committees": [],
+      "membershipUrls": [],
+      "reason": "no_committee_membership"
+    },
+    "vip61": {
+      "present": null,
+      "meetings": null,
+      "periodStart": "2025-09-01",
+      "periodEnd": "2026-11-01",
+      "verifiedAt": "2026-11-01",
+      "sourceUrls": [],
+      "committees": [],
+      "membershipUrls": [],
+      "reason": "no_committee_membership"
+    },
+    "vip62": {
+      "present": null,
+      "meetings": null,
+      "periodStart": "2025-09-01",
+      "periodEnd": "2026-11-01",
+      "verifiedAt": "2026-11-01",
+      "sourceUrls": [],
+      "committees": [],
+      "membershipUrls": [],
+      "reason": "no_committee_membership"
+    },
+    "vip64": {
+      "present": null,
+      "meetings": null,
+      "periodStart": "2025-09-01",
+      "periodEnd": "2026-11-01",
+      "verifiedAt": "2026-11-01",
+      "sourceUrls": [],
+      "committees": [],
+      "membershipUrls": [],
+      "reason": "no_committee_membership"
+    },
+    "vip66": {
+      "present": null,
+      "meetings": null,
+      "periodStart": "2025-09-01",
+      "periodEnd": "2026-11-01",
+      "verifiedAt": "2026-11-01",
+      "sourceUrls": [],
+      "committees": [],
+      "membershipUrls": [],
+      "reason": "no_kuvendi_id"
+    },
+    "vip67": {
+      "present": null,
+      "meetings": null,
+      "periodStart": "2025-09-01",
+      "periodEnd": "2026-11-01",
+      "verifiedAt": "2026-11-01",
+      "sourceUrls": [],
+      "committees": [],
+      "membershipUrls": [],
+      "reason": "no_committee_membership"
+    },
+    "vip68": {
+      "present": null,
+      "meetings": null,
+      "periodStart": "2025-09-01",
+      "periodEnd": "2026-11-01",
+      "verifiedAt": "2026-11-01",
+      "sourceUrls": [],
+      "committees": [],
+      "membershipUrls": [],
+      "reason": "no_kuvendi_id"
+    },
+    "vip69": {
+      "present": null,
+      "meetings": null,
+      "periodStart": "2025-09-01",
+      "periodEnd": "2026-11-01",
+      "verifiedAt": "2026-11-01",
+      "sourceUrls": [],
+      "committees": [],
+      "membershipUrls": [],
+      "reason": "no_committee_membership"
+    },
+    "vip71": {
+      "present": null,
+      "meetings": null,
+      "periodStart": "2025-09-01",
+      "periodEnd": "2026-11-01",
+      "verifiedAt": "2026-11-01",
+      "sourceUrls": [],
+      "committees": [
+        "Komisioni për të Drejtat e Njeriut dhe Mjetet e Informimit Publik"
+      ],
+      "membershipUrls": [
+        "https://kuvendiapi.azurewebsites.net/api/strukturat/8cbf532f-365a-4757-a11c-b27e573d7386/anetaret"
+      ],
+      "reason": "minutes_missing"
+    },
+    "vip72": {
+      "present": null,
+      "meetings": null,
+      "periodStart": "2025-09-01",
+      "periodEnd": "2026-11-01",
+      "verifiedAt": "2026-11-01",
+      "sourceUrls": [],
+      "committees": [],
+      "membershipUrls": [],
+      "reason": "no_committee_membership"
+    },
+    "vip73": {
+      "present": null,
+      "meetings": null,
+      "periodStart": "2025-09-01",
+      "periodEnd": "2026-11-01",
+      "verifiedAt": "2026-11-01",
+      "sourceUrls": [],
+      "committees": [],
+      "membershipUrls": [],
+      "reason": "no_committee_membership"
+    },
+    "vip74": {
+      "present": null,
+      "meetings": null,
+      "periodStart": "2025-09-01",
+      "periodEnd": "2026-11-01",
+      "verifiedAt": "2026-11-01",
+      "sourceUrls": [],
+      "committees": [],
+      "membershipUrls": [],
+      "reason": "no_committee_membership"
+    },
+    "vip76": {
+      "present": null,
+      "meetings": null,
+      "periodStart": "2025-09-01",
+      "periodEnd": "2026-11-01",
+      "verifiedAt": "2026-11-01",
+      "sourceUrls": [],
+      "committees": [],
+      "membershipUrls": [],
+      "reason": "no_committee_membership"
+    },
+    "vip77": {
+      "present": null,
+      "meetings": null,
+      "periodStart": "2025-09-01",
+      "periodEnd": "2026-11-01",
+      "verifiedAt": "2026-11-01",
+      "sourceUrls": [],
+      "committees": [],
+      "membershipUrls": [],
+      "reason": "no_committee_membership"
+    },
+    "vip78": {
+      "present": null,
+      "meetings": null,
+      "periodStart": "2025-09-01",
+      "periodEnd": "2026-11-01",
+      "verifiedAt": "2026-11-01",
+      "sourceUrls": [],
+      "committees": [],
+      "membershipUrls": [],
+      "reason": "no_committee_membership"
+    },
+    "vip80": {
+      "present": null,
+      "meetings": null,
+      "periodStart": "2025-09-01",
+      "periodEnd": "2026-11-01",
+      "verifiedAt": "2026-11-01",
+      "sourceUrls": [],
+      "committees": [],
+      "membershipUrls": [],
+      "reason": "no_committee_membership"
+    },
+    "vip81": {
+      "present": null,
+      "meetings": null,
+      "periodStart": "2025-09-01",
+      "periodEnd": "2026-11-01",
+      "verifiedAt": "2026-11-01",
+      "sourceUrls": [],
+      "committees": [],
+      "membershipUrls": [],
+      "reason": "no_committee_membership"
+    },
+    "vip82": {
+      "present": null,
+      "meetings": null,
+      "periodStart": "2025-09-01",
+      "periodEnd": "2026-11-01",
+      "verifiedAt": "2026-11-01",
+      "sourceUrls": [],
+      "committees": [],
+      "membershipUrls": [],
+      "reason": "no_committee_membership"
+    },
+    "vip84": {
+      "present": null,
+      "meetings": null,
+      "periodStart": "2025-09-01",
+      "periodEnd": "2026-11-01",
+      "verifiedAt": "2026-11-01",
+      "sourceUrls": [],
+      "committees": [],
+      "membershipUrls": [],
+      "reason": "no_committee_membership"
+    },
+    "vip86": {
+      "present": null,
+      "meetings": null,
+      "periodStart": "2025-09-01",
+      "periodEnd": "2026-11-01",
+      "verifiedAt": "2026-11-01",
+      "sourceUrls": [],
+      "committees": [],
+      "membershipUrls": [],
+      "reason": "no_committee_membership"
+    },
+    "vip87": {
+      "present": null,
+      "meetings": null,
+      "periodStart": "2025-09-01",
+      "periodEnd": "2026-11-01",
+      "verifiedAt": "2026-11-01",
+      "sourceUrls": [],
+      "committees": [],
+      "membershipUrls": [],
+      "reason": "no_committee_membership"
+    },
+    "vip88": {
+      "present": null,
+      "meetings": null,
+      "periodStart": "2025-09-01",
+      "periodEnd": "2026-11-01",
+      "verifiedAt": "2026-11-01",
+      "sourceUrls": [],
+      "committees": [],
+      "membershipUrls": [],
+      "reason": "no_committee_membership"
+    },
+    "vip89": {
+      "present": null,
+      "meetings": null,
+      "periodStart": "2025-09-01",
+      "periodEnd": "2026-11-01",
+      "verifiedAt": "2026-11-01",
+      "sourceUrls": [],
+      "committees": [],
+      "membershipUrls": [],
+      "reason": "no_committee_membership"
+    },
+    "vip91": {
+      "present": null,
+      "meetings": null,
+      "periodStart": "2025-09-01",
+      "periodEnd": "2026-11-01",
+      "verifiedAt": "2026-11-01",
+      "sourceUrls": [],
+      "committees": [
+        "Komisioni për Burimet Natyrore, Infrastrukturën dhe Zhvillimin e Qëndrueshëm"
+      ],
+      "membershipUrls": [
+        "https://kuvendiapi.azurewebsites.net/api/strukturat/47fe240c-8972-457b-a05e-df3e67db1b26/anetaret"
+      ],
+      "reason": "minutes_missing"
+    },
+    "vip92": {
+      "present": null,
+      "meetings": null,
+      "periodStart": "2025-09-01",
+      "periodEnd": "2026-11-01",
+      "verifiedAt": "2026-11-01",
+      "sourceUrls": [],
+      "committees": [
+        "Komisioni për Burimet Natyrore, Infrastrukturën dhe Zhvillimin e Qëndrueshëm"
+      ],
+      "membershipUrls": [
+        "https://kuvendiapi.azurewebsites.net/api/strukturat/47fe240c-8972-457b-a05e-df3e67db1b26/anetaret"
+      ],
+      "reason": "minutes_missing"
+    },
+    "vip113": {
+      "present": null,
+      "meetings": null,
+      "periodStart": "2025-09-01",
+      "periodEnd": "2026-11-01",
+      "verifiedAt": "2026-11-01",
+      "sourceUrls": [],
+      "committees": [
+        "Komisioni për Burimet Natyrore, Infrastrukturën dhe Zhvillimin e Qëndrueshëm"
+      ],
+      "membershipUrls": [
+        "https://kuvendiapi.azurewebsites.net/api/strukturat/47fe240c-8972-457b-a05e-df3e67db1b26/anetaret"
+      ],
+      "reason": "minutes_missing"
+    },
+    "vip106": {
+      "present": null,
+      "meetings": null,
+      "periodStart": "2025-09-01",
+      "periodEnd": "2026-11-01",
+      "verifiedAt": "2026-11-01",
+      "sourceUrls": [],
+      "committees": [],
+      "membershipUrls": [],
+      "reason": "no_committee_membership"
+    },
+    "vip94": {
+      "present": null,
+      "meetings": null,
+      "periodStart": "2025-09-01",
+      "periodEnd": "2026-11-01",
+      "verifiedAt": "2026-11-01",
+      "sourceUrls": [],
+      "committees": [],
+      "membershipUrls": [],
+      "reason": "no_committee_membership"
+    },
+    "vip95": {
+      "present": null,
+      "meetings": null,
+      "periodStart": "2025-09-01",
+      "periodEnd": "2026-11-01",
+      "verifiedAt": "2026-11-01",
+      "sourceUrls": [],
+      "committees": [],
+      "membershipUrls": [],
+      "reason": "no_kuvendi_id"
+    },
+    "vip97": {
+      "present": null,
+      "meetings": null,
+      "periodStart": "2025-09-01",
+      "periodEnd": "2026-11-01",
+      "verifiedAt": "2026-11-01",
+      "sourceUrls": [],
+      "committees": [],
+      "membershipUrls": [],
+      "reason": "no_kuvendi_id"
+    },
+    "vip99": {
+      "present": null,
+      "meetings": null,
+      "periodStart": "2025-09-01",
+      "periodEnd": "2026-11-01",
+      "verifiedAt": "2026-11-01",
+      "sourceUrls": [],
+      "committees": [],
+      "membershipUrls": [],
+      "reason": "no_committee_membership"
+    },
+    "vip100": {
+      "present": null,
+      "meetings": null,
+      "periodStart": "2025-09-01",
+      "periodEnd": "2026-11-01",
+      "verifiedAt": "2026-11-01",
+      "sourceUrls": [],
+      "committees": [],
+      "membershipUrls": [],
+      "reason": "no_committee_membership"
+    },
+    "vip101": {
+      "present": null,
+      "meetings": null,
+      "periodStart": "2025-09-01",
+      "periodEnd": "2026-11-01",
+      "verifiedAt": "2026-11-01",
+      "sourceUrls": [],
+      "committees": [],
+      "membershipUrls": [],
+      "reason": "no_committee_membership"
+    },
+    "vip102": {
+      "present": null,
+      "meetings": null,
+      "periodStart": "2025-09-01",
+      "periodEnd": "2026-11-01",
+      "verifiedAt": "2026-11-01",
+      "sourceUrls": [],
+      "committees": [
+        "Nënkomisioni për Integritetin e Informacionit Publik, Dezinformimin dhe Ndërhyrjet e Huaja",
+        "Komisioni për të Drejtat e Njeriut dhe Mjetet e Informimit Publik"
+      ],
+      "membershipUrls": [
+        "https://kuvendiapi.azurewebsites.net/api/strukturat/8cbf532f-365a-4757-a11c-b27e573d7386/anetaret",
+        "https://kuvendiapi.azurewebsites.net/api/strukturat/9102a23a-865c-43fb-b491-68238bee5b35/anetaret"
+      ],
+      "reason": "minutes_missing"
+    },
+    "vip103": {
+      "present": null,
+      "meetings": null,
+      "periodStart": "2025-09-01",
+      "periodEnd": "2026-11-01",
+      "verifiedAt": "2026-11-01",
+      "sourceUrls": [],
+      "committees": [
+        "Komisioni Posaçëm Parlamentar për Reformën Administrativo-Territoriale në Republikën e Shqipërisë",
+        "KOMISIONI HETIMOR PËR  TRAJTIMIN E TË DHËNAVE TË SISTEMIT TIMS"
+      ],
+      "membershipUrls": [
+        "https://kuvendiapi.azurewebsites.net/api/strukturat/0b3ed4f2-4dca-41b8-b82a-5c14ee4db9d7/anetaret",
+        "https://kuvendiapi.azurewebsites.net/api/strukturat/c6e6e070-54e5-466c-9e35-f0ec3f2237d8/anetaret"
+      ],
+      "reason": "minutes_missing"
+    },
+    "vip104": {
+      "present": null,
+      "meetings": null,
+      "periodStart": "2025-09-01",
+      "periodEnd": "2026-11-01",
+      "verifiedAt": "2026-11-01",
+      "sourceUrls": [],
+      "committees": [],
+      "membershipUrls": [],
+      "reason": "no_committee_membership"
+    },
+    "vip105": {
+      "present": null,
+      "meetings": null,
+      "periodStart": "2025-09-01",
+      "periodEnd": "2026-11-01",
+      "verifiedAt": "2026-11-01",
+      "sourceUrls": [],
+      "committees": [],
+      "membershipUrls": [],
+      "reason": "no_committee_membership"
+    },
+    "vip107": {
+      "present": null,
+      "meetings": null,
+      "periodStart": "2025-09-01",
+      "periodEnd": "2026-11-01",
+      "verifiedAt": "2026-11-01",
+      "sourceUrls": [],
+      "committees": [],
+      "membershipUrls": [],
+      "reason": "no_committee_membership"
+    },
+    "vip108": {
+      "present": null,
+      "meetings": null,
+      "periodStart": "2025-09-01",
+      "periodEnd": "2026-11-01",
+      "verifiedAt": "2026-11-01",
+      "sourceUrls": [],
+      "committees": [],
+      "membershipUrls": [],
+      "reason": "no_committee_membership"
+    },
+    "vip109": {
+      "present": null,
+      "meetings": null,
+      "periodStart": "2025-09-01",
+      "periodEnd": "2026-11-01",
+      "verifiedAt": "2026-11-01",
+      "sourceUrls": [],
+      "committees": [],
+      "membershipUrls": [],
+      "reason": "no_kuvendi_id"
+    },
+    "vip110": {
+      "present": null,
+      "meetings": null,
+      "periodStart": "2025-09-01",
+      "periodEnd": "2026-11-01",
+      "verifiedAt": "2026-11-01",
+      "sourceUrls": [],
+      "committees": [],
+      "membershipUrls": [],
+      "reason": "no_committee_membership"
+    },
+    "vip114": {
+      "present": null,
+      "meetings": null,
+      "periodStart": "2025-09-01",
+      "periodEnd": "2026-11-01",
+      "verifiedAt": "2026-11-01",
+      "sourceUrls": [],
+      "committees": [],
+      "membershipUrls": [],
+      "reason": "no_kuvendi_id"
+    },
+    "vip115": {
+      "present": null,
+      "meetings": null,
+      "periodStart": "2025-09-01",
+      "periodEnd": "2026-11-01",
+      "verifiedAt": "2026-11-01",
+      "sourceUrls": [],
+      "committees": [],
+      "membershipUrls": [],
+      "reason": "no_committee_membership"
+    },
+    "vip116": {
+      "present": null,
+      "meetings": null,
+      "periodStart": "2025-09-01",
+      "periodEnd": "2026-11-01",
+      "verifiedAt": "2026-11-01",
+      "sourceUrls": [],
+      "committees": [],
+      "membershipUrls": [],
+      "reason": "no_committee_membership"
+    },
+    "vip117": {
+      "present": null,
+      "meetings": null,
+      "periodStart": "2025-09-01",
+      "periodEnd": "2026-11-01",
+      "verifiedAt": "2026-11-01",
+      "sourceUrls": [],
+      "committees": [],
+      "membershipUrls": [],
+      "reason": "no_committee_membership"
+    },
+    "vip118": {
+      "present": null,
+      "meetings": null,
+      "periodStart": "2025-09-01",
+      "periodEnd": "2026-11-01",
+      "verifiedAt": "2026-11-01",
+      "sourceUrls": [],
+      "committees": [
+        "Komisioni Posaçëm Parlamentar për Reformën Administrativo-Territoriale në Republikën e Shqipërisë"
+      ],
+      "membershipUrls": [
+        "https://kuvendiapi.azurewebsites.net/api/strukturat/0b3ed4f2-4dca-41b8-b82a-5c14ee4db9d7/anetaret"
+      ],
+      "reason": "minutes_missing"
+    },
+    "vip119": {
+      "present": null,
+      "meetings": null,
+      "periodStart": "2025-09-01",
+      "periodEnd": "2026-11-01",
+      "verifiedAt": "2026-11-01",
+      "sourceUrls": [],
+      "committees": [],
+      "membershipUrls": [],
+      "reason": "no_committee_membership"
+    },
+    "vip120": {
+      "present": null,
+      "meetings": null,
+      "periodStart": "2025-09-01",
+      "periodEnd": "2026-11-01",
+      "verifiedAt": "2026-11-01",
+      "sourceUrls": [],
+      "committees": [],
+      "membershipUrls": [],
+      "reason": "no_committee_membership"
+    },
+    "vip121": {
+      "present": null,
+      "meetings": null,
+      "periodStart": "2025-09-01",
+      "periodEnd": "2026-11-01",
+      "verifiedAt": "2026-11-01",
+      "sourceUrls": [],
+      "committees": [],
+      "membershipUrls": [],
+      "reason": "no_committee_membership"
+    },
+    "vip122": {
+      "present": null,
+      "meetings": null,
+      "periodStart": "2025-09-01",
+      "periodEnd": "2026-11-01",
+      "verifiedAt": "2026-11-01",
+      "sourceUrls": [],
+      "committees": [],
+      "membershipUrls": [],
+      "reason": "no_committee_membership"
+    },
+    "vip123": {
+      "present": null,
+      "meetings": null,
+      "periodStart": "2025-09-01",
+      "periodEnd": "2026-11-01",
+      "verifiedAt": "2026-11-01",
+      "sourceUrls": [],
+      "committees": [],
+      "membershipUrls": [],
+      "reason": "no_committee_membership"
+    },
+    "vip124": {
+      "present": null,
+      "meetings": null,
+      "periodStart": "2025-09-01",
+      "periodEnd": "2026-11-01",
+      "verifiedAt": "2026-11-01",
+      "sourceUrls": [],
+      "committees": [],
+      "membershipUrls": [],
+      "reason": "no_committee_membership"
+    },
+    "vip125": {
+      "present": null,
+      "meetings": null,
+      "periodStart": "2025-09-01",
+      "periodEnd": "2026-11-01",
+      "verifiedAt": "2026-11-01",
+      "sourceUrls": [],
+      "committees": [],
+      "membershipUrls": [],
+      "reason": "no_committee_membership"
+    },
+    "vip127": {
+      "present": null,
+      "meetings": null,
+      "periodStart": "2025-09-01",
+      "periodEnd": "2026-11-01",
+      "verifiedAt": "2026-11-01",
+      "sourceUrls": [],
+      "committees": [],
+      "membershipUrls": [],
+      "reason": "no_committee_membership"
+    },
+    "vip128": {
+      "present": null,
+      "meetings": null,
+      "periodStart": "2025-09-01",
+      "periodEnd": "2026-11-01",
+      "verifiedAt": "2026-11-01",
+      "sourceUrls": [],
+      "committees": [],
+      "membershipUrls": [],
+      "reason": "no_committee_membership"
+    },
+    "vip129": {
+      "present": null,
+      "meetings": null,
+      "periodStart": "2025-09-01",
+      "periodEnd": "2026-11-01",
+      "verifiedAt": "2026-11-01",
+      "sourceUrls": [],
+      "committees": [],
+      "membershipUrls": [],
+      "reason": "no_committee_membership"
+    },
+    "vip131": {
+      "present": null,
+      "meetings": null,
+      "periodStart": "2025-09-01",
+      "periodEnd": "2026-11-01",
+      "verifiedAt": "2026-11-01",
+      "sourceUrls": [],
+      "committees": [],
+      "membershipUrls": [],
+      "reason": "no_committee_membership"
+    },
+    "vip133": {
+      "present": null,
+      "meetings": null,
+      "periodStart": "2025-09-01",
+      "periodEnd": "2026-11-01",
+      "verifiedAt": "2026-11-01",
+      "sourceUrls": [],
+      "committees": [],
+      "membershipUrls": [],
+      "reason": "no_kuvendi_id"
+    },
+    "vip134": {
+      "present": null,
+      "meetings": null,
+      "periodStart": "2025-09-01",
+      "periodEnd": "2026-11-01",
+      "verifiedAt": "2026-11-01",
+      "sourceUrls": [],
+      "committees": [],
+      "membershipUrls": [],
+      "reason": "no_committee_membership"
+    },
+    "vip135": {
+      "present": null,
+      "meetings": null,
+      "periodStart": "2025-09-01",
+      "periodEnd": "2026-11-01",
+      "verifiedAt": "2026-11-01",
+      "sourceUrls": [],
+      "committees": [],
+      "membershipUrls": [],
+      "reason": "no_kuvendi_id"
+    },
+    "vip136": {
+      "present": null,
+      "meetings": null,
+      "periodStart": "2025-09-01",
+      "periodEnd": "2026-11-01",
+      "verifiedAt": "2026-11-01",
+      "sourceUrls": [],
+      "committees": [],
+      "membershipUrls": [],
+      "reason": "no_kuvendi_id"
+    },
+    "vip137": {
+      "present": null,
+      "meetings": null,
+      "periodStart": "2025-09-01",
+      "periodEnd": "2026-11-01",
+      "verifiedAt": "2026-11-01",
+      "sourceUrls": [],
+      "committees": [],
+      "membershipUrls": [],
+      "reason": "no_committee_membership"
+    },
+    "vip138": {
+      "present": null,
+      "meetings": null,
+      "periodStart": "2025-09-01",
+      "periodEnd": "2026-11-01",
+      "verifiedAt": "2026-11-01",
+      "sourceUrls": [],
+      "committees": [],
+      "membershipUrls": [],
+      "reason": "no_kuvendi_id"
+    },
+    "vip139": {
+      "present": null,
+      "meetings": null,
+      "periodStart": "2025-09-01",
+      "periodEnd": "2026-11-01",
+      "verifiedAt": "2026-11-01",
+      "sourceUrls": [],
+      "committees": [],
+      "membershipUrls": [],
+      "reason": "no_committee_membership"
+    },
+    "vip140": {
+      "present": null,
+      "meetings": null,
+      "periodStart": "2025-09-01",
+      "periodEnd": "2026-11-01",
+      "verifiedAt": "2026-11-01",
+      "sourceUrls": [],
+      "committees": [],
+      "membershipUrls": [],
+      "reason": "no_committee_membership"
+    },
+    "vip141": {
+      "present": null,
+      "meetings": null,
+      "periodStart": "2025-09-01",
+      "periodEnd": "2026-11-01",
+      "verifiedAt": "2026-11-01",
+      "sourceUrls": [],
+      "committees": [],
+      "membershipUrls": [],
+      "reason": "no_committee_membership"
+    },
+    "vip142": {
+      "present": null,
+      "meetings": null,
+      "periodStart": "2025-09-01",
+      "periodEnd": "2026-11-01",
+      "verifiedAt": "2026-11-01",
+      "sourceUrls": [],
+      "committees": [],
+      "membershipUrls": [],
+      "reason": "no_kuvendi_id"
+    },
+    "vip143": {
+      "present": null,
+      "meetings": null,
+      "periodStart": "2025-09-01",
+      "periodEnd": "2026-11-01",
+      "verifiedAt": "2026-11-01",
+      "sourceUrls": [],
+      "committees": [
+        "Komisioni për Evropën dhe Punët e Jashtme"
+      ],
+      "membershipUrls": [
+        "https://kuvendiapi.azurewebsites.net/api/strukturat/79a12b70-68b1-4842-88b3-28f801154b4c/anetaret"
+      ],
+      "reason": "minutes_missing"
+    },
+    "vip146": {
+      "present": null,
+      "meetings": null,
+      "periodStart": "2025-09-01",
+      "periodEnd": "2026-11-01",
+      "verifiedAt": "2026-11-01",
+      "sourceUrls": [],
+      "committees": [],
+      "membershipUrls": [],
+      "reason": "no_committee_membership"
+    },
+    "vip147": {
+      "present": null,
+      "meetings": null,
+      "periodStart": "2025-09-01",
+      "periodEnd": "2026-11-01",
+      "verifiedAt": "2026-11-01",
+      "sourceUrls": [],
+      "committees": [],
+      "membershipUrls": [],
+      "reason": "no_committee_membership"
+    },
+    "vip150": {
+      "present": null,
+      "meetings": null,
+      "periodStart": "2025-09-01",
+      "periodEnd": "2026-11-01",
+      "verifiedAt": "2026-11-01",
+      "sourceUrls": [],
+      "committees": [],
+      "membershipUrls": [],
+      "reason": "no_committee_membership"
+    },
+    "vip151": {
+      "present": null,
+      "meetings": null,
+      "periodStart": "2025-09-01",
+      "periodEnd": "2026-11-01",
+      "verifiedAt": "2026-11-01",
+      "sourceUrls": [],
+      "committees": [],
+      "membershipUrls": [],
+      "reason": "no_committee_membership"
+    },
+    "vip152": {
+      "present": null,
+      "meetings": null,
+      "periodStart": "2025-09-01",
+      "periodEnd": "2026-11-01",
+      "verifiedAt": "2026-11-01",
+      "sourceUrls": [],
+      "committees": [
+        "Komisioni për Evropën dhe Punët e Jashtme"
+      ],
+      "membershipUrls": [
+        "https://kuvendiapi.azurewebsites.net/api/strukturat/79a12b70-68b1-4842-88b3-28f801154b4c/anetaret"
+      ],
+      "reason": "minutes_missing"
+    },
+    "vip153": {
+      "present": null,
+      "meetings": null,
+      "periodStart": "2025-09-01",
+      "periodEnd": "2026-11-01",
+      "verifiedAt": "2026-11-01",
+      "sourceUrls": [],
+      "committees": [],
+      "membershipUrls": [],
+      "reason": "no_committee_membership"
+    },
+    "vip154": {
+      "present": null,
+      "meetings": null,
+      "periodStart": "2025-09-01",
+      "periodEnd": "2026-11-01",
+      "verifiedAt": "2026-11-01",
+      "sourceUrls": [],
+      "committees": [
+        "Komisioni për Burimet Natyrore, Infrastrukturën dhe Zhvillimin e Qëndrueshëm"
+      ],
+      "membershipUrls": [
+        "https://kuvendiapi.azurewebsites.net/api/strukturat/47fe240c-8972-457b-a05e-df3e67db1b26/anetaret"
+      ],
+      "reason": "minutes_missing"
+    },
+    "vip156": {
+      "present": null,
+      "meetings": null,
+      "periodStart": "2025-09-01",
+      "periodEnd": "2026-11-01",
+      "verifiedAt": "2026-11-01",
+      "sourceUrls": [],
+      "committees": [],
+      "membershipUrls": [],
+      "reason": "no_committee_membership"
+    },
+    "vip157": {
+      "present": null,
+      "meetings": null,
+      "periodStart": "2025-09-01",
+      "periodEnd": "2026-11-01",
+      "verifiedAt": "2026-11-01",
+      "sourceUrls": [],
+      "committees": [
+        "Komisioni Posaçëm Parlamentar për Reformën Administrativo-Territoriale në Republikën e Shqipërisë",
+        "Komisioni për Burimet Natyrore, Infrastrukturën dhe Zhvillimin e Qëndrueshëm"
+      ],
+      "membershipUrls": [
+        "https://kuvendiapi.azurewebsites.net/api/strukturat/0b3ed4f2-4dca-41b8-b82a-5c14ee4db9d7/anetaret",
+        "https://kuvendiapi.azurewebsites.net/api/strukturat/47fe240c-8972-457b-a05e-df3e67db1b26/anetaret"
+      ],
+      "reason": "minutes_missing"
+    },
+    "vip160": {
+      "present": null,
+      "meetings": null,
+      "periodStart": "2025-09-01",
+      "periodEnd": "2026-11-01",
+      "verifiedAt": "2026-11-01",
+      "sourceUrls": [],
+      "committees": [
+        "Nënkomisioni për Integritetin e Informacionit Publik, Dezinformimin dhe Ndërhyrjet e Huaja",
+        "Komisioni për të Drejtat e Njeriut dhe Mjetet e Informimit Publik"
+      ],
+      "membershipUrls": [
+        "https://kuvendiapi.azurewebsites.net/api/strukturat/8cbf532f-365a-4757-a11c-b27e573d7386/anetaret",
+        "https://kuvendiapi.azurewebsites.net/api/strukturat/9102a23a-865c-43fb-b491-68238bee5b35/anetaret"
+      ],
+      "reason": "minutes_missing"
+    },
+    "vip161": {
+      "present": null,
+      "meetings": null,
+      "periodStart": "2025-09-01",
+      "periodEnd": "2026-11-01",
+      "verifiedAt": "2026-11-01",
+      "sourceUrls": [],
+      "committees": [
+        "Komisioni për Evropën dhe Punët e Jashtme",
+        "Komisioni Posaçëm Parlamentar për Reformën Administrativo-Territoriale në Republikën e Shqipërisë"
+      ],
+      "membershipUrls": [
+        "https://kuvendiapi.azurewebsites.net/api/strukturat/0b3ed4f2-4dca-41b8-b82a-5c14ee4db9d7/anetaret",
+        "https://kuvendiapi.azurewebsites.net/api/strukturat/79a12b70-68b1-4842-88b3-28f801154b4c/anetaret"
+      ],
+      "reason": "minutes_missing"
+    },
+    "vip162": {
+      "present": null,
+      "meetings": null,
+      "periodStart": "2025-09-01",
+      "periodEnd": "2026-11-01",
+      "verifiedAt": "2026-11-01",
+      "sourceUrls": [],
+      "committees": [],
+      "membershipUrls": [],
+      "reason": "no_committee_membership"
+    },
+    "vip163": {
+      "present": null,
+      "meetings": null,
+      "periodStart": "2025-09-01",
+      "periodEnd": "2026-11-01",
+      "verifiedAt": "2026-11-01",
+      "sourceUrls": [],
+      "committees": [],
+      "membershipUrls": [],
+      "reason": "no_committee_membership"
+    },
+    "vip164": {
+      "present": null,
+      "meetings": null,
+      "periodStart": "2025-09-01",
+      "periodEnd": "2026-11-01",
+      "verifiedAt": "2026-11-01",
+      "sourceUrls": [],
+      "committees": [],
+      "membershipUrls": [],
+      "reason": "no_committee_membership"
+    },
+    "vip165": {
+      "present": null,
+      "meetings": null,
+      "periodStart": "2025-09-01",
+      "periodEnd": "2026-11-01",
+      "verifiedAt": "2026-11-01",
+      "sourceUrls": [],
+      "committees": [
+        "Komisioni për të Drejtat e Njeriut dhe Mjetet e Informimit Publik"
+      ],
+      "membershipUrls": [
+        "https://kuvendiapi.azurewebsites.net/api/strukturat/8cbf532f-365a-4757-a11c-b27e573d7386/anetaret"
+      ],
+      "reason": "minutes_missing"
+    },
+    "vip166": {
+      "present": null,
+      "meetings": null,
+      "periodStart": "2025-09-01",
+      "periodEnd": "2026-11-01",
+      "verifiedAt": "2026-11-01",
+      "sourceUrls": [],
+      "committees": [],
+      "membershipUrls": [],
+      "reason": "no_committee_membership"
+    },
+    "vip172": {
+      "present": null,
+      "meetings": null,
+      "periodStart": "2025-09-01",
+      "periodEnd": "2026-11-01",
+      "verifiedAt": "2026-11-01",
+      "sourceUrls": [],
+      "committees": [],
+      "membershipUrls": [],
+      "reason": "no_committee_membership"
+    },
+    "vip175": {
+      "present": null,
+      "meetings": null,
+      "periodStart": "2025-09-01",
+      "periodEnd": "2026-11-01",
+      "verifiedAt": "2026-11-01",
+      "sourceUrls": [],
+      "committees": [],
+      "membershipUrls": [],
+      "reason": "no_committee_membership"
+    },
+    "vip176": {
+      "present": null,
+      "meetings": null,
+      "periodStart": "2025-09-01",
+      "periodEnd": "2026-11-01",
+      "verifiedAt": "2026-11-01",
+      "sourceUrls": [],
+      "committees": [
+        "Komisioni Posaçëm Parlamentar për Reformën Administrativo-Territoriale në Republikën e Shqipërisë",
+        "Nënkomisioni për Integritetin e Informacionit Publik, Dezinformimin dhe Ndërhyrjet e Huaja",
+        "Komisioni Posaçëm Parlamentar për Realizimin e Reformës Zgjedhore",
+        "Komisioni për të Drejtat e Njeriut dhe Mjetet e Informimit Publik"
+      ],
+      "membershipUrls": [
+        "https://kuvendiapi.azurewebsites.net/api/strukturat/0b3ed4f2-4dca-41b8-b82a-5c14ee4db9d7/anetaret",
+        "https://kuvendiapi.azurewebsites.net/api/strukturat/8cbf532f-365a-4757-a11c-b27e573d7386/anetaret",
+        "https://kuvendiapi.azurewebsites.net/api/strukturat/9102a23a-865c-43fb-b491-68238bee5b35/anetaret",
+        "https://kuvendiapi.azurewebsites.net/api/strukturat/bc859489-dc02-4943-94c5-a18503c0a195/anetaret"
+      ],
+      "reason": "minutes_missing"
+    },
+    "vip178": {
+      "present": null,
+      "meetings": null,
+      "periodStart": "2025-09-01",
+      "periodEnd": "2026-11-01",
+      "verifiedAt": "2026-11-01",
+      "sourceUrls": [],
+      "committees": [],
+      "membershipUrls": [],
+      "reason": "no_committee_membership"
+    },
+    "vip179": {
+      "present": null,
+      "meetings": null,
+      "periodStart": "2025-09-01",
+      "periodEnd": "2026-11-01",
+      "verifiedAt": "2026-11-01",
+      "sourceUrls": [],
+      "committees": [
+        "Komisioni për Shëndetësinë dhe Mirëqenien Sociale"
+      ],
+      "membershipUrls": [
+        "https://kuvendiapi.azurewebsites.net/api/strukturat/6ac360ad-4c72-4f68-abf0-3a24913b4547/anetaret"
+      ],
+      "reason": "minutes_missing"
+    },
+    "vip180": {
+      "present": null,
+      "meetings": null,
+      "periodStart": "2025-09-01",
+      "periodEnd": "2026-11-01",
+      "verifiedAt": "2026-11-01",
+      "sourceUrls": [],
+      "committees": [
+        "Komisioni për Shëndetësinë dhe Mirëqenien Sociale"
+      ],
+      "membershipUrls": [
+        "https://kuvendiapi.azurewebsites.net/api/strukturat/6ac360ad-4c72-4f68-abf0-3a24913b4547/anetaret"
+      ],
+      "reason": "minutes_missing"
+    },
+    "vip181": {
+      "present": null,
+      "meetings": null,
+      "periodStart": "2025-09-01",
+      "periodEnd": "2026-11-01",
+      "verifiedAt": "2026-11-01",
+      "sourceUrls": [],
+      "committees": [
+        "Komisioni për Burimet Natyrore, Infrastrukturën dhe Zhvillimin e Qëndrueshëm"
+      ],
+      "membershipUrls": [
+        "https://kuvendiapi.azurewebsites.net/api/strukturat/47fe240c-8972-457b-a05e-df3e67db1b26/anetaret"
+      ],
+      "reason": "minutes_missing"
+    },
+    "vip182": {
+      "present": null,
+      "meetings": null,
+      "periodStart": "2025-09-01",
+      "periodEnd": "2026-11-01",
+      "verifiedAt": "2026-11-01",
+      "sourceUrls": [],
+      "committees": [],
+      "membershipUrls": [],
+      "reason": "no_committee_membership"
+    },
+    "vip183": {
+      "present": null,
+      "meetings": null,
+      "periodStart": "2025-09-01",
+      "periodEnd": "2026-11-01",
+      "verifiedAt": "2026-11-01",
+      "sourceUrls": [],
+      "committees": [],
+      "membershipUrls": [],
+      "reason": "no_committee_membership"
+    },
+    "vip185": {
+      "present": null,
+      "meetings": null,
+      "periodStart": "2025-09-01",
+      "periodEnd": "2026-11-01",
+      "verifiedAt": "2026-11-01",
+      "sourceUrls": [],
+      "committees": [],
+      "membershipUrls": [],
+      "reason": "no_committee_membership"
+    },
+    "vip186": {
+      "present": null,
+      "meetings": null,
+      "periodStart": "2025-09-01",
+      "periodEnd": "2026-11-01",
+      "verifiedAt": "2026-11-01",
+      "sourceUrls": [],
+      "committees": [
+        "Komisioni për Shëndetësinë dhe Mirëqenien Sociale"
+      ],
+      "membershipUrls": [
+        "https://kuvendiapi.azurewebsites.net/api/strukturat/6ac360ad-4c72-4f68-abf0-3a24913b4547/anetaret"
+      ],
+      "reason": "minutes_missing"
+    },
+    "vip187": {
+      "present": null,
+      "meetings": null,
+      "periodStart": "2025-09-01",
+      "periodEnd": "2026-11-01",
+      "verifiedAt": "2026-11-01",
+      "sourceUrls": [],
+      "committees": [],
+      "membershipUrls": [],
+      "reason": "no_committee_membership"
+    },
+    "vip188": {
+      "present": null,
+      "meetings": null,
+      "periodStart": "2025-09-01",
+      "periodEnd": "2026-11-01",
+      "verifiedAt": "2026-11-01",
+      "sourceUrls": [],
+      "committees": [],
+      "membershipUrls": [],
+      "reason": "no_committee_membership"
+    },
+    "vip189": {
+      "present": null,
+      "meetings": null,
+      "periodStart": "2025-09-01",
+      "periodEnd": "2026-11-01",
+      "verifiedAt": "2026-11-01",
+      "sourceUrls": [],
+      "committees": [],
+      "membershipUrls": [],
+      "reason": "no_committee_membership"
+    },
+    "vip191": {
+      "present": null,
+      "meetings": null,
+      "periodStart": "2025-09-01",
+      "periodEnd": "2026-11-01",
+      "verifiedAt": "2026-11-01",
+      "sourceUrls": [],
+      "committees": [],
+      "membershipUrls": [],
+      "reason": "no_committee_membership"
+    },
+    "vip192": {
+      "present": null,
+      "meetings": null,
+      "periodStart": "2025-09-01",
+      "periodEnd": "2026-11-01",
+      "verifiedAt": "2026-11-01",
+      "sourceUrls": [],
+      "committees": [],
+      "membershipUrls": [],
+      "reason": "no_committee_membership"
+    },
+    "vip193": {
+      "present": null,
+      "meetings": null,
+      "periodStart": "2025-09-01",
+      "periodEnd": "2026-11-01",
+      "verifiedAt": "2026-11-01",
+      "sourceUrls": [],
+      "committees": [],
+      "membershipUrls": [],
+      "reason": "no_committee_membership"
+    },
+    "vip195": {
+      "present": null,
+      "meetings": null,
+      "periodStart": "2025-09-01",
+      "periodEnd": "2026-11-01",
+      "verifiedAt": "2026-11-01",
+      "sourceUrls": [],
+      "committees": [
+        "Komisioni për Evropën dhe Punët e Jashtme"
+      ],
+      "membershipUrls": [
+        "https://kuvendiapi.azurewebsites.net/api/strukturat/79a12b70-68b1-4842-88b3-28f801154b4c/anetaret"
+      ],
+      "reason": "minutes_missing"
+    },
+    "vip198": {
+      "present": null,
+      "meetings": null,
+      "periodStart": "2025-09-01",
+      "periodEnd": "2026-11-01",
+      "verifiedAt": "2026-11-01",
+      "sourceUrls": [],
+      "committees": [
+        "Komisioni Posaçëm Parlamentar për Reformën Administrativo-Territoriale në Republikën e Shqipërisë",
+        "Komisioni për të Drejtat e Njeriut dhe Mjetet e Informimit Publik"
+      ],
+      "membershipUrls": [
+        "https://kuvendiapi.azurewebsites.net/api/strukturat/0b3ed4f2-4dca-41b8-b82a-5c14ee4db9d7/anetaret",
+        "https://kuvendiapi.azurewebsites.net/api/strukturat/8cbf532f-365a-4757-a11c-b27e573d7386/anetaret"
+      ],
+      "reason": "minutes_missing"
+    },
+    "vip199": {
+      "present": null,
+      "meetings": null,
+      "periodStart": "2025-09-01",
+      "periodEnd": "2026-11-01",
+      "verifiedAt": "2026-11-01",
+      "sourceUrls": [],
+      "committees": [],
+      "membershipUrls": [],
+      "reason": "no_committee_membership"
+    },
+    "vip200": {
+      "present": null,
+      "meetings": null,
+      "periodStart": "2025-09-01",
+      "periodEnd": "2026-11-01",
+      "verifiedAt": "2026-11-01",
+      "sourceUrls": [],
+      "committees": [],
+      "membershipUrls": [],
+      "reason": "no_committee_membership"
+    },
+    "vip201": {
+      "present": null,
+      "meetings": null,
+      "periodStart": "2025-09-01",
+      "periodEnd": "2026-11-01",
+      "verifiedAt": "2026-11-01",
+      "sourceUrls": [],
+      "committees": [],
+      "membershipUrls": [],
+      "reason": "no_committee_membership"
+    },
+    "vip205": {
+      "present": null,
+      "meetings": null,
+      "periodStart": "2025-09-01",
+      "periodEnd": "2026-11-01",
+      "verifiedAt": "2026-11-01",
+      "sourceUrls": [],
+      "committees": [
+        "Komisioni për Shëndetësinë dhe Mirëqenien Sociale"
+      ],
+      "membershipUrls": [
+        "https://kuvendiapi.azurewebsites.net/api/strukturat/6ac360ad-4c72-4f68-abf0-3a24913b4547/anetaret"
+      ],
+      "reason": "minutes_missing"
+    },
+    "vip206": {
+      "present": null,
+      "meetings": null,
+      "periodStart": "2025-09-01",
+      "periodEnd": "2026-11-01",
+      "verifiedAt": "2026-11-01",
+      "sourceUrls": [],
+      "committees": [],
+      "membershipUrls": [],
+      "reason": "no_committee_membership"
+    },
+    "vip207": {
+      "present": null,
+      "meetings": null,
+      "periodStart": "2025-09-01",
+      "periodEnd": "2026-11-01",
+      "verifiedAt": "2026-11-01",
+      "sourceUrls": [],
+      "committees": [],
+      "membershipUrls": [],
+      "reason": "no_committee_membership"
+    },
+    "vip208": {
+      "present": null,
+      "meetings": null,
+      "periodStart": "2025-09-01",
+      "periodEnd": "2026-11-01",
+      "verifiedAt": "2026-11-01",
+      "sourceUrls": [],
+      "committees": [],
+      "membershipUrls": [],
+      "reason": "no_committee_membership"
+    },
+    "vip211": {
+      "present": null,
+      "meetings": null,
+      "periodStart": "2025-09-01",
+      "periodEnd": "2026-11-01",
+      "verifiedAt": "2026-11-01",
+      "sourceUrls": [],
+      "committees": [],
+      "membershipUrls": [],
+      "reason": "no_committee_membership"
+    },
+    "vip212": {
+      "present": null,
+      "meetings": null,
+      "periodStart": "2025-09-01",
+      "periodEnd": "2026-11-01",
+      "verifiedAt": "2026-11-01",
+      "sourceUrls": [],
+      "committees": [],
+      "membershipUrls": [],
+      "reason": "no_committee_membership"
+    },
+    "vip213": {
+      "present": null,
+      "meetings": null,
+      "periodStart": "2025-09-01",
+      "periodEnd": "2026-11-01",
+      "verifiedAt": "2026-11-01",
+      "sourceUrls": [],
+      "committees": [
+        "Komisioni për Evropën dhe Punët e Jashtme"
+      ],
+      "membershipUrls": [
+        "https://kuvendiapi.azurewebsites.net/api/strukturat/79a12b70-68b1-4842-88b3-28f801154b4c/anetaret"
+      ],
+      "reason": "minutes_missing"
+    },
+    "vip215": {
+      "present": null,
+      "meetings": null,
+      "periodStart": "2025-09-01",
+      "periodEnd": "2026-11-01",
+      "verifiedAt": "2026-11-01",
+      "sourceUrls": [],
+      "committees": [],
+      "membershipUrls": [],
+      "reason": "no_committee_membership"
+    },
+    "vip221": {
+      "present": null,
+      "meetings": null,
+      "periodStart": "2025-09-01",
+      "periodEnd": "2026-11-01",
+      "verifiedAt": "2026-11-01",
+      "sourceUrls": [],
+      "committees": [
+        "Komisioni për Shëndetësinë dhe Mirëqenien Sociale"
+      ],
+      "membershipUrls": [
+        "https://kuvendiapi.azurewebsites.net/api/strukturat/6ac360ad-4c72-4f68-abf0-3a24913b4547/anetaret"
+      ],
+      "reason": "minutes_missing"
+    },
+    "vip223": {
+      "present": null,
+      "meetings": null,
+      "periodStart": "2025-09-01",
+      "periodEnd": "2026-11-01",
+      "verifiedAt": "2026-11-01",
+      "sourceUrls": [],
+      "committees": [],
+      "membershipUrls": [],
+      "reason": "no_committee_membership"
+    },
+    "vip224": {
+      "present": null,
+      "meetings": null,
+      "periodStart": "2025-09-01",
+      "periodEnd": "2026-11-01",
+      "verifiedAt": "2026-11-01",
+      "sourceUrls": [],
+      "committees": [],
+      "membershipUrls": [],
+      "reason": "no_committee_membership"
+    },
+    "vip228": {
+      "present": null,
+      "meetings": null,
+      "periodStart": "2025-09-01",
+      "periodEnd": "2026-11-01",
+      "verifiedAt": "2026-11-01",
+      "sourceUrls": [],
+      "committees": [],
+      "membershipUrls": [],
+      "reason": "no_committee_membership"
+    },
+    "vip232": {
+      "present": null,
+      "meetings": null,
+      "periodStart": "2025-09-01",
+      "periodEnd": "2026-11-01",
+      "verifiedAt": "2026-11-01",
+      "sourceUrls": [],
+      "committees": [
+        "Komisioni për Shëndetësinë dhe Mirëqenien Sociale"
+      ],
+      "membershipUrls": [
+        "https://kuvendiapi.azurewebsites.net/api/strukturat/6ac360ad-4c72-4f68-abf0-3a24913b4547/anetaret"
+      ],
+      "reason": "minutes_missing"
+    },
+    "vip234": {
+      "present": null,
+      "meetings": null,
+      "periodStart": "2025-09-01",
+      "periodEnd": "2026-11-01",
+      "verifiedAt": "2026-11-01",
+      "sourceUrls": [],
+      "committees": [
+        "Komisioni për Burimet Natyrore, Infrastrukturën dhe Zhvillimin e Qëndrueshëm"
+      ],
+      "membershipUrls": [
+        "https://kuvendiapi.azurewebsites.net/api/strukturat/47fe240c-8972-457b-a05e-df3e67db1b26/anetaret"
+      ],
+      "reason": "minutes_missing"
+    },
+    "vip238": {
+      "present": null,
+      "meetings": null,
+      "periodStart": "2025-09-01",
+      "periodEnd": "2026-11-01",
+      "verifiedAt": "2026-11-01",
+      "sourceUrls": [],
+      "committees": [],
+      "membershipUrls": [],
+      "reason": "no_kuvendi_id"
+    },
+    "vip240": {
+      "present": null,
+      "meetings": null,
+      "periodStart": "2025-09-01",
+      "periodEnd": "2026-11-01",
+      "verifiedAt": "2026-11-01",
+      "sourceUrls": [],
+      "committees": [],
+      "membershipUrls": [],
+      "reason": "no_kuvendi_id"
+    },
+    "vip243": {
+      "present": null,
+      "meetings": null,
+      "periodStart": "2025-09-01",
+      "periodEnd": "2026-11-01",
+      "verifiedAt": "2026-11-01",
+      "sourceUrls": [],
+      "committees": [
+        "Komisioni për Evropën dhe Punët e Jashtme"
+      ],
+      "membershipUrls": [
+        "https://kuvendiapi.azurewebsites.net/api/strukturat/79a12b70-68b1-4842-88b3-28f801154b4c/anetaret"
+      ],
+      "reason": "minutes_missing"
+    },
+    "vip244": {
+      "present": null,
+      "meetings": null,
+      "periodStart": "2025-09-01",
+      "periodEnd": "2026-11-01",
+      "verifiedAt": "2026-11-01",
+      "sourceUrls": [],
+      "committees": [
+        "Komisioni për Evropën dhe Punët e Jashtme"
+      ],
+      "membershipUrls": [
+        "https://kuvendiapi.azurewebsites.net/api/strukturat/79a12b70-68b1-4842-88b3-28f801154b4c/anetaret"
+      ],
+      "reason": "minutes_missing"
+    },
+    "vip245": {
+      "present": null,
+      "meetings": null,
+      "periodStart": "2025-09-01",
+      "periodEnd": "2026-11-01",
+      "verifiedAt": "2026-11-01",
+      "sourceUrls": [],
+      "committees": [],
+      "membershipUrls": [],
+      "reason": "no_committee_membership"
+    },
+    "vip247": {
+      "present": null,
+      "meetings": null,
+      "periodStart": "2025-09-01",
+      "periodEnd": "2026-11-01",
+      "verifiedAt": "2026-11-01",
+      "sourceUrls": [],
+      "committees": [
+        "Nënkomisioni për Integritetin e Informacionit Publik, Dezinformimin dhe Ndërhyrjet e Huaja",
+        "Komisioni për të Drejtat e Njeriut dhe Mjetet e Informimit Publik"
+      ],
+      "membershipUrls": [
+        "https://kuvendiapi.azurewebsites.net/api/strukturat/8cbf532f-365a-4757-a11c-b27e573d7386/anetaret",
+        "https://kuvendiapi.azurewebsites.net/api/strukturat/9102a23a-865c-43fb-b491-68238bee5b35/anetaret"
+      ],
+      "reason": "minutes_missing"
+    },
+    "vip249": {
+      "present": null,
+      "meetings": null,
+      "periodStart": "2025-09-01",
+      "periodEnd": "2026-11-01",
+      "verifiedAt": "2026-11-01",
+      "sourceUrls": [],
+      "committees": [
+        "Komisioni për Evropën dhe Punët e Jashtme"
+      ],
+      "membershipUrls": [
+        "https://kuvendiapi.azurewebsites.net/api/strukturat/79a12b70-68b1-4842-88b3-28f801154b4c/anetaret"
+      ],
+      "reason": "minutes_missing"
+    },
+    "vip252": {
+      "present": null,
+      "meetings": null,
+      "periodStart": "2025-09-01",
+      "periodEnd": "2026-11-01",
+      "verifiedAt": "2026-11-01",
+      "sourceUrls": [],
+      "committees": [],
+      "membershipUrls": [],
+      "reason": "no_kuvendi_id"
+    },
+    "vip253": {
+      "present": null,
+      "meetings": null,
+      "periodStart": "2025-09-01",
+      "periodEnd": "2026-11-01",
+      "verifiedAt": "2026-11-01",
+      "sourceUrls": [],
+      "committees": [],
+      "membershipUrls": [],
+      "reason": "no_kuvendi_id"
+    },
+    "vip254": {
+      "present": null,
+      "meetings": null,
+      "periodStart": "2025-09-01",
+      "periodEnd": "2026-11-01",
+      "verifiedAt": "2026-11-01",
+      "sourceUrls": [],
+      "committees": [],
+      "membershipUrls": [],
+      "reason": "no_committee_membership"
+    },
+    "vip255": {
+      "present": null,
+      "meetings": null,
+      "periodStart": "2025-09-01",
+      "periodEnd": "2026-11-01",
+      "verifiedAt": "2026-11-01",
+      "sourceUrls": [],
+      "committees": [
+        "Komisioni për të Drejtat e Njeriut dhe Mjetet e Informimit Publik"
+      ],
+      "membershipUrls": [
+        "https://kuvendiapi.azurewebsites.net/api/strukturat/8cbf532f-365a-4757-a11c-b27e573d7386/anetaret"
+      ],
+      "reason": "minutes_missing"
+    },
+    "vip258": {
+      "present": null,
+      "meetings": null,
+      "periodStart": "2025-09-01",
+      "periodEnd": "2026-11-01",
+      "verifiedAt": "2026-11-01",
+      "sourceUrls": [],
+      "committees": [],
+      "membershipUrls": [],
+      "reason": "no_kuvendi_id"
+    },
+    "vip264": {
+      "present": null,
+      "meetings": null,
+      "periodStart": "2025-09-01",
+      "periodEnd": "2026-11-01",
+      "verifiedAt": "2026-11-01",
+      "sourceUrls": [],
+      "committees": [],
+      "membershipUrls": [],
+      "reason": "no_committee_membership"
+    },
+    "vip265": {
+      "present": null,
+      "meetings": null,
+      "periodStart": "2025-09-01",
+      "periodEnd": "2026-11-01",
+      "verifiedAt": "2026-11-01",
+      "sourceUrls": [],
+      "committees": [
+        "Komisioni për Shëndetësinë dhe Mirëqenien Sociale"
+      ],
+      "membershipUrls": [
+        "https://kuvendiapi.azurewebsites.net/api/strukturat/6ac360ad-4c72-4f68-abf0-3a24913b4547/anetaret"
+      ],
+      "reason": "minutes_missing"
+    },
+    "vip273": {
+      "present": null,
+      "meetings": null,
+      "periodStart": "2025-09-01",
+      "periodEnd": "2026-11-01",
+      "verifiedAt": "2026-11-01",
+      "sourceUrls": [],
+      "committees": [],
+      "membershipUrls": [],
+      "reason": "no_committee_membership"
+    },
+    "vip274": {
+      "present": null,
+      "meetings": null,
+      "periodStart": "2025-09-01",
+      "periodEnd": "2026-11-01",
+      "verifiedAt": "2026-11-01",
+      "sourceUrls": [],
+      "committees": [
+        "Komisioni për Burimet Natyrore, Infrastrukturën dhe Zhvillimin e Qëndrueshëm"
+      ],
+      "membershipUrls": [
+        "https://kuvendiapi.azurewebsites.net/api/strukturat/47fe240c-8972-457b-a05e-df3e67db1b26/anetaret"
+      ],
+      "reason": "minutes_missing"
+    },
+    "vip276": {
+      "present": null,
+      "meetings": null,
+      "periodStart": "2025-09-01",
+      "periodEnd": "2026-11-01",
+      "verifiedAt": "2026-11-01",
+      "sourceUrls": [],
+      "committees": [
+        "Komisioni për Burimet Natyrore, Infrastrukturën dhe Zhvillimin e Qëndrueshëm"
+      ],
+      "membershipUrls": [
+        "https://kuvendiapi.azurewebsites.net/api/strukturat/47fe240c-8972-457b-a05e-df3e67db1b26/anetaret"
+      ],
+      "reason": "minutes_missing"
+    },
+    "vip280": {
+      "present": null,
+      "meetings": null,
+      "periodStart": "2025-09-01",
+      "periodEnd": "2026-11-01",
+      "verifiedAt": "2026-11-01",
+      "sourceUrls": [],
+      "committees": [],
+      "membershipUrls": [],
+      "reason": "no_committee_membership"
+    },
+    "vip281": {
+      "present": null,
+      "meetings": null,
+      "periodStart": "2025-09-01",
+      "periodEnd": "2026-11-01",
+      "verifiedAt": "2026-11-01",
+      "sourceUrls": [],
+      "committees": [
+        "Komisioni për të Drejtat e Njeriut dhe Mjetet e Informimit Publik"
+      ],
+      "membershipUrls": [
+        "https://kuvendiapi.azurewebsites.net/api/strukturat/8cbf532f-365a-4757-a11c-b27e573d7386/anetaret"
+      ],
+      "reason": "minutes_missing"
+    }
+  }
+}
