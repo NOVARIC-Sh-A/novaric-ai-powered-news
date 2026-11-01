@@ -4,9 +4,8 @@ import { resolveOfficialPhotoUrl } from '../../utils/officialPhoto';
 import { VipProfile } from '../../types';
 import { PoliticianDetail, ParagonDimensionItem, CANONICAL_PARAGON_DIMENSIONS } from '../../types/politician';
 import { ScoreRing } from './primitives/ScoreRing';
-import { RadarChart } from './primitives/RadarChart';
 import { BulletRow } from './primitives/BulletRow';
-import { Sparkline } from './primitives/Sparkline';
+import { CountFingerprint } from './CountFingerprint';
 import { ZodiacChip } from './primitives/ZodiacChip';
 import { TabPanel } from './primitives/TabPanel';
 import { AWAITING_DATA, ratingNoteForCoverage, PartialRatingBadge } from './primitives/awaiting';
@@ -136,15 +135,6 @@ export const PoliticianCard: React.FC<PoliticianCardProps> = ({
     : null;
 
   // History series: only display verified history from backend; do NOT generate Math.sin() synthetic series
-  const compositeHistory = React.useMemo(() => {
-    if (Array.isArray(target.compositeHistory) && target.compositeHistory.length > 0) {
-      return target.compositeHistory;
-    }
-    return [];
-  }, [target.compositeHistory]);
-
-  const peerAverage = typeof target.peerAverage === 'number' && !isNaN(target.peerAverage) ? target.peerAverage : null;
-
   // DOB formatting
   const dobFormatted = dateOfBirth
     ? (() => {
@@ -192,38 +182,10 @@ export const PoliticianCard: React.FC<PoliticianCardProps> = ({
         </div>
       )}
 
-      {scoringSuspended ? (
-        <div className="mb-6 p-4 rounded-2xl bg-amber-50/90 dark:bg-amber-950/40 border border-amber-200 dark:border-amber-800/60 shadow-xs flex items-start gap-3.5">
-          <AlertTriangle className="w-5 h-5 text-amber-600 dark:text-amber-400 shrink-0 mt-0.5" />
-          <div className="flex-1 text-xs leading-relaxed text-amber-900 dark:text-amber-200">
-            <div className="font-bold text-sm text-amber-800 dark:text-amber-300 mb-0.5">
-              PARAGON® — Audit në proces
-            </div>
-            <p>
-              Vlerësimet PARAGON® janë përkohësisht të pezulluara për verifikimin e burimeve dhe integritetit të të dhënave.
-            </p>
-          </div>
-        </div>
-      ) : (
-        <div className="mb-6 p-4 rounded-2xl bg-sky-50/90 dark:bg-sky-950/40 border border-sky-200 dark:border-sky-800/60 shadow-xs flex items-start gap-3.5">
-          <Info className="w-5 h-5 text-sky-600 dark:text-sky-400 shrink-0 mt-0.5" />
-          <div className="flex-1 text-xs leading-relaxed text-sky-950 dark:text-sky-100">
-            <div className="font-bold text-sm text-sky-800 dark:text-sky-300 mb-0.5">
-              <PartialRatingBadge coverage={coverageLabel} />
-            </div>
-            <p>
-              {ratingNoteForCoverage(coverageLabel)}
-            </p>
-          </div>
-        </div>
-      )}
-
-      {scoringSuspended ? <FactualObservatory profileId={target.id || target.numericId} /> : null}
-
       {/* ========================================================
-          (a) HERO HEADER
+          (a) DETAILS CARD
           ======================================================== */}
-      <div className="bg-white dark:bg-slate-900 rounded-3xl p-6 md:p-8 border border-slate-200 dark:border-slate-800 shadow-sm mb-6">
+      <div className="bg-white dark:bg-slate-900 rounded-3xl p-6 md:p-8 border border-slate-200 dark:border-slate-800 shadow-sm mb-6" data-profile-details="true">
         <div className="flex flex-col md:flex-row items-center md:items-start gap-6">
           {/* Photo wrapped in SVG Score Ring (Score presentation suspended) */}
           <div className="flex flex-col items-center gap-2 shrink-0 max-w-[16rem]">
@@ -335,69 +297,60 @@ export const PoliticianCard: React.FC<PoliticianCardProps> = ({
         </div>
       </div>
 
-      {/* ========================================================
-          (b) PARAGON FINGERPRINT (Radar + Bullets + Sparkline)
-          ======================================================== */}
-      <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 mb-6">
-        {/* Radar Column */}
-        <div className="lg:col-span-5 bg-white dark:bg-slate-900 rounded-3xl p-6 border border-slate-200 dark:border-slate-800 shadow-sm flex flex-col items-center justify-between">
-          <div className="w-full text-left mb-2">
-            <h3 className="text-sm font-black uppercase tracking-wider text-slate-800 dark:text-slate-200">
-              PARAGON® Fingerprint (7 Dimensione)
-            </h3>
-            <p className="text-[11px] text-slate-400 mt-0.5">
-              Profili shumëdimensional i bazuar në burime të verifikuara
+      <CountFingerprint
+        profileId={target.id || target.numericId}
+        editorialScore={editorialRemark?.editorialScore ?? null}
+      />
+
+      {scoringSuspended ? (
+        <div className="mb-6 p-4 rounded-2xl bg-amber-50/90 dark:bg-amber-950/40 border border-amber-200 dark:border-amber-800/60 shadow-xs flex items-start gap-3.5">
+          <AlertTriangle className="w-5 h-5 text-amber-600 dark:text-amber-400 shrink-0 mt-0.5" />
+          <div className="flex-1 text-xs leading-relaxed text-amber-900 dark:text-amber-200">
+            <div className="font-bold text-sm text-amber-800 dark:text-amber-300 mb-0.5">
+              PARAGON® — Audit në proces
+            </div>
+            <p>
+              Vlerësimet PARAGON® janë përkohësisht të pezulluara për verifikimin e burimeve dhe integritetit të të dhënave.
             </p>
           </div>
-
-          <div className="my-auto py-2">
-            <RadarChart
-              dimensions={displayedDimensions}
-              size={280}
-              editorialScore={editorialRemark?.editorialScore ?? null}
-            />
-          </div>
-
-          {/* Sparkline at bottom of radar column */}
-          <div className="w-full pt-4 border-t border-slate-100 dark:border-slate-800">
-            <Sparkline history={compositeHistory} peerAverage={peerAverage} />
+        </div>
+      ) : (
+        <div className="mb-6 p-4 rounded-2xl bg-sky-50/90 dark:bg-sky-950/40 border border-sky-200 dark:border-sky-800/60 shadow-xs flex items-start gap-3.5">
+          <Info className="w-5 h-5 text-sky-600 dark:text-sky-400 shrink-0 mt-0.5" />
+          <div className="flex-1 text-xs leading-relaxed text-sky-950 dark:text-sky-100">
+            <div className="font-bold text-sm text-sky-800 dark:text-sky-300 mb-0.5">
+              <PartialRatingBadge coverage={coverageLabel} />
+            </div>
+            <p>
+              {ratingNoteForCoverage(coverageLabel)}
+            </p>
           </div>
         </div>
+      )}
 
-        {/* Bullets List Column */}
-        <div className="lg:col-span-7 bg-white dark:bg-slate-900 rounded-3xl p-6 border border-slate-200 dark:border-slate-800 shadow-sm flex flex-col justify-between">
+      {scoringSuspended ? <FactualObservatory profileId={target.id || target.numericId} /> : null}
+
+      <div className="mb-6 rounded-3xl border border-slate-200 bg-white p-6 shadow-sm dark:border-slate-800 dark:bg-slate-900">
+        <div className="mb-4 flex items-center justify-between">
           <div>
-            <div className="flex items-center justify-between mb-4">
-              <div>
-                <h3 className="text-sm font-black uppercase tracking-wider text-slate-800 dark:text-slate-200">
-                  Treguesit e Performancës & Auditimi
-                </h3>
-                <p className="text-[11px] text-slate-400 mt-0.5">
-                  Vlerësimi (Blu) / Mes. e kolegëve (E zezë) / Benchmark (Gri)
-                </p>
-              </div>
-              <span className="text-[10px] font-mono font-bold text-slate-500 bg-slate-100 dark:bg-slate-800 px-2.5 py-1 rounded-md">
-                {scoringSuspended ? 'Auditimi në Proces' : `Mbulim ${coverageLabel} dimensions`}
-              </span>
-            </div>
-
-            <div className="divide-y divide-slate-100 dark:divide-slate-800">
-              {displayedDimensions.map((dim) => (
-                <BulletRow
-                  key={dim.key}
-                  dimension={dim}
-                  onOpenLineage={(id) => setSelectedLineageId(id)}
-                  onNavigateToMethodology={onNavigateToMethodology}
-                  onOpenEvidence={(key) => setEvidenceKey(key)}
-                />
-              ))}
-            </div>
+            <h3 className="text-sm font-black uppercase tracking-wider text-slate-800 dark:text-slate-200">
+              Dimensionet [Dimensions]
+            </h3>
+            <p className="mt-0.5 text-[11px] text-slate-400">
+              {scoringSuspended ? 'Në kalibrim. Pa pikë. [In calibration. No score.]' : `Mbulim ${coverageLabel}`}
+            </p>
           </div>
-
-          <div className="mt-4 pt-3 border-t border-slate-100 dark:border-slate-800 flex items-center justify-between text-[11px] text-slate-400">
-            <span>Dekompozim me gjysmë-jetë 180 ditë</span>
-            <span className="font-mono text-blue-600 dark:text-blue-400 font-bold">{scoringSuspended ? 'Kuvendi · klasa F [class F]' : 'Kuvendi + ILDKPKI + KQZ'}</span>
-          </div>
+        </div>
+        <div className="divide-y divide-slate-100 dark:divide-slate-800">
+          {displayedDimensions.map((dim) => (
+            <BulletRow
+              key={dim.key}
+              dimension={dim}
+              onOpenLineage={(id) => setSelectedLineageId(id)}
+              onNavigateToMethodology={onNavigateToMethodology}
+              onOpenEvidence={(key) => setEvidenceKey(key)}
+            />
+          ))}
         </div>
       </div>
 

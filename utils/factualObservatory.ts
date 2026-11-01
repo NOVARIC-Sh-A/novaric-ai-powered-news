@@ -1,6 +1,7 @@
 import rollCalls from '../data/official/kuvendi_rollcall_scores.json';
 import plenary from '../data/official/plenary_assertiveness.json';
 import committees from '../data/official/committee_governance.json';
+import committeeGap from '../data/official/committee_attendance_gap.json';
 
 export const OBSERVATORY_METHODOLOGY_VERSION = 'methodology_v0.2_2026-11-01';
 export const AWAITING_DATA = 'Në pritje të të dhënave / Awaiting data';
@@ -74,6 +75,19 @@ function people(file: { people?: Record<string, CountRecord> }): Record<string, 
   return file.people ?? {};
 }
 
+function committeeCount(id: string): CountRecord | undefined {
+  const current = people(committees as { people?: Record<string, CountRecord> })[id];
+  if (current && typeof current.present === 'number' && typeof current.meetings === 'number' && current.meetings > 0) {
+    return current;
+  }
+  const gapPeople = (committeeGap as { people?: Record<string, CountRecord & { reason?: string | null }> }).people ?? {};
+  const gap = gapPeople[id];
+  if (gap && typeof gap.present === 'number' && typeof gap.meetings === 'number' && gap.meetings > 0) {
+    return gap;
+  }
+  return undefined;
+}
+
 function firstUrl(record: CountRecord | undefined): string | null {
   const url = record?.sourceUrls?.find((item) => typeof item === 'string' && item.startsWith('http'));
   return url ?? null;
@@ -98,7 +112,7 @@ export function buildFactualObservatory(profileId: string | number | null | unde
   const id = canonicalProfileId(profileId);
   const roll = people(rollCalls as { people?: Record<string, CountRecord> })[id];
   const speech = people(plenary as { people?: Record<string, CountRecord> })[id];
-  const committee = people(committees as { people?: Record<string, CountRecord> })[id];
+  const committee = committeeCount(id);
   const rollPeriod = {
     start: (rollCalls as { since?: string }).since ?? null,
     end: (rollCalls as { retrievedAt?: string }).retrievedAt ?? null,
@@ -189,6 +203,69 @@ export function buildFactualObservatory(profileId: string | number | null | unde
       score: null,
       status: CALIBRATION_STATUS,
     })),
+  };
+}
+
+export const FINGERPRINT_LABEL =
+  'Gjurma PARAGON® — numërime të verifikuara, jo pikë [PARAGON® fingerprint — verified counts, not scores]';
+
+export const FINGERPRINT_AXIS_IDS = [
+  'voting_participation',
+  'plenary_presence',
+  'committee_participation',
+] as const;
+
+export type FingerprintAxisId = (typeof FINGERPRINT_AXIS_IDS)[number];
+
+export interface FingerprintAxis {
+  id: FingerprintAxisId;
+  label: string;
+  numerator: number | null;
+  denominator: number | null;
+  /** Share of this axis's own denominator. Null when either side was not measured. */
+  ratioPercent: number | null;
+  periodStart: string | null;
+  periodEnd: string | null;
+  sourceUrl: string | null;
+  sourceTitle: string | null;
+  verified: boolean;
+}
+
+export interface CountFingerprint {
+  profileId: string;
+  label: typeof FINGERPRINT_LABEL;
+  axes: FingerprintAxis[];
+  verifiedCount: number;
+  chart: 'radar' | 'bars';
+}
+
+export function buildCountFingerprint(profileId: string | number | null | undefined): CountFingerprint {
+  const report = buildFactualObservatory(profileId);
+  const axes = FINGERPRINT_AXIS_IDS.map((id) => {
+    const indicator = report.indicators.find((item) => item.id === id);
+    const numerator = indicator?.numerator ?? null;
+    const denominator = indicator?.denominator ?? null;
+    const verified = typeof numerator === 'number' && typeof denominator === 'number' && denominator > 0;
+    return {
+      id,
+      label: indicator?.label ?? id,
+      numerator: verified ? numerator : null,
+      denominator: verified ? denominator : null,
+      ratioPercent: verified ? (numerator / denominator) * 100 : null,
+      periodStart: verified ? indicator?.periodStart ?? null : null,
+      periodEnd: verified ? indicator?.periodEnd ?? null : null,
+      sourceUrl: verified ? indicator?.sourceUrl ?? null : null,
+      sourceTitle: verified ? indicator?.sourceTitle ?? null : null,
+      verified,
+    };
+  });
+  const verifiedCount = axes.filter((axis) => axis.verified).length;
+  return {
+    profileId: report.profileId,
+    label: FINGERPRINT_LABEL,
+    axes,
+    verifiedCount,
+    chart: verifiedCount >= 3 ? 'radar' : 'bars',
   };
 }
 
