@@ -3,16 +3,27 @@ import React, { useState } from 'react';
 import { ParagonDimensionItem } from '../../../types/politician';
 import { AWAITING_DATA } from './awaiting';
 
+export const EDITORIAL_RADAR_COLOR = '#1E5BD8';
+export const EDITORIAL_RADAR_TOOLTIP =
+  'Opinion editorial i NOVARIC® Sh.A. – jo pjesë e pikës PARAGON® / NOVARIC® Sh.A. editorial opinion – not part of the PARAGON® score';
+
+export function editorialRadarLegend(score: number): string {
+  return `Vlerësim editorial / Editor’s assessment (${score})`;
+}
+
 interface RadarChartProps {
   dimensions: ParagonDimensionItem[];
   size?: number;
   className?: string;
+  /** One overall editorial score, drawn on every axis. Not a per-dimension PARAGON value. */
+  editorialScore?: number | null;
 }
 
 export const RadarChart: React.FC<RadarChartProps> = ({
   dimensions,
   size = 280,
   className = '',
+  editorialScore = null,
 }) => {
   const [hoveredIdx, setHoveredIdx] = useState<number | null>(null);
 
@@ -62,6 +73,13 @@ export const RadarChart: React.FC<RadarChartProps> = ({
   const benchmarkEntries = dimensions
     .map((dim, i) => ({ dim, i, hasBenchmark: typeof dim.benchmark === 'number' && !isNaN(dim.benchmark) }))
     .filter((entry) => entry.hasBenchmark);
+
+  const editorialRing = typeof editorialScore === 'number' && !Number.isNaN(editorialScore)
+    ? Array.from({ length: numAxes }, (_, i) => {
+        const p = getPoint(i, editorialScore);
+        return `${p.x},${p.y}`;
+      }).join(' ')
+    : null;
 
   return (
     <div className={`relative flex flex-col items-center select-none ${className}`}>
@@ -226,6 +244,22 @@ export const RadarChart: React.FC<RadarChartProps> = ({
           );
         })}
 
+        {/* Editorial ring overlays every axis at the one overall opinion score. */}
+        {editorialRing && (
+          <polygon
+            data-editorial-ring="true"
+            points={editorialRing}
+            fill="none"
+            stroke={EDITORIAL_RADAR_COLOR}
+            strokeWidth="2"
+            strokeDasharray="7 4"
+            strokeLinejoin="round"
+            pointerEvents="none"
+          >
+            <title>{EDITORIAL_RADAR_TOOLTIP}</title>
+          </polygon>
+        )}
+
         {/* Short Axis Labels */}
         {dimensions.map((dim, i) => {
           const outer = getPoint(i, 118);
@@ -272,6 +306,11 @@ export const RadarChart: React.FC<RadarChartProps> = ({
                 {hDim.proxy ? <span className="text-amber-300" title={hDim.methodNote || 'Metodë proxy / Proxy method'}>Metodë proxy</span> : null}
                 <span className="text-slate-400">Mes. kolegëve: {hDim.peerAverage != null ? `${hDim.peerAverage}%` : AWAITING_DATA}</span>
                 <span className="text-slate-400">Benchmark: {hDim.benchmark != null ? `${hDim.benchmark}%` : AWAITING_DATA}</span>
+                {editorialRing ? (
+                  <span className="text-[#1E5BD8]" title={EDITORIAL_RADAR_TOOLTIP}>
+                    {editorialRadarLegend(editorialScore as number)}
+                  </span>
+                ) : null}
               </div>
             );
           })()
@@ -288,6 +327,12 @@ export const RadarChart: React.FC<RadarChartProps> = ({
               <span className="w-2.5 h-0.5 border-t border-dotted border-amber-600"></span>
               {benchmarkEntries.length ? 'Benchmark' : `Benchmark: ${AWAITING_DATA}`}
             </span>
+            {editorialRing ? (
+              <span className="inline-flex items-center gap-1.5 text-left" title={EDITORIAL_RADAR_TOOLTIP} data-editorial-legend="true">
+                <span className="w-2.5 h-0.5 border-t-2 border-dashed" style={{ borderColor: EDITORIAL_RADAR_COLOR }}></span>
+                {editorialRadarLegend(editorialScore as number)}
+              </span>
+            ) : null}
           </div>
         )}
       </div>
