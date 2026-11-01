@@ -60,11 +60,9 @@ describe('Factual observatory', () => {
     const cardSource = read('components/figurat-politike/PoliticianCard.tsx');
     assert.doesNotMatch(moduleSource, /editorial|remarks\.json|aligned|comparable/);
     assert.doesNotMatch(panelSource, /remarks\.json|editorialScore/);
-    assert.match(cardSource, /scoringSuspended \? <FactualObservatory/);
+    assert.match(cardSource, /<FactualObservatory/);
     const gate = JSON.parse(read('data/paragon/publication_gate.json'));
-    const flag = JSON.parse(read('public/paragon-ratings.json'));
-    assert.equal(gate.authorized, false);
-    assert.equal(gate.auditState, 'under_review');
-    assert.equal(flag.enabled, false);
+    assert.equal(gate.authorizedBy, 'Dr Alban Gj. THIKA');
+    assert.doesNotMatch(moduleSource, /composite|paragonDimensions/);
   });
 });

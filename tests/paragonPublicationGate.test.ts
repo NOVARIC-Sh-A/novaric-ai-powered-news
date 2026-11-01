@@ -18,23 +18,26 @@ describe('PARAGON publication fails closed', () => {
     assert.equal(scoresArePublic(null, true), false);
   });
 
-  it('ships the gate suspended', () => {
+  it('publishes stored legacy scores only under the 1 November 2026 authorization', () => {
     const gate = JSON.parse(read('data/paragon/publication_gate.json'));
     const flag = JSON.parse(read('public/paragon-ratings.json'));
-    assert.equal(gate.authorized, false);
-    assert.equal(gate.auditState, 'under_review');
-    assert.equal(flag.enabled, false);
-    assert.equal(flag.authorized, false);
-    assert.equal(scoresArePublic(gate, true), false);
-    assert.equal(scoresArePublic(flag, true), false);
+    assert.equal(gate.authorized, true);
+    assert.equal(gate.auditState, 'published');
+    assert.equal(gate.authorizedBy, 'Dr Alban Gj. THIKA');
+    assert.equal(flag.enabled, true);
+    assert.equal(flag.authorized, true);
+    assert.equal(scoresArePublic(gate, true), true);
+    assert.equal(scoresArePublic(gate, false), false);
+    assert.equal(scoresArePublic({ authorized: false, auditState: 'published', enabled: true }, true), false);
   });
 
-  it('does not default the ratings hook to on, and does not keep static scores after an API miss', () => {
+  it('keeps static scores only when the gate and a source both allow them', () => {
     const hook = read('components/figurat-politike/useParagonRatings.ts');
     const api = read('services/apiService.ts');
-    assert.match(hook, /useState\(false\)/);
+    assert.match(hook, /bundledScoresArePublic/);
     assert.match(hook, /scoresArePublic/);
     assert.match(api, /withoutStaticScores/);
+    assert.match(api, /staticProfileForPublication/);
     assert.doesNotMatch(hook, /useState\(true\)/);
   });
 

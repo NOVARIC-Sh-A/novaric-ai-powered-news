@@ -10,7 +10,7 @@ describe('Count fingerprint', () => {
   it('places the details card before the fingerprint and the fingerprint before the observatory', () => {
     const card = read('components/figurat-politike/PoliticianCard.tsx');
     const details = card.indexOf('data-profile-details="true"');
-    const fingerprint = card.indexOf('<CountFingerprint');
+    const fingerprint = card.indexOf('data-legacy-fingerprint="true"');
     const observatory = card.indexOf('<FactualObservatory');
     assert.ok(details > 0 && fingerprint > details && observatory > fingerprint);
     assert.match(card, /NUK PIKËZOHET|ZodiacChip/);
@@ -62,9 +62,8 @@ describe('Count fingerprint', () => {
     assert.doesNotMatch(panel, /paragonDimensions|composite|dynamicScore|aligned|comparable|benchmark|D1/);
     const caushiIds = buildCountFingerprint('vip55').axes.map((axis) => axis.id);
     assert.deepEqual(caushiIds, ['voting_participation', 'plenary_presence', 'committee_participation']);
-    const gate = JSON.parse(read('data/paragon/publication_gate.json'));
-    assert.equal(gate.authorized, false);
-    assert.equal(gate.auditState, 'under_review');
+    const engine = read('services/paragonEngine.ts');
+    assert.doesNotMatch(engine, /generateHash/);
   });
 
   it('keeps a missing committee count null, including Berisha', () => {

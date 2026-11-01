@@ -14,8 +14,10 @@ import { mediaProfilesData } from "../data/mediaProfiles";
 import { businessProfilesData } from "../data/businessProfiles";
 import { mockJudiciaryProfilesData } from "../data/mockJudiciaryProfiles";
 import paragonScoresExport from "../db/paragon_scores_export.json";
+import { bundledScoresArePublic } from "./paragonPublicationGate";
+import { canonicalProfileId } from "../utils/profileRedirects";
 
-/** Bundled export is an archive. It is not a publication channel. */
+/** Bundled export is an archive. Scores leave it only when the gate is open and the row has a source. */
 function withoutStaticScores<T extends Record<string, any>>(profile: T): T {
   return {
     ...profile,
@@ -28,7 +30,13 @@ function withoutStaticScores<T extends Record<string, any>>(profile: T): T {
     auditState: 'under_review',
   };
 }
-import { canonicalProfileId } from "../utils/profileRedirects";
+
+function staticProfileForPublication<T extends Record<string, any>>(profile: T): T {
+  const provenance = Boolean(
+    profile?.paragonSources?.pageUrl || profile?.fieldSources?.paragonScore?.sourceUrl
+  );
+  return bundledScoresArePublic(provenance) ? profile : withoutStaticScores(profile);
+}
 
 /**
  * Core request helper using fetch and getApiEndpoint for robustness.
@@ -153,7 +161,7 @@ export const resolvePoliticianId = async (query: string): Promise<number | null>
  * Fetch all VIP profiles from the backend.
  */
 export const fetchAllProfiles = async (): Promise<VipProfile[]> => {
-  const localPoliticians = mergePoliticianCards(((paragonScoresExport?.profiles as any[]) || []).map(withoutStaticScores));
+  const localPoliticians = mergePoliticianCards(((paragonScoresExport?.profiles as any[]) || []).map(staticProfileForPublication));
   try {
     const data = await apiGet<VipProfileResponseDto[]>("api/profiles");
     if (Array.isArray(data)) {
@@ -181,7 +189,7 @@ export const fetchAllProfiles = async (): Promise<VipProfile[]> => {
  */
 export const fetchPoliticianCards = async (): Promise<VipProfile[]> => {
   const path = 'politicians/cards';
-  const localProfiles = ((paragonScoresExport?.profiles as any[]) || []).map(withoutStaticScores);
+  const localProfiles = ((paragonScoresExport?.profiles as any[]) || []).map(staticProfileForPublication);
   
   try {
     const res = await apiGet<any>(path);
@@ -273,7 +281,7 @@ export const fetchPoliticianProfile = async (id: string | number): Promise<VipPr
     String(p.politicianId) === idStr ||
     String(p.id) === `vip${idStr}`
   );
-  if (localMatch) return toPoliticianUI(withoutStaticScores(localMatch));
+  if (localMatch) return toPoliticianUI(staticProfileForPublication(localMatch));
 
   // FALLBACK FOR NON-POLITICAL PROFILES ONLY
   const nonPoliticalProfiles = [

@@ -294,7 +294,7 @@ export const RadarChart: React.FC<RadarChartProps> = ({
               return (
                 <div className="bg-slate-900 text-white text-[11px] px-3 py-1 rounded-md shadow-lg flex items-center gap-2 animate-fadeIn border border-slate-700 tabular-nums">
                   <span className="font-semibold text-amber-300">{dimKey} {dimName}:</span>
-                  <span className="text-slate-300">në pritje — të dhëna jo të disponueshme</span>
+                  <span className="text-slate-300">{AWAITING_DATA}</span>
                 </div>
               );
             }
