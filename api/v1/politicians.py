@@ -724,6 +724,10 @@ async def get_politician_profile(id_or_slug: str = Path(...)):
         "placeOfBirth": found.get("placeOfBirth"),
         "electoralZone": found.get("electoralZone"),
         "paragonDimensions": found.get("paragonDimensions"),
+        "dimensionReadings": found.get("dimensionReadings") or {},
+        "peerAverage": found.get("peerAverage"),
+        "coverage": found.get("coverage"),
+        "composite": found.get("composite"),
         "compositeHistory": found.get("compositeHistory") or [],
         "politician": {
             "id": found.get("id"),

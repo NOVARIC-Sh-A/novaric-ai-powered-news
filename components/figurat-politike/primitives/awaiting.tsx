@@ -4,15 +4,29 @@ import React from 'react';
 export const AWAITING_DATA = 'Në pritje të të dhënave / Awaiting data';
 export const NOT_SCORED = 'Nuk pikëzohet / Not scored';
 
-/** Shown beside every published PARAGON overall score. */
+/** Shown beside a published PARAGON overall score that does not yet cover 7/7. */
 export const PARTIAL_RATING_BADGE =
   'Vlerësim i pjesshëm – vetëm aktiviteti parlamentar / Partial rating – parliamentary activity only';
+
+/** Shown only when every PARAGON dimension has a cited score. */
+export const FULL_RATING_BADGE = 'Vlerësim i plotë / Full rating';
+
+export function ratingBadgeForCoverage(coverage?: string | null): string {
+  return coverage === '7/7' ? FULL_RATING_BADGE : PARTIAL_RATING_BADGE;
+}
 
 export const PARTIAL_RANKING_LABEL =
   'Renditja e pjesshme – vetëm aktiviteti parlamentar / Partial ranking – parliamentary activity only';
 
 export const PARTIAL_RATING_NOTE =
-  'Ky vlerësim mbulon vetëm prezencën, pjesëmarrjen në votim dhe kohezionin e grupit nga fletët zyrtare të votimit të Kuvendit që nga 1 shtator 2025, plus ndërhyrjet në seancë plenare, pyetjet, interpelancat dhe mocionet kur procesverbali i Kuvendit e emërton deputetin. This score covers only presence, voting participation and group cohesion from official Kuvendi roll calls since 1 Sep 2025, plus named plenary interventions, questions, interpellations and motions. Dimensionet e tjera janë Në pritje të të dhënave / Awaiting data.';
+  'Ky vlerësim mbulon prezencën, pjesëmarrjen në votim dhe kohezionin e grupit nga fletët zyrtare të votimit të Kuvendit që nga 1 shtator 2025, plus ndërhyrjet në seancë plenare, pyetjet, interpelancat dhe mocionet kur procesverbali i Kuvendit e emërton deputetin, plus pjesëmarrjen në mbledhjet e komisioneve kur procesverbali e liston te Marrin pjesë ose Mungojnë. This score covers presence, voting participation and group cohesion from official Kuvendi roll calls since 1 Sep 2025, plus named plenary interventions, questions, interpellations and motions, plus committee attendance when the minute lists the member. Përfaqësimi dhe Narrativa janë Në pritje të të dhënave / Awaiting data.';
+
+export const FULL_RATING_NOTE =
+  'Ky vlerësim mbulon të shtatë dimensionet PARAGON® nga burime zyrtare të cituara. This rating covers all seven PARAGON® dimensions from cited official sources. Shenja e horoskopit nuk pikëzohet / Zodiac is not scored.';
+
+export function ratingNoteForCoverage(coverage?: string | null): string {
+  return coverage === '7/7' ? FULL_RATING_NOTE : PARTIAL_RATING_NOTE;
+}
 
 export function formatPartialCoverage(coverage?: string | null): string {
   if (coverage && /^\d+\/7$/.test(coverage)) return `${coverage} dimensions`;
@@ -26,7 +40,7 @@ export const PartialRatingBadge: React.FC<{ coverage?: string | null; className?
   const coverageText = formatPartialCoverage(coverage);
   return (
     <span className={className} data-partial-rating="true">
-      {PARTIAL_RATING_BADGE}
+      {ratingBadgeForCoverage(coverage)}
       {coverageText ? ` · ${coverageText}` : ''}
     </span>
   );

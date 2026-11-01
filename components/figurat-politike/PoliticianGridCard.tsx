@@ -2,7 +2,7 @@
 import React, { useState } from 'react';
 import { VipProfile } from '../../types';
 import { partyColor, normalizePartySlug, band, bandLabel } from '../../lib/brand-tokens';
-import { AWAITING_DATA, AwaitingPhoto, PARTIAL_RATING_BADGE, PartialRatingBadge } from './primitives/awaiting';
+import { AWAITING_DATA, AwaitingPhoto, ratingBadgeForCoverage, PartialRatingBadge } from './primitives/awaiting';
 import { resolveOfficialPhotoUrl } from '../../utils/officialPhoto';
 import { CANONICAL_PARAGON_DIMENSIONS } from '../../types/politician';
 import { ZodiacChip } from './primitives/ZodiacChip';
@@ -159,7 +159,7 @@ export const PoliticianGridCard: React.FC<PoliticianGridCardProps> = ({
           ) : composite != null ? (
             <div
               className="px-1.5 py-0.5 rounded text-[10px] font-bold text-sky-900 dark:text-sky-100 bg-sky-100/90 dark:bg-sky-950/80 border border-sky-300 dark:border-sky-700 shadow-sm"
-              title={PARTIAL_RATING_BADGE}
+              title={ratingBadgeForCoverage(coverage)}
             >
               {Math.round(composite)}
             </div>

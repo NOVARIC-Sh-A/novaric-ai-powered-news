@@ -9,7 +9,7 @@ import { BulletRow } from './primitives/BulletRow';
 import { Sparkline } from './primitives/Sparkline';
 import { ZodiacChip } from './primitives/ZodiacChip';
 import { TabPanel } from './primitives/TabPanel';
-import { AWAITING_DATA, PARTIAL_RATING_NOTE, PartialRatingBadge } from './primitives/awaiting';
+import { AWAITING_DATA, ratingNoteForCoverage, PartialRatingBadge } from './primitives/awaiting';
 import { ScoreLineagePanel } from '../analytics/ScoreLineagePanel';
 import { ProfileRecordSections } from './ProfileRecordSections';
 import { EvidenceDrawer } from './EvidenceDrawer';
@@ -199,7 +199,7 @@ export const PoliticianCard: React.FC<PoliticianCardProps> = ({
               <PartialRatingBadge coverage={coverageLabel} />
             </div>
             <p>
-              {PARTIAL_RATING_NOTE}
+              {ratingNoteForCoverage(coverageLabel)}
             </p>
           </div>
         </div>

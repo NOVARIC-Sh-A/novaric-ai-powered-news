@@ -28,7 +28,7 @@ describe('Displayed PARAGON scores are labelled partial', () => {
     for (const source of [card, grid, strip]) {
       assert.match(source, /PartialRatingBadge/);
     }
-    assert.match(card, /PARTIAL_RATING_NOTE/);
+    assert.match(card, /ratingNoteForCoverage/);
   });
 
   it('labels list sorting and the leaderboard as a partial ranking', () => {

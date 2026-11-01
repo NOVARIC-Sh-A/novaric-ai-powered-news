@@ -1,0 +1,1774 @@
+{
+  "retrievedAt": "2026-11-01",
+  "since": "2025-09-01",
+  "method": "docs/PARAGON_REMAINING_DIMENSIONS.md",
+  "source": "https://kuvendiapi.azurewebsites.net/api/dokumentet",
+  "minutesListed": 263,
+  "minutesUsed": 251,
+  "minutesSkipped": 12,
+  "minimumMeetings": 3,
+  "failedSample": [
+    {
+      "fileName": "Procesverbal-KKIE-26.06.2026.pdf",
+      "url": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202609031455091185Procesverbal-KKIE-26.06.2026.pdf",
+      "error": "no attendance list"
+    },
+    {
+      "fileName": "Procesverbal KEPF - 8.6.2026.pdf",
+      "url": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202610051313014024Procesverbal KEPF - 8.6.2026.pdf",
+      "error": "no attendance list"
+    },
+    {
+      "fileName": "Komisioni për Çështjet Ligjore dhe Administratën Publike_Rivleresimi i Pasurise.pdf",
+      "url": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202511181712362169Komisioni për Çështjet Ligjore dhe Administratën Publike_Rivleresimi i Pasurise.pdf",
+      "error": "no attendance list"
+    },
+    {
+      "fileName": "Procesverbal-KKIE-10.12.2025.pdf",
+      "url": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202512221141245594Procesverbal-KKIE-10.12.2025.pdf",
+      "error": "no attendance list"
+    },
+    {
+      "fileName": "Komisioni për Çështjet Ligjore dhe Administratën Publike_Ndryshime taksat vendore parim.pdf",
+      "url": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202511181709311732Komisioni për Çështjet Ligjore dhe Administratën Publike_Ndryshime taksat vendore parim.pdf",
+      "error": "no attendance list"
+    },
+    {
+      "fileName": "Komisioni për Çështjet Ligjore dhe Administratën Publike_fiskalizimi parim.pdf",
+      "url": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202511181707324423Komisioni për Çështjet Ligjore dhe Administratën Publike_fiskalizimi parim.pdf",
+      "error": "no attendance list"
+    },
+    {
+      "fileName": "Komisioni për Çështjet Ligjore dhe Administratën Publike_Shuarja e detyrimeve parim.pdf",
+      "url": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202511181713478742Komisioni për Çështjet Ligjore dhe Administratën Publike_Shuarja e detyrimeve parim.pdf",
+      "error": "no attendance list"
+    },
+    {
+      "fileName": "Komisioni për Çështjet Ligjore dhe Administratën Publike_MARRËVESHJA E PAQES FISKALE parim.pdf",
+      "url": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202511181706232103Komisioni për Çështjet Ligjore dhe Administratën Publike_MARRËVESHJA E PAQES FISKALE parim.pdf",
+      "error": "no attendance list"
+    },
+    {
+      "fileName": "Komisioni për Çështjet Ligjore dhe Administratën Publike_Ndryshime TVSH parim.pdf",
+      "url": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202511181716123367Komisioni për Çështjet Ligjore dhe Administratën Publike_Ndryshime TVSH parim.pdf",
+      "error": "no attendance list"
+    },
+    {
+      "fileName": "Komisioni për Çështjet Ligjore dhe Administratën Publike_Ndryshime procedurat tatimore parim.pdf",
+      "url": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202511181708337226Komisioni për Çështjet Ligjore dhe Administratën Publike_Ndryshime procedurat tatimore parim.pdf",
+      "error": "no attendance list"
+    },
+    {
+      "fileName": "Procesverbal KEPF - 3.11.2025.pdf",
+      "url": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202511201507276288Procesverbal KEPF - 3.11.2025.pdf",
+      "error": "no attendance list"
+    },
+    {
+      "fileName": "Komisioni për Çështjet Ligjore dhe Administratën Publike_Ndryshime TVSH.pdf",
+      "url": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202511181724469454Komisioni për Çështjet Ligjore dhe Administratën Publike_Ndryshime TVSH.pdf",
+      "error": "no attendance list"
+    }
+  ],
+  "unmatchedSample": [
+    [
+      "Tedi Mula",
+      64
+    ],
+    [
+      "Ramion Kurti",
+      39
+    ],
+    [
+      "Ana Dajko",
+      33
+    ],
+    [
+      "Mbikëqyrjen Institucionale",
+      3
+    ],
+    [
+      "Marios Prendi",
+      3
+    ],
+    [
+      "Erjo Milo",
+      3
+    ],
+    [
+      "Elda Zenelaj",
+      2
+    ],
+    [
+      "Ana Çoba",
+      2
+    ],
+    [
+      "Abla Tepelena",
+      2
+    ],
+    [
+      "Adela Terolli",
+      2
+    ],
+    [
+      "Alda Gjergji",
+      2
+    ],
+    [
+      "Ardiana Laska",
+      2
+    ],
+    [
+      "Arben Silaj",
+      2
+    ],
+    [
+      "Brunilda Leka",
+      2
+    ],
+    [
+      "Dajana Collaku",
+      2
+    ],
+    [
+      "Dezdimona Sela",
+      2
+    ],
+    [
+      "Dorina Balla",
+      2
+    ],
+    [
+      "Esmeralda Hoxha",
+      2
+    ],
+    [
+      "Fjoralbo Gockaj",
+      2
+    ],
+    [
+      "Gjergji Ogreni",
+      2
+    ],
+    [
+      "Hena Alushi",
+      2
+    ],
+    [
+      "Igli Troqe",
+      2
+    ],
+    [
+      "Ilenia Kaso",
+      2
+    ],
+    [
+      "Irla Pirra",
+      2
+    ],
+    [
+      "Joana Gllavina",
+      2
+    ],
+    [
+      "Julia Lico",
+      2
+    ],
+    [
+      "Kesiana Hazizaj",
+      2
+    ],
+    [
+      "Klotilda Gjorga",
+      2
+    ],
+    [
+      "Kristi Prifti",
+      2
+    ],
+    [
+      "Dhurata Saraçi",
+      2
+    ],
+    [
+      "Marinel Prenga",
+      2
+    ],
+    [
+      "Matea Rexhepi",
+      2
+    ],
+    [
+      "Megi Dukeli",
+      2
+    ],
+    [
+      "Meixhi Hysi",
+      2
+    ],
+    [
+      "Nevila Jahaj",
+      2
+    ],
+    [
+      "Nejla Mjeshtri",
+      2
+    ],
+    [
+      "Redi Vranici",
+      2
+    ],
+    [
+      "Stela Haxhi",
+      2
+    ],
+    [
+      "Vasken Spiru",
+      2
+    ],
+    [
+      "Xhoana Agolli",
+      2
+    ]
+  ],
+  "people": {
+    "vip262": {
+      "meetings": 84,
+      "present": 82,
+      "absent": 2,
+      "sourceUrls": [
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202606300901184769Komisioni per ceshtjet e brendshme dhe mbrojtjes 16.02.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202609170900425494Komisioni për Çështjet e Brendshme dhe të Mbrojtjes 4.5.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202609161354057337Komisioni për Çështjet Ligjore dhe Administratën Publike 8.6.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202609161355103328Komisioni për Çështjet Ligjore dhe Administratën Publike dt 12.5.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202607061135145316Komisioni për Çështjet Ligjore dhe Administratën Publike dt 3.3.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202602161434564195Komisioni për Çështjet e Brendshme dhe Mbrojtjes 13.11.2025.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202606091521106419Komisioni për Çështjet Ligjore dhe Administratën Publike 9.2.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202609161353183810Komisioni për Çështjet Ligjore dhe Administratën Publike 3.6.2026.pdf"
+      ],
+      "unmatched": 0
+    },
+    "vip194": {
+      "meetings": 81,
+      "present": 75,
+      "absent": 6,
+      "sourceUrls": [
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202609161354057337Komisioni për Çështjet Ligjore dhe Administratën Publike 8.6.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202609161355103328Komisioni për Çështjet Ligjore dhe Administratën Publike dt 12.5.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202605051257348382Komisioni  Nismat Qytetare  20.1.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202605051256379541Komisioni nisma qytetre datë 2.12.2025 %282%29.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202609161353183810Komisioni për Çështjet Ligjore dhe Administratën Publike 3.6.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202512091433128315Komisioni i Ligjeve 28.10.2025 pj 2.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202604090916455221Komisioni  i Ligjeve  3.12.2025.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202606191037393075Komisioni për Nismat Qytetare%2C Bashkëpunimin dhe Mbikëqyrjen Institucionale dt 9.2.2026.pdf"
+      ],
+      "unmatched": 0
+    },
+    "vip230": {
+      "meetings": 80,
+      "present": 62,
+      "absent": 18,
+      "sourceUrls": [
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202605080842089514Komisioni i edukimit 2.12.2025.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202606040753022348Procesverbal KEPF - 4.2.2026 pj 2.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202512071512383551Procesverbal KEPF - MB 1 - 13.11.2025.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202609161110231443Komisioni për Edukimin%2C Shkencën dhe Sportet dt 11.2.2026 %281%29.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202607240854507110Procesverbal KEPF - 30.3.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202512071512370163Procesverbal KEPF - 11.11.2025.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202510240656276839Procesverbal KEPF - 8 .10.2025.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202606121028082363Komisioni për Edukimin%2C Shkencën dhe Sportet  21.1.2026.pdf"
+      ],
+      "unmatched": 0
+    },
+    "vip177": {
+      "meetings": 72,
+      "present": 69,
+      "absent": 3,
+      "sourceUrls": [
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202510090749065296Komisioni per Kulturen%2C%2CTurizmin dhe  Diasporen 1.10  2025.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202601201301010440Komisioni per Kulturën%2C Turizmin dhe Diasporën 2025-10-29.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202606040753022348Procesverbal KEPF - 4.2.2026 pj 2.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202512071512383551Procesverbal KEPF - MB 1 - 13.11.2025.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202604290911356805Komisioni per Kulturen%2C Turizmin dhe Diasporen   3.12.2025.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202607240854507110Procesverbal KEPF - 30.3.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202512071512370163Procesverbal KEPF - 11.11.2025.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202511201506573609Procesverbal KEPF - MB 2 - 14.10.2025 .pdf"
+      ],
+      "unmatched": 0
+    },
+    "vip278": {
+      "meetings": 68,
+      "present": 64,
+      "absent": 4,
+      "sourceUrls": [
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202609161354057337Komisioni për Çështjet Ligjore dhe Administratën Publike 8.6.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202609161355103328Komisioni për Çështjet Ligjore dhe Administratën Publike dt 12.5.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202607061135145316Komisioni për Çështjet Ligjore dhe Administratën Publike dt 3.3.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202606091521106419Komisioni për Çështjet Ligjore dhe Administratën Publike 9.2.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202609161353183810Komisioni për Çështjet Ligjore dhe Administratën Publike 3.6.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202606020956344537Komisioni i ligjeve   2.02.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202512091433128315Komisioni i Ligjeve 28.10.2025 pj 2.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202604090916455221Komisioni  i Ligjeve  3.12.2025.pdf"
+      ],
+      "unmatched": 0
+    },
+    "vip214": {
+      "meetings": 67,
+      "present": 64,
+      "absent": 3,
+      "sourceUrls": [
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202604290914515699Komisioni për Kulturën%2C Turizmin dhe Diasporën dt 16.12.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202606040753022348Procesverbal KEPF - 4.2.2026 pj 2.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202605181146250996Komisioni për Kulturën%2C Turizmin dhe Diasporën 28.01.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202512071512383551Procesverbal KEPF - MB 1 - 13.11.2025.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202604290911356805Komisioni per Kulturen%2C Turizmin dhe Diasporen   3.12.2025.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202607071247423777Komisioni i Kultures%2C Turizmit dhe Diaspores 10.03.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202607240854507110Procesverbal KEPF - 30.3.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202512071512370163Procesverbal KEPF - 11.11.2025.pdf"
+      ],
+      "unmatched": 0
+    },
+    "vip49": {
+      "meetings": 66,
+      "present": 65,
+      "absent": 1,
+      "sourceUrls": [
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202606300901184769Komisioni per ceshtjet e brendshme dhe mbrojtjes 16.02.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202606040753022348Procesverbal KEPF - 4.2.2026 pj 2.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202512071512383551Procesverbal KEPF - MB 1 - 13.11.2025.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202607240854507110Procesverbal KEPF - 30.3.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202512071512370163Procesverbal KEPF - 11.11.2025.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202511201506573609Procesverbal KEPF - MB 2 - 14.10.2025 .pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202510240656276839Procesverbal KEPF - 8 .10.2025.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202607240856108153Procesverbal KEPF - 4.3.2026.pdf"
+      ],
+      "unmatched": 0
+    },
+    "vip267": {
+      "meetings": 65,
+      "present": 55,
+      "absent": 10,
+      "sourceUrls": [
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202609161354057337Komisioni për Çështjet Ligjore dhe Administratën Publike 8.6.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202609161355103328Komisioni për Çështjet Ligjore dhe Administratën Publike dt 12.5.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202607061135145316Komisioni për Çështjet Ligjore dhe Administratën Publike dt 3.3.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202606091521106419Komisioni për Çështjet Ligjore dhe Administratën Publike 9.2.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202605181146250996Komisioni për Kulturën%2C Turizmin dhe Diasporën 28.01.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202609161353183810Komisioni për Çështjet Ligjore dhe Administratën Publike 3.6.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202606020956344537Komisioni i ligjeve   2.02.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202512091433128315Komisioni i Ligjeve 28.10.2025 pj 2.pdf"
+      ],
+      "unmatched": 0
+    },
+    "vip159": {
+      "meetings": 64,
+      "present": 51,
+      "absent": 13,
+      "sourceUrls": [
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202609161354057337Komisioni për Çështjet Ligjore dhe Administratën Publike 8.6.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202609161355103328Komisioni për Çështjet Ligjore dhe Administratën Publike dt 12.5.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202607061135145316Komisioni për Çështjet Ligjore dhe Administratën Publike dt 3.3.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202606091521106419Komisioni për Çështjet Ligjore dhe Administratën Publike 9.2.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202609161353183810Komisioni për Çështjet Ligjore dhe Administratën Publike 3.6.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202606020956344537Komisioni i ligjeve   2.02.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202512091433128315Komisioni i Ligjeve 28.10.2025 pj 2.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202604090916455221Komisioni  i Ligjeve  3.12.2025.pdf"
+      ],
+      "unmatched": 0
+    },
+    "vip196": {
+      "meetings": 64,
+      "present": 56,
+      "absent": 8,
+      "sourceUrls": [
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202609161354057337Komisioni për Çështjet Ligjore dhe Administratën Publike 8.6.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202609161355103328Komisioni për Çështjet Ligjore dhe Administratën Publike dt 12.5.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202607061135145316Komisioni për Çështjet Ligjore dhe Administratën Publike dt 3.3.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202606091521106419Komisioni për Çështjet Ligjore dhe Administratën Publike 9.2.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202609161353183810Komisioni për Çështjet Ligjore dhe Administratën Publike 3.6.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202606020956344537Komisioni i ligjeve   2.02.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202512091433128315Komisioni i Ligjeve 28.10.2025 pj 2.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202604090916455221Komisioni  i Ligjeve  3.12.2025.pdf"
+      ],
+      "unmatched": 0
+    },
+    "vip219": {
+      "meetings": 64,
+      "present": 63,
+      "absent": 1,
+      "sourceUrls": [
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202609161354057337Komisioni për Çështjet Ligjore dhe Administratën Publike 8.6.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202609161355103328Komisioni për Çështjet Ligjore dhe Administratën Publike dt 12.5.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202607061135145316Komisioni për Çështjet Ligjore dhe Administratën Publike dt 3.3.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202606091521106419Komisioni për Çështjet Ligjore dhe Administratën Publike 9.2.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202609161353183810Komisioni për Çështjet Ligjore dhe Administratën Publike 3.6.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202606020956344537Komisioni i ligjeve   2.02.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202512091433128315Komisioni i Ligjeve 28.10.2025 pj 2.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202604090916455221Komisioni  i Ligjeve  3.12.2025.pdf"
+      ],
+      "unmatched": 0
+    },
+    "vip220": {
+      "meetings": 64,
+      "present": 52,
+      "absent": 12,
+      "sourceUrls": [
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202609161354057337Komisioni për Çështjet Ligjore dhe Administratën Publike 8.6.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202609161355103328Komisioni për Çështjet Ligjore dhe Administratën Publike dt 12.5.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202607061135145316Komisioni për Çështjet Ligjore dhe Administratën Publike dt 3.3.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202606091521106419Komisioni për Çështjet Ligjore dhe Administratën Publike 9.2.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202609161353183810Komisioni për Çështjet Ligjore dhe Administratën Publike 3.6.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202606020956344537Komisioni i ligjeve   2.02.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202512091433128315Komisioni i Ligjeve 28.10.2025 pj 2.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202604090916455221Komisioni  i Ligjeve  3.12.2025.pdf"
+      ],
+      "unmatched": 0
+    },
+    "vip269": {
+      "meetings": 64,
+      "present": 59,
+      "absent": 5,
+      "sourceUrls": [
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202609161354057337Komisioni për Çështjet Ligjore dhe Administratën Publike 8.6.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202609161355103328Komisioni për Çështjet Ligjore dhe Administratën Publike dt 12.5.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202607061135145316Komisioni për Çështjet Ligjore dhe Administratën Publike dt 3.3.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202606091521106419Komisioni për Çështjet Ligjore dhe Administratën Publike 9.2.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202609161353183810Komisioni për Çështjet Ligjore dhe Administratën Publike 3.6.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202606020956344537Komisioni i ligjeve   2.02.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202512091433128315Komisioni i Ligjeve 28.10.2025 pj 2.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202604090916455221Komisioni  i Ligjeve  3.12.2025.pdf"
+      ],
+      "unmatched": 0
+    },
+    "vip27": {
+      "meetings": 64,
+      "present": 64,
+      "absent": 0,
+      "sourceUrls": [
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202609161354057337Komisioni për Çështjet Ligjore dhe Administratën Publike 8.6.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202609161355103328Komisioni për Çështjet Ligjore dhe Administratën Publike dt 12.5.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202607061135145316Komisioni për Çështjet Ligjore dhe Administratën Publike dt 3.3.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202606091521106419Komisioni për Çështjet Ligjore dhe Administratën Publike 9.2.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202609161353183810Komisioni për Çështjet Ligjore dhe Administratën Publike 3.6.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202606020956344537Komisioni i ligjeve   2.02.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202512091433128315Komisioni i Ligjeve 28.10.2025 pj 2.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202604090916455221Komisioni  i Ligjeve  3.12.2025.pdf"
+      ],
+      "unmatched": 0
+    },
+    "vip45": {
+      "meetings": 64,
+      "present": 47,
+      "absent": 17,
+      "sourceUrls": [
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202609161354057337Komisioni për Çështjet Ligjore dhe Administratën Publike 8.6.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202609161355103328Komisioni për Çështjet Ligjore dhe Administratën Publike dt 12.5.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202607061135145316Komisioni për Çështjet Ligjore dhe Administratën Publike dt 3.3.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202606091521106419Komisioni për Çështjet Ligjore dhe Administratën Publike 9.2.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202605181146250996Komisioni për Kulturën%2C Turizmin dhe Diasporën 28.01.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202609161353183810Komisioni për Çështjet Ligjore dhe Administratën Publike 3.6.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202606020956344537Komisioni i ligjeve   2.02.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202512091433128315Komisioni i Ligjeve 28.10.2025 pj 2.pdf"
+      ],
+      "unmatched": 0
+    },
+    "vip55": {
+      "meetings": 64,
+      "present": 63,
+      "absent": 1,
+      "sourceUrls": [
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202609161354057337Komisioni për Çështjet Ligjore dhe Administratën Publike 8.6.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202609161355103328Komisioni për Çështjet Ligjore dhe Administratën Publike dt 12.5.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202607061135145316Komisioni për Çështjet Ligjore dhe Administratën Publike dt 3.3.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202606091521106419Komisioni për Çështjet Ligjore dhe Administratën Publike 9.2.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202609161353183810Komisioni për Çështjet Ligjore dhe Administratën Publike 3.6.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202606020956344537Komisioni i ligjeve   2.02.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202512091433128315Komisioni i Ligjeve 28.10.2025 pj 2.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202604090916455221Komisioni  i Ligjeve  3.12.2025.pdf"
+      ],
+      "unmatched": 0
+    },
+    "vip58": {
+      "meetings": 64,
+      "present": 52,
+      "absent": 12,
+      "sourceUrls": [
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202609161354057337Komisioni për Çështjet Ligjore dhe Administratën Publike 8.6.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202609161355103328Komisioni për Çështjet Ligjore dhe Administratën Publike dt 12.5.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202607061135145316Komisioni për Çështjet Ligjore dhe Administratën Publike dt 3.3.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202606091521106419Komisioni për Çështjet Ligjore dhe Administratën Publike 9.2.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202609161353183810Komisioni për Çështjet Ligjore dhe Administratën Publike 3.6.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202606020956344537Komisioni i ligjeve   2.02.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202512091433128315Komisioni i Ligjeve 28.10.2025 pj 2.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202604090916455221Komisioni  i Ligjeve  3.12.2025.pdf"
+      ],
+      "unmatched": 0
+    },
+    "vip266": {
+      "meetings": 62,
+      "present": 53,
+      "absent": 9,
+      "sourceUrls": [
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202606040753022348Procesverbal KEPF - 4.2.2026 pj 2.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202512071512383551Procesverbal KEPF - MB 1 - 13.11.2025.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202607240854507110Procesverbal KEPF - 30.3.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202512071512370163Procesverbal KEPF - 11.11.2025.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202511201506573609Procesverbal KEPF - MB 2 - 14.10.2025 .pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202510240656276839Procesverbal KEPF - 8 .10.2025.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202607240856108153Procesverbal KEPF - 4.3.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202609160757134929Procesverbal KEPF - 5.5.2026.pdf"
+      ],
+      "unmatched": 0
+    },
+    "vip168": {
+      "meetings": 61,
+      "present": 56,
+      "absent": 5,
+      "sourceUrls": [
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202606040753022348Procesverbal KEPF - 4.2.2026 pj 2.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202512071512383551Procesverbal KEPF - MB 1 - 13.11.2025.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202607240854507110Procesverbal KEPF - 30.3.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202512071512370163Procesverbal KEPF - 11.11.2025.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202511201506573609Procesverbal KEPF - MB 2 - 14.10.2025 .pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202510240656276839Procesverbal KEPF - 8 .10.2025.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202607240856108153Procesverbal KEPF - 4.3.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202609160757134929Procesverbal KEPF - 5.5.2026.pdf"
+      ],
+      "unmatched": 0
+    },
+    "vip209": {
+      "meetings": 61,
+      "present": 59,
+      "absent": 2,
+      "sourceUrls": [
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202609161354057337Komisioni për Çështjet Ligjore dhe Administratën Publike 8.6.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202605051257348382Komisioni  Nismat Qytetare  20.1.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202606091521106419Komisioni për Çështjet Ligjore dhe Administratën Publike 9.2.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202605051256379541Komisioni nisma qytetre datë 2.12.2025 %282%29.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202609161353183810Komisioni për Çështjet Ligjore dhe Administratën Publike 3.6.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202609161110231443Komisioni për Edukimin%2C Shkencën dhe Sportet dt 11.2.2026 %281%29.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202604090916455221Komisioni  i Ligjeve  3.12.2025.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202609100815402123Komisioni për Nismat Qytetare%2C Bashkëpunimin dhe Mbikëqyrjen Institucionale dt 20.5.2026.pdf"
+      ],
+      "unmatched": 0
+    },
+    "vip275": {
+      "meetings": 61,
+      "present": 54,
+      "absent": 7,
+      "sourceUrls": [
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202606040753022348Procesverbal KEPF - 4.2.2026 pj 2.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202512071512383551Procesverbal KEPF - MB 1 - 13.11.2025.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202607240854507110Procesverbal KEPF - 30.3.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202512071512370163Procesverbal KEPF - 11.11.2025.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202511201506573609Procesverbal KEPF - MB 2 - 14.10.2025 .pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202510240656276839Procesverbal KEPF - 8 .10.2025.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202607240856108153Procesverbal KEPF - 4.3.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202609160757134929Procesverbal KEPF - 5.5.2026.pdf"
+      ],
+      "unmatched": 0
+    },
+    "vip75": {
+      "meetings": 61,
+      "present": 35,
+      "absent": 26,
+      "sourceUrls": [
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202609161354057337Komisioni për Çështjet Ligjore dhe Administratën Publike 8.6.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202609161355103328Komisioni për Çështjet Ligjore dhe Administratën Publike dt 12.5.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202607061135145316Komisioni për Çështjet Ligjore dhe Administratën Publike dt 3.3.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202606091521106419Komisioni për Çështjet Ligjore dhe Administratën Publike 9.2.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202609161353183810Komisioni për Çështjet Ligjore dhe Administratën Publike 3.6.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202606020956344537Komisioni i ligjeve   2.02.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202512091433128315Komisioni i Ligjeve 28.10.2025 pj 2.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202604090916455221Komisioni  i Ligjeve  3.12.2025.pdf"
+      ],
+      "unmatched": 0
+    },
+    "vip248": {
+      "meetings": 59,
+      "present": 57,
+      "absent": 2,
+      "sourceUrls": [
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202510090749065296Komisioni per Kulturen%2C%2CTurizmin dhe  Diasporen 1.10  2025.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202510290852338226Komisioni per Kulturen%2C Turizmin dhe Diasporen 8.10.2025-2.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202604290914515699Komisioni për Kulturën%2C Turizmin dhe Diasporën dt 16.12.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202601201301010440Komisioni per Kulturën%2C Turizmin dhe Diasporën 2025-10-29.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202605181146250996Komisioni për Kulturën%2C Turizmin dhe Diasporën 28.01.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202605051256379541Komisioni nisma qytetre datë 2.12.2025 %282%29.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202604290911356805Komisioni per Kulturen%2C Turizmin dhe Diasporen   3.12.2025.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202607071247423777Komisioni i Kultures%2C Turizmit dhe Diaspores 10.03.2026.pdf"
+      ],
+      "unmatched": 0
+    },
+    "vip218": {
+      "meetings": 58,
+      "present": 29,
+      "absent": 29,
+      "sourceUrls": [
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202606040753022348Procesverbal KEPF - 4.2.2026 pj 2.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202512071512383551Procesverbal KEPF - MB 1 - 13.11.2025.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202512071512370163Procesverbal KEPF - 11.11.2025.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202511201506573609Procesverbal KEPF - MB 2 - 14.10.2025 .pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202510240656276839Procesverbal KEPF - 8 .10.2025.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202607240856108153Procesverbal KEPF - 4.3.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202609160757134929Procesverbal KEPF - 5.5.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202610140606051514Procesverbal KEPF - 15.6.2026 - MB1 _ MB2.pdf"
+      ],
+      "unmatched": 0
+    },
+    "vip12": {
+      "meetings": 56,
+      "present": 54,
+      "absent": 2,
+      "sourceUrls": [
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202606040753022348Procesverbal KEPF - 4.2.2026 pj 2.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202512071512383551Procesverbal KEPF - MB 1 - 13.11.2025.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202607240854507110Procesverbal KEPF - 30.3.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202512071512370163Procesverbal KEPF - 11.11.2025.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202511201506573609Procesverbal KEPF - MB 2 - 14.10.2025 .pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202510240656276839Procesverbal KEPF - 8 .10.2025.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202607240856108153Procesverbal KEPF - 4.3.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202609160757134929Procesverbal KEPF - 5.5.2026.pdf"
+      ],
+      "unmatched": 0
+    },
+    "vip155": {
+      "meetings": 56,
+      "present": 54,
+      "absent": 2,
+      "sourceUrls": [
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202606040753022348Procesverbal KEPF - 4.2.2026 pj 2.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202512071512383551Procesverbal KEPF - MB 1 - 13.11.2025.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202607240854507110Procesverbal KEPF - 30.3.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202512071512370163Procesverbal KEPF - 11.11.2025.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202511201506573609Procesverbal KEPF - MB 2 - 14.10.2025 .pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202510240656276839Procesverbal KEPF - 8 .10.2025.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202607240856108153Procesverbal KEPF - 4.3.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202609160757134929Procesverbal KEPF - 5.5.2026.pdf"
+      ],
+      "unmatched": 0
+    },
+    "vip239": {
+      "meetings": 56,
+      "present": 48,
+      "absent": 8,
+      "sourceUrls": [
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202606040753022348Procesverbal KEPF - 4.2.2026 pj 2.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202512071512383551Procesverbal KEPF - MB 1 - 13.11.2025.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202607240854507110Procesverbal KEPF - 30.3.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202512071512370163Procesverbal KEPF - 11.11.2025.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202511201506573609Procesverbal KEPF - MB 2 - 14.10.2025 .pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202510240656276839Procesverbal KEPF - 8 .10.2025.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202607240856108153Procesverbal KEPF - 4.3.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202609160757134929Procesverbal KEPF - 5.5.2026.pdf"
+      ],
+      "unmatched": 0
+    },
+    "vip257": {
+      "meetings": 56,
+      "present": 54,
+      "absent": 2,
+      "sourceUrls": [
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202606040753022348Procesverbal KEPF - 4.2.2026 pj 2.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202512071512383551Procesverbal KEPF - MB 1 - 13.11.2025.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202607240854507110Procesverbal KEPF - 30.3.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202512071512370163Procesverbal KEPF - 11.11.2025.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202511201506573609Procesverbal KEPF - MB 2 - 14.10.2025 .pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202510240656276839Procesverbal KEPF - 8 .10.2025.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202607240856108153Procesverbal KEPF - 4.3.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202609160757134929Procesverbal KEPF - 5.5.2026.pdf"
+      ],
+      "unmatched": 0
+    },
+    "vip63": {
+      "meetings": 55,
+      "present": 55,
+      "absent": 0,
+      "sourceUrls": [
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202606040753022348Procesverbal KEPF - 4.2.2026 pj 2.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202512071512383551Procesverbal KEPF - MB 1 - 13.11.2025.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202607240854507110Procesverbal KEPF - 30.3.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202512071512370163Procesverbal KEPF - 11.11.2025.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202511201506573609Procesverbal KEPF - MB 2 - 14.10.2025 .pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202510240656276839Procesverbal KEPF - 8 .10.2025.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202607240856108153Procesverbal KEPF - 4.3.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202609160757134929Procesverbal KEPF - 5.5.2026.pdf"
+      ],
+      "unmatched": 0
+    },
+    "vip202": {
+      "meetings": 54,
+      "present": 50,
+      "absent": 4,
+      "sourceUrls": [
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202607061135145316Komisioni për Çështjet Ligjore dhe Administratën Publike dt 3.3.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202606091521106419Komisioni për Çështjet Ligjore dhe Administratën Publike 9.2.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202605051256379541Komisioni nisma qytetre datë 2.12.2025 %282%29.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202606020956344537Komisioni i ligjeve   2.02.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202512091433128315Komisioni i Ligjeve 28.10.2025 pj 2.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202604090916455221Komisioni  i Ligjeve  3.12.2025.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202511201506573609Procesverbal KEPF - MB 2 - 14.10.2025 .pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202601281031350346Komisioni Nisma Qytetare 13.11.2025 pj 2.pdf"
+      ],
+      "unmatched": 0
+    },
+    "vip261": {
+      "meetings": 54,
+      "present": 50,
+      "absent": 4,
+      "sourceUrls": [
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202510090749065296Komisioni per Kulturen%2C%2CTurizmin dhe  Diasporen 1.10  2025.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202510290852338226Komisioni per Kulturen%2C Turizmin dhe Diasporen 8.10.2025-2.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202609161354057337Komisioni për Çështjet Ligjore dhe Administratën Publike 8.6.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202604290914515699Komisioni për Kulturën%2C Turizmin dhe Diasporën dt 16.12.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202609161355103328Komisioni për Çështjet Ligjore dhe Administratën Publike dt 12.5.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202601201301010440Komisioni per Kulturën%2C Turizmin dhe Diasporën 2025-10-29.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202607061135145316Komisioni për Çështjet Ligjore dhe Administratën Publike dt 3.3.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202605181146250996Komisioni për Kulturën%2C Turizmin dhe Diasporën 28.01.2026.pdf"
+      ],
+      "unmatched": 0
+    },
+    "vip98": {
+      "meetings": 52,
+      "present": 29,
+      "absent": 23,
+      "sourceUrls": [
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202606040753022348Procesverbal KEPF - 4.2.2026 pj 2.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202512071512383551Procesverbal KEPF - MB 1 - 13.11.2025.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202607240854507110Procesverbal KEPF - 30.3.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202512071512370163Procesverbal KEPF - 11.11.2025.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202511201506573609Procesverbal KEPF - MB 2 - 14.10.2025 .pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202510240656276839Procesverbal KEPF - 8 .10.2025.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202607240856108153Procesverbal KEPF - 4.3.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202609160757134929Procesverbal KEPF - 5.5.2026.pdf"
+      ],
+      "unmatched": 0
+    },
+    "vip65": {
+      "meetings": 51,
+      "present": 45,
+      "absent": 6,
+      "sourceUrls": [
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202510090749065296Komisioni per Kulturen%2C%2CTurizmin dhe  Diasporen 1.10  2025.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202510290852338226Komisioni per Kulturen%2C Turizmin dhe Diasporen 8.10.2025-2.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202609161354057337Komisioni për Çështjet Ligjore dhe Administratën Publike 8.6.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202604290914515699Komisioni për Kulturën%2C Turizmin dhe Diasporën dt 16.12.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202601201301010440Komisioni per Kulturën%2C Turizmin dhe Diasporën 2025-10-29.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202607061135145316Komisioni për Çështjet Ligjore dhe Administratën Publike dt 3.3.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202602161434564195Komisioni për Çështjet e Brendshme dhe Mbrojtjes 13.11.2025.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202605181146250996Komisioni për Kulturën%2C Turizmin dhe Diasporën 28.01.2026.pdf"
+      ],
+      "unmatched": 0
+    },
+    "vip237": {
+      "meetings": 42,
+      "present": 28,
+      "absent": 14,
+      "sourceUrls": [
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202510090749065296Komisioni per Kulturen%2C%2CTurizmin dhe  Diasporen 1.10  2025.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202510290852338226Komisioni per Kulturen%2C Turizmin dhe Diasporen 8.10.2025-2.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202604290914515699Komisioni për Kulturën%2C Turizmin dhe Diasporën dt 16.12.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202601201301010440Komisioni per Kulturën%2C Turizmin dhe Diasporën 2025-10-29.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202605181146250996Komisioni për Kulturën%2C Turizmin dhe Diasporën 28.01.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202604290911356805Komisioni per Kulturen%2C Turizmin dhe Diasporen   3.12.2025.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202607071247423777Komisioni i Kultures%2C Turizmit dhe Diaspores 10.03.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202510290851183518Komisioni per Kulturen%2C Turizimin dhe Diasporen 8.10.2025-1%2C mbledhje e perbashket.pdf"
+      ],
+      "unmatched": 0
+    },
+    "vip268": {
+      "meetings": 42,
+      "present": 42,
+      "absent": 0,
+      "sourceUrls": [
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202605080842089514Komisioni i edukimit 2.12.2025.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202510090749065296Komisioni per Kulturen%2C%2CTurizmin dhe  Diasporen 1.10  2025.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202604290914515699Komisioni për Kulturën%2C Turizmin dhe Diasporën dt 16.12.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202605181146250996Komisioni për Kulturën%2C Turizmin dhe Diasporën 28.01.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202609161110231443Komisioni për Edukimin%2C Shkencën dhe Sportet dt 11.2.2026 %281%29.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202510291023390440Komisioni per Edukimin%2C Shkencen dhe Sportet  1 .10. 2025.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202605080843165575Komisioni per Edukimin 09.12.2025.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202610130919523592Komisioni Nisma Qytetare 24.06.2026.pdf"
+      ],
+      "unmatched": 0
+    },
+    "vip158": {
+      "meetings": 41,
+      "present": 39,
+      "absent": 2,
+      "sourceUrls": [
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202605051257348382Komisioni  Nismat Qytetare  20.1.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202605051256379541Komisioni nisma qytetre datë 2.12.2025 %282%29.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202609100815402123Komisioni për Nismat Qytetare%2C Bashkëpunimin dhe Mbikëqyrjen Institucionale dt 20.5.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202606191037393075Komisioni për Nismat Qytetare%2C Bashkëpunimin dhe Mbikëqyrjen Institucionale dt 9.2.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202511201506573609Procesverbal KEPF - MB 2 - 14.10.2025 .pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202610130919523592Komisioni Nisma Qytetare 24.06.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202601281031350346Komisioni Nisma Qytetare 13.11.2025 pj 2.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202601070956316128Komisioni Nisma Qytetare Monitorim 4 .11.2025.mp3.pdf"
+      ],
+      "unmatched": 0
+    },
+    "vip173": {
+      "meetings": 40,
+      "present": 35,
+      "absent": 5,
+      "sourceUrls": [
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202605051257348382Komisioni  Nismat Qytetare  20.1.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202605051256379541Komisioni nisma qytetre datë 2.12.2025 %282%29.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202609100815402123Komisioni për Nismat Qytetare%2C Bashkëpunimin dhe Mbikëqyrjen Institucionale dt 20.5.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202606191037393075Komisioni për Nismat Qytetare%2C Bashkëpunimin dhe Mbikëqyrjen Institucionale dt 9.2.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202511201506573609Procesverbal KEPF - MB 2 - 14.10.2025 .pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202610130919523592Komisioni Nisma Qytetare 24.06.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202601281031350346Komisioni Nisma Qytetare 13.11.2025 pj 2.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202601070956316128Komisioni Nisma Qytetare Monitorim 4 .11.2025.mp3.pdf"
+      ],
+      "unmatched": 0
+    },
+    "vip260": {
+      "meetings": 40,
+      "present": 32,
+      "absent": 8,
+      "sourceUrls": [
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202510090749065296Komisioni per Kulturen%2C%2CTurizmin dhe  Diasporen 1.10  2025.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202510290852338226Komisioni per Kulturen%2C Turizmin dhe Diasporen 8.10.2025-2.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202604290914515699Komisioni për Kulturën%2C Turizmin dhe Diasporën dt 16.12.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202601201301010440Komisioni per Kulturën%2C Turizmin dhe Diasporën 2025-10-29.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202605181146250996Komisioni për Kulturën%2C Turizmin dhe Diasporën 28.01.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202604290911356805Komisioni per Kulturen%2C Turizmin dhe Diasporen   3.12.2025.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202607071247423777Komisioni i Kultures%2C Turizmit dhe Diaspores 10.03.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202510290851183518Komisioni per Kulturen%2C Turizimin dhe Diasporen 8.10.2025-1%2C mbledhje e perbashket.pdf"
+      ],
+      "unmatched": 0
+    },
+    "vip34": {
+      "meetings": 40,
+      "present": 37,
+      "absent": 3,
+      "sourceUrls": [
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202510090749065296Komisioni per Kulturen%2C%2CTurizmin dhe  Diasporen 1.10  2025.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202510290852338226Komisioni per Kulturen%2C Turizmin dhe Diasporen 8.10.2025-2.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202604290914515699Komisioni për Kulturën%2C Turizmin dhe Diasporën dt 16.12.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202601201301010440Komisioni per Kulturën%2C Turizmin dhe Diasporën 2025-10-29.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202605181146250996Komisioni për Kulturën%2C Turizmin dhe Diasporën 28.01.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202604290911356805Komisioni per Kulturen%2C Turizmin dhe Diasporen   3.12.2025.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202607071247423777Komisioni i Kultures%2C Turizmit dhe Diaspores 10.03.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202510290851183518Komisioni per Kulturen%2C Turizimin dhe Diasporen 8.10.2025-1%2C mbledhje e perbashket.pdf"
+      ],
+      "unmatched": 0
+    },
+    "vip130": {
+      "meetings": 39,
+      "present": 25,
+      "absent": 14,
+      "sourceUrls": [
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202510090749065296Komisioni per Kulturen%2C%2CTurizmin dhe  Diasporen 1.10  2025.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202510290852338226Komisioni per Kulturen%2C Turizmin dhe Diasporen 8.10.2025-2.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202604290914515699Komisioni për Kulturën%2C Turizmin dhe Diasporën dt 16.12.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202601201301010440Komisioni per Kulturën%2C Turizmin dhe Diasporën 2025-10-29.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202605181146250996Komisioni për Kulturën%2C Turizmin dhe Diasporën 28.01.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202604290911356805Komisioni per Kulturen%2C Turizmin dhe Diasporen   3.12.2025.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202607071247423777Komisioni i Kultures%2C Turizmit dhe Diaspores 10.03.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202511121418525388Komisioni per Kulturen%2C Turizmin dhe Diasporen 13.10. 2025 - 1%2C mbledhje e perbashket.pdf"
+      ],
+      "unmatched": 0
+    },
+    "vip233": {
+      "meetings": 39,
+      "present": 29,
+      "absent": 10,
+      "sourceUrls": [
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202510090749065296Komisioni per Kulturen%2C%2CTurizmin dhe  Diasporen 1.10  2025.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202510290852338226Komisioni per Kulturen%2C Turizmin dhe Diasporen 8.10.2025-2.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202604290914515699Komisioni për Kulturën%2C Turizmin dhe Diasporën dt 16.12.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202601201301010440Komisioni per Kulturën%2C Turizmin dhe Diasporën 2025-10-29.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202605181146250996Komisioni për Kulturën%2C Turizmin dhe Diasporën 28.01.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202604290911356805Komisioni per Kulturen%2C Turizmin dhe Diasporen   3.12.2025.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202510290851183518Komisioni per Kulturen%2C Turizimin dhe Diasporen 8.10.2025-1%2C mbledhje e perbashket.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202511121418525388Komisioni per Kulturen%2C Turizmin dhe Diasporen 13.10. 2025 - 1%2C mbledhje e perbashket.pdf"
+      ],
+      "unmatched": 0
+    },
+    "vip35": {
+      "meetings": 39,
+      "present": 25,
+      "absent": 14,
+      "sourceUrls": [
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202510090749065296Komisioni per Kulturen%2C%2CTurizmin dhe  Diasporen 1.10  2025.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202510290852338226Komisioni per Kulturen%2C Turizmin dhe Diasporen 8.10.2025-2.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202604290914515699Komisioni për Kulturën%2C Turizmin dhe Diasporën dt 16.12.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202601201301010440Komisioni per Kulturën%2C Turizmin dhe Diasporën 2025-10-29.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202605181146250996Komisioni për Kulturën%2C Turizmin dhe Diasporën 28.01.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202604290911356805Komisioni per Kulturen%2C Turizmin dhe Diasporen   3.12.2025.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202607071247423777Komisioni i Kultures%2C Turizmit dhe Diaspores 10.03.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202511121418525388Komisioni per Kulturen%2C Turizmin dhe Diasporen 13.10. 2025 - 1%2C mbledhje e perbashket.pdf"
+      ],
+      "unmatched": 0
+    },
+    "vip229": {
+      "meetings": 36,
+      "present": 19,
+      "absent": 17,
+      "sourceUrls": [
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202510090749065296Komisioni per Kulturen%2C%2CTurizmin dhe  Diasporen 1.10  2025.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202510290852338226Komisioni per Kulturen%2C Turizmin dhe Diasporen 8.10.2025-2.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202601201301010440Komisioni per Kulturën%2C Turizmin dhe Diasporën 2025-10-29.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202605181146250996Komisioni për Kulturën%2C Turizmin dhe Diasporën 28.01.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202604290911356805Komisioni per Kulturen%2C Turizmin dhe Diasporen   3.12.2025.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202607071247423777Komisioni i Kultures%2C Turizmit dhe Diaspores 10.03.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202510290851183518Komisioni per Kulturen%2C Turizimin dhe Diasporen 8.10.2025-1%2C mbledhje e perbashket.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202511121418525388Komisioni per Kulturen%2C Turizmin dhe Diasporen 13.10. 2025 - 1%2C mbledhje e perbashket.pdf"
+      ],
+      "unmatched": 0
+    },
+    "vip236": {
+      "meetings": 36,
+      "present": 32,
+      "absent": 4,
+      "sourceUrls": [
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202605051257348382Komisioni  Nismat Qytetare  20.1.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202605051256379541Komisioni nisma qytetre datë 2.12.2025 %282%29.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202609100815402123Komisioni për Nismat Qytetare%2C Bashkëpunimin dhe Mbikëqyrjen Institucionale dt 20.5.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202606191037393075Komisioni për Nismat Qytetare%2C Bashkëpunimin dhe Mbikëqyrjen Institucionale dt 9.2.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202511201506573609Procesverbal KEPF - MB 2 - 14.10.2025 .pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202610130919523592Komisioni Nisma Qytetare 24.06.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202601281031350346Komisioni Nisma Qytetare 13.11.2025 pj 2.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202601070956316128Komisioni Nisma Qytetare Monitorim 4 .11.2025.mp3.pdf"
+      ],
+      "unmatched": 0
+    },
+    "vip263": {
+      "meetings": 33,
+      "present": 32,
+      "absent": 1,
+      "sourceUrls": [
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202609161354057337Komisioni për Çështjet Ligjore dhe Administratën Publike 8.6.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202609161355103328Komisioni për Çështjet Ligjore dhe Administratën Publike dt 12.5.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202607061135145316Komisioni për Çështjet Ligjore dhe Administratën Publike dt 3.3.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202606091521106419Komisioni për Çështjet Ligjore dhe Administratën Publike 9.2.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202609161353183810Komisioni për Çështjet Ligjore dhe Administratën Publike 3.6.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202606020956344537Komisioni i ligjeve   2.02.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202609161354542979Komisioni për Çështjet Ligjore dhe Administratën Publike dt 5.5.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202609220808470694Komisioni për Çështjet Ligjore dhe Administratën Publike 30.6.2026.pdf"
+      ],
+      "unmatched": 0
+    },
+    "vip13": {
+      "meetings": 32,
+      "present": 32,
+      "absent": 0,
+      "sourceUrls": [
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202605051257348382Komisioni  Nismat Qytetare  20.1.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202605051256379541Komisioni nisma qytetre datë 2.12.2025 %282%29.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202609100815402123Komisioni për Nismat Qytetare%2C Bashkëpunimin dhe Mbikëqyrjen Institucionale dt 20.5.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202606191037393075Komisioni për Nismat Qytetare%2C Bashkëpunimin dhe Mbikëqyrjen Institucionale dt 9.2.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202610130919523592Komisioni Nisma Qytetare 24.06.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202601281031350346Komisioni Nisma Qytetare 13.11.2025 pj 2.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202601070956316128Komisioni Nisma Qytetare Monitorim 4 .11.2025.mp3.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202605051257197125Komisioni për Nismat Qytetare%2C Bashkëpunimin dhe Mbikëqyrjen Institucionale  11.12.2025 %281%29.pdf"
+      ],
+      "unmatched": 0
+    },
+    "vip225": {
+      "meetings": 32,
+      "present": 19,
+      "absent": 13,
+      "sourceUrls": [
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202605051257348382Komisioni  Nismat Qytetare  20.1.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202605051256379541Komisioni nisma qytetre datë 2.12.2025 %282%29.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202609100815402123Komisioni për Nismat Qytetare%2C Bashkëpunimin dhe Mbikëqyrjen Institucionale dt 20.5.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202606191037393075Komisioni për Nismat Qytetare%2C Bashkëpunimin dhe Mbikëqyrjen Institucionale dt 9.2.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202610130919523592Komisioni Nisma Qytetare 24.06.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202601281031350346Komisioni Nisma Qytetare 13.11.2025 pj 2.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202601070956316128Komisioni Nisma Qytetare Monitorim 4 .11.2025.mp3.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202605051257197125Komisioni për Nismat Qytetare%2C Bashkëpunimin dhe Mbikëqyrjen Institucionale  11.12.2025 %281%29.pdf"
+      ],
+      "unmatched": 0
+    },
+    "vip241": {
+      "meetings": 32,
+      "present": 3,
+      "absent": 29,
+      "sourceUrls": [
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202605051257348382Komisioni  Nismat Qytetare  20.1.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202605051256379541Komisioni nisma qytetre datë 2.12.2025 %282%29.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202609100815402123Komisioni për Nismat Qytetare%2C Bashkëpunimin dhe Mbikëqyrjen Institucionale dt 20.5.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202606191037393075Komisioni për Nismat Qytetare%2C Bashkëpunimin dhe Mbikëqyrjen Institucionale dt 9.2.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202610130919523592Komisioni Nisma Qytetare 24.06.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202601281031350346Komisioni Nisma Qytetare 13.11.2025 pj 2.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202601070956316128Komisioni Nisma Qytetare Monitorim 4 .11.2025.mp3.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202605051257197125Komisioni për Nismat Qytetare%2C Bashkëpunimin dhe Mbikëqyrjen Institucionale  11.12.2025 %281%29.pdf"
+      ],
+      "unmatched": 0
+    },
+    "vip7": {
+      "meetings": 31,
+      "present": 11,
+      "absent": 20,
+      "sourceUrls": [
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202605051257348382Komisioni  Nismat Qytetare  20.1.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202605051256379541Komisioni nisma qytetre datë 2.12.2025 %282%29.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202609100815402123Komisioni për Nismat Qytetare%2C Bashkëpunimin dhe Mbikëqyrjen Institucionale dt 20.5.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202606191037393075Komisioni për Nismat Qytetare%2C Bashkëpunimin dhe Mbikëqyrjen Institucionale dt 9.2.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202610130919523592Komisioni Nisma Qytetare 24.06.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202601281031350346Komisioni Nisma Qytetare 13.11.2025 pj 2.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202601070956316128Komisioni Nisma Qytetare Monitorim 4 .11.2025.mp3.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202605051257197125Komisioni për Nismat Qytetare%2C Bashkëpunimin dhe Mbikëqyrjen Institucionale  11.12.2025 %281%29.pdf"
+      ],
+      "unmatched": 0
+    },
+    "vip79": {
+      "meetings": 29,
+      "present": 25,
+      "absent": 4,
+      "sourceUrls": [
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202605051257348382Komisioni  Nismat Qytetare  20.1.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202609100815402123Komisioni për Nismat Qytetare%2C Bashkëpunimin dhe Mbikëqyrjen Institucionale dt 20.5.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202606191037393075Komisioni për Nismat Qytetare%2C Bashkëpunimin dhe Mbikëqyrjen Institucionale dt 9.2.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202511201506573609Procesverbal KEPF - MB 2 - 14.10.2025 .pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202610130919523592Komisioni Nisma Qytetare 24.06.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202605051257197125Komisioni për Nismat Qytetare%2C Bashkëpunimin dhe Mbikëqyrjen Institucionale  11.12.2025 %281%29.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202609091135052721Komisioni për Nismat Qytetare%2C Bashkëpunimin dhe Mbikëqyrjen Institucionale%2C17.3.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202605051257532149Komisioni për Nismat Qytetare%2C Bashkëpunimin dhe Mbikëqyrjen Institucionale 21.1.2026 %281%29.pdf"
+      ],
+      "unmatched": 0
+    },
+    "vip226": {
+      "meetings": 28,
+      "present": 18,
+      "absent": 10,
+      "sourceUrls": [
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202605051257348382Komisioni  Nismat Qytetare  20.1.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202605051256379541Komisioni nisma qytetre datë 2.12.2025 %282%29.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202609100815402123Komisioni për Nismat Qytetare%2C Bashkëpunimin dhe Mbikëqyrjen Institucionale dt 20.5.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202606191037393075Komisioni për Nismat Qytetare%2C Bashkëpunimin dhe Mbikëqyrjen Institucionale dt 9.2.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202610130919523592Komisioni Nisma Qytetare 24.06.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202601281031350346Komisioni Nisma Qytetare 13.11.2025 pj 2.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202601070956316128Komisioni Nisma Qytetare Monitorim 4 .11.2025.mp3.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202605051257197125Komisioni për Nismat Qytetare%2C Bashkëpunimin dhe Mbikëqyrjen Institucionale  11.12.2025 %281%29.pdf"
+      ],
+      "unmatched": 0
+    },
+    "vip132": {
+      "meetings": 27,
+      "present": 26,
+      "absent": 1,
+      "sourceUrls": [
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202605080842089514Komisioni i edukimit 2.12.2025.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202602161434564195Komisioni për Çështjet e Brendshme dhe Mbrojtjes 13.11.2025.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202609161110231443Komisioni për Edukimin%2C Shkencën dhe Sportet dt 11.2.2026 %281%29.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202604011257409370Komisioni për Çështjet e Brendshme dhe Mbrojtjen  25.11.25.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202510291023390440Komisioni per Edukimin%2C Shkencen dhe Sportet  1 .10. 2025.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202606121028082363Komisioni për Edukimin%2C Shkencën dhe Sportet  21.1.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202609161110230061Komisioni i Edukimit 7.04.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202601220823340655Komisioni per Çështjet e Brendshme   12.11.2025.pdf"
+      ],
+      "unmatched": 0
+    },
+    "vip83": {
+      "meetings": 27,
+      "present": 26,
+      "absent": 1,
+      "sourceUrls": [
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202605080842089514Komisioni i edukimit 2.12.2025.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202602161434564195Komisioni për Çështjet e Brendshme dhe Mbrojtjes 13.11.2025.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202609161110231443Komisioni për Edukimin%2C Shkencën dhe Sportet dt 11.2.2026 %281%29.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202604011257409370Komisioni për Çështjet e Brendshme dhe Mbrojtjen  25.11.25.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202510291023390440Komisioni per Edukimin%2C Shkencen dhe Sportet  1 .10. 2025.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202606121028082363Komisioni për Edukimin%2C Shkencën dhe Sportet  21.1.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202609161110230061Komisioni i Edukimit 7.04.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202601220823340655Komisioni per Çështjet e Brendshme   12.11.2025.pdf"
+      ],
+      "unmatched": 0
+    },
+    "vip170": {
+      "meetings": 25,
+      "present": 25,
+      "absent": 0,
+      "sourceUrls": [
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202605080842089514Komisioni i edukimit 2.12.2025.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202609161110231443Komisioni për Edukimin%2C Shkencën dhe Sportet dt 11.2.2026 %281%29.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202510291023390440Komisioni per Edukimin%2C Shkencen dhe Sportet  1 .10. 2025.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202605080843165575Komisioni per Edukimin 09.12.2025.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202606121028082363Komisioni për Edukimin%2C Shkencën dhe Sportet  21.1.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202609161110230061Komisioni i Edukimit 7.04.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202511271158511163Komisioni per Edukimin%2C Shkencen dhe Sportin 3.11.2025.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202609180846463890Komisioni për Edukimin%2C Shkencën dhe Sportet dt 3.3.2026  ora 17.00.pdf"
+      ],
+      "unmatched": 0
+    },
+    "vip210": {
+      "meetings": 25,
+      "present": 23,
+      "absent": 2,
+      "sourceUrls": [
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202605080842089514Komisioni i edukimit 2.12.2025.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202609161110231443Komisioni për Edukimin%2C Shkencën dhe Sportet dt 11.2.2026 %281%29.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202510291023390440Komisioni per Edukimin%2C Shkencen dhe Sportet  1 .10. 2025.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202605080843165575Komisioni per Edukimin 09.12.2025.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202606121028082363Komisioni për Edukimin%2C Shkencën dhe Sportet  21.1.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202609161110230061Komisioni i Edukimit 7.04.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202511271158511163Komisioni per Edukimin%2C Shkencen dhe Sportin 3.11.2025.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202609180846463890Komisioni për Edukimin%2C Shkencën dhe Sportet dt 3.3.2026  ora 17.00.pdf"
+      ],
+      "unmatched": 0
+    },
+    "vip149": {
+      "meetings": 24,
+      "present": 23,
+      "absent": 1,
+      "sourceUrls": [
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202606300901184769Komisioni per ceshtjet e brendshme dhe mbrojtjes 16.02.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202609170900425494Komisioni për Çështjet e Brendshme dhe të Mbrojtjes 4.5.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202602161434564195Komisioni për Çështjet e Brendshme dhe Mbrojtjes 13.11.2025.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202604011257409370Komisioni për Çështjet e Brendshme dhe Mbrojtjen  25.11.25.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202610301309218950Komisioni për Çështjet e Brendshme dhe të Mbrojtjes 19.06.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202606100830307126Komisioni per ceshtjet e brendshme dhe mbrojtjes 29.01.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202601220823340655Komisioni per Çështjet e Brendshme   12.11.2025.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202606300901485487Komisioni per ceshtjet e brendshme dhe mbrojtjes 25.02.2026.pdf"
+      ],
+      "unmatched": 0
+    },
+    "vip174": {
+      "meetings": 24,
+      "present": 23,
+      "absent": 1,
+      "sourceUrls": [
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202605080842089514Komisioni i edukimit 2.12.2025.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202609161110231443Komisioni për Edukimin%2C Shkencën dhe Sportet dt 11.2.2026 %281%29.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202510291023390440Komisioni per Edukimin%2C Shkencen dhe Sportet  1 .10. 2025.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202605080843165575Komisioni per Edukimin 09.12.2025.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202606121028082363Komisioni për Edukimin%2C Shkencën dhe Sportet  21.1.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202609161110230061Komisioni i Edukimit 7.04.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202511271158511163Komisioni per Edukimin%2C Shkencen dhe Sportin 3.11.2025.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202609180846463890Komisioni për Edukimin%2C Shkencën dhe Sportet dt 3.3.2026  ora 17.00.pdf"
+      ],
+      "unmatched": 0
+    },
+    "vip85": {
+      "meetings": 24,
+      "present": 23,
+      "absent": 1,
+      "sourceUrls": [
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202605080842089514Komisioni i edukimit 2.12.2025.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202609161110231443Komisioni për Edukimin%2C Shkencën dhe Sportet dt 11.2.2026 %281%29.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202510291023390440Komisioni per Edukimin%2C Shkencen dhe Sportet  1 .10. 2025.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202605080843165575Komisioni per Edukimin 09.12.2025.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202606121028082363Komisioni për Edukimin%2C Shkencën dhe Sportet  21.1.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202609161110230061Komisioni i Edukimit 7.04.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202511271158511163Komisioni per Edukimin%2C Shkencen dhe Sportin 3.11.2025.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202609180846463890Komisioni për Edukimin%2C Shkencën dhe Sportet dt 3.3.2026  ora 17.00.pdf"
+      ],
+      "unmatched": 0
+    },
+    "vip259": {
+      "meetings": 23,
+      "present": 23,
+      "absent": 0,
+      "sourceUrls": [
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202605080842089514Komisioni i edukimit 2.12.2025.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202609161110231443Komisioni për Edukimin%2C Shkencën dhe Sportet dt 11.2.2026 %281%29.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202510291023390440Komisioni per Edukimin%2C Shkencen dhe Sportet  1 .10. 2025.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202605080843165575Komisioni per Edukimin 09.12.2025.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202606121028082363Komisioni për Edukimin%2C Shkencën dhe Sportet  21.1.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202511271158511163Komisioni per Edukimin%2C Shkencen dhe Sportin 3.11.2025.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202609180846463890Komisioni për Edukimin%2C Shkencën dhe Sportet dt 3.3.2026  ora 17.00.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202512151333209505Komisioni per Edukimin  28.10. 2025.pdf"
+      ],
+      "unmatched": 0
+    },
+    "vip11": {
+      "meetings": 22,
+      "present": 17,
+      "absent": 5,
+      "sourceUrls": [
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202605080842089514Komisioni i edukimit 2.12.2025.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202609161110231443Komisioni për Edukimin%2C Shkencën dhe Sportet dt 11.2.2026 %281%29.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202510291023390440Komisioni per Edukimin%2C Shkencen dhe Sportet  1 .10. 2025.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202605080843165575Komisioni per Edukimin 09.12.2025.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202606121028082363Komisioni për Edukimin%2C Shkencën dhe Sportet  21.1.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202511271158511163Komisioni per Edukimin%2C Shkencen dhe Sportin 3.11.2025.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202609180846463890Komisioni për Edukimin%2C Shkencën dhe Sportet dt 3.3.2026  ora 17.00.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202512151333209505Komisioni per Edukimin  28.10. 2025.pdf"
+      ],
+      "unmatched": 0
+    },
+    "vip203": {
+      "meetings": 22,
+      "present": 21,
+      "absent": 1,
+      "sourceUrls": [
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202606300901184769Komisioni per ceshtjet e brendshme dhe mbrojtjes 16.02.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202609170900425494Komisioni për Çështjet e Brendshme dhe të Mbrojtjes 4.5.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202602161434564195Komisioni për Çështjet e Brendshme dhe Mbrojtjes 13.11.2025.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202604011257409370Komisioni për Çështjet e Brendshme dhe Mbrojtjen  25.11.25.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202610301309218950Komisioni për Çështjet e Brendshme dhe të Mbrojtjes 19.06.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202606100830307126Komisioni per ceshtjet e brendshme dhe mbrojtjes 29.01.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202601220823340655Komisioni per Çështjet e Brendshme   12.11.2025.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202606300901485487Komisioni per ceshtjet e brendshme dhe mbrojtjes 25.02.2026.pdf"
+      ],
+      "unmatched": 0
+    },
+    "vip204": {
+      "meetings": 22,
+      "present": 20,
+      "absent": 2,
+      "sourceUrls": [
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202605080842089514Komisioni i edukimit 2.12.2025.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202609161110231443Komisioni për Edukimin%2C Shkencën dhe Sportet dt 11.2.2026 %281%29.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202510291023390440Komisioni per Edukimin%2C Shkencen dhe Sportet  1 .10. 2025.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202605080843165575Komisioni per Edukimin 09.12.2025.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202606121028082363Komisioni për Edukimin%2C Shkencën dhe Sportet  21.1.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202511271158511163Komisioni per Edukimin%2C Shkencen dhe Sportin 3.11.2025.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202609180846463890Komisioni për Edukimin%2C Shkencën dhe Sportet dt 3.3.2026  ora 17.00.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202512151333209505Komisioni per Edukimin  28.10. 2025.pdf"
+      ],
+      "unmatched": 0
+    },
+    "vip231": {
+      "meetings": 22,
+      "present": 17,
+      "absent": 5,
+      "sourceUrls": [
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202605080842089514Komisioni i edukimit 2.12.2025.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202609161110231443Komisioni për Edukimin%2C Shkencën dhe Sportet dt 11.2.2026 %281%29.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202510291023390440Komisioni per Edukimin%2C Shkencen dhe Sportet  1 .10. 2025.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202605080843165575Komisioni per Edukimin 09.12.2025.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202606121028082363Komisioni për Edukimin%2C Shkencën dhe Sportet  21.1.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202511271158511163Komisioni per Edukimin%2C Shkencen dhe Sportin 3.11.2025.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202609180846463890Komisioni për Edukimin%2C Shkencën dhe Sportet dt 3.3.2026  ora 17.00.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202512151333209505Komisioni per Edukimin  28.10. 2025.pdf"
+      ],
+      "unmatched": 0
+    },
+    "vip242": {
+      "meetings": 22,
+      "present": 21,
+      "absent": 1,
+      "sourceUrls": [
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202605080842089514Komisioni i edukimit 2.12.2025.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202609161110231443Komisioni për Edukimin%2C Shkencën dhe Sportet dt 11.2.2026 %281%29.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202510291023390440Komisioni per Edukimin%2C Shkencen dhe Sportet  1 .10. 2025.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202605080843165575Komisioni per Edukimin 09.12.2025.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202606121028082363Komisioni për Edukimin%2C Shkencën dhe Sportet  21.1.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202609161110230061Komisioni i Edukimit 7.04.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202511271158511163Komisioni per Edukimin%2C Shkencen dhe Sportin 3.11.2025.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202609180846463890Komisioni për Edukimin%2C Shkencën dhe Sportet dt 3.3.2026  ora 17.00.pdf"
+      ],
+      "unmatched": 0
+    },
+    "vip251": {
+      "meetings": 22,
+      "present": 17,
+      "absent": 5,
+      "sourceUrls": [
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202606300901184769Komisioni per ceshtjet e brendshme dhe mbrojtjes 16.02.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202609170900425494Komisioni për Çështjet e Brendshme dhe të Mbrojtjes 4.5.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202602161434564195Komisioni për Çështjet e Brendshme dhe Mbrojtjes 13.11.2025.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202604011257409370Komisioni për Çështjet e Brendshme dhe Mbrojtjen  25.11.25.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202610301309218950Komisioni për Çështjet e Brendshme dhe të Mbrojtjes 19.06.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202606100830307126Komisioni per ceshtjet e brendshme dhe mbrojtjes 29.01.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202601220823340655Komisioni per Çështjet e Brendshme   12.11.2025.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202606300901485487Komisioni per ceshtjet e brendshme dhe mbrojtjes 25.02.2026.pdf"
+      ],
+      "unmatched": 0
+    },
+    "vip277": {
+      "meetings": 22,
+      "present": 21,
+      "absent": 1,
+      "sourceUrls": [
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202606300901184769Komisioni per ceshtjet e brendshme dhe mbrojtjes 16.02.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202609170900425494Komisioni për Çështjet e Brendshme dhe të Mbrojtjes 4.5.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202602161434564195Komisioni për Çështjet e Brendshme dhe Mbrojtjes 13.11.2025.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202604011257409370Komisioni për Çështjet e Brendshme dhe Mbrojtjen  25.11.25.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202610301309218950Komisioni për Çështjet e Brendshme dhe të Mbrojtjes 19.06.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202606100830307126Komisioni per ceshtjet e brendshme dhe mbrojtjes 29.01.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202601220823340655Komisioni per Çështjet e Brendshme   12.11.2025.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202606300901485487Komisioni per ceshtjet e brendshme dhe mbrojtjes 25.02.2026.pdf"
+      ],
+      "unmatched": 0
+    },
+    "vip57": {
+      "meetings": 22,
+      "present": 20,
+      "absent": 2,
+      "sourceUrls": [
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202605080842089514Komisioni i edukimit 2.12.2025.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202609161110231443Komisioni për Edukimin%2C Shkencën dhe Sportet dt 11.2.2026 %281%29.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202510291023390440Komisioni per Edukimin%2C Shkencen dhe Sportet  1 .10. 2025.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202605080843165575Komisioni per Edukimin 09.12.2025.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202606121028082363Komisioni për Edukimin%2C Shkencën dhe Sportet  21.1.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202511271158511163Komisioni per Edukimin%2C Shkencen dhe Sportin 3.11.2025.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202609180846463890Komisioni për Edukimin%2C Shkencën dhe Sportet dt 3.3.2026  ora 17.00.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202512151333209505Komisioni per Edukimin  28.10. 2025.pdf"
+      ],
+      "unmatched": 0
+    },
+    "vip90": {
+      "meetings": 22,
+      "present": 21,
+      "absent": 1,
+      "sourceUrls": [
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202606300901184769Komisioni per ceshtjet e brendshme dhe mbrojtjes 16.02.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202609170900425494Komisioni për Çështjet e Brendshme dhe të Mbrojtjes 4.5.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202602161434564195Komisioni për Çështjet e Brendshme dhe Mbrojtjes 13.11.2025.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202604011257409370Komisioni për Çështjet e Brendshme dhe Mbrojtjen  25.11.25.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202610301309218950Komisioni për Çështjet e Brendshme dhe të Mbrojtjes 19.06.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202606100830307126Komisioni per ceshtjet e brendshme dhe mbrojtjes 29.01.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202601220823340655Komisioni per Çështjet e Brendshme   12.11.2025.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202606300901485487Komisioni per ceshtjet e brendshme dhe mbrojtjes 25.02.2026.pdf"
+      ],
+      "unmatched": 0
+    },
+    "vip112": {
+      "meetings": 21,
+      "present": 17,
+      "absent": 4,
+      "sourceUrls": [
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202606300901184769Komisioni per ceshtjet e brendshme dhe mbrojtjes 16.02.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202609170900425494Komisioni për Çështjet e Brendshme dhe të Mbrojtjes 4.5.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202602161434564195Komisioni për Çështjet e Brendshme dhe Mbrojtjes 13.11.2025.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202604011257409370Komisioni për Çështjet e Brendshme dhe Mbrojtjen  25.11.25.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202610301309218950Komisioni për Çështjet e Brendshme dhe të Mbrojtjes 19.06.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202606100830307126Komisioni per ceshtjet e brendshme dhe mbrojtjes 29.01.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202601220823340655Komisioni per Çështjet e Brendshme   12.11.2025.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202606300901485487Komisioni per ceshtjet e brendshme dhe mbrojtjes 25.02.2026.pdf"
+      ],
+      "unmatched": 0
+    },
+    "vip126": {
+      "meetings": 21,
+      "present": 15,
+      "absent": 6,
+      "sourceUrls": [
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202605080842089514Komisioni i edukimit 2.12.2025.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202609161110231443Komisioni për Edukimin%2C Shkencën dhe Sportet dt 11.2.2026 %281%29.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202510291023390440Komisioni per Edukimin%2C Shkencen dhe Sportet  1 .10. 2025.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202605080843165575Komisioni per Edukimin 09.12.2025.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202606121028082363Komisioni për Edukimin%2C Shkencën dhe Sportet  21.1.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202609161110230061Komisioni i Edukimit 7.04.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202511271158511163Komisioni per Edukimin%2C Shkencen dhe Sportin 3.11.2025.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202512151333209505Komisioni per Edukimin  28.10. 2025.pdf"
+      ],
+      "unmatched": 0
+    },
+    "vip148": {
+      "meetings": 21,
+      "present": 17,
+      "absent": 4,
+      "sourceUrls": [
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202606300901184769Komisioni per ceshtjet e brendshme dhe mbrojtjes 16.02.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202609170900425494Komisioni për Çështjet e Brendshme dhe të Mbrojtjes 4.5.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202602161434564195Komisioni për Çështjet e Brendshme dhe Mbrojtjes 13.11.2025.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202604011257409370Komisioni për Çështjet e Brendshme dhe Mbrojtjen  25.11.25.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202610301309218950Komisioni për Çështjet e Brendshme dhe të Mbrojtjes 19.06.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202606100830307126Komisioni per ceshtjet e brendshme dhe mbrojtjes 29.01.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202601220823340655Komisioni per Çështjet e Brendshme   12.11.2025.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202606300901485487Komisioni per ceshtjet e brendshme dhe mbrojtjes 25.02.2026.pdf"
+      ],
+      "unmatched": 0
+    },
+    "vip184": {
+      "meetings": 21,
+      "present": 13,
+      "absent": 8,
+      "sourceUrls": [
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202606300901184769Komisioni per ceshtjet e brendshme dhe mbrojtjes 16.02.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202609170900425494Komisioni për Çështjet e Brendshme dhe të Mbrojtjes 4.5.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202602161434564195Komisioni për Çështjet e Brendshme dhe Mbrojtjes 13.11.2025.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202604011257409370Komisioni për Çështjet e Brendshme dhe Mbrojtjen  25.11.25.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202610301309218950Komisioni për Çështjet e Brendshme dhe të Mbrojtjes 19.06.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202606100830307126Komisioni per ceshtjet e brendshme dhe mbrojtjes 29.01.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202601220823340655Komisioni per Çështjet e Brendshme   12.11.2025.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202606300901485487Komisioni per ceshtjet e brendshme dhe mbrojtjes 25.02.2026.pdf"
+      ],
+      "unmatched": 0
+    },
+    "vip279": {
+      "meetings": 21,
+      "present": 20,
+      "absent": 1,
+      "sourceUrls": [
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202606300901184769Komisioni per ceshtjet e brendshme dhe mbrojtjes 16.02.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202609170900425494Komisioni për Çështjet e Brendshme dhe të Mbrojtjes 4.5.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202602161434564195Komisioni për Çështjet e Brendshme dhe Mbrojtjes 13.11.2025.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202604011257409370Komisioni për Çështjet e Brendshme dhe Mbrojtjen  25.11.25.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202610301309218950Komisioni për Çështjet e Brendshme dhe të Mbrojtjes 19.06.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202606100830307126Komisioni per ceshtjet e brendshme dhe mbrojtjes 29.01.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202601220823340655Komisioni per Çështjet e Brendshme   12.11.2025.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202606300901485487Komisioni per ceshtjet e brendshme dhe mbrojtjes 25.02.2026.pdf"
+      ],
+      "unmatched": 0
+    },
+    "vip36": {
+      "meetings": 21,
+      "present": 13,
+      "absent": 8,
+      "sourceUrls": [
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202606300901184769Komisioni per ceshtjet e brendshme dhe mbrojtjes 16.02.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202609170900425494Komisioni për Çështjet e Brendshme dhe të Mbrojtjes 4.5.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202602161434564195Komisioni për Çështjet e Brendshme dhe Mbrojtjes 13.11.2025.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202604011257409370Komisioni për Çështjet e Brendshme dhe Mbrojtjen  25.11.25.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202610301309218950Komisioni për Çështjet e Brendshme dhe të Mbrojtjes 19.06.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202606100830307126Komisioni per ceshtjet e brendshme dhe mbrojtjes 29.01.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202601220823340655Komisioni per Çështjet e Brendshme   12.11.2025.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202606300901485487Komisioni per ceshtjet e brendshme dhe mbrojtjes 25.02.2026.pdf"
+      ],
+      "unmatched": 0
+    },
+    "vip145": {
+      "meetings": 20,
+      "present": 15,
+      "absent": 5,
+      "sourceUrls": [
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202606300901184769Komisioni per ceshtjet e brendshme dhe mbrojtjes 16.02.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202609170900425494Komisioni për Çështjet e Brendshme dhe të Mbrojtjes 4.5.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202602161434564195Komisioni për Çështjet e Brendshme dhe Mbrojtjes 13.11.2025.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202604011257409370Komisioni për Çështjet e Brendshme dhe Mbrojtjen  25.11.25.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202610301309218950Komisioni për Çështjet e Brendshme dhe të Mbrojtjes 19.06.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202606100830307126Komisioni per ceshtjet e brendshme dhe mbrojtjes 29.01.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202601220823340655Komisioni per Çështjet e Brendshme   12.11.2025.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202606300901485487Komisioni per ceshtjet e brendshme dhe mbrojtjes 25.02.2026.pdf"
+      ],
+      "unmatched": 0
+    },
+    "vip171": {
+      "meetings": 20,
+      "present": 15,
+      "absent": 5,
+      "sourceUrls": [
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202606300901184769Komisioni per ceshtjet e brendshme dhe mbrojtjes 16.02.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202609170900425494Komisioni për Çështjet e Brendshme dhe të Mbrojtjes 4.5.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202602161434564195Komisioni për Çështjet e Brendshme dhe Mbrojtjes 13.11.2025.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202604011257409370Komisioni për Çështjet e Brendshme dhe Mbrojtjen  25.11.25.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202610301309218950Komisioni për Çështjet e Brendshme dhe të Mbrojtjes 19.06.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202606100830307126Komisioni per ceshtjet e brendshme dhe mbrojtjes 29.01.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202601220823340655Komisioni per Çështjet e Brendshme   12.11.2025.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202606300901485487Komisioni per ceshtjet e brendshme dhe mbrojtjes 25.02.2026.pdf"
+      ],
+      "unmatched": 0
+    },
+    "vip216": {
+      "meetings": 20,
+      "present": 13,
+      "absent": 7,
+      "sourceUrls": [
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202606300901184769Komisioni per ceshtjet e brendshme dhe mbrojtjes 16.02.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202609170900425494Komisioni për Çështjet e Brendshme dhe të Mbrojtjes 4.5.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202602161434564195Komisioni për Çështjet e Brendshme dhe Mbrojtjes 13.11.2025.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202604011257409370Komisioni për Çështjet e Brendshme dhe Mbrojtjen  25.11.25.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202610301309218950Komisioni për Çështjet e Brendshme dhe të Mbrojtjes 19.06.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202606100830307126Komisioni per ceshtjet e brendshme dhe mbrojtjes 29.01.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202601220823340655Komisioni per Çështjet e Brendshme   12.11.2025.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202606300901485487Komisioni per ceshtjet e brendshme dhe mbrojtjes 25.02.2026.pdf"
+      ],
+      "unmatched": 0
+    },
+    "vip271": {
+      "meetings": 20,
+      "present": 20,
+      "absent": 0,
+      "sourceUrls": [
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202606040753022348Procesverbal KEPF - 4.2.2026 pj 2.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202511201506573609Procesverbal KEPF - MB 2 - 14.10.2025 .pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202606091225026768Procesverbal KEPF - 2.3.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202512071512380706Procesverbal KEPF - 12.11.2025.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202609160749170125Procesverbal KEPF - 21.4.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202604011223390841Procesverbal KEPF - 27.11.2025.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202609160757134387Procesverbal KEPF - 18.5.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202610051313012222Procesverbal KEPF - 9.6.2026.pdf"
+      ],
+      "unmatched": 0
+    },
+    "vip31": {
+      "meetings": 20,
+      "present": 13,
+      "absent": 7,
+      "sourceUrls": [
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202606300901184769Komisioni per ceshtjet e brendshme dhe mbrojtjes 16.02.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202609170900425494Komisioni për Çështjet e Brendshme dhe të Mbrojtjes 4.5.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202602161434564195Komisioni për Çështjet e Brendshme dhe Mbrojtjes 13.11.2025.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202604011257409370Komisioni për Çështjet e Brendshme dhe Mbrojtjen  25.11.25.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202610301309218950Komisioni për Çështjet e Brendshme dhe të Mbrojtjes 19.06.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202606100830307126Komisioni per ceshtjet e brendshme dhe mbrojtjes 29.01.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202601220823340655Komisioni per Çështjet e Brendshme   12.11.2025.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202606300901485487Komisioni per ceshtjet e brendshme dhe mbrojtjes 25.02.2026.pdf"
+      ],
+      "unmatched": 0
+    },
+    "vip111": {
+      "meetings": 19,
+      "present": 17,
+      "absent": 2,
+      "sourceUrls": [
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202606300901184769Komisioni per ceshtjet e brendshme dhe mbrojtjes 16.02.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202609170900425494Komisioni për Çështjet e Brendshme dhe të Mbrojtjes 4.5.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202602161434564195Komisioni për Çështjet e Brendshme dhe Mbrojtjes 13.11.2025.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202604011257409370Komisioni për Çështjet e Brendshme dhe Mbrojtjen  25.11.25.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202610301309218950Komisioni për Çështjet e Brendshme dhe të Mbrojtjes 19.06.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202606100830307126Komisioni per ceshtjet e brendshme dhe mbrojtjes 29.01.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202601220823340655Komisioni per Çështjet e Brendshme   12.11.2025.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202606300901485487Komisioni per ceshtjet e brendshme dhe mbrojtjes 25.02.2026.pdf"
+      ],
+      "unmatched": 0
+    },
+    "vip167": {
+      "meetings": 19,
+      "present": 17,
+      "absent": 2,
+      "sourceUrls": [
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202606300901184769Komisioni per ceshtjet e brendshme dhe mbrojtjes 16.02.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202609170900425494Komisioni për Çështjet e Brendshme dhe të Mbrojtjes 4.5.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202602161434564195Komisioni për Çështjet e Brendshme dhe Mbrojtjes 13.11.2025.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202604011257409370Komisioni për Çështjet e Brendshme dhe Mbrojtjen  25.11.25.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202610301309218950Komisioni për Çështjet e Brendshme dhe të Mbrojtjes 19.06.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202606100830307126Komisioni per ceshtjet e brendshme dhe mbrojtjes 29.01.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202601220823340655Komisioni per Çështjet e Brendshme   12.11.2025.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202606300901485487Komisioni per ceshtjet e brendshme dhe mbrojtjes 25.02.2026.pdf"
+      ],
+      "unmatched": 0
+    },
+    "vip197": {
+      "meetings": 19,
+      "present": 19,
+      "absent": 0,
+      "sourceUrls": [
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202606300901184769Komisioni per ceshtjet e brendshme dhe mbrojtjes 16.02.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202609170900425494Komisioni për Çështjet e Brendshme dhe të Mbrojtjes 4.5.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202602161434564195Komisioni për Çështjet e Brendshme dhe Mbrojtjes 13.11.2025.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202604011257409370Komisioni për Çështjet e Brendshme dhe Mbrojtjen  25.11.25.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202610301309218950Komisioni për Çështjet e Brendshme dhe të Mbrojtjes 19.06.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202606100830307126Komisioni per ceshtjet e brendshme dhe mbrojtjes 29.01.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202601220823340655Komisioni per Çështjet e Brendshme   12.11.2025.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202606300901485487Komisioni per ceshtjet e brendshme dhe mbrojtjes 25.02.2026.pdf"
+      ],
+      "unmatched": 0
+    },
+    "vip70": {
+      "meetings": 14,
+      "present": 14,
+      "absent": 0,
+      "sourceUrls": [
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202510090749065296Komisioni per Kulturen%2C%2CTurizmin dhe  Diasporen 1.10  2025.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202510290852338226Komisioni per Kulturen%2C Turizmin dhe Diasporen 8.10.2025-2.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202601201301010440Komisioni per Kulturën%2C Turizmin dhe Diasporën 2025-10-29.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202510290851183518Komisioni per Kulturen%2C Turizimin dhe Diasporen 8.10.2025-1%2C mbledhje e perbashket.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202511121418525388Komisioni per Kulturen%2C Turizmin dhe Diasporen 13.10. 2025 - 1%2C mbledhje e perbashket.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202511121407370527Komisioni për Kulturën Turizmin dhe Diasporen  13.10.2025.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202512151327424422Komisioni per Kulturën%2C Turizmin dhe Diasporen 28.10.2025.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202511201110248217Komisioni per Kulturen%2C Turizmin dhe Diasporen 13.110. 2025 - 1%2C mbledhje e perbashket.pdf"
+      ],
+      "unmatched": 0
+    },
+    "vip256": {
+      "meetings": 10,
+      "present": 10,
+      "absent": 0,
+      "sourceUrls": [
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202607240854507110Procesverbal KEPF - 30.3.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202609160757134929Procesverbal KEPF - 5.5.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202609160749176080Procesverbal KEPF - 4.5.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202607240856295694Procesverbal KEPF - 9.4.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202606031253346461Procesverbal KEPF - 17.2.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202610280852356743Procesverbal KEPF - 29.6.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202609160749172260Procesverbal KEPF - 20.4.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202607240854508075Procesverbal KEPF - 7.4.2026.pdf"
+      ],
+      "unmatched": 0
+    },
+    "vip15": {
+      "meetings": 8,
+      "present": 5,
+      "absent": 3,
+      "sourceUrls": [
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202609170900425494Komisioni për Çështjet e Brendshme dhe të Mbrojtjes 4.5.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202610301309218950Komisioni për Çështjet e Brendshme dhe të Mbrojtjes 19.06.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202607231034444998Komisioni per ceshtjet e brendshme dhe mbrojtjes 07.04.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202607231035134969Komisioni per ceshtjet e brendshme dhe mbrojtjes 15.04.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202609170901164490Komisioni për Çështjet e Brendshme dhe të Mbrojtjes 09.06.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202607231034597722Komisioni per ceshtjet e brendshme dhe mbrojtjes 14.04.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202609170900597606Komisioni per ceshtjet e brendshme dhe mbrojtjes 05.05.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202606300902196886Komisioni per ceshtjet e brendshme dhe mbrojtjes 10.03.2026.pdf"
+      ],
+      "unmatched": 0
+    },
+    "vip38": {
+      "meetings": 8,
+      "present": 8,
+      "absent": 0,
+      "sourceUrls": [
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202510291023390440Komisioni per Edukimin%2C Shkencen dhe Sportet  1 .10. 2025.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202609180846463890Komisioni për Edukimin%2C Shkencën dhe Sportet dt 3.3.2026  ora 17.00.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202512151333209505Komisioni per Edukimin  28.10. 2025.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202602190900587236Komisioni i Edukimit 17.11.2025.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202601221028397388Komisioni i Edukimit date 28.10.2025.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202609161110224443Komisioni i Edukimit 14.04.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202609161110225896Komisioni i Edukimit 17.02.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202602190859055496Komisioni i Edukimit 11.11.2025.pdf"
+      ],
+      "unmatched": 0
+    },
+    "vip227": {
+      "meetings": 6,
+      "present": 6,
+      "absent": 0,
+      "sourceUrls": [
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202610130919523592Komisioni Nisma Qytetare 24.06.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202510290942442420Komisioni për Çështjet e Brendshme dhe Mbrojtjes 1.10.2025.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202609141158552065Komisioni NISMAT 19 QERSHOR.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202601220820234967Komisioni per Çeshtjet e Brendshme   28.10.25.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202610270838088966Komisioni për Nismat Qytetare%2C Bashkëpunimin dhe Mbikëqyrjen Institucionale1.7.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202604011257408902Komisioni për Çështjet e Brendshme dhe Mbrojtjen  18.11.2025.pdf"
+      ],
+      "unmatched": 0
+    },
+    "vip270": {
+      "meetings": 6,
+      "present": 6,
+      "absent": 0,
+      "sourceUrls": [
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202610301309218950Komisioni për Çështjet e Brendshme dhe të Mbrojtjes 19.06.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202606100830307126Komisioni per ceshtjet e brendshme dhe mbrojtjes 29.01.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202606300901485487Komisioni per ceshtjet e brendshme dhe mbrojtjes 25.02.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202607231034444998Komisioni per ceshtjet e brendshme dhe mbrojtjes 07.04.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202606100831375291Komisioni per ceshtjet e brendshme dhe mbrojtjes 23.01.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202609170900597606Komisioni per ceshtjet e brendshme dhe mbrojtjes 05.05.2026.pdf"
+      ],
+      "unmatched": 0
+    },
+    "vip33": {
+      "meetings": 5,
+      "present": 5,
+      "absent": 0,
+      "sourceUrls": [
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202609171312070209Procesverbal N.komision Audit - 21.4.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202609171312273765Procesverbal N.komision Audit - 18.5.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202609171311485021Procesverbal N.komision Audit - 8.6.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202609171309569833Procesverbal N.komision Audit - 16.4.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202609171309571713Procesverbal N.komision Audit - 4.3.2026.pdf"
+      ],
+      "unmatched": 0
+    },
+    "vip96": {
+      "meetings": 4,
+      "present": 4,
+      "absent": 0,
+      "sourceUrls": [
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202602161434564195Komisioni për Çështjet e Brendshme dhe Mbrojtjes 13.11.2025.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202604011257409370Komisioni për Çështjet e Brendshme dhe Mbrojtjen  25.11.25.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202601220823340655Komisioni per Çështjet e Brendshme   12.11.2025.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202604011257408902Komisioni për Çështjet e Brendshme dhe Mbrojtjen  18.11.2025.pdf"
+      ],
+      "unmatched": 0
+    },
+    "vip217": {
+      "meetings": 3,
+      "present": 3,
+      "absent": 0,
+      "sourceUrls": [
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202610301309218950Komisioni për Çështjet e Brendshme dhe të Mbrojtjes 19.06.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202609141158552065Komisioni NISMAT 19 QERSHOR.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202607231034597722Komisioni per ceshtjet e brendshme dhe mbrojtjes 14.04.2026.pdf"
+      ],
+      "unmatched": 0
+    },
+    "vip246": {
+      "meetings": 3,
+      "present": 3,
+      "absent": 0,
+      "sourceUrls": [
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202610130919523592Komisioni Nisma Qytetare 24.06.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202609091135052721Komisioni për Nismat Qytetare%2C Bashkëpunimin dhe Mbikëqyrjen Institucionale%2C17.3.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202609100814423122Komisioni për Nismat Qytetare%2C Bashkëpunimin dhe Mbikëqyrjen Institucionale 7.5.2026.pdf"
+      ],
+      "unmatched": 0
+    },
+    "vip46": {
+      "meetings": 3,
+      "present": 3,
+      "absent": 0,
+      "sourceUrls": [
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202607210821443361Procesverbal-KKIE-11.02.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202602111310460999Procesverbal-KKIE-17 .12.2025.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202602121330406024Procesverbal-KKIE-11.2.2026.pdf"
+      ],
+      "unmatched": 0
+    },
+    "vip93": {
+      "meetings": 3,
+      "present": 3,
+      "absent": 0,
+      "sourceUrls": [
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202610301309218950Komisioni për Çështjet e Brendshme dhe të Mbrojtjes 19.06.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202609141158552065Komisioni NISMAT 19 QERSHOR.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202607231034597722Komisioni per ceshtjet e brendshme dhe mbrojtjes 14.04.2026.pdf"
+      ],
+      "unmatched": 0
+    },
+    "vip250": {
+      "meetings": 2,
+      "present": 2,
+      "absent": 0,
+      "sourceUrls": [
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202510291023390440Komisioni per Edukimin%2C Shkencen dhe Sportet  1 .10. 2025.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202609180846463890Komisioni për Edukimin%2C Shkencën dhe Sportet dt 3.3.2026  ora 17.00.pdf"
+      ],
+      "unmatched": 0
+    },
+    "vip272": {
+      "meetings": 2,
+      "present": 2,
+      "absent": 0,
+      "sourceUrls": [
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202610020840098950Komisioni për Kulturën%2C Turizmin dhe Diasporën%2C 15.6.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202607221100096616Komisioni per Kulturen%2C Turizmin dhe Diasporen dt. 21.04.2026.pdf"
+      ],
+      "unmatched": 0
+    },
+    "vip1": {
+      "meetings": 1,
+      "present": 0,
+      "absent": 1,
+      "sourceUrls": [
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202512091432435942Komisioni i  ligjeve 24.10.25 pjs.3.pdf"
+      ],
+      "unmatched": 0
+    },
+    "vip144": {
+      "meetings": 1,
+      "present": 1,
+      "absent": 0,
+      "sourceUrls": [
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202607240856108153Procesverbal KEPF - 4.3.2026.pdf"
+      ],
+      "unmatched": 0
+    },
+    "vip222": {
+      "meetings": 1,
+      "present": 1,
+      "absent": 0,
+      "sourceUrls": [
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202607240856108153Procesverbal KEPF - 4.3.2026.pdf"
+      ],
+      "unmatched": 0
+    },
+    "vip235": {
+      "meetings": 1,
+      "present": 1,
+      "absent": 0,
+      "sourceUrls": [
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202604290911356805Komisioni per Kulturen%2C Turizmin dhe Diasporen   3.12.2025.pdf"
+      ],
+      "unmatched": 0
+    },
+    "vip44": {
+      "meetings": 1,
+      "present": 1,
+      "absent": 0,
+      "sourceUrls": [
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202512071512370163Procesverbal KEPF - 11.11.2025.pdf"
+      ],
+      "unmatched": 0
+    }
+  }
+}
