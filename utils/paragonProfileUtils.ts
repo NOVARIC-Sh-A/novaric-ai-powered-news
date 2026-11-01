@@ -53,10 +53,11 @@ export const getSortKey = (name: string | null | undefined): string => {
 
 export const getStrengthsAndWeaknesses = (scores: number[]): { strengths: { label: string, score: number }[], weaknesses: { label: string, score: number }[] } => {
     const dimensionKeys = Object.keys(PARAGON_DIMENSIONS_AL) as ParagonDimension[];
-    const scoredDimensions = dimensionKeys.map((key, index) => ({
-        label: PARAGON_DIMENSIONS_AL[key],
-        score: scores[index] || 0,
-    })).sort((a, b) => b.score - a.score);
+    const scoredDimensions = dimensionKeys.flatMap((key, index) => {
+        const score = scores[index];
+        if (typeof score !== 'number') return [];
+        return [{ label: PARAGON_DIMENSIONS_AL[key], score }];
+    }).sort((a, b) => b.score - a.score);
     return {
         strengths: scoredDimensions.slice(0, 2),
         weaknesses: scoredDimensions.slice(-2).reverse(),
@@ -90,7 +91,7 @@ export const mapVipProfileResponseToVipProfile = (dto: VipProfileResponseDto): V
     zodiacSign: dto.zodiac_sign,
     dateOfBirth: dto.birth_date,
     age: dto.age,
-    dynamicScore: dto.paragon_score ?? dto.overall_score ?? 0,
+    dynamicScore: typeof dto.paragon_score === 'number' ? dto.paragon_score : (typeof dto.overall_score === 'number' ? dto.overall_score : null),
   };
 };
 
@@ -134,7 +135,7 @@ export const mapParagonToParagonAnalysis = (dto: any): ParagonEntry[] => {
   if (rawList.length > 0) {
       rawList.forEach((item: any) => {
           if (item && item.dimension) {
-              sourceMap.set(item.dimension, typeof item.score === 'number' ? item.score : 0);
+              if (typeof item.score === 'number') sourceMap.set(item.dimension, item.score);
           }
       });
   } 
@@ -142,15 +143,15 @@ export const mapParagonToParagonAnalysis = (dto: any): ParagonEntry[] => {
   // 2. Process as object map if list was empty but map exists
   if (sourceMap.size === 0 && dto.dimension_scores && typeof dto.dimension_scores === 'object') {
       Object.entries(dto.dimension_scores).forEach(([k, v]: [string, any]) => {
-          const score = typeof v === 'number' ? v : (typeof v === 'object' ? (v.score ?? 0) : 0);
-          sourceMap.set(k, score);
+          const score = typeof v === 'number' ? v : (typeof v === 'object' && typeof v.score === 'number' ? v.score : null);
+          if (typeof score === 'number') sourceMap.set(k, score);
       });
   }
 
   // 3. Construct 7 entries in deterministic order
   return PARAGON_ORDER.map(dim => {
-    const score = sourceMap.get(dim) ?? 0;
-    const clampedScore = Math.max(0, Math.min(100, Math.round(score)));
+    const rawScore = sourceMap.get(dim);
+    const clampedScore = typeof rawScore === 'number' ? Math.max(0, Math.min(100, rawScore)) : null;
     
     // Look for dimension-specific metadata in payload if it's a rich map
     const metadata = (dto.dimension_scores && typeof dto.dimension_scores[dim] === 'object') ? dto.dimension_scores[dim] : {};
@@ -158,10 +159,10 @@ export const mapParagonToParagonAnalysis = (dto: any): ParagonEntry[] => {
     return {
       dimension: dim,
       score: clampedScore,
-      peerAverage: metadata.peer_average ?? metadata.peerAverage ?? 65,
-      globalBenchmark: metadata.global_benchmark ?? metadata.globalBenchmark ?? 70,
+      peerAverage: typeof metadata.peer_average === 'number' ? metadata.peer_average : (typeof metadata.peerAverage === 'number' ? metadata.peerAverage : null),
+      globalBenchmark: typeof metadata.global_benchmark === 'number' ? metadata.global_benchmark : (typeof metadata.globalBenchmark === 'number' ? metadata.globalBenchmark : null),
       description: "Vlerësim i llogaritur nga sistemi PARAGON.",
-      commentary: metadata.commentary || (clampedScore > 75 ? "Performancë e spikatur." : clampedScore > 45 ? "Performancë mesatare." : "Kërkon vëmendje dhe përmirësim.")
+      commentary: metadata.commentary || (clampedScore === null ? '' : clampedScore > 75 ? "Performancë e spikatur." : clampedScore > 45 ? "Performancë mesatare." : "Kërkon vëmendje dhe përmirësim.")
     };
   });
 };

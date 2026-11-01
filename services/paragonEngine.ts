@@ -11,8 +11,6 @@ import {
   PerformancePortfolioItem,
   FinalDiagnosis,
   IntegrityAnalysis,
-  AgibAnalysis,
-  CriAnalysis,
   // New live types
   ParagonLiveScore,
   ParagonTrendEntry,
@@ -140,52 +138,28 @@ export const getCrisisAlerts = async () => {
 // 2) FROM HERE DOWN — your mock analysis engine
 // ============================================================
 
-const generateHash = (input: string): number => {
-  let hash = 0;
-  for (let i = 0; i < input.length; i++) {
-    hash = ((hash << 5) - hash) + input.charCodeAt(i);
-    hash |= 0;
-  }
-  return Math.abs(hash);
-};
-
-const generateIntegrityAnalysis = (name: string): IntegrityAnalysis => {
-  const hash = generateHash(name);
-  const agibVul = (hash % 3) === 0 ? "I Ulët" : (hash % 3) === 1 ? "Mesatar" : "I Lartë";
-  const criRisk = (hash % 3) === 0 ? "I Ulët" : (hash % 3) === 1 ? "Mesatar" : "I Lartë";
-
-  const agib: AgibAnalysis = {
-    archetype: ["Ndërmjetësi i Prapaskenës", "Teknokrati i Përputhshëm", "Patroni Tradicional"][hash % 3],
-    archetypeScore: 70 + (hash % 25),
-    centralityScore: 65 + (hash % 30),
-    scriIndex: 60 + (hash % 35),
-    vulnerability: agibVul,
-  };
-
-  const cri: CriAnalysis = {
-    moralDetachmentIndex: 75 + (hash % 20),
-    euphemisticLanguage: "",
-    advantageousComparison: "",
-    displacementOfResponsibility: "",
-    eliteClosureIndex: 80 + (hash % 15),
-    impunityContext: "Historia e hetimeve të mbyllura ose të zvarritura.",
-    criScore: 60 + (hash % 39),
-    behavioralRisk: criRisk,
-  };
-
-  let overallAlert: IntegrityAnalysis["overallAlert"] = "Integritet i Qëndrueshëm";
-  if (agibVul === "I Lartë" && criRisk === "I Lartë") {
-    overallAlert = "ALERT I LARTË INTEGRITETI";
-  }
-
-  return {
-    agib,
-    cri,
-    riskQuadrant: 1,
-    overallAlert,
-    clinicalSummary: "Profil i përpunuar nga modeli analitik.",
-  };
-};
+const quarantinedIntegrity = (): IntegrityAnalysis => ({
+  agib: {
+    archetype: '',
+    archetypeScore: null,
+    centralityScore: null,
+    scriIndex: null,
+    vulnerability: null,
+  },
+  cri: {
+    moralDetachmentIndex: null,
+    euphemisticLanguage: '',
+    advantageousComparison: '',
+    displacementOfResponsibility: '',
+    eliteClosureIndex: null,
+    impunityContext: '',
+    criScore: null,
+    behavioralRisk: null,
+  },
+  riskQuadrant: 0,
+  overallAlert: 'Integritet i Qëndrueshëm',
+  clinicalSummary: 'PARAGON® — Audit në proces. Name-derived integrity labels are quarantined and are not a measurement.',
+});
 
 // Main Paragon mock generator
 export const runParagonAnalysis = (profileInput: ProfileInput, scores?: number[]): FullProfileAnalysis => {
@@ -206,7 +180,7 @@ export const runParagonAnalysis = (profileInput: ProfileInput, scores?: number[]
 
   const mockPerformancePortfolio: PerformancePortfolioItem[] = [];
 
-  const individualScores = scores || [80, 52, 30, 45, 80, 40, 60];
+  const individualScores = scores ?? [];
   const { strengths, weaknesses } = getStrengthsAndWeaknesses(individualScores);
 
   const mockFinalDiagnosis: FinalDiagnosis = {
@@ -229,26 +203,22 @@ export const runParagonAnalysis = (profileInput: ProfileInput, scores?: number[]
       weaknesses,
       recommendations: [],
     },
-    integrityAnalysis: generateIntegrityAnalysis(profileInput.personal.fullName),
+    integrityAnalysis: quarantinedIntegrity(),
     networkMapData: thikaGraphData,
     finalDiagnosis: mockFinalDiagnosis,
   };
 };
 
 export const runAnalysisForVip = (vip: VipProfile): FullProfileAnalysis => {
-  const hash = generateHash(vip.id.toString());
-  
-  // Use scores from profile if available
-  let scores = [80, 52, 30, 45, 80, 40, 60]; // default
-  if (vip.paragonAnalysis && vip.paragonAnalysis.length > 0) {
-      scores = vip.paragonAnalysis.map(d => d.score);
-  }
+  const scores = vip.paragonAnalysis && vip.paragonAnalysis.length > 0
+    ? vip.paragonAnalysis.map((dimension) => dimension.score).filter((score): score is number => typeof score === 'number')
+    : [];
 
   const base = runParagonAnalysis({
     personal: {
       fullName: vip.name,
-      dob: vip.dateOfBirth || "1980-01-01",
-      age: vip.age || (40 + (hash % 10)),
+      dob: vip.dateOfBirth || '',
+      age: vip.age,
       party: vip.category,
       title: vip.shortBio,
     },

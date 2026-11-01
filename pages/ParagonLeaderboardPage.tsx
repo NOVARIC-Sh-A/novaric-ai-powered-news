@@ -129,7 +129,9 @@ export const ParagonLeaderboardPage: React.FC<ParagonLeaderboardPageProps> = ({
             const t = trendMap[key];
             const c = crisisMap[key];
 
-            const liveScoreValue = s?.overall_score ?? p.dynamicScore ?? p.latestScore ?? 0;
+            const liveScoreValue = typeof s?.overall_score === 'number'
+              ? s.overall_score
+              : (typeof p.dynamicScore === 'number' ? p.dynamicScore : (typeof p.latestScore === 'number' ? p.latestScore : null));
 
             return {
               ...p,

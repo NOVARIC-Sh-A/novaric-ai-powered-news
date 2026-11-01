@@ -167,6 +167,9 @@ export const PoliticianCard: React.FC<PoliticianCardProps> = ({
   const ratingsSwitch = useParagonRatingsEnabled();
   const ratingsOff = !ratingsSwitch || target.ratingsEnabled === false;
   const scoringSuspended = ratingsOff || target.scoringSuspended === true;
+  const displayedDimensions = scoringSuspended
+    ? paragonDimensions.map((dimension) => ({ ...dimension, score: null, peerAverage: null, benchmark: null }))
+    : paragonDimensions;
   const coverageLabel = target.coverage || coverageStr;
   const secondaryRoles: string[] = Array.isArray(target.secondaryRoles)
     ? target.secondaryRoles
@@ -193,7 +196,7 @@ export const PoliticianCard: React.FC<PoliticianCardProps> = ({
           <AlertTriangle className="w-5 h-5 text-amber-600 dark:text-amber-400 shrink-0 mt-0.5" />
           <div className="flex-1 text-xs leading-relaxed text-amber-900 dark:text-amber-200">
             <div className="font-bold text-sm text-amber-800 dark:text-amber-300 mb-0.5">
-              Pezullim i Përkohshëm i Rezultateve PARAGON®
+              PARAGON® — Audit në proces
             </div>
             <p>
               Vlerësimet PARAGON® janë përkohësisht të pezulluara për verifikimin e burimeve dhe integritetit të të dhënave.
@@ -346,7 +349,7 @@ export const PoliticianCard: React.FC<PoliticianCardProps> = ({
 
           <div className="my-auto py-2">
             <RadarChart
-              dimensions={paragonDimensions}
+              dimensions={displayedDimensions}
               size={280}
               editorialScore={editorialRemark?.editorialScore ?? null}
             />
@@ -376,7 +379,7 @@ export const PoliticianCard: React.FC<PoliticianCardProps> = ({
             </div>
 
             <div className="divide-y divide-slate-100 dark:divide-slate-800">
-              {paragonDimensions.map((dim) => (
+              {displayedDimensions.map((dim) => (
                 <BulletRow
                   key={dim.key}
                   dimension={dim}

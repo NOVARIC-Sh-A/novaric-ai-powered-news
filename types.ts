@@ -647,21 +647,21 @@ export interface IntegrityAnalysis {
 
 export interface AgibAnalysis {
   archetype: string;
-  archetypeScore: number;
-  centralityScore: number;
-  scriIndex: number;
-  vulnerability: 'I Ulët' | 'Mesatar' | 'I Lartë';
+  archetypeScore: number | null;
+  centralityScore: number | null;
+  scriIndex: number | null;
+  vulnerability: 'I Ulët' | 'Mesatar' | 'I Lartë' | null;
 }
 
 export interface CriAnalysis {
-  moralDetachmentIndex: number;
+  moralDetachmentIndex: number | null;
   euphemisticLanguage: string;
   advantageousComparison: string;
   displacementOfResponsibility: string;
-  eliteClosureIndex: number;
+  eliteClosureIndex: number | null;
   impunityContext: string;
-  criScore: number;
-  behavioralRisk: 'I Ulët' | 'Mesatar' | 'I Lartë';
+  criScore: number | null;
+  behavioralRisk: 'I Ulët' | 'Mesatar' | 'I Lartë' | null;
 }
 
 export interface GraphNode {
