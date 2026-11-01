@@ -211,8 +211,8 @@ export const BulletRow: React.FC<BulletRowProps> = ({
           </div>
           <div className="grid grid-cols-2 gap-x-3 gap-y-1 text-[10px] text-slate-300">
             <div>Vlerësimi subjekti: <strong className="text-white">{isScored ? `${score}%` : '– (në pritje të auditimit)'}</strong></div>
-            <div>Mes. e kolegëve: <strong className="text-white">{peerAverage != null ? `${peerAverage}%` : '–'}</strong></div>
-            <div>Benchmark global: <strong className="text-white">{benchmark != null ? `${benchmark}%` : '–'}</strong></div>
+            <div>Mes. e kolegëve: <strong className="text-white">{peerAverage != null ? `${peerAverage}%` : AWAITING_DATA}</strong></div>
+            <div>Benchmark global: <strong className="text-white">{benchmark != null ? `${benchmark}%` : AWAITING_DATA}</strong></div>
             {coverageInfo && (
               <div>Mbulimi i treguesve: <strong className="text-emerald-400">{typeof coverageInfo === 'string' ? coverageInfo : `${coverageInfo.available?.length ?? 0}/${(coverageInfo.available?.length ?? 0) + (coverageInfo.missing?.length ?? 0)}`}</strong></div>
             )}

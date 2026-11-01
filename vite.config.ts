@@ -785,13 +785,14 @@ function novaricApiPlugin() {
 
             const ratingsOn = paragonRatingsEnabled() && politician?.scoring_suspended === false;
             const stored = Array.isArray(politician?.paragonDimensions) ? politician.paragonDimensions : [];
+            const readings = politician?.dimensionReadings || {};
             const dimsPayload = canonicalDims.map((d, idx) => ({
               key: d.key,
               id: d.id,
               label: d.label,
               score: ratingsOn && typeof stored[idx] === 'number' ? stored[idx] : null,
-              peerAverage: null,
-              benchmark: null,
+              peerAverage: typeof readings[d.key]?.peerAverage === 'number' ? readings[d.key].peerAverage : null,
+              benchmark: typeof readings[d.key]?.benchmark === 'number' ? readings[d.key].benchmark : null,
               verificationStatus: ratingsOn && typeof stored[idx] === 'number' ? 'sourced' : 'awaiting_data',
               coverage: politician?.coverage || null
             }));
@@ -870,9 +871,12 @@ function novaricApiPlugin() {
 
             const ratingsOn = paragonRatingsEnabled() && politician.scoring_suspended === false;
             const storedScores = Array.isArray(politician.paragonDimensions) ? politician.paragonDimensions : [];
+            const readings = politician.dimensionReadings || {};
             const storedDims = canonicalDims.map((dim, idx) => ({
               ...dim,
               score: ratingsOn && typeof storedScores[idx] === 'number' ? storedScores[idx] : null,
+              peerAverage: typeof readings[dim.key]?.peerAverage === 'number' ? readings[dim.key].peerAverage : null,
+              benchmark: typeof readings[dim.key]?.benchmark === 'number' ? readings[dim.key].benchmark : null,
             }));
             const emptyDossier = {
               promises: [],
@@ -889,7 +893,7 @@ function novaricApiPlugin() {
               scoreRevisions: [],
               recentActivity: [],
               mandates: Array.isArray(politician.mandates) ? politician.mandates : [],
-              dimensionReadings: {},
+              dimensionReadings: politician.dimensionReadings || {},
               officialLinks: Array.isArray(politician.officialLinks) ? politician.officialLinks : [],
               fieldSources: politician.fieldSources || null,
               parliamentaryGroup: politician.parliamentaryGroup || null,

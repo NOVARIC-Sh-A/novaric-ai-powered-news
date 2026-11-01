@@ -251,21 +251,26 @@ def calculate_paragon_dimensions(
             d4 = None
 
     # 5. Qeverisja (D5)
-    compliance_score = raw_metrics.get("constitutional_compliance_score")
-    reform_inits = raw_metrics.get("institutional_reform_initiatives")
-
-    d5_points = 0.0
-    d5_cap = 0.0
-    if compliance_score is not None:
-        d5_points += float(compliance_score) * 0.6
-        d5_cap += 60.0
-    if reform_inits is not None:
-        d5_points += min(40.0, float(reform_inits) * 15.0)
-        d5_cap += 40.0
-    if d5_cap > 0:
-        d5 = round(min(100.0, max(0.0, d5_points / d5_cap * 100.0)), 1)
+    # Committee minutes publish a named present/absent list. That percentage is
+    # the score. The older compliance formula stays for a complete fixture.
+    if "committee_meeting_attendance_pct" in raw_metrics and raw_metrics.get("committee_meeting_attendance_pct") is not None:
+        d5 = round(min(100.0, max(0.0, float(raw_metrics["committee_meeting_attendance_pct"]))), 1)
     else:
-        d5 = None
+        compliance_score = raw_metrics.get("constitutional_compliance_score")
+        reform_inits = raw_metrics.get("institutional_reform_initiatives")
+
+        d5_points = 0.0
+        d5_cap = 0.0
+        if compliance_score is not None:
+            d5_points += float(compliance_score) * 0.6
+            d5_cap += 60.0
+        if reform_inits is not None:
+            d5_points += min(40.0, float(reform_inits) * 15.0)
+            d5_cap += 40.0
+        if d5_cap > 0:
+            d5 = round(min(100.0, max(0.0, d5_points / d5_cap * 100.0)), 1)
+        else:
+            d5 = None
 
     # 6. Kohësioni (D6)
     party_align = raw_metrics.get("party_vote_alignment_pct") if "party_vote_alignment_pct" in raw_metrics else None

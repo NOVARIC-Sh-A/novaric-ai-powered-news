@@ -106,6 +106,20 @@ class TestParagonScoring(unittest.TestCase):
         empty, _, _ = calculate_paragon_dimensions({"plenary_interventions": 0, "parliamentary_questions": 0})
         self.assertIsNone(empty["Asertiviteti"])
 
+    def test_committee_minutes_score_governance_only_when_named(self):
+        dimensions, composite, envelope = calculate_paragon_dimensions({
+            "committee_meeting_attendance_pct": 75.0,
+            "committee_attendance_pct": 84.0,
+            "vote_participation_pct": 15.7,
+        })
+        self.assertEqual(dimensions["Qeverisja"], 75.0)
+        self.assertIsNone(dimensions["Përfaqësimi"])
+        self.assertIsNone(dimensions["Narrativa"])
+        self.assertEqual(envelope["_composite_status"], "partial")
+        self.assertIsNotNone(composite)
+        missing, _, _ = calculate_paragon_dimensions({"committee_attendance_pct": 84.0})
+        self.assertIsNone(missing["Qeverisja"])
+
     def test_zodiac_is_not_a_scoring_input(self):
         base = {
             "bills_sponsored_lead": 2,
@@ -151,6 +165,27 @@ class TestParagonScoring(unittest.TestCase):
         # Verify 3 sentences
         sentences = [s.strip() for s in commentary.split(".") if s.strip()]
         self.assertEqual(len(sentences), 3)
+
+
+class TestCommitteeAttendanceParse(unittest.TestCase):
+    def test_present_and_absent_lists_ignore_guests_and_page_numbers(self):
+        from scripts.collect_committee_governance import attendance_lists, is_committee_minute
+
+        text = """
+        Marrin pjesë:
+        Milva Ekonomi, Erion Braçe dhe Agron Shehaj.
+        1
+        Mungojnë:
+        Besart Xhaferi dhe Zamira Sinaj.
+        Të ftuar:
+        Petrit Malaj – ministër i Financave
+        HAPET MBLEDHJA
+        """
+        present, absent = attendance_lists(text)
+        self.assertEqual(present, ["Milva Ekonomi", "Erion Braçe", "Agron Shehaj"])
+        self.assertEqual(absent, ["Besart Xhaferi", "Zamira Sinaj"])
+        self.assertTrue(is_committee_minute("Procesverbal KEPF - 11.11.2025.pdf"))
+        self.assertFalse(is_committee_minute("Raport KEPF_Dh.M - Marreveshja e Ullirit 2026.pdf"))
 
 if __name__ == "__main__":
     unittest.main()

@@ -1,6 +1,7 @@
 // components/figurat-politike/primitives/RadarChart.tsx
 import React, { useState } from 'react';
 import { ParagonDimensionItem } from '../../../types/politician';
+import { AWAITING_DATA } from './awaiting';
 
 interface RadarChartProps {
   dimensions: ParagonDimensionItem[];
@@ -268,8 +269,8 @@ export const RadarChart: React.FC<RadarChartProps> = ({
               <div className="bg-slate-900 text-white text-[11px] px-3 py-1 rounded-md shadow-lg flex items-center gap-3 animate-fadeIn border border-slate-700 tabular-nums">
                 <span className="font-semibold text-blue-300">{dimKey} {dimName}:</span>
                 <span>Vlerësimi: <strong className="text-white">{hDim.score}%</strong></span>
-                <span className="text-slate-400">Mes. kolegëve: {hDim.peerAverage != null ? `${hDim.peerAverage}%` : '–'}</span>
-                <span className="text-slate-400">Benchmark: {hDim.benchmark != null ? `${hDim.benchmark}%` : '–'}</span>
+                <span className="text-slate-400">Mes. kolegëve: {hDim.peerAverage != null ? `${hDim.peerAverage}%` : AWAITING_DATA}</span>
+                <span className="text-slate-400">Benchmark: {hDim.benchmark != null ? `${hDim.benchmark}%` : AWAITING_DATA}</span>
               </div>
             );
           })()
@@ -279,10 +280,12 @@ export const RadarChart: React.FC<RadarChartProps> = ({
               <span className="w-2.5 h-0.5 bg-blue-600 rounded"></span> Subjekti / Subject
             </span>
             <span className="inline-flex items-center gap-1.5">
-              <span className="w-2.5 h-0.5 border-t border-dashed border-slate-400"></span> Mes. kolegëve / Peers
+              <span className="w-2.5 h-0.5 border-t border-dashed border-slate-400"></span>
+              {peerEntries.length ? 'Mes. kolegëve / Peers' : `Mes. kolegëve: ${AWAITING_DATA}`}
             </span>
             <span className="inline-flex items-center gap-1.5">
-              <span className="w-2.5 h-0.5 border-t border-dotted border-amber-600"></span> Benchmark
+              <span className="w-2.5 h-0.5 border-t border-dotted border-amber-600"></span>
+              {benchmarkEntries.length ? 'Benchmark' : `Benchmark: ${AWAITING_DATA}`}
             </span>
           </div>
         )}
