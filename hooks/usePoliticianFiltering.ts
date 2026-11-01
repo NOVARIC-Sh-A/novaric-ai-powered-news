@@ -53,7 +53,8 @@ const mapAnalysisToProcessed = (
   // If no backend analysis → use local static analysis
   if (!backend || !backend.dimensions || Object.keys(backend.dimensions).length === 0) {
     const local = profile.paragonAnalysis ?? [];
-    const overallScore = average(local.map((d) => d.score ?? 0));
+    const measured = local.map((d) => d.score).filter((score): score is number => typeof score === 'number');
+    const overallScore = measured.length > 0 ? average(measured) : null;
 
     const translatedAnalysis: TranslatedParagonEntry[] = local.map((d) => ({
       ...d,

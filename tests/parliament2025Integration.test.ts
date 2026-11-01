@@ -69,10 +69,12 @@ describe('NOVARIC® Parliament 2025 & PARAGON® Integration Suite (Phase 34)', (
     assert.equal(seenUuids.size, 140);
   });
 
-  test('4. PARAGON ratings are on, partial, and can be switched off', () => {
+  test('4. The archive still holds scores and the public gate is closed', () => {
     const data = JSON.parse(fs.readFileSync(exportPath, 'utf-8'));
     const flag = JSON.parse(fs.readFileSync(path.resolve(process.cwd(), 'public/paragon-ratings.json'), 'utf-8'));
-    assert.equal(flag.enabled, true);
+    assert.equal(flag.enabled, false);
+    assert.equal(flag.authorized, false);
+    assert.equal(flag.auditState, 'under_review');
     assert.equal(data.ratings_enabled, true);
     assert.equal(data.scoring_suspended, false);
     assert.ok(data.scoring_note && data.scoring_note.includes('Kuvendit'));

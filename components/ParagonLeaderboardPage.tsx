@@ -15,7 +15,7 @@ interface ParagonLeaderboardPageProps {
 }
 
 interface LeaderboardProfile extends VipProfile {
-  liveScore: number;
+  liveScore: number | null;
   trendDelta?: number | null;
   underCrisis?: boolean;
   crisisSeverity?: 'LOW' | 'MEDIUM' | 'HIGH' | 'CRITICAL' | null;
@@ -72,7 +72,7 @@ export const ParagonLeaderboardPage: React.FC<ParagonLeaderboardPageProps> = ({
             const t = trendMap[key];
             const c = crisisMap[key];
 
-            const liveScore = s?.overall_score ?? p.dynamicScore ?? 0;
+            const liveScore = typeof s?.overall_score === 'number' ? s.overall_score : (typeof p.dynamicScore === 'number' ? p.dynamicScore : null);
 
             return {
               ...p,
@@ -82,7 +82,7 @@ export const ParagonLeaderboardPage: React.FC<ParagonLeaderboardPageProps> = ({
               crisisSeverity: c?.severity ?? null,
             };
           })
-          .sort((a, b) => b.liveScore - a.liveScore);
+          .sort((a, b) => (b.liveScore ?? -1) - (a.liveScore ?? -1));
 
         setProfiles(merged);
         setScores(scoreMap);
@@ -102,7 +102,8 @@ export const ParagonLeaderboardPage: React.FC<ParagonLeaderboardPageProps> = ({
   // ------------------------------------------------------------
   // Helpers
   // ------------------------------------------------------------
-  const rankColor = (score: number) => {
+  const rankColor = (score: number | null) => {
+    if (typeof score !== 'number') return "text-slate-400";
     if (score >= 80) return "text-green-400";
     if (score >= 60) return "text-yellow-300";
     return "text-red-400";
@@ -218,7 +219,7 @@ export const ParagonLeaderboardPage: React.FC<ParagonLeaderboardPageProps> = ({
                 <div className="w-full bg-slate-200 dark:bg-slate-700 rounded-full h-3 mt-2">
                   <div
                     className="h-3 rounded-full bg-red-600"
-                    style={{ width: `${p.liveScore ?? 0}%` }}
+                    style={{ width: `${typeof p.liveScore === 'number' ? p.liveScore : 0}%` }}
                   />
                 </div>
               </div>
@@ -226,7 +227,7 @@ export const ParagonLeaderboardPage: React.FC<ParagonLeaderboardPageProps> = ({
               {/* Score Value + Trend */}
               <div className="flex flex-col items-end ml-4">
                 <div className={`text-2xl font-bold ${rankColor(p.liveScore)}`}>
-                  {p.liveScore}
+                  {typeof p.liveScore === 'number' ? p.liveScore : '–'}
                 </div>
                 <div className="text-[10px] font-semibold text-slate-600 dark:text-slate-300 max-w-[12rem] text-right leading-snug">
                   <PartialRatingBadge coverage={(p as any).coverage} />

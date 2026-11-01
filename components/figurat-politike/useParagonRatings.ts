@@ -1,17 +1,24 @@
 import { useEffect, useState } from 'react';
+import { scoresArePublic } from '../../services/paragonPublicationGate';
 
-/** Public switch. `public/paragon-ratings.json` can be replaced without rebuilding the app. */
+/**
+ * Public switch. Defaults off. A fetch failure, a missing file, or a file that
+ * only says enabled=true does not publish scores.
+ */
 export function useParagonRatingsEnabled(): boolean {
-  const [enabled, setEnabled] = useState(true);
+  const [enabled, setEnabled] = useState(false);
 
   useEffect(() => {
     let cancelled = false;
     fetch('/paragon-ratings.json', { cache: 'no-store' })
       .then((response) => (response.ok ? response.json() : null))
       .then((data) => {
-        if (!cancelled && data && data.enabled === false) setEnabled(false);
+        if (cancelled) return;
+        setEnabled(scoresArePublic(data, true));
       })
-      .catch(() => {});
+      .catch(() => {
+        if (!cancelled) setEnabled(false);
+      });
     return () => {
       cancelled = true;
     };

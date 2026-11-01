@@ -78,7 +78,9 @@ export const PoliticianCard = React.memo<PoliticianCardProps>(
       bottomDimensions = [],
     } = profile.processedAnalysis || {};
 
-    const effectiveScore = paragonScore ?? overallScore ?? profile.dynamicScore ?? 0;
+    const effectiveScore = typeof paragonScore === 'number'
+      ? paragonScore
+      : (typeof overallScore === 'number' ? overallScore : (typeof profile.dynamicScore === 'number' ? profile.dynamicScore : null));
 
     return (
       <div className={`card-container h-full relative ${isFlipped ? 'z-50' : 'z-auto'}`}>

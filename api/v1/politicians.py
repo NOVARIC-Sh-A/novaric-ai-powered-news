@@ -46,6 +46,27 @@ from utils.official_photo import apply_official_photo
 
 logger = logging.getLogger("novaric.api.politicians")
 
+from services.paragon_publication_gate import scores_are_public, NOTICE, BANNER
+
+
+def redact_unpublished_scores(payload: Dict[str, Any]) -> Dict[str, Any]:
+    """Stored numbers stay in the database. They are not copied into a public response."""
+    if scores_are_public(True):
+        return payload
+    for key in ("composite", "dynamicScore", "overall_score", "paragonDimensions", "paragonAnalysis", "dimensions"):
+        if key in ("paragonDimensions", "paragonAnalysis", "dimensions") and isinstance(payload.get(key), list):
+            payload[key] = None
+        elif key in payload:
+            payload[key] = None
+    payload["scoringSuspended"] = True
+    payload["scoring_suspended"] = True
+    payload["ratingsEnabled"] = False
+    payload["auditState"] = "under_review"
+    payload["publicScoreVisible"] = False
+    payload["suspensionNotice"] = NOTICE
+    payload["auditBanner"] = BANNER
+    return payload
+
 router = APIRouter(prefix="/api/v1/politicians", tags=["Politicians"])
 
 # Canonical Order for PARAGON dimensions
@@ -117,7 +138,7 @@ def get_seeded_fallback() -> List[Dict[str, Any]]:
                 if len(profiles) >= 104:
                     for p in profiles:
                         if p.get("dynamicScore") is None:
-                            p["dynamicScore"] = int(round(float(p["composite"]))) if p.get("composite") is not None else 50
+                            p["dynamicScore"] = int(round(float(p["composite"]))) if p.get("composite") is not None else None
                     return profiles[:104]
     except Exception as e:
         logger.warning(f"Could not load paragon_scores_export.json: {e}")
@@ -369,7 +390,7 @@ async def list_politician_cards():
         for c in cards:
             c["dimsSource"] = "db"
             if c.get("dynamicScore") is None:
-                c["dynamicScore"] = int(round(float(c["composite"]))) if c.get("composite") is not None else 50
+                c["dynamicScore"] = int(round(float(c["composite"]))) if c.get("composite") is not None else None
 
     # Ensure exact 104-card contract per live revision novaric-backend-00226-csv
     if len(cards) > 104:
@@ -377,6 +398,8 @@ async def list_politician_cards():
 
     for c in cards:
         _with_official_photo(c)
+        if not scores_are_public(True):
+            redact_unpublished_scores(c)
 
     # Calculate paragonActive strictly matching cards with non-null composite
     scored_in_cards = sum(1 for c in cards if c.get("composite") is not None)
@@ -606,7 +629,7 @@ async def get_politician_profile(id_or_slug: str = Path(...)):
                 attach_dossier(response_payload, load_supabase_dossier(supabase, politician))
                 _with_official_photo(response_payload)
                 _profile_cache[cache_key] = {"timestamp": now, "data": response_payload}
-                return response_payload
+                return redact_unpublished_scores(response_payload)
         except Exception as e:
             logger.warning(f"Failed to query live profile for {id_or_slug}: {e}")
 
@@ -682,7 +705,7 @@ async def get_politician_profile(id_or_slug: str = Path(...)):
                 conn.close()
                 _with_official_photo(response_payload)
                 _profile_cache[cache_key] = {"timestamp": now, "data": response_payload}
-                return response_payload
+                return redact_unpublished_scores(response_payload)
             conn.close()
         except Exception as e:
             logger.warning(f"Failed to query SQLite for profile {id_or_slug}: {e}")
@@ -752,7 +775,7 @@ async def get_politician_profile(id_or_slug: str = Path(...)):
     _with_official_photo(response_payload)
 
     _profile_cache[cache_key] = {"timestamp": now, "data": response_payload}
-    return response_payload
+    return redact_unpublished_scores(response_payload)
 
 @router.post("/ingest")
 async def trigger_kuvendi_ingest(

@@ -32,7 +32,7 @@ export function normalizeParagonAnalysis(items: ParagonEntry[] | undefined): Par
       return {
         ...entry,
         dimension: key,
-        score: typeof entry.score === 'number' ? entry.score : 0,
+        score: typeof entry.score === 'number' ? entry.score : null,
       };
     })
     .filter(Boolean) as ParagonEntry[];
@@ -51,7 +51,7 @@ export function normalizeMaragonAnalysis(items: ParagonEntry[] | undefined): Par
       return {
         ...entry,
         dimension: key,
-        score: typeof entry.score === 'number' ? entry.score : 0,
+        score: typeof entry.score === 'number' ? entry.score : null,
       };
     })
     .filter(Boolean) as ParagonEntry[];

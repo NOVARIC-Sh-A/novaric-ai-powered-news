@@ -14,6 +14,20 @@ import { mediaProfilesData } from "../data/mediaProfiles";
 import { businessProfilesData } from "../data/businessProfiles";
 import { mockJudiciaryProfilesData } from "../data/mockJudiciaryProfiles";
 import paragonScoresExport from "../db/paragon_scores_export.json";
+
+/** Bundled export is an archive. It is not a publication channel. */
+function withoutStaticScores<T extends Record<string, any>>(profile: T): T {
+  return {
+    ...profile,
+    composite: null,
+    dynamicScore: null,
+    paragonDimensions: null,
+    scoringSuspended: true,
+    scoring_suspended: true,
+    ratingsEnabled: false,
+    auditState: 'under_review',
+  };
+}
 import { canonicalProfileId } from "../utils/profileRedirects";
 
 /**
@@ -139,7 +153,7 @@ export const resolvePoliticianId = async (query: string): Promise<number | null>
  * Fetch all VIP profiles from the backend.
  */
 export const fetchAllProfiles = async (): Promise<VipProfile[]> => {
-  const localPoliticians = mergePoliticianCards((paragonScoresExport?.profiles as any[]) || []);
+  const localPoliticians = mergePoliticianCards(((paragonScoresExport?.profiles as any[]) || []).map(withoutStaticScores));
   try {
     const data = await apiGet<VipProfileResponseDto[]>("api/profiles");
     if (Array.isArray(data)) {
@@ -167,7 +181,7 @@ export const fetchAllProfiles = async (): Promise<VipProfile[]> => {
  */
 export const fetchPoliticianCards = async (): Promise<VipProfile[]> => {
   const path = 'politicians/cards';
-  const localProfiles = (paragonScoresExport?.profiles as any[]) || [];
+  const localProfiles = ((paragonScoresExport?.profiles as any[]) || []).map(withoutStaticScores);
   
   try {
     const res = await apiGet<any>(path);
@@ -259,7 +273,7 @@ export const fetchPoliticianProfile = async (id: string | number): Promise<VipPr
     String(p.politicianId) === idStr ||
     String(p.id) === `vip${idStr}`
   );
-  if (localMatch) return toPoliticianUI(localMatch);
+  if (localMatch) return toPoliticianUI(withoutStaticScores(localMatch));
 
   // FALLBACK FOR NON-POLITICAL PROFILES ONLY
   const nonPoliticalProfiles = [

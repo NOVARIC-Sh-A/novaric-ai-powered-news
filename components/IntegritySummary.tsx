@@ -23,9 +23,9 @@ export const IntegritySummary: React.FC<IntegritySummaryProps> = ({ integrityAna
       </h2>
       <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
         <StatCard label="ARKETIPI AGIB" value={agib.archetype.split(' ')[0]} subvalue={agib.archetype.split(' ').slice(1).join(' ')} />
-        <StatCard label="VULNERABILITETI" value={agib.vulnerability.toUpperCase()} />
+        <StatCard label="VULNERABILITETI" value={agib.vulnerability ? agib.vulnerability.toUpperCase() : 'PARAGON® — Audit në proces'} />
         <StatCard label="CENTRALITETI" value={`${agib.centralityScore}/100`} />
-        <StatCard label="RREZIKU CRI" value={cri.behavioralRisk.toUpperCase()} subvalue={`(${cri.criScore}/100)`}/>
+        <StatCard label="RREZIKU CRI" value={cri.behavioralRisk ? cri.behavioralRisk.toUpperCase() : 'PARAGON® — Audit në proces'} subvalue={cri.criScore === null ? '' : `(${cri.criScore}/100)`}/>
       </div>
     </section>
   );

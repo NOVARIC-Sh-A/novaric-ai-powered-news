@@ -33,14 +33,12 @@ function canonicalProfileId(rawId: string): string {
 function paragonRatingsEnabled(): boolean {
   try {
     const flagPath = path.resolve(__dirname, 'public/paragon-ratings.json');
-    if (fs.existsSync(flagPath)) {
-      const flag = JSON.parse(fs.readFileSync(flagPath, 'utf-8'));
-      if (flag && flag.enabled === false) return false;
-    }
+    if (!fs.existsSync(flagPath)) return false;
+    const flag = JSON.parse(fs.readFileSync(flagPath, 'utf-8'));
+    return flag?.authorized === true && flag?.auditState === 'published' && flag?.enabled !== false;
   } catch {
-    /* missing flag keeps the export's own switch */
+    return false;
   }
-  return true;
 }
 
 function hideParagonScores<T extends Record<string, any>>(card: T): T {

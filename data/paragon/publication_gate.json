@@ -1,0 +1,9 @@
+{
+  "version": "publication_gate_v1",
+  "authorized": false,
+  "auditState": "under_review",
+  "enabled": false,
+  "notice": "Vlerësimet PARAGON® janë përkohësisht të pezulluara për verifikimin e burimeve dhe integritetit të të dhënave.",
+  "banner": "PARAGON® — Audit në proces",
+  "reason": "Fail closed. A stored number is not a public score. Publication requires authorized=true and auditState=published, plus provenance on the value."
+}

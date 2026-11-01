@@ -1,4 +1,8 @@
 {
-  "enabled": true,
-  "note": "Set enabled to false to hide PARAGON ratings immediately. Stored scores are not deleted."
+  "enabled": false,
+  "authorized": false,
+  "auditState": "under_review",
+  "note": "Fail closed. enabled=true is not enough. Publication also requires authorized=true and auditState=published. Stored scores are not deleted.",
+  "notice": "Vlerësimet PARAGON® janë përkohësisht të pezulluara për verifikimin e burimeve dhe integritetit të të dhënave.",
+  "banner": "PARAGON® — Audit në proces"
 }
