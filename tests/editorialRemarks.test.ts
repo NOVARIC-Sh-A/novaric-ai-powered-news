@@ -104,6 +104,12 @@ describe('Editorial remarks stay out of the PARAGON score', () => {
     assert.match(editorial, /Evidencë e kufizuar \/ Limited evidence/);
     assert.match(editorial, /Opinion editorial i NOVARIC® Sh\.A\. \/ NOVARIC® Sh\.A\. editorial opinion/);
     assert.match(editorial, /Në pritje të të dhënave \/ Awaiting data/);
+    const radar = fs.readFileSync(path.resolve(process.cwd(), 'components/figurat-politike/primitives/RadarChart.tsx'), 'utf8');
+    assert.match(radar, /#1E5BD8/);
+    assert.match(radar, /editorialScore/);
+    assert.match(radar, /Vlerësim editorial \/ Editor’s assessment/);
+    assert.match(radar, /jo pjesë e pikës PARAGON®/);
+    assert.match(card, /editorialScore=\{editorialRemark\?\.editorialScore/);
     assert.doesNotMatch(card, /composite\s*=\s*remark\.editorialScore|composite\s*=\s*editorialScore/);
   });
 });

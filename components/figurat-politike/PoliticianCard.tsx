@@ -345,7 +345,11 @@ export const PoliticianCard: React.FC<PoliticianCardProps> = ({
           </div>
 
           <div className="my-auto py-2">
-            <RadarChart dimensions={paragonDimensions} size={280} />
+            <RadarChart
+              dimensions={paragonDimensions}
+              size={280}
+              editorialScore={editorialRemark?.editorialScore ?? null}
+            />
           </div>
 
           {/* Sparkline at bottom of radar column */}
