@@ -1,0 +1,887 @@
+{
+  "retrievedAt": "2026-11-01",
+  "election": "Zgjedhjet për Kuvendin, 11 maj 2025",
+  "method": "kqz_subject_vote_share_v1",
+  "proxy": true,
+  "sourceTitle": "Lidhja 1 — Rezultati përfundimtar i zgjedhjeve për çdo zonë zgjedhore",
+  "sourceUrl": "https://droni.al/wp-content/uploads/2025/08/250825_Lidhja-1_rez_perf_2025_zone_V1.pdf",
+  "sourceNote": "Public copy of the final zone table. Mandate counts match the KQZ commissioner announcements linked per district, except Tiranë, whose 37-seat split is the same split compiled from KQZ Decision No. 34 of 28 August 2025. Preferential votes are not in this table.",
+  "zones": {
+    "Berat": {
+      "magnitude": 7,
+      "validVotes": 76671,
+      "kqzDecisionUrl": "https://kqz.gov.al/lajme/kshz-shperndan-mandatet-dhe-percakton-kandidatet-fitues-per-qarqet-berat-diber-shkoder-vlore",
+      "subjects": {
+        "PD-AMSH": {
+          "label": "Koalicioni Partia Demokratike-Aleanca për Shqipërinë Madhështore",
+          "votes": 20895,
+          "share": 27.25,
+          "mandates": 2
+        },
+        "BASHKË": {
+          "label": "Partia Lëvizja Bashkë",
+          "votes": 932,
+          "share": 1.22,
+          "mandates": 0
+        },
+        "LA": {
+          "label": "Lëvizja Atdheu",
+          "votes": 134,
+          "share": 0.17,
+          "mandates": 0
+        },
+        "KEA": {
+          "label": "Partia Koalicioni Euroatlantik",
+          "votes": 431,
+          "share": 0.56,
+          "mandates": 0
+        },
+        "PS": {
+          "label": "Partia Socialiste e Shqipërisë",
+          "votes": 46523,
+          "share": 60.68,
+          "mandates": 5
+        },
+        "NISMA-SHB": {
+          "label": "Koalicioni Nisma Shqiperia Bëhet",
+          "votes": 5533,
+          "share": 7.22,
+          "mandates": 0
+        },
+        "AKSH": {
+          "label": "Partia Aleanca Kombëtare Shqiptare",
+          "votes": 198,
+          "share": 0.26,
+          "mandates": 0
+        },
+        "ADR": {
+          "label": "Partia Aleanca Demokracia e Re",
+          "votes": 69,
+          "share": 0.09,
+          "mandates": 0
+        },
+        "DZH": {
+          "label": "Koalicioni Djathtas për Zhvillim",
+          "votes": 52,
+          "share": 0.07,
+          "mandates": 0
+        },
+        "MUNDËSIA": {
+          "label": "Partia Mundësia",
+          "votes": 1639,
+          "share": 2.14,
+          "mandates": 0
+        },
+        "PSD": {
+          "label": "Partia Socialdemokrate",
+          "votes": 265,
+          "share": 0.35,
+          "mandates": 0
+        }
+      }
+    },
+    "Dibër": {
+      "magnitude": 5,
+      "validVotes": 64885,
+      "kqzDecisionUrl": "https://kqz.gov.al/lajme/kshz-shperndan-mandatet-dhe-percakton-kandidatet-fitues-per-qarqet-berat-diber-shkoder-vlore",
+      "subjects": {
+        "PD-AMSH": {
+          "label": "Koalicioni Partia Demokratike-Aleanca për Shqipërinë Madhështore",
+          "votes": 24081,
+          "share": 37.11,
+          "mandates": 2
+        },
+        "BASHKË": {
+          "label": "Partia Lëvizja Bashkë",
+          "votes": 327,
+          "share": 0.5,
+          "mandates": 0
+        },
+        "LA": {
+          "label": "Lëvizja Atdheu",
+          "votes": 64,
+          "share": 0.1,
+          "mandates": 0
+        },
+        "KEA": {
+          "label": "Partia Koalicioni Euroatlantik",
+          "votes": 667,
+          "share": 1.03,
+          "mandates": 0
+        },
+        "PS": {
+          "label": "Partia Socialiste e Shqipërisë",
+          "votes": 36791,
+          "share": 56.7,
+          "mandates": 3
+        },
+        "NISMA-SHB": {
+          "label": "Koalicioni Nisma Shqiperia Bëhet",
+          "votes": 1039,
+          "share": 1.6,
+          "mandates": 0
+        },
+        "AKSH": {
+          "label": "Partia Aleanca Kombëtare Shqiptare",
+          "votes": 53,
+          "share": 0.08,
+          "mandates": 0
+        },
+        "ADR": {
+          "label": "Partia Aleanca Demokracia e Re",
+          "votes": 29,
+          "share": 0.04,
+          "mandates": 0
+        },
+        "DZH": {
+          "label": "Koalicioni Djathtas për Zhvillim",
+          "votes": 21,
+          "share": 0.03,
+          "mandates": 0
+        },
+        "MUNDËSIA": {
+          "label": "Partia Mundësia",
+          "votes": 433,
+          "share": 0.67,
+          "mandates": 0
+        },
+        "PSD": {
+          "label": "Partia Socialdemokrate",
+          "votes": 1380,
+          "share": 2.13,
+          "mandates": 0
+        }
+      }
+    },
+    "Durrës": {
+      "magnitude": 14,
+      "validVotes": 157307,
+      "kqzDecisionUrl": "https://kqz.gov.al/lajme/kshz-shperndan-mandatet-per-qarqet-fier-elbasan-durres",
+      "subjects": {
+        "PD-AMSH": {
+          "label": "Koalicioni Partia Demokratike-Aleanca për Shqipërinë Madhështore",
+          "votes": 58975,
+          "share": 37.49,
+          "mandates": 6
+        },
+        "BASHKË": {
+          "label": "Partia Lëvizja Bashkë",
+          "votes": 1995,
+          "share": 1.27,
+          "mandates": 0
+        },
+        "LA": {
+          "label": "Lëvizja Atdheu",
+          "votes": 339,
+          "share": 0.22,
+          "mandates": 0
+        },
+        "KEA": {
+          "label": "Partia Koalicioni Euroatlantik",
+          "votes": 1367,
+          "share": 0.87,
+          "mandates": 0
+        },
+        "PS": {
+          "label": "Partia Socialiste e Shqipërisë",
+          "votes": 84032,
+          "share": 53.42,
+          "mandates": 8
+        },
+        "NISMA-SHB": {
+          "label": "Koalicioni Nisma Shqiperia Bëhet",
+          "votes": 4652,
+          "share": 2.96,
+          "mandates": 0
+        },
+        "AKSH": {
+          "label": "Partia Aleanca Kombëtare Shqiptare",
+          "votes": 371,
+          "share": 0.24,
+          "mandates": 0
+        },
+        "ADR": {
+          "label": "Partia Aleanca Demokracia e Re",
+          "votes": 58,
+          "share": 0.04,
+          "mandates": 0
+        },
+        "DZH": {
+          "label": "Koalicioni Djathtas për Zhvillim",
+          "votes": 999,
+          "share": 0.64,
+          "mandates": 0
+        },
+        "MUNDËSIA": {
+          "label": "Partia Mundësia",
+          "votes": 4104,
+          "share": 2.61,
+          "mandates": 0
+        },
+        "PSD": {
+          "label": "Partia Socialdemokrate",
+          "votes": 415,
+          "share": 0.26,
+          "mandates": 0
+        }
+      }
+    },
+    "Elbasan": {
+      "magnitude": 14,
+      "validVotes": 152699,
+      "kqzDecisionUrl": "https://kqz.gov.al/lajme/kshz-shperndan-mandatet-per-qarqet-fier-elbasan-durres",
+      "subjects": {
+        "PD-AMSH": {
+          "label": "Koalicioni Partia Demokratike-Aleanca për Shqipërinë Madhështore",
+          "votes": 42519,
+          "share": 27.84,
+          "mandates": 4
+        },
+        "BASHKË": {
+          "label": "Partia Lëvizja Bashkë",
+          "votes": 1543,
+          "share": 1.01,
+          "mandates": 0
+        },
+        "LA": {
+          "label": "Lëvizja Atdheu",
+          "votes": 173,
+          "share": 0.11,
+          "mandates": 0
+        },
+        "KEA": {
+          "label": "Partia Koalicioni Euroatlantik",
+          "votes": 2436,
+          "share": 1.6,
+          "mandates": 0
+        },
+        "PS": {
+          "label": "Partia Socialiste e Shqipërisë",
+          "votes": 93765,
+          "share": 61.41,
+          "mandates": 10
+        },
+        "NISMA-SHB": {
+          "label": "Koalicioni Nisma Shqiperia Bëhet",
+          "votes": 6302,
+          "share": 4.13,
+          "mandates": 0
+        },
+        "AKSH": {
+          "label": "Partia Aleanca Kombëtare Shqiptare",
+          "votes": 359,
+          "share": 0.24,
+          "mandates": 0
+        },
+        "ADR": {
+          "label": "Partia Aleanca Demokracia e Re",
+          "votes": 60,
+          "share": 0.04,
+          "mandates": 0
+        },
+        "DZH": {
+          "label": "Koalicioni Djathtas për Zhvillim",
+          "votes": 417,
+          "share": 0.27,
+          "mandates": 0
+        },
+        "MUNDËSIA": {
+          "label": "Partia Mundësia",
+          "votes": 3267,
+          "share": 2.14,
+          "mandates": 0
+        },
+        "PSD": {
+          "label": "Partia Socialdemokrate",
+          "votes": 1858,
+          "share": 1.22,
+          "mandates": 0
+        }
+      }
+    },
+    "Fier": {
+      "magnitude": 16,
+      "validVotes": 181287,
+      "kqzDecisionUrl": "https://kqz.gov.al/lajme/kshz-shperndan-mandatet-per-qarqet-fier-elbasan-durres",
+      "subjects": {
+        "PD-AMSH": {
+          "label": "Koalicioni Partia Demokratike-Aleanca për Shqipërinë Madhështore",
+          "votes": 42546,
+          "share": 23.47,
+          "mandates": 4
+        },
+        "BASHKË": {
+          "label": "Partia Lëvizja Bashkë",
+          "votes": 2119,
+          "share": 1.17,
+          "mandates": 0
+        },
+        "LA": {
+          "label": "Lëvizja Atdheu",
+          "votes": 224,
+          "share": 0.12,
+          "mandates": 0
+        },
+        "KEA": {
+          "label": "Partia Koalicioni Euroatlantik",
+          "votes": 1227,
+          "share": 0.68,
+          "mandates": 0
+        },
+        "PS": {
+          "label": "Partia Socialiste e Shqipërisë",
+          "votes": 116766,
+          "share": 64.41,
+          "mandates": 12
+        },
+        "NISMA-SHB": {
+          "label": "Koalicioni Nisma Shqiperia Bëhet",
+          "votes": 9202,
+          "share": 5.08,
+          "mandates": 0
+        },
+        "AKSH": {
+          "label": "Partia Aleanca Kombëtare Shqiptare",
+          "votes": 569,
+          "share": 0.31,
+          "mandates": 0
+        },
+        "ADR": {
+          "label": "Partia Aleanca Demokracia e Re",
+          "votes": 71,
+          "share": 0.04,
+          "mandates": 0
+        },
+        "DZH": {
+          "label": "Koalicioni Djathtas për Zhvillim",
+          "votes": 1425,
+          "share": 0.79,
+          "mandates": 0
+        },
+        "MUNDËSIA": {
+          "label": "Partia Mundësia",
+          "votes": 4614,
+          "share": 2.55,
+          "mandates": 0
+        },
+        "PSD": {
+          "label": "Partia Socialdemokrate",
+          "votes": 2524,
+          "share": 1.39,
+          "mandates": 0
+        }
+      }
+    },
+    "Gjirokastër": {
+      "magnitude": 4,
+      "validVotes": 46163,
+      "kqzDecisionUrl": "https://kqz.gov.al/lajme/kshz-shperndan-mandatet-dhe-percakton-kandidatet-fitues-per-qarqet-kukes-korcce-lezhe-gjirokaster",
+      "subjects": {
+        "PD-AMSH": {
+          "label": "Koalicioni Partia Demokratike-Aleanca për Shqipërinë Madhështore",
+          "votes": 12499,
+          "share": 27.08,
+          "mandates": 1
+        },
+        "BASHKË": {
+          "label": "Partia Lëvizja Bashkë",
+          "votes": 628,
+          "share": 1.36,
+          "mandates": 0
+        },
+        "LA": {
+          "label": "Lëvizja Atdheu",
+          "votes": 48,
+          "share": 0.1,
+          "mandates": 0
+        },
+        "KEA": {
+          "label": "Partia Koalicioni Euroatlantik",
+          "votes": 212,
+          "share": 0.46,
+          "mandates": 0
+        },
+        "PS": {
+          "label": "Partia Socialiste e Shqipërisë",
+          "votes": 29685,
+          "share": 64.3,
+          "mandates": 3
+        },
+        "NISMA-SHB": {
+          "label": "Koalicioni Nisma Shqiperia Bëhet",
+          "votes": 1669,
+          "share": 3.62,
+          "mandates": 0
+        },
+        "AKSH": {
+          "label": "Partia Aleanca Kombëtare Shqiptare",
+          "votes": 82,
+          "share": 0.18,
+          "mandates": 0
+        },
+        "ADR": {
+          "label": "Partia Aleanca Demokracia e Re",
+          "votes": 37,
+          "share": 0.08,
+          "mandates": 0
+        },
+        "DZH": {
+          "label": "Koalicioni Djathtas për Zhvillim",
+          "votes": 202,
+          "share": 0.44,
+          "mandates": 0
+        },
+        "MUNDËSIA": {
+          "label": "Partia Mundësia",
+          "votes": 683,
+          "share": 1.48,
+          "mandates": 0
+        },
+        "PSD": {
+          "label": "Partia Socialdemokrate",
+          "votes": 418,
+          "share": 0.91,
+          "mandates": 0
+        }
+      }
+    },
+    "Korçë": {
+      "magnitude": 10,
+      "validVotes": 122015,
+      "kqzDecisionUrl": "https://kqz.gov.al/lajme/kshz-shperndan-mandatet-dhe-percakton-kandidatet-fitues-per-qarqet-kukes-korcce-lezhe-gjirokaster",
+      "subjects": {
+        "PD-AMSH": {
+          "label": "Koalicioni Partia Demokratike-Aleanca për Shqipërinë Madhështore",
+          "votes": 39794,
+          "share": 32.61,
+          "mandates": 4
+        },
+        "BASHKË": {
+          "label": "Partia Lëvizja Bashkë",
+          "votes": 1111,
+          "share": 0.91,
+          "mandates": 0
+        },
+        "LA": {
+          "label": "Lëvizja Atdheu",
+          "votes": 139,
+          "share": 0.11,
+          "mandates": 0
+        },
+        "KEA": {
+          "label": "Partia Koalicioni Euroatlantik",
+          "votes": 1091,
+          "share": 0.89,
+          "mandates": 0
+        },
+        "PS": {
+          "label": "Partia Socialiste e Shqipërisë",
+          "votes": 68189,
+          "share": 55.89,
+          "mandates": 6
+        },
+        "NISMA-SHB": {
+          "label": "Koalicioni Nisma Shqiperia Bëhet",
+          "votes": 5827,
+          "share": 4.78,
+          "mandates": 0
+        },
+        "AKSH": {
+          "label": "Partia Aleanca Kombëtare Shqiptare",
+          "votes": 252,
+          "share": 0.21,
+          "mandates": 0
+        },
+        "ADR": {
+          "label": "Partia Aleanca Demokracia e Re",
+          "votes": 76,
+          "share": 0.06,
+          "mandates": 0
+        },
+        "DZH": {
+          "label": "Koalicioni Djathtas për Zhvillim",
+          "votes": 226,
+          "share": 0.19,
+          "mandates": 0
+        },
+        "MUNDËSIA": {
+          "label": "Partia Mundësia",
+          "votes": 2623,
+          "share": 2.15,
+          "mandates": 0
+        },
+        "PSD": {
+          "label": "Partia Socialdemokrate",
+          "votes": 2687,
+          "share": 2.2,
+          "mandates": 0
+        }
+      }
+    },
+    "Kukës": {
+      "magnitude": 3,
+      "validVotes": 38725,
+      "kqzDecisionUrl": "https://kqz.gov.al/lajme/kshz-shperndan-mandatet-dhe-percakton-kandidatet-fitues-per-qarqet-kukes-korcce-lezhe-gjirokaster",
+      "subjects": {
+        "PD-AMSH": {
+          "label": "Koalicioni Partia Demokratike-Aleanca për Shqipërinë Madhështore",
+          "votes": 20769,
+          "share": 53.63,
+          "mandates": 2
+        },
+        "BASHKË": {
+          "label": "Partia Lëvizja Bashkë",
+          "votes": 147,
+          "share": 0.38,
+          "mandates": 0
+        },
+        "LA": {
+          "label": "Lëvizja Atdheu",
+          "votes": 44,
+          "share": 0.11,
+          "mandates": 0
+        },
+        "KEA": {
+          "label": "Partia Koalicioni Euroatlantik",
+          "votes": 93,
+          "share": 0.24,
+          "mandates": 0
+        },
+        "PS": {
+          "label": "Partia Socialiste e Shqipërisë",
+          "votes": 11770,
+          "share": 30.39,
+          "mandates": 1
+        },
+        "NISMA-SHB": {
+          "label": "Koalicioni Nisma Shqiperia Bëhet",
+          "votes": 342,
+          "share": 0.88,
+          "mandates": 0
+        },
+        "AKSH": {
+          "label": "Partia Aleanca Kombëtare Shqiptare",
+          "votes": 54,
+          "share": 0.14,
+          "mandates": 0
+        },
+        "ADR": {
+          "label": "Partia Aleanca Demokracia e Re",
+          "votes": 6,
+          "share": 0.02,
+          "mandates": 0
+        },
+        "DZH": {
+          "label": "Koalicioni Djathtas për Zhvillim",
+          "votes": 42,
+          "share": 0.11,
+          "mandates": 0
+        },
+        "MUNDËSIA": {
+          "label": "Partia Mundësia",
+          "votes": 294,
+          "share": 0.76,
+          "mandates": 0
+        },
+        "PSD": {
+          "label": "Partia Socialdemokrate",
+          "votes": 5164,
+          "share": 13.34,
+          "mandates": 0
+        }
+      }
+    },
+    "Lezhë": {
+      "magnitude": 7,
+      "validVotes": 77456,
+      "kqzDecisionUrl": "https://kqz.gov.al/lajme/kshz-shperndan-mandatet-dhe-percakton-kandidatet-fitues-per-qarqet-kukes-korcce-lezhe-gjirokaster",
+      "subjects": {
+        "PD-AMSH": {
+          "label": "Koalicioni Partia Demokratike-Aleanca për Shqipërinë Madhështore",
+          "votes": 33623,
+          "share": 43.41,
+          "mandates": 4
+        },
+        "BASHKË": {
+          "label": "Partia Lëvizja Bashkë",
+          "votes": 429,
+          "share": 0.55,
+          "mandates": 0
+        },
+        "LA": {
+          "label": "Lëvizja Atdheu",
+          "votes": 71,
+          "share": 0.09,
+          "mandates": 0
+        },
+        "KEA": {
+          "label": "Partia Koalicioni Euroatlantik",
+          "votes": 1779,
+          "share": 2.3,
+          "mandates": 0
+        },
+        "PS": {
+          "label": "Partia Socialiste e Shqipërisë",
+          "votes": 33552,
+          "share": 43.32,
+          "mandates": 3
+        },
+        "NISMA-SHB": {
+          "label": "Koalicioni Nisma Shqiperia Bëhet",
+          "votes": 4775,
+          "share": 6.16,
+          "mandates": 0
+        },
+        "AKSH": {
+          "label": "Partia Aleanca Kombëtare Shqiptare",
+          "votes": 79,
+          "share": 0.1,
+          "mandates": 0
+        },
+        "ADR": {
+          "label": "Partia Aleanca Demokracia e Re",
+          "votes": 15,
+          "share": 0.02,
+          "mandates": 0
+        },
+        "DZH": {
+          "label": "Koalicioni Djathtas për Zhvillim",
+          "votes": 92,
+          "share": 0.12,
+          "mandates": 0
+        },
+        "MUNDËSIA": {
+          "label": "Partia Mundësia",
+          "votes": 937,
+          "share": 1.21,
+          "mandates": 0
+        },
+        "PSD": {
+          "label": "Partia Socialdemokrate",
+          "votes": 2104,
+          "share": 2.72,
+          "mandates": 0
+        }
+      }
+    },
+    "Shkodër": {
+      "magnitude": 11,
+      "validVotes": 106601,
+      "kqzDecisionUrl": "https://kqz.gov.al/lajme/kshz-shperndan-mandatet-dhe-percakton-kandidatet-fitues-per-qarqet-berat-diber-shkoder-vlore",
+      "subjects": {
+        "PD-AMSH": {
+          "label": "Koalicioni Partia Demokratike-Aleanca për Shqipërinë Madhështore",
+          "votes": 43025,
+          "share": 40.36,
+          "mandates": 5
+        },
+        "BASHKË": {
+          "label": "Partia Lëvizja Bashkë",
+          "votes": 665,
+          "share": 0.62,
+          "mandates": 0
+        },
+        "LA": {
+          "label": "Lëvizja Atdheu",
+          "votes": 68,
+          "share": 0.06,
+          "mandates": 0
+        },
+        "KEA": {
+          "label": "Partia Koalicioni Euroatlantik",
+          "votes": 1827,
+          "share": 1.71,
+          "mandates": 0
+        },
+        "PS": {
+          "label": "Partia Socialiste e Shqipërisë",
+          "votes": 40421,
+          "share": 37.92,
+          "mandates": 4
+        },
+        "NISMA-SHB": {
+          "label": "Koalicioni Nisma Shqiperia Bëhet",
+          "votes": 2128,
+          "share": 2.0,
+          "mandates": 0
+        },
+        "AKSH": {
+          "label": "Partia Aleanca Kombëtare Shqiptare",
+          "votes": 119,
+          "share": 0.11,
+          "mandates": 0
+        },
+        "ADR": {
+          "label": "Partia Aleanca Demokracia e Re",
+          "votes": 28,
+          "share": 0.03,
+          "mandates": 0
+        },
+        "DZH": {
+          "label": "Koalicioni Djathtas për Zhvillim",
+          "votes": 116,
+          "share": 0.11,
+          "mandates": 0
+        },
+        "MUNDËSIA": {
+          "label": "Partia Mundësia",
+          "votes": 1398,
+          "share": 1.31,
+          "mandates": 0
+        },
+        "PSD": {
+          "label": "Partia Socialdemokrate",
+          "votes": 16806,
+          "share": 15.77,
+          "mandates": 2
+        }
+      }
+    },
+    "Tiranë": {
+      "magnitude": 37,
+      "validVotes": 475432,
+      "kqzDecisionUrl": "https://kqz.gov.al/rezultate-2025",
+      "subjects": {
+        "PD-AMSH": {
+          "label": "Koalicioni Partia Demokratike-Aleanca për Shqipërinë Madhështore",
+          "votes": 163704,
+          "share": 34.43,
+          "mandates": 13
+        },
+        "BASHKË": {
+          "label": "Partia Lëvizja Bashkë",
+          "votes": 13324,
+          "share": 2.8,
+          "mandates": 1
+        },
+        "LA": {
+          "label": "Lëvizja Atdheu",
+          "votes": 827,
+          "share": 0.17,
+          "mandates": 0
+        },
+        "KEA": {
+          "label": "Partia Koalicioni Euroatlantik",
+          "votes": 9013,
+          "share": 1.9,
+          "mandates": 0
+        },
+        "PS": {
+          "label": "Partia Socialiste e Shqipërisë",
+          "votes": 229777,
+          "share": 48.33,
+          "mandates": 19
+        },
+        "NISMA-SHB": {
+          "label": "Koalicioni Nisma Shqiperia Bëhet",
+          "votes": 16476,
+          "share": 3.47,
+          "mandates": 1
+        },
+        "AKSH": {
+          "label": "Partia Aleanca Kombëtare Shqiptare",
+          "votes": 1325,
+          "share": 0.28,
+          "mandates": 0
+        },
+        "ADR": {
+          "label": "Partia Aleanca Demokracia e Re",
+          "votes": 559,
+          "share": 0.12,
+          "mandates": 0
+        },
+        "DZH": {
+          "label": "Koalicioni Djathtas për Zhvillim",
+          "votes": 2074,
+          "share": 0.44,
+          "mandates": 0
+        },
+        "MUNDËSIA": {
+          "label": "Partia Mundësia",
+          "votes": 23606,
+          "share": 4.97,
+          "mandates": 2
+        },
+        "PSD": {
+          "label": "Partia Socialdemokrate",
+          "votes": 14747,
+          "share": 3.1,
+          "mandates": 1
+        }
+      }
+    },
+    "Vlorë": {
+      "magnitude": 12,
+      "validVotes": 106816,
+      "kqzDecisionUrl": "https://kqz.gov.al/lajme/kshz-shperndan-mandatet-dhe-percakton-kandidatet-fitues-per-qarqet-berat-diber-shkoder-vlore",
+      "subjects": {
+        "PD-AMSH": {
+          "label": "Koalicioni Partia Demokratike-Aleanca për Shqipërinë Madhështore",
+          "votes": 26162,
+          "share": 24.49,
+          "mandates": 3
+        },
+        "BASHKË": {
+          "label": "Partia Lëvizja Bashkë",
+          "votes": 1327,
+          "share": 1.24,
+          "mandates": 0
+        },
+        "LA": {
+          "label": "Lëvizja Atdheu",
+          "votes": 112,
+          "share": 0.1,
+          "mandates": 0
+        },
+        "KEA": {
+          "label": "Partia Koalicioni Euroatlantik",
+          "votes": 742,
+          "share": 0.69,
+          "mandates": 0
+        },
+        "PS": {
+          "label": "Partia Socialiste e Shqipërisë",
+          "votes": 64560,
+          "share": 60.44,
+          "mandates": 9
+        },
+        "NISMA-SHB": {
+          "label": "Koalicioni Nisma Shqiperia Bëhet",
+          "votes": 6267,
+          "share": 5.87,
+          "mandates": 0
+        },
+        "AKSH": {
+          "label": "Partia Aleanca Kombëtare Shqiptare",
+          "votes": 333,
+          "share": 0.31,
+          "mandates": 0
+        },
+        "ADR": {
+          "label": "Partia Aleanca Demokracia e Re",
+          "votes": 109,
+          "share": 0.1,
+          "mandates": 0
+        },
+        "DZH": {
+          "label": "Koalicioni Djathtas për Zhvillim",
+          "votes": 353,
+          "share": 0.33,
+          "mandates": 0
+        },
+        "MUNDËSIA": {
+          "label": "Partia Mundësia",
+          "votes": 5354,
+          "share": 5.01,
+          "mandates": 0
+        },
+        "PSD": {
+          "label": "Partia Socialdemokrate",
+          "votes": 1497,
+          "share": 1.4,
+          "mandates": 0
+        }
+      }
+    }
+  }
+}

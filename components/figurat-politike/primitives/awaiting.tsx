@@ -21,6 +21,21 @@ export const PARTIAL_RANKING_LABEL =
 export const PARTIAL_RATING_NOTE =
   'Ky vlerësim mbulon prezencën, pjesëmarrjen në votim dhe kohezionin e grupit nga fletët zyrtare të votimit të Kuvendit që nga 1 shtator 2025, plus ndërhyrjet në seancë plenare, pyetjet, interpelancat dhe mocionet kur procesverbali i Kuvendit e emërton deputetin, plus pjesëmarrjen në mbledhjet e komisioneve kur procesverbali e liston te Marrin pjesë ose Mungojnë. This score covers presence, voting participation and group cohesion from official Kuvendi roll calls since 1 Sep 2025, plus named plenary interventions, questions, interpellations and motions, plus committee attendance when the minute lists the member. Përfaqësimi dhe Narrativa janë Në pritje të të dhënave / Awaiting data.';
 
+export const PROXY_METHOD_BADGE = 'Metodë proxy / Proxy method';
+
+export const ProxyMethodBadge: React.FC<{ note?: string | null; className?: string }> = ({
+  note,
+  className = '',
+}) => (
+  <span
+    className={`inline-flex items-center px-1.5 py-0.5 rounded text-[9px] font-bold uppercase tracking-wide text-amber-800 dark:text-amber-200 bg-amber-100/90 dark:bg-amber-950/70 border border-amber-300 dark:border-amber-700 ${className}`}
+    title={note || PROXY_METHOD_BADGE}
+    data-proxy-method="true"
+  >
+    {PROXY_METHOD_BADGE}
+  </span>
+);
+
 export const FULL_RATING_NOTE =
   'Ky vlerësim mbulon të shtatë dimensionet PARAGON® nga burime zyrtare të cituara. This rating covers all seven PARAGON® dimensions from cited official sources. Shenja e horoskopit nuk pikëzohet / Zodiac is not scored.';
 

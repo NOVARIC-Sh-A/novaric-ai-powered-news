@@ -269,6 +269,7 @@ export const RadarChart: React.FC<RadarChartProps> = ({
               <div className="bg-slate-900 text-white text-[11px] px-3 py-1 rounded-md shadow-lg flex items-center gap-3 animate-fadeIn border border-slate-700 tabular-nums">
                 <span className="font-semibold text-blue-300">{dimKey} {dimName}:</span>
                 <span>Vlerësimi: <strong className="text-white">{hDim.score}%</strong></span>
+                {hDim.proxy ? <span className="text-amber-300" title={hDim.methodNote || 'Metodë proxy / Proxy method'}>Metodë proxy</span> : null}
                 <span className="text-slate-400">Mes. kolegëve: {hDim.peerAverage != null ? `${hDim.peerAverage}%` : AWAITING_DATA}</span>
                 <span className="text-slate-400">Benchmark: {hDim.benchmark != null ? `${hDim.benchmark}%` : AWAITING_DATA}</span>
               </div>

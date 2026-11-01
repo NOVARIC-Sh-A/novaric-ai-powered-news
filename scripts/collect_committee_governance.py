@@ -116,12 +116,19 @@ def split_names(blob: str) -> list[str]:
 
 
 def attendance_lists(text: str) -> tuple[list[str], list[str]]:
+    """Read only the header roll, before the meeting is opened.
+
+    A later sentence that says "mungojnë" inside a speech is not an attendance list.
+    """
     present_mark = PRESENT_MARK.search(text)
     if not present_mark:
         return [], []
-    present = split_names(_window(text, present_mark))
-    absent_mark = ABSENT_MARK.search(text, present_mark.end())
-    absent = split_names(_window(text, absent_mark)) if absent_mark else []
+    header_stop = STOP_MARK.search(text, present_mark.end())
+    header_end = header_stop.start() if header_stop else min(len(text), present_mark.end() + 1600)
+    header = text[present_mark.start():header_end]
+    present = split_names(_window(header, PRESENT_MARK.search(header)))
+    absent_mark = ABSENT_MARK.search(header, present_mark.end() - present_mark.start())
+    absent = split_names(_window(header, absent_mark)) if absent_mark else []
     return present, absent
 
 
