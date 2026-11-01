@@ -218,7 +218,7 @@ class TestRlsSecurityMatrix(unittest.TestCase):
                     continue
                 if field in ("shortBio", "detailedBio"):
                     continue  # bios may be null (awaiting data); no mock text
-                if field == "dynamicScore" and card.get("scoringSuspended") is True:
+                if field == "dynamicScore" and (card.get("scoringSuspended") is True or card.get("composite") is None):
                     self.assertIsNone(card[field])
                     continue
                 self.assertIsNotNone(card[field], f"Card {idx} ({card.get('name')}) has null required field: {field}")

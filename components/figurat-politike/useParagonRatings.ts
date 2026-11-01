@@ -1,12 +1,12 @@
 import { useEffect, useState } from 'react';
-import { scoresArePublic } from '../../services/paragonPublicationGate';
+import { bundledScoresArePublic, scoresArePublic } from '../../services/paragonPublicationGate';
 
 /**
- * Public switch. Defaults off. A fetch failure, a missing file, or a file that
- * only says enabled=true does not publish scores.
+ * Public switch. Follows the bundled authorization, then the fetched flag.
+ * enabled=true alone does not publish. A missing authorization stays closed.
  */
 export function useParagonRatingsEnabled(): boolean {
-  const [enabled, setEnabled] = useState(false);
+  const [enabled, setEnabled] = useState(() => bundledScoresArePublic(true));
 
   useEffect(() => {
     let cancelled = false;
@@ -14,10 +14,10 @@ export function useParagonRatingsEnabled(): boolean {
       .then((response) => (response.ok ? response.json() : null))
       .then((data) => {
         if (cancelled) return;
-        setEnabled(scoresArePublic(data, true));
+        setEnabled(data ? scoresArePublic(data, true) : bundledScoresArePublic(true));
       })
       .catch(() => {
-        if (!cancelled) setEnabled(false);
+        if (!cancelled) setEnabled(bundledScoresArePublic(true));
       });
     return () => {
       cancelled = true;
