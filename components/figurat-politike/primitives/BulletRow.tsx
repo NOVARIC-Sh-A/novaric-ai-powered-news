@@ -136,7 +136,7 @@ export const BulletRow: React.FC<BulletRowProps> = ({
               title="Dimensioni është në pritje të auditimit empirik sipas metodologjisë NOVARIC®"
             >
               <Clock className="w-3 h-3 text-amber-600 dark:text-amber-400 shrink-0" />
-              <span>Në pritje të auditimit</span>
+              <span>Në kalibrim</span>
               <ExternalLink className="w-2.5 h-2.5 text-amber-500 shrink-0 opacity-70" />
             </a>
           )}
@@ -144,7 +144,7 @@ export const BulletRow: React.FC<BulletRowProps> = ({
 
           <div className="flex items-center gap-1 font-mono text-[11px] tabular-nums shrink-0">
             <span className={`font-bold ${isScored ? 'text-blue-600 dark:text-blue-400' : 'text-slate-400 dark:text-slate-500'}`}>
-              {isScored ? `${score}%` : '–'}
+              {isScored ? `${score}%` : '—'}
             </span>
             <span className="text-slate-400 dark:text-slate-500 text-[10px]">
               / {peerAverage != null ? `${peerAverage}%` : '–'}
