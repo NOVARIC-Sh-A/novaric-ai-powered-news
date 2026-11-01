@@ -17,6 +17,7 @@ from services.paragon_scoring_engine import calculate_paragon_dimensions
 ROOT = Path(__file__).resolve().parent.parent
 EXPORT = ROOT / "db" / "paragon_scores_export.json"
 ROLL = ROOT / "data" / "official" / "kuvendi_rollcall_scores.json"
+FLOOR = ROOT / "data" / "official" / "plenary_assertiveness.json"
 MIN_ROLLCALLS = 8
 MIN_ALIGNMENT = 5
 RETRIEVED = "2026-10-31"
@@ -46,7 +47,9 @@ def pct(part: int, whole: int) -> float:
 def main():
     export = json.loads(EXPORT.read_text(encoding="utf-8"))
     roll = json.loads(ROLL.read_text(encoding="utf-8"))
+    floor = json.loads(FLOOR.read_text(encoding="utf-8")) if FLOOR.exists() else {"people": {}}
     people = roll["people"]
+    speakers = floor.get("people") or {}
     now = datetime.now(timezone.utc).isoformat()
     scored = 0
     dim_counts = {name: 0 for name in DIM_ORDER}
@@ -73,6 +76,25 @@ def main():
                     f"Kohezioni {stats['aligned']}/{stats['comparable']} vota me shumicën e grupit "
                     "parlamentar të regjistruar në të njëjtën fletë."
                 )
+        speech = speakers.get(profile["id"]) or {}
+        speech_urls = speech.get("sourceUrls") or []
+        if speech.get("interventions"):
+            metrics["plenary_interventions"] = speech["interventions"]
+            metrics["total_words_spoken"] = speech.get("words") or 0
+            notes.append(
+                f"Asertiviteti: {speech['interventions']} ndërhyrje në procesverbalet plenare "
+                f"({speech.get('words') or 0} fjalë)."
+            )
+        questions = int(speech.get("questions") or 0)
+        interpellations = int(speech.get("interpellations") or 0)
+        motions = int(speech.get("motions") or 0)
+        if questions or interpellations or motions:
+            metrics["parliamentary_questions"] = questions
+            metrics["interpellations"] = interpellations
+            metrics["motions"] = motions
+            notes.append(
+                f"Pyetje {questions}, interpelanca {interpellations}, mocione {motions} nga dokumentet e Kuvendit që e emërtojnë."
+            )
         dimensions, composite, envelope = calculate_paragon_dimensions(metrics)
         dim_list = [dimensions[name] for name in DIM_ORDER]
         scored_dims = sum(1 for value in dim_list if value is not None)
@@ -129,6 +151,17 @@ def main():
                 "retrievedAt": RETRIEVED,
                 "excerpt": notes[-1] if notes else None,
             })
+        if metrics.get("plenary_interventions") or metrics.get("parliamentary_questions") is not None and (
+            metrics.get("parliamentary_questions") or metrics.get("interpellations") or metrics.get("motions")
+        ):
+            evidence.append({
+                "dimensionKey": "D4",
+                "sourceTitle": "Procesverbal plenar / pyetje / interpelancë / mocion",
+                "sourceUrl": speech_urls[0] if speech_urls else SOURCE_PAGE,
+                "sourcePublisher": PUBLISHER,
+                "retrievedAt": RETRIEVED,
+                "excerpt": " ".join(note for note in notes if note.startswith("Asertiviteti") or note.startswith("Pyetje")),
+            })
         profile["evidence"] = evidence
         field_sources = profile.setdefault("fieldSources", {})
         field_sources["paragonScore"] = {
@@ -153,8 +186,14 @@ def main():
     export["period_end"] = RETRIEVED
     export["model_version"] = "v1.0"
     export["paragon_inputs"] = {
-        "active": ["Angazhimi Politik (prezenca në seancë)", "Llogaridhënia (pjesëmarrja në votim)", "Kohësioni (përputhja me grupin)"],
-        "awaiting": ["Përfaqësimi", "Asertiviteti", "Qeverisja", "Narrativa"],
+        "active": [
+            "Angazhimi Politik (prezenca në seancë)",
+            "Llogaridhënia (pjesëmarrja në votim)",
+            "Asertiviteti (ndërhyrje, pyetje, interpelanca, mocione)",
+            "Kohësioni (përputhja me grupin)",
+        ],
+        "awaiting": ["Përfaqësimi", "Qeverisja", "Narrativa"],
+        "assertivenessMethod": "docs/PARAGON_ASERTIVITETI.md",
         "blocked": roll.get("blocked", []),
         "votesUsed": roll.get("votesUsed"),
         "filesListed": roll.get("filesListed"),

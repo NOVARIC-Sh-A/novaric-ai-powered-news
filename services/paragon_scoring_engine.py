@@ -213,23 +213,42 @@ def calculate_paragon_dimensions(
         d3 = None
 
     # 4. Asertiviteti (D4)
-    debates_led = raw_metrics.get("key_debates_led")
-    amendments = raw_metrics.get("amendments_passed")
-    words_spoken = raw_metrics.get("total_words_spoken")
-
-    has_d4_evidence = (debates_led is not None or amendments is not None or words_spoken is not None)
-    if has_d4_evidence:
-        d_val = debates_led or 0
-        a_val = amendments or 0
-        w_val = words_spoken or 0
-        d4_raw = (
-            min(40.0, d_val * 8.0) +
-            min(30.0, a_val * 15.0) +
-            min(30.0, (w_val / 25000.0) * 30.0)
-        )
-        d4 = round(min(100.0, max(0.0, d4_raw)), 1)
+    # Official floor counts use their own keys and only the components that were
+    # actually counted. The older three-input formula stays for a complete fixture.
+    floor_keys = ("plenary_interventions", "parliamentary_questions", "interpellations", "motions")
+    if any(key in raw_metrics for key in floor_keys):
+        parts = []
+        if "plenary_interventions" in raw_metrics and int(raw_metrics.get("plenary_interventions") or 0) > 0:
+            turns = int(raw_metrics.get("plenary_interventions") or 0)
+            parts.append((min(40.0, turns * 8.0), 40.0))
+        initiative_keys = [key for key in ("parliamentary_questions", "interpellations", "motions") if key in raw_metrics]
+        initiatives = sum(int(raw_metrics.get(key) or 0) for key in initiative_keys)
+        if initiatives > 0:
+            parts.append((min(30.0, initiatives * 15.0), 30.0))
+        if "total_words_spoken" in raw_metrics and int(raw_metrics.get("total_words_spoken") or 0) > 0:
+            words = int(raw_metrics.get("total_words_spoken") or 0)
+            parts.append((min(30.0, (words / 25000.0) * 30.0), 30.0))
+        if parts and sum(points for points, _cap in parts) > 0:
+            d4 = round(min(100.0, max(0.0, sum(points for points, _cap in parts) / sum(cap for _points, cap in parts) * 100.0)), 1)
+        else:
+            d4 = None
     else:
-        d4 = None
+        debates_led = raw_metrics.get("key_debates_led")
+        amendments = raw_metrics.get("amendments_passed")
+        words_spoken = raw_metrics.get("total_words_spoken")
+        has_d4_evidence = (debates_led is not None or amendments is not None or words_spoken is not None)
+        if has_d4_evidence:
+            d_val = debates_led or 0
+            a_val = amendments or 0
+            w_val = words_spoken or 0
+            d4_raw = (
+                min(40.0, d_val * 8.0) +
+                min(30.0, a_val * 15.0) +
+                min(30.0, (w_val / 25000.0) * 30.0)
+            )
+            d4 = round(min(100.0, max(0.0, d4_raw)), 1)
+        else:
+            d4 = None
 
     # 5. Qeverisja (D5)
     compliance_score = raw_metrics.get("constitutional_compliance_score")

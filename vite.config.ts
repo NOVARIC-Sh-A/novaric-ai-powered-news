@@ -18,6 +18,18 @@ import {
   RSS_FEEDS,
 } from './services/rssIngestor';
 
+const PROFILE_REDIRECTS: Record<string, string> = {
+  vip190: 'vip103',
+  '190': 'vip103',
+  vip169: 'vip16',
+  '169': 'vip16',
+};
+
+function canonicalProfileId(rawId: string): string {
+  const raw = String(rawId || '').trim();
+  return PROFILE_REDIRECTS[raw] || PROFILE_REDIRECTS[raw.toLowerCase()] || raw;
+}
+
 function paragonRatingsEnabled(): boolean {
   try {
     const flagPath = path.resolve(__dirname, 'public/paragon-ratings.json');
@@ -742,7 +754,7 @@ function novaricApiPlugin() {
         const paragonFingerprintMatch = url.match(/^\/api(?:\/v1)?\/politicians\/([^\/\?]+)\/paragon/);
         if (paragonFingerprintMatch) {
           try {
-            const rawId = decodeURIComponent(paragonFingerprintMatch[1]);
+            const rawId = canonicalProfileId(decodeURIComponent(paragonFingerprintMatch[1]));
             const cleanId = rawId.toLowerCase().replace('vip', '');
 
             const exportPath = path.resolve(__dirname, 'db/paragon_scores_export.json');
@@ -819,7 +831,7 @@ function novaricApiPlugin() {
         const politicianProfileMatch = url.match(/^\/api(?:\/v1)?\/politicians\/([^\/\?]+)(?:\?.*)?$/);
         if (politicianProfileMatch && !url.includes('/parliament') && !url.includes('/cards') && !url.includes('/resolve')) {
           try {
-            const rawId = decodeURIComponent(politicianProfileMatch[1]);
+            const rawId = canonicalProfileId(decodeURIComponent(politicianProfileMatch[1]));
             const cleanId = rawId.toLowerCase().replace('vip', '');
 
             const exportPath = path.resolve(__dirname, 'db/paragon_scores_export.json');
