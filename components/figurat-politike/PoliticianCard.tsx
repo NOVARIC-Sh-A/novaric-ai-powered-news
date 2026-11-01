@@ -10,6 +10,8 @@ import { Sparkline } from './primitives/Sparkline';
 import { ZodiacChip } from './primitives/ZodiacChip';
 import { TabPanel } from './primitives/TabPanel';
 import { AWAITING_DATA, ratingNoteForCoverage, PartialRatingBadge } from './primitives/awaiting';
+import { EditorialRemarksCard, LIMITED_EVIDENCE_BADGE } from './EditorialRemarksCard';
+import { hasLimitedEvidence, publishedRemarkFor } from '../../utils/editorialRemarks';
 import { ScoreLineagePanel } from '../analytics/ScoreLineagePanel';
 import { ProfileRecordSections } from './ProfileRecordSections';
 import { EvidenceDrawer } from './EvidenceDrawer';
@@ -126,6 +128,11 @@ export const PoliticianCard: React.FC<PoliticianCardProps> = ({
 
   const scoredCount = paragonDimensions.filter((d) => d.score !== null).length;
   const coverageStr = `${scoredCount}/7`;
+  const limitedEvidence = hasLimitedEvidence(paragonDimensions);
+  const editorialRemark = publishedRemarkFor(target.id || target.numericId);
+  const paragonComposite = typeof target.composite === 'number' && !Number.isNaN(target.composite)
+    ? target.composite
+    : null;
 
   // History series: only display verified history from backend; do NOT generate Math.sin() synthetic series
   const compositeHistory = React.useMemo(() => {
@@ -242,6 +249,16 @@ export const PoliticianCard: React.FC<PoliticianCardProps> = ({
 
               {/* Zodiac Chip (only if DOB available) */}
               <ZodiacChip dateOfBirth={dateOfBirth} withStatus />
+
+              {limitedEvidence && (
+                <span
+                  className="inline-flex items-center px-2.5 py-1 rounded-full text-xs font-semibold bg-amber-100 text-amber-900 border border-amber-300 dark:bg-amber-950/70 dark:text-amber-200 dark:border-amber-700"
+                  title="Two or more scored dimensions use a documented proxy method."
+                  data-limited-evidence="true"
+                >
+                  {LIMITED_EVIDENCE_BADGE}
+                </span>
+              )}
 
               {/* Verified DOB Badge — Strictly requires verified status + source URL + verified_at */}
               {isDobVerified && (
@@ -373,6 +390,8 @@ export const PoliticianCard: React.FC<PoliticianCardProps> = ({
           </div>
         </div>
       </div>
+
+      <EditorialRemarksCard remark={editorialRemark} paragonComposite={scoringSuspended ? null : paragonComposite} />
 
       {/* ========================================================
           (c) DOSSIER TABS (Biografia, Aktiviteti, Pasuria, Mandatet)
