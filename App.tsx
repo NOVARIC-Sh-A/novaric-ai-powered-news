@@ -27,6 +27,7 @@ import {
   MaragonFullReport,
 } from './types';
 import { fetchMaragonReport } from './services/dataService';
+import { canonicalProfileId } from './utils/profileRedirects';
 import { LiveUpdateToast } from './components/LiveUpdateToast';
 import { FloatingHomeButton } from './components/FloatingHomeButton';
 import { useSeo } from './hooks/useSeo';
@@ -273,7 +274,11 @@ export const App: React.FC = () => {
 
       if (!page) {
         if (pathname.startsWith('/figurat-politike/')) {
-          const polId = pathname.replace('/figurat-politike/', '').split('/')[0];
+          const requestedId = pathname.replace('/figurat-politike/', '').split('/')[0];
+          const polId = canonicalProfileId(requestedId);
+          if (polId && polId !== requestedId && typeof window !== 'undefined') {
+            window.history.replaceState({}, '', `/figurat-politike/${polId}`);
+          }
           if (polId) {
             const matched = data.profiles.find((p) => p.id.toString() === polId || p.numericId?.toString() === polId);
             if (matched) {

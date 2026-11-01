@@ -14,6 +14,7 @@ import { mediaProfilesData } from "../data/mediaProfiles";
 import { businessProfilesData } from "../data/businessProfiles";
 import { mockJudiciaryProfilesData } from "../data/mockJudiciaryProfiles";
 import paragonScoresExport from "../db/paragon_scores_export.json";
+import { canonicalProfileId } from "../utils/profileRedirects";
 
 /**
  * Core request helper using fetch and getApiEndpoint for robustness.
@@ -250,7 +251,7 @@ export const fetchPoliticianProfile = async (id: string | number): Promise<VipPr
 
   // 3. Static deployment fallback: the bundled, verified politician export
   //    (same real dataset the list page renders; no mock/synthetic values).
-  const idStr = String(id);
+  const idStr = canonicalProfileId(id);
   const localPoliticians = (paragonScoresExport?.profiles as any[]) || [];
   const localMatch = localPoliticians.find(p =>
     String(p.id) === idStr ||

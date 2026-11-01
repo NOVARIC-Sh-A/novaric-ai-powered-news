@@ -69,7 +69,7 @@ describe('NOVARIC® PARAGON Politicians Cards & Pipeline Contract (P1)', () => {
       assert.ok(!raw.includes('media.novaric.al/politicians'), `${card.id} references a NOVARIC copy`);
       assert.ok(!raw.includes('MaleProfile') && !raw.includes('FemaleProfile'), `${card.id} uses mock photo`);
     });
-    assert.equal(official + awaiting, 279);
+    assert.equal(official + awaiting, 277);
     assert.equal(awaiting, 25, 'profiles with no formal party, government, or parliament portrait');
   });
 

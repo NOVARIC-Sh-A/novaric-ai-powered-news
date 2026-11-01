@@ -12,7 +12,7 @@ export const PARTIAL_RANKING_LABEL =
   'Renditja e pjesshme – vetëm aktiviteti parlamentar / Partial ranking – parliamentary activity only';
 
 export const PARTIAL_RATING_NOTE =
-  'Ky vlerësim mbulon vetëm prezencën, pjesëmarrjen në votim dhe kohezionin e grupit nga fletët zyrtare të votimit të Kuvendit që nga 1 shtator 2025. This score covers only presence, voting participation and group cohesion from official Kuvendi roll calls since 1 Sep 2025. Dimensionet e tjera janë Në pritje të të dhënave / Awaiting data.';
+  'Ky vlerësim mbulon vetëm prezencën, pjesëmarrjen në votim dhe kohezionin e grupit nga fletët zyrtare të votimit të Kuvendit që nga 1 shtator 2025, plus ndërhyrjet në seancë plenare, pyetjet, interpelancat dhe mocionet kur procesverbali i Kuvendit e emërton deputetin. This score covers only presence, voting participation and group cohesion from official Kuvendi roll calls since 1 Sep 2025, plus named plenary interventions, questions, interpellations and motions. Dimensionet e tjera janë Në pritje të të dhënave / Awaiting data.';
 
 export function formatPartialCoverage(coverage?: string | null): string {
   if (coverage && /^\d+\/7$/.test(coverage)) return `${coverage} dimensions`;

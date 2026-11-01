@@ -91,6 +91,21 @@ class TestParagonScoring(unittest.TestCase):
         self.assertGreater(composite, 0.0)
         self.assertLess(composite, 100.0)
 
+    def test_floor_activity_scores_assertiveness_without_inventing_zeros(self):
+        dimensions, composite, _ = calculate_paragon_dimensions({
+            "plenary_interventions": 10,
+            "total_words_spoken": 1894,
+            "committee_attendance_pct": 84.0,
+            "vote_participation_pct": 15.7,
+            "party_vote_alignment_pct": 100.0,
+        })
+        self.assertEqual(dimensions["Asertiviteti"], 60.4)
+        self.assertIsNone(dimensions["Përfaqësimi"])
+        self.assertIsNone(dimensions["Narrativa"])
+        self.assertEqual(composite, 60.7)
+        empty, _, _ = calculate_paragon_dimensions({"plenary_interventions": 0, "parliamentary_questions": 0})
+        self.assertIsNone(empty["Asertiviteti"])
+
     def test_zodiac_is_not_a_scoring_input(self):
         base = {
             "bills_sponsored_lead": 2,
