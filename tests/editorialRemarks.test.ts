@@ -36,9 +36,25 @@ const sourced = (overrides: Partial<EditorialRemark> = {}): EditorialRemark => (
 });
 
 describe('Editorial remarks stay out of the PARAGON score', () => {
-  it('ships an empty remarks file', () => {
-    const file = path.resolve(process.cwd(), 'data/editorial/remarks.json');
-    assert.deepEqual(JSON.parse(fs.readFileSync(file, 'utf8')), []);
+  it('publishes only the sourced Çaushi remark and keeps vip55 active', () => {
+    const remarks = JSON.parse(fs.readFileSync(path.resolve(process.cwd(), 'data/editorial/remarks.json'), 'utf8'));
+    assert.equal(remarks.length, 1);
+    const shown = publishedRemarkFor('55', remarks);
+    assert.equal(shown?.profileId, 'vip55');
+    assert.equal(shown?.editorialScore, 47);
+    assert.deepEqual(shown?.criteria.map((item) => item.score), [55, 50, 35, null]);
+    assert.match(shown?.criteria[0].name || '', /^Integriteti dhe kredencialet/);
+    assert.match(shown?.remarksSq || '', /prezumimi i pafajësisë/);
+    const blob = JSON.stringify(remarks);
+    assert.doesNotMatch(blob, /daja|Bakaj|uncle|telashe/i);
+    const exportData = JSON.parse(fs.readFileSync(path.resolve(process.cwd(), 'db/paragon_scores_export.json'), 'utf8'));
+    const vip55 = exportData.profiles.find((profile: { id: string }) => profile.id === 'vip55');
+    const vip219 = exportData.profiles.find((profile: { id: string }) => profile.id === 'vip219');
+    assert.equal(vip55.parliamentaryStatus, 'active_mp');
+    assert.equal(vip55.composite, 84.8);
+    assert.equal(vip219.parliamentaryStatus, 'former_mp');
+    const active = exportData.profiles.filter((profile: { parliamentaryStatus: string }) => profile.parliamentaryStatus === 'active_mp');
+    assert.equal(active.length, 140);
   });
 
   it('renders only a published remark whose claims cite a URL', () => {
@@ -86,6 +102,8 @@ describe('Editorial remarks stay out of the PARAGON score', () => {
     assert.match(editorial, /jo pjesë e pikës PARAGON®/);
     assert.match(editorial, /Pa vërejtje editoriale ende \/ No editor’s remarks yet/);
     assert.match(editorial, /Evidencë e kufizuar \/ Limited evidence/);
+    assert.match(editorial, /Opinion editorial i NOVARIC® Sh\.A\. \/ NOVARIC® Sh\.A\. editorial opinion/);
+    assert.match(editorial, /Në pritje të të dhënave \/ Awaiting data/);
     assert.doesNotMatch(card, /composite\s*=\s*remark\.editorialScore|composite\s*=\s*editorialScore/);
   });
 });

@@ -17079,7 +17079,7 @@
         "Komisioni për Çështjet Ligjore dhe Administratën Publike",
         "Grupi Parlamentar i Partisë Socialiste"
       ],
-      "parliamentaryStatus": "former_mp",
+      "parliamentaryStatus": "active_mp",
       "detentionStatus": "none",
       "caseStatus": "none",
       "presumptionOfInnocence": true,
@@ -17197,6 +17197,12 @@
           "sourceUrl": "https://kuvendiapi.azurewebsites.net/api/anetaret/db9b7c5f-0459-4bfd-830c-838a09067adc",
           "retrievedAt": "2026-10-31",
           "notes": "Kuvendi member strukturat"
+        },
+        "parliamentaryStatus": {
+          "value": "active_mp",
+          "sourceUrl": "https://kuvendiapi.azurewebsites.net/api/anetaret/db9b7c5f-0459-4bfd-830c-838a09067adc",
+          "retrievedAt": "2026-11-01",
+          "notes": "Kuvendi register status 0: sitting PS member for Fier. Corrects the earlier former_mp flag on public profile vip55."
         }
       },
       "sourceRetrievedAt": "2026-10-31",
@@ -68179,7 +68185,7 @@
         "Komisioni për Çështjet Ligjore dhe Administratën Publike",
         "Grupi Parlamentar i Partisë Socialiste"
       ],
-      "parliamentaryStatus": "active_mp",
+      "parliamentaryStatus": "former_mp",
       "detentionStatus": "none",
       "caseStatus": "none",
       "presumptionOfInnocence": true,
@@ -68297,6 +68303,12 @@
           "sourceUrl": "https://kuvendiapi.azurewebsites.net/api/anetaret/db9b7c5f-0459-4bfd-830c-838a09067adc",
           "retrievedAt": "2026-10-31",
           "notes": "Kuvendi member strukturat"
+        },
+        "parliamentaryStatus": {
+          "value": "former_mp",
+          "sourceUrl": "https://kuvendiapi.azurewebsites.net/api/anetaret/db9b7c5f-0459-4bfd-830c-838a09067adc",
+          "retrievedAt": "2026-11-01",
+          "notes": "Duplicate card of Zegjine Çaushi. The sitting member is public profile vip55, which the Kuvendi register marks as active. This card is not a second Fier seat."
         }
       },
       "sourceRetrievedAt": "2026-10-31",

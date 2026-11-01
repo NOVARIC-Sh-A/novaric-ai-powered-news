@@ -1,1 +1,82 @@
-[]
+[
+  {
+    "profileId": "vip55",
+    "editor": {
+      "name": "Dr Alban Gj. THIKA",
+      "title": "NOVARIC® Sh.A."
+    },
+    "date": "2026-11-01",
+    "remarksSq": "Opinion editorial i NOVARIC® Sh.A. Fakte të verifikuara: znj. Zegjine Çaushi është deputete e PS për Qarkun Fier dhe anëtare e Komisionit për Çështjet Ligjore dhe Administratën Publike (API zyrtare e Kuvendit). Në jetëshkrimin e depozituar në KQZ (2025) deklaron studime në Fakultetin e Drejtësisë, Tiranë, institucion publik i akredituar. Nuk gjetëm asnjë burim zyrtar që vë në dyshim diplomën; pretendimet për medalje ari dhe licencë avokati janë vetëdeklarime që nuk arritëm t'i verifikojmë. Në maj 2025 SPAK vendosi të mos regjistrojë procedim për korrupsion zgjedhor dhe ia kaloi Prokurorisë së Fierit verifikimin e tri veprave të tjera të dyshuara, lidhur me një regjistrim të vitit 2023; rezultati nuk është publik për ne dhe vlen prezumimi i pafajësisë. Mbulimi mediatik është kryesisht satirik dhe pjesërisht partiak; nuk gjetëm hetim të pavarur që të provojë pretendimet për diplomën. Sipas opinionit tonë, gjuha fyese që ka përdorur ndaj kritikëve në rrjete sociale dhe ligjërimi i saj publik nuk përputhen me standardin që pritet nga një ligjvënëse juriste. Kontributi legjislativ nuk vlerësohet ende, sepse të dhënat zyrtare nuk e mundësojnë atribuimin individual.",
+    "remarksEn": "NOVARIC® Sh.A. editorial opinion. Verified facts: Ms Zegjine Çaushi is a PS MP for Fier County and a member of the Committee on Legal Affairs and Public Administration (official Kuvendi API). In her CV filed with the Central Election Commission (2025) she declares law studies at the Faculty of Law, Tirana, a public accredited institution. We found no official source questioning her degree; her gold-medal and advocate-licence claims are self-declared and could not be verified by us. In May 2025 SPAK declined to open proceedings for electoral corruption and referred three other suspected offences, linked to a 2023 recording, to the Fier Prosecution Office; the outcome is not public to us and the presumption of innocence applies. Media coverage is largely satirical and partly partisan; we found no independent investigation substantiating the claims about her degree. In our opinion, the insulting language she has used towards critics on social media, and her public discourse, fall short of the standard expected of a lawmaker trained as a jurist. Her legislative contribution is not yet scored, because official data do not allow individual attribution.",
+    "editorialScore": 47,
+    "criteria": [
+      {
+        "name": "Integriteti dhe kredencialet / Integrity & credentials",
+        "score": 55,
+        "note": "Diploma në Fakultetin e Drejtësisë, Tiranë, sipas jetëshkrimit të depozituar në KQZ (2025). Nuk gjetëm burim zyrtar që vë në dyshim diplomën. Në maj 2025 SPAK vendosi të mos regjistrojë procedim për korrupsion zgjedhor dhe ia kaloi Prokurorisë së Fierit verifikimin e tri veprave të tjera të dyshuara, lidhur me një regjistrim të vitit 2023. Rezultati i këtij verifikimi nuk është publik për ne. Vlen prezumimi i pafajësisë. Medalja e arit dhe licenca e avokatit janë vetëdeklarime të paverifikuara. Deklarimi i pasurisë, siç është raportuar, shënon pagë neto nga Illyrian Guard prej 244 681 lekësh për periudhën 01.01–12.09.2025; kjo është periudhë deklarimi, jo provë punësimi deri në shtator, ndaj nuk konfirmohet një mospërputhje.\n\nDegree from the Faculty of Law, Tirana, per the KQZ CV (2025); no official finding against the diploma. In May 2025 SPAK declined to register electoral-corruption proceedings and referred three other suspected offences, linked to a 2023 recording, to the Fier Prosecution Office. The outcome is not public to us. The presumption of innocence applies. The gold medal and the advocate licence are self-declared and unverified. The reported entry asset declaration lists an Illyrian Guard net salary of 244,681 ALL for 01.01–12.09.2025; that is a reporting period, not proof of employment until September, so no gap is confirmed.",
+        "sourceUrl": "https://spending.data.al/files/money_power/ZegjineCaushi-CV.pdf"
+      },
+      {
+        "name": "Ekspertiza / Expertise",
+        "score": 50,
+        "note": "Arsim juridik formal (bachelor dhe master sipas jetëshkrimit në KQZ); përvojë e kufizuar profesionale (inspektore bashkie, juriste e brendshme 2024–2025). Licenca e avokatit është vetëdeklarim i paverifikuar. Anëtare e Komisionit për Çështjet Ligjore dhe Administratën Publike.\n\nFormal legal education (bachelor and master per the KQZ CV); limited professional experience (municipal inspector, in-house jurist 2024–2025). The advocate licence is self-declared and unverified. Member of the Committee on Legal Affairs and Public Administration.",
+        "sourceUrl": "https://spending.data.al/files/money_power/ZegjineCaushi-CV.pdf"
+      },
+      {
+        "name": "Sjellja publike / Public conduct",
+        "score": 35,
+        "note": "Opinion. Në një postim të saj, të cituar fjalë për fjalë, e quan një influencuese «idiote e ligë» (zoom.al, 09.06.2026). Regjistrimi i vitit 2023 i është përcjellë nga SPAK Prokurorisë së Fierit; rezultati nuk njihet. Vlen prezumimi i pafajësisë.\n\nOpinion. In her own post, quoted verbatim, she calls an influencer “idiote e ligë” (zoom.al, 9 June 2026). The 2023 recording was referred by SPAK to the Fier Prosecution Office; the outcome is unknown. The presumption of innocence applies.",
+        "sourceUrl": "https://zoom.al/shkoja-ne-shkolle-pa-ngrene-zegjine-caushi-publikon-listen-e-notave-dhe-i-pergjigjet-dea-mishel-it-idiote-e-lige-tallesh-me-jetimet/"
+      },
+      {
+        "name": "Substanca e kontributeve / Substance of contributions",
+        "score": null,
+        "note": "Nuk pikëzohet. API e Kuvendit liston anëtarësitë në komision dhe në grup, por aktet nuk e shënojnë propozuesin individual. Në pritje të të dhënave / Awaiting data.\n\nNot scored. The Kuvendi API lists committee and group memberships, but its acts do not name an individual sponsor. Awaiting data.",
+        "sourceUrl": "https://kuvendiapi.azurewebsites.net/api/anetaret/db9b7c5f-0459-4bfd-830c-838a09067adc"
+      }
+    ],
+    "sources": [
+      {
+        "label": "Kuvendi – deputetët",
+        "url": "https://www.parlament.al/deputet"
+      },
+      {
+        "label": "KQZ candidate CV (via Open Data Albania)",
+        "url": "https://spending.data.al/files/money_power/ZegjineCaushi-CV.pdf"
+      },
+      {
+        "label": "KQZ – mandate allocation Fier",
+        "url": "https://kqz.gov.al/lajme/kshz-shperndan-mandatet-per-qarqet-fier-elbasan-durres"
+      },
+      {
+        "label": "Report TV – SPAK decision 6 May 2025",
+        "url": "https://report-tv.al/lajm/kallezuan-kandidaten-e-ps-zegjine-caushi-per-korrupsion-zgjedhor-spak-rrezon-flamur-noken-dhe-pd-nuk-provohet-vepra-penale"
+      },
+      {
+        "label": "CNA – SPAK referral to Fier Prosecution",
+        "url": "https://www.cna.al/aktualitet/dokumenti-audiopergjimi-spak-i-kerkon-prokurorise-se-fierit-te-hetoje-i429214"
+      },
+      {
+        "label": "Zoom.al – diplomas/transcript post (media)",
+        "url": "https://zoom.al/shkoja-ne-shkolle-pa-ngrene-zegjine-caushi-publikon-listen-e-notave-dhe-i-pergjigjet-dea-mishel-it-idiote-e-lige-tallesh-me-jetimet/"
+      },
+      {
+        "label": "Zeri.ai – Illyrian Guard clarification (media)",
+        "url": "https://zeri.ai/politike-rojtare-para-se-te-merrte-mandatin-e-deputetes-reagon-zegjineja-publikon-dokumentat-kam-qene-juriste-i235672"
+      },
+      {
+        "label": "Kuvendi API – member record (committees)",
+        "url": "https://kuvendiapi.azurewebsites.net/api/anetaret/db9b7c5f-0459-4bfd-830c-838a09067adc"
+      },
+      {
+        "label": "Panorama – SPAK referral 6 May 2025",
+        "url": "https://www.panorama.com.al/spak-i-kerkon-prokurorise-se-fierit-te-hetoje-kandidaten-e-ps-se-per-deputete-kercenoi-qytetaren-dhe-i-beri-presion-per-voten-ja-akuzat-per-te-cilat-dyshohet-zegjine-caushi/"
+      },
+      {
+        "label": "Shqiptarja – entry asset declaration (media)",
+        "url": "https://shqiptarja.com/lajm/pasurite-e-deputeteve-te-rinj-zegjine-caushi-profil-i-ulet-dhe-kursimtar"
+      }
+    ],
+    "status": "published"
+  }
+]
