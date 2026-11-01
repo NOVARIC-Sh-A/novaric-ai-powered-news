@@ -84,7 +84,13 @@ describe('NOVARIC® Parliament 2025 & PARAGON® Integration Suite (Phase 34)', (
       assert.ok(p.paragonSources?.pageUrl?.includes('kuvendiapi.azurewebsites.net'));
       assert.equal(p.paragonSources.retrievedAt, '2026-10-31');
       assert.ok(Array.isArray(p.paragonDimensions) && p.paragonDimensions.length === 7);
-      assert.equal(p.paragonDimensions[6], null, 'Narrativa stays awaiting without a sourced sentiment corpus');
+      if (p.paragonDimensions[2] != null) {
+        assert.equal(p.dimensionReadings?.D3?.proxy, true);
+      }
+      if (p.paragonDimensions[6] != null) {
+        assert.equal(p.dimensionReadings?.D7?.proxy, true);
+        assert.equal(p.dimensionReadings?.D7?.method, 'narrative_topic_stability_v1');
+      }
     });
     const meta = data.profiles.find((p: any) => p.name === 'Ilir Meta');
     assert.equal(meta.composite, null);

@@ -120,6 +120,15 @@ class TestParagonScoring(unittest.TestCase):
         missing, _, _ = calculate_paragon_dimensions({"committee_attendance_pct": 84.0})
         self.assertIsNone(missing["Qeverisja"])
 
+    def test_methodology_v2_proxy_inputs_are_the_score(self):
+        dimensions, _, _ = calculate_paragon_dimensions({
+            "subject_vote_share_pct": 48.33,
+            "narrative_topic_consistency_pct": 62.5,
+        })
+        self.assertEqual(dimensions["Përfaqësimi"], 48.3)
+        self.assertEqual(dimensions["Narrativa"], 62.5)
+        self.assertIsNone(dimensions["Qeverisja"])
+
     def test_zodiac_is_not_a_scoring_input(self):
         base = {
             "bills_sponsored_lead": 2,
@@ -186,6 +195,19 @@ class TestCommitteeAttendanceParse(unittest.TestCase):
         self.assertEqual(absent, ["Besart Xhaferi", "Zamira Sinaj"])
         self.assertTrue(is_committee_minute("Procesverbal KEPF - 11.11.2025.pdf"))
         self.assertFalse(is_committee_minute("Raport KEPF_Dh.M - Marreveshja e Ullirit 2026.pdf"))
+
+    def test_speech_after_the_opening_is_not_an_attendance_list(self):
+        from scripts.collect_committee_governance import attendance_lists
+
+        text = """
+        Marrin pjesë: Ulsi Manja dhe Oerd Bylykbashi.
+        HAPET MBLEDHJA
+        Kryeministri, Edi Rama, ia heq këtë Parlamentit.
+        Mungojnë nga salla ata që nuk janë, por Edi Rama mbetet i përmendur.
+        """
+        present, absent = attendance_lists(text)
+        self.assertEqual(present, ["Ulsi Manja", "Oerd Bylykbashi"])
+        self.assertEqual(absent, [])
 
 if __name__ == "__main__":
     unittest.main()

@@ -1,0 +1,3089 @@
+{
+  "retrievedAt": "2026-11-01",
+  "since": "2025-09-01",
+  "method": "narrative_topic_stability_v1",
+  "lexicon": "data/official/narrative_lexicon_v1.json",
+  "lexiconVersion": "narrative_lexicon_v1",
+  "minimumClassifiedTurns": 5,
+  "plenaryListed": 431,
+  "plenaryUsed": 76,
+  "failed": 1,
+  "people": {
+    "vip29": {
+      "classifiedTurns": 114,
+      "dominantTopic": "drejtesi",
+      "dominantTurns": 83,
+      "score": 72.8,
+      "topics": {
+        "integrim": 43,
+        "drejtesi": 83,
+        "infrastrukture": 14,
+        "siguri": 24,
+        "buxhet": 17,
+        "shendet": 5,
+        "arsim": 1
+      },
+      "sourceUrls": [
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202607241113317959Procesverbal%2C datë 20.7.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202607241113317959Procesverbal%2C datë 20.7.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202607241113317959Procesverbal%2C datë 20.7.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202607241113317959Procesverbal%2C datë 20.7.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202607241113317959Procesverbal%2C datë 20.7.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202510170922135082Procesverbal%2C datë 9.10.2025.pdf"
+      ]
+    },
+    "vip165": {
+      "classifiedTurns": 114,
+      "dominantTopic": "drejtesi",
+      "dominantTurns": 83,
+      "score": 72.8,
+      "topics": {
+        "integrim": 43,
+        "drejtesi": 83,
+        "infrastrukture": 14,
+        "siguri": 24,
+        "buxhet": 17,
+        "shendet": 5,
+        "arsim": 1
+      },
+      "sourceUrls": [
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202607241113317959Procesverbal%2C datë 20.7.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202607241113317959Procesverbal%2C datë 20.7.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202607241113317959Procesverbal%2C datë 20.7.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202607241113317959Procesverbal%2C datë 20.7.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202607241113317959Procesverbal%2C datë 20.7.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202510170922135082Procesverbal%2C datë 9.10.2025.pdf"
+      ]
+    },
+    "vip87": {
+      "classifiedTurns": 269,
+      "dominantTopic": "infrastrukture",
+      "dominantTurns": 79,
+      "score": 29.4,
+      "topics": {
+        "integrim": 49,
+        "drejtesi": 72,
+        "infrastrukture": 79,
+        "siguri": 36,
+        "shendet": 27,
+        "arsim": 25,
+        "buxhet": 53
+      },
+      "sourceUrls": [
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202607241113317959Procesverbal%2C datë 20.7.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202607241113317959Procesverbal%2C datë 20.7.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202607241113317959Procesverbal%2C datë 20.7.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202607241113317959Procesverbal%2C datë 20.7.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202607241113317959Procesverbal%2C datë 20.7.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202510170922135082Procesverbal%2C datë 9.10.2025.pdf"
+      ]
+    },
+    "vip2": {
+      "classifiedTurns": 128,
+      "dominantTopic": "drejtesi",
+      "dominantTurns": 69,
+      "score": 53.9,
+      "topics": {
+        "drejtesi": 69,
+        "integrim": 41,
+        "shendet": 8,
+        "siguri": 28,
+        "arsim": 5,
+        "buxhet": 12,
+        "infrastrukture": 6
+      },
+      "sourceUrls": [
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202607241113317959Procesverbal%2C datë 20.7.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202607241113317959Procesverbal%2C datë 20.7.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202510170922135082Procesverbal%2C datë 9.10.2025.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202510170922135082Procesverbal%2C datë 9.10.2025.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202510170922135082Procesverbal%2C datë 9.10.2025.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202609251404301125Procesverbal%2C datë 17.9.2026.pdf"
+      ]
+    },
+    "vip32": {
+      "classifiedTurns": 106,
+      "dominantTopic": "integrim",
+      "dominantTurns": 53,
+      "score": 50.0,
+      "topics": {
+        "integrim": 53,
+        "arsim": 5,
+        "drejtesi": 43,
+        "buxhet": 37,
+        "infrastrukture": 11,
+        "shendet": 6,
+        "siguri": 25
+      },
+      "sourceUrls": [
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202607241113317959Procesverbal%2C datë 20.7.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202607241113317959Procesverbal%2C datë 20.7.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202609251404301125Procesverbal%2C datë 17.9.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202609251404301125Procesverbal%2C datë 17.9.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202606021210061382Procesverbal%2C datë 21.5.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202606021210061382Procesverbal%2C datë 21.5.2026.pdf"
+      ]
+    },
+    "vip198": {
+      "classifiedTurns": 106,
+      "dominantTopic": "integrim",
+      "dominantTurns": 53,
+      "score": 50.0,
+      "topics": {
+        "integrim": 53,
+        "arsim": 5,
+        "drejtesi": 43,
+        "buxhet": 37,
+        "infrastrukture": 11,
+        "shendet": 6,
+        "siguri": 25
+      },
+      "sourceUrls": [
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202607241113317959Procesverbal%2C datë 20.7.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202607241113317959Procesverbal%2C datë 20.7.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202609251404301125Procesverbal%2C datë 17.9.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202609251404301125Procesverbal%2C datë 17.9.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202606021210061382Procesverbal%2C datë 21.5.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202606021210061382Procesverbal%2C datë 21.5.2026.pdf"
+      ]
+    },
+    "vip62": {
+      "classifiedTurns": 17,
+      "dominantTopic": "drejtesi",
+      "dominantTurns": 9,
+      "score": 52.9,
+      "topics": {
+        "integrim": 7,
+        "buxhet": 2,
+        "drejtesi": 9,
+        "shendet": 2,
+        "siguri": 6,
+        "infrastrukture": 1,
+        "arsim": 2
+      },
+      "sourceUrls": [
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202607241113317959Procesverbal%2C datë 20.7.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202602160839183359Procesverbal%2C datë 27.1.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202602160839183359Procesverbal%2C datë 27.1.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202602160839545825Procesverbal%2C datë 3.2.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202607270955383884Procesverbal%2C datë 23.7.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202607270955383884Procesverbal%2C datë 23.7.2026.pdf"
+      ]
+    },
+    "vip127": {
+      "classifiedTurns": 17,
+      "dominantTopic": "drejtesi",
+      "dominantTurns": 9,
+      "score": 52.9,
+      "topics": {
+        "integrim": 7,
+        "buxhet": 2,
+        "drejtesi": 9,
+        "shendet": 2,
+        "siguri": 6,
+        "infrastrukture": 1,
+        "arsim": 2
+      },
+      "sourceUrls": [
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202607241113317959Procesverbal%2C datë 20.7.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202602160839183359Procesverbal%2C datë 27.1.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202602160839183359Procesverbal%2C datë 27.1.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202602160839545825Procesverbal%2C datë 3.2.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202607270955383884Procesverbal%2C datë 23.7.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202607270955383884Procesverbal%2C datë 23.7.2026.pdf"
+      ]
+    },
+    "vip156": {
+      "classifiedTurns": 17,
+      "dominantTopic": "drejtesi",
+      "dominantTurns": 9,
+      "score": 52.9,
+      "topics": {
+        "integrim": 7,
+        "buxhet": 2,
+        "drejtesi": 9,
+        "shendet": 2,
+        "siguri": 6,
+        "infrastrukture": 1,
+        "arsim": 2
+      },
+      "sourceUrls": [
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202607241113317959Procesverbal%2C datë 20.7.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202602160839183359Procesverbal%2C datë 27.1.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202602160839183359Procesverbal%2C datë 27.1.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202602160839545825Procesverbal%2C datë 3.2.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202607270955383884Procesverbal%2C datë 23.7.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202607270955383884Procesverbal%2C datë 23.7.2026.pdf"
+      ]
+    },
+    "vip159": {
+      "classifiedTurns": 17,
+      "dominantTopic": "drejtesi",
+      "dominantTurns": 13,
+      "score": 76.5,
+      "topics": {
+        "integrim": 5,
+        "siguri": 2,
+        "drejtesi": 13,
+        "buxhet": 5,
+        "arsim": 2,
+        "shendet": 1,
+        "infrastrukture": 1
+      },
+      "sourceUrls": [
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202607241113317959Procesverbal%2C datë 20.7.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202607241113317959Procesverbal%2C datë 20.7.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202609251404301125Procesverbal%2C datë 17.9.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202602160839183359Procesverbal%2C datë 27.1.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202602041438427597Procesverbal%2C datë 22.1.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202512031127379204Procesverbal%2C datë 19.11.2025.pdf"
+      ]
+    },
+    "vip35": {
+      "classifiedTurns": 23,
+      "dominantTopic": "drejtesi",
+      "dominantTurns": 17,
+      "score": 73.9,
+      "topics": {
+        "drejtesi": 17,
+        "shendet": 4,
+        "infrastrukture": 4,
+        "siguri": 8,
+        "buxhet": 3,
+        "integrim": 5,
+        "arsim": 1
+      },
+      "sourceUrls": [
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202607241113317959Procesverbal%2C datë 20.7.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202609251404301125Procesverbal%2C datë 17.9.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202609251404301125Procesverbal%2C datë 17.9.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202602201325135618Procesverbal%2C datë 12.2.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202512111507210473Procesverbal%2C datë 2.12.2025.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202602160839183359Procesverbal%2C datë 27.1.2026.pdf"
+      ]
+    },
+    "vip130": {
+      "classifiedTurns": 23,
+      "dominantTopic": "drejtesi",
+      "dominantTurns": 17,
+      "score": 73.9,
+      "topics": {
+        "drejtesi": 17,
+        "shendet": 4,
+        "infrastrukture": 4,
+        "siguri": 8,
+        "buxhet": 3,
+        "integrim": 5,
+        "arsim": 1
+      },
+      "sourceUrls": [
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202607241113317959Procesverbal%2C datë 20.7.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202609251404301125Procesverbal%2C datë 17.9.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202609251404301125Procesverbal%2C datë 17.9.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202602201325135618Procesverbal%2C datë 12.2.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202512111507210473Procesverbal%2C datë 2.12.2025.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202602160839183359Procesverbal%2C datë 27.1.2026.pdf"
+      ]
+    },
+    "vip46": {
+      "classifiedTurns": 129,
+      "dominantTopic": "drejtesi",
+      "dominantTurns": 65,
+      "score": 50.4,
+      "topics": {
+        "integrim": 53,
+        "arsim": 12,
+        "drejtesi": 65,
+        "infrastrukture": 18,
+        "siguri": 29,
+        "buxhet": 15,
+        "shendet": 6
+      },
+      "sourceUrls": [
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202607241113317959Procesverbal%2C datë 20.7.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202607241113317959Procesverbal%2C datë 20.7.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202607241113317959Procesverbal%2C datë 20.7.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202607241113317959Procesverbal%2C datë 20.7.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202607241113317959Procesverbal%2C datë 20.7.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202609251404301125Procesverbal%2C datë 17.9.2026.pdf"
+      ]
+    },
+    "vip255": {
+      "classifiedTurns": 23,
+      "dominantTopic": "siguri",
+      "dominantTurns": 14,
+      "score": 60.9,
+      "topics": {
+        "integrim": 2,
+        "siguri": 14,
+        "buxhet": 1,
+        "drejtesi": 9,
+        "arsim": 2,
+        "infrastrukture": 10,
+        "shendet": 5
+      },
+      "sourceUrls": [
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202607241113317959Procesverbal%2C datë 20.7.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202602201325135618Procesverbal%2C datë 12.2.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202512111507210473Procesverbal%2C datë 2.12.2025.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202604241206182082Procesverbal%2C datë 16.4.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202602160839183359Procesverbal%2C datë 27.1.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202604031251568330Procesverbal%2C datë 30.3.2026.pdf"
+      ]
+    },
+    "vip96": {
+      "classifiedTurns": 36,
+      "dominantTopic": "drejtesi",
+      "dominantTurns": 16,
+      "score": 44.4,
+      "topics": {
+        "buxhet": 4,
+        "siguri": 8,
+        "drejtesi": 16,
+        "infrastrukture": 5,
+        "integrim": 8,
+        "arsim": 6,
+        "shendet": 1
+      },
+      "sourceUrls": [
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202607241113317959Procesverbal%2C datë 20.7.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202606021210061382Procesverbal%2C datë 21.5.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202604241205488053Procesverbal%2C datë 9.4.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202512111507210473Procesverbal%2C datë 2.12.2025.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202604241206182082Procesverbal%2C datë 16.4.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202602160839183359Procesverbal%2C datë 27.1.2026.pdf"
+      ]
+    },
+    "vip34": {
+      "classifiedTurns": 70,
+      "dominantTopic": "arsim",
+      "dominantTurns": 35,
+      "score": 50.0,
+      "topics": {
+        "buxhet": 11,
+        "drejtesi": 32,
+        "siguri": 25,
+        "arsim": 35,
+        "integrim": 15,
+        "shendet": 14,
+        "infrastrukture": 10
+      },
+      "sourceUrls": [
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202607241113317959Procesverbal%2C datë 20.7.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202510170922135082Procesverbal%2C datë 9.10.2025.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202609251404301125Procesverbal%2C datë 17.9.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202606021210061382Procesverbal%2C datë 21.5.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202606021210061382Procesverbal%2C datë 21.5.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202606021210061382Procesverbal%2C datë 21.5.2026.pdf"
+      ]
+    },
+    "vip148": {
+      "classifiedTurns": 106,
+      "dominantTopic": "drejtesi",
+      "dominantTurns": 57,
+      "score": 53.8,
+      "topics": {
+        "siguri": 32,
+        "drejtesi": 57,
+        "buxhet": 16,
+        "arsim": 15,
+        "integrim": 43,
+        "shendet": 13,
+        "infrastrukture": 15
+      },
+      "sourceUrls": [
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202607241113317959Procesverbal%2C datë 20.7.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202609251404301125Procesverbal%2C datë 17.9.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202609251404301125Procesverbal%2C datë 17.9.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202609251404301125Procesverbal%2C datë 17.9.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202609251404301125Procesverbal%2C datë 17.9.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202609251404301125Procesverbal%2C datë 17.9.2026.pdf"
+      ]
+    },
+    "vip143": {
+      "classifiedTurns": 62,
+      "dominantTopic": "integrim",
+      "dominantTurns": 30,
+      "score": 48.4,
+      "topics": {
+        "siguri": 14,
+        "drejtesi": 17,
+        "infrastrukture": 4,
+        "integrim": 30,
+        "shendet": 21,
+        "buxhet": 6,
+        "arsim": 10
+      },
+      "sourceUrls": [
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202607241113317959Procesverbal%2C datë 20.7.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202609251404301125Procesverbal%2C datë 17.9.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202602201325135618Procesverbal%2C datë 12.2.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202602201325135618Procesverbal%2C datë 12.2.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202606021210061382Procesverbal%2C datë 21.5.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202604241205488053Procesverbal%2C datë 9.4.2026.pdf"
+      ]
+    },
+    "vip195": {
+      "classifiedTurns": 62,
+      "dominantTopic": "integrim",
+      "dominantTurns": 30,
+      "score": 48.4,
+      "topics": {
+        "siguri": 14,
+        "drejtesi": 17,
+        "infrastrukture": 4,
+        "integrim": 30,
+        "shendet": 21,
+        "buxhet": 6,
+        "arsim": 10
+      },
+      "sourceUrls": [
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202607241113317959Procesverbal%2C datë 20.7.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202609251404301125Procesverbal%2C datë 17.9.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202602201325135618Procesverbal%2C datë 12.2.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202602201325135618Procesverbal%2C datë 12.2.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202606021210061382Procesverbal%2C datë 21.5.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202604241205488053Procesverbal%2C datë 9.4.2026.pdf"
+      ]
+    },
+    "vip251": {
+      "classifiedTurns": 104,
+      "dominantTopic": "siguri",
+      "dominantTurns": 56,
+      "score": 53.8,
+      "topics": {
+        "drejtesi": 36,
+        "siguri": 56,
+        "arsim": 16,
+        "buxhet": 22,
+        "shendet": 10,
+        "infrastrukture": 20,
+        "integrim": 15
+      },
+      "sourceUrls": [
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202607241113317959Procesverbal%2C datë 20.7.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202510170922135082Procesverbal%2C datë 9.10.2025.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202609251404301125Procesverbal%2C datë 17.9.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202609251404301125Procesverbal%2C datë 17.9.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202609251404301125Procesverbal%2C datë 17.9.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202606021210061382Procesverbal%2C datë 21.5.2026.pdf"
+      ]
+    },
+    "vip181": {
+      "classifiedTurns": 43,
+      "dominantTopic": "drejtesi",
+      "dominantTurns": 22,
+      "score": 51.2,
+      "topics": {
+        "infrastrukture": 11,
+        "integrim": 14,
+        "drejtesi": 22,
+        "buxhet": 10,
+        "siguri": 5,
+        "shendet": 3,
+        "arsim": 2
+      },
+      "sourceUrls": [
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202607241113317959Procesverbal%2C datë 20.7.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202609251404301125Procesverbal%2C datë 17.9.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202609251404301125Procesverbal%2C datë 17.9.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202609251404301125Procesverbal%2C datë 17.9.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202609251404301125Procesverbal%2C datë 17.9.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202609251404301125Procesverbal%2C datë 17.9.2026.pdf"
+      ]
+    },
+    "vip58": {
+      "classifiedTurns": 53,
+      "dominantTopic": "shendet",
+      "dominantTurns": 30,
+      "score": 56.6,
+      "topics": {
+        "infrastrukture": 5,
+        "drejtesi": 18,
+        "arsim": 11,
+        "shendet": 30,
+        "siguri": 6,
+        "buxhet": 7,
+        "integrim": 6
+      },
+      "sourceUrls": [
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202607241113317959Procesverbal%2C datë 20.7.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202609251404301125Procesverbal%2C datë 17.9.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202609251404301125Procesverbal%2C datë 17.9.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202609251404301125Procesverbal%2C datë 17.9.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202606021210061382Procesverbal%2C datë 21.5.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202606021210061382Procesverbal%2C datë 21.5.2026.pdf"
+      ]
+    },
+    "vip220": {
+      "classifiedTurns": 53,
+      "dominantTopic": "shendet",
+      "dominantTurns": 30,
+      "score": 56.6,
+      "topics": {
+        "infrastrukture": 5,
+        "drejtesi": 18,
+        "arsim": 11,
+        "shendet": 30,
+        "siguri": 6,
+        "buxhet": 7,
+        "integrim": 6
+      },
+      "sourceUrls": [
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202607241113317959Procesverbal%2C datë 20.7.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202609251404301125Procesverbal%2C datë 17.9.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202609251404301125Procesverbal%2C datë 17.9.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202609251404301125Procesverbal%2C datë 17.9.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202606021210061382Procesverbal%2C datë 21.5.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202606021210061382Procesverbal%2C datë 21.5.2026.pdf"
+      ]
+    },
+    "vip31": {
+      "classifiedTurns": 50,
+      "dominantTopic": "drejtesi",
+      "dominantTurns": 30,
+      "score": 60.0,
+      "topics": {
+        "drejtesi": 30,
+        "siguri": 5,
+        "buxhet": 6,
+        "arsim": 6,
+        "integrim": 8,
+        "shendet": 3,
+        "infrastrukture": 3
+      },
+      "sourceUrls": [
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202510170922135082Procesverbal%2C datë 9.10.2025.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202510170922135082Procesverbal%2C datë 9.10.2025.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202609251404301125Procesverbal%2C datë 17.9.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202609251404301125Procesverbal%2C datë 17.9.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202511191529121374Procesverbal%2C datë 6.11.2025.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202512031127379204Procesverbal%2C datë 19.11.2025.pdf"
+      ]
+    },
+    "vip216": {
+      "classifiedTurns": 50,
+      "dominantTopic": "drejtesi",
+      "dominantTurns": 30,
+      "score": 60.0,
+      "topics": {
+        "drejtesi": 30,
+        "siguri": 5,
+        "buxhet": 6,
+        "arsim": 6,
+        "integrim": 8,
+        "shendet": 3,
+        "infrastrukture": 3
+      },
+      "sourceUrls": [
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202510170922135082Procesverbal%2C datë 9.10.2025.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202510170922135082Procesverbal%2C datë 9.10.2025.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202609251404301125Procesverbal%2C datë 17.9.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202609251404301125Procesverbal%2C datë 17.9.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202511191529121374Procesverbal%2C datë 6.11.2025.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202512031127379204Procesverbal%2C datë 19.11.2025.pdf"
+      ]
+    },
+    "vip25": {
+      "classifiedTurns": 13,
+      "dominantTopic": "drejtesi",
+      "dominantTurns": 10,
+      "score": 76.9,
+      "topics": {
+        "siguri": 6,
+        "drejtesi": 10,
+        "arsim": 1,
+        "shendet": 2,
+        "buxhet": 2,
+        "integrim": 3,
+        "infrastrukture": 2
+      },
+      "sourceUrls": [
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202510170922135082Procesverbal%2C datë 9.10.2025.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202510170922135082Procesverbal%2C datë 9.10.2025.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202510170922135082Procesverbal%2C datë 9.10.2025.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202602201325135618Procesverbal%2C datë 12.2.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202602160839183359Procesverbal%2C datë 27.1.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202511100951515997Procesverbal%2C datë 27.10.2025.pdf"
+      ]
+    },
+    "vip7": {
+      "classifiedTurns": 58,
+      "dominantTopic": "drejtesi",
+      "dominantTurns": 39,
+      "score": 67.2,
+      "topics": {
+        "siguri": 16,
+        "drejtesi": 39,
+        "shendet": 4,
+        "infrastrukture": 7,
+        "integrim": 19,
+        "buxhet": 4,
+        "arsim": 5
+      },
+      "sourceUrls": [
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202510170922135082Procesverbal%2C datë 9.10.2025.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202510170922135082Procesverbal%2C datë 9.10.2025.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202609251404301125Procesverbal%2C datë 17.9.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202604241205488053Procesverbal%2C datë 9.4.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202604241205488053Procesverbal%2C datë 9.4.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202510020803298079Procesverbal%2C datë 24.9.2025.pdf"
+      ]
+    },
+    "vip113": {
+      "classifiedTurns": 50,
+      "dominantTopic": "drejtesi",
+      "dominantTurns": 22,
+      "score": 44.0,
+      "topics": {
+        "drejtesi": 22,
+        "shendet": 11,
+        "siguri": 18,
+        "buxhet": 8,
+        "arsim": 5,
+        "infrastrukture": 12,
+        "integrim": 19
+      },
+      "sourceUrls": [
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202609251404301125Procesverbal%2C datë 17.9.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202609251404301125Procesverbal%2C datë 17.9.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202609251404301125Procesverbal%2C datë 17.9.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202602201325135618Procesverbal%2C datë 12.2.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202602201325135618Procesverbal%2C datë 12.2.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202606021210061382Procesverbal%2C datë 21.5.2026.pdf"
+      ]
+    },
+    "vip85": {
+      "classifiedTurns": 41,
+      "dominantTopic": "arsim",
+      "dominantTurns": 22,
+      "score": 53.7,
+      "topics": {
+        "drejtesi": 16,
+        "integrim": 8,
+        "buxhet": 6,
+        "arsim": 22,
+        "infrastrukture": 5,
+        "siguri": 4,
+        "shendet": 5
+      },
+      "sourceUrls": [
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202609251404301125Procesverbal%2C datë 17.9.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202609251404301125Procesverbal%2C datë 17.9.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202609251404301125Procesverbal%2C datë 17.9.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202609251404301125Procesverbal%2C datë 17.9.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202602201325135618Procesverbal%2C datë 12.2.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202604241205488053Procesverbal%2C datë 9.4.2026.pdf"
+      ]
+    },
+    "vip174": {
+      "classifiedTurns": 41,
+      "dominantTopic": "arsim",
+      "dominantTurns": 22,
+      "score": 53.7,
+      "topics": {
+        "drejtesi": 16,
+        "integrim": 8,
+        "buxhet": 6,
+        "arsim": 22,
+        "infrastrukture": 5,
+        "siguri": 4,
+        "shendet": 5
+      },
+      "sourceUrls": [
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202609251404301125Procesverbal%2C datë 17.9.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202609251404301125Procesverbal%2C datë 17.9.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202609251404301125Procesverbal%2C datë 17.9.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202609251404301125Procesverbal%2C datë 17.9.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202602201325135618Procesverbal%2C datë 12.2.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202604241205488053Procesverbal%2C datë 9.4.2026.pdf"
+      ]
+    },
+    "vip140": {
+      "classifiedTurns": 24,
+      "dominantTopic": "arsim",
+      "dominantTurns": 21,
+      "score": 87.5,
+      "topics": {
+        "arsim": 21,
+        "infrastrukture": 6,
+        "integrim": 2,
+        "siguri": 2,
+        "buxhet": 4,
+        "drejtesi": 1
+      },
+      "sourceUrls": [
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202609251404301125Procesverbal%2C datë 17.9.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202609251404301125Procesverbal%2C datë 17.9.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202602201325135618Procesverbal%2C datë 12.2.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202602201325135618Procesverbal%2C datë 12.2.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202602201325135618Procesverbal%2C datë 12.2.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202602201325135618Procesverbal%2C datë 12.2.2026.pdf"
+      ]
+    },
+    "vip250": {
+      "classifiedTurns": 66,
+      "dominantTopic": "integrim",
+      "dominantTurns": 27,
+      "score": 40.9,
+      "topics": {
+        "buxhet": 20,
+        "arsim": 17,
+        "integrim": 27,
+        "drejtesi": 26,
+        "infrastrukture": 9,
+        "shendet": 24,
+        "siguri": 6
+      },
+      "sourceUrls": [
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202609251404301125Procesverbal%2C datë 17.9.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202609251404301125Procesverbal%2C datë 17.9.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202602201325135618Procesverbal%2C datë 12.2.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202602201325135618Procesverbal%2C datë 12.2.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202602201325135618Procesverbal%2C datë 12.2.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202606021210061382Procesverbal%2C datë 21.5.2026.pdf"
+      ]
+    },
+    "vip243": {
+      "classifiedTurns": 12,
+      "dominantTopic": "drejtesi",
+      "dominantTurns": 5,
+      "score": 41.7,
+      "topics": {
+        "drejtesi": 5,
+        "shendet": 4,
+        "integrim": 4,
+        "siguri": 2
+      },
+      "sourceUrls": [
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202609251404301125Procesverbal%2C datë 17.9.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202604241205488053Procesverbal%2C datë 9.4.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202510020803298079Procesverbal%2C datë 24.9.2025.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202604241206182082Procesverbal%2C datë 16.4.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202606191328432703Procesverbal%2C datë 11.6.2026 -.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202605051332438340Procesverbal%2C datë 23.4.2026.pdf"
+      ]
+    },
+    "vip232": {
+      "classifiedTurns": 44,
+      "dominantTopic": "shendet",
+      "dominantTurns": 24,
+      "score": 54.5,
+      "topics": {
+        "drejtesi": 18,
+        "shendet": 24,
+        "siguri": 9,
+        "infrastrukture": 9,
+        "buxhet": 16,
+        "integrim": 12
+      },
+      "sourceUrls": [
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202609251404301125Procesverbal%2C datë 17.9.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202609251404301125Procesverbal%2C datë 17.9.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202609251404301125Procesverbal%2C datë 17.9.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202609251404301125Procesverbal%2C datë 17.9.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202609251404301125Procesverbal%2C datë 17.9.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202609251404301125Procesverbal%2C datë 17.9.2026.pdf"
+      ]
+    },
+    "vip70": {
+      "classifiedTurns": 93,
+      "dominantTopic": "infrastrukture",
+      "dominantTurns": 21,
+      "score": 22.6,
+      "topics": {
+        "shendet": 20,
+        "buxhet": 12,
+        "arsim": 15,
+        "infrastrukture": 21,
+        "siguri": 17,
+        "drejtesi": 20,
+        "integrim": 12
+      },
+      "sourceUrls": [
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202609251404301125Procesverbal%2C datë 17.9.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202609251404301125Procesverbal%2C datë 17.9.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202609251404301125Procesverbal%2C datë 17.9.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202609251404301125Procesverbal%2C datë 17.9.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202609251404301125Procesverbal%2C datë 17.9.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202609251404301125Procesverbal%2C datë 17.9.2026.pdf"
+      ]
+    },
+    "vip16": {
+      "classifiedTurns": 41,
+      "dominantTopic": "drejtesi",
+      "dominantTurns": 25,
+      "score": 61.0,
+      "topics": {
+        "buxhet": 4,
+        "drejtesi": 25,
+        "arsim": 4,
+        "shendet": 11,
+        "siguri": 7,
+        "integrim": 14,
+        "infrastrukture": 1
+      },
+      "sourceUrls": [
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202609251404301125Procesverbal%2C datë 17.9.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202609251404301125Procesverbal%2C datë 17.9.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202606021210061382Procesverbal%2C datë 21.5.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202602160839183359Procesverbal%2C datë 27.1.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202602160839183359Procesverbal%2C datë 27.1.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202606021205516533Procesverbal%2C datë 21.5.2026.pdf"
+      ]
+    },
+    "vip244": {
+      "classifiedTurns": 15,
+      "dominantTopic": "integrim",
+      "dominantTurns": 10,
+      "score": 66.7,
+      "topics": {
+        "drejtesi": 4,
+        "siguri": 4,
+        "infrastrukture": 5,
+        "integrim": 10,
+        "buxhet": 1
+      },
+      "sourceUrls": [
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202609251404301125Procesverbal%2C datë 17.9.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202602201325135618Procesverbal%2C datë 12.2.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202604031251365376Procesverbal%2C datë 17.3.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202602041438427597Procesverbal%2C datë 22.1.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202512031127379204Procesverbal%2C datë 19.11.2025.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202602160839545825Procesverbal%2C datë 3.2.2026.pdf"
+      ]
+    },
+    "vip235": {
+      "classifiedTurns": 22,
+      "dominantTopic": "infrastrukture",
+      "dominantTurns": 16,
+      "score": 72.7,
+      "topics": {
+        "drejtesi": 9,
+        "siguri": 3,
+        "infrastrukture": 16,
+        "buxhet": 8,
+        "integrim": 6,
+        "arsim": 3
+      },
+      "sourceUrls": [
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202609251404301125Procesverbal%2C datë 17.9.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202606021210061382Procesverbal%2C datë 21.5.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202604241206182082Procesverbal%2C datë 16.4.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202606021205516533Procesverbal%2C datë 21.5.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202604031251568330Procesverbal%2C datë 30.3.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202602160839545825Procesverbal%2C datë 3.2.2026.pdf"
+      ]
+    },
+    "vip196": {
+      "classifiedTurns": 75,
+      "dominantTopic": "drejtesi",
+      "dominantTurns": 48,
+      "score": 64.0,
+      "topics": {
+        "shendet": 8,
+        "drejtesi": 48,
+        "buxhet": 20,
+        "siguri": 28,
+        "integrim": 24,
+        "infrastrukture": 12,
+        "arsim": 4
+      },
+      "sourceUrls": [
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202609251404301125Procesverbal%2C datë 17.9.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202609251404301125Procesverbal%2C datë 17.9.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202609251404301125Procesverbal%2C datë 17.9.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202602201325135618Procesverbal%2C datë 12.2.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202602201325135618Procesverbal%2C datë 12.2.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202602201325135618Procesverbal%2C datë 12.2.2026.pdf"
+      ]
+    },
+    "vip234": {
+      "classifiedTurns": 34,
+      "dominantTopic": "shendet",
+      "dominantTurns": 25,
+      "score": 73.5,
+      "topics": {
+        "shendet": 25,
+        "infrastrukture": 10,
+        "siguri": 11,
+        "drejtesi": 4,
+        "buxhet": 8,
+        "arsim": 5,
+        "integrim": 9
+      },
+      "sourceUrls": [
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202609251404301125Procesverbal%2C datë 17.9.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202606021210061382Procesverbal%2C datë 21.5.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202604241205488053Procesverbal%2C datë 9.4.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202604241206182082Procesverbal%2C datë 16.4.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202606021205516533Procesverbal%2C datë 21.5.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202512031127379204Procesverbal%2C datë 19.11.2025.pdf"
+      ]
+    },
+    "vip226": {
+      "classifiedTurns": 32,
+      "dominantTopic": "drejtesi",
+      "dominantTurns": 20,
+      "score": 62.5,
+      "topics": {
+        "siguri": 7,
+        "buxhet": 1,
+        "drejtesi": 20,
+        "infrastrukture": 8,
+        "integrim": 6,
+        "arsim": 5,
+        "shendet": 2
+      },
+      "sourceUrls": [
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202609251404301125Procesverbal%2C datë 17.9.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202609251404301125Procesverbal%2C datë 17.9.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202609251404301125Procesverbal%2C datë 17.9.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202512111507210473Procesverbal%2C datë 2.12.2025.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202512111507210473Procesverbal%2C datë 2.12.2025.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202603061229093433Procesverbal%2C datë 2.3.2026.pdf"
+      ]
+    },
+    "vip242": {
+      "classifiedTurns": 15,
+      "dominantTopic": "integrim",
+      "dominantTurns": 9,
+      "score": 60.0,
+      "topics": {
+        "siguri": 4,
+        "infrastrukture": 5,
+        "drejtesi": 4,
+        "buxhet": 2,
+        "integrim": 9,
+        "arsim": 5,
+        "shendet": 1
+      },
+      "sourceUrls": [
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202609251404301125Procesverbal%2C datë 17.9.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202606021210061382Procesverbal%2C datë 21.5.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202512111507210473Procesverbal%2C datë 2.12.2025.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202604241206182082Procesverbal%2C datë 16.4.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202606021205516533Procesverbal%2C datë 21.5.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202606121243191637Procesverbal%2C datë 4.6.2026.pdf"
+      ]
+    },
+    "vip278": {
+      "classifiedTurns": 13,
+      "dominantTopic": "drejtesi",
+      "dominantTurns": 7,
+      "score": 53.8,
+      "topics": {
+        "drejtesi": 7,
+        "buxhet": 2,
+        "arsim": 3,
+        "shendet": 2,
+        "integrim": 7,
+        "siguri": 3,
+        "infrastrukture": 2
+      },
+      "sourceUrls": [
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202609251404301125Procesverbal%2C datë 17.9.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202512111507210473Procesverbal%2C datë 2.12.2025.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202604241206182082Procesverbal%2C datë 16.4.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202604241206182082Procesverbal%2C datë 16.4.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202511191529121374Procesverbal%2C datë 6.11.2025.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202511121351045598Procesverbal seanca plenare dt.30.10.2025.pdf"
+      ]
+    },
+    "vip118": {
+      "classifiedTurns": 9,
+      "dominantTopic": "drejtesi",
+      "dominantTurns": 5,
+      "score": 55.6,
+      "topics": {
+        "buxhet": 4,
+        "arsim": 3,
+        "shendet": 3,
+        "drejtesi": 5,
+        "infrastrukture": 4
+      },
+      "sourceUrls": [
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202609251404301125Procesverbal%2C datë 17.9.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202606021210061382Procesverbal%2C datë 21.5.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202606021205516533Procesverbal%2C datë 21.5.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202512031127379204Procesverbal%2C datë 19.11.2025.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202511121351045598Procesverbal seanca plenare dt.30.10.2025.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202511130840329055Procesverbal%2C datë 30.10.2025 ora 11.30.pdf"
+      ]
+    },
+    "vip57": {
+      "classifiedTurns": 18,
+      "dominantTopic": "drejtesi",
+      "dominantTurns": 9,
+      "score": 50.0,
+      "topics": {
+        "drejtesi": 9,
+        "buxhet": 5,
+        "infrastrukture": 3,
+        "shendet": 2,
+        "integrim": 7,
+        "siguri": 1,
+        "arsim": 1
+      },
+      "sourceUrls": [
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202609251404301125Procesverbal%2C datë 17.9.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202512111507210473Procesverbal%2C datë 2.12.2025.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202512111507210473Procesverbal%2C datë 2.12.2025.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202604241206182082Procesverbal%2C datë 16.4.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202602160839183359Procesverbal%2C datë 27.1.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202603061229093433Procesverbal%2C datë 2.3.2026.pdf"
+      ]
+    },
+    "vip204": {
+      "classifiedTurns": 18,
+      "dominantTopic": "drejtesi",
+      "dominantTurns": 9,
+      "score": 50.0,
+      "topics": {
+        "drejtesi": 9,
+        "buxhet": 5,
+        "infrastrukture": 3,
+        "shendet": 2,
+        "integrim": 7,
+        "siguri": 1,
+        "arsim": 1
+      },
+      "sourceUrls": [
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202609251404301125Procesverbal%2C datë 17.9.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202512111507210473Procesverbal%2C datë 2.12.2025.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202512111507210473Procesverbal%2C datë 2.12.2025.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202604241206182082Procesverbal%2C datë 16.4.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202602160839183359Procesverbal%2C datë 27.1.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202603061229093433Procesverbal%2C datë 2.3.2026.pdf"
+      ]
+    },
+    "vip239": {
+      "classifiedTurns": 67,
+      "dominantTopic": "infrastrukture",
+      "dominantTurns": 37,
+      "score": 55.2,
+      "topics": {
+        "infrastrukture": 37,
+        "integrim": 24,
+        "buxhet": 32,
+        "drejtesi": 9,
+        "siguri": 5,
+        "arsim": 1,
+        "shendet": 1
+      },
+      "sourceUrls": [
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202609251404301125Procesverbal%2C datë 17.9.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202606021210061382Procesverbal%2C datë 21.5.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202606021210061382Procesverbal%2C datë 21.5.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202604241205488053Procesverbal%2C datë 9.4.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202604241205488053Procesverbal%2C datë 9.4.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202604241205488053Procesverbal%2C datë 9.4.2026.pdf"
+      ]
+    },
+    "vip194": {
+      "classifiedTurns": 14,
+      "dominantTopic": "integrim",
+      "dominantTurns": 8,
+      "score": 57.1,
+      "topics": {
+        "drejtesi": 3,
+        "arsim": 2,
+        "siguri": 5,
+        "infrastrukture": 3,
+        "integrim": 8,
+        "buxhet": 2,
+        "shendet": 2
+      },
+      "sourceUrls": [
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202609251404301125Procesverbal%2C datë 17.9.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202512111507210473Procesverbal%2C datë 2.12.2025.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202604241206182082Procesverbal%2C datë 16.4.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202602160839183359Procesverbal%2C datë 27.1.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202602160839183359Procesverbal%2C datë 27.1.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202511191529121374Procesverbal%2C datë 6.11.2025.pdf"
+      ]
+    },
+    "vip45": {
+      "classifiedTurns": 43,
+      "dominantTopic": "drejtesi",
+      "dominantTurns": 33,
+      "score": 76.7,
+      "topics": {
+        "drejtesi": 33,
+        "infrastrukture": 10,
+        "integrim": 16,
+        "buxhet": 3,
+        "siguri": 1,
+        "shendet": 1
+      },
+      "sourceUrls": [
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202609251404301125Procesverbal%2C datë 17.9.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202609251404301125Procesverbal%2C datë 17.9.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202604241205488053Procesverbal%2C datë 9.4.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202604241205488053Procesverbal%2C datë 9.4.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202604031248088322Procesverbal datë 12.3.2026 -.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202604031248088322Procesverbal datë 12.3.2026 -.pdf"
+      ]
+    },
+    "vip27": {
+      "classifiedTurns": 34,
+      "dominantTopic": "drejtesi",
+      "dominantTurns": 23,
+      "score": 67.6,
+      "topics": {
+        "drejtesi": 23,
+        "integrim": 15,
+        "siguri": 5,
+        "buxhet": 7,
+        "shendet": 4,
+        "arsim": 3,
+        "infrastrukture": 2
+      },
+      "sourceUrls": [
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202609251404301125Procesverbal%2C datë 17.9.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202602160839183359Procesverbal%2C datë 27.1.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202602160839183359Procesverbal%2C datë 27.1.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202602160839183359Procesverbal%2C datë 27.1.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202602160839183359Procesverbal%2C datë 27.1.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202512031127379204Procesverbal%2C datë 19.11.2025.pdf"
+      ]
+    },
+    "vip267": {
+      "classifiedTurns": 34,
+      "dominantTopic": "drejtesi",
+      "dominantTurns": 29,
+      "score": 85.3,
+      "topics": {
+        "drejtesi": 29,
+        "integrim": 6,
+        "buxhet": 4,
+        "infrastrukture": 3,
+        "arsim": 1,
+        "siguri": 3
+      },
+      "sourceUrls": [
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202609251404301125Procesverbal%2C datë 17.9.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202609251404301125Procesverbal%2C datë 17.9.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202609251404301125Procesverbal%2C datë 17.9.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202609251404301125Procesverbal%2C datë 17.9.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202604241205488053Procesverbal%2C datë 9.4.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202510020803298079Procesverbal%2C datë 24.9.2025.pdf"
+      ]
+    },
+    "vip13": {
+      "classifiedTurns": 15,
+      "dominantTopic": "drejtesi",
+      "dominantTurns": 15,
+      "score": 100.0,
+      "topics": {
+        "drejtesi": 15,
+        "buxhet": 8,
+        "infrastrukture": 3,
+        "siguri": 3,
+        "integrim": 7
+      },
+      "sourceUrls": [
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202609251404301125Procesverbal%2C datë 17.9.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202609251404301125Procesverbal%2C datë 17.9.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202602160839183359Procesverbal%2C datë 27.1.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202511191529121374Procesverbal%2C datë 6.11.2025.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202607241107457327Procesverbal%2C datë 2.7.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202511121351045598Procesverbal seanca plenare dt.30.10.2025.pdf"
+      ]
+    },
+    "vip254": {
+      "classifiedTurns": 40,
+      "dominantTopic": "buxhet",
+      "dominantTurns": 33,
+      "score": 82.5,
+      "topics": {
+        "drejtesi": 4,
+        "integrim": 12,
+        "buxhet": 33,
+        "siguri": 8,
+        "shendet": 2,
+        "infrastrukture": 14,
+        "arsim": 3
+      },
+      "sourceUrls": [
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202609251404301125Procesverbal%2C datë 17.9.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202604241205488053Procesverbal%2C datë 9.4.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202604241205488053Procesverbal%2C datë 9.4.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202602160839183359Procesverbal%2C datë 27.1.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202602160839183359Procesverbal%2C datë 27.1.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202606191328432703Procesverbal%2C datë 11.6.2026 -.pdf"
+      ]
+    },
+    "vip102": {
+      "classifiedTurns": 26,
+      "dominantTopic": "infrastrukture",
+      "dominantTurns": 12,
+      "score": 46.2,
+      "topics": {
+        "buxhet": 10,
+        "drejtesi": 10,
+        "arsim": 5,
+        "infrastrukture": 12,
+        "integrim": 9,
+        "siguri": 6,
+        "shendet": 1
+      },
+      "sourceUrls": [
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202609251404301125Procesverbal%2C datë 17.9.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202606021210061382Procesverbal%2C datë 21.5.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202606021210061382Procesverbal%2C datë 21.5.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202604241206182082Procesverbal%2C datë 16.4.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202606021205516533Procesverbal%2C datë 21.5.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202606021205516533Procesverbal%2C datë 21.5.2026.pdf"
+      ]
+    },
+    "vip160": {
+      "classifiedTurns": 26,
+      "dominantTopic": "infrastrukture",
+      "dominantTurns": 12,
+      "score": 46.2,
+      "topics": {
+        "buxhet": 10,
+        "drejtesi": 10,
+        "arsim": 5,
+        "infrastrukture": 12,
+        "integrim": 9,
+        "siguri": 6,
+        "shendet": 1
+      },
+      "sourceUrls": [
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202609251404301125Procesverbal%2C datë 17.9.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202606021210061382Procesverbal%2C datë 21.5.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202606021210061382Procesverbal%2C datë 21.5.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202604241206182082Procesverbal%2C datë 16.4.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202606021205516533Procesverbal%2C datë 21.5.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202606021205516533Procesverbal%2C datë 21.5.2026.pdf"
+      ]
+    },
+    "vip12": {
+      "classifiedTurns": 100,
+      "dominantTopic": "buxhet",
+      "dominantTurns": 49,
+      "score": 49.0,
+      "topics": {
+        "buxhet": 49,
+        "drejtesi": 12,
+        "shendet": 21,
+        "infrastrukture": 33,
+        "siguri": 20,
+        "arsim": 11,
+        "integrim": 15
+      },
+      "sourceUrls": [
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202609251404301125Procesverbal%2C datë 17.9.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202609251404301125Procesverbal%2C datë 17.9.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202602201325135618Procesverbal%2C datë 12.2.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202606021210061382Procesverbal%2C datë 21.5.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202606021210061382Procesverbal%2C datë 21.5.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202606021210061382Procesverbal%2C datë 21.5.2026.pdf"
+      ]
+    },
+    "vip155": {
+      "classifiedTurns": 100,
+      "dominantTopic": "buxhet",
+      "dominantTurns": 49,
+      "score": 49.0,
+      "topics": {
+        "buxhet": 49,
+        "drejtesi": 12,
+        "shendet": 21,
+        "infrastrukture": 33,
+        "siguri": 20,
+        "arsim": 11,
+        "integrim": 15
+      },
+      "sourceUrls": [
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202609251404301125Procesverbal%2C datë 17.9.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202609251404301125Procesverbal%2C datë 17.9.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202602201325135618Procesverbal%2C datë 12.2.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202606021210061382Procesverbal%2C datë 21.5.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202606021210061382Procesverbal%2C datë 21.5.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202606021210061382Procesverbal%2C datë 21.5.2026.pdf"
+      ]
+    },
+    "vip225": {
+      "classifiedTurns": 16,
+      "dominantTopic": "drejtesi",
+      "dominantTurns": 15,
+      "score": 93.8,
+      "topics": {
+        "drejtesi": 15,
+        "buxhet": 5,
+        "integrim": 5,
+        "infrastrukture": 3,
+        "siguri": 5
+      },
+      "sourceUrls": [
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202609251404301125Procesverbal%2C datë 17.9.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202609251404301125Procesverbal%2C datë 17.9.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202606021210061382Procesverbal%2C datë 21.5.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202604241205488053Procesverbal%2C datë 9.4.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202512111507210473Procesverbal%2C datë 2.12.2025.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202604241206182082Procesverbal%2C datë 16.4.2026.pdf"
+      ]
+    },
+    "vip98": {
+      "classifiedTurns": 71,
+      "dominantTopic": "buxhet",
+      "dominantTurns": 24,
+      "score": 33.8,
+      "topics": {
+        "drejtesi": 23,
+        "buxhet": 24,
+        "integrim": 19,
+        "infrastrukture": 21,
+        "siguri": 14,
+        "arsim": 21,
+        "shendet": 11
+      },
+      "sourceUrls": [
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202609251404301125Procesverbal%2C datë 17.9.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202602201325135618Procesverbal%2C datë 12.2.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202606021210061382Procesverbal%2C datë 21.5.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202606021210061382Procesverbal%2C datë 21.5.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202604241205488053Procesverbal%2C datë 9.4.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202604241205488053Procesverbal%2C datë 9.4.2026.pdf"
+      ]
+    },
+    "vip245": {
+      "classifiedTurns": 31,
+      "dominantTopic": "integrim",
+      "dominantTurns": 17,
+      "score": 54.8,
+      "topics": {
+        "siguri": 9,
+        "integrim": 17,
+        "arsim": 2,
+        "buxhet": 14,
+        "infrastrukture": 8,
+        "shendet": 1,
+        "drejtesi": 3
+      },
+      "sourceUrls": [
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202609251404301125Procesverbal%2C datë 17.9.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202604241205488053Procesverbal%2C datë 9.4.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202604241205488053Procesverbal%2C datë 9.4.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202602160839183359Procesverbal%2C datë 27.1.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202602160839183359Procesverbal%2C datë 27.1.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202602160839183359Procesverbal%2C datë 27.1.2026.pdf"
+      ]
+    },
+    "vip44": {
+      "classifiedTurns": 77,
+      "dominantTopic": "drejtesi",
+      "dominantTurns": 57,
+      "score": 74.0,
+      "topics": {
+        "drejtesi": 57,
+        "buxhet": 10,
+        "siguri": 25,
+        "arsim": 3,
+        "integrim": 11,
+        "infrastrukture": 10,
+        "shendet": 10
+      },
+      "sourceUrls": [
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202602201325135618Procesverbal%2C datë 12.2.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202602201325135618Procesverbal%2C datë 12.2.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202602201325135618Procesverbal%2C datë 12.2.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202602201325135618Procesverbal%2C datë 12.2.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202602201325135618Procesverbal%2C datë 12.2.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202606021210061382Procesverbal%2C datë 21.5.2026.pdf"
+      ]
+    },
+    "vip249": {
+      "classifiedTurns": 11,
+      "dominantTopic": "siguri",
+      "dominantTurns": 8,
+      "score": 72.7,
+      "topics": {
+        "drejtesi": 3,
+        "siguri": 8,
+        "integrim": 2,
+        "arsim": 6,
+        "infrastrukture": 6
+      },
+      "sourceUrls": [
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202602201325135618Procesverbal%2C datë 12.2.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202602201325135618Procesverbal%2C datë 12.2.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202602201325135618Procesverbal%2C datë 12.2.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202605081308088037Procesverbal%2C datë 4.5.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202605081305061954Procesverbal%2C datë 4.5.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202512111507528093Procesverbal datë 4.12.2025.pdf"
+      ]
+    },
+    "vip279": {
+      "classifiedTurns": 16,
+      "dominantTopic": "infrastrukture",
+      "dominantTurns": 8,
+      "score": 50.0,
+      "topics": {
+        "siguri": 4,
+        "drejtesi": 3,
+        "infrastrukture": 8,
+        "integrim": 5,
+        "shendet": 1,
+        "buxhet": 4
+      },
+      "sourceUrls": [
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202602201325135618Procesverbal%2C datë 12.2.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202602201325135618Procesverbal%2C datë 12.2.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202606021210061382Procesverbal%2C datë 21.5.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202602160839183359Procesverbal%2C datë 27.1.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202606021205516533Procesverbal%2C datë 21.5.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202603061229093433Procesverbal%2C datë 2.3.2026.pdf"
+      ]
+    },
+    "vip36": {
+      "classifiedTurns": 6,
+      "dominantTopic": "drejtesi",
+      "dominantTurns": 4,
+      "score": 66.7,
+      "topics": {
+        "drejtesi": 4,
+        "integrim": 4,
+        "siguri": 3,
+        "infrastrukture": 1
+      },
+      "sourceUrls": [
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202602201325135618Procesverbal%2C datë 12.2.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202602041438427597Procesverbal%2C datë 22.1.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202510091335061805Procesverbal%2C datë 29.9.2025.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202511100951515997Procesverbal%2C datë 27.10.2025.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202603031128161003Procesverbal datë 19.2.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202603031128161003Procesverbal datë 19.2.2026.pdf"
+      ]
+    },
+    "vip184": {
+      "classifiedTurns": 6,
+      "dominantTopic": "drejtesi",
+      "dominantTurns": 4,
+      "score": 66.7,
+      "topics": {
+        "drejtesi": 4,
+        "integrim": 4,
+        "siguri": 3,
+        "infrastrukture": 1
+      },
+      "sourceUrls": [
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202602201325135618Procesverbal%2C datë 12.2.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202602041438427597Procesverbal%2C datë 22.1.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202510091335061805Procesverbal%2C datë 29.9.2025.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202511100951515997Procesverbal%2C datë 27.10.2025.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202603031128161003Procesverbal datë 19.2.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202603031128161003Procesverbal datë 19.2.2026.pdf"
+      ]
+    },
+    "vip218": {
+      "classifiedTurns": 30,
+      "dominantTopic": "drejtesi",
+      "dominantTurns": 13,
+      "score": 43.3,
+      "topics": {
+        "infrastrukture": 7,
+        "siguri": 5,
+        "arsim": 9,
+        "shendet": 1,
+        "drejtesi": 13,
+        "buxhet": 8,
+        "integrim": 5
+      },
+      "sourceUrls": [
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202606021210061382Procesverbal%2C datë 21.5.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202510020803298079Procesverbal%2C datë 24.9.2025.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202604241206182082Procesverbal%2C datë 16.4.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202606021205516533Procesverbal%2C datë 21.5.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202606191328432703Procesverbal%2C datë 11.6.2026 -.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202604031251568330Procesverbal%2C datë 30.3.2026.pdf"
+      ]
+    },
+    "vip145": {
+      "classifiedTurns": 24,
+      "dominantTopic": "buxhet",
+      "dominantTurns": 11,
+      "score": 45.8,
+      "topics": {
+        "buxhet": 11,
+        "integrim": 4,
+        "arsim": 3,
+        "shendet": 7,
+        "infrastrukture": 5,
+        "siguri": 8,
+        "drejtesi": 3
+      },
+      "sourceUrls": [
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202606021210061382Procesverbal%2C datë 21.5.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202604241205488053Procesverbal%2C datë 9.4.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202512111507210473Procesverbal%2C datë 2.12.2025.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202606021205516533Procesverbal%2C datë 21.5.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202603061229093433Procesverbal%2C datë 2.3.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202512031127379204Procesverbal%2C datë 19.11.2025.pdf"
+      ]
+    },
+    "vip171": {
+      "classifiedTurns": 24,
+      "dominantTopic": "buxhet",
+      "dominantTurns": 11,
+      "score": 45.8,
+      "topics": {
+        "buxhet": 11,
+        "integrim": 4,
+        "arsim": 3,
+        "shendet": 7,
+        "infrastrukture": 5,
+        "siguri": 8,
+        "drejtesi": 3
+      },
+      "sourceUrls": [
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202606021210061382Procesverbal%2C datë 21.5.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202604241205488053Procesverbal%2C datë 9.4.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202512111507210473Procesverbal%2C datë 2.12.2025.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202606021205516533Procesverbal%2C datë 21.5.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202603061229093433Procesverbal%2C datë 2.3.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202512031127379204Procesverbal%2C datë 19.11.2025.pdf"
+      ]
+    },
+    "vip63": {
+      "classifiedTurns": 24,
+      "dominantTopic": "integrim",
+      "dominantTurns": 18,
+      "score": 75.0,
+      "topics": {
+        "buxhet": 13,
+        "shendet": 4,
+        "arsim": 4,
+        "infrastrukture": 11,
+        "integrim": 18,
+        "drejtesi": 5,
+        "siguri": 3
+      },
+      "sourceUrls": [
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202606021210061382Procesverbal%2C datë 21.5.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202602160839183359Procesverbal%2C datë 27.1.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202606021205516533Procesverbal%2C datë 21.5.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202603061229093433Procesverbal%2C datë 2.3.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202603061229093433Procesverbal%2C datë 2.3.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202511191529121374Procesverbal%2C datë 6.11.2025.pdf"
+      ]
+    },
+    "vip241": {
+      "classifiedTurns": 19,
+      "dominantTopic": "drejtesi",
+      "dominantTurns": 15,
+      "score": 78.9,
+      "topics": {
+        "infrastrukture": 8,
+        "buxhet": 6,
+        "drejtesi": 15,
+        "siguri": 4,
+        "shendet": 4,
+        "integrim": 3,
+        "arsim": 1
+      },
+      "sourceUrls": [
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202606021210061382Procesverbal%2C datë 21.5.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202606021205516533Procesverbal%2C datë 21.5.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202511191529121374Procesverbal%2C datë 6.11.2025.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202512031127379204Procesverbal%2C datë 19.11.2025.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202511121351045598Procesverbal seanca plenare dt.30.10.2025.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202510291126114402Procesverbal%2C datë 16.10.2025.pdf"
+      ]
+    },
+    "vip177": {
+      "classifiedTurns": 8,
+      "dominantTopic": "infrastrukture",
+      "dominantTurns": 8,
+      "score": 100.0,
+      "topics": {
+        "infrastrukture": 8,
+        "arsim": 6,
+        "shendet": 1,
+        "integrim": 1,
+        "siguri": 1
+      },
+      "sourceUrls": [
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202606021210061382Procesverbal%2C datë 21.5.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202604241206182082Procesverbal%2C datë 16.4.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202602160839183359Procesverbal%2C datë 27.1.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202606021205516533Procesverbal%2C datë 21.5.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202511121351045598Procesverbal seanca plenare dt.30.10.2025.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202511130840329055Procesverbal%2C datë 30.10.2025 ora 11.30.pdf"
+      ]
+    },
+    "vip248": {
+      "classifiedTurns": 22,
+      "dominantTopic": "integrim",
+      "dominantTurns": 12,
+      "score": 54.5,
+      "topics": {
+        "infrastrukture": 8,
+        "buxhet": 1,
+        "arsim": 1,
+        "shendet": 3,
+        "integrim": 12,
+        "siguri": 10,
+        "drejtesi": 8
+      },
+      "sourceUrls": [
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202606021210061382Procesverbal%2C datë 21.5.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202512111507210473Procesverbal%2C datë 2.12.2025.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202602160839183359Procesverbal%2C datë 27.1.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202602160839183359Procesverbal%2C datë 27.1.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202606021205516533Procesverbal%2C datë 21.5.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202606191328432703Procesverbal%2C datë 11.6.2026 -.pdf"
+      ]
+    },
+    "vip236": {
+      "classifiedTurns": 6,
+      "dominantTopic": "infrastrukture",
+      "dominantTurns": 5,
+      "score": 83.3,
+      "topics": {
+        "infrastrukture": 5,
+        "arsim": 2,
+        "shendet": 1,
+        "integrim": 3,
+        "siguri": 1
+      },
+      "sourceUrls": [
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202606021210061382Procesverbal%2C datë 21.5.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202512111507210473Procesverbal%2C datë 2.12.2025.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202606021205516533Procesverbal%2C datë 21.5.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202510291126114402Procesverbal%2C datë 16.10.2025.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202607161237075649Procesverbal%2C datë 13.7.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202607161237075649Procesverbal%2C datë 13.7.2026.pdf"
+      ]
+    },
+    "vip233": {
+      "classifiedTurns": 36,
+      "dominantTopic": "drejtesi",
+      "dominantTurns": 25,
+      "score": 69.4,
+      "topics": {
+        "arsim": 6,
+        "infrastrukture": 3,
+        "drejtesi": 25,
+        "buxhet": 4,
+        "shendet": 5,
+        "integrim": 8,
+        "siguri": 3
+      },
+      "sourceUrls": [
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202606021210061382Procesverbal%2C datë 21.5.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202510020803298079Procesverbal%2C datë 24.9.2025.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202602160839183359Procesverbal%2C datë 27.1.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202606021205516533Procesverbal%2C datë 21.5.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202512031127379204Procesverbal%2C datë 19.11.2025.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202512031127379204Procesverbal%2C datë 19.11.2025.pdf"
+      ]
+    },
+    "vip125": {
+      "classifiedTurns": 21,
+      "dominantTopic": "infrastrukture",
+      "dominantTurns": 13,
+      "score": 61.9,
+      "topics": {
+        "shendet": 7,
+        "infrastrukture": 13,
+        "buxhet": 8,
+        "integrim": 9,
+        "siguri": 7,
+        "arsim": 6,
+        "drejtesi": 2
+      },
+      "sourceUrls": [
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202606021210061382Procesverbal%2C datë 21.5.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202512111507210473Procesverbal%2C datë 2.12.2025.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202512111507210473Procesverbal%2C datë 2.12.2025.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202604241206182082Procesverbal%2C datë 16.4.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202602160839183359Procesverbal%2C datë 27.1.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202606021205516533Procesverbal%2C datë 21.5.2026.pdf"
+      ]
+    },
+    "vip246": {
+      "classifiedTurns": 15,
+      "dominantTopic": "integrim",
+      "dominantTurns": 6,
+      "score": 40.0,
+      "topics": {
+        "infrastrukture": 5,
+        "integrim": 6,
+        "siguri": 3,
+        "arsim": 5,
+        "buxhet": 1
+      },
+      "sourceUrls": [
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202606021210061382Procesverbal%2C datë 21.5.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202604241205488053Procesverbal%2C datë 9.4.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202512111507210473Procesverbal%2C datë 2.12.2025.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202606021205516533Procesverbal%2C datë 21.5.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202602160839545825Procesverbal%2C datë 3.2.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202605081308088037Procesverbal%2C datë 4.5.2026.pdf"
+      ]
+    },
+    "vip268": {
+      "classifiedTurns": 20,
+      "dominantTopic": "arsim",
+      "dominantTurns": 10,
+      "score": 50.0,
+      "topics": {
+        "arsim": 10,
+        "infrastrukture": 3,
+        "shendet": 1,
+        "integrim": 6,
+        "buxhet": 3,
+        "siguri": 7,
+        "drejtesi": 4
+      },
+      "sourceUrls": [
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202606021210061382Procesverbal%2C datë 21.5.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202602160839183359Procesverbal%2C datë 27.1.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202606021205516533Procesverbal%2C datë 21.5.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202603061229093433Procesverbal%2C datë 2.3.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202607241107457327Procesverbal%2C datë 2.7.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202512031127379204Procesverbal%2C datë 19.11.2025.pdf"
+      ]
+    },
+    "vip275": {
+      "classifiedTurns": 22,
+      "dominantTopic": "siguri",
+      "dominantTurns": 9,
+      "score": 40.9,
+      "topics": {
+        "buxhet": 7,
+        "infrastrukture": 4,
+        "drejtesi": 6,
+        "integrim": 7,
+        "arsim": 3,
+        "shendet": 3,
+        "siguri": 9
+      },
+      "sourceUrls": [
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202606021210061382Procesverbal%2C datë 21.5.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202512111507210473Procesverbal%2C datë 2.12.2025.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202604241206182082Procesverbal%2C datë 16.4.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202602160839183359Procesverbal%2C datë 27.1.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202606021205516533Procesverbal%2C datë 21.5.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202512031127379204Procesverbal%2C datë 19.11.2025.pdf"
+      ]
+    },
+    "vip230": {
+      "classifiedTurns": 10,
+      "dominantTopic": "drejtesi",
+      "dominantTurns": 5,
+      "score": 50.0,
+      "topics": {
+        "infrastrukture": 3,
+        "drejtesi": 5,
+        "shendet": 2,
+        "arsim": 2,
+        "integrim": 2,
+        "siguri": 2
+      },
+      "sourceUrls": [
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202606021210061382Procesverbal%2C datë 21.5.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202604241205488053Procesverbal%2C datë 9.4.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202606021205516533Procesverbal%2C datë 21.5.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202511191529121374Procesverbal%2C datë 6.11.2025.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202606121243191637Procesverbal%2C datë 4.6.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202511201246555477Procesverbal%2C datë 6.11.2025.pdf"
+      ]
+    },
+    "vip202": {
+      "classifiedTurns": 35,
+      "dominantTopic": "drejtesi",
+      "dominantTurns": 14,
+      "score": 40.0,
+      "topics": {
+        "infrastrukture": 7,
+        "siguri": 13,
+        "buxhet": 12,
+        "arsim": 3,
+        "drejtesi": 14,
+        "integrim": 12,
+        "shendet": 4
+      },
+      "sourceUrls": [
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202606021210061382Procesverbal%2C datë 21.5.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202604241206182082Procesverbal%2C datë 16.4.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202604241206182082Procesverbal%2C datë 16.4.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202604241206182082Procesverbal%2C datë 16.4.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202602160839183359Procesverbal%2C datë 27.1.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202606021205516533Procesverbal%2C datë 21.5.2026.pdf"
+      ]
+    },
+    "vip49": {
+      "classifiedTurns": 22,
+      "dominantTopic": "integrim",
+      "dominantTurns": 13,
+      "score": 59.1,
+      "topics": {
+        "infrastrukture": 11,
+        "integrim": 13,
+        "siguri": 8,
+        "buxhet": 8,
+        "drejtesi": 2,
+        "arsim": 1,
+        "shendet": 1
+      },
+      "sourceUrls": [
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202606021210061382Procesverbal%2C datë 21.5.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202604241205488053Procesverbal%2C datë 9.4.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202602160839183359Procesverbal%2C datë 27.1.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202606021205516533Procesverbal%2C datë 21.5.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202604031251568330Procesverbal%2C datë 30.3.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202607241101390014Procesverbal%2C datë 16.7.2026.pdf"
+      ]
+    },
+    "vip92": {
+      "classifiedTurns": 17,
+      "dominantTopic": "integrim",
+      "dominantTurns": 11,
+      "score": 64.7,
+      "topics": {
+        "infrastrukture": 5,
+        "siguri": 9,
+        "buxhet": 5,
+        "integrim": 11,
+        "shendet": 1
+      },
+      "sourceUrls": [
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202606021210061382Procesverbal%2C datë 21.5.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202512111507210473Procesverbal%2C datë 2.12.2025.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202512111507210473Procesverbal%2C datë 2.12.2025.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202606021205516533Procesverbal%2C datë 21.5.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202605081308088037Procesverbal%2C datë 4.5.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202605081305061954Procesverbal%2C datë 4.5.2026.pdf"
+      ]
+    },
+    "vip259": {
+      "classifiedTurns": 27,
+      "dominantTopic": "infrastrukture",
+      "dominantTurns": 15,
+      "score": 55.6,
+      "topics": {
+        "drejtesi": 6,
+        "arsim": 11,
+        "shendet": 8,
+        "infrastrukture": 15,
+        "siguri": 7,
+        "buxhet": 4,
+        "integrim": 3
+      },
+      "sourceUrls": [
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202606021210061382Procesverbal%2C datë 21.5.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202602160839183359Procesverbal%2C datë 27.1.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202606021205516533Procesverbal%2C datë 21.5.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202603061229093433Procesverbal%2C datë 2.3.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202604031251568330Procesverbal%2C datë 30.3.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202512031127379204Procesverbal%2C datë 19.11.2025.pdf"
+      ]
+    },
+    "vip26": {
+      "classifiedTurns": 15,
+      "dominantTopic": "infrastrukture",
+      "dominantTurns": 8,
+      "score": 53.3,
+      "topics": {
+        "shendet": 2,
+        "buxhet": 5,
+        "infrastrukture": 8,
+        "siguri": 5,
+        "arsim": 2,
+        "integrim": 6,
+        "drejtesi": 2
+      },
+      "sourceUrls": [
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202604241205488053Procesverbal%2C datë 9.4.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202512031127379204Procesverbal%2C datë 19.11.2025.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202512031127379204Procesverbal%2C datë 19.11.2025.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202512031127379204Procesverbal%2C datë 19.11.2025.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202512031127379204Procesverbal%2C datë 19.11.2025.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202512031127379204Procesverbal%2C datë 19.11.2025.pdf"
+      ]
+    },
+    "vip229": {
+      "classifiedTurns": 13,
+      "dominantTopic": "drejtesi",
+      "dominantTurns": 7,
+      "score": 53.8,
+      "topics": {
+        "infrastrukture": 3,
+        "arsim": 2,
+        "shendet": 4,
+        "integrim": 3,
+        "buxhet": 3,
+        "siguri": 2,
+        "drejtesi": 7
+      },
+      "sourceUrls": [
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202604241205488053Procesverbal%2C datë 9.4.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202512111507210473Procesverbal%2C datë 2.12.2025.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202512111507210473Procesverbal%2C datë 2.12.2025.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202602160839183359Procesverbal%2C datë 27.1.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202603061229093433Procesverbal%2C datë 2.3.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202512031127379204Procesverbal%2C datë 19.11.2025.pdf"
+      ]
+    },
+    "vip168": {
+      "classifiedTurns": 10,
+      "dominantTopic": "arsim",
+      "dominantTurns": 7,
+      "score": 70.0,
+      "topics": {
+        "infrastrukture": 3,
+        "buxhet": 1,
+        "arsim": 7,
+        "integrim": 6,
+        "siguri": 1
+      },
+      "sourceUrls": [
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202604241205488053Procesverbal%2C datë 9.4.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202512111507210473Procesverbal%2C datë 2.12.2025.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202602160839183359Procesverbal%2C datë 27.1.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202510291126114402Procesverbal%2C datë 16.10.2025.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202605081308088037Procesverbal%2C datë 4.5.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202605081305061954Procesverbal%2C datë 4.5.2026.pdf"
+      ]
+    },
+    "vip65": {
+      "classifiedTurns": 10,
+      "dominantTopic": "infrastrukture",
+      "dominantTurns": 6,
+      "score": 60.0,
+      "topics": {
+        "infrastrukture": 6,
+        "buxhet": 3,
+        "integrim": 5,
+        "arsim": 5,
+        "shendet": 2,
+        "siguri": 2,
+        "drejtesi": 1
+      },
+      "sourceUrls": [
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202604241205488053Procesverbal%2C datë 9.4.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202512111507210473Procesverbal%2C datë 2.12.2025.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202602160839183359Procesverbal%2C datë 27.1.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202604031251568330Procesverbal%2C datë 30.3.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202604031248564249Procesverbal%2C datë 30.3.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202610131313549186Procesverbal%2C datë 5.10.2026.pdf"
+      ]
+    },
+    "vip179": {
+      "classifiedTurns": 9,
+      "dominantTopic": "shendet",
+      "dominantTurns": 4,
+      "score": 44.4,
+      "topics": {
+        "arsim": 1,
+        "buxhet": 2,
+        "shendet": 4,
+        "integrim": 3,
+        "infrastrukture": 1
+      },
+      "sourceUrls": [
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202604241205488053Procesverbal%2C datë 9.4.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202602160839183359Procesverbal%2C datë 27.1.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202603061229093433Procesverbal%2C datë 2.3.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202607241101390014Procesverbal%2C datë 16.7.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202602160839545825Procesverbal%2C datë 3.2.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202605221037334462Procesverbal%2C  datë 14.5.2026.pdf"
+      ]
+    },
+    "vip93": {
+      "classifiedTurns": 20,
+      "dominantTopic": "siguri",
+      "dominantTurns": 16,
+      "score": 80.0,
+      "topics": {
+        "integrim": 5,
+        "buxhet": 3,
+        "siguri": 16,
+        "infrastrukture": 5,
+        "drejtesi": 4,
+        "shendet": 7
+      },
+      "sourceUrls": [
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202604241205488053Procesverbal%2C datë 9.4.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202604241206182082Procesverbal%2C datë 16.4.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202604241206182082Procesverbal%2C datë 16.4.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202602160839183359Procesverbal%2C datë 27.1.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202606191328432703Procesverbal%2C datë 11.6.2026 -.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202607241101390014Procesverbal%2C datë 16.7.2026.pdf"
+      ]
+    },
+    "vip217": {
+      "classifiedTurns": 20,
+      "dominantTopic": "siguri",
+      "dominantTurns": 16,
+      "score": 80.0,
+      "topics": {
+        "integrim": 5,
+        "buxhet": 3,
+        "siguri": 16,
+        "infrastrukture": 5,
+        "drejtesi": 4,
+        "shendet": 7
+      },
+      "sourceUrls": [
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202604241205488053Procesverbal%2C datë 9.4.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202604241206182082Procesverbal%2C datë 16.4.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202604241206182082Procesverbal%2C datë 16.4.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202602160839183359Procesverbal%2C datë 27.1.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202606191328432703Procesverbal%2C datë 11.6.2026 -.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202607241101390014Procesverbal%2C datë 16.7.2026.pdf"
+      ]
+    },
+    "vip277": {
+      "classifiedTurns": 9,
+      "dominantTopic": "integrim",
+      "dominantTurns": 7,
+      "score": 77.8,
+      "topics": {
+        "integrim": 7,
+        "siguri": 6,
+        "arsim": 1,
+        "buxhet": 5,
+        "shendet": 3,
+        "infrastrukture": 4,
+        "drejtesi": 1
+      },
+      "sourceUrls": [
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202604241205488053Procesverbal%2C datë 9.4.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202512111507210473Procesverbal%2C datë 2.12.2025.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202606191328432703Procesverbal%2C datë 11.6.2026 -.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202604031251568330Procesverbal%2C datë 30.3.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202602160839545825Procesverbal%2C datë 3.2.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202604031248564249Procesverbal%2C datë 30.3.2026.pdf"
+      ]
+    },
+    "vip83": {
+      "classifiedTurns": 11,
+      "dominantTopic": "arsim",
+      "dominantTurns": 8,
+      "score": 72.7,
+      "topics": {
+        "drejtesi": 7,
+        "arsim": 8,
+        "siguri": 4,
+        "infrastrukture": 4,
+        "buxhet": 4,
+        "shendet": 2,
+        "integrim": 2
+      },
+      "sourceUrls": [
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202604241205488053Procesverbal%2C datë 9.4.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202512111507210473Procesverbal%2C datë 2.12.2025.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202512031127379204Procesverbal%2C datë 19.11.2025.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202511121351045598Procesverbal seanca plenare dt.30.10.2025.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202602160839545825Procesverbal%2C datë 3.2.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202511130840329055Procesverbal%2C datë 30.10.2025 ora 11.30.pdf"
+      ]
+    },
+    "vip132": {
+      "classifiedTurns": 11,
+      "dominantTopic": "arsim",
+      "dominantTurns": 8,
+      "score": 72.7,
+      "topics": {
+        "drejtesi": 7,
+        "arsim": 8,
+        "siguri": 4,
+        "infrastrukture": 4,
+        "buxhet": 4,
+        "shendet": 2,
+        "integrim": 2
+      },
+      "sourceUrls": [
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202604241205488053Procesverbal%2C datë 9.4.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202512111507210473Procesverbal%2C datë 2.12.2025.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202512031127379204Procesverbal%2C datë 19.11.2025.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202511121351045598Procesverbal seanca plenare dt.30.10.2025.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202602160839545825Procesverbal%2C datë 3.2.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202511130840329055Procesverbal%2C datë 30.10.2025 ora 11.30.pdf"
+      ]
+    },
+    "vip227": {
+      "classifiedTurns": 14,
+      "dominantTopic": "arsim",
+      "dominantTurns": 7,
+      "score": 50.0,
+      "topics": {
+        "shendet": 1,
+        "integrim": 4,
+        "siguri": 6,
+        "arsim": 7,
+        "drejtesi": 6,
+        "buxhet": 2,
+        "infrastrukture": 1
+      },
+      "sourceUrls": [
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202604241205488053Procesverbal%2C datë 9.4.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202512111507210473Procesverbal%2C datë 2.12.2025.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202607241107457327Procesverbal%2C datë 2.7.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202511121351045598Procesverbal seanca plenare dt.30.10.2025.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202602160839545825Procesverbal%2C datë 3.2.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202511130840329055Procesverbal%2C datë 30.10.2025 ora 11.30.pdf"
+      ]
+    },
+    "vip271": {
+      "classifiedTurns": 25,
+      "dominantTopic": "integrim",
+      "dominantTurns": 16,
+      "score": 64.0,
+      "topics": {
+        "drejtesi": 9,
+        "arsim": 9,
+        "shendet": 8,
+        "integrim": 16,
+        "infrastrukture": 7,
+        "buxhet": 9,
+        "siguri": 4
+      },
+      "sourceUrls": [
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202604241205488053Procesverbal%2C datë 9.4.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202512111507210473Procesverbal%2C datë 2.12.2025.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202604241206182082Procesverbal%2C datë 16.4.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202602160839183359Procesverbal%2C datë 27.1.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202602160839183359Procesverbal%2C datë 27.1.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202603061229093433Procesverbal%2C datë 2.3.2026.pdf"
+      ]
+    },
+    "vip91": {
+      "classifiedTurns": 9,
+      "dominantTopic": "integrim",
+      "dominantTurns": 7,
+      "score": 77.8,
+      "topics": {
+        "drejtesi": 2,
+        "buxhet": 2,
+        "infrastrukture": 4,
+        "integrim": 7
+      },
+      "sourceUrls": [
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202604241205488053Procesverbal%2C datë 9.4.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202604241205488053Procesverbal%2C datë 9.4.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202604241206182082Procesverbal%2C datë 16.4.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202512031127379204Procesverbal%2C datë 19.11.2025.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202512111507528093Procesverbal datë 4.12.2025.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202605051332438340Procesverbal%2C datë 23.4.2026.pdf"
+      ]
+    },
+    "vip154": {
+      "classifiedTurns": 9,
+      "dominantTopic": "integrim",
+      "dominantTurns": 7,
+      "score": 77.8,
+      "topics": {
+        "drejtesi": 2,
+        "buxhet": 2,
+        "infrastrukture": 4,
+        "integrim": 7
+      },
+      "sourceUrls": [
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202604241205488053Procesverbal%2C datë 9.4.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202604241205488053Procesverbal%2C datë 9.4.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202604241206182082Procesverbal%2C datë 16.4.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202512031127379204Procesverbal%2C datë 19.11.2025.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202512111507528093Procesverbal datë 4.12.2025.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202605051332438340Procesverbal%2C datë 23.4.2026.pdf"
+      ]
+    },
+    "vip173": {
+      "classifiedTurns": 12,
+      "dominantTopic": "integrim",
+      "dominantTurns": 8,
+      "score": 66.7,
+      "topics": {
+        "buxhet": 5,
+        "arsim": 1,
+        "shendet": 1,
+        "infrastrukture": 7,
+        "integrim": 8,
+        "siguri": 5,
+        "drejtesi": 2
+      },
+      "sourceUrls": [
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202512111507210473Procesverbal%2C datë 2.12.2025.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202602160839183359Procesverbal%2C datë 27.1.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202603061229093433Procesverbal%2C datë 2.3.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202511191529121374Procesverbal%2C datë 6.11.2025.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202512031127379204Procesverbal%2C datë 19.11.2025.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202602160839545825Procesverbal%2C datë 3.2.2026.pdf"
+      ]
+    },
+    "vip112": {
+      "classifiedTurns": 10,
+      "dominantTopic": "siguri",
+      "dominantTurns": 10,
+      "score": 100.0,
+      "topics": {
+        "buxhet": 2,
+        "siguri": 10,
+        "shendet": 4,
+        "infrastrukture": 8,
+        "arsim": 1,
+        "integrim": 3
+      },
+      "sourceUrls": [
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202512111507210473Procesverbal%2C datë 2.12.2025.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202512111507210473Procesverbal%2C datë 2.12.2025.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202602160839183359Procesverbal%2C datë 27.1.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202605081308088037Procesverbal%2C datë 4.5.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202605081305061954Procesverbal%2C datë 4.5.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202605081305513904Procesverbal%2C datë 4.5.2026.pdf"
+      ]
+    },
+    "vip39": {
+      "classifiedTurns": 19,
+      "dominantTopic": "drejtesi",
+      "dominantTurns": 13,
+      "score": 68.4,
+      "topics": {
+        "arsim": 2,
+        "infrastrukture": 3,
+        "integrim": 10,
+        "siguri": 9,
+        "drejtesi": 13
+      },
+      "sourceUrls": [
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202512111507210473Procesverbal%2C datë 2.12.2025.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202602160839183359Procesverbal%2C datë 27.1.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202511121351045598Procesverbal seanca plenare dt.30.10.2025.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202510291126114402Procesverbal%2C datë 16.10.2025.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202511130840329055Procesverbal%2C datë 30.10.2025 ora 11.30.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202605081308088037Procesverbal%2C datë 4.5.2026.pdf"
+      ]
+    },
+    "vip161": {
+      "classifiedTurns": 19,
+      "dominantTopic": "drejtesi",
+      "dominantTurns": 13,
+      "score": 68.4,
+      "topics": {
+        "arsim": 2,
+        "infrastrukture": 3,
+        "integrim": 10,
+        "siguri": 9,
+        "drejtesi": 13
+      },
+      "sourceUrls": [
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202512111507210473Procesverbal%2C datë 2.12.2025.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202602160839183359Procesverbal%2C datë 27.1.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202511121351045598Procesverbal seanca plenare dt.30.10.2025.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202510291126114402Procesverbal%2C datë 16.10.2025.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202511130840329055Procesverbal%2C datë 30.10.2025 ora 11.30.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202605081308088037Procesverbal%2C datë 4.5.2026.pdf"
+      ]
+    },
+    "vip269": {
+      "classifiedTurns": 12,
+      "dominantTopic": "integrim",
+      "dominantTurns": 7,
+      "score": 58.3,
+      "topics": {
+        "buxhet": 3,
+        "shendet": 3,
+        "integrim": 7,
+        "drejtesi": 7,
+        "siguri": 4,
+        "arsim": 3,
+        "infrastrukture": 4
+      },
+      "sourceUrls": [
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202512111507210473Procesverbal%2C datë 2.12.2025.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202602160839183359Procesverbal%2C datë 27.1.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202602160839183359Procesverbal%2C datë 27.1.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202603061229093433Procesverbal%2C datë 2.3.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202512111507528093Procesverbal datë 4.12.2025.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202605051332438340Procesverbal%2C datë 23.4.2026.pdf"
+      ]
+    },
+    "vip106": {
+      "classifiedTurns": 7,
+      "dominantTopic": "siguri",
+      "dominantTurns": 4,
+      "score": 57.1,
+      "topics": {
+        "infrastrukture": 1,
+        "siguri": 4,
+        "buxhet": 1,
+        "shendet": 1,
+        "drejtesi": 1
+      },
+      "sourceUrls": [
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202512111507210473Procesverbal%2C datë 2.12.2025.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202610270937456011Procesverbal%2C datë 8.10.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202610270937456011Procesverbal%2C datë 8.10.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202610270937456011Procesverbal%2C datë 8.10.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202512181259498759Procesverbal%2C datë 11.12.2025.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202509161104044903Procesverbal datë 12.9.2025 %28pasdite%29.pdf"
+      ]
+    },
+    "vip129": {
+      "classifiedTurns": 7,
+      "dominantTopic": "siguri",
+      "dominantTurns": 4,
+      "score": 57.1,
+      "topics": {
+        "infrastrukture": 1,
+        "siguri": 4,
+        "buxhet": 1,
+        "shendet": 1,
+        "drejtesi": 1
+      },
+      "sourceUrls": [
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202512111507210473Procesverbal%2C datë 2.12.2025.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202610270937456011Procesverbal%2C datë 8.10.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202610270937456011Procesverbal%2C datë 8.10.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202610270937456011Procesverbal%2C datë 8.10.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202512181259498759Procesverbal%2C datë 11.12.2025.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202509161104044903Procesverbal datë 12.9.2025 %28pasdite%29.pdf"
+      ]
+    },
+    "vip103": {
+      "classifiedTurns": 8,
+      "dominantTopic": "infrastrukture",
+      "dominantTurns": 4,
+      "score": 50.0,
+      "topics": {
+        "buxhet": 3,
+        "arsim": 1,
+        "shendet": 1,
+        "infrastrukture": 4,
+        "integrim": 2,
+        "siguri": 1,
+        "drejtesi": 1
+      },
+      "sourceUrls": [
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202512111507210473Procesverbal%2C datë 2.12.2025.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202604031251568330Procesverbal%2C datë 30.3.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202604031248564249Procesverbal%2C datë 30.3.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202510091335061805Procesverbal%2C datë 29.9.2025.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202605221039116003Procesverbal%2C datë 7.5.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202603031128161003Procesverbal datë 19.2.2026.pdf"
+      ]
+    },
+    "vip158": {
+      "classifiedTurns": 10,
+      "dominantTopic": "infrastrukture",
+      "dominantTurns": 7,
+      "score": 70.0,
+      "topics": {
+        "buxhet": 1,
+        "arsim": 5,
+        "shendet": 1,
+        "infrastrukture": 7,
+        "integrim": 5,
+        "drejtesi": 6,
+        "siguri": 2
+      },
+      "sourceUrls": [
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202512111507210473Procesverbal%2C datë 2.12.2025.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202602160839183359Procesverbal%2C datë 27.1.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202511191529121374Procesverbal%2C datë 6.11.2025.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202511121351045598Procesverbal seanca plenare dt.30.10.2025.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202511130840329055Procesverbal%2C datë 30.10.2025 ora 11.30.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202511201246555477Procesverbal%2C datë 6.11.2025.pdf"
+      ]
+    },
+    "vip55": {
+      "classifiedTurns": 14,
+      "dominantTopic": "siguri",
+      "dominantTurns": 9,
+      "score": 64.3,
+      "topics": {
+        "buxhet": 1,
+        "drejtesi": 4,
+        "arsim": 2,
+        "siguri": 9,
+        "infrastrukture": 5,
+        "integrim": 5
+      },
+      "sourceUrls": [
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202512111507210473Procesverbal%2C datë 2.12.2025.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202604241206182082Procesverbal%2C datë 16.4.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202602160839183359Procesverbal%2C datë 27.1.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202511191529121374Procesverbal%2C datë 6.11.2025.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202602160839545825Procesverbal%2C datë 3.2.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202602160839545825Procesverbal%2C datë 3.2.2026.pdf"
+      ]
+    },
+    "vip219": {
+      "classifiedTurns": 14,
+      "dominantTopic": "siguri",
+      "dominantTurns": 9,
+      "score": 64.3,
+      "topics": {
+        "buxhet": 1,
+        "drejtesi": 4,
+        "arsim": 2,
+        "siguri": 9,
+        "infrastrukture": 5,
+        "integrim": 5
+      },
+      "sourceUrls": [
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202512111507210473Procesverbal%2C datë 2.12.2025.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202604241206182082Procesverbal%2C datë 16.4.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202602160839183359Procesverbal%2C datë 27.1.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202511191529121374Procesverbal%2C datë 6.11.2025.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202602160839545825Procesverbal%2C datë 3.2.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202602160839545825Procesverbal%2C datë 3.2.2026.pdf"
+      ]
+    },
+    "vip260": {
+      "classifiedTurns": 8,
+      "dominantTopic": "arsim",
+      "dominantTurns": 6,
+      "score": 75.0,
+      "topics": {
+        "buxhet": 1,
+        "shendet": 4,
+        "arsim": 6,
+        "infrastrukture": 1,
+        "drejtesi": 2,
+        "integrim": 2,
+        "siguri": 2
+      },
+      "sourceUrls": [
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202512111507210473Procesverbal%2C datë 2.12.2025.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202602160839183359Procesverbal%2C datë 27.1.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202602160839183359Procesverbal%2C datë 27.1.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202607241101390014Procesverbal%2C datë 16.7.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202602160839545825Procesverbal%2C datë 3.2.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202605221037334462Procesverbal%2C  datë 14.5.2026.pdf"
+      ]
+    },
+    "vip186": {
+      "classifiedTurns": 8,
+      "dominantTopic": "shendet",
+      "dominantTurns": 7,
+      "score": 87.5,
+      "topics": {
+        "buxhet": 1,
+        "shendet": 7,
+        "infrastrukture": 5,
+        "integrim": 3,
+        "siguri": 2
+      },
+      "sourceUrls": [
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202512111507210473Procesverbal%2C datë 2.12.2025.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202603061229093433Procesverbal%2C datë 2.3.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202604031251568330Procesverbal%2C datë 30.3.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202606121243191637Procesverbal%2C datë 4.6.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202602160839545825Procesverbal%2C datë 3.2.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202604031248564249Procesverbal%2C datë 30.3.2026.pdf"
+      ]
+    },
+    "vip281": {
+      "classifiedTurns": 9,
+      "dominantTopic": "integrim",
+      "dominantTurns": 8,
+      "score": 88.9,
+      "topics": {
+        "buxhet": 2,
+        "arsim": 2,
+        "shendet": 2,
+        "infrastrukture": 4,
+        "integrim": 8,
+        "drejtesi": 2,
+        "siguri": 2
+      },
+      "sourceUrls": [
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202512111507210473Procesverbal%2C datë 2.12.2025.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202602160839183359Procesverbal%2C datë 27.1.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202603061229093433Procesverbal%2C datë 2.3.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202604031251568330Procesverbal%2C datë 30.3.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202602160839545825Procesverbal%2C datë 3.2.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202604031248564249Procesverbal%2C datë 30.3.2026.pdf"
+      ]
+    },
+    "vip180": {
+      "classifiedTurns": 7,
+      "dominantTopic": "shendet",
+      "dominantTurns": 4,
+      "score": 57.1,
+      "topics": {
+        "shendet": 4,
+        "integrim": 3,
+        "drejtesi": 2,
+        "arsim": 2,
+        "infrastrukture": 2,
+        "siguri": 1
+      },
+      "sourceUrls": [
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202512111507210473Procesverbal%2C datë 2.12.2025.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202602160839183359Procesverbal%2C datë 27.1.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202606121243191637Procesverbal%2C datë 4.6.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202602160839545825Procesverbal%2C datë 3.2.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202602201324219246Procesverbal%2C datë 3.2.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202509161103449404Procesverbal datë 12.9.2025 %28paradite%29.pdf"
+      ]
+    },
+    "vip213": {
+      "classifiedTurns": 21,
+      "dominantTopic": "integrim",
+      "dominantTurns": 20,
+      "score": 95.2,
+      "topics": {
+        "infrastrukture": 5,
+        "integrim": 20,
+        "arsim": 6,
+        "shendet": 6,
+        "buxhet": 2,
+        "siguri": 1
+      },
+      "sourceUrls": [
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202512111507210473Procesverbal%2C datë 2.12.2025.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202602160839183359Procesverbal%2C datë 27.1.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202603061229093433Procesverbal%2C datë 2.3.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202607241101390014Procesverbal%2C datë 16.7.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202512031127379204Procesverbal%2C datë 19.11.2025.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202511121351045598Procesverbal seanca plenare dt.30.10.2025.pdf"
+      ]
+    },
+    "vip152": {
+      "classifiedTurns": 25,
+      "dominantTopic": "integrim",
+      "dominantTurns": 13,
+      "score": 52.0,
+      "topics": {
+        "integrim": 13,
+        "infrastrukture": 6,
+        "buxhet": 5,
+        "arsim": 3,
+        "shendet": 8,
+        "siguri": 11,
+        "drejtesi": 4
+      },
+      "sourceUrls": [
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202604241206182082Procesverbal%2C datë 16.4.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202604031251568330Procesverbal%2C datë 30.3.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202512031127379204Procesverbal%2C datë 19.11.2025.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202606121243191637Procesverbal%2C datë 4.6.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202602160839545825Procesverbal%2C datë 3.2.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202604031248564249Procesverbal%2C datë 30.3.2026.pdf"
+      ]
+    },
+    "vip266": {
+      "classifiedTurns": 19,
+      "dominantTopic": "drejtesi",
+      "dominantTurns": 12,
+      "score": 63.2,
+      "topics": {
+        "buxhet": 10,
+        "drejtesi": 12,
+        "infrastrukture": 6,
+        "integrim": 5,
+        "arsim": 3,
+        "siguri": 2,
+        "shendet": 1
+      },
+      "sourceUrls": [
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202604241206182082Procesverbal%2C datë 16.4.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202604241206182082Procesverbal%2C datë 16.4.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202604241206182082Procesverbal%2C datë 16.4.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202602160839183359Procesverbal%2C datë 27.1.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202606191328432703Procesverbal%2C datë 11.6.2026 -.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202604031251568330Procesverbal%2C datë 30.3.2026.pdf"
+      ]
+    },
+    "vip257": {
+      "classifiedTurns": 17,
+      "dominantTopic": "infrastrukture",
+      "dominantTurns": 11,
+      "score": 64.7,
+      "topics": {
+        "infrastrukture": 11,
+        "integrim": 5,
+        "siguri": 2,
+        "buxhet": 3,
+        "arsim": 2,
+        "shendet": 1,
+        "drejtesi": 1
+      },
+      "sourceUrls": [
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202604241206182082Procesverbal%2C datë 16.4.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202602160839183359Procesverbal%2C datë 27.1.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202607241101390014Procesverbal%2C datë 16.7.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202607241107457327Procesverbal%2C datë 2.7.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202606121243191637Procesverbal%2C datë 4.6.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202602160839545825Procesverbal%2C datë 3.2.2026.pdf"
+      ]
+    },
+    "vip38": {
+      "classifiedTurns": 5,
+      "dominantTopic": "integrim",
+      "dominantTurns": 4,
+      "score": 80.0,
+      "topics": {
+        "shendet": 3,
+        "integrim": 4,
+        "drejtesi": 2,
+        "siguri": 2,
+        "buxhet": 2,
+        "arsim": 2,
+        "infrastrukture": 1
+      },
+      "sourceUrls": [
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202604241206182082Procesverbal%2C datë 16.4.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202605051332438340Procesverbal%2C datë 23.4.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202512181259498759Procesverbal%2C datë 11.12.2025.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202605081308015184Procesverbal%2C datë 23.4.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202603191311569136Procesverbal%2C datë 5.3.2026.pdf"
+      ]
+    },
+    "vip33": {
+      "classifiedTurns": 38,
+      "dominantTopic": "drejtesi",
+      "dominantTurns": 20,
+      "score": 52.6,
+      "topics": {
+        "buxhet": 16,
+        "drejtesi": 20,
+        "shendet": 3,
+        "siguri": 6,
+        "infrastrukture": 8,
+        "integrim": 8,
+        "arsim": 2
+      },
+      "sourceUrls": [
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202602160839183359Procesverbal%2C datë 27.1.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202606191328432703Procesverbal%2C datë 11.6.2026 -.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202604031251568330Procesverbal%2C datë 30.3.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202512031127379204Procesverbal%2C datë 19.11.2025.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202512031127379204Procesverbal%2C datë 19.11.2025.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202511121351045598Procesverbal seanca plenare dt.30.10.2025.pdf"
+      ]
+    },
+    "vip170": {
+      "classifiedTurns": 7,
+      "dominantTopic": "arsim",
+      "dominantTurns": 5,
+      "score": 71.4,
+      "topics": {
+        "buxhet": 3,
+        "drejtesi": 2,
+        "arsim": 5,
+        "shendet": 1,
+        "infrastrukture": 3,
+        "integrim": 1,
+        "siguri": 2
+      },
+      "sourceUrls": [
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202602160839183359Procesverbal%2C datë 27.1.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202607241107457327Procesverbal%2C datë 2.7.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202512031127379204Procesverbal%2C datë 19.11.2025.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202605051332438340Procesverbal%2C datë 23.4.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202607161237075649Procesverbal%2C datë 13.7.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202605081308015184Procesverbal%2C datë 23.4.2026.pdf"
+      ]
+    },
+    "vip210": {
+      "classifiedTurns": 5,
+      "dominantTopic": "arsim",
+      "dominantTurns": 4,
+      "score": 80.0,
+      "topics": {
+        "arsim": 4,
+        "integrim": 2
+      },
+      "sourceUrls": [
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202602160839183359Procesverbal%2C datë 27.1.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202607241101390014Procesverbal%2C datë 16.7.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202605051332438340Procesverbal%2C datë 23.4.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202605081308015184Procesverbal%2C datë 23.4.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202603191311569136Procesverbal%2C datë 5.3.2026.pdf"
+      ]
+    },
+    "vip79": {
+      "classifiedTurns": 9,
+      "dominantTopic": "drejtesi",
+      "dominantTurns": 9,
+      "score": 100.0,
+      "topics": {
+        "drejtesi": 9,
+        "shendet": 1,
+        "integrim": 1,
+        "siguri": 1
+      },
+      "sourceUrls": [
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202602160839183359Procesverbal%2C datë 27.1.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202511121351045598Procesverbal seanca plenare dt.30.10.2025.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202511121351045598Procesverbal seanca plenare dt.30.10.2025.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202511130840329055Procesverbal%2C datë 30.10.2025 ora 11.30.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202511130840329055Procesverbal%2C datë 30.10.2025 ora 11.30.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202511101149355498Procesverbal%2C date 30.11.2025 - ora 11.30.pdf"
+      ]
+    },
+    "vip11": {
+      "classifiedTurns": 15,
+      "dominantTopic": "arsim",
+      "dominantTurns": 9,
+      "score": 60.0,
+      "topics": {
+        "drejtesi": 1,
+        "integrim": 8,
+        "siguri": 3,
+        "infrastrukture": 2,
+        "buxhet": 2,
+        "arsim": 9,
+        "shendet": 3
+      },
+      "sourceUrls": [
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202602160839183359Procesverbal%2C datë 27.1.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202607241101390014Procesverbal%2C datë 16.7.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202512031127379204Procesverbal%2C datë 19.11.2025.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202512031127379204Procesverbal%2C datë 19.11.2025.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202602160839545825Procesverbal%2C datë 3.2.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202602160839545825Procesverbal%2C datë 3.2.2026.pdf"
+      ]
+    },
+    "vip231": {
+      "classifiedTurns": 15,
+      "dominantTopic": "arsim",
+      "dominantTurns": 9,
+      "score": 60.0,
+      "topics": {
+        "drejtesi": 1,
+        "integrim": 8,
+        "siguri": 3,
+        "infrastrukture": 2,
+        "buxhet": 2,
+        "arsim": 9,
+        "shendet": 3
+      },
+      "sourceUrls": [
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202602160839183359Procesverbal%2C datë 27.1.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202607241101390014Procesverbal%2C datë 16.7.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202512031127379204Procesverbal%2C datë 19.11.2025.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202512031127379204Procesverbal%2C datë 19.11.2025.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202602160839545825Procesverbal%2C datë 3.2.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202602160839545825Procesverbal%2C datë 3.2.2026.pdf"
+      ]
+    },
+    "vip28": {
+      "classifiedTurns": 9,
+      "dominantTopic": "integrim",
+      "dominantTurns": 7,
+      "score": 77.8,
+      "topics": {
+        "integrim": 7,
+        "buxhet": 4,
+        "drejtesi": 2,
+        "arsim": 3,
+        "infrastrukture": 3,
+        "shendet": 1,
+        "siguri": 1
+      },
+      "sourceUrls": [
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202602160839183359Procesverbal%2C datë 27.1.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202511191529121374Procesverbal%2C datë 6.11.2025.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202511191529121374Procesverbal%2C datë 6.11.2025.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202511191529121374Procesverbal%2C datë 6.11.2025.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202607241107457327Procesverbal%2C datë 2.7.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202512031127379204Procesverbal%2C datë 19.11.2025.pdf"
+      ]
+    },
+    "vip247": {
+      "classifiedTurns": 20,
+      "dominantTopic": "integrim",
+      "dominantTurns": 13,
+      "score": 65.0,
+      "topics": {
+        "drejtesi": 3,
+        "arsim": 3,
+        "integrim": 13,
+        "buxhet": 5,
+        "shendet": 1,
+        "infrastrukture": 4,
+        "siguri": 7
+      },
+      "sourceUrls": [
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202602160839183359Procesverbal%2C datë 27.1.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202512031127379204Procesverbal%2C datë 19.11.2025.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202511121351045598Procesverbal seanca plenare dt.30.10.2025.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202511121351045598Procesverbal seanca plenare dt.30.10.2025.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202602160839545825Procesverbal%2C datë 3.2.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202511130840329055Procesverbal%2C datë 30.10.2025 ora 11.30.pdf"
+      ]
+    },
+    "vip214": {
+      "classifiedTurns": 18,
+      "dominantTopic": "infrastrukture",
+      "dominantTurns": 13,
+      "score": 72.2,
+      "topics": {
+        "arsim": 2,
+        "shendet": 4,
+        "infrastrukture": 13,
+        "drejtesi": 2,
+        "siguri": 3,
+        "integrim": 5,
+        "buxhet": 3
+      },
+      "sourceUrls": [
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202603061229093433Procesverbal%2C datë 2.3.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202606121243191637Procesverbal%2C datë 4.6.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202605081308088037Procesverbal%2C datë 4.5.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202605081305061954Procesverbal%2C datë 4.5.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202610131313549186Procesverbal%2C datë 5.10.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202605051332438340Procesverbal%2C datë 23.4.2026.pdf"
+      ]
+    },
+    "vip30": {
+      "classifiedTurns": 38,
+      "dominantTopic": "drejtesi",
+      "dominantTurns": 21,
+      "score": 55.3,
+      "topics": {
+        "shendet": 13,
+        "drejtesi": 21,
+        "infrastrukture": 10,
+        "integrim": 19,
+        "siguri": 4,
+        "buxhet": 2
+      },
+      "sourceUrls": [
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202604031251568330Procesverbal%2C datë 30.3.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202511121351045598Procesverbal seanca plenare dt.30.10.2025.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202511121351045598Procesverbal seanca plenare dt.30.10.2025.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202511121351045598Procesverbal seanca plenare dt.30.10.2025.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202511121351045598Procesverbal seanca plenare dt.30.10.2025.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202604031248564249Procesverbal%2C datë 30.3.2026.pdf"
+      ]
+    },
+    "vip280": {
+      "classifiedTurns": 5,
+      "dominantTopic": "shendet",
+      "dominantTurns": 4,
+      "score": 80.0,
+      "topics": {
+        "shendet": 4,
+        "infrastrukture": 4,
+        "buxhet": 1,
+        "arsim": 1,
+        "integrim": 2
+      },
+      "sourceUrls": [
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202604031251568330Procesverbal%2C datë 30.3.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202604031248564249Procesverbal%2C datë 30.3.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202512181259498759Procesverbal%2C datë 11.12.2025.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202512181259498759Procesverbal%2C datë 11.12.2025.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202604031244317952Procesverbal%2C datë 30.3.2026.pdf"
+      ]
+    },
+    "vip274": {
+      "classifiedTurns": 6,
+      "dominantTopic": "integrim",
+      "dominantTurns": 6,
+      "score": 100.0,
+      "topics": {
+        "infrastrukture": 4,
+        "integrim": 6,
+        "siguri": 1,
+        "buxhet": 1,
+        "shendet": 1
+      },
+      "sourceUrls": [
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202607241101390014Procesverbal%2C datë 16.7.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202512031127379204Procesverbal%2C datë 19.11.2025.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202602160839545825Procesverbal%2C datë 3.2.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202512111507528093Procesverbal datë 4.12.2025.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202607241107127335Procesverbal%2C datë 30.6.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202602201324219246Procesverbal%2C datë 3.2.2026.pdf"
+      ]
+    },
+    "vip209": {
+      "classifiedTurns": 12,
+      "dominantTopic": "siguri",
+      "dominantTurns": 7,
+      "score": 58.3,
+      "topics": {
+        "integrim": 4,
+        "drejtesi": 6,
+        "siguri": 7,
+        "infrastrukture": 2,
+        "arsim": 1
+      },
+      "sourceUrls": [
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202511191529121374Procesverbal%2C datë 6.11.2025.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202511121351045598Procesverbal seanca plenare dt.30.10.2025.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202606121243191637Procesverbal%2C datë 4.6.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202511130840329055Procesverbal%2C datë 30.10.2025 ora 11.30.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202511201246555477Procesverbal%2C datë 6.11.2025.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202605051332438340Procesverbal%2C datë 23.4.2026.pdf"
+      ]
+    },
+    "vip228": {
+      "classifiedTurns": 6,
+      "dominantTopic": "buxhet",
+      "dominantTurns": 3,
+      "score": 50.0,
+      "topics": {
+        "buxhet": 3,
+        "arsim": 1,
+        "infrastrukture": 1,
+        "integrim": 3,
+        "shendet": 2,
+        "siguri": 1
+      },
+      "sourceUrls": [
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202512031127379204Procesverbal%2C datë 19.11.2025.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202602160839545825Procesverbal%2C datë 3.2.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202605221037334462Procesverbal%2C  datë 14.5.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202602201324219246Procesverbal%2C datë 3.2.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202512181259498759Procesverbal%2C datë 11.12.2025.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202605221039351265Procesverbal%2C  datë 14.5.2026.pdf"
+      ]
+    },
+    "vip144": {
+      "classifiedTurns": 5,
+      "dominantTopic": "buxhet",
+      "dominantTurns": 4,
+      "score": 80.0,
+      "topics": {
+        "buxhet": 4,
+        "drejtesi": 2,
+        "integrim": 2,
+        "arsim": 1,
+        "shendet": 1
+      },
+      "sourceUrls": [
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202512031127379204Procesverbal%2C datë 19.11.2025.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202606121243191637Procesverbal%2C datë 4.6.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202605221039116003Procesverbal%2C datë 7.5.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202610270937456011Procesverbal%2C datë 8.10.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202605151114127688Procesverbal%2C datë 7.5.2026.pdf"
+      ]
+    },
+    "vip222": {
+      "classifiedTurns": 5,
+      "dominantTopic": "buxhet",
+      "dominantTurns": 4,
+      "score": 80.0,
+      "topics": {
+        "buxhet": 4,
+        "drejtesi": 2,
+        "integrim": 2,
+        "arsim": 1,
+        "shendet": 1
+      },
+      "sourceUrls": [
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202512031127379204Procesverbal%2C datë 19.11.2025.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202606121243191637Procesverbal%2C datë 4.6.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202605221039116003Procesverbal%2C datë 7.5.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202610270937456011Procesverbal%2C datë 8.10.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202605151114127688Procesverbal%2C datë 7.5.2026.pdf"
+      ]
+    },
+    "vip176": {
+      "classifiedTurns": 10,
+      "dominantTopic": "integrim",
+      "dominantTurns": 5,
+      "score": 50.0,
+      "topics": {
+        "buxhet": 4,
+        "integrim": 5,
+        "infrastrukture": 1,
+        "arsim": 3,
+        "drejtesi": 1,
+        "siguri": 1,
+        "shendet": 1
+      },
+      "sourceUrls": [
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202512031127379204Procesverbal%2C datë 19.11.2025.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202605221037334462Procesverbal%2C  datë 14.5.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202610270937456011Procesverbal%2C datë 8.10.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202610270937456011Procesverbal%2C datë 8.10.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202610270937456011Procesverbal%2C datë 8.10.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202610270937456011Procesverbal%2C datë 8.10.2026.pdf"
+      ]
+    },
+    "vip90": {
+      "classifiedTurns": 17,
+      "dominantTopic": "drejtesi",
+      "dominantTurns": 12,
+      "score": 70.6,
+      "topics": {
+        "drejtesi": 12,
+        "infrastrukture": 4,
+        "siguri": 5
+      },
+      "sourceUrls": [
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202511121351045598Procesverbal seanca plenare dt.30.10.2025.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202511121351045598Procesverbal seanca plenare dt.30.10.2025.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202511121351045598Procesverbal seanca plenare dt.30.10.2025.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202511121351045598Procesverbal seanca plenare dt.30.10.2025.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202511130840329055Procesverbal%2C datë 30.10.2025 ora 11.30.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202511130840329055Procesverbal%2C datë 30.10.2025 ora 11.30.pdf"
+      ]
+    },
+    "vip203": {
+      "classifiedTurns": 17,
+      "dominantTopic": "drejtesi",
+      "dominantTurns": 12,
+      "score": 70.6,
+      "topics": {
+        "drejtesi": 12,
+        "infrastrukture": 4,
+        "siguri": 5
+      },
+      "sourceUrls": [
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202511121351045598Procesverbal seanca plenare dt.30.10.2025.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202511121351045598Procesverbal seanca plenare dt.30.10.2025.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202511121351045598Procesverbal seanca plenare dt.30.10.2025.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202511121351045598Procesverbal seanca plenare dt.30.10.2025.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202511130840329055Procesverbal%2C datë 30.10.2025 ora 11.30.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202511130840329055Procesverbal%2C datë 30.10.2025 ora 11.30.pdf"
+      ]
+    },
+    "vip126": {
+      "classifiedTurns": 6,
+      "dominantTopic": "arsim",
+      "dominantTurns": 5,
+      "score": 83.3,
+      "topics": {
+        "arsim": 5,
+        "shendet": 2,
+        "integrim": 3,
+        "drejtesi": 1,
+        "infrastrukture": 2
+      },
+      "sourceUrls": [
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202602160839545825Procesverbal%2C datë 3.2.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202512111507528093Procesverbal datë 4.12.2025.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202605051332438340Procesverbal%2C datë 23.4.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202602201324219246Procesverbal%2C datë 3.2.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202605081308015184Procesverbal%2C datë 23.4.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202603191311569136Procesverbal%2C datë 5.3.2026.pdf"
+      ]
+    },
+    "vip15": {
+      "classifiedTurns": 9,
+      "dominantTopic": "integrim",
+      "dominantTurns": 7,
+      "score": 77.8,
+      "topics": {
+        "integrim": 7,
+        "buxhet": 2,
+        "infrastrukture": 2,
+        "drejtesi": 4,
+        "siguri": 1
+      },
+      "sourceUrls": [
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202509241340555516Procesverbal datë 3.7.2025.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202509241340555516Procesverbal datë 3.7.2025.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202509241340555516Procesverbal datë 3.7.2025.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202603031128161003Procesverbal datë 19.2.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202603031128161003Procesverbal datë 19.2.2026.pdf",
+        "https://kuvendiwebfiles.blob.core.windows.net/webfiles/202603031128161003Procesverbal datë 19.2.2026.pdf"
+      ]
+    }
+  }
+}

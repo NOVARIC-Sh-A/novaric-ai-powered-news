@@ -194,23 +194,28 @@ def calculate_paragon_dimensions(
         d2 = None
 
     # 3. Përfaqësimi (D3)
-    zone_inits = raw_metrics.get("constituency_initiatives")
-    regional_hearings = raw_metrics.get("regional_hearings_attended")
-    pref_votes = raw_metrics.get("preferential_votes_count")
-
-    has_d3_evidence = (zone_inits is not None or regional_hearings is not None or pref_votes is not None)
-    if has_d3_evidence:
-        inits_val = zone_inits or 0
-        hearings_val = regional_hearings or 0
-        votes_val = pref_votes or 0
-        d3_raw = (
-            min(40.0, inits_val * 10.0) +
-            min(30.0, hearings_val * 6.0) +
-            min(30.0, (votes_val / 10000.0) * 30.0)
-        )
-        d3 = round(min(100.0, max(0.0, d3_raw)), 1)
+    # Subject vote share is a documented proxy (methodology v2). The older
+    # preferential-vote formula stays for a complete fixture.
+    if "subject_vote_share_pct" in raw_metrics and raw_metrics.get("subject_vote_share_pct") is not None:
+        d3 = round(min(100.0, max(0.0, float(raw_metrics["subject_vote_share_pct"]))), 1)
     else:
-        d3 = None
+        zone_inits = raw_metrics.get("constituency_initiatives")
+        regional_hearings = raw_metrics.get("regional_hearings_attended")
+        pref_votes = raw_metrics.get("preferential_votes_count")
+
+        has_d3_evidence = (zone_inits is not None or regional_hearings is not None or pref_votes is not None)
+        if has_d3_evidence:
+            inits_val = zone_inits or 0
+            hearings_val = regional_hearings or 0
+            votes_val = pref_votes or 0
+            d3_raw = (
+                min(40.0, inits_val * 10.0) +
+                min(30.0, hearings_val * 6.0) +
+                min(30.0, (votes_val / 10000.0) * 30.0)
+            )
+            d3 = round(min(100.0, max(0.0, d3_raw)), 1)
+        else:
+            d3 = None
 
     # 4. Asertiviteti (D4)
     # Official floor counts use their own keys and only the components that were
@@ -286,25 +291,29 @@ def calculate_paragon_dimensions(
         d6 = None
 
     # 7. Narrativa (D7)
-    media_count = raw_metrics.get("recent_media_mentions_count")
-    media_sentiment = raw_metrics.get("media_avg_sentiment")
-    media_toxicity = raw_metrics.get("toxicity_score")
-    days_since = raw_metrics.get("days_since_latest_media")
-
-    has_d7_evidence = (media_count is not None and media_count > 0 and media_sentiment is not None)
-    if has_d7_evidence:
-        cnt = media_count or 0
-        sent = media_sentiment or 0.0
-        tox = media_toxicity or 0.0
-        days = days_since if days_since is not None else 30.0
-        decay = apply_time_decay(days, w.get("decay_half_life_days", 180.0))
-        sentiment_scaled = ((sent + 1.0) / 2.0) * 50.0
-        volume_scaled = min(40.0, (cnt / 100.0) * 40.0)
-        tox_penalty = tox * 30.0
-        d7_raw = ((sentiment_scaled + volume_scaled - tox_penalty) + 20.0) * decay
-        d7 = round(min(100.0, max(0.0, d7_raw)), 1)
+    # Lexicon stability is methodology v2. The media-sentiment formula stays for a fixture.
+    if "narrative_topic_consistency_pct" in raw_metrics and raw_metrics.get("narrative_topic_consistency_pct") is not None:
+        d7 = round(min(100.0, max(0.0, float(raw_metrics["narrative_topic_consistency_pct"]))), 1)
     else:
-        d7 = None
+        media_count = raw_metrics.get("recent_media_mentions_count")
+        media_sentiment = raw_metrics.get("media_avg_sentiment")
+        media_toxicity = raw_metrics.get("toxicity_score")
+        days_since = raw_metrics.get("days_since_latest_media")
+
+        has_d7_evidence = (media_count is not None and media_count > 0 and media_sentiment is not None)
+        if has_d7_evidence:
+            cnt = media_count or 0
+            sent = media_sentiment or 0.0
+            tox = media_toxicity or 0.0
+            days = days_since if days_since is not None else 30.0
+            decay = apply_time_decay(days, w.get("decay_half_life_days", 180.0))
+            sentiment_scaled = ((sent + 1.0) / 2.0) * 50.0
+            volume_scaled = min(40.0, (cnt / 100.0) * 40.0)
+            tox_penalty = tox * 30.0
+            d7_raw = ((sentiment_scaled + volume_scaled - tox_penalty) + 20.0) * decay
+            d7 = round(min(100.0, max(0.0, d7_raw)), 1)
+        else:
+            d7 = None
 
     dimensions: Dict[str, Optional[float]] = {
         "Angazhimi Politik": d1,

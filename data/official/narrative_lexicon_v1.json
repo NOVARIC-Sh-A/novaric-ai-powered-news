@@ -1,0 +1,15 @@
+{
+  "version": "narrative_lexicon_v1",
+  "method": "narrative_topic_stability_v1",
+  "description": "Published keyword list for Narrativa. A turn is classified only when the turn text contains one of these stems. Matching is case-folded and accent-folded. No model is used.",
+  "minimumClassifiedTurns": 5,
+  "topics": {
+    "buxhet": ["buxhet", "fiskal", "tatim", "akciz", "borxh"],
+    "drejtesi": ["drejtesi", "gjykat", "prokuror", "spak", "kushtetues"],
+    "arsim": ["arsim", "shkoll", "universitet", "nxenes", "mesues"],
+    "shendet": ["shendet", "spital", "ilac", "mjekes"],
+    "infrastrukture": ["infrastruktur", "autostrad", "energji", "hekurudh", "portit"],
+    "integrim": ["europian", "integrim", "negociat", "be-se"],
+    "siguri": ["polic", "rendit publik", "mbrojtj", "ushtarak"]
+  }
+}

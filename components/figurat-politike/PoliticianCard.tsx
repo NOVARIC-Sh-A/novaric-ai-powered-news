@@ -119,6 +119,8 @@ export const PoliticianCard: React.FC<PoliticianCardProps> = ({
       completeness: optionalNumber(match?.completeness) ?? optionalNumber(reading.completeness),
       metricInputs: match?.metricInputs || match?.metrics || {},
       coverage: match?.coverage,
+      proxy: match?.proxy === true || reading.proxy === true,
+      methodNote: (typeof match?.methodNote === 'string' && match.methodNote) || (typeof reading.methodNote === 'string' ? reading.methodNote : null),
     };
   });
 

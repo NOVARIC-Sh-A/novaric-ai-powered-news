@@ -877,6 +877,8 @@ function novaricApiPlugin() {
               score: ratingsOn && typeof storedScores[idx] === 'number' ? storedScores[idx] : null,
               peerAverage: typeof readings[dim.key]?.peerAverage === 'number' ? readings[dim.key].peerAverage : null,
               benchmark: typeof readings[dim.key]?.benchmark === 'number' ? readings[dim.key].benchmark : null,
+              proxy: readings[dim.key]?.proxy === true,
+              methodNote: readings[dim.key]?.methodNote || null,
             }));
             const emptyDossier = {
               promises: [],

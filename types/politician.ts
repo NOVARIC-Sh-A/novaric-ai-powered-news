@@ -30,6 +30,9 @@ export interface ParagonDimensionItem {
   verificationStatus?: 'under_review' | 'verified' | 'disputed' | string;
   metricInputs?: Record<string, any>;
   coverage?: any;
+  /** True when the published score uses a documented proxy rather than the direct input. */
+  proxy?: boolean;
+  methodNote?: string | null;
 }
 
 export interface DimensionReading {
@@ -39,6 +42,9 @@ export interface DimensionReading {
   confidenceLow?: number | null;
   confidenceHigh?: number | null;
   completeness?: number | null;
+  proxy?: boolean;
+  method?: string | null;
+  methodNote?: string | null;
 }
 
 export interface PromiseItem {

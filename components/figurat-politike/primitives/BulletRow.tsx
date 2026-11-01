@@ -2,7 +2,7 @@
 import React, { useState } from 'react';
 import { GitCommit, Clock, ExternalLink, FileSearch } from 'lucide-react';
 import { ParagonDimensionItem } from '../../../types/politician';
-import { AWAITING_DATA } from './awaiting';
+import { AWAITING_DATA, ProxyMethodBadge } from './awaiting';
 
 interface BulletRowProps {
   dimension: ParagonDimensionItem;
@@ -44,6 +44,8 @@ export const BulletRow: React.FC<BulletRowProps> = ({
     confidenceLow = null,
     confidenceHigh = null,
     completeness = null,
+    proxy = false,
+    methodNote = null,
   } = dimension as any;
 
   const hasInterval = typeof confidenceLow === 'number' && typeof confidenceHigh === 'number';
@@ -138,6 +140,7 @@ export const BulletRow: React.FC<BulletRowProps> = ({
               <ExternalLink className="w-2.5 h-2.5 text-amber-500 shrink-0 opacity-70" />
             </a>
           )}
+          {isScored && proxy ? <ProxyMethodBadge note={methodNote} /> : null}
 
           <div className="flex items-center gap-1 font-mono text-[11px] tabular-nums shrink-0">
             <span className={`font-bold ${isScored ? 'text-blue-600 dark:text-blue-400' : 'text-slate-400 dark:text-slate-500'}`}>
