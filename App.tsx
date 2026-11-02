@@ -28,6 +28,7 @@ import {
 } from './types';
 import { fetchMaragonReport } from './services/dataService';
 import { canonicalProfileId } from './utils/profileRedirects';
+import { findPolitician, politicianPathId } from './utils/politicianNavigation';
 import { LiveUpdateToast } from './components/LiveUpdateToast';
 import { FloatingHomeButton } from './components/FloatingHomeButton';
 import { useSeo } from './hooks/useSeo';
@@ -93,6 +94,7 @@ export const App: React.FC = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [selectedVipProfileForPage, setSelectedVipProfileForPage] =
     useState<VipProfile | null>(null);
+  const [selectedVipRouteId, setSelectedVipRouteId] = useState<string | number | null>(null);
   const [paragonAnalysisResult, setParagonAnalysisResult] =
     useState<FullProfileAnalysis | null>(null);
 
@@ -281,18 +283,11 @@ export const App: React.FC = () => {
           }
           if (polId) {
             const matched = data.profiles.find((p) => p.id.toString() === polId || p.numericId?.toString() === polId);
+            setSelectedVipRouteId(polId);
             if (matched) {
               setSelectedVipProfileForPage(matched);
             } else {
-              setSelectedVipProfileForPage({
-                id: polId,
-                numericId: parseInt(polId, 10) || undefined,
-                name: '',
-                imageUrl: '',
-                category: 'Politikë',
-                shortBio: '',
-                detailedBio: '',
-              });
+              setSelectedVipProfileForPage(null);
             }
             setCurrentPage('vipProfilePage');
             return;
@@ -345,19 +340,11 @@ export const App: React.FC = () => {
             // But we can check if it's a known static one first or just assume it will load.
             const vip = id ? data.profiles.find((p) =>
               p.id.toString() === id || p.numericId?.toString() === id || p.id.toString() === `vip${id}`) : undefined;
+            if (id) setSelectedVipRouteId(id);
             if (vip) {
                 setSelectedVipProfileForPage(vip);
             } else if (id) {
-                // Not in AppData yet (lazy): pass the id so the detail page fetches it.
-                setSelectedVipProfileForPage({
-                  id,
-                  numericId: parseInt(id.replace(/^vip/i, ''), 10) || undefined,
-                  name: '',
-                  imageUrl: '',
-                  category: 'Politikë',
-                  shortBio: '',
-                  detailedBio: '',
-                });
+                setSelectedVipProfileForPage(null);
             }
             found = true;
             break;
@@ -559,17 +546,25 @@ export const App: React.FC = () => {
 
       if (typeof data === 'object' && data !== null && 'id' in data) {
         profile = data as VipProfile;
-        profileId = profile.id as string | number;
+        profileId = (profile.id as string | number) || (profile as VipProfile).numericId;
       } else if (typeof data === 'string' || typeof data === 'number') {
         profileId = data;
-        profile =
-          currentProfiles.find((p) => p.id.toString() === data.toString()) ||
-          null;
+        profile = findPolitician(currentProfiles, data)
+          || findPolitician(politicianCards, data)
+          || null;
       }
 
+      const routeId = profileId ?? (profile ? profile.id : undefined);
+      setSelectedVipRouteId(routeId ?? null);
       setSelectedVipProfileForPage(profile);
       setCurrentPage(page);
-      updateUrl(page, profileId);
+      const pathId = politicianPathId(routeId);
+      if (pathId && window.location.protocol !== 'blob:') {
+        window.history.pushState({ page, id: pathId }, '', `/figurat-politike/${pathId}`);
+        setCurrentUrl(`${CANONICAL_URL}/figurat-politike/${pathId}`);
+      } else {
+        updateUrl(page, profileId);
+      }
       window.scrollTo(0, 0);
       closeMobileMenu();
       return;
@@ -636,10 +631,36 @@ export const App: React.FC = () => {
       }
     };
     window.addEventListener('app:navigate', handleCustomNavigate);
-    return () => window.removeEventListener('app:navigate', handleCustomNavigate);
+    const handlePopState = () => {
+      const path = window.location.pathname;
+      const params = new URLSearchParams(window.location.search);
+      const page = params.get('page');
+      if (page === 'politiciansPage' || path === '/figurat-politike' || path === '/figurat-politike/') {
+        setSelectedVipProfileForPage(null);
+        setSelectedVipRouteId(null);
+        setCurrentPage('politiciansPage');
+        return;
+      }
+      const match = path.match(/^\/figurat-politike\/([^/]+)\/?$/);
+      const raw = match ? decodeURIComponent(match[1]) : (page === 'vipProfilePage' ? params.get('id') : null);
+      if (raw) {
+        setSelectedVipProfileForPage(null);
+        setSelectedVipRouteId(raw);
+        setCurrentPage('vipProfilePage');
+      }
+    };
+    window.addEventListener('popstate', handlePopState);
+    return () => {
+      window.removeEventListener('app:navigate', handleCustomNavigate);
+      window.removeEventListener('popstate', handlePopState);
+    };
   }, []);
 
   const handleNavigateBack = () => {
+    if (currentPage === 'vipProfilePage') {
+      navigateTo('politiciansPage');
+      return;
+    }
     if (window.history.length > 1) {
       window.history.back();
     } else {
@@ -808,6 +829,7 @@ export const App: React.FC = () => {
       case 'vipProfilePage':
         return <VipProfilePageWrapper
             profile={selectedVipProfileForPage || ''}
+            id={selectedVipRouteId ?? undefined}
             onBack={handleNavigateBack}
             onNavigate={navigateTo as any}
             tvShows={appData.tvShows}

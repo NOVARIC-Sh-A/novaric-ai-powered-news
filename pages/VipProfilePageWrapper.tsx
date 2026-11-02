@@ -4,6 +4,7 @@ import { VipProfilePage, PresenterAnalysisPage, PoliticianProfilePage } from "..
 import { VipProfile, FullProfileAnalysis, TvShowData } from "../types";
 import { runAnalysisForVip } from "../services/paragonEngine";
 import { fetchPoliticianProfile } from "../services/apiService";
+import { canonicalPoliticianKey, profileViewState } from "../utils/politicianNavigation";
 
 interface VipProfilePageWrapperProps {
   profile: VipProfile | FullProfileAnalysis | string;
@@ -32,15 +33,16 @@ export const VipProfilePageWrapper: React.FC<VipProfilePageWrapperProps> = (prop
   const [detail, setDetail] = useState<VipProfile | null>(null);
   const [loading, setLoading] = useState<boolean>(true);
 
-  // Determine the primary ID to fetch from. 
-  // Priority: Passed Object ID > Passed String ID > propId (from URL)
+  // A numeric id from the list (`2`) and a profile id (`vip2`) are the same person.
   const activeId = useMemo(() => {
     if (profile && typeof profile === 'object') {
-      if ("id" in (profile as object)) return (profile as any).id;
+      if ("id" in (profile as object) && (profile as VipProfile).id) {
+        return canonicalPoliticianKey((profile as VipProfile).id) || (profile as VipProfile).id;
+      }
       if ("profileInput" in (profile as object)) return (profile as FullProfileAnalysis).profileInput.personal.fullName;
     }
-    if (typeof profile === 'string' && profile) return profile;
-    if (propId) return propId;
+    if (typeof profile === 'string' && profile) return canonicalPoliticianKey(profile) || profile;
+    if (propId != null && String(propId) !== '') return canonicalPoliticianKey(propId) || propId;
     return null;
   }, [propId, profile]);
 
@@ -52,6 +54,7 @@ export const VipProfilePageWrapper: React.FC<VipProfilePageWrapperProps> = (prop
 
     let alive = true;
     setLoading(true);
+    setDetail(null);
 
     fetchPoliticianProfile(activeId)
       .then((data) => {
@@ -84,9 +87,13 @@ export const VipProfilePageWrapper: React.FC<VipProfilePageWrapperProps> = (prop
     return c.includes("polit") || isParty;
   }, [vipProfile, profile, isProfileObject]);
 
-  if (loading && !detail && typeof profile === 'string') {
+  const namedProfile = detail
+    || (isProfileObject && (profile as VipProfile).name ? (profile as VipProfile) : null);
+  const view = profileViewState({ loading, profile: namedProfile });
+
+  if (view === 'loading') {
     return (
-      <div className="container mx-auto p-20 text-center">
+      <div className="container mx-auto p-20 text-center" data-profile-status="loading">
         <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-primary-500 mx-auto mb-4"></div>
         <p className="text-slate-600 dark:text-slate-300 font-medium">Duke sinkronizuar të dhënat e profilit...</p>
       </div>
@@ -129,10 +136,16 @@ export const VipProfilePageWrapper: React.FC<VipProfilePageWrapperProps> = (prop
   }
 
   return (
-    <div className="container mx-auto p-8 text-center">
+    <div className="container mx-auto p-8 text-center" data-profile-status="missing">
       <h2 className="text-2xl font-bold text-rose-600">Gabim</h2>
       <p className="text-slate-600 dark:text-slate-300">Të dhënat e profilit nuk u gjetën.</p>
-      <button onClick={onBack} className="mt-4 px-4 py-2 bg-primary-600 text-white rounded shadow hover:bg-primary-700 transition-colors">Kthehu Pas</button>
+      <button
+        type="button"
+        onClick={() => onNavigate('politiciansPage')}
+        className="mt-4 px-4 py-2 bg-primary-600 text-white rounded shadow hover:bg-primary-700 transition-colors"
+      >
+        Kthehu Pas
+      </button>
     </div>
   );
 };
