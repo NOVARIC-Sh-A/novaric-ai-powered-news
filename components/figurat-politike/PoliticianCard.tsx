@@ -5,7 +5,7 @@ import { VipProfile } from '../../types';
 import { PoliticianDetail, ParagonDimensionItem, CANONICAL_PARAGON_DIMENSIONS } from '../../types/politician';
 import { ScoreRing } from './primitives/ScoreRing';
 import { BulletRow } from './primitives/BulletRow';
-import { CountFingerprint } from './CountFingerprint';
+import { RadarChart } from './primitives/RadarChart';
 import { ZodiacChip } from './primitives/ZodiacChip';
 import { TabPanel } from './primitives/TabPanel';
 import { AWAITING_DATA, ratingNoteForCoverage, PartialRatingBadge } from './primitives/awaiting';
@@ -297,10 +297,39 @@ export const PoliticianCard: React.FC<PoliticianCardProps> = ({
         </div>
       </div>
 
-      <CountFingerprint
-        profileId={target.id || target.numericId}
-        editorialScore={editorialRemark?.editorialScore ?? null}
-      />
+      <div className="mb-6 grid grid-cols-1 gap-6 lg:grid-cols-12" data-legacy-fingerprint="true">
+        <div className="flex flex-col items-center rounded-3xl border border-slate-200 bg-white p-6 shadow-sm dark:border-slate-800 dark:bg-slate-900 lg:col-span-5">
+          <div className="mb-2 w-full text-left">
+            <h3 className="text-sm font-black uppercase tracking-wider text-slate-800 dark:text-slate-200">
+              PARAGON® Fingerprint (7 Dimensione)
+            </h3>
+            <p className="mt-0.5 text-[11px] text-slate-400">
+              Pikët e ruajtura D1–D7. Një dimension pa vlerë mbetet në pritje. [Stored D1–D7 scores. A dimension without a value stays awaiting data.]
+            </p>
+          </div>
+          <RadarChart
+            dimensions={displayedDimensions}
+            size={280}
+            editorialScore={editorialRemark?.editorialScore ?? null}
+          />
+        </div>
+        <div className="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm dark:border-slate-800 dark:bg-slate-900 lg:col-span-7">
+          <h3 className="mb-4 text-sm font-black uppercase tracking-wider text-slate-800 dark:text-slate-200">
+            D1–D7
+          </h3>
+          <div className="divide-y divide-slate-100 dark:divide-slate-800">
+            {displayedDimensions.map((dim) => (
+              <BulletRow
+                key={dim.key}
+                dimension={dim}
+                onOpenLineage={(id) => setSelectedLineageId(id)}
+                onNavigateToMethodology={onNavigateToMethodology}
+                onOpenEvidence={(key) => setEvidenceKey(key)}
+              />
+            ))}
+          </div>
+        </div>
+      </div>
 
       {scoringSuspended ? (
         <div className="mb-6 p-4 rounded-2xl bg-amber-50/90 dark:bg-amber-950/40 border border-amber-200 dark:border-amber-800/60 shadow-xs flex items-start gap-3.5">
@@ -328,31 +357,7 @@ export const PoliticianCard: React.FC<PoliticianCardProps> = ({
         </div>
       )}
 
-      {scoringSuspended ? <FactualObservatory profileId={target.id || target.numericId} /> : null}
-
-      <div className="mb-6 rounded-3xl border border-slate-200 bg-white p-6 shadow-sm dark:border-slate-800 dark:bg-slate-900">
-        <div className="mb-4 flex items-center justify-between">
-          <div>
-            <h3 className="text-sm font-black uppercase tracking-wider text-slate-800 dark:text-slate-200">
-              Dimensionet [Dimensions]
-            </h3>
-            <p className="mt-0.5 text-[11px] text-slate-400">
-              {scoringSuspended ? 'Në kalibrim. Pa pikë. [In calibration. No score.]' : `Mbulim ${coverageLabel}`}
-            </p>
-          </div>
-        </div>
-        <div className="divide-y divide-slate-100 dark:divide-slate-800">
-          {displayedDimensions.map((dim) => (
-            <BulletRow
-              key={dim.key}
-              dimension={dim}
-              onOpenLineage={(id) => setSelectedLineageId(id)}
-              onNavigateToMethodology={onNavigateToMethodology}
-              onOpenEvidence={(key) => setEvidenceKey(key)}
-            />
-          ))}
-        </div>
-      </div>
+      <FactualObservatory profileId={target.id || target.numericId} />
 
       <EditorialRemarksCard remark={editorialRemark} paragonComposite={scoringSuspended ? null : paragonComposite} />
 
