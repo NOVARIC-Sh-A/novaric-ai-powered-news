@@ -2,6 +2,7 @@
 import React from 'react';
 import { VipProfile, Page } from '../types';
 import { PoliticiansDatabase } from './figurat-politike/PoliticiansDatabase';
+import { findPolitician } from '../utils/politicianNavigation';
 
 interface PoliticiansPageProps {
   profiles: VipProfile[];
@@ -22,7 +23,7 @@ export const PoliticiansPage: React.FC<PoliticiansPageProps> = ({
 
   const handleSelectPolitician = (id: string | number) => {
     // Find matching profile if present
-    const profile = initialList.find(p => p.id === id || p.numericId === id || p.id === `vip${id}`);
+    const profile = findPolitician(initialList, id);
     onNavigate('vipProfilePage', profile || id);
   };
 

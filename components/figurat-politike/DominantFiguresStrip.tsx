@@ -35,11 +35,7 @@ export const DominantFiguresStrip: React.FC<DominantFiguresStripProps> = ({
         const handleClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
           if (onSelectPolitician) {
             e.preventDefault();
-            // Update browser location cleanly for deep linking
-            if (window.history && window.history.pushState) {
-              window.history.pushState({}, '', linkHref);
-            }
-            onSelectPolitician(targetId);
+            onSelectPolitician(item.id || targetId);
           }
         };
 

@@ -83,10 +83,7 @@ export const PoliticianGridCard: React.FC<PoliticianGridCardProps> = ({
     }
     if (onSelectPolitician) {
       e.preventDefault();
-      if (window.history && window.history.pushState) {
-        window.history.pushState({}, '', linkHref);
-      }
-      onSelectPolitician(targetId);
+      onSelectPolitician(targetPolitician.id || targetId);
     }
   };
 
