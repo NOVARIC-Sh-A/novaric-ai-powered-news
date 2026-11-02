@@ -49,10 +49,10 @@ describe('Editorial remarks stay out of the PARAGON score', () => {
     assert.doesNotMatch(blob, /daja|Bakaj|uncle|telashe/i);
     const exportData = JSON.parse(fs.readFileSync(path.resolve(process.cwd(), 'db/paragon_scores_export.json'), 'utf8'));
     const vip55 = exportData.profiles.find((profile: { id: string }) => profile.id === 'vip55');
-    const vip219 = exportData.profiles.find((profile: { id: string }) => profile.id === 'vip219');
     assert.equal(vip55.parliamentaryStatus, 'active_mp');
     assert.equal(vip55.composite, 84.8);
-    assert.equal(vip219.parliamentaryStatus, 'former_mp');
+    assert.equal(exportData.profileRedirects.vip219, 'vip55');
+    assert.equal(exportData.profiles.find((profile: { id: string }) => profile.id === 'vip219'), undefined);
     const active = exportData.profiles.filter((profile: { parliamentaryStatus: string }) => profile.parliamentaryStatus === 'active_mp');
     assert.equal(active.length, 140);
   });
