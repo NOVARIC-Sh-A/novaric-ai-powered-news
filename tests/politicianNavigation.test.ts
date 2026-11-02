@@ -20,6 +20,8 @@ describe('List to profile navigation', () => {
     assert.equal(politicianPathId('vip55'), '55');
     assert.equal(politicianPathId(2), '2');
     assert.equal(findPolitician([], 2), undefined);
+    assert.equal(findPolitician([{ id: 'vip106', numericId: 106, name: 'Zija Ismaili' }], 'vip129')?.id, 'vip106');
+    assert.equal(findPolitician([{ id: 'vip103', numericId: 103, name: 'Ramadan Likaj' }], 'vip190')?.id, 'vip103');
   });
 
   it('does not call the profile missing before the lookup has finished', () => {

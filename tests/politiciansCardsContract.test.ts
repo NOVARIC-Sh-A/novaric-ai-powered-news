@@ -69,7 +69,7 @@ describe('NOVARIC® PARAGON Politicians Cards & Pipeline Contract (P1)', () => {
       assert.ok(!raw.includes('media.novaric.al/politicians'), `${card.id} references a NOVARIC copy`);
       assert.ok(!raw.includes('MaleProfile') && !raw.includes('FemaleProfile'), `${card.id} uses mock photo`);
     });
-    assert.equal(official + awaiting, 277);
+    assert.equal(official + awaiting, 233);
     assert.equal(awaiting, 25, 'profiles with no formal party, government, or parliament portrait');
   });
 
@@ -85,11 +85,12 @@ describe('NOVARIC® PARAGON Politicians Cards & Pipeline Contract (P1)', () => {
       assert.equal(c.imageUrl, `/politicians/official/${id}.jpg`);
       assert.ok(String(c.photo_source_url).includes('pd.al'), `${id} should cite pd.al`);
     });
-    ['vip6', 'vip54', 'vip19', 'vip232'].forEach((id) => {
+    ['vip6', 'vip19', 'vip232'].forEach((id) => {
       const c: any = byId.get(id);
       assert.equal(c.imageUrl, `/politicians/official/${id}.jpg`);
       assert.ok(fs.existsSync(path.resolve(process.cwd(), `public/politicians/official/${id}.jpg`)));
     });
+    assert.equal(data.profileRedirects.vip54, 'vip6');
     assert.ok(String((byId.get('vip6') as any).photo_source_url).includes('ps.al'));
     assert.ok(String((byId.get('vip19') as any).photo_source_url).includes('psd.al'));
     assert.ok(String((byId.get('vip232') as any).photo_source_url).includes('pd.al'));

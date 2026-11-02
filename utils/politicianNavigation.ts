@@ -1,3 +1,5 @@
+import { canonicalProfileId } from './profileRedirects';
+
 export interface PoliticianRef {
   id?: string | number;
   numericId?: number | string | null;
@@ -9,9 +11,13 @@ export interface PoliticianRef {
 export function canonicalPoliticianKey(id: string | number | null | undefined): string {
   const raw = String(id ?? '').trim();
   if (!raw) return '';
-  const digits = raw.replace(/^vip/i, '');
-  if (/^\d+$/.test(digits)) return `vip${Number(digits)}`;
-  return raw;
+  const direct = canonicalProfileId(raw);
+  const base = direct === raw ? raw : direct;
+  const digits = base.replace(/^vip/i, '');
+  if (/^\d+$/.test(digits)) {
+    return canonicalProfileId(`vip${Number(digits)}`);
+  }
+  return canonicalProfileId(base);
 }
 
 export function politicianPathId(id: string | number | null | undefined): string {
