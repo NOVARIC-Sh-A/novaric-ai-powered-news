@@ -2,7 +2,8 @@ import { describe, it } from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import path from 'node:path';
-import { findPolitician, politicianPathId, profileViewState } from '../utils/politicianNavigation';
+import { findPolitician, politicianPathId, profileViewState, routeFromLocation } from '../utils/politicianNavigation';
+import { canonicalProfileId } from '../utils/profileRedirects';
 
 const read = (relative: string) => fs.readFileSync(path.resolve(process.cwd(), relative), 'utf8');
 
@@ -43,5 +44,64 @@ describe('List to profile navigation', () => {
     assert.doesNotMatch(card, /pushState\(\{\}, '', linkHref\)/);
     assert.match(app, /if \(currentPage === 'vipProfilePage'\)/);
     assert.match(app, /navigateTo\('politiciansPage'\)/);
+    assert.match(app, /pushState\(\{ page: 'politiciansPage' \}, '', POLITICIANS_LIST_PATH\)/);
+    const pop = app.indexOf('const handlePopState');
+    const profileFirst = app.indexOf("located?.page === 'vipProfilePage'", pop);
+    const queryList = app.indexOf("page === 'politiciansPage'", pop);
+    assert.ok(profileFirst > pop && profileFirst < queryList);
+  });
+
+  it('opens /figurat-politike/270 even when the list query is still on the URL', () => {
+    const route = routeFromLocation('/figurat-politike/270', '?page=politiciansPage');
+    assert.deepEqual(route, { page: 'vipProfilePage', id: 'vip270' });
+    assert.equal(canonicalProfileId('270'), '270');
+    assert.equal(canonicalProfileId('vip270'), 'vip270');
+    assert.deepEqual(routeFromLocation('/figurat-politike', ''), { page: 'politiciansPage' });
+    assert.deepEqual(routeFromLocation('/figurat-politike/', ''), { page: 'politiciansPage' });
+    assert.deepEqual(routeFromLocation('/', '?page=politiciansPage'), { page: 'politiciansPage' });
+    assert.deepEqual(routeFromLocation('/figurat-politike/54', '?page=politiciansPage'), { page: 'vipProfilePage', id: 'vip6' });
+    assert.deepEqual(routeFromLocation('/figurat-politike/vip129', ''), { page: 'vipProfilePage', id: 'vip106' });
+  });
+
+  it('resolves every list card and every removed duplicate', () => {
+    const data = JSON.parse(read('db/paragon_scores_export.json'));
+    const profiles = data.profiles as Array<{ id: string; numericId: number; name: string }>;
+    assert.equal(profiles.length, 233);
+    for (const profile of profiles) {
+      for (const id of [profile.id, profile.numericId, String(profile.numericId)]) {
+        const found = findPolitician(profiles, id);
+        assert.equal(found?.id, profile.id, `list card ${id} did not open ${profile.name}`);
+        assert.equal(found?.name, profile.name);
+      }
+    }
+    const gaxho = findPolitician(profiles, 270);
+    assert.equal(gaxho?.id, 'vip270');
+    assert.equal(gaxho?.name, 'Agron Gaxho');
+    assert.equal(profiles.some((profile) => profile.id === 'vip270'), true);
+
+    const snap = JSON.parse(read('data/paragon/duplicate_snapshots_2026-11-02.json')) as {
+      profiles: Array<{ id: string; numericId: number }>;
+      groups: Array<{ canonical: string; duplicates: string[] }>;
+    };
+    assert.equal(snap.profiles.length, 44);
+    for (const removed of snap.profiles) {
+      assert.equal(profiles.some((profile) => profile.id === removed.id), false, removed.id);
+      for (const id of [removed.id, String(removed.numericId)]) {
+        const canonical = canonicalProfileId(id);
+        assert.notEqual(canonical, id, `${id} is still a public card`);
+        const found = findPolitician(profiles, canonical);
+        assert.ok(found?.name, `${id} does not redirect to a profile`);
+        assert.equal(found?.id, canonical);
+      }
+    }
+    for (const group of snap.groups) {
+      for (const duplicate of group.duplicates) {
+        const numeric = duplicate.replace(/^vip/i, '');
+        assert.equal(canonicalProfileId(duplicate), group.canonical);
+        assert.equal(canonicalProfileId(numeric), group.canonical);
+        assert.equal(findPolitician(profiles, duplicate)?.id, group.canonical);
+        assert.equal(findPolitician(profiles, numeric)?.id, group.canonical);
+      }
+    }
   });
 });
