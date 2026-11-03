@@ -75,16 +75,27 @@ export const PoliticianGridCard: React.FC<PoliticianGridCardProps> = ({
   const partDob = formattedDob || '—';
   const metaLine = `${partZone} · ${partDob}`;
 
-  const handleClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
+  const openProfile = () => {
     if (onClick) {
-      e.preventDefault();
       onClick();
       return;
     }
     if (onSelectPolitician) {
-      e.preventDefault();
       onSelectPolitician(targetPolitician.id || targetId);
     }
+  };
+
+  const handleClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    if (!onClick && !onSelectPolitician) return;
+    e.preventDefault();
+    openProfile();
+  };
+
+  const handleKeyDown = (e: React.KeyboardEvent<HTMLAnchorElement>) => {
+    if (e.key !== 'Enter' && e.key !== ' ') return;
+    if (!onClick && !onSelectPolitician) return;
+    e.preventDefault();
+    openProfile();
   };
 
   // Staggered fade-in (25ms steps) per spec §3.F
@@ -95,6 +106,7 @@ export const PoliticianGridCard: React.FC<PoliticianGridCardProps> = ({
       id={`politician-card-${targetId}`}
       href={linkHref}
       onClick={handleClick}
+      onKeyDown={handleKeyDown}
       className={`group relative rounded-lg border flex flex-col justify-between overflow-hidden transition-all duration-200 cursor-pointer select-none text-left ${className}`}
       style={
         {
@@ -116,7 +128,7 @@ export const PoliticianGridCard: React.FC<PoliticianGridCardProps> = ({
     >
       {/* Fixed portrait frame. Cover + face bias; no stretch, no letterbox. */}
       <div
-        className="relative w-full aspect-[3/4] overflow-hidden bg-slate-200 dark:bg-slate-800"
+        className="relative w-full aspect-[3/4] overflow-hidden bg-slate-200 dark:bg-slate-800 pointer-events-none"
         style={{
           borderBottom: '2px solid var(--pc)',
         }}
@@ -172,11 +184,12 @@ export const PoliticianGridCard: React.FC<PoliticianGridCardProps> = ({
       </div>
 
       {/* Card Body */}
-      <div className="p-2.5 flex-1 flex flex-col justify-between">
+      <div className="p-2.5 flex-1 flex flex-col justify-between pointer-events-none">
         <div>
-          {/* Name: 13px / 600 navy */}
+          {/* Name: 13px / 600 navy. Hits pass through to the card link. */}
           <div
-            className="font-semibold truncate transition-colors group-hover:text-red-600"
+            data-politician-name=""
+            className="font-semibold truncate transition-colors group-hover:text-red-600 pointer-events-none"
             style={{
               fontSize: '13px',
               color: 'var(--nv-navy)',
@@ -233,7 +246,7 @@ export const PoliticianGridCard: React.FC<PoliticianGridCardProps> = ({
           style={{ borderTop: '1px solid var(--nv-card-border)' }}
         >
           {/* 7 dots */}
-          <div className="flex items-center gap-1">
+          <div className="flex items-center gap-1 pointer-events-auto">
             {CANONICAL_PARAGON_DIMENSIONS.map((dim, idx) => {
               const val = dimensions7[idx];
               const dotColor = band(val);

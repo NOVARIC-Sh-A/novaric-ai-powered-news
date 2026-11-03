@@ -32,11 +32,21 @@ export const DominantFiguresStrip: React.FC<DominantFiguresStripProps> = ({
         const targetId = item.numericId || item.id;
         const linkHref = `/figurat-politike/${targetId}`;
 
+        const openProfile = () => {
+          if (onSelectPolitician) onSelectPolitician(item.id || targetId);
+        };
+
         const handleClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
-          if (onSelectPolitician) {
-            e.preventDefault();
-            onSelectPolitician(item.id || targetId);
-          }
+          if (!onSelectPolitician) return;
+          e.preventDefault();
+          openProfile();
+        };
+
+        const handleKeyDown = (e: React.KeyboardEvent<HTMLAnchorElement>) => {
+          if (e.key !== 'Enter' && e.key !== ' ') return;
+          if (!onSelectPolitician) return;
+          e.preventDefault();
+          openProfile();
         };
 
         const primaryRole = (item as any).primaryRole || AWAITING_DATA;
@@ -47,6 +57,7 @@ export const DominantFiguresStrip: React.FC<DominantFiguresStripProps> = ({
             id={`dominant-figure-${index + 1}`}
             href={linkHref}
             onClick={handleClick}
+            onKeyDown={handleKeyDown}
             className="group relative rounded-lg p-3 shadow-sm border transition-all duration-200 block text-left hover:-translate-y-0.5 cursor-pointer"
             style={{
               backgroundColor: 'var(--nv-card-bg)',
@@ -55,7 +66,8 @@ export const DominantFiguresStrip: React.FC<DominantFiguresStripProps> = ({
               borderTopColor: pc,
             }}
           >
-            {/* Party & Role Tag */}
+            {/* Party, photo and name pass clicks through to the card link. */}
+            <div className="pointer-events-none">
             <div className="flex items-center justify-between gap-1.5 mb-2">
               <span
                 className="text-[11px] font-black uppercase tracking-wider px-1.5 py-0.5 rounded"
@@ -110,7 +122,8 @@ export const DominantFiguresStrip: React.FC<DominantFiguresStripProps> = ({
               <div className="min-w-0 flex-1">
                 {/* Name line */}
                 <div
-                  className="font-bold text-[13.5px] truncate group-hover:text-red-600 transition-colors"
+                  data-politician-name=""
+                  className="font-bold text-[13.5px] truncate group-hover:text-red-600 transition-colors pointer-events-none"
                   style={{ color: 'var(--nv-navy)' }}
                 >
                   {item.name}
@@ -145,6 +158,7 @@ export const DominantFiguresStrip: React.FC<DominantFiguresStripProps> = ({
                   backgroundColor: 'var(--nv-card-border)',
                 }}
               />
+            </div>
             </div>
           </a>
         );

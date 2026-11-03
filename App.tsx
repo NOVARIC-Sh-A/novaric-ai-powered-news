@@ -28,7 +28,7 @@ import {
 } from './types';
 import { fetchMaragonReport } from './services/dataService';
 import { canonicalProfileId } from './utils/profileRedirects';
-import { findPolitician, politicianPathId } from './utils/politicianNavigation';
+import { findPolitician, politicianPathId, routeFromLocation, POLITICIANS_LIST_PATH } from './utils/politicianNavigation';
 import { LiveUpdateToast } from './components/LiveUpdateToast';
 import { FloatingHomeButton } from './components/FloatingHomeButton';
 import { useSeo } from './hooks/useSeo';
@@ -274,25 +274,27 @@ export const App: React.FC = () => {
       let page = params.get('page') as Page;
       const id = params.get('id');
 
+      const located = routeFromLocation(pathname, window.location.search);
+      if (located?.page === 'vipProfilePage') {
+        const requestedId = decodeURIComponent((pathname.replace(/\/+$/, '').split('/').pop()) || '');
+        const polId = canonicalProfileId(requestedId) || located.id;
+        const cleanPath = `/figurat-politike/${polId}`;
+        if (
+          typeof window !== 'undefined' &&
+          window.location.protocol !== 'blob:' &&
+          (polId !== requestedId || window.location.search)
+        ) {
+          window.history.replaceState({ page: 'vipProfilePage', id: polId }, '', cleanPath);
+        }
+        setSelectedVipRouteId(polId);
+        setSelectedVipProfileForPage(findPolitician(data.profiles, polId) || null);
+        setCurrentPage('vipProfilePage');
+        setCurrentUrl(`${CANONICAL_URL}${cleanPath}`);
+        return;
+      }
+
       if (!page) {
-        if (pathname.startsWith('/figurat-politike/')) {
-          const requestedId = pathname.replace('/figurat-politike/', '').split('/')[0];
-          const polId = canonicalProfileId(requestedId);
-          if (polId && polId !== requestedId && typeof window !== 'undefined') {
-            window.history.replaceState({}, '', `/figurat-politike/${polId}`);
-          }
-          if (polId) {
-            const matched = data.profiles.find((p) => p.id.toString() === polId || p.numericId?.toString() === polId);
-            setSelectedVipRouteId(polId);
-            if (matched) {
-              setSelectedVipProfileForPage(matched);
-            } else {
-              setSelectedVipProfileForPage(null);
-            }
-            setCurrentPage('vipProfilePage');
-            return;
-          }
-        } else if (pathname === '/figurat-politike' || pathname === '/figurat-politike/') {
+        if (pathname === '/figurat-politike' || pathname === '/figurat-politike/') {
           setCurrentPage('politiciansPage');
           return;
         } else if (pathname === '/profili-i-autorit' || pathname === '/profili-i-autorit/' || pathname === '/author-profile' || pathname === '/author-profile/') {
@@ -614,7 +616,12 @@ export const App: React.FC = () => {
     setMaragonAnalysisResult(null);
     setMaragonReportEntity(null);
     setCurrentPage(page);
-    updateUrl(page, (typeof data === 'string' || typeof data === 'number') ? data : undefined);
+    if (page === 'politiciansPage' && window.location.protocol !== 'blob:') {
+      window.history.pushState({ page: 'politiciansPage' }, '', POLITICIANS_LIST_PATH);
+      setCurrentUrl(`${CANONICAL_URL}${POLITICIANS_LIST_PATH}`);
+    } else {
+      updateUrl(page, (typeof data === 'string' || typeof data === 'number') ? data : undefined);
+    }
     window.scrollTo(0, 0);
     closeMobileMenu();
   };
@@ -635,18 +642,19 @@ export const App: React.FC = () => {
       const path = window.location.pathname;
       const params = new URLSearchParams(window.location.search);
       const page = params.get('page');
-      if (page === 'politiciansPage' || path === '/figurat-politike' || path === '/figurat-politike/') {
+      const located = routeFromLocation(path, window.location.search);
+      if (located?.page === 'vipProfilePage') {
+        const requestedId = decodeURIComponent((path.replace(/\/+$/, '').split('/').pop()) || located.id);
+        setSelectedVipProfileForPage(null);
+        setSelectedVipRouteId(canonicalProfileId(requestedId) || located.id);
+        setCurrentPage('vipProfilePage');
+        return;
+      }
+      if (located?.page === 'politiciansPage' || page === 'politiciansPage') {
         setSelectedVipProfileForPage(null);
         setSelectedVipRouteId(null);
         setCurrentPage('politiciansPage');
         return;
-      }
-      const match = path.match(/^\/figurat-politike\/([^/]+)\/?$/);
-      const raw = match ? decodeURIComponent(match[1]) : (page === 'vipProfilePage' ? params.get('id') : null);
-      if (raw) {
-        setSelectedVipProfileForPage(null);
-        setSelectedVipRouteId(raw);
-        setCurrentPage('vipProfilePage');
       }
     };
     window.addEventListener('popstate', handlePopState);
