@@ -1,7 +1,7 @@
 import React from 'react';
+import { CityWeather } from './CityWeather';
+import { WEATHER_CITIES } from '../utils/openMeteoWeather';
 
-// This is a placeholder component to ensure syntactical correctness.
-// It is not currently used in the application.
 export const TiranaWeather: React.FC = () => {
-    return null;
+  return <CityWeather city={WEATHER_CITIES.tirana} />;
 };

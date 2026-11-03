@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 /* Corrected typo: ChevronDownIconIcon -> ChevronDownIcon */
 import { BookOpenIcon, BriefcaseIcon, ChartBarIcon, LightBulbIcon, CpuChipIcon, BeakerIcon, ChevronDownIcon, UserGroupIcon, ScaleIcon, ShieldCheckIcon, GlobeEuropeAfricaIcon, DocumentTextIcon } from './icons';
 import { ShkoderWeather } from './ShkoderWeather';
+import { TiranaWeather } from './TiranaWeather';
 import { NovaricBrand } from './NovaricBrand';
 
 interface RightSidebarProps {
@@ -127,6 +128,7 @@ export const RightSidebar: React.FC<RightSidebarProps> = (props) => {
 
   return (
     <div className="h-full flex flex-col space-y-4">
+      <TiranaWeather />
       <ShkoderWeather />
 
       {/* 1. Public Profiles */}
