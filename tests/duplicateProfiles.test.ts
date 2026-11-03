@@ -48,7 +48,7 @@ describe('Duplicate politician profiles are merged', () => {
         members.set(member, profile.id);
       }
     }
-    assert.equal(profiles.length, 233);
+    assert.equal(profiles.length, 234);
   });
 
   it('sends the known duplicate ids, and Likaj and Gogu, to the canonical card', () => {

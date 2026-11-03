@@ -2,7 +2,7 @@ import { describe, it } from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import path from 'node:path';
-import { findPolitician, politicianPathId, profileViewState, routeFromLocation } from '../utils/politicianNavigation';
+import { findPolitician, politicianPathId, profileViewState, routeFromLocation, selectMainProfiles } from '../utils/politicianNavigation';
 import { canonicalProfileId } from '../utils/profileRedirects';
 
 const read = (relative: string) => fs.readFileSync(path.resolve(process.cwd(), relative), 'utf8');
@@ -66,7 +66,7 @@ describe('List to profile navigation', () => {
   it('resolves every list card and every removed duplicate', () => {
     const data = JSON.parse(read('db/paragon_scores_export.json'));
     const profiles = data.profiles as Array<{ id: string; numericId: number; name: string }>;
-    assert.equal(profiles.length, 233);
+    assert.equal(profiles.length, 234);
     for (const profile of profiles) {
       for (const id of [profile.id, profile.numericId, String(profile.numericId)]) {
         const found = findPolitician(profiles, id);
