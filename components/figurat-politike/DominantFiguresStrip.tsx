@@ -5,6 +5,7 @@ import { partyColor, normalizePartySlug } from '../../lib/brand-tokens';
 import { AWAITING_DATA, PartialRatingBadge } from './primitives/awaiting';
 import { ZodiacChip } from './primitives/ZodiacChip';
 import { resolveOfficialPhotoUrl } from '../../utils/officialPhoto';
+import { selectMainProfiles } from '../../utils/politicianNavigation';
 import { useParagonRatingsEnabled } from './useParagonRatings';
 
 interface DominantFiguresStripProps {
@@ -18,7 +19,7 @@ export const DominantFiguresStrip: React.FC<DominantFiguresStripProps> = ({
 }) => {
   // Key figures for overview strip
   const ratingsOn = useParagonRatingsEnabled();
-  const topFigures = politicians.slice(0, 4);
+  const topFigures = selectMainProfiles(politicians);
 
   if (topFigures.length === 0) return null;
 

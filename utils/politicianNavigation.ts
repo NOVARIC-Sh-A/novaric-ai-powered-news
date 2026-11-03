@@ -57,6 +57,18 @@ export function routeFromLocation(pathname: string, search = ''): PoliticianRout
   return null;
 }
 
+/** The featured strip keeps its current head and then anyone marked mainProfile. */
+export function selectMainProfiles<T extends PoliticianRef & { mainProfile?: boolean }>(
+  politicians: T[] | null | undefined,
+  headCount = 4,
+): T[] {
+  const list = politicians ?? [];
+  const head = list.slice(0, headCount);
+  const seen = new Set(head.map((person) => String(person.id)));
+  const extras = list.filter((person) => person.mainProfile === true && !seen.has(String(person.id)));
+  return [...head, ...extras];
+}
+
 export function findPolitician<T extends PoliticianRef>(list: T[] | null | undefined, id: string | number): T | undefined {
   const key = canonicalPoliticianKey(id);
   if (!key || !list) return undefined;

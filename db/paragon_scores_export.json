@@ -4,7 +4,7 @@
   "model_version": "v1.0",
   "period_end": "2026-10-31",
   "computed_at": "2026-11-01T08:23:32.723122+00:00",
-  "total_profiles": 233,
+  "total_profiles": 234,
   "scored_count": 141,
   "scoring_suspended": false,
   "scoring_suspension_notice": null,
@@ -74997,6 +74997,220 @@
       },
       "peerAverage": 72.9,
       "benchmark": 72.9
+    },
+    {
+      "id": "vip282",
+      "numericId": 282,
+      "uuid": "p-0282",
+      "name": "Nard Ndoka",
+      "category": "Politikë (PDK)",
+      "party": "PDK",
+      "primaryRole": "Kryetar i Partisë Demokristiane të Shqipërisë",
+      "secondaryRoles": [
+        "Ish-ministër i Shëndetësisë (2007–2008)"
+      ],
+      "parliamentaryStatus": "not_an_active_mp",
+      "detentionStatus": "none",
+      "caseStatus": "none",
+      "presumptionOfInnocence": true,
+      "legalStatusAsOf": null,
+      "legalStatusSummary": null,
+      "imageUrl": null,
+      "photo_source_url": null,
+      "photoPending": true,
+      "photoStatus": "Në pritje të të dhënave / Awaiting data",
+      "shortBio": null,
+      "detailedBio": null,
+      "dynamicScore": null,
+      "composite": null,
+      "compositeDelta": null,
+      "periodEnd": null,
+      "paragonDimensions": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "dateOfBirth": "1963-05-18",
+      "dateOfBirthVerificationStatus": null,
+      "dateOfBirthSourceUrl": "https://www.wikidata.org/wiki/Q6965709",
+      "dateOfBirthVerifiedAt": null,
+      "placeOfBirth": "Laç",
+      "electoralZone": null,
+      "dimsSource": null,
+      "last_updated": "2026-11-03T09:00:00+00:00",
+      "scoring_suspended": false,
+      "scoring_suspension_notice": null,
+      "politicianId": 282,
+      "mainProfile": true,
+      "fieldSources": {
+        "fullName": {
+          "value": "Nard Ndoka",
+          "sourceUrl": "https://kqz.gov.al/lista-e-partive-politike",
+          "retrievedAt": "2026-11-03",
+          "notes": "KQZ party register lists this name as chair of Partia Demokristiane e Shqipërisë."
+        },
+        "party": {
+          "value": "PDK",
+          "sourceUrl": "https://kqz.gov.al/lista-e-partive-politike",
+          "retrievedAt": "2026-11-03",
+          "notes": "Official KQZ list, year 2025: Partia Demokristiane e Shqiperise, initials PDK, chair Nard Ndoka."
+        },
+        "currentRole": {
+          "value": "Kryetar i Partisë Demokristiane të Shqipërisë",
+          "sourceUrl": "https://kqz.gov.al/lista-e-partive-politike",
+          "retrievedAt": "2026-11-03"
+        },
+        "ministerialPost": {
+          "value": "Ministër i Shëndetësisë, 2007–2008",
+          "sourceUrl": "https://shendetesia.gov.al/historiku/",
+          "retrievedAt": "2026-11-03",
+          "notes": "Official ministry history lists Nard Ndoka among Ministers of Health for 2007–2008. That page does not give the day the term started or ended."
+        },
+        "dateOfBirth": {
+          "value": "1963-05-18",
+          "sourceUrl": "https://www.wikidata.org/wiki/Q6965709",
+          "retrievedAt": "2026-11-03",
+          "notes": "Secondary. Wikidata day-precision date imported from Polish Wikipedia. Not a civil-registry extract, so it is not marked verified."
+        },
+        "placeOfBirth": {
+          "value": "Laç",
+          "sourceUrl": "https://www.wikidata.org/wiki/Q6965709",
+          "retrievedAt": "2026-11-03",
+          "notes": "Secondary. Same Wikidata item, imported from Polish Wikipedia."
+        },
+        "parliamentaryTerm": {
+          "value": null,
+          "sourceUrl": "https://www.wikidata.org/wiki/Q6965709",
+          "retrievedAt": "2026-11-03",
+          "notes": "Not displayed. Wikidata records one parliamentary term whose legislature item is dated 2017-09-09 to 2021-09-09, while Albanian Wikipedia says 2005–2013. The two secondary dates disagree, so no MP term is stored as a fact. He is not in the current Kuvendi roll-call files."
+        },
+        "photo": {
+          "value": null,
+          "sourceUrl": null,
+          "retrievedAt": "2026-11-03",
+          "notes": "No official parliament, government, or party portrait with a licence was found. Photo left awaiting. No Wikipedia or press image was copied."
+        },
+        "paragonScore": {
+          "value": null,
+          "coverage": null,
+          "sourceUrl": null,
+          "retrievedAt": "2026-11-03",
+          "notes": "No legacy D1–D7 scores exist. All seven dimensions are null. No name-hash label was generated."
+        }
+      },
+      "sourceRetrievedAt": "2026-11-03",
+      "parliamentaryGroup": null,
+      "mandates": [
+        {
+          "period": "2007–2008",
+          "role": "Ministër i Shëndetësisë",
+          "current": false,
+          "sourceUrl": "https://shendetesia.gov.al/historiku/"
+        }
+      ],
+      "officialLinks": [
+        {
+          "label": "Lista e partive politike, KQZ",
+          "url": "https://kqz.gov.al/lista-e-partive-politike"
+        },
+        {
+          "label": "Historiku i Ministrisë së Shëndetësisë",
+          "url": "https://shendetesia.gov.al/historiku/"
+        }
+      ],
+      "affiliations": [
+        {
+          "kind": "party",
+          "label": "Partia Demokristiane e Shqipërisë (PDK)",
+          "detail": "Kryetar, regjistri i KQZ 2025",
+          "url": "https://kqz.gov.al/lista-e-partive-politike"
+        }
+      ],
+      "bio": {
+        "fullName": "Nard Ndoka",
+        "education": null,
+        "profession": null,
+        "email": null,
+        "party": "PDK",
+        "activeStatus": false
+      },
+      "education": null,
+      "email": null,
+      "officialPhoto": null,
+      "officialPhotoPath": null,
+      "photoLicence": null,
+      "photoRetrievedAt": null,
+      "coverage": null,
+      "coverageWeight": null,
+      "compositeStatus": null,
+      "ratings_enabled": true,
+      "scoring_note": "Nuk ka pikë të trashëguara PARAGON®. D1–D7 janë bosh. Shenja e horoskopit nuk pikëzohet.",
+      "paragonSources": null,
+      "evidence": [],
+      "dimensionReadings": {
+        "D1": {
+          "score": null,
+          "peerAverage": null,
+          "benchmark": null,
+          "method": null,
+          "proxy": null,
+          "methodNote": null
+        },
+        "D2": {
+          "score": null,
+          "peerAverage": null,
+          "benchmark": null,
+          "method": null,
+          "proxy": null,
+          "methodNote": null
+        },
+        "D3": {
+          "score": null,
+          "peerAverage": null,
+          "benchmark": null,
+          "method": null,
+          "proxy": null,
+          "methodNote": null
+        },
+        "D4": {
+          "score": null,
+          "peerAverage": null,
+          "benchmark": null,
+          "method": null,
+          "proxy": null,
+          "methodNote": null
+        },
+        "D5": {
+          "score": null,
+          "peerAverage": null,
+          "benchmark": null,
+          "method": null,
+          "proxy": null,
+          "methodNote": null
+        },
+        "D6": {
+          "score": null,
+          "peerAverage": null,
+          "benchmark": null,
+          "method": null,
+          "proxy": null,
+          "methodNote": null
+        },
+        "D7": {
+          "score": null,
+          "peerAverage": null,
+          "benchmark": null,
+          "method": null,
+          "proxy": null,
+          "methodNote": null
+        }
+      },
+      "peerAverage": null,
+      "benchmark": null
     }
   ],
   "official_sources_retrieved_at": "2026-10-31",

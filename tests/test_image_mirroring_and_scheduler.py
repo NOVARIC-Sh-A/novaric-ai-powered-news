@@ -70,9 +70,9 @@ class TestOfficialPhotos(unittest.TestCase):
     def test_export_contains_only_official_photos(self):
         with open("db/paragon_scores_export.json", encoding="utf-8") as f:
             profiles = json.load(f)["profiles"]
-        self.assertEqual(len(profiles), 233)
+        self.assertEqual(len(profiles), 234)
         pending = [p for p in profiles if p.get("photoPending")]
-        self.assertEqual(len(pending), 25)
+        self.assertEqual(len(pending), 26)
         for p in profiles:
             if p.get("photoPending"):
                 self.assertIsNone(p.get("imageUrl"))

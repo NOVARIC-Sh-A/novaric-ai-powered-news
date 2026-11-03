@@ -33,7 +33,7 @@ KUVENDI_API_BASE = "https://kuvendiapi.azurewebsites.net/api"
 # Pre-defined known canonical IDs to guarantee frontend backwards-compatibility
 CANONICAL_POLITICIAN_MAP = {
     "Edi Rama": 1, "Sali Berisha": 2, "Ilir Meta": 3, "Lulzim Basha": 4, "Monika Kryemadhi": 5,
-    "Erion Veliaj": 6, "Belind Këlliçi": 7, "Bajram Begaj": 8, "Benet Beci": 9, "Nard Ndoka": 10,
+    "Erion Veliaj": 6, "Belind Këlliçi": 7, "Bajram Begaj": 8, "Benet Beci": 9, "Nard Ndoka": 282,
     "Kliti Hoti": 11, "Greta Bardeli": 12, "Ramadan Likaj": 13, "Bardh Spahia": 14, "Marjana Koçeku": 15,
     "Onid Bejleri": 16, "Xhenis Çela": 17, "Bujar Rexha": 18, "Tom Doshi": 19, "Sabina Jorgo": 20,
     "Flamur Hoxha": 21, "Shkëlqim Shehu": 22, "Eduard Shalsi": 23, "Elda Hoti": 24, "Gjin Gjoni": 25,

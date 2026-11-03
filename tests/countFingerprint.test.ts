@@ -96,8 +96,8 @@ describe('Count fingerprint', () => {
       if (count >= 3) threeOrMore += 1;
       else fewer += 1;
     }
-    assert.equal(profiles.length, 233);
+    assert.equal(profiles.length, 234);
     assert.equal(threeOrMore, 84);
-    assert.equal(fewer, 149);
+    assert.equal(fewer, 150);
   });
 });
