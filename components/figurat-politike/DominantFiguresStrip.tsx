@@ -24,7 +24,7 @@ export const DominantFiguresStrip: React.FC<DominantFiguresStripProps> = ({
   if (topFigures.length === 0) return null;
 
   return (
-    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 w-full" id="dominant-figures-strip">
+    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-3 w-full" id="dominant-figures-strip">
       {topFigures.map((item, index) => {
         const partySlug = (item as any).party || normalizePartySlug(item.category);
         const pc = partyColor(partySlug);
