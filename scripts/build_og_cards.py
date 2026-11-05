@@ -17,17 +17,24 @@ from PIL import Image, ImageDraw, ImageFont
 ROOT = Path(__file__).resolve().parents[1]
 EXPORT = ROOT / "db" / "paragon_scores_export.json"
 PUBLIC_OG = ROOT / "public" / "og" / "figurat-politike.png"
-FONT_BOLD = "/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf"
-FONT_REG = "/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf"
+# Arimo is the metric-compatible Arial used to render the cards.
+FONT_BOLD = "/usr/share/fonts/truetype/croscore/Arimo-Bold.ttf"
+FONT_REG = "/usr/share/fonts/truetype/croscore/Arimo-Regular.ttf"
+LOGO_LIGHT = ROOT / "public" / "og" / "brand" / "novaric-master-light.png"
+LOGO_DARK = ROOT / "public" / "og" / "brand" / "novaric-master-dark.png"
 
-NAVY = (48, 56, 75)
-RED = (174, 34, 44)
-WHITE = (255, 255, 255)
-CYAN = (0, 154, 228)
-DOMAIN = (0, 114, 169)
-MUTED = (224, 228, 232)
+NAVY = (0x30, 0x38, 0x4B)
+RED = (0xE4, 0x19, 0x1E)
+CYAN = (0x00, 0x9A, 0xE4)
+WHITE = (0xFF, 0xFF, 0xFF)
+BODY = (0x1E, 0x27, 0x32)
+HEADER = (0x83, 0x88, 0x93)
+SLOGAN = (0xE0, 0xE4, 0xE8)
+CONTACT_LIGHT = (0x00, 0x72, 0xA9)
 W, H = 1200, 630
-CONTENT_H = 520
+HEADER_H = 84
+CONTENT_BOTTOM = 516
+SLOGAN_TEXT = "Shaping Narrative for a Smarter Society™"
 
 # Official derived 3:4 crops already published for these profiles.
 MONTAGE = ("vip1", "vip2", "vip4", "vip10")
@@ -60,21 +67,38 @@ def frame_portrait(path: Path, width: int, height: int, *, cover: bool) -> Image
     return image.resize((width, height), Image.Resampling.LANCZOS)
 
 
+def fit_logo(path: Path, height: int) -> Image.Image:
+    logo = Image.open(path).convert("RGBA")
+    scale = height / logo.height
+    size = (max(1, int(round(logo.width * scale))), height)
+    return logo.resize(size, Image.Resampling.LANCZOS)
+
+
 def draw_chrome() -> Image.Image:
+    """Shared frame: gray header, navy field, red bar, white footer, both master marks."""
     card = Image.new("RGB", (W, H), NAVY)
     draw = ImageDraw.Draw(card)
-    draw.rectangle((0, 0, 64, CONTENT_H), fill=RED)
-    slogan = "NOVARIC®"
+    draw.rectangle((0, 0, W, HEADER_H), fill=HEADER)
+    draw.rectangle((0, HEADER_H, 18, CONTENT_BOTTOM), fill=RED)
+    draw.rectangle((0, CONTENT_BOTTOM, W, CONTENT_BOTTOM + 4), fill=CYAN)
+    draw.rectangle((0, CONTENT_BOTTOM + 4, W, H), fill=WHITE)
+
     slogan_font = font(FONT_BOLD, 22)
-    slogan_img = Image.new("RGBA", (int(text_width(draw, slogan, slogan_font)) + 8, 32), (0, 0, 0, 0))
-    ImageDraw.Draw(slogan_img).text((0, 0), slogan, font=slogan_font, fill=MUTED)
-    rotated = slogan_img.rotate(90, expand=True, resample=Image.Resampling.BICUBIC)
-    card.paste(rotated, (32 - rotated.width // 2, (CONTENT_H - rotated.height) // 2), rotated)
-    draw.rectangle((0, CONTENT_H, W, H), fill=WHITE)
-    brand = font(FONT_BOLD, 28)
-    domain = font(FONT_BOLD, 22)
-    draw.text((60, 548), "NOVARIC® Sh.A.", font=brand, fill=NAVY)
-    draw.text((60, 584), "media.novaric.al", font=domain, fill=DOMAIN)
+    draw.text((96, HEADER_H + 18), SLOGAN_TEXT, font=slogan_font, fill=SLOGAN)
+
+    dark = fit_logo(LOGO_DARK, 58)
+    card.paste(dark, (W - 36 - dark.width, (HEADER_H - dark.height) // 2), dark)
+
+    light = fit_logo(LOGO_LIGHT, 72)
+    footer_top = CONTENT_BOTTOM + 4
+    footer_h = H - footer_top
+    logo_y = footer_top + (footer_h - light.height) // 2
+    card.paste(light, (28, logo_y), light)
+    text_x = 28 + light.width + 22
+    brand = font(FONT_BOLD, 26)
+    domain = font(FONT_BOLD, 20)
+    draw.text((text_x, footer_top + 28), "NOVARIC® Sh.A.", font=brand, fill=NAVY)
+    draw.text((text_x, footer_top + 62), "media.novaric.al", font=domain, fill=CONTACT_LIGHT)
     return card
 
 
@@ -84,10 +108,10 @@ def listing_card() -> Image.Image:
     title_font = font(FONT_BOLD, 52)
     sub_font = font(FONT_BOLD, 26)
     para = font(FONT_BOLD, 24)
-    draw.text((120, 156), "Figurat Politike", font=title_font, fill=WHITE)
-    draw.text((120, 236), "Profilet e figurave", font=sub_font, fill=CYAN)
-    draw.text((120, 274), "politike shqiptare", font=sub_font, fill=CYAN)
-    draw.text((120, 330), "PARAGON®", font=para, fill=MUTED)
+    draw.text((96, 168), "Figurat Politike", font=title_font, fill=WHITE)
+    draw.text((96, 240), "Profilet e figurave", font=sub_font, fill=CYAN)
+    draw.text((96, 276), "politike shqiptare", font=sub_font, fill=CYAN)
+    draw.text((96, 328), "PARAGON®", font=para, fill=WHITE)
 
     tile_w, tile_h = 108, 144
     gap = 14
@@ -99,8 +123,9 @@ def listing_card() -> Image.Image:
     if not tiles:
         return card
     total = len(tiles) * tile_w + (len(tiles) - 1) * gap
-    x = max(760, W - 40 - total)
-    y = (CONTENT_H - tile_h) // 2
+    x = max(700, W - 36 - total)
+    band_top, band_bottom = HEADER_H + 70, CONTENT_BOTTOM
+    y = band_top + (band_bottom - band_top - tile_h) // 2
     for tile in tiles:
         paste_rounded(card, tile, (x, y), 8)
         x += tile_w + gap
@@ -129,32 +154,32 @@ def profile_card(name: str, role: str, portrait: Path | None, *, cover: bool) ->
     draw = ImageDraw.Draw(card)
     name_font = font(FONT_BOLD, 54)
     role_font = font(FONT_REG, 26)
-    lines = wrap(draw, name, name_font, 620)
+    lines = wrap(draw, name, name_font, 560)
     while len(lines) > 2 and name_font.size > 36:
         name_font = font(FONT_BOLD, name_font.size - 4)
-        lines = wrap(draw, name, name_font, 620)
-    y = 150
+        lines = wrap(draw, name, name_font, 560)
+    y = HEADER_H + 64
     for line in lines[:2]:
-        draw.text((120, y), line, font=name_font, fill=WHITE)
-        y += name_font.size + 12
-    role_lines = wrap(draw, role or "Profil politik", role_font, 620)
-    yy = y + 8
+        draw.text((96, y), line, font=name_font, fill=WHITE)
+        y += name_font.size + 10
+    role_lines = wrap(draw, role or "Profil politik", role_font, 560)
+    yy = y + 10
     for line in role_lines[:2]:
-        draw.text((128, yy), line, font=role_font, fill=CYAN)
-        yy += 34
+        draw.text((96, yy), line, font=role_font, fill=CYAN)
+        yy += 32
 
-    box = (280, 373)
-    left = W - 48 - box[0]
-    top = (CONTENT_H - box[1]) // 2
+    box = (250, 333)
+    left = W - 36 - box[0]
+    top = HEADER_H + (CONTENT_BOTTOM - HEADER_H - box[1]) // 2
     if portrait and portrait.exists():
         photo = frame_portrait(portrait, box[0], box[1], cover=cover)
         paste_rounded(card, photo, (left, top), 10)
     else:
-        panel = Image.new("RGB", box, (36, 42, 58))
+        panel = Image.new("RGB", box, (0x1E, 0x27, 0x32))
         pd = ImageDraw.Draw(panel)
         note = "Burimi i fotografisë:\nNë verifikim"
         note_font = font(FONT_BOLD, 22)
-        pd.multiline_text((24, 150), note, font=note_font, fill=MUTED, spacing=8)
+        pd.multiline_text((24, 140), note, font=note_font, fill=WHITE, spacing=8)
         paste_rounded(card, panel, (left, top), 10)
     return card
 
