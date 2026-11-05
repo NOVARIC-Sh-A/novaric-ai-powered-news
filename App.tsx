@@ -27,8 +27,7 @@ import {
   MaragonFullReport,
 } from './types';
 import { fetchMaragonReport } from './services/dataService';
-import { canonicalProfileId } from './utils/profileRedirects';
-import { findPolitician, politicianPathId, routeFromLocation, POLITICIANS_LIST_PATH } from './utils/politicianNavigation';
+import { canonicalPoliticianKey, findPolitician, politicianPathId, routeFromLocation, POLITICIANS_LIST_PATH } from './utils/politicianNavigation';
 import { LiveUpdateToast } from './components/LiveUpdateToast';
 import { FloatingHomeButton } from './components/FloatingHomeButton';
 import { useSeo } from './hooks/useSeo';
@@ -53,7 +52,7 @@ import {
 import { mockJudiciaryProfilesData } from './data/mockJudiciaryProfiles';
 
 import { fetchBreakingNews } from './services/newsService';
-import { fetchAllProfiles, fetchPoliticianCards } from './services/apiService';
+import { fetchAllProfiles, fetchPoliticianCards, findBundledPolitician } from './services/apiService';
 import { LanguageProvider } from './contexts/LanguageContext';
 
 // LAZY LOADED COMPONENTS - Added explicit casting to resolve IntrinsicAttributes prop errors
@@ -277,17 +276,19 @@ export const App: React.FC = () => {
       const located = routeFromLocation(pathname, window.location.search);
       if (located?.page === 'vipProfilePage') {
         const requestedId = decodeURIComponent((pathname.replace(/\/+$/, '').split('/').pop()) || '');
-        const polId = canonicalProfileId(requestedId) || located.id;
-        const cleanPath = `/figurat-politike/${polId}`;
+        const polId = canonicalPoliticianKey(requestedId) || located.id;
+        const cleanPath = `/figurat-politike/${politicianPathId(polId)}`;
         if (
           typeof window !== 'undefined' &&
           window.location.protocol !== 'blob:' &&
-          (polId !== requestedId || window.location.search)
+          (cleanPath !== pathname.replace(/\/+$/, '') || window.location.search)
         ) {
           window.history.replaceState({ page: 'vipProfilePage', id: polId }, '', cleanPath);
         }
         setSelectedVipRouteId(polId);
-        setSelectedVipProfileForPage(findPolitician(data.profiles, polId) || null);
+        setSelectedVipProfileForPage(
+          findPolitician(data.profiles, polId) || findBundledPolitician(polId) || null
+        );
         setCurrentPage('vipProfilePage');
         setCurrentUrl(`${CANONICAL_URL}${cleanPath}`);
         return;
@@ -645,8 +646,9 @@ export const App: React.FC = () => {
       const located = routeFromLocation(path, window.location.search);
       if (located?.page === 'vipProfilePage') {
         const requestedId = decodeURIComponent((path.replace(/\/+$/, '').split('/').pop()) || located.id);
-        setSelectedVipProfileForPage(null);
-        setSelectedVipRouteId(canonicalProfileId(requestedId) || located.id);
+        const polId = canonicalPoliticianKey(requestedId) || located.id;
+        setSelectedVipProfileForPage(findBundledPolitician(polId));
+        setSelectedVipRouteId(polId);
         setCurrentPage('vipProfilePage');
         return;
       }
