@@ -7,6 +7,9 @@
 // placeholders are never shown; the UI shows the "Awaiting data" silhouette instead.
 
 export const LOCAL_OFFICIAL_PREFIX = '/politicians/official/';
+/** Editor-supplied originals. Displayed, but not an official source and not a licence. */
+export const LOCAL_SUPPLIED_PREFIX = '/photos/originals/';
+export const UNVERIFIED_PHOTO_CREDIT = 'Burimi i fotografisë: Në verifikim';
 
 export const OFFICIAL_PHOTO_HOSTS = [
   'kuvendiwebfiles.blob.core.windows.net',
@@ -31,6 +34,11 @@ export function isOfficialPhotoUrl(url: unknown): url is string {
   return OFFICIAL_PHOTO_HOSTS.some(h => host === h || host.endsWith(`.${h}`));
 }
 
+/** A local original handed in by an editor. Not an official publication. */
+export function isEditorSuppliedPhotoUrl(url: unknown): url is string {
+  return typeof url === 'string' && url.startsWith(LOCAL_SUPPLIED_PREFIX) && !url.includes('..');
+}
+
 /** URL to load for a politician photo, or null when there is no official photo. */
 export function resolveOfficialPhotoUrl(profile: any): string | null {
   if (!profile) return null;
@@ -42,6 +50,18 @@ export function resolveOfficialPhotoUrl(profile: any): string | null {
   ];
   for (const c of candidates) {
     if (isOfficialPhotoUrl(c)) return c;
+  }
+  return null;
+}
+
+/** Official photo, or an editor-supplied original that still carries the unverified credit. */
+export function resolveDisplayPhotoUrl(profile: any): string | null {
+  const official = resolveOfficialPhotoUrl(profile);
+  if (official) return official;
+  if (!profile) return null;
+  const candidates = [profile.imageUrl, profile.image_url, profile.photo_url, profile.officialPhotoPath];
+  for (const c of candidates) {
+    if (isEditorSuppliedPhotoUrl(c)) return c;
   }
   return null;
 }

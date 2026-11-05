@@ -2,6 +2,7 @@ import { describe, it } from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import path from 'node:path';
+import { createHash } from 'node:crypto';
 import { findPolitician, routeFromLocation, selectMainProfiles } from '../utils/politicianNavigation';
 import { mergePoliticianCards } from '../services/politicianAdapter';
 
@@ -35,11 +36,13 @@ describe('Nard Ndoka profile', () => {
     assert.equal(ndoka?.paragonSources, null);
     assert.equal(ndoka?.integrityHash, undefined);
     assert.equal(ndoka?.paragonHash, undefined);
-    assert.equal(ndoka?.photoPending, true);
-    assert.equal(ndoka?.imageUrl, null);
+    assert.equal(ndoka?.photoPending, false);
+    assert.equal(ndoka?.imageUrl, '/photos/originals/nard_ndoka.png');
+    assert.equal(ndoka?.photoStatus, 'Burimi i fotografisë: Në verifikim');
+    assert.equal(ndoka?.photoLicence, null);
   });
 
-  it('records Kuvendi terms, the ministry post, and a secondary birth date', () => {
+  it('records sourced offices and leaves unverified birth data awaiting', () => {
     const book = 'https://kuvendiwebfiles.blob.core.windows.net/webfiles/LigjvenesitNeVite.pdf';
     assert.equal(ndoka?.party, 'PDK');
     assert.match(ndoka?.primaryRole, /Demokristiane/);
@@ -53,11 +56,18 @@ describe('Nard Ndoka profile', () => {
     assert.ok(periods.includes('2 shtator 2005–7 shtator 2009'));
     assert.ok(periods.includes('9 shtator 2017–21 shkurt 2019'));
     assert.ok(periods.includes('2007–2008'));
-    assert.equal(ndoka?.dateOfBirth, '1963-05-18');
+    assert.equal(ndoka?.dateOfBirth, null);
+    assert.equal(ndoka?.placeOfBirth, null);
     assert.equal(ndoka?.dateOfBirthVerificationStatus, null);
+    assert.equal(ndoka?.education, null);
+    assert.equal(ndoka?.fieldSources.committee.value, null);
+    assert.match(ndoka?.shortBio, /^Nard Ndoka është kryetar/);
+    assert.match(ndoka?.detailedBio, /^Nard Ndoka është kryetar/);
+    assert.match(ndoka?.fieldSources.photo.notes, /supplied by NOVARIC® editor \(Dr Thika\), 5 Nov 2026, source pending verification/);
     assert.equal(ndoka?.parliamentaryStatus, 'not_an_active_mp');
-    assert.equal(ndoka?.imageUrl, null);
-    assert.match(ndoka?.fieldSources.photo.notes, /0-byte/);
+    assert.equal(ndoka?.photoStatus, 'Burimi i fotografisë: Në verifikim');
+    const bytes = fs.readFileSync(path.resolve(process.cwd(), 'public/photos/originals/nard_ndoka.png'));
+    assert.equal(createHash('sha256').update(bytes).digest('hex'), '4927105b4b196c01de3d292d5ae9587c7e259efc309f5f067655a41feba49ee1');
   });
 
   it('appears in the full list and in the featured strip without dropping the first four', () => {

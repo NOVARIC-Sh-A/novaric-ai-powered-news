@@ -29,7 +29,7 @@ from ingestion.image_mirror import (
     resolve_official_photo,
     is_missing_or_generic_photo,
 )
-from utils.official_photo import AWAITING_PHOTO_STATUS, is_official_photo_source
+from utils.official_photo import AWAITING_PHOTO_STATUS, UNVERIFIED_PHOTO_CREDIT, is_editor_supplied_photo, is_official_photo_source
 from ingestion.alerts import (
     dispatch_pipeline_alert,
     record_run_and_evaluate_alerts,
@@ -72,14 +72,19 @@ class TestOfficialPhotos(unittest.TestCase):
             profiles = json.load(f)["profiles"]
         self.assertEqual(len(profiles), 234)
         pending = [p for p in profiles if p.get("photoPending")]
-        self.assertEqual(len(pending), 26)
+        self.assertEqual(len(pending), 25)
         for p in profiles:
             if p.get("photoPending"):
                 self.assertIsNone(p.get("imageUrl"))
                 self.assertEqual(p.get("photoStatus"), AWAITING_PHOTO_STATUS)
             else:
                 url = p["imageUrl"]
-                self.assertTrue(url.startswith("/politicians/official/") or is_official_photo_source(url), url)
+                if is_editor_supplied_photo(url):
+                    self.assertEqual(p.get("photoStatus"), UNVERIFIED_PHOTO_CREDIT)
+                    self.assertIsNone(p.get("photoLicence"))
+                    self.assertFalse(is_official_photo_source(url))
+                else:
+                    self.assertTrue(url.startswith("/politicians/official/") or is_official_photo_source(url), url)
             self.assertNotIn("media.novaric.al/politicians", json.dumps(p))
 
     def test_commons_replacements_recorded_with_licence(self):

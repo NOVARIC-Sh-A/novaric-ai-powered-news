@@ -19,6 +19,8 @@ from typing import Any, Dict, Optional, Tuple
 from utils.official_photo import (
     AWAITING_PHOTO_STATUS,
     OFFICIAL_PHOTO_STATUS,
+    UNVERIFIED_PHOTO_CREDIT,
+    is_editor_supplied_photo,
     is_official_photo_source,
     official_image_url,
 )
@@ -31,7 +33,7 @@ FORBIDDEN_PHOTO_HOSTS = ("media.novaric.al", "novaric.co", "novaricstorage.blob.
 
 def is_missing_or_generic_photo(url: Optional[str], vip_id: Optional[str] = None, name: Optional[str] = None) -> bool:
     """True when `url` is not an official photo source (missing, NOVARIC copy, placeholder...)."""
-    return not is_official_photo_source(url)
+    return not is_official_photo_source(url) and not is_editor_supplied_photo(url)
 
 
 def resolve_official_photo(
@@ -47,6 +49,8 @@ def resolve_official_photo(
         if is_official_photo_source(candidate):
             source = candidate
             break
+    if is_editor_supplied_photo(current_photo_url):
+        return current_photo_url, None, False
     photo = official_image_url(official_photo_path, source)
     if photo is None:
         return None, None, True
@@ -106,13 +110,19 @@ class ImageMirrorWorker:
                 p.get("name"),
                 official_photo_path=p.get("officialPhotoPath"),
             )
-            if p.get("officialPhotoPath") and op.get("sourceUrl"):
+            if p.get("officialPhotoPath") and op.get("sourceUrl") and not is_editor_supplied_photo(photo):
                 source = op["sourceUrl"]
+            if is_editor_supplied_photo(photo):
+                status = p.get("photoStatus") or UNVERIFIED_PHOTO_CREDIT
+            elif is_pending:
+                status = AWAITING_PHOTO_STATUS
+            else:
+                status = OFFICIAL_PHOTO_STATUS
             new = {
                 "imageUrl": photo,
                 "photo_source_url": source,
                 "photoPending": is_pending,
-                "photoStatus": AWAITING_PHOTO_STATUS if is_pending else OFFICIAL_PHOTO_STATUS,
+                "photoStatus": status,
             }
             if any(p.get(k) != v for k, v in new.items()):
                 updated += 1

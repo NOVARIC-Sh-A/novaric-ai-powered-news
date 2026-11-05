@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import { VipProfile } from '../../types';
 import { partyColor, normalizePartySlug, band, bandLabel } from '../../lib/brand-tokens';
 import { AWAITING_DATA, AwaitingPhoto, ratingBadgeForCoverage, PartialRatingBadge } from './primitives/awaiting';
-import { resolveOfficialPhotoUrl } from '../../utils/officialPhoto';
+import { resolveDisplayPhotoUrl, UNVERIFIED_PHOTO_CREDIT } from '../../utils/officialPhoto';
 import { CANONICAL_PARAGON_DIMENSIONS } from '../../types/politician';
 import { ZodiacChip } from './primitives/ZodiacChip';
 import { useDotTooltip } from './SharedDotTooltip';
@@ -32,7 +32,8 @@ export const PoliticianGridCard: React.FC<PoliticianGridCardProps> = ({
 
   const { showTooltip, hideTooltip } = useDotTooltip();
   const [imageFailed, setImageFailed] = useState(false);
-  const photoUrl = resolveOfficialPhotoUrl(targetPolitician);
+  const photoUrl = resolveDisplayPhotoUrl(targetPolitician);
+  const photoCredit = (targetPolitician as any).photoStatus === UNVERIFIED_PHOTO_CREDIT ? UNVERIFIED_PHOTO_CREDIT : null;
   React.useEffect(() => setImageFailed(false), [photoUrl]);
 
   const targetId = targetPolitician.numericId || targetPolitician.id;
@@ -142,6 +143,7 @@ export const PoliticianGridCard: React.FC<PoliticianGridCardProps> = ({
             onError={() => setImageFailed(true)}
             className="absolute inset-0 h-full w-full object-cover"
             style={{ objectPosition: 'center 20%' }}
+            title={photoCredit || undefined}
           />
         ) : (
           <AwaitingPhoto />
