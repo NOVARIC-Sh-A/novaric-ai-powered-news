@@ -1,16 +1,34 @@
+import scoresExport from '../db/paragon_scores_export.json';
 import { canonicalProfileId } from './profileRedirects';
 
 export interface PoliticianRef {
   id?: string | number;
   numericId?: number | string | null;
   name?: string;
+  slug?: string | null;
   category?: string;
 }
 
-/** `2`, `"2"` and `"vip2"` are the same profile. */
+type StoredProfile = { id?: string; slug?: string | null };
+
+const slugByCanonicalId = new Map<string, string>();
+const idBySlug = new Map<string, string>();
+for (const profile of ((scoresExport as { profiles?: StoredProfile[] }).profiles ?? [])) {
+  const slug = String(profile.slug ?? '').trim().toLowerCase();
+  const id = String(profile.id ?? '');
+  if (!slug || !id) continue;
+  slugByCanonicalId.set(id, slug);
+  idBySlug.set(slug, id);
+}
+
+/** `2`, `"2"`, `"vip2"` and `"sali-berisha"` are the same profile. The id stays canonical. */
 export function canonicalPoliticianKey(id: string | number | null | undefined): string {
   const raw = String(id ?? '').trim();
   if (!raw) return '';
+  if (!/^\d+$/.test(raw) && !/^vip\d+$/i.test(raw)) {
+    const fromSlug = idBySlug.get(raw.toLowerCase());
+    if (fromSlug) return fromSlug;
+  }
   const direct = canonicalProfileId(raw);
   const base = direct === raw ? raw : direct;
   const digits = base.replace(/^vip/i, '');
@@ -20,9 +38,14 @@ export function canonicalPoliticianKey(id: string | number | null | undefined): 
   return canonicalProfileId(base);
 }
 
+/** Public URL segment. Stored slug when the profile has one; numeric id only as a fallback. */
 export function politicianPathId(id: string | number | null | undefined): string {
   const key = canonicalPoliticianKey(id);
-  return key.replace(/^vip/i, '') || key;
+  return slugByCanonicalId.get(key) || key.replace(/^vip/i, '') || key;
+}
+
+export function politicianProfilePath(id: string | number | null | undefined): string {
+  return `/figurat-politike/${politicianPathId(id)}`;
 }
 
 export const POLITICIANS_LIST_PATH = '/figurat-politike';

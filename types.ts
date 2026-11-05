@@ -412,6 +412,8 @@ export interface VipProfile {
   latestScore?: number;
   paragon?: any;
   numericId?: number;
+  /** Stable public path segment. Not recomputed from the display name. */
+  slug?: string;
   politicianId?: number;
   dynamicScore?: number;
   clickCount?: number;

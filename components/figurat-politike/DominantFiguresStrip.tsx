@@ -6,7 +6,7 @@ import { AWAITING_DATA, PartialRatingBadge } from './primitives/awaiting';
 import { ZodiacChip } from './primitives/ZodiacChip';
 import { PoliticianPortrait } from './PoliticianPortrait';
 import { portraitPropsFromProfile } from '../../utils/portraitStandard';
-import { selectMainProfiles } from '../../utils/politicianNavigation';
+import { politicianProfilePath, selectMainProfiles } from '../../utils/politicianNavigation';
 import { useParagonRatingsEnabled } from './useParagonRatings';
 
 interface DominantFiguresStripProps {
@@ -31,7 +31,7 @@ export const DominantFiguresStrip: React.FC<DominantFiguresStripProps> = ({
         const pc = partyColor(partySlug);
         const dob = (item as any).dateOfBirth || item.dateOfBirth;
         const targetId = item.numericId || item.id;
-        const linkHref = `/figurat-politike/${targetId}`;
+        const linkHref = politicianProfilePath(item.id || targetId);
 
         const openProfile = () => {
           if (onSelectPolitician) onSelectPolitician(item.id || targetId);

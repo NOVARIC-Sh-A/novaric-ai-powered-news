@@ -74,6 +74,7 @@ describe('Nard Ndoka profile', () => {
     assert.equal(findPolitician(profiles, 282)?.id, 'vip282');
     assert.equal(findPolitician(profiles, 'vip282')?.name, 'Nard Ndoka');
     assert.deepEqual(routeFromLocation('/figurat-politike/282', ''), { page: 'vipProfilePage', id: 'vip282' });
+    assert.deepEqual(routeFromLocation('/figurat-politike/nard-ndoka', ''), { page: 'vipProfilePage', id: 'vip282' });
     const featured = selectMainProfiles(profiles);
     assert.deepEqual(featured.slice(0, 4).map((profile) => profile.id), ['vip1', 'vip2', 'vip3', 'vip4']);
     assert.equal(featured.some((profile) => profile.id === 'vip282'), true);

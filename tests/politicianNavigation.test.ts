@@ -18,8 +18,9 @@ describe('List to profile navigation', () => {
     assert.equal(findPolitician(list, '2')?.id, 'vip2');
     assert.equal(findPolitician(list, 'vip2')?.numericId, 2);
     assert.equal(findPolitician(list, 55)?.name, 'Zegjine Çaushi');
-    assert.equal(politicianPathId('vip55'), '55');
-    assert.equal(politicianPathId(2), '2');
+    assert.equal(politicianPathId('vip55'), 'zegjine-caushi');
+    assert.equal(politicianPathId(2), 'sali-berisha');
+    assert.equal(politicianPathId('sali-berisha'), 'sali-berisha');
     assert.equal(findPolitician([], 2), undefined);
     assert.equal(findPolitician([{ id: 'vip106', numericId: 106, name: 'Zija Ismaili' }], 'vip129')?.id, 'vip106');
     assert.equal(findPolitician([{ id: 'vip103', numericId: 103, name: 'Ramadan Likaj' }], 'vip190')?.id, 'vip103');
@@ -61,6 +62,8 @@ describe('List to profile navigation', () => {
     assert.deepEqual(routeFromLocation('/', '?page=politiciansPage'), { page: 'politiciansPage' });
     assert.deepEqual(routeFromLocation('/figurat-politike/54', '?page=politiciansPage'), { page: 'vipProfilePage', id: 'vip6' });
     assert.deepEqual(routeFromLocation('/figurat-politike/vip129', ''), { page: 'vipProfilePage', id: 'vip106' });
+    assert.deepEqual(routeFromLocation('/figurat-politike/agron-gaxho', '?page=politiciansPage'), { page: 'vipProfilePage', id: 'vip270' });
+    assert.deepEqual(routeFromLocation('/figurat-politike/Sali-Berisha', ''), { page: 'vipProfilePage', id: 'vip2' });
   });
 
   it('resolves every list card and every removed duplicate', () => {
