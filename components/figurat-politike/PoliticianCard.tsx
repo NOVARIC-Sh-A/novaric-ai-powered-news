@@ -17,6 +17,8 @@ import { ProfileRecordSections } from './ProfileRecordSections';
 import { EvidenceDrawer } from './EvidenceDrawer';
 import { AlertTriangle, ShieldCheck, Scale, Info } from 'lucide-react';
 import { useParagonRatingsEnabled } from './useParagonRatings';
+import { ProfileSocialLogos } from './ProfileSocialLogos';
+import { SocialLinks } from '../../utils/socialLinks';
 import { DimensionReading, ScoreEvidenceItem } from '../../types/politician';
 
 export interface PoliticianCardProps {
@@ -296,6 +298,7 @@ export const PoliticianCard: React.FC<PoliticianCardProps> = ({
             )}
           </div>
         </div>
+        <ProfileSocialLogos links={(target as { socialLinks?: SocialLinks | null }).socialLinks} />
       </div>
 
       <div className="mb-6 grid grid-cols-1 gap-6 lg:grid-cols-12" data-legacy-fingerprint="true">

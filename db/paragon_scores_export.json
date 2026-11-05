@@ -75237,6 +75237,13 @@
       "uuid": "p-0282",
       "name": "Nard Ndoka",
       "slug": "nard-ndoka",
+      "socialLinks": {
+        "facebook": {
+          "approved": false,
+          "approvedBy": null,
+          "approvedAt": null
+        }
+      },
       "category": "Politikë (PDK)",
       "party": "PDK",
       "primaryRole": "Kryetar i Partisë Demokristiane të Shqipërisë",

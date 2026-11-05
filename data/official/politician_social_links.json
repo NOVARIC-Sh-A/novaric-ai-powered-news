@@ -1,0 +1,15 @@
+{
+  "note": "Editorial source for politician social URLs. This file is not imported by the client. An unapproved URL must not be copied into db/paragon_scores_export.json or rendered. approved stays false until an editor sets it true and the public profile then receives the url.",
+  "profiles": {
+    "vip282": {
+      "facebook": {
+        "url": "https://www.facebook.com/nard.ndoka.7",
+        "approved": false,
+        "approvedBy": null,
+        "approvedAt": null,
+        "source": "supplied by NOVARIC® editor (Dr Thika)",
+        "verifiedAt": "2026-11-05"
+      }
+    }
+  }
+}

@@ -40,6 +40,10 @@ describe('Nard Ndoka profile', () => {
     assert.equal(ndoka?.imageUrl, '/photos/originals/nard_ndoka.png');
     assert.equal(ndoka?.photoStatus, 'Burimi i fotografisë: Në verifikim');
     assert.equal(ndoka?.photoLicence, null);
+    assert.equal(ndoka?.socialLinks.facebook.approved, false);
+    assert.equal(ndoka?.socialLinks.facebook.approvedBy, null);
+    assert.equal(ndoka?.socialLinks.facebook.approvedAt, null);
+    assert.equal(ndoka?.socialLinks.facebook.url, undefined);
   });
 
   it('records sourced offices and leaves unverified birth data awaiting', () => {

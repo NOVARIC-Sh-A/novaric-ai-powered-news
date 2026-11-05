@@ -33,6 +33,7 @@ import { FloatingHomeButton } from './components/FloatingHomeButton';
 import { useSeo } from './hooks/useSeo';
 import { stripHighlights } from './utils/textUtils';
 import { CANONICAL_URL } from './config/constants';
+import { profileOpenGraph } from './utils/profileShare';
 import { JsonLd } from './components/JsonLd';
 import { UrlShortenerModal } from './components/UrlShortenerModal';
 import { IntegrityReportDisplay } from './components/IntegrityReportDisplay';
@@ -214,6 +215,15 @@ export const App: React.FC = () => {
         pageTitle = 'Kodi i Standardeve NOVARIC® | Qendra e Transparencës & Integritetit';
         pageDescription = 'Qendra e Transparencës dhe Integritetit: 31 klauzola operacionale, vula e gjallë e përputhshmërisë 98.40%, gjurmueshmëria e integritetit dhe regjistri i korrigjimeve.';
         break;
+      case 'vipProfilePage': {
+        if (selectedVipProfileForPage?.name) {
+          const graph = profileOpenGraph(selectedVipProfileForPage);
+          pageTitle = graph.title;
+          pageDescription = graph.description;
+          pageImageUrl = graph.imageUrl;
+        }
+        break;
+      }
       case 'authorProfile':
       case 'profiliIAutorit':
         pageTitle = 'Profili i Autorit | Dr Alban Gj. THIKA — Individual Representation & Social Media Disclaimer';

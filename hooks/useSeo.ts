@@ -53,6 +53,7 @@ export const useSeo = (
     setMetaTag('name', 'twitter:title', title);
     setMetaTag('name', 'twitter:description', metaDescription);
     setMetaTag('name', 'twitter:image', imageToUse);
+    setMetaTag('name', 'twitter:url', shareUrl);
 
   }, [title, description, imageUrl, pageUrl, locale]);
 };

@@ -6,6 +6,7 @@
 import { VipProfile, PoliticianFullDto } from '../types';
 import { mapParagonToParagonAnalysis } from '../utils/paragonProfileUtils';
 import { isEditorSuppliedPhotoUrl, resolveDisplayPhotoUrl, resolveOfficialPhotoUrl, UNVERIFIED_PHOTO_CREDIT } from '../utils/officialPhoto';
+import { sanitizeSocialLinks } from '../utils/socialLinks';
 
 /**
  * Default values for UI presentation
@@ -157,6 +158,7 @@ export function toPoliticianUI(dto: any): VipProfile {
         affiliations: Array.isArray(dto.affiliations) ? dto.affiliations : [],
         officialLinks: Array.isArray(dto.officialLinks) ? dto.officialLinks : [],
         fieldSources: dto.fieldSources && typeof dto.fieldSources === 'object' ? dto.fieldSources : null,
+        socialLinks: sanitizeSocialLinks(dto.socialLinks || raw?.social_links || raw?.socialLinks),
         aliases: Array.isArray(dto.aliases) ? dto.aliases : (Array.isArray(dto.bio?.aliases) ? dto.bio.aliases : []),
         parliamentaryGroup: dto.parliamentaryGroup || raw?.parliamentary_group || null,
         officialPhotoPath: dto.officialPhotoPath || null,
