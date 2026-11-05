@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "tsx server.ts",
     "start": "node server.ts",
-    "build": "vite build",
+    "build": "vite build && python3 scripts/build_og_cards.py profiles dist/og/profiles && tsx scripts/writeOgShells.ts",
     "lint": "tsc --noEmit",
     "test": "tsx --test tests/**/*.test.ts",
     "preview": "vite preview --port 3000 --host 0.0.0.0"
