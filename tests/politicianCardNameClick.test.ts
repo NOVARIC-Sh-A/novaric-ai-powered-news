@@ -60,7 +60,7 @@ describe('Clicking a politician card name opens the profile', () => {
     assert.ok(name, 'name element missing');
     assert.equal(name.textContent, 'Agron Gaxho');
     assert.match(String(name.className), /pointer-events-none/);
-    assert.equal(name.closest('a')?.getAttribute('href'), '/figurat-politike/270');
+    assert.equal(name.closest('a')?.getAttribute('href'), '/figurat-politike/agron-gaxho');
     assert.equal((name as HTMLElement).onclick, null);
 
     await act(async () => {

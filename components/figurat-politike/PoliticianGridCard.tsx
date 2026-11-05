@@ -9,6 +9,7 @@ import { CANONICAL_PARAGON_DIMENSIONS } from '../../types/politician';
 import { ZodiacChip } from './primitives/ZodiacChip';
 import { useDotTooltip } from './SharedDotTooltip';
 import { useParagonRatingsEnabled } from './useParagonRatings';
+import { politicianProfilePath } from '../../utils/politicianNavigation';
 
 export interface PoliticianGridCardProps {
   politician?: VipProfile;
@@ -34,7 +35,7 @@ export const PoliticianGridCard: React.FC<PoliticianGridCardProps> = ({
   const { showTooltip, hideTooltip } = useDotTooltip();
 
   const targetId = targetPolitician.numericId || targetPolitician.id;
-  const linkHref = `/figurat-politike/${targetId}`;
+  const linkHref = politicianProfilePath(targetPolitician.id || targetId);
 
   const partySlug = (targetPolitician as any).party || normalizePartySlug(targetPolitician.category);
   const pc = partyColor(partySlug);

@@ -34,7 +34,15 @@ export const useSeo = (
     setMetaTag('property', 'og:title', title);
     setMetaTag('property', 'og:description', metaDescription);
     setMetaTag('property', 'og:image', imageToUse);
-    setMetaTag('property', 'og:url', pageUrl || CANONICAL_URL);
+    const shareUrl = pageUrl || CANONICAL_URL;
+    setMetaTag('property', 'og:url', shareUrl);
+    let canonical = document.querySelector('link[rel="canonical"]');
+    if (!canonical) {
+      canonical = document.createElement('link');
+      canonical.setAttribute('rel', 'canonical');
+      document.head.appendChild(canonical);
+    }
+    canonical.setAttribute('href', shareUrl);
     setMetaTag('property', 'og:type', 'website');
     setMetaTag('property', 'og:site_name', 'NOVARIC® AI-Powered News');
     setMetaTag('property', 'og:locale', locale || 'sq_AL');
