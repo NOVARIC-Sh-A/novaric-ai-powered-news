@@ -5,6 +5,7 @@ import { partyColor, normalizePartySlug, band, bandLabel } from '../../lib/brand
 import { AWAITING_DATA, ratingBadgeForCoverage, PartialRatingBadge } from './primitives/awaiting';
 import { PoliticianPortrait } from './PoliticianPortrait';
 import { portraitPropsFromProfile } from '../../utils/portraitStandard';
+import { formatPersonName } from '../../utils/formatPersonName';
 import { CANONICAL_PARAGON_DIMENSIONS } from '../../types/politician';
 import { ZodiacChip } from './primitives/ZodiacChip';
 import { useDotTooltip } from './SharedDotTooltip';
@@ -174,7 +175,7 @@ export const PoliticianGridCard: React.FC<PoliticianGridCardProps> = ({
               color: 'var(--nv-navy)',
             }}
           >
-            {targetPolitician.name}
+            {formatPersonName(targetPolitician.name)}
           </div>
 
           {/* Primary Role line */}

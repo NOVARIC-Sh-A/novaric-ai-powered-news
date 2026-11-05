@@ -203,7 +203,7 @@ export const ParagonLeaderboardPage: React.FC<ParagonLeaderboardPageProps> = ({
 
         <header className="mb-12 text-center">
           <h1 className="text-4xl sm:text-5xl font-black text-white mb-4 tracking-tighter uppercase italic" style={{ textShadow: "0 4px 10px rgba(0,0,0,0.5)" }}>
-            Renditja PARAGON<sup className="text-white ml-0.5">®</sup>
+            Renditja PARAGON<sup className="registered-mark text-white">®</sup>
           </h1>
           <div className="h-1 w-24 bg-primary-600 mx-auto rounded-full mb-4"></div>
           <p className="text-slate-200 text-sm font-semibold max-w-3xl mx-auto">

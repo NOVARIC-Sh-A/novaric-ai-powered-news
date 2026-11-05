@@ -6,6 +6,7 @@ import {
   derivedSources,
   objectPositionFor,
 } from '../../utils/portraitStandard';
+import { formatPersonName } from '../../utils/formatPersonName';
 
 export interface PoliticianPortraitProps {
   politicianId: string | number;
@@ -64,7 +65,7 @@ export const PoliticianPortrait: React.FC<PoliticianPortraitProps> = ({
             src={src || undefined}
             srcSet={derived?.srcSet}
             sizes={size === 'small' ? '96px' : size === 'large' ? '280px' : '(max-width: 640px) 45vw, 180px'}
-            alt={`Portreti i ${name}`}
+            alt={`Portreti i ${formatPersonName(name) || name}`}
             loading={eager ? 'eager' : 'lazy'}
             decoding="async"
             referrerPolicy="no-referrer"

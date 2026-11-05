@@ -98,6 +98,18 @@ sup.novaric-registered {
   font-weight: inherit;
 }
 
+/* Header and footer ®. About 58% of the surrounding size, top near the cap height, no gap before it. */
+sup.registered-mark {
+  font-size: 0.58em;
+  line-height: 0;
+  position: relative;
+  top: -0.55em;
+  margin: 0;
+  padding: 0;
+  font-weight: inherit;
+  letter-spacing: 0;
+}
+
 /* Exception — hero video wordmark only (novaric.co, 2026-08-27) */
 .nv-hero-video__brand .novaric-registered {
   font-size: 28%;          /* reduced from 70% for hero wordmark only */

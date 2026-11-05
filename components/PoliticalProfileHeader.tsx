@@ -1,6 +1,7 @@
 import React from 'react';
 import { FullProfileAnalysis, VipProfile } from '../types';
 import { PoliticianPortrait } from './figurat-politike/PoliticianPortrait';
+import { formatPersonName } from '../utils/formatPersonName';
 import { portraitPropsFromProfile } from '../utils/portraitStandard';
 
 interface PoliticalProfileHeaderProps {
@@ -38,7 +39,7 @@ export const PoliticalProfileHeader: React.FC<PoliticalProfileHeaderProps> = ({ 
         </div>
 
         <div className="md:col-span-2 text-center md:text-left">
-          <h1 className="text-3xl font-bold text-slate-800 dark:text-slate-100">{profile.name}</h1>
+          <h1 className="text-3xl font-bold text-slate-800 dark:text-slate-100">{formatPersonName(profile.name)}</h1>
           <p className="text-md text-slate-600 dark:text-slate-400">{party}</p>
           <p className="text-sm text-slate-500 dark:text-slate-500 mt-1">{age} vjeç, {title}</p>
         </div>
@@ -48,7 +49,7 @@ export const PoliticalProfileHeader: React.FC<PoliticalProfileHeaderProps> = ({ 
             <span className={`text-6xl font-extrabold ${scoreColorClass} ${liveScore ? 'animate-pulse' : ''}`}>
                 {displayScore}
             </span>
-            <span className="text-lg font-semibold text-slate-500 dark:text-slate-400">Pikët PARAGON®</span>
+            <span className="text-lg font-semibold text-slate-500 dark:text-slate-400">Pikët PARAGON<sup className="registered-mark">®</sup></span>
           </div>
           <div className="text-xs text-slate-500 dark:text-slate-400 mt-1 space-x-3">
             <span>Mes. Partisë: {partyAvg}</span>

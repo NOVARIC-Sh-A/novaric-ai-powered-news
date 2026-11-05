@@ -6,6 +6,7 @@ import { AWAITING_DATA, PartialRatingBadge } from './primitives/awaiting';
 import { ZodiacChip } from './primitives/ZodiacChip';
 import { PoliticianPortrait } from './PoliticianPortrait';
 import { portraitPropsFromProfile } from '../../utils/portraitStandard';
+import { formatPersonName } from '../../utils/formatPersonName';
 import { politicianProfilePath, selectMainProfiles } from '../../utils/politicianNavigation';
 import { useParagonRatingsEnabled } from './useParagonRatings';
 import { ProfileShareButton } from './ProfileShareButton';
@@ -106,7 +107,7 @@ export const DominantFiguresStrip: React.FC<DominantFiguresStripProps> = ({
                   className="font-bold text-[13.5px] truncate group-hover:text-red-600 transition-colors pointer-events-none"
                   style={{ color: 'var(--nv-navy)' }}
                 >
-                  {item.name}
+                  {formatPersonName(item.name)}
                 </div>
                 <div className="text-[11px] truncate opacity-75" style={{ color: 'var(--nv-text-secondary)' }}>
                   {primaryRole}

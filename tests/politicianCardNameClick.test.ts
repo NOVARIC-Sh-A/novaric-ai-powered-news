@@ -58,7 +58,7 @@ describe('Clicking a politician card name opens the profile', () => {
 
     const name = document.querySelector('[data-politician-name]');
     assert.ok(name, 'name element missing');
-    assert.equal(name.textContent, 'Agron Gaxho');
+    assert.equal(name.textContent, 'Agron GAXHO');
     assert.match(String(name.className), /pointer-events-none/);
     assert.equal(name.closest('a')?.getAttribute('href'), '/figurat-politike/agron-gaxho');
     assert.equal((name as HTMLElement).onclick, null);

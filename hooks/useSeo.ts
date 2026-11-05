@@ -17,7 +17,8 @@ export const useSeo = (
   description: string,
   imageUrl?: string,
   pageUrl?: string,
-  locale?: 'sq_AL' | 'en_US'
+  locale?: 'sq_AL' | 'en_US',
+  imageAlt?: string
 ) => {
   useEffect(() => {
     document.title = title;
@@ -54,6 +55,13 @@ export const useSeo = (
     setMetaTag('name', 'twitter:description', metaDescription);
     setMetaTag('name', 'twitter:image', imageToUse);
     setMetaTag('name', 'twitter:url', shareUrl);
+    if (imageAlt) {
+      setMetaTag('property', 'og:image:alt', imageAlt);
+      setMetaTag('name', 'twitter:image:alt', imageAlt);
+    } else {
+      document.querySelector("meta[property='og:image:alt']")?.remove();
+      document.querySelector("meta[name='twitter:image:alt']")?.remove();
+    }
 
-  }, [title, description, imageUrl, pageUrl, locale]);
+  }, [title, description, imageUrl, pageUrl, locale, imageAlt]);
 };

@@ -10,6 +10,7 @@ import {
 } from '../types';
 import { ProfileAnalysisMap, ProfileAnalysis } from '../services/profileAnalysisService';
 import { PARAGON_DIMENSIONS_AL } from './translations';
+import { formatPersonName } from './formatPersonName';
 
 // ###########################################################################
 // SECTION 1: EXPORTED UTILITIES
@@ -31,13 +32,8 @@ export const getSurname = (name: string | null | undefined): string => {
 
 export const formatVipName = (name: string | null | undefined): string => {
   if (!name || typeof name !== "string") return "I PAIDENTIFIKUAR";
-  const cleaned = name.trim().replace(/\s+/g, " ");
-  if (!cleaned) return "I PAIDENTIFIKUAR";
-  const parts = cleaned.split(" ");
-  if (parts.length === 1) return parts[0].toUpperCase();
-  const lastName = parts.pop()?.toUpperCase() || "";
-  const firstName = parts.map(p => p.charAt(0).toUpperCase() + p.slice(1).toLowerCase()).join(" ");
-  return `${firstName} ${lastName}`;
+  const display = formatPersonName(name);
+  return display || "I PAIDENTIFIKUAR";
 };
 
 export const getSortKey = (name: string | null | undefined): string => {

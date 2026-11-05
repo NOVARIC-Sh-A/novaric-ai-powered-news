@@ -29,7 +29,7 @@ const MostClickedSection: React.FC<{ profiles: (VipProfile & { clicks: number })
             <button
               onClick={() => onNavigate(profile)}
               className="bg-white dark:bg-slate-800 p-3 rounded-lg shadow-md flex items-center space-x-3 min-w-[220px] text-left hover:bg-slate-100 dark:hover:bg-slate-700 transition-colors w-full"
-              aria-label={`Shiko profilin për ${profile.name}`}
+              aria-label={`Shiko profilin për ${formatVipName(profile.name)}`}
             >
               <span className="text-lg font-bold text-primary-600 dark:text-primary-400">{index + 1}.</span>
               <div className="w-12 shrink-0">

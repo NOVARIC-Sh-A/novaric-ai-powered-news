@@ -6,6 +6,7 @@ import {
 } from "../types";
 import { ChevronDownIcon, UsersIcon } from "./icons";
 import { PoliticianGridCard } from "./figurat-politike/PoliticianGridCard";
+import { formatPersonName } from "../utils/formatPersonName";
 import { PoliticianComparisonModal } from "./PoliticianComparisonModal";
 import { fetchParliamentRoster, fetchPoliticianCards } from "../services/apiService";
 import {
@@ -786,7 +787,7 @@ export const Parliament2025Page: React.FC<{
                                       className="p-4 rounded-xl border border-rose-200 bg-rose-50/50 dark:bg-rose-950/20 text-xs space-y-1"
                                     >
                                       <div className="font-bold text-slate-800 dark:text-slate-200">
-                                        {member.name}
+                                        {formatPersonName(member.name)}
                                       </div>
                                       <div className="text-rose-600 dark:text-rose-400 font-semibold">
                                         GABIM I LIDHJES SË PROFILIT

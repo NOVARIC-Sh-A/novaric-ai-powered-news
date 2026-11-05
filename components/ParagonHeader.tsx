@@ -29,7 +29,7 @@ export const ParagonHeader: React.FC<ParagonHeaderProps> = ({
             onClick={() => window.location.href = '/'}
             style={{ textShadow: '0 2px 4px rgba(0,0,0,0.5)' }}
           >
-            PARAGON<sup className="novaric-registered text-white" aria-hidden="true">®</sup>
+            PARAGON<sup className="registered-mark text-white" aria-hidden="true">®</sup>
           </div>
 
           {/* Right: Political Menu */}
@@ -59,7 +59,7 @@ export const ParagonHeader: React.FC<ParagonHeaderProps> = ({
             className="text-base sm:text-lg font-normal tracking-wider text-white font-helvetica cursor-pointer drop-shadow-md hover:opacity-80 transition-opacity flex items-center"
             onClick={onNavigateToMediaPersonalities}
           >
-            MARAGON<sup className="novaric-registered text-white" aria-hidden="true">®</sup>
+            MARAGON<sup className="registered-mark text-white" aria-hidden="true">®</sup>
           </div>
 
           {/* Right: Media Menu */}

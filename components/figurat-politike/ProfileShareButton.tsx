@@ -1,6 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { createPortal } from 'react-dom';
 import { canonicalProfileShareUrl } from '../../utils/profileShare';
+import { formatPersonName } from '../../utils/formatPersonName';
 
 const SHARE_LABEL = 'Shpërndaj profilin';
 
@@ -23,6 +24,7 @@ function stopCardNavigation(event: React.SyntheticEvent) {
 
 export function ProfileShareButton({ id, name }: { id: string | number; name: string }) {
   const url = canonicalProfileShareUrl(id);
+  const displayName = formatPersonName(name) || name;
   const buttonRef = useRef<HTMLButtonElement>(null);
   const [menu, setMenu] = useState<{ top: number; left: number } | null>(null);
   const [toast, setToast] = useState(false);
@@ -38,7 +40,7 @@ export function ProfileShareButton({ id, name }: { id: string | number; name: st
     const nav = navigator as Navigator & { share?: (data: ShareData) => Promise<void> };
     if (typeof nav.share === 'function') {
       try {
-        await nav.share({ title: name, text: name, url });
+        await nav.share({ title: displayName, text: displayName, url });
         setMenu(null);
         return;
       } catch (error) {
@@ -102,7 +104,7 @@ export function ProfileShareButton({ id, name }: { id: string | number; name: st
           onMouseDown={stopCardNavigation}
           onClick={stopCardNavigation}
         >
-          {shareTargets(url, name).map((target) => (
+          {shareTargets(url, displayName).map((target) => (
             <a
               key={target.id}
               data-share-target={target.id}

@@ -126,7 +126,8 @@ describe('Profile share button and social logos', () => {
     assert.deepEqual(opened, []);
     assert.equal(document.querySelector('[data-share-menu]'), null);
     assert.equal(shared[0]?.url, 'https://media.novaric.al/figurat-politike/nard-ndoka');
-    assert.equal(shared[0]?.title, 'Nard Ndoka');
+    assert.equal(shared[0]?.title, 'Nard NDOKA');
+    assert.equal(shared[0]?.text, 'Nard NDOKA');
     delete g.navigator.share;
     await act(async () => { root.unmount(); });
   });
@@ -175,7 +176,7 @@ describe('Profile share button and social logos', () => {
     const confirmed = document.querySelector('[data-social-platform="facebook"]') as HTMLAnchorElement;
     assert.equal(confirmed.getAttribute('href'), 'https://www.facebook.com/nard.ndoka.7');
     assert.equal(confirmed.getAttribute('data-social-confirmed'), 'true');
-    assert.equal(confirmed.getAttribute('aria-label'), 'Nard Ndoka në Facebook');
+    assert.equal(confirmed.getAttribute('aria-label'), 'Nard NDOKA në Facebook');
     assert.equal(confirmed.getAttribute('target'), '_blank');
     assert.equal(confirmed.getAttribute('rel'), 'noopener noreferrer');
     assert.equal(document.querySelector('[data-social-platform="x"]')?.getAttribute('data-social-confirmed'), 'false');
@@ -214,7 +215,7 @@ describe('Profile share button and social logos', () => {
     assert.ok(details > 0 && logos > details && logos < detailsEnd);
     assert.equal(canonicalProfileShareUrl('vip2'), 'https://media.novaric.al/figurat-politike/sali-berisha');
     const graph = profileOpenGraph(ndoka);
-    assert.equal(graph.title, 'Nard Ndoka');
+    assert.equal(graph.title, 'Nard NDOKA');
     assert.match(graph.description, /Demokristiane/);
     assert.equal(graph.imageUrl, 'https://media.novaric.al/photos/originals/nard_ndoka.png');
   });

@@ -1,5 +1,7 @@
 /** Public social-link shape. An unapproved entry must not carry a personal URL. */
 
+import { formatPersonName } from './formatPersonName';
+
 export const SOCIAL_PLATFORMS = ['facebook', 'instagram', 'x', 'tiktok', 'youtube', 'linkedin', 'website', 'whatsapp', 'telegram'] as const;
 
 /** Logos drawn on every profile details card, in this order. */
@@ -88,7 +90,7 @@ export function profileSocialLogos(name: string, links: SocialLinks | null | und
   href: string;
 }> {
   const clean = sanitizeSocialLinks(links);
-  const person = name.trim() || 'Profili';
+  const person = formatPersonName(name) || 'Profili';
   return PROFILE_LOGO_PLATFORMS.map((platform) => {
     const entry = clean?.[platform];
     const personal = entry?.approved === true && typeof entry.url === 'string' ? entry.url : null;

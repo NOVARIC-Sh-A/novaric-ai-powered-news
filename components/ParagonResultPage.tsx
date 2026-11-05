@@ -3,6 +3,7 @@ import { FullProfileAnalysis, ParagonScore, PerformancePortfolioItem, ParagonDim
 import { ChevronDownIcon, InformationCircleIcon } from './icons';
 import { PARAGON_DIMENSIONS_AL } from '../utils/translations';
 import { PerformanceAnalysisSection } from './PerformanceAnalysisSection';
+import { formatPersonName } from '../utils/formatPersonName';
 
 interface ParagonResultPageProps {
   analysis: FullProfileAnalysis;
@@ -146,7 +147,7 @@ export const ParagonResultPage: React.FC<ParagonResultPageProps> = ({ analysis, 
             
             <div className="text-center">
                 <h2 className="text-2xl font-bold text-slate-800 dark:text-slate-200">
-                    Analiza e Profilit: <span className="text-primary-600 dark:text-primary-400">{profileInput.personal.fullName}</span>
+                    Analiza e Profilit: <span className="text-primary-600 dark:text-primary-400">{formatPersonName(profileInput.personal.fullName)}</span>
                 </h2>
             </div>
             

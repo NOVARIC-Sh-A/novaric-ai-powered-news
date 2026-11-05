@@ -52,12 +52,12 @@ export const VipProfileTile: React.FC<VipProfileTileProps> = ({ profile, onNavig
                         ? "https://novaric.co/wp-content/uploads/2025/11/FemaleProfile.jpg"
                         : "https://novaric.co/wp-content/uploads/2025/11/MaleProfile.jpg";
             }}
-            alt={profile.name}
+            alt={displayName}
             style={{ objectFit: "cover", objectPosition: "center" }}
             className="w-24 h-24 rounded-full object-cover object-center border-2 border-primary-500/50 shadow-md transition-transform duration-300 group-hover:scale-105"
           />
         </div>
-        <h3 className="text-md font-semibold text-slate-800 dark:text-slate-100 line-clamp-2 transition-colors duration-200 group-hover:text-primary-600 dark:group-hover:text-primary-400" title={profile.name}>
+        <h3 className="text-md font-semibold text-slate-800 dark:text-slate-100 line-clamp-2 transition-colors duration-200 group-hover:text-primary-600 dark:group-hover:text-primary-400" title={displayName}>
           {displayName}
         </h3>
         <p className="text-xs text-primary-600 dark:text-primary-400 font-medium mb-1">
@@ -68,7 +68,7 @@ export const VipProfileTile: React.FC<VipProfileTileProps> = ({ profile, onNavig
         </p>
         <span
           className="text-xs text-primary-500 group-hover:text-primary-700 dark:text-primary-400 dark:group-hover:text-primary-200 font-semibold transition-colors duration-150"
-          aria-label={`Lexo më shumë për ${profile.name}`}
+          aria-label={`Lexo më shumë për ${displayName}`}
         >
           Lexo më shumë...
         </span>

@@ -46,12 +46,12 @@ export const PoliticiansPage: React.FC<PoliticiansPageProps> = ({
             </button>
             <div className="h-4 w-[1px] bg-slate-200 dark:bg-slate-800" />
             <span className="text-xs font-mono uppercase tracking-wider text-slate-400">
-              NOVARIC® / Figurat Politike
+              NOVARIC<sup className="registered-mark">®</sup> / Figurat Politike
             </span>
           </div>
 
           <div className="text-[11px] font-mono text-slate-500 hidden sm:inline">
-            PARAGON® Dynamic Index
+            PARAGON<sup className="registered-mark">®</sup> Dynamic Index
           </div>
         </div>
       </header>

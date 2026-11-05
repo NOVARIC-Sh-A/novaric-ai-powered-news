@@ -2,6 +2,7 @@ import React, { useMemo } from "react";
 import { ProcessedVipProfile } from "../types";
 import { getHeatColor } from "../utils/heatmapColors";
 import { getProfilePhotoUrl } from "../utils/paragonProfileUtils";
+import { formatPersonName } from "../utils/formatPersonName";
 
 /**
  * Renders a Top 10 ranking of media personalities based on MARAGON® score.
@@ -58,7 +59,7 @@ export const Top10MediaInfluencers: React.FC<{
                             ? "https://novaric.co/wp-content/uploads/2025/11/FemaleProfile.jpg"
                             : "https://novaric.co/wp-content/uploads/2025/11/MaleProfile.jpg";
                 }}
-                alt={p.name}
+                alt={formatPersonName(p.name)}
                 style={{ objectFit: "cover", objectPosition: "center" }}
                 className="w-12 h-12 rounded-full object-cover border border-slate-300 dark:border-slate-600"
               />
@@ -66,7 +67,7 @@ export const Top10MediaInfluencers: React.FC<{
               {/* NAME & SCORE */}
               <div className="flex-1">
                 <p className="font-semibold text-slate-800 dark:text-slate-100">
-                  {p.name}
+                  {formatPersonName(p.name)}
                 </p>
 
                 {/* Score Bar */}

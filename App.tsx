@@ -138,8 +138,9 @@ export const App: React.FC = () => {
     'Në një realitet ku etika dhe morali janë zbehur, ndërsa korrupsioni, paaftësia dhe manipulimi tolerohen, NOVARIC® AI-Powered News Fact Check lind si një nevojë urgjente për ndërgjegjësim qytetar dhe institucional.'
   );
   const [seoImageUrl, setSeoImageUrl] = useState<string | undefined>(undefined);
+  const [seoImageAlt, setSeoImageAlt] = useState<string | undefined>(undefined);
 
-  useSeo(seoTitle, seoDescription, seoImageUrl, currentUrl);
+  useSeo(seoTitle, seoDescription, seoImageUrl, currentUrl, undefined, seoImageAlt);
 
   const updateUrl = (page: Page, id?: string | number | object, replace = false) => {
     if (window.location.protocol === 'blob:') {
@@ -179,6 +180,7 @@ export const App: React.FC = () => {
     let pageDescription =
       'Në një realitet ku etika dhe morali janë zbehur, ndërsa korrupsioni, paaftësia dhe manipulimi tolerohen, NOVARIC® AI-Powered News Fact Check lind si një nevojë urgjente për ndërgjegjësim qytetar dhe institucional.';
     let pageImageUrl: string | undefined = undefined;
+    let pageImageAlt: string | undefined = undefined;
 
     switch (currentPage) {
       case 'newsArticle':
@@ -221,6 +223,7 @@ export const App: React.FC = () => {
           pageTitle = graph.title;
           pageDescription = graph.description;
           pageImageUrl = graph.imageUrl;
+          pageImageAlt = graph.title;
         }
         break;
       }
@@ -236,6 +239,7 @@ export const App: React.FC = () => {
     setSeoTitle(pageTitle);
     setSeoDescription(pageDescription);
     setSeoImageUrl(pageImageUrl);
+    setSeoImageAlt(pageImageAlt);
   }, [
     currentPage,
     selectedNewsItem,
