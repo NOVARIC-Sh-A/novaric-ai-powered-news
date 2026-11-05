@@ -16,6 +16,7 @@ import { mockJudiciaryProfilesData } from "../data/mockJudiciaryProfiles";
 import paragonScoresExport from "../db/paragon_scores_export.json";
 import { bundledScoresArePublic } from "./paragonPublicationGate";
 import { canonicalProfileId } from "../utils/profileRedirects";
+import { canonicalPoliticianKey } from "../utils/politicianNavigation";
 
 /** Bundled export is an archive. Scores leave it only when the gate is open and the row has a source. */
 function withoutStaticScores<T extends Record<string, any>>(profile: T): T {
@@ -238,24 +239,48 @@ export const fetchPoliticianCards = async (): Promise<VipProfile[]> => {
   return fallbackMerged;
 };
 
+function usableFetchedProfile(profile: VipProfile | null | undefined): profile is VipProfile {
+  return Boolean(profile && profile.name && profile.name !== 'I paidentifikuar' && profile.id !== 'unknown');
+}
+
+/** The published export, matched as `282`, `vip282`, or a merged duplicate id. */
+export function findBundledPolitician(id: string | number): VipProfile | null {
+  const key = canonicalPoliticianKey(id);
+  if (!key) return null;
+  const numeric = key.replace(/^vip/i, '');
+  const localPoliticians = (paragonScoresExport?.profiles as any[]) || [];
+  const localMatch = localPoliticians.find((profile) => {
+    const personId = String(profile.id ?? '');
+    const personNumeric = profile.numericId == null ? '' : String(profile.numericId);
+    const personPoliticianId = profile.politicianId == null ? '' : String(profile.politicianId);
+    return personId === key
+      || personId === numeric
+      || personNumeric === numeric
+      || personPoliticianId === numeric
+      || personId === `vip${numeric}`;
+  });
+  return localMatch ? toPoliticianUI(staticProfileForPublication(localMatch)) : null;
+}
+
 /**
  * Authoritative method to fetch a full politician profile.
  * Targets the aggregated /api/v1/politicians/{id_or_slug} endpoint exclusively.
+ * A vip-prefixed id that the live API rejects still resolves from the bundled export.
  */
 export const fetchPoliticianProfile = async (id: string | number): Promise<VipProfile> => {
+  const key = canonicalPoliticianKey(id) || canonicalProfileId(id);
+
   // 1. Try Aggregated v1 Endpoint (The Authoritative Source)
   try {
-      const fullData = await fetchPoliticianFull(id);
-      return toPoliticianUI(fullData);
-  } catch (error: any) {
-      if (error.status !== 404) {
-          console.error("Critical aggregator failure:", error);
-          throw error;
-      }
+      const fullData = await fetchPoliticianFull(key);
+      const fetched = toPoliticianUI(fullData);
+      if (usableFetchedProfile(fetched)) return fetched;
+  } catch {
+      // The published export below is the fallback, including when a vip id is rejected.
   }
 
-  // 2. Fallback to legacy path logic only if 404
-  const encoded = encodeURIComponent(String(id));
+  // 2. Legacy paths. Any failure continues to the bundled export.
+  const encoded = encodeURIComponent(String(key));
   const fallbackPaths = [
     `api/profiles/${encoded}`, 
     `api/profile/${encoded}`
@@ -264,24 +289,17 @@ export const fetchPoliticianProfile = async (id: string | number): Promise<VipPr
   for (const path of fallbackPaths) {
     try {
       const data = await apiGet<any>(path);
-      return toPoliticianUI(data);
-    } catch (error: any) {
-      if (error.status === 404) continue;
-      throw error;
+      const fetched = toPoliticianUI(data);
+      if (usableFetchedProfile(fetched)) return fetched;
+    } catch {
+      // Continue to the published export.
     }
   }
 
   // 3. Static deployment fallback: the bundled, verified politician export
   //    (same real dataset the list page renders; no mock/synthetic values).
-  const idStr = canonicalProfileId(id);
-  const localPoliticians = (paragonScoresExport?.profiles as any[]) || [];
-  const localMatch = localPoliticians.find(p =>
-    String(p.id) === idStr ||
-    String(p.numericId) === idStr ||
-    String(p.politicianId) === idStr ||
-    String(p.id) === `vip${idStr}`
-  );
-  if (localMatch) return toPoliticianUI(staticProfileForPublication(localMatch));
+  const bundled = findBundledPolitician(key);
+  if (bundled) return bundled;
 
   // FALLBACK FOR NON-POLITICAL PROFILES ONLY
   const nonPoliticalProfiles = [
