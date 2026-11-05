@@ -90,16 +90,21 @@ def paste_rounded(base: Image.Image, image: Image.Image, xy: tuple[int, int], ra
 
 
 def frame_portrait(path: Path, width: int, height: int, *, cover: bool) -> Image.Image:
+    """Uniform scale only. A 3:4 file fills the box. Anything else is contained on navy, never stretched."""
     image = Image.open(path).convert("RGB")
-    if cover:
+    if cover or abs((image.width / image.height) - (width / height)) < 0.02:
         scale = max(width / image.width, height / image.height)
         resized = image.resize((max(1, int(round(image.width * scale))), max(1, int(round(image.height * scale)))), Image.Resampling.LANCZOS)
         left = int(round((resized.width - width) * 0.5))
-        top = int(round((resized.height - height) * 0.3))
+        top = int(round((resized.height - height) * (0.3 if cover else 0.5)))
         left = max(0, min(left, resized.width - width))
         top = max(0, min(top, resized.height - height))
         return resized.crop((left, top, left + width, top + height))
-    return image.resize((width, height), Image.Resampling.LANCZOS)
+    scale = min(width / image.width, height / image.height)
+    resized = image.resize((max(1, int(round(image.width * scale))), max(1, int(round(image.height * scale)))), Image.Resampling.LANCZOS)
+    canvas = Image.new("RGB", (width, height), (0x30, 0x38, 0x4B))
+    canvas.paste(resized, ((width - resized.width) // 2, (height - resized.height) // 2))
+    return canvas
 
 
 def fit_logo(path: Path, height: int) -> Image.Image:

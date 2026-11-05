@@ -7,6 +7,7 @@ import { formatPersonName, splitPersonName } from '../utils/formatPersonName';
 describe('formatPersonName', () => {
   it('keeps the given name and puts the surname in capitals, including diacritics', () => {
     assert.equal(formatPersonName('Nard Ndoka'), 'Nard NDOKA');
+    assert.equal(formatPersonName('Taulant Balla'), 'Taulant BALLA');
     assert.equal(formatPersonName('Ilir Meta'), 'Ilir META');
     assert.equal(formatPersonName('Skënder Pashaj'), 'Skënder PASHAJ');
     assert.equal(formatPersonName('Belind Këlliçi'), 'Belind KËLLIÇI');

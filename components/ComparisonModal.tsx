@@ -83,7 +83,7 @@ export const ComparisonModal: React.FC<ComparisonModalProps> = ({ profile1, prof
                                     ? "https://novaric.co/wp-content/uploads/2025/11/FemaleProfile.jpg"
                                     : "https://novaric.co/wp-content/uploads/2025/11/MaleProfile.jpg";
                         }}
-                        alt={profile1.name}
+                        alt={formatVipName(profile1.name)}
                         style={{ objectFit: "cover" }}
                         className="w-24 h-24 rounded-full mx-auto border-4 border-primary-500 shadow-lg"
                     />
@@ -102,7 +102,7 @@ export const ComparisonModal: React.FC<ComparisonModalProps> = ({ profile1, prof
                                     ? "https://novaric.co/wp-content/uploads/2025/11/FemaleProfile.jpg"
                                     : "https://novaric.co/wp-content/uploads/2025/11/MaleProfile.jpg";
                         }}
-                        alt={profile2.name}
+                        alt={formatVipName(profile2.name)}
                         style={{ objectFit: "cover" }}
                         className="w-24 h-24 rounded-full mx-auto border-4 border-sky-500 shadow-lg"
                     />
