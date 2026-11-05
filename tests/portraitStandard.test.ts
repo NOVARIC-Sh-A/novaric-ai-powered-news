@@ -82,6 +82,10 @@ describe('Portrait attribution uses only stored provenance', () => {
       assert.equal(record.usageRightsReviewed, false);
       assert.equal(record.reviewer, null);
       assert.equal(frame.editorialOverride, false);
+      if (profile.id === 'vip46') {
+        assert.equal(frame.padded, false, 'Taulant Balla fills the 3:4 frame');
+        assert.equal(frame.inset, null);
+      }
       if (profile.id === 'vip282') {
         assert.equal(frame.reference, true);
         assert.equal(frame.padded, false);

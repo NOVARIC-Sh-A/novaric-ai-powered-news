@@ -169,11 +169,11 @@ export const ArticleTemplate1: React.FC<ArticleTemplate1Props> = ({
                                         key={author.name}
                                         onClick={() => author.profileId && onNavigateToVipProfile(author.profileId)} 
                                         className={`focus:outline-none focus:ring-2 focus:ring-primary-500 rounded-full transition-transform hover:scale-105 ${index > 0 ? '-ml-5' : ''} ${author.isAi ? '' : 'z-10'}`}
-                                        title={author.name}
+                                        title={formatVipName(author.name)}
                                     >
                                         <img 
                                             src={author.imageUrl} 
-                                            alt={`Portreti i ${author.name}`}
+                                            alt={`Portreti i ${formatVipName(author.name)}`}
                                             className="w-16 h-16 rounded-full object-cover border-4 border-white dark:border-slate-800 shadow-lg"
                                         />
                                     </button>

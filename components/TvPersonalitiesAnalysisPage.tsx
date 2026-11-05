@@ -155,7 +155,7 @@ export const TvPersonalitiesAnalysisPage: React.FC<PerformanceAnalysisPageProps>
 
                 {selectedAnalysis && radarChartData && (
                      <section className="mb-12 p-6 bg-slate-50 dark:bg-slate-900/50 rounded-xl shadow-inner">
-                        <h2 className="text-2xl font-bold text-center text-slate-800 dark:text-slate-200 mb-6">Krahasimi Vizual i Performancës për {selectedAnalysis.name}</h2>
+                        <h2 className="text-2xl font-bold text-center text-slate-800 dark:text-slate-200 mb-6">Krahasimi Vizual i Performancës për {formatPersonName(selectedAnalysis.name)}</h2>
                         <div className="max-w-xl mx-auto">
                            <RadarChart data={radarChartData} />
                         </div>

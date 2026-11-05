@@ -75,7 +75,7 @@ export const PoliticianPortrait: React.FC<PoliticianPortraitProps> = ({
               top: `${inset.y * 100}%`,
               width: `${inset.width * 100}%`,
               height: `${inset.height * 100}%`,
-              objectFit: 'fill',
+              objectFit: 'cover',
             } : undefined}
             onError={() => {
               if (derived && imageUrl && imageUrl !== derived.src) {
