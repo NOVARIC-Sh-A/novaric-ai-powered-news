@@ -75237,6 +75237,26 @@
       "uuid": "p-0282",
       "name": "Nard Ndoka",
       "slug": "nard-ndoka",
+      "socialLinks": {
+        "facebook": {
+          "approved": true,
+          "approvedBy": "Dr Alban Gj. THIKA",
+          "approvedAt": "2026-11-05",
+          "url": "https://www.facebook.com/nard.ndoka.7"
+        },
+        "x": {
+          "approved": true,
+          "approvedBy": "Dr Alban Gj. THIKA",
+          "approvedAt": "2026-11-05",
+          "url": "https://x.com/NardNdoka"
+        },
+        "linkedin": {
+          "approved": true,
+          "approvedBy": "Dr Alban Gj. THIKA",
+          "approvedAt": "2026-11-05",
+          "url": "https://www.linkedin.com/in/nard-ndoka-63678819/"
+        }
+      },
       "category": "Politikë (PDK)",
       "party": "PDK",
       "primaryRole": "Kryetar i Partisë Demokristiane të Shqipërisë",

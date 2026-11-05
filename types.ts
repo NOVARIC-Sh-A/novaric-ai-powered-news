@@ -414,6 +414,8 @@ export interface VipProfile {
   numericId?: number;
   /** Stable public path segment. Not recomputed from the display name. */
   slug?: string;
+  /** Recorded social accounts. Unapproved entries have no url. */
+  socialLinks?: import('./utils/socialLinks').SocialLinks | null;
   politicianId?: number;
   dynamicScore?: number;
   clickCount?: number;

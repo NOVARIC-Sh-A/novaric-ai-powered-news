@@ -8,6 +8,7 @@ import { PoliticianPortrait } from './PoliticianPortrait';
 import { portraitPropsFromProfile } from '../../utils/portraitStandard';
 import { politicianProfilePath, selectMainProfiles } from '../../utils/politicianNavigation';
 import { useParagonRatingsEnabled } from './useParagonRatings';
+import { ProfileShareButton } from './ProfileShareButton';
 
 interface DominantFiguresStripProps {
   politicians: VipProfile[];
@@ -68,7 +69,7 @@ export const DominantFiguresStrip: React.FC<DominantFiguresStripProps> = ({
             }}
           >
             {/* Party, photo and name pass clicks through to the card link. */}
-            <div className="pointer-events-none">
+            <div className="pointer-events-none pr-8">
             <div className="flex items-center justify-between gap-1.5 mb-2">
               <span
                 className="text-[11px] font-black uppercase tracking-wider px-1.5 py-0.5 rounded"
@@ -139,6 +140,7 @@ export const DominantFiguresStrip: React.FC<DominantFiguresStripProps> = ({
               />
             </div>
             </div>
+            <ProfileShareButton id={item.id || targetId} name={item.name} />
           </a>
         );
       })}

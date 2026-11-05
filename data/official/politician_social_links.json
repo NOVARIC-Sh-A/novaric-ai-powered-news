@@ -1,0 +1,31 @@
+{
+  "note": "Editorial source for politician social URLs. Only approved:true URLs are copied onto the public profile and rendered. An unapproved personal URL must never be copied into db/paragon_scores_export.json or into the page. Logos without an approved URL link to the platform homepage.",
+  "profiles": {
+    "vip282": {
+      "facebook": {
+        "url": "https://www.facebook.com/nard.ndoka.7",
+        "approved": true,
+        "approvedBy": "Dr Alban Gj. THIKA",
+        "approvedAt": "2026-11-05",
+        "source": "confirmed by NOVARIC® editor (Dr Alban Gj. THIKA)",
+        "verifiedAt": "2026-11-05"
+      },
+      "x": {
+        "url": "https://x.com/NardNdoka",
+        "approved": true,
+        "approvedBy": "Dr Alban Gj. THIKA",
+        "approvedAt": "2026-11-05",
+        "source": "confirmed by NOVARIC® editor (Dr Alban Gj. THIKA)",
+        "verifiedAt": "2026-11-05"
+      },
+      "linkedin": {
+        "url": "https://www.linkedin.com/in/nard-ndoka-63678819/",
+        "approved": true,
+        "approvedBy": "Dr Alban Gj. THIKA",
+        "approvedAt": "2026-11-05",
+        "source": "confirmed by NOVARIC® editor (Dr Alban Gj. THIKA)",
+        "verifiedAt": "2026-11-05"
+      }
+    }
+  }
+}

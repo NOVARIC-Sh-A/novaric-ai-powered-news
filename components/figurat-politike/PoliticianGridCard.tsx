@@ -10,6 +10,7 @@ import { ZodiacChip } from './primitives/ZodiacChip';
 import { useDotTooltip } from './SharedDotTooltip';
 import { useParagonRatingsEnabled } from './useParagonRatings';
 import { politicianProfilePath } from '../../utils/politicianNavigation';
+import { ProfileShareButton } from './ProfileShareButton';
 
 export interface PoliticianGridCardProps {
   politician?: VipProfile;
@@ -220,7 +221,7 @@ export const PoliticianGridCard: React.FC<PoliticianGridCardProps> = ({
 
         {/* Fingerprint Dots Row (Fixed D1 -> D7 order) */}
         <div
-          className="mt-2.5 pt-2 flex items-center justify-between"
+          className="mt-2.5 pt-2 pr-8 flex items-center justify-between"
           style={{ borderTop: '1px solid var(--nv-card-border)' }}
         >
           {/* 7 dots */}
@@ -277,6 +278,7 @@ export const PoliticianGridCard: React.FC<PoliticianGridCardProps> = ({
           </div>
         </div>
       </div>
+      <ProfileShareButton id={targetPolitician.id || targetId} name={targetPolitician.name} />
     </a>
   );
 };
