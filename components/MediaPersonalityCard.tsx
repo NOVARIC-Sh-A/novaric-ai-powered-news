@@ -230,7 +230,7 @@ export const MediaPersonalityCard: React.FC<MediaPersonalityCardProps> = ({
                                         ? "https://novaric.co/wp-content/uploads/2025/11/FemaleProfile.jpg"
                                         : "https://novaric.co/wp-content/uploads/2025/11/MaleProfile.jpg";
                             }}
-                            alt={profile.name}
+                            alt={displayName}
                             style={{ objectFit: "cover", objectPosition: "center" }}
                             className="w-full h-full rounded-full object-cover"
                         />

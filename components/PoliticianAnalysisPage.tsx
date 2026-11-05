@@ -4,6 +4,7 @@ import { FullProfileAnalysis, PerformancePortfolioItem, ParagonDimension, Psycho
 import { InformationCircleIcon, ChevronDownIcon } from './icons';
 import { SpiderChart } from './SpiderChart'; 
 import { PARAGON_DIMENSIONS_AL } from '../utils/translations';
+import { formatPersonName } from '../utils/formatPersonName';
 
 interface PoliticianAnalysisPageProps {
   analyses: FullProfileAnalysis[];
@@ -235,7 +236,7 @@ export const PoliticianAnalysisPage: React.FC<PoliticianAnalysisPageProps> = ({ 
               >
                 {analyses.map(analysis => (
                     <option key={analysis.profileInput.personal.fullName} value={analysis.profileInput.personal.fullName}>
-                        {analysis.profileInput.personal.fullName}
+                        {formatPersonName(analysis.profileInput.personal.fullName)}
                     </option>
                 ))}
               </select>
@@ -252,7 +253,7 @@ export const PoliticianAnalysisPage: React.FC<PoliticianAnalysisPageProps> = ({ 
             
             <div className="text-center">
                 <h2 className="text-2xl font-bold text-slate-800 dark:text-slate-200">
-                    Analiza e Profilit: <span className="text-primary-600 dark:text-primary-400">{selectedAnalysis.profileInput.personal.fullName}</span>
+                    Analiza e Profilit: <span className="text-primary-600 dark:text-primary-400">{formatPersonName(selectedAnalysis.profileInput.personal.fullName)}</span>
                 </h2>
             </div>
             

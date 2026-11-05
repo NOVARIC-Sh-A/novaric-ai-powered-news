@@ -9,6 +9,7 @@ No scores, no rankings, no generated faces.
 from __future__ import annotations
 
 import json
+import subprocess
 import sys
 from pathlib import Path
 
@@ -248,15 +249,34 @@ def write_listing() -> None:
     print(f"listing {PUBLIC_OG} {PUBLIC_OG.stat().st_size}")
 
 
+def display_names(names: list[str]) -> dict[str, str]:
+    """Same formatter as utils/formatPersonName.ts. The cards must not invent a second copy of the rule."""
+    cli = ROOT / "node_modules" / ".bin" / "tsx"
+    script = ROOT / "scripts" / "formatPersonNamesCli.ts"
+    proc = subprocess.run(
+        [str(cli), str(script)],
+        input=json.dumps(names),
+        text=True,
+        capture_output=True,
+        check=True,
+        cwd=ROOT,
+    )
+    formatted = json.loads(proc.stdout)
+    return dict(zip(names, formatted))
+
+
 def write_profiles(out_dir: Path) -> None:
     data = json.loads(EXPORT.read_text(encoding="utf-8"))
+    names = [profile.get("name") or profile.get("slug") or "" for profile in data["profiles"]]
+    shown = display_names(names)
     for profile in data["profiles"]:
         slug = profile.get("slug")
         if not slug:
             continue
         photo, cover = portrait_for(profile)
         role = (profile.get("primaryRole") or "Profil politik").strip()
-        image = profile_card(profile.get("name") or slug, role, photo, cover=cover)
+        stored = profile.get("name") or slug
+        image = profile_card(shown.get(stored, stored), role, photo, cover=cover)
         dest = out_dir / f"{slug}.png"
         save_png(image, dest)
     print(f"profiles {out_dir}")

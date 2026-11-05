@@ -3,6 +3,7 @@ import { VipProfile, ParagonEntry } from '../types';
 import { RadarChart } from './RadarChart';
 import { ChevronDownIcon } from './icons';
 import { PieChart } from './PieChart';
+import { formatPersonName } from '../utils/formatPersonName';
 
 interface PerformanceAnalysisPageProps {
     onBack: () => void;
@@ -146,7 +147,7 @@ export const TvPersonalitiesAnalysisPage: React.FC<PerformanceAnalysisPageProps>
                       >
                         {profilesWithAnalysis.map(p => (
                             <option key={p.id} value={p.id}>
-                                {p.name} ({p.category})
+                                {formatPersonName(p.name)} ({p.category})
                             </option>
                         ))}
                       </select>

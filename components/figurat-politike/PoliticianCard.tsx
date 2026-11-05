@@ -19,6 +19,7 @@ import { AlertTriangle, ShieldCheck, Scale, Info } from 'lucide-react';
 import { useParagonRatingsEnabled } from './useParagonRatings';
 import { ProfileSocialLogos } from './ProfileSocialLogos';
 import { SocialLinks } from '../../utils/socialLinks';
+import { formatPersonName } from '../../utils/formatPersonName';
 import { DimensionReading, ScoreEvidenceItem } from '../../types/politician';
 
 export interface PoliticianCardProps {
@@ -30,11 +31,7 @@ export interface PoliticianCardProps {
 }
 
 export function formatLastNameCaps(name: string): string {
-  if (!name) return '';
-  const parts = name.trim().split(/\s+/);
-  if (parts.length === 1) return parts[0].toUpperCase();
-  const lastName = parts[parts.length - 1].toUpperCase();
-  return `${parts.slice(0, parts.length - 1).join(' ')} ${lastName}`;
+  return formatPersonName(name);
 }
 
 export const PoliticianCard: React.FC<PoliticianCardProps> = ({

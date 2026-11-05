@@ -48,8 +48,9 @@ const ZodiacDisplay: React.FC<{ sign: ZodiacSign, onNavigate: () => void }> = ({
 };
 
 export const VipProfilePage: React.FC<VipProfilePageProps> = ({ profile, onBack, onNavigateToTvShow, tvShows, onNavigateToZodiacInfoPage, onNavigateToMaragonReport }) => {
-  const pageTitle = `${profile.name} | Profili | NOVARIC® AI-Powered News`;
-  useSeo(pageTitle, profile.shortBio, profile.imageUrl);
+  const displayName = formatVipName(profile.name);
+  const pageTitle = `${displayName} | Profili | NOVARIC® AI-Powered News`;
+  useSeo(pageTitle, profile.shortBio, profile.imageUrl, undefined, undefined, displayName);
 
   // Determine if this is a Media Profile for special styling
   const isMediaProfile = (profile.category || '').toLowerCase().includes('media');
@@ -123,7 +124,7 @@ export const VipProfilePage: React.FC<VipProfilePageProps> = ({ profile, onBack,
               borderDash: [5, 5]
           },
           {
-              label: profile.name,
+              label: displayName,
               data: radarValues,
               backgroundColor: 'rgba(14, 165, 233, 0.2)',
               borderColor: '#0ea5e9',
@@ -188,7 +189,7 @@ export const VipProfilePage: React.FC<VipProfilePageProps> = ({ profile, onBack,
                                     ? "https://novaric.co/wp-content/uploads/2025/11/FemaleProfile.jpg"
                                     : "https://novaric.co/wp-content/uploads/2025/11/MaleProfile.jpg";
                         }}
-                        alt={`Portreti i ${profile.name}`}
+                        alt={`Portreti i ${displayName}`}
                         style={{ objectFit: "cover", objectPosition: "center" }}
                         className="w-full h-full rounded-full object-cover border-4 border-slate-900"
                     />

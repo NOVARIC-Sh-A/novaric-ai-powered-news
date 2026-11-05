@@ -49,7 +49,8 @@ describe('Open Graph shells for Figurat Politike', () => {
       slug: 'nard-ndoka',
       primaryRole: 'Kryetar i Partisë Demokristiane të Shqipërisë',
     });
-    assert.equal(fields.title, 'Nard Ndoka');
+    assert.equal(fields.title, 'Nard NDOKA');
+    assert.equal(fields.imageAlt, 'Nard NDOKA');
     assert.match(fields.description, /Demokristiane/);
     assert.doesNotMatch(fields.description, /pikë|score|rendit/i);
     assert.equal(fields.url, 'https://media.novaric.al/figurat-politike/nard-ndoka');
@@ -59,7 +60,8 @@ describe('Open Graph shells for Figurat Politike', () => {
       slug: 'a-b',
       primaryRole: 'Rol "zyrtar"',
     }));
-    assert.match(html, /og:title" content="A &amp; B &lt;test&gt;"/);
+    assert.match(html, /og:title" content="A &amp; B &lt;TEST&gt;"/);
+    assert.match(html, /og:image:alt" content="A &amp; B &lt;TEST&gt;"/);
     assert.match(html, /Rol &quot;zyrtar&quot;/);
     assert.match(html, /<div id="root">|charset/);
   });
