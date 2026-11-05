@@ -12,14 +12,24 @@ export interface PortraitFocalPoint {
   y: number;
 }
 
+export interface PortraitInset {
+  x: number;
+  y: number;
+  width: number;
+  height: number;
+}
+
 export interface PortraitFrame {
   focalPoint: PortraitFocalPoint;
   uncertain: boolean;
   faceDetected: boolean;
+  padded?: boolean;
+  inset?: PortraitInset | null;
   crop: { x: number; y: number; width: number; height: number } | null;
   derived300: string | null;
   derived600: string | null;
   editorialOverride: boolean;
+  reference?: boolean;
 }
 
 export interface PortraitAttribution {
@@ -159,12 +169,12 @@ export function portraitPropsFromProfile(
   };
 }
 
-export function derivedSources(politicianId: string | number | null | undefined): { src: string; srcSet: string } | null {
-  if (focalOverride(politicianId)) return null;
+export function derivedSources(politicianId: string | number | null | undefined): { src: string; srcSet: string; inset: PortraitInset | null } | null {
   const frame = frameFor(politicianId);
-  if (!frame || frame.uncertain || !frame.faceDetected || !frame.derived300 || !frame.derived600) return null;
+  if (!frame || frame.reference || frame.uncertain || !frame.faceDetected || !frame.derived300 || !frame.derived600) return null;
   return {
     src: frame.derived600,
     srcSet: `${frame.derived300} 300w, ${frame.derived600} 600w`,
+    inset: frame.padded && frame.inset ? frame.inset : null,
   };
 }

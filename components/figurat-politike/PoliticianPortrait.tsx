@@ -50,6 +50,7 @@ export const PoliticianPortrait: React.FC<PoliticianPortraitProps> = ({
     : objectPositionFor(politicianId, Boolean(derived));
   const credit = imageCredit || PHOTO_CREDIT_UNVERIFIED;
   const src = derived?.src || imageUrl;
+  const inset = derived?.inset || null;
   const showImage = Boolean(src) && !failed;
 
   return (
@@ -67,6 +68,14 @@ export const PoliticianPortrait: React.FC<PoliticianPortraitProps> = ({
             loading={eager ? 'eager' : 'lazy'}
             decoding="async"
             referrerPolicy="no-referrer"
+            style={inset ? {
+              position: 'absolute',
+              left: `${inset.x * 100}%`,
+              top: `${inset.y * 100}%`,
+              width: `${inset.width * 100}%`,
+              height: `${inset.height * 100}%`,
+              objectFit: 'fill',
+            } : undefined}
             onError={() => {
               if (derived && imageUrl && imageUrl !== derived.src) {
                 setUseOriginal(true);

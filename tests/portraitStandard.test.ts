@@ -82,7 +82,12 @@ describe('Portrait attribution uses only stored provenance', () => {
       assert.equal(record.usageRightsReviewed, false);
       assert.equal(record.reviewer, null);
       assert.equal(frame.editorialOverride, false);
-      if (frame.uncertain || !frame.faceDetected) {
+      if (profile.id === 'vip282') {
+        assert.equal(frame.reference, true);
+        assert.equal(frame.padded, false);
+        assert.equal(derivedSources(profile.id), null);
+        assert.equal(objectPositionFor(profile.id, false), FALLBACK_OBJECT_POSITION);
+      } else if (frame.uncertain || !frame.faceDetected) {
         assert.equal(derivedSources(profile.id), null);
         assert.equal(objectPositionFor(profile.id, false), FALLBACK_OBJECT_POSITION);
       } else {
@@ -91,6 +96,12 @@ describe('Portrait attribution uses only stored provenance', () => {
         assert.equal(derived.src, frame.derived600);
         assert.ok(fs.existsSync(path.resolve(process.cwd(), 'public', frame.derived600.replace(/^\//, ''))));
         assert.ok(fs.existsSync(path.resolve(process.cwd(), 'public', frame.derived300.replace(/^\//, ''))));
+        if (frame.padded) {
+          assert.ok(derived.inset);
+          assert.ok(derived.inset.width < 0.995 || derived.inset.height < 0.995);
+        } else {
+          assert.equal(derived.inset, null);
+        }
       }
       const attribution = buildPortraitAttribution(profile);
       assert.equal(attribution.photographer, null);
