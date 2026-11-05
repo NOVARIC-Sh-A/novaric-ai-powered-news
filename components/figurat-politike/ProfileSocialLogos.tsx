@@ -29,7 +29,7 @@ const BRAND: Record<ProfileLogoPlatform, string> = {
 export function ProfileSocialLogos({ name, links }: { name: string; links?: SocialLinks | null }) {
   const entries = profileSocialLogos(name, links);
   return (
-    <div className="mt-4 flex items-center justify-end gap-2" data-profile-social="true">
+    <div className="flex items-center justify-end gap-2" data-profile-social="true">
       {entries.map((entry) => (
         <a
           key={entry.platform}

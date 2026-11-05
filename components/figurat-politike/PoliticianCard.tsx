@@ -18,8 +18,11 @@ import { EvidenceDrawer } from './EvidenceDrawer';
 import { AlertTriangle, ShieldCheck, Scale, Info } from 'lucide-react';
 import { useParagonRatingsEnabled } from './useParagonRatings';
 import { ProfileSocialLogos } from './ProfileSocialLogos';
+import { ShareCardDownload } from './ShareCardDownload';
 import { SocialLinks } from '../../utils/socialLinks';
 import { formatPersonName } from '../../utils/formatPersonName';
+import { dossierField, profileDossier, UNVERIFIED_LABEL } from '../../utils/profileDossier';
+import { ProfileDossierSections } from './ProfileDossierSections';
 import { DimensionReading, ScoreEvidenceItem } from '../../types/politician';
 
 export interface PoliticianCardProps {
@@ -135,15 +138,24 @@ export const PoliticianCard: React.FC<PoliticianCardProps> = ({
 
   // History series: only display verified history from backend; do NOT generate Math.sin() synthetic series
   // DOB formatting
-  const dobFormatted = dateOfBirth
+  const dossier = profileDossier(target.id || target.numericId);
+  const unverified = (key: string) => dossierField(dossier, key)?.verified === false;
+  const dobFormatted = unverified('dateOfBirth')
+    ? UNVERIFIED_LABEL
+    : dateOfBirth
     ? (() => {
         const m = String(dateOfBirth).match(/^(\d{4})[-/](\d{1,2})[-/](\d{1,2})$/);
         if (m) return `${m[3].padStart(2, '0')}.${m[2].padStart(2, '0')}.${m[1]}`;
         return dateOfBirth;
       })()
     : AWAITING_DATA;
-  const pobFormatted = placeOfBirth || AWAITING_DATA;
-  const zoneFormatted = electoralZone ? `Qarku ${String(electoralZone).replace(/^Qarku\s+/i, '')}` : AWAITING_DATA;
+  const pobFormatted = unverified('placeOfBirth') ? UNVERIFIED_LABEL : (placeOfBirth || AWAITING_DATA);
+  const zoneFromDossier = dossierField(dossier, 'constituency');
+  const zoneFormatted = zoneFromDossier?.verified
+    ? zoneFromDossier.display
+    : electoralZone
+      ? `Qarku ${String(electoralZone).replace(/^Qarku\s+/i, '')}`
+      : AWAITING_DATA;
 
   // Strict DOB verification check
   const isDobVerified = Boolean(
@@ -295,14 +307,17 @@ export const PoliticianCard: React.FC<PoliticianCardProps> = ({
             )}
           </div>
         </div>
-        <ProfileSocialLogos name={name} links={(target as { socialLinks?: SocialLinks | null }).socialLinks} />
+        <div className="mt-4 flex flex-wrap items-center justify-end gap-2">
+          <ShareCardDownload slug={(target as { slug?: string | null }).slug} />
+          <ProfileSocialLogos name={name} links={(target as { socialLinks?: SocialLinks | null }).socialLinks} />
+        </div>
       </div>
 
       <div className="mb-6 grid grid-cols-1 gap-6 lg:grid-cols-12" data-legacy-fingerprint="true">
         <div className="flex flex-col items-center rounded-3xl border border-slate-200 bg-white p-6 shadow-sm dark:border-slate-800 dark:bg-slate-900 lg:col-span-5">
           <div className="mb-2 w-full text-left">
             <h3 className="text-sm font-black uppercase tracking-wider text-slate-800 dark:text-slate-200">
-              PARAGON® Fingerprint (7 Dimensione)
+              PARAGON<sup className="registered-mark">®</sup> Fingerprint (7 Dimensione)
             </h3>
             <p className="mt-0.5 text-[11px] text-slate-400">
               Pikët e ruajtura D1–D7. Një dimension pa vlerë mbetet në pritje. [Stored D1–D7 scores. A dimension without a value stays awaiting data.]
@@ -337,10 +352,10 @@ export const PoliticianCard: React.FC<PoliticianCardProps> = ({
           <AlertTriangle className="w-5 h-5 text-amber-600 dark:text-amber-400 shrink-0 mt-0.5" />
           <div className="flex-1 text-xs leading-relaxed text-amber-900 dark:text-amber-200">
             <div className="font-bold text-sm text-amber-800 dark:text-amber-300 mb-0.5">
-              PARAGON® — Audit në proces
+              PARAGON<sup className="registered-mark">®</sup> — Audit në proces
             </div>
             <p>
-              Vlerësimet PARAGON® janë përkohësisht të pezulluara për verifikimin e burimeve dhe integritetit të të dhënave.
+              Vlerësimet PARAGON<sup className="registered-mark">®</sup> janë përkohësisht të pezulluara për verifikimin e burimeve dhe integritetit të të dhënave.
             </p>
           </div>
         </div>
@@ -360,12 +375,22 @@ export const PoliticianCard: React.FC<PoliticianCardProps> = ({
 
       <FactualObservatory profileId={target.id || target.numericId} />
 
+      <ProfileDossierSections dossier={dossier} />
+
       <EditorialRemarksCard remark={editorialRemark} paragonComposite={scoringSuspended ? null : paragonComposite} />
 
       {/* ========================================================
           (c) DOSSIER TABS (Biografia, Aktiviteti, Pasuria, Mandatet)
           ======================================================== */}
-      <TabPanel politician={target} />
+      <TabPanel politician={{
+        ...target,
+        dossierOwnsBio: Boolean(dossier),
+        bio: {
+          ...(target.bio || {}),
+          education: dossierField(dossier, 'education')?.display ?? target.bio?.education,
+          profession: dossierField(dossier, 'profession')?.display ?? target.bio?.profession,
+        },
+      }} />
 
       <ProfileRecordSections
         promises={target.promises}

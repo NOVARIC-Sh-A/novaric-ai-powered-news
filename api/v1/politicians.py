@@ -117,6 +117,9 @@ def _photo_registry() -> Dict[str, Dict[str, Any]]:
 def _with_official_photo(payload: Dict[str, Any]) -> Dict[str, Any]:
     """Only official photo sources reach the UI; otherwise imageUrl is None (Awaiting data)."""
     apply_official_photo(payload, _photo_registry())
+    profile = _photo_registry().get(str(payload.get("id") or ""))
+    if isinstance(profile, dict) and profile.get("slug") and not payload.get("slug"):
+        payload["slug"] = profile["slug"]
     pol = payload.get("politician")
     if isinstance(pol, dict):
         pol["photo_url"] = payload["imageUrl"]

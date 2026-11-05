@@ -86,6 +86,7 @@ export function toPoliticianUI(dto: any): VipProfile {
         id: raw?.profile_id || raw?.id || (baseline?.id) || (resolvedPoliticianId != null ? `vip${resolvedPoliticianId}` : 'unknown'),
         numericId: resolvedPoliticianId,
         politicianId: resolvedPoliticianId,
+        slug: dto.slug || raw?.slug || baseline?.slug || null,
         name: raw?.name || baseline?.name || 'I paidentifikuar',
         
         // Visuals
