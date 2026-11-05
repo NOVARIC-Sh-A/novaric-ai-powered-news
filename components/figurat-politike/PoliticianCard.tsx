@@ -18,6 +18,7 @@ import { EvidenceDrawer } from './EvidenceDrawer';
 import { AlertTriangle, ShieldCheck, Scale, Info } from 'lucide-react';
 import { useParagonRatingsEnabled } from './useParagonRatings';
 import { ProfileSocialLogos } from './ProfileSocialLogos';
+import { ShareCardDownload } from './ShareCardDownload';
 import { SocialLinks } from '../../utils/socialLinks';
 import { formatPersonName } from '../../utils/formatPersonName';
 import { dossierField, profileDossier, UNVERIFIED_LABEL } from '../../utils/profileDossier';
@@ -306,7 +307,10 @@ export const PoliticianCard: React.FC<PoliticianCardProps> = ({
             )}
           </div>
         </div>
-        <ProfileSocialLogos name={name} links={(target as { socialLinks?: SocialLinks | null }).socialLinks} />
+        <div className="mt-4 flex flex-wrap items-center justify-end gap-2">
+          <ShareCardDownload slug={(target as { slug?: string | null }).slug} />
+          <ProfileSocialLogos name={name} links={(target as { socialLinks?: SocialLinks | null }).socialLinks} />
+        </div>
       </div>
 
       <div className="mb-6 grid grid-cols-1 gap-6 lg:grid-cols-12" data-legacy-fingerprint="true">
