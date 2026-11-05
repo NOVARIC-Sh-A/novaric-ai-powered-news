@@ -75007,7 +75007,8 @@
       "party": "PDK",
       "primaryRole": "Kryetar i Partisë Demokristiane të Shqipërisë",
       "secondaryRoles": [
-        "Ish-ministër i Shëndetësisë (2007–2008)"
+        "Ish-ministër i Shëndetësisë (2007–2008)",
+        "Ish-deputet i Kuvendit (legjislaturat IV, V, VI, VIII dhe IX deri më 21.02.2019)"
       ],
       "parliamentaryStatus": "not_an_active_mp",
       "detentionStatus": "none",
@@ -75041,7 +75042,7 @@
       "placeOfBirth": "Laç",
       "electoralZone": null,
       "dimsSource": null,
-      "last_updated": "2026-11-03T09:00:00+00:00",
+      "last_updated": "2026-11-04T15:30:00+00:00",
       "scoring_suspended": false,
       "scoring_suspension_notice": null,
       "politicianId": 282,
@@ -75083,16 +75084,16 @@
           "notes": "Secondary. Same Wikidata item, imported from Polish Wikipedia."
         },
         "parliamentaryTerm": {
-          "value": null,
-          "sourceUrl": "https://www.wikidata.org/wiki/Q6965709",
-          "retrievedAt": "2026-11-03",
-          "notes": "Not displayed. Wikidata records one parliamentary term whose legislature item is dated 2017-09-09 to 2021-09-09, while Albanian Wikipedia says 2005–2013. The two secondary dates disagree, so no MP term is stored as a fact. He is not in the current Kuvendi roll-call files."
+          "value": "Legjislatura IV (23.07.1997–03.09.2001, PD; më 2000 kaloi në PDR); V (03.09.2001–02.09.2005, PDR); VI (02.09.2005–07.09.2009, PDK); VIII (09.09.2013–09.09.2017, PDK, i propozuar nga PD-ja); IX (09.09.2017–21.02.2019, PDK, qarku i Shkodrës, i kandiduar nga PD-ja, dorëheqje)",
+          "sourceUrl": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/LigjvenesitNeVite.pdf",
+          "retrievedAt": "2026-11-04",
+          "notes": "Kuvendi i Shqipërisë, Deputetët ndër vite (1920–2021), file LigjvenesitNeVite.pdf linked from parlament.al. He is not listed in Legjislatura VII (07.09.2009–09.09.2013). Footnote 979: resigned 21.02.2019. The 2018 annual report of the Assembly also lists him among deputies outside parliamentary groups for 2018."
         },
         "photo": {
           "value": null,
           "sourceUrl": null,
-          "retrievedAt": "2026-11-03",
-          "notes": "No official parliament, government, or party portrait with a licence was found. Photo left awaiting. No Wikipedia or press image was copied."
+          "retrievedAt": "2026-11-04",
+          "notes": "public/photos/nard_ndoka.jpg has been an empty 0-byte file since the repository import (git blob e69de29). No portrait was found on the Kuvendi file store, shendetesia.gov.al, kqz.gov.al, or a PDK official site. Press photographs and a Wikimedia signature recreation were not used. Credit remains Burimi i fotografisë: Në verifikim."
         },
         "paragonScore": {
           "value": null,
@@ -75100,16 +75101,58 @@
           "sourceUrl": null,
           "retrievedAt": "2026-11-03",
           "notes": "No legacy D1–D7 scores exist. All seven dimensions are null. No name-hash label was generated."
+        },
+        "constituency": {
+          "value": "Qarku i Shkodrës (Legjislatura IX)",
+          "sourceUrl": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/LigjvenesitNeVite.pdf",
+          "retrievedAt": "2026-11-04",
+          "notes": "Footnote 979. Earlier legislatures in the same book do not state a county on his line."
+        },
+        "patronymic": {
+          "value": "Lazër",
+          "sourceUrl": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/LigjvenesitNeVite.pdf",
+          "retrievedAt": "2026-11-04",
+          "notes": "Listed as Nard Lazër Ndoka / Nard Lazer Ndoka."
         }
       },
-      "sourceRetrievedAt": "2026-11-03",
+      "sourceRetrievedAt": "2026-11-04",
       "parliamentaryGroup": null,
       "mandates": [
+        {
+          "period": "23 korrik 1997–3 shtator 2001",
+          "role": "Deputet, Legjislatura IV (PD; më 2000 kaloi në PDR)",
+          "current": false,
+          "sourceUrl": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/LigjvenesitNeVite.pdf"
+        },
+        {
+          "period": "3 shtator 2001–2 shtator 2005",
+          "role": "Deputet, Legjislatura V (PDR)",
+          "current": false,
+          "sourceUrl": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/LigjvenesitNeVite.pdf"
+        },
+        {
+          "period": "2 shtator 2005–7 shtator 2009",
+          "role": "Deputet, Legjislatura VI (PDK)",
+          "current": false,
+          "sourceUrl": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/LigjvenesitNeVite.pdf"
+        },
         {
           "period": "2007–2008",
           "role": "Ministër i Shëndetësisë",
           "current": false,
           "sourceUrl": "https://shendetesia.gov.al/historiku/"
+        },
+        {
+          "period": "9 shtator 2013–9 shtator 2017",
+          "role": "Deputet, Legjislatura VIII (PDK, i propozuar nga PD-ja)",
+          "current": false,
+          "sourceUrl": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/LigjvenesitNeVite.pdf"
+        },
+        {
+          "period": "9 shtator 2017–21 shkurt 2019",
+          "role": "Deputet, Legjislatura IX (PDK, qarku i Shkodrës, i kandiduar nga PD-ja); dorëheqje më 21.02.2019",
+          "current": false,
+          "sourceUrl": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/LigjvenesitNeVite.pdf"
         }
       ],
       "officialLinks": [
@@ -75120,6 +75163,14 @@
         {
           "label": "Historiku i Ministrisë së Shëndetësisë",
           "url": "https://shendetesia.gov.al/historiku/"
+        },
+        {
+          "label": "Deputetët ndër vite (1920–2021), Kuvendi i Shqipërisë",
+          "url": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/LigjvenesitNeVite.pdf"
+        },
+        {
+          "label": "Raporti vjetor i Kuvendit 2018",
+          "url": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/KUVENDIRAPORTIVJETOR2018.pdf"
         }
       ],
       "affiliations": [

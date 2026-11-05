@@ -114,6 +114,7 @@ export function toPoliticianUI(dto: any): VipProfile {
         // Extended Spec Fields
         party: raw?.party || dto.party || (baseline as any)?.party || null,
         primaryRole: raw?.primary_role || dto.primaryRole || null,
+        mainProfile: raw?.mainProfile === true || raw?.main_profile === true || dto.mainProfile === true,
         secondaryRoles: raw?.secondary_roles ? (typeof raw.secondary_roles === 'string' ? JSON.parse(raw.secondary_roles) : raw.secondary_roles) : (dto.secondaryRoles || []),
         parliamentaryStatus: raw?.parliamentary_status || dto.parliamentaryStatus || (raw?.is_active_mp === true || raw?.is_active_mp === 1 ? 'active_mp' : (raw?.is_active_mp === false || raw?.is_active_mp === 0 ? 'not_an_active_mp' : null)),
         detentionStatus: raw?.detention_status || dto.detentionStatus || 'none',

@@ -431,6 +431,8 @@ export interface VipProfile {
   periodEnd?: string | null;
   dimsSource?: 'db' | 'synthetic' | 'none';
   primaryRole?: string;
+  /** Featured-strip membership. Only an explicit true adds the card after the first four. */
+  mainProfile?: boolean;
   secondaryRoles?: string[];
   parliamentaryStatus?: string;
   detentionStatus?: string;

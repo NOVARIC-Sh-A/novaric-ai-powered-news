@@ -3,6 +3,7 @@ import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import path from 'node:path';
 import { findPolitician, routeFromLocation, selectMainProfiles } from '../utils/politicianNavigation';
+import { mergePoliticianCards } from '../services/politicianAdapter';
 
 const read = (relative: string) => fs.readFileSync(path.resolve(process.cwd(), relative), 'utf8');
 
@@ -38,17 +39,25 @@ describe('Nard Ndoka profile', () => {
     assert.equal(ndoka?.imageUrl, null);
   });
 
-  it('records only sourced facts and leaves the disputed MP term out', () => {
+  it('records Kuvendi terms, the ministry post, and a secondary birth date', () => {
+    const book = 'https://kuvendiwebfiles.blob.core.windows.net/webfiles/LigjvenesitNeVite.pdf';
     assert.equal(ndoka?.party, 'PDK');
     assert.match(ndoka?.primaryRole, /Demokristiane/);
     assert.equal(ndoka?.fieldSources.party.sourceUrl, 'https://kqz.gov.al/lista-e-partive-politike');
     assert.equal(ndoka?.fieldSources.ministerialPost.sourceUrl, 'https://shendetesia.gov.al/historiku/');
-    assert.equal(ndoka?.mandates[0].period, '2007–2008');
-    assert.equal(ndoka?.mandates[0].role, 'Ministër i Shëndetësisë');
-    assert.equal(ndoka?.fieldSources.parliamentaryTerm.value, null);
+    assert.equal(ndoka?.fieldSources.parliamentaryTerm.sourceUrl, book);
+    assert.match(ndoka?.fieldSources.parliamentaryTerm.value, /IX \(09\.09\.2017–21\.02\.2019/);
+    assert.match(ndoka?.fieldSources.parliamentaryTerm.value, /21\.02\.2019/);
+    assert.equal(ndoka?.fieldSources.constituency.value, 'Qarku i Shkodrës (Legjislatura IX)');
+    const periods = ndoka?.mandates.map((item: { period: string }) => item.period);
+    assert.ok(periods.includes('2 shtator 2005–7 shtator 2009'));
+    assert.ok(periods.includes('9 shtator 2017–21 shkurt 2019'));
+    assert.ok(periods.includes('2007–2008'));
     assert.equal(ndoka?.dateOfBirth, '1963-05-18');
     assert.equal(ndoka?.dateOfBirthVerificationStatus, null);
     assert.equal(ndoka?.parliamentaryStatus, 'not_an_active_mp');
+    assert.equal(ndoka?.imageUrl, null);
+    assert.match(ndoka?.fieldSources.photo.notes, /0-byte/);
   });
 
   it('appears in the full list and in the featured strip without dropping the first four', () => {
@@ -59,6 +68,12 @@ describe('Nard Ndoka profile', () => {
     assert.deepEqual(featured.slice(0, 4).map((profile) => profile.id), ['vip1', 'vip2', 'vip3', 'vip4']);
     assert.equal(featured.some((profile) => profile.id === 'vip282'), true);
     assert.equal(featured.length, 5);
+    const cards = mergePoliticianCards(profiles);
+    const featuredCards = selectMainProfiles(cards);
+    assert.equal(featuredCards.find((profile) => profile.id === 'vip282')?.party, 'PDK');
+    assert.equal(featuredCards.find((profile) => profile.id === 'vip282')?.mainProfile, true);
+    assert.deepEqual(featuredCards.map((profile) => profile.id), ['vip1', 'vip2', 'vip3', 'vip4', 'vip282']);
     assert.match(read('components/figurat-politike/DominantFiguresStrip.tsx'), /selectMainProfiles/);
+    assert.match(read('components/figurat-politike/DominantFiguresStrip.tsx'), /lg:grid-cols-5/);
   });
 });
