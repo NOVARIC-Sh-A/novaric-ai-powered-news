@@ -1,0 +1,3861 @@
+{
+  "detector": "opencv-yunet-2023mar-face-detection",
+  "recognition": false,
+  "generatedAt": "2026-11-05T14:05:11.745470+00:00",
+  "note": "Face detection only. Crops are not manually verified unless editorialOverride is true.",
+  "frames": {
+    "vip1": {
+      "focalPoint": {
+        "x": 0.5,
+        "y": 0.385
+      },
+      "uncertain": false,
+      "faceDetected": true,
+      "crop": {
+        "x": 180,
+        "y": 95,
+        "width": 351,
+        "height": 468
+      },
+      "derived300": "/politicians/portraits/vip1-300.webp",
+      "derived600": "/politicians/portraits/vip1-600.webp",
+      "editorialOverride": false
+    },
+    "vip2": {
+      "focalPoint": {
+        "x": 0.5,
+        "y": 0.385
+      },
+      "uncertain": false,
+      "faceDetected": true,
+      "crop": {
+        "x": 566,
+        "y": 661,
+        "width": 807,
+        "height": 1076
+      },
+      "derived300": "/politicians/portraits/vip2-300.webp",
+      "derived600": "/politicians/portraits/vip2-600.webp",
+      "editorialOverride": false
+    },
+    "vip3": {
+      "focalPoint": {
+        "x": 0.5,
+        "y": 0.3
+      },
+      "uncertain": true,
+      "faceDetected": false,
+      "crop": null,
+      "derived300": null,
+      "derived600": null,
+      "editorialOverride": false
+    },
+    "vip4": {
+      "focalPoint": {
+        "x": 0.5,
+        "y": 0.385
+      },
+      "uncertain": false,
+      "faceDetected": true,
+      "crop": {
+        "x": 99,
+        "y": 0,
+        "width": 74,
+        "height": 99
+      },
+      "derived300": "/politicians/portraits/vip4-300.webp",
+      "derived600": "/politicians/portraits/vip4-600.webp",
+      "editorialOverride": false
+    },
+    "vip6": {
+      "focalPoint": {
+        "x": 0.5,
+        "y": 0.3
+      },
+      "uncertain": true,
+      "faceDetected": true,
+      "crop": {
+        "x": 0,
+        "y": 0,
+        "width": 465,
+        "height": 620
+      },
+      "derived300": null,
+      "derived600": null,
+      "editorialOverride": false
+    },
+    "vip7": {
+      "focalPoint": {
+        "x": 0.5,
+        "y": 0.385
+      },
+      "uncertain": false,
+      "faceDetected": true,
+      "crop": {
+        "x": 115,
+        "y": 48,
+        "width": 298,
+        "height": 398
+      },
+      "derived300": "/politicians/portraits/vip7-300.webp",
+      "derived600": "/politicians/portraits/vip7-600.webp",
+      "editorialOverride": false
+    },
+    "vip9": {
+      "focalPoint": {
+        "x": 0.5,
+        "y": 0.385
+      },
+      "uncertain": false,
+      "faceDetected": true,
+      "crop": {
+        "x": 133,
+        "y": 141,
+        "width": 220,
+        "height": 293
+      },
+      "derived300": "/politicians/portraits/vip9-300.webp",
+      "derived600": "/politicians/portraits/vip9-600.webp",
+      "editorialOverride": false
+    },
+    "vip10": {
+      "focalPoint": {
+        "x": 0.5,
+        "y": 0.385
+      },
+      "uncertain": false,
+      "faceDetected": true,
+      "crop": {
+        "x": 102,
+        "y": 148,
+        "width": 531,
+        "height": 708
+      },
+      "derived300": "/politicians/portraits/vip10-300.webp",
+      "derived600": "/politicians/portraits/vip10-600.webp",
+      "editorialOverride": false
+    },
+    "vip13": {
+      "focalPoint": {
+        "x": 0.5,
+        "y": 0.385
+      },
+      "uncertain": false,
+      "faceDetected": true,
+      "crop": {
+        "x": 230,
+        "y": 94,
+        "width": 140,
+        "height": 187
+      },
+      "derived300": "/politicians/portraits/vip13-300.webp",
+      "derived600": "/politicians/portraits/vip13-600.webp",
+      "editorialOverride": false
+    },
+    "vip14": {
+      "focalPoint": {
+        "x": 0.5,
+        "y": 0.385
+      },
+      "uncertain": false,
+      "faceDetected": true,
+      "crop": {
+        "x": 99,
+        "y": 128,
+        "width": 103,
+        "height": 137
+      },
+      "derived300": "/politicians/portraits/vip14-300.webp",
+      "derived600": "/politicians/portraits/vip14-600.webp",
+      "editorialOverride": false
+    },
+    "vip15": {
+      "focalPoint": {
+        "x": 0.5,
+        "y": 0.385
+      },
+      "uncertain": false,
+      "faceDetected": true,
+      "crop": {
+        "x": 885,
+        "y": 225,
+        "width": 732,
+        "height": 975
+      },
+      "derived300": "/politicians/portraits/vip15-300.webp",
+      "derived600": "/politicians/portraits/vip15-600.webp",
+      "editorialOverride": false
+    },
+    "vip16": {
+      "focalPoint": {
+        "x": 0.5,
+        "y": 0.385
+      },
+      "uncertain": false,
+      "faceDetected": true,
+      "crop": {
+        "x": 229,
+        "y": 196,
+        "width": 430,
+        "height": 574
+      },
+      "derived300": "/politicians/portraits/vip16-300.webp",
+      "derived600": "/politicians/portraits/vip16-600.webp",
+      "editorialOverride": false
+    },
+    "vip17": {
+      "focalPoint": {
+        "x": 0.5,
+        "y": 0.385
+      },
+      "uncertain": false,
+      "faceDetected": true,
+      "crop": {
+        "x": 115,
+        "y": 101,
+        "width": 175,
+        "height": 234
+      },
+      "derived300": "/politicians/portraits/vip17-300.webp",
+      "derived600": "/politicians/portraits/vip17-600.webp",
+      "editorialOverride": false
+    },
+    "vip18": {
+      "focalPoint": {
+        "x": 0.5,
+        "y": 0.385
+      },
+      "uncertain": false,
+      "faceDetected": true,
+      "crop": {
+        "x": 530,
+        "y": 393,
+        "width": 747,
+        "height": 996
+      },
+      "derived300": "/politicians/portraits/vip18-300.webp",
+      "derived600": "/politicians/portraits/vip18-600.webp",
+      "editorialOverride": false
+    },
+    "vip19": {
+      "focalPoint": {
+        "x": 0.5,
+        "y": 0.3
+      },
+      "uncertain": true,
+      "faceDetected": true,
+      "crop": {
+        "x": 211,
+        "y": 0,
+        "width": 422,
+        "height": 563
+      },
+      "derived300": null,
+      "derived600": null,
+      "editorialOverride": false
+    },
+    "vip20": {
+      "focalPoint": {
+        "x": 0.5,
+        "y": 0.385
+      },
+      "uncertain": false,
+      "faceDetected": true,
+      "crop": {
+        "x": 50,
+        "y": 2,
+        "width": 119,
+        "height": 159
+      },
+      "derived300": "/politicians/portraits/vip20-300.webp",
+      "derived600": "/politicians/portraits/vip20-600.webp",
+      "editorialOverride": false
+    },
+    "vip21": {
+      "focalPoint": {
+        "x": 0.5,
+        "y": 0.385
+      },
+      "uncertain": false,
+      "faceDetected": true,
+      "crop": {
+        "x": 60,
+        "y": 3,
+        "width": 106,
+        "height": 141
+      },
+      "derived300": "/politicians/portraits/vip21-300.webp",
+      "derived600": "/politicians/portraits/vip21-600.webp",
+      "editorialOverride": false
+    },
+    "vip22": {
+      "focalPoint": {
+        "x": 0.5,
+        "y": 0.3
+      },
+      "uncertain": true,
+      "faceDetected": false,
+      "crop": null,
+      "derived300": null,
+      "derived600": null,
+      "editorialOverride": false
+    },
+    "vip23": {
+      "focalPoint": {
+        "x": 0.5,
+        "y": 0.385
+      },
+      "uncertain": false,
+      "faceDetected": true,
+      "crop": {
+        "x": 232,
+        "y": 97,
+        "width": 139,
+        "height": 186
+      },
+      "derived300": "/politicians/portraits/vip23-300.webp",
+      "derived600": "/politicians/portraits/vip23-600.webp",
+      "editorialOverride": false
+    },
+    "vip24": {
+      "focalPoint": {
+        "x": 0.5,
+        "y": 0.385
+      },
+      "uncertain": false,
+      "faceDetected": true,
+      "crop": {
+        "x": 224,
+        "y": 93,
+        "width": 145,
+        "height": 193
+      },
+      "derived300": "/politicians/portraits/vip24-300.webp",
+      "derived600": "/politicians/portraits/vip24-600.webp",
+      "editorialOverride": false
+    },
+    "vip25": {
+      "focalPoint": {
+        "x": 0.5,
+        "y": 0.385
+      },
+      "uncertain": false,
+      "faceDetected": true,
+      "crop": {
+        "x": 174,
+        "y": 333,
+        "width": 488,
+        "height": 651
+      },
+      "derived300": "/politicians/portraits/vip25-300.webp",
+      "derived600": "/politicians/portraits/vip25-600.webp",
+      "editorialOverride": false
+    },
+    "vip26": {
+      "focalPoint": {
+        "x": 0.5,
+        "y": 0.3
+      },
+      "uncertain": true,
+      "faceDetected": true,
+      "crop": {
+        "x": 0,
+        "y": 52,
+        "width": 634,
+        "height": 845
+      },
+      "derived300": null,
+      "derived600": null,
+      "editorialOverride": false
+    },
+    "vip27": {
+      "focalPoint": {
+        "x": 0.5,
+        "y": 0.385
+      },
+      "uncertain": false,
+      "faceDetected": true,
+      "crop": {
+        "x": 92,
+        "y": 69,
+        "width": 571,
+        "height": 761
+      },
+      "derived300": "/politicians/portraits/vip27-300.webp",
+      "derived600": "/politicians/portraits/vip27-600.webp",
+      "editorialOverride": false
+    },
+    "vip28": {
+      "focalPoint": {
+        "x": 0.5,
+        "y": 0.385
+      },
+      "uncertain": false,
+      "faceDetected": true,
+      "crop": {
+        "x": 215,
+        "y": 186,
+        "width": 450,
+        "height": 600
+      },
+      "derived300": "/politicians/portraits/vip28-300.webp",
+      "derived600": "/politicians/portraits/vip28-600.webp",
+      "editorialOverride": false
+    },
+    "vip30": {
+      "focalPoint": {
+        "x": 0.5,
+        "y": 0.385
+      },
+      "uncertain": false,
+      "faceDetected": true,
+      "crop": {
+        "x": 1565,
+        "y": 1071,
+        "width": 689,
+        "height": 918
+      },
+      "derived300": "/politicians/portraits/vip30-300.webp",
+      "derived600": "/politicians/portraits/vip30-600.webp",
+      "editorialOverride": false
+    },
+    "vip33": {
+      "focalPoint": {
+        "x": 0.5,
+        "y": 0.385
+      },
+      "uncertain": false,
+      "faceDetected": true,
+      "crop": {
+        "x": 1573,
+        "y": 671,
+        "width": 756,
+        "height": 1008
+      },
+      "derived300": "/politicians/portraits/vip33-300.webp",
+      "derived600": "/politicians/portraits/vip33-600.webp",
+      "editorialOverride": false
+    },
+    "vip34": {
+      "focalPoint": {
+        "x": 0.5,
+        "y": 0.385
+      },
+      "uncertain": false,
+      "faceDetected": true,
+      "crop": {
+        "x": 239,
+        "y": 90,
+        "width": 135,
+        "height": 180
+      },
+      "derived300": "/politicians/portraits/vip34-300.webp",
+      "derived600": "/politicians/portraits/vip34-600.webp",
+      "editorialOverride": false
+    },
+    "vip35": {
+      "focalPoint": {
+        "x": 0.5,
+        "y": 0.385
+      },
+      "uncertain": false,
+      "faceDetected": true,
+      "crop": {
+        "x": 340,
+        "y": 197,
+        "width": 369,
+        "height": 492
+      },
+      "derived300": "/politicians/portraits/vip35-300.webp",
+      "derived600": "/politicians/portraits/vip35-600.webp",
+      "editorialOverride": false
+    },
+    "vip37": {
+      "focalPoint": {
+        "x": 0.5,
+        "y": 0.385
+      },
+      "uncertain": false,
+      "faceDetected": true,
+      "crop": {
+        "x": 246,
+        "y": 126,
+        "width": 124,
+        "height": 165
+      },
+      "derived300": "/politicians/portraits/vip37-300.webp",
+      "derived600": "/politicians/portraits/vip37-600.webp",
+      "editorialOverride": false
+    },
+    "vip38": {
+      "focalPoint": {
+        "x": 0.5,
+        "y": 0.385
+      },
+      "uncertain": false,
+      "faceDetected": true,
+      "crop": {
+        "x": 2335,
+        "y": 1440,
+        "width": 745,
+        "height": 993
+      },
+      "derived300": "/politicians/portraits/vip38-300.webp",
+      "derived600": "/politicians/portraits/vip38-600.webp",
+      "editorialOverride": false
+    },
+    "vip40": {
+      "focalPoint": {
+        "x": 0.5,
+        "y": 0.385
+      },
+      "uncertain": false,
+      "faceDetected": true,
+      "crop": {
+        "x": 44,
+        "y": 14,
+        "width": 144,
+        "height": 193
+      },
+      "derived300": "/politicians/portraits/vip40-300.webp",
+      "derived600": "/politicians/portraits/vip40-600.webp",
+      "editorialOverride": false
+    },
+    "vip41": {
+      "focalPoint": {
+        "x": 0.5,
+        "y": 0.3
+      },
+      "uncertain": true,
+      "faceDetected": true,
+      "crop": {
+        "x": 53,
+        "y": 0,
+        "width": 122,
+        "height": 163
+      },
+      "derived300": null,
+      "derived600": null,
+      "editorialOverride": false
+    },
+    "vip42": {
+      "focalPoint": {
+        "x": 0.5,
+        "y": 0.3
+      },
+      "uncertain": true,
+      "faceDetected": true,
+      "crop": {
+        "x": 65,
+        "y": 0,
+        "width": 478,
+        "height": 637
+      },
+      "derived300": null,
+      "derived600": null,
+      "editorialOverride": false
+    },
+    "vip43": {
+      "focalPoint": {
+        "x": 0.5,
+        "y": 0.385
+      },
+      "uncertain": false,
+      "faceDetected": true,
+      "crop": {
+        "x": 234,
+        "y": 86,
+        "width": 144,
+        "height": 192
+      },
+      "derived300": "/politicians/portraits/vip43-300.webp",
+      "derived600": "/politicians/portraits/vip43-600.webp",
+      "editorialOverride": false
+    },
+    "vip44": {
+      "focalPoint": {
+        "x": 0.5,
+        "y": 0.385
+      },
+      "uncertain": false,
+      "faceDetected": true,
+      "crop": {
+        "x": 911,
+        "y": 630,
+        "width": 758,
+        "height": 1011
+      },
+      "derived300": "/politicians/portraits/vip44-300.webp",
+      "derived600": "/politicians/portraits/vip44-600.webp",
+      "editorialOverride": false
+    },
+    "vip45": {
+      "focalPoint": {
+        "x": 0.5,
+        "y": 0.385
+      },
+      "uncertain": false,
+      "faceDetected": true,
+      "crop": {
+        "x": 690,
+        "y": 864,
+        "width": 823,
+        "height": 1098
+      },
+      "derived300": "/politicians/portraits/vip45-300.webp",
+      "derived600": "/politicians/portraits/vip45-600.webp",
+      "editorialOverride": false
+    },
+    "vip46": {
+      "focalPoint": {
+        "x": 0.5,
+        "y": 0.3
+      },
+      "uncertain": true,
+      "faceDetected": true,
+      "crop": {
+        "x": 89,
+        "y": 0,
+        "width": 298,
+        "height": 397
+      },
+      "derived300": null,
+      "derived600": null,
+      "editorialOverride": false
+    },
+    "vip47": {
+      "focalPoint": {
+        "x": 0.5,
+        "y": 0.385
+      },
+      "uncertain": false,
+      "faceDetected": true,
+      "crop": {
+        "x": 253,
+        "y": 114,
+        "width": 117,
+        "height": 156
+      },
+      "derived300": "/politicians/portraits/vip47-300.webp",
+      "derived600": "/politicians/portraits/vip47-600.webp",
+      "editorialOverride": false
+    },
+    "vip48": {
+      "focalPoint": {
+        "x": 0.5,
+        "y": 0.385
+      },
+      "uncertain": false,
+      "faceDetected": true,
+      "crop": {
+        "x": 246,
+        "y": 127,
+        "width": 116,
+        "height": 154
+      },
+      "derived300": "/politicians/portraits/vip48-300.webp",
+      "derived600": "/politicians/portraits/vip48-600.webp",
+      "editorialOverride": false
+    },
+    "vip49": {
+      "focalPoint": {
+        "x": 0.5,
+        "y": 0.3
+      },
+      "uncertain": true,
+      "faceDetected": true,
+      "crop": {
+        "x": 63,
+        "y": 0,
+        "width": 306,
+        "height": 408
+      },
+      "derived300": null,
+      "derived600": null,
+      "editorialOverride": false
+    },
+    "vip50": {
+      "focalPoint": {
+        "x": 0.5,
+        "y": 0.385
+      },
+      "uncertain": false,
+      "faceDetected": true,
+      "crop": {
+        "x": 248,
+        "y": 123,
+        "width": 115,
+        "height": 153
+      },
+      "derived300": "/politicians/portraits/vip50-300.webp",
+      "derived600": "/politicians/portraits/vip50-600.webp",
+      "editorialOverride": false
+    },
+    "vip51": {
+      "focalPoint": {
+        "x": 0.5,
+        "y": 0.3
+      },
+      "uncertain": true,
+      "faceDetected": false,
+      "crop": null,
+      "derived300": null,
+      "derived600": null,
+      "editorialOverride": false
+    },
+    "vip52": {
+      "focalPoint": {
+        "x": 0.5,
+        "y": 0.385
+      },
+      "uncertain": false,
+      "faceDetected": true,
+      "crop": {
+        "x": 265,
+        "y": 151,
+        "width": 80,
+        "height": 106
+      },
+      "derived300": "/politicians/portraits/vip52-300.webp",
+      "derived600": "/politicians/portraits/vip52-600.webp",
+      "editorialOverride": false
+    },
+    "vip53": {
+      "focalPoint": {
+        "x": 0.5,
+        "y": 0.3
+      },
+      "uncertain": true,
+      "faceDetected": false,
+      "crop": null,
+      "derived300": null,
+      "derived600": null,
+      "editorialOverride": false
+    },
+    "vip55": {
+      "focalPoint": {
+        "x": 0.5,
+        "y": 0.385
+      },
+      "uncertain": false,
+      "faceDetected": true,
+      "crop": {
+        "x": 1813,
+        "y": 1293,
+        "width": 875,
+        "height": 1167
+      },
+      "derived300": "/politicians/portraits/vip55-300.webp",
+      "derived600": "/politicians/portraits/vip55-600.webp",
+      "editorialOverride": false
+    },
+    "vip56": {
+      "focalPoint": {
+        "x": 0.5,
+        "y": 0.3
+      },
+      "uncertain": true,
+      "faceDetected": false,
+      "crop": null,
+      "derived300": null,
+      "derived600": null,
+      "editorialOverride": false
+    },
+    "vip59": {
+      "focalPoint": {
+        "x": 0.5,
+        "y": 0.385
+      },
+      "uncertain": false,
+      "faceDetected": true,
+      "crop": {
+        "x": 75,
+        "y": 11,
+        "width": 82,
+        "height": 109
+      },
+      "derived300": "/politicians/portraits/vip59-300.webp",
+      "derived600": "/politicians/portraits/vip59-600.webp",
+      "editorialOverride": false
+    },
+    "vip60": {
+      "focalPoint": {
+        "x": 0.5,
+        "y": 0.385
+      },
+      "uncertain": false,
+      "faceDetected": true,
+      "crop": {
+        "x": 242,
+        "y": 92,
+        "width": 133,
+        "height": 177
+      },
+      "derived300": "/politicians/portraits/vip60-300.webp",
+      "derived600": "/politicians/portraits/vip60-600.webp",
+      "editorialOverride": false
+    },
+    "vip61": {
+      "focalPoint": {
+        "x": 0.5,
+        "y": 0.385
+      },
+      "uncertain": false,
+      "faceDetected": true,
+      "crop": {
+        "x": 233,
+        "y": 101,
+        "width": 140,
+        "height": 187
+      },
+      "derived300": "/politicians/portraits/vip61-300.webp",
+      "derived600": "/politicians/portraits/vip61-600.webp",
+      "editorialOverride": false
+    },
+    "vip63": {
+      "focalPoint": {
+        "x": 0.5,
+        "y": 0.385
+      },
+      "uncertain": false,
+      "faceDetected": true,
+      "crop": {
+        "x": 1414,
+        "y": 990,
+        "width": 631,
+        "height": 841
+      },
+      "derived300": "/politicians/portraits/vip63-300.webp",
+      "derived600": "/politicians/portraits/vip63-600.webp",
+      "editorialOverride": false
+    },
+    "vip64": {
+      "focalPoint": {
+        "x": 0.5,
+        "y": 0.385
+      },
+      "uncertain": false,
+      "faceDetected": true,
+      "crop": {
+        "x": 900,
+        "y": 690,
+        "width": 903,
+        "height": 1203
+      },
+      "derived300": "/politicians/portraits/vip64-300.webp",
+      "derived600": "/politicians/portraits/vip64-600.webp",
+      "editorialOverride": false
+    },
+    "vip65": {
+      "focalPoint": {
+        "x": 0.5,
+        "y": 0.385
+      },
+      "uncertain": false,
+      "faceDetected": true,
+      "crop": {
+        "x": 2013,
+        "y": 1031,
+        "width": 705,
+        "height": 940
+      },
+      "derived300": "/politicians/portraits/vip65-300.webp",
+      "derived600": "/politicians/portraits/vip65-600.webp",
+      "editorialOverride": false
+    },
+    "vip66": {
+      "focalPoint": {
+        "x": 0.5,
+        "y": 0.3
+      },
+      "uncertain": true,
+      "faceDetected": false,
+      "crop": null,
+      "derived300": null,
+      "derived600": null,
+      "editorialOverride": false
+    },
+    "vip67": {
+      "focalPoint": {
+        "x": 0.5,
+        "y": 0.385
+      },
+      "uncertain": false,
+      "faceDetected": true,
+      "crop": {
+        "x": 243,
+        "y": 117,
+        "width": 121,
+        "height": 161
+      },
+      "derived300": "/politicians/portraits/vip67-300.webp",
+      "derived600": "/politicians/portraits/vip67-600.webp",
+      "editorialOverride": false
+    },
+    "vip68": {
+      "focalPoint": {
+        "x": 0.5,
+        "y": 0.3
+      },
+      "uncertain": true,
+      "faceDetected": false,
+      "crop": null,
+      "derived300": null,
+      "derived600": null,
+      "editorialOverride": false
+    },
+    "vip69": {
+      "focalPoint": {
+        "x": 0.5,
+        "y": 0.385
+      },
+      "uncertain": false,
+      "faceDetected": true,
+      "crop": {
+        "x": 240,
+        "y": 98,
+        "width": 135,
+        "height": 180
+      },
+      "derived300": "/politicians/portraits/vip69-300.webp",
+      "derived600": "/politicians/portraits/vip69-600.webp",
+      "editorialOverride": false
+    },
+    "vip70": {
+      "focalPoint": {
+        "x": 0.5,
+        "y": 0.385
+      },
+      "uncertain": false,
+      "faceDetected": true,
+      "crop": {
+        "x": 183,
+        "y": 146,
+        "width": 555,
+        "height": 740
+      },
+      "derived300": "/politicians/portraits/vip70-300.webp",
+      "derived600": "/politicians/portraits/vip70-600.webp",
+      "editorialOverride": false
+    },
+    "vip71": {
+      "focalPoint": {
+        "x": 0.5,
+        "y": 0.3
+      },
+      "uncertain": true,
+      "faceDetected": true,
+      "crop": {
+        "x": 47,
+        "y": 0,
+        "width": 121,
+        "height": 162
+      },
+      "derived300": null,
+      "derived600": null,
+      "editorialOverride": false
+    },
+    "vip72": {
+      "focalPoint": {
+        "x": 0.5,
+        "y": 0.385
+      },
+      "uncertain": false,
+      "faceDetected": true,
+      "crop": {
+        "x": 61,
+        "y": 11,
+        "width": 94,
+        "height": 125
+      },
+      "derived300": "/politicians/portraits/vip72-300.webp",
+      "derived600": "/politicians/portraits/vip72-600.webp",
+      "editorialOverride": false
+    },
+    "vip73": {
+      "focalPoint": {
+        "x": 0.5,
+        "y": 0.385
+      },
+      "uncertain": false,
+      "faceDetected": true,
+      "crop": {
+        "x": 245,
+        "y": 120,
+        "width": 115,
+        "height": 153
+      },
+      "derived300": "/politicians/portraits/vip73-300.webp",
+      "derived600": "/politicians/portraits/vip73-600.webp",
+      "editorialOverride": false
+    },
+    "vip74": {
+      "focalPoint": {
+        "x": 0.5,
+        "y": 0.385
+      },
+      "uncertain": false,
+      "faceDetected": true,
+      "crop": {
+        "x": 250,
+        "y": 132,
+        "width": 104,
+        "height": 138
+      },
+      "derived300": "/politicians/portraits/vip74-300.webp",
+      "derived600": "/politicians/portraits/vip74-600.webp",
+      "editorialOverride": false
+    },
+    "vip75": {
+      "focalPoint": {
+        "x": 0.5,
+        "y": 0.3
+      },
+      "uncertain": true,
+      "faceDetected": true,
+      "crop": {
+        "x": 43,
+        "y": 0,
+        "width": 169,
+        "height": 225
+      },
+      "derived300": null,
+      "derived600": null,
+      "editorialOverride": false
+    },
+    "vip76": {
+      "focalPoint": {
+        "x": 0.5,
+        "y": 0.385
+      },
+      "uncertain": false,
+      "faceDetected": true,
+      "crop": {
+        "x": 247,
+        "y": 111,
+        "width": 133,
+        "height": 177
+      },
+      "derived300": "/politicians/portraits/vip76-300.webp",
+      "derived600": "/politicians/portraits/vip76-600.webp",
+      "editorialOverride": false
+    },
+    "vip77": {
+      "focalPoint": {
+        "x": 0.5,
+        "y": 0.385
+      },
+      "uncertain": false,
+      "faceDetected": true,
+      "crop": {
+        "x": 243,
+        "y": 103,
+        "width": 131,
+        "height": 174
+      },
+      "derived300": "/politicians/portraits/vip77-300.webp",
+      "derived600": "/politicians/portraits/vip77-600.webp",
+      "editorialOverride": false
+    },
+    "vip78": {
+      "focalPoint": {
+        "x": 0.5,
+        "y": 0.385
+      },
+      "uncertain": false,
+      "faceDetected": true,
+      "crop": {
+        "x": 234,
+        "y": 123,
+        "width": 127,
+        "height": 169
+      },
+      "derived300": "/politicians/portraits/vip78-300.webp",
+      "derived600": "/politicians/portraits/vip78-600.webp",
+      "editorialOverride": false
+    },
+    "vip79": {
+      "focalPoint": {
+        "x": 0.5,
+        "y": 0.385
+      },
+      "uncertain": false,
+      "faceDetected": true,
+      "crop": {
+        "x": 243,
+        "y": 104,
+        "width": 126,
+        "height": 168
+      },
+      "derived300": "/politicians/portraits/vip79-300.webp",
+      "derived600": "/politicians/portraits/vip79-600.webp",
+      "editorialOverride": false
+    },
+    "vip80": {
+      "focalPoint": {
+        "x": 0.5,
+        "y": 0.3
+      },
+      "uncertain": true,
+      "faceDetected": true,
+      "crop": {
+        "x": 0,
+        "y": 0,
+        "width": 162,
+        "height": 216
+      },
+      "derived300": null,
+      "derived600": null,
+      "editorialOverride": false
+    },
+    "vip81": {
+      "focalPoint": {
+        "x": 0.5,
+        "y": 0.385
+      },
+      "uncertain": false,
+      "faceDetected": true,
+      "crop": {
+        "x": 1312,
+        "y": 480,
+        "width": 818,
+        "height": 1091
+      },
+      "derived300": "/politicians/portraits/vip81-300.webp",
+      "derived600": "/politicians/portraits/vip81-600.webp",
+      "editorialOverride": false
+    },
+    "vip82": {
+      "focalPoint": {
+        "x": 0.5,
+        "y": 0.385
+      },
+      "uncertain": false,
+      "faceDetected": true,
+      "crop": {
+        "x": 226,
+        "y": 38,
+        "width": 722,
+        "height": 962
+      },
+      "derived300": "/politicians/portraits/vip82-300.webp",
+      "derived600": "/politicians/portraits/vip82-600.webp",
+      "editorialOverride": false
+    },
+    "vip83": {
+      "focalPoint": {
+        "x": 0.5,
+        "y": 0.385
+      },
+      "uncertain": false,
+      "faceDetected": true,
+      "crop": {
+        "x": 246,
+        "y": 109,
+        "width": 126,
+        "height": 168
+      },
+      "derived300": "/politicians/portraits/vip83-300.webp",
+      "derived600": "/politicians/portraits/vip83-600.webp",
+      "editorialOverride": false
+    },
+    "vip84": {
+      "focalPoint": {
+        "x": 0.5,
+        "y": 0.385
+      },
+      "uncertain": false,
+      "faceDetected": true,
+      "crop": {
+        "x": 243,
+        "y": 86,
+        "width": 124,
+        "height": 166
+      },
+      "derived300": "/politicians/portraits/vip84-300.webp",
+      "derived600": "/politicians/portraits/vip84-600.webp",
+      "editorialOverride": false
+    },
+    "vip85": {
+      "focalPoint": {
+        "x": 0.5,
+        "y": 0.385
+      },
+      "uncertain": false,
+      "faceDetected": true,
+      "crop": {
+        "x": 2149,
+        "y": 734,
+        "width": 834,
+        "height": 1112
+      },
+      "derived300": "/politicians/portraits/vip85-300.webp",
+      "derived600": "/politicians/portraits/vip85-600.webp",
+      "editorialOverride": false
+    },
+    "vip86": {
+      "focalPoint": {
+        "x": 0.5,
+        "y": 0.385
+      },
+      "uncertain": false,
+      "faceDetected": true,
+      "crop": {
+        "x": 252,
+        "y": 130,
+        "width": 109,
+        "height": 145
+      },
+      "derived300": "/politicians/portraits/vip86-300.webp",
+      "derived600": "/politicians/portraits/vip86-600.webp",
+      "editorialOverride": false
+    },
+    "vip87": {
+      "focalPoint": {
+        "x": 0.5,
+        "y": 0.3
+      },
+      "uncertain": true,
+      "faceDetected": true,
+      "crop": {
+        "x": 87,
+        "y": 0,
+        "width": 491,
+        "height": 655
+      },
+      "derived300": null,
+      "derived600": null,
+      "editorialOverride": false
+    },
+    "vip88": {
+      "focalPoint": {
+        "x": 0.5,
+        "y": 0.385
+      },
+      "uncertain": false,
+      "faceDetected": true,
+      "crop": {
+        "x": 226,
+        "y": 93,
+        "width": 144,
+        "height": 192
+      },
+      "derived300": "/politicians/portraits/vip88-300.webp",
+      "derived600": "/politicians/portraits/vip88-600.webp",
+      "editorialOverride": false
+    },
+    "vip89": {
+      "focalPoint": {
+        "x": 0.5,
+        "y": 0.385
+      },
+      "uncertain": false,
+      "faceDetected": true,
+      "crop": {
+        "x": 111,
+        "y": 33,
+        "width": 256,
+        "height": 341
+      },
+      "derived300": "/politicians/portraits/vip89-300.webp",
+      "derived600": "/politicians/portraits/vip89-600.webp",
+      "editorialOverride": false
+    },
+    "vip92": {
+      "focalPoint": {
+        "x": 0.5,
+        "y": 0.3
+      },
+      "uncertain": true,
+      "faceDetected": true,
+      "crop": {
+        "x": 50,
+        "y": 0,
+        "width": 169,
+        "height": 225
+      },
+      "derived300": null,
+      "derived600": null,
+      "editorialOverride": false
+    },
+    "vip113": {
+      "focalPoint": {
+        "x": 0.5,
+        "y": 0.3
+      },
+      "uncertain": true,
+      "faceDetected": false,
+      "crop": null,
+      "derived300": null,
+      "derived600": null,
+      "editorialOverride": false
+    },
+    "vip106": {
+      "focalPoint": {
+        "x": 0.5,
+        "y": 0.3
+      },
+      "uncertain": true,
+      "faceDetected": false,
+      "crop": null,
+      "derived300": null,
+      "derived600": null,
+      "editorialOverride": false
+    },
+    "vip94": {
+      "focalPoint": {
+        "x": 0.5,
+        "y": 0.385
+      },
+      "uncertain": false,
+      "faceDetected": true,
+      "crop": {
+        "x": 250,
+        "y": 126,
+        "width": 117,
+        "height": 156
+      },
+      "derived300": "/politicians/portraits/vip94-300.webp",
+      "derived600": "/politicians/portraits/vip94-600.webp",
+      "editorialOverride": false
+    },
+    "vip95": {
+      "focalPoint": {
+        "x": 0.5,
+        "y": 0.3
+      },
+      "uncertain": true,
+      "faceDetected": false,
+      "crop": null,
+      "derived300": null,
+      "derived600": null,
+      "editorialOverride": false
+    },
+    "vip96": {
+      "focalPoint": {
+        "x": 0.5,
+        "y": 0.385
+      },
+      "uncertain": false,
+      "faceDetected": true,
+      "crop": {
+        "x": 1684,
+        "y": 919,
+        "width": 823,
+        "height": 1098
+      },
+      "derived300": "/politicians/portraits/vip96-300.webp",
+      "derived600": "/politicians/portraits/vip96-600.webp",
+      "editorialOverride": false
+    },
+    "vip97": {
+      "focalPoint": {
+        "x": 0.5,
+        "y": 0.3
+      },
+      "uncertain": true,
+      "faceDetected": false,
+      "crop": null,
+      "derived300": null,
+      "derived600": null,
+      "editorialOverride": false
+    },
+    "vip98": {
+      "focalPoint": {
+        "x": 0.5,
+        "y": 0.385
+      },
+      "uncertain": false,
+      "faceDetected": true,
+      "crop": {
+        "x": 239,
+        "y": 90,
+        "width": 138,
+        "height": 184
+      },
+      "derived300": "/politicians/portraits/vip98-300.webp",
+      "derived600": "/politicians/portraits/vip98-600.webp",
+      "editorialOverride": false
+    },
+    "vip99": {
+      "focalPoint": {
+        "x": 0.5,
+        "y": 0.385
+      },
+      "uncertain": false,
+      "faceDetected": true,
+      "crop": {
+        "x": 243,
+        "y": 116,
+        "width": 116,
+        "height": 155
+      },
+      "derived300": "/politicians/portraits/vip99-300.webp",
+      "derived600": "/politicians/portraits/vip99-600.webp",
+      "editorialOverride": false
+    },
+    "vip100": {
+      "focalPoint": {
+        "x": 0.5,
+        "y": 0.385
+      },
+      "uncertain": false,
+      "faceDetected": true,
+      "crop": {
+        "x": 236,
+        "y": 117,
+        "width": 135,
+        "height": 179
+      },
+      "derived300": "/politicians/portraits/vip100-300.webp",
+      "derived600": "/politicians/portraits/vip100-600.webp",
+      "editorialOverride": false
+    },
+    "vip101": {
+      "focalPoint": {
+        "x": 0.5,
+        "y": 0.385
+      },
+      "uncertain": false,
+      "faceDetected": true,
+      "crop": {
+        "x": 239,
+        "y": 104,
+        "width": 128,
+        "height": 170
+      },
+      "derived300": "/politicians/portraits/vip101-300.webp",
+      "derived600": "/politicians/portraits/vip101-600.webp",
+      "editorialOverride": false
+    },
+    "vip102": {
+      "focalPoint": {
+        "x": 0.5,
+        "y": 0.385
+      },
+      "uncertain": false,
+      "faceDetected": true,
+      "crop": {
+        "x": 249,
+        "y": 95,
+        "width": 124,
+        "height": 165
+      },
+      "derived300": "/politicians/portraits/vip102-300.webp",
+      "derived600": "/politicians/portraits/vip102-600.webp",
+      "editorialOverride": false
+    },
+    "vip103": {
+      "focalPoint": {
+        "x": 0.5,
+        "y": 0.385
+      },
+      "uncertain": false,
+      "faceDetected": true,
+      "crop": {
+        "x": 238,
+        "y": 100,
+        "width": 143,
+        "height": 191
+      },
+      "derived300": "/politicians/portraits/vip103-300.webp",
+      "derived600": "/politicians/portraits/vip103-600.webp",
+      "editorialOverride": false
+    },
+    "vip104": {
+      "focalPoint": {
+        "x": 0.5,
+        "y": 0.385
+      },
+      "uncertain": false,
+      "faceDetected": true,
+      "crop": {
+        "x": 239,
+        "y": 109,
+        "width": 127,
+        "height": 170
+      },
+      "derived300": "/politicians/portraits/vip104-300.webp",
+      "derived600": "/politicians/portraits/vip104-600.webp",
+      "editorialOverride": false
+    },
+    "vip105": {
+      "focalPoint": {
+        "x": 0.5,
+        "y": 0.385
+      },
+      "uncertain": false,
+      "faceDetected": true,
+      "crop": {
+        "x": 237,
+        "y": 97,
+        "width": 137,
+        "height": 182
+      },
+      "derived300": "/politicians/portraits/vip105-300.webp",
+      "derived600": "/politicians/portraits/vip105-600.webp",
+      "editorialOverride": false
+    },
+    "vip108": {
+      "focalPoint": {
+        "x": 0.5,
+        "y": 0.385
+      },
+      "uncertain": false,
+      "faceDetected": true,
+      "crop": {
+        "x": 48,
+        "y": 18,
+        "width": 107,
+        "height": 143
+      },
+      "derived300": "/politicians/portraits/vip108-300.webp",
+      "derived600": "/politicians/portraits/vip108-600.webp",
+      "editorialOverride": false
+    },
+    "vip109": {
+      "focalPoint": {
+        "x": 0.5,
+        "y": 0.385
+      },
+      "uncertain": false,
+      "faceDetected": true,
+      "crop": {
+        "x": 232,
+        "y": 97,
+        "width": 139,
+        "height": 186
+      },
+      "derived300": "/politicians/portraits/vip109-300.webp",
+      "derived600": "/politicians/portraits/vip109-600.webp",
+      "editorialOverride": false
+    },
+    "vip110": {
+      "focalPoint": {
+        "x": 0.5,
+        "y": 0.385
+      },
+      "uncertain": false,
+      "faceDetected": true,
+      "crop": {
+        "x": 67,
+        "y": 20,
+        "width": 235,
+        "height": 313
+      },
+      "derived300": "/politicians/portraits/vip110-300.webp",
+      "derived600": "/politicians/portraits/vip110-600.webp",
+      "editorialOverride": false
+    },
+    "vip111": {
+      "focalPoint": {
+        "x": 0.5,
+        "y": 0.385
+      },
+      "uncertain": false,
+      "faceDetected": true,
+      "crop": {
+        "x": 234,
+        "y": 132,
+        "width": 717,
+        "height": 957
+      },
+      "derived300": "/politicians/portraits/vip111-300.webp",
+      "derived600": "/politicians/portraits/vip111-600.webp",
+      "editorialOverride": false
+    },
+    "vip112": {
+      "focalPoint": {
+        "x": 0.5,
+        "y": 0.3
+      },
+      "uncertain": true,
+      "faceDetected": true,
+      "crop": {
+        "x": 112,
+        "y": 0,
+        "width": 239,
+        "height": 318
+      },
+      "derived300": null,
+      "derived600": null,
+      "editorialOverride": false
+    },
+    "vip114": {
+      "focalPoint": {
+        "x": 0.5,
+        "y": 0.3
+      },
+      "uncertain": true,
+      "faceDetected": false,
+      "crop": null,
+      "derived300": null,
+      "derived600": null,
+      "editorialOverride": false
+    },
+    "vip115": {
+      "focalPoint": {
+        "x": 0.5,
+        "y": 0.385
+      },
+      "uncertain": false,
+      "faceDetected": true,
+      "crop": {
+        "x": 231,
+        "y": 79,
+        "width": 179,
+        "height": 238
+      },
+      "derived300": "/politicians/portraits/vip115-300.webp",
+      "derived600": "/politicians/portraits/vip115-600.webp",
+      "editorialOverride": false
+    },
+    "vip116": {
+      "focalPoint": {
+        "x": 0.5,
+        "y": 0.385
+      },
+      "uncertain": false,
+      "faceDetected": true,
+      "crop": {
+        "x": 252,
+        "y": 132,
+        "width": 105,
+        "height": 139
+      },
+      "derived300": "/politicians/portraits/vip116-300.webp",
+      "derived600": "/politicians/portraits/vip116-600.webp",
+      "editorialOverride": false
+    },
+    "vip117": {
+      "focalPoint": {
+        "x": 0.5,
+        "y": 0.385
+      },
+      "uncertain": false,
+      "faceDetected": true,
+      "crop": {
+        "x": 246,
+        "y": 130,
+        "width": 117,
+        "height": 156
+      },
+      "derived300": "/politicians/portraits/vip117-300.webp",
+      "derived600": "/politicians/portraits/vip117-600.webp",
+      "editorialOverride": false
+    },
+    "vip118": {
+      "focalPoint": {
+        "x": 0.5,
+        "y": 0.385
+      },
+      "uncertain": false,
+      "faceDetected": true,
+      "crop": {
+        "x": 1748,
+        "y": 1172,
+        "width": 978,
+        "height": 1304
+      },
+      "derived300": "/politicians/portraits/vip118-300.webp",
+      "derived600": "/politicians/portraits/vip118-600.webp",
+      "editorialOverride": false
+    },
+    "vip119": {
+      "focalPoint": {
+        "x": 0.5,
+        "y": 0.385
+      },
+      "uncertain": false,
+      "faceDetected": true,
+      "crop": {
+        "x": 247,
+        "y": 115,
+        "width": 123,
+        "height": 164
+      },
+      "derived300": "/politicians/portraits/vip119-300.webp",
+      "derived600": "/politicians/portraits/vip119-600.webp",
+      "editorialOverride": false
+    },
+    "vip120": {
+      "focalPoint": {
+        "x": 0.5,
+        "y": 0.385
+      },
+      "uncertain": false,
+      "faceDetected": true,
+      "crop": {
+        "x": 300,
+        "y": 35,
+        "width": 452,
+        "height": 602
+      },
+      "derived300": "/politicians/portraits/vip120-300.webp",
+      "derived600": "/politicians/portraits/vip120-600.webp",
+      "editorialOverride": false
+    },
+    "vip121": {
+      "focalPoint": {
+        "x": 0.5,
+        "y": 0.385
+      },
+      "uncertain": false,
+      "faceDetected": true,
+      "crop": {
+        "x": 43,
+        "y": 54,
+        "width": 392,
+        "height": 523
+      },
+      "derived300": "/politicians/portraits/vip121-300.webp",
+      "derived600": "/politicians/portraits/vip121-600.webp",
+      "editorialOverride": false
+    },
+    "vip123": {
+      "focalPoint": {
+        "x": 0.5,
+        "y": 0.385
+      },
+      "uncertain": false,
+      "faceDetected": true,
+      "crop": {
+        "x": 251,
+        "y": 131,
+        "width": 107,
+        "height": 143
+      },
+      "derived300": "/politicians/portraits/vip123-300.webp",
+      "derived600": "/politicians/portraits/vip123-600.webp",
+      "editorialOverride": false
+    },
+    "vip124": {
+      "focalPoint": {
+        "x": 0.5,
+        "y": 0.385
+      },
+      "uncertain": false,
+      "faceDetected": true,
+      "crop": {
+        "x": 246,
+        "y": 121,
+        "width": 128,
+        "height": 170
+      },
+      "derived300": "/politicians/portraits/vip124-300.webp",
+      "derived600": "/politicians/portraits/vip124-600.webp",
+      "editorialOverride": false
+    },
+    "vip125": {
+      "focalPoint": {
+        "x": 0.5,
+        "y": 0.385
+      },
+      "uncertain": false,
+      "faceDetected": true,
+      "crop": {
+        "x": 1984,
+        "y": 1094,
+        "width": 829,
+        "height": 1105
+      },
+      "derived300": "/politicians/portraits/vip125-300.webp",
+      "derived600": "/politicians/portraits/vip125-600.webp",
+      "editorialOverride": false
+    },
+    "vip126": {
+      "focalPoint": {
+        "x": 0.5,
+        "y": 0.3
+      },
+      "uncertain": true,
+      "faceDetected": true,
+      "crop": {
+        "x": 66,
+        "y": 0,
+        "width": 330,
+        "height": 440
+      },
+      "derived300": null,
+      "derived600": null,
+      "editorialOverride": false
+    },
+    "vip128": {
+      "focalPoint": {
+        "x": 0.5,
+        "y": 0.385
+      },
+      "uncertain": false,
+      "faceDetected": true,
+      "crop": {
+        "x": 66,
+        "y": 50,
+        "width": 226,
+        "height": 302
+      },
+      "derived300": "/politicians/portraits/vip128-300.webp",
+      "derived600": "/politicians/portraits/vip128-600.webp",
+      "editorialOverride": false
+    },
+    "vip131": {
+      "focalPoint": {
+        "x": 0.5,
+        "y": 0.385
+      },
+      "uncertain": false,
+      "faceDetected": true,
+      "crop": {
+        "x": 247,
+        "y": 121,
+        "width": 108,
+        "height": 145
+      },
+      "derived300": "/politicians/portraits/vip131-300.webp",
+      "derived600": "/politicians/portraits/vip131-600.webp",
+      "editorialOverride": false
+    },
+    "vip133": {
+      "focalPoint": {
+        "x": 0.5,
+        "y": 0.385
+      },
+      "uncertain": false,
+      "faceDetected": true,
+      "crop": {
+        "x": 1984,
+        "y": 1094,
+        "width": 829,
+        "height": 1105
+      },
+      "derived300": "/politicians/portraits/vip133-300.webp",
+      "derived600": "/politicians/portraits/vip133-600.webp",
+      "editorialOverride": false
+    },
+    "vip134": {
+      "focalPoint": {
+        "x": 0.5,
+        "y": 0.385
+      },
+      "uncertain": false,
+      "faceDetected": true,
+      "crop": {
+        "x": 244,
+        "y": 115,
+        "width": 111,
+        "height": 148
+      },
+      "derived300": "/politicians/portraits/vip134-300.webp",
+      "derived600": "/politicians/portraits/vip134-600.webp",
+      "editorialOverride": false
+    },
+    "vip135": {
+      "focalPoint": {
+        "x": 0.5,
+        "y": 0.385
+      },
+      "uncertain": false,
+      "faceDetected": true,
+      "crop": {
+        "x": 233,
+        "y": 101,
+        "width": 140,
+        "height": 187
+      },
+      "derived300": "/politicians/portraits/vip135-300.webp",
+      "derived600": "/politicians/portraits/vip135-600.webp",
+      "editorialOverride": false
+    },
+    "vip136": {
+      "focalPoint": {
+        "x": 0.5,
+        "y": 0.385
+      },
+      "uncertain": false,
+      "faceDetected": true,
+      "crop": {
+        "x": 247,
+        "y": 121,
+        "width": 108,
+        "height": 145
+      },
+      "derived300": "/politicians/portraits/vip136-300.webp",
+      "derived600": "/politicians/portraits/vip136-600.webp",
+      "editorialOverride": false
+    },
+    "vip138": {
+      "focalPoint": {
+        "x": 0.5,
+        "y": 0.385
+      },
+      "uncertain": false,
+      "faceDetected": true,
+      "crop": {
+        "x": 2096,
+        "y": 1003,
+        "width": 835,
+        "height": 1113
+      },
+      "derived300": "/politicians/portraits/vip138-300.webp",
+      "derived600": "/politicians/portraits/vip138-600.webp",
+      "editorialOverride": false
+    },
+    "vip139": {
+      "focalPoint": {
+        "x": 0.5,
+        "y": 0.385
+      },
+      "uncertain": false,
+      "faceDetected": true,
+      "crop": {
+        "x": 245,
+        "y": 114,
+        "width": 131,
+        "height": 174
+      },
+      "derived300": "/politicians/portraits/vip139-300.webp",
+      "derived600": "/politicians/portraits/vip139-600.webp",
+      "editorialOverride": false
+    },
+    "vip140": {
+      "focalPoint": {
+        "x": 0.5,
+        "y": 0.385
+      },
+      "uncertain": false,
+      "faceDetected": true,
+      "crop": {
+        "x": 87,
+        "y": 63,
+        "width": 350,
+        "height": 467
+      },
+      "derived300": "/politicians/portraits/vip140-300.webp",
+      "derived600": "/politicians/portraits/vip140-600.webp",
+      "editorialOverride": false
+    },
+    "vip141": {
+      "focalPoint": {
+        "x": 0.5,
+        "y": 0.385
+      },
+      "uncertain": false,
+      "faceDetected": true,
+      "crop": {
+        "x": 251,
+        "y": 116,
+        "width": 109,
+        "height": 145
+      },
+      "derived300": "/politicians/portraits/vip141-300.webp",
+      "derived600": "/politicians/portraits/vip141-600.webp",
+      "editorialOverride": false
+    },
+    "vip142": {
+      "focalPoint": {
+        "x": 0.5,
+        "y": 0.385
+      },
+      "uncertain": false,
+      "faceDetected": true,
+      "crop": {
+        "x": 250,
+        "y": 127,
+        "width": 106,
+        "height": 141
+      },
+      "derived300": "/politicians/portraits/vip142-300.webp",
+      "derived600": "/politicians/portraits/vip142-600.webp",
+      "editorialOverride": false
+    },
+    "vip143": {
+      "focalPoint": {
+        "x": 0.5,
+        "y": 0.385
+      },
+      "uncertain": false,
+      "faceDetected": true,
+      "crop": {
+        "x": 220,
+        "y": 92,
+        "width": 154,
+        "height": 205
+      },
+      "derived300": "/politicians/portraits/vip143-300.webp",
+      "derived600": "/politicians/portraits/vip143-600.webp",
+      "editorialOverride": false
+    },
+    "vip144": {
+      "focalPoint": {
+        "x": 0.5,
+        "y": 0.385
+      },
+      "uncertain": false,
+      "faceDetected": true,
+      "crop": {
+        "x": 259,
+        "y": 114,
+        "width": 110,
+        "height": 147
+      },
+      "derived300": "/politicians/portraits/vip144-300.webp",
+      "derived600": "/politicians/portraits/vip144-600.webp",
+      "editorialOverride": false
+    },
+    "vip145": {
+      "focalPoint": {
+        "x": 0.5,
+        "y": 0.385
+      },
+      "uncertain": false,
+      "faceDetected": true,
+      "crop": {
+        "x": 256,
+        "y": 115,
+        "width": 113,
+        "height": 151
+      },
+      "derived300": "/politicians/portraits/vip145-300.webp",
+      "derived600": "/politicians/portraits/vip145-600.webp",
+      "editorialOverride": false
+    },
+    "vip146": {
+      "focalPoint": {
+        "x": 0.5,
+        "y": 0.385
+      },
+      "uncertain": false,
+      "faceDetected": true,
+      "crop": {
+        "x": 255,
+        "y": 140,
+        "width": 111,
+        "height": 148
+      },
+      "derived300": "/politicians/portraits/vip146-300.webp",
+      "derived600": "/politicians/portraits/vip146-600.webp",
+      "editorialOverride": false
+    },
+    "vip147": {
+      "focalPoint": {
+        "x": 0.5,
+        "y": 0.385
+      },
+      "uncertain": false,
+      "faceDetected": true,
+      "crop": {
+        "x": 504,
+        "y": 584,
+        "width": 811,
+        "height": 1082
+      },
+      "derived300": "/politicians/portraits/vip147-300.webp",
+      "derived600": "/politicians/portraits/vip147-600.webp",
+      "editorialOverride": false
+    },
+    "vip148": {
+      "focalPoint": {
+        "x": 0.5,
+        "y": 0.385
+      },
+      "uncertain": false,
+      "faceDetected": true,
+      "crop": {
+        "x": 1915,
+        "y": 1083,
+        "width": 1017,
+        "height": 1355
+      },
+      "derived300": "/politicians/portraits/vip148-300.webp",
+      "derived600": "/politicians/portraits/vip148-600.webp",
+      "editorialOverride": false
+    },
+    "vip149": {
+      "focalPoint": {
+        "x": 0.5,
+        "y": 0.385
+      },
+      "uncertain": false,
+      "faceDetected": true,
+      "crop": {
+        "x": 2153,
+        "y": 769,
+        "width": 790,
+        "height": 1054
+      },
+      "derived300": "/politicians/portraits/vip149-300.webp",
+      "derived600": "/politicians/portraits/vip149-600.webp",
+      "editorialOverride": false
+    },
+    "vip151": {
+      "focalPoint": {
+        "x": 0.5,
+        "y": 0.3
+      },
+      "uncertain": true,
+      "faceDetected": true,
+      "crop": {
+        "x": 18,
+        "y": 0,
+        "width": 154,
+        "height": 205
+      },
+      "derived300": null,
+      "derived600": null,
+      "editorialOverride": false
+    },
+    "vip152": {
+      "focalPoint": {
+        "x": 0.5,
+        "y": 0.385
+      },
+      "uncertain": false,
+      "faceDetected": true,
+      "crop": {
+        "x": 1841,
+        "y": 957,
+        "width": 1002,
+        "height": 1336
+      },
+      "derived300": "/politicians/portraits/vip152-300.webp",
+      "derived600": "/politicians/portraits/vip152-600.webp",
+      "editorialOverride": false
+    },
+    "vip153": {
+      "focalPoint": {
+        "x": 0.5,
+        "y": 0.385
+      },
+      "uncertain": false,
+      "faceDetected": true,
+      "crop": {
+        "x": 248,
+        "y": 112,
+        "width": 110,
+        "height": 147
+      },
+      "derived300": "/politicians/portraits/vip153-300.webp",
+      "derived600": "/politicians/portraits/vip153-600.webp",
+      "editorialOverride": false
+    },
+    "vip154": {
+      "focalPoint": {
+        "x": 0.5,
+        "y": 0.3
+      },
+      "uncertain": true,
+      "faceDetected": true,
+      "crop": {
+        "x": 117,
+        "y": 0,
+        "width": 239,
+        "height": 319
+      },
+      "derived300": null,
+      "derived600": null,
+      "editorialOverride": false
+    },
+    "vip155": {
+      "focalPoint": {
+        "x": 0.5,
+        "y": 0.385
+      },
+      "uncertain": false,
+      "faceDetected": true,
+      "crop": {
+        "x": 2000,
+        "y": 622,
+        "width": 831,
+        "height": 1108
+      },
+      "derived300": "/politicians/portraits/vip155-300.webp",
+      "derived600": "/politicians/portraits/vip155-600.webp",
+      "editorialOverride": false
+    },
+    "vip156": {
+      "focalPoint": {
+        "x": 0.5,
+        "y": 0.385
+      },
+      "uncertain": false,
+      "faceDetected": true,
+      "crop": {
+        "x": 75,
+        "y": 89,
+        "width": 138,
+        "height": 184
+      },
+      "derived300": "/politicians/portraits/vip156-300.webp",
+      "derived600": "/politicians/portraits/vip156-600.webp",
+      "editorialOverride": false
+    },
+    "vip157": {
+      "focalPoint": {
+        "x": 0.5,
+        "y": 0.3
+      },
+      "uncertain": true,
+      "faceDetected": false,
+      "crop": null,
+      "derived300": null,
+      "derived600": null,
+      "editorialOverride": false
+    },
+    "vip158": {
+      "focalPoint": {
+        "x": 0.5,
+        "y": 0.385
+      },
+      "uncertain": false,
+      "faceDetected": true,
+      "crop": {
+        "x": 2080,
+        "y": 1144,
+        "width": 796,
+        "height": 1062
+      },
+      "derived300": "/politicians/portraits/vip158-300.webp",
+      "derived600": "/politicians/portraits/vip158-600.webp",
+      "editorialOverride": false
+    },
+    "vip159": {
+      "focalPoint": {
+        "x": 0.5,
+        "y": 0.385
+      },
+      "uncertain": false,
+      "faceDetected": true,
+      "crop": {
+        "x": 1439,
+        "y": 598,
+        "width": 813,
+        "height": 1084
+      },
+      "derived300": "/politicians/portraits/vip159-300.webp",
+      "derived600": "/politicians/portraits/vip159-600.webp",
+      "editorialOverride": false
+    },
+    "vip161": {
+      "focalPoint": {
+        "x": 0.5,
+        "y": 0.385
+      },
+      "uncertain": false,
+      "faceDetected": true,
+      "crop": {
+        "x": 2404,
+        "y": 1222,
+        "width": 884,
+        "height": 1178
+      },
+      "derived300": "/politicians/portraits/vip161-300.webp",
+      "derived600": "/politicians/portraits/vip161-600.webp",
+      "editorialOverride": false
+    },
+    "vip162": {
+      "focalPoint": {
+        "x": 0.5,
+        "y": 0.3
+      },
+      "uncertain": true,
+      "faceDetected": true,
+      "crop": {
+        "x": 241,
+        "y": 0,
+        "width": 264,
+        "height": 352
+      },
+      "derived300": null,
+      "derived600": null,
+      "editorialOverride": false
+    },
+    "vip163": {
+      "focalPoint": {
+        "x": 0.5,
+        "y": 0.385
+      },
+      "uncertain": false,
+      "faceDetected": true,
+      "crop": {
+        "x": 224,
+        "y": 107,
+        "width": 157,
+        "height": 209
+      },
+      "derived300": "/politicians/portraits/vip163-300.webp",
+      "derived600": "/politicians/portraits/vip163-600.webp",
+      "editorialOverride": false
+    },
+    "vip165": {
+      "focalPoint": {
+        "x": 0.5,
+        "y": 0.3
+      },
+      "uncertain": true,
+      "faceDetected": true,
+      "crop": {
+        "x": 125,
+        "y": 1123,
+        "width": 596,
+        "height": 795
+      },
+      "derived300": null,
+      "derived600": null,
+      "editorialOverride": false
+    },
+    "vip168": {
+      "focalPoint": {
+        "x": 0.5,
+        "y": 0.385
+      },
+      "uncertain": false,
+      "faceDetected": true,
+      "crop": {
+        "x": 2575,
+        "y": 646,
+        "width": 813,
+        "height": 1084
+      },
+      "derived300": "/politicians/portraits/vip168-300.webp",
+      "derived600": "/politicians/portraits/vip168-600.webp",
+      "editorialOverride": false
+    },
+    "vip170": {
+      "focalPoint": {
+        "x": 0.5,
+        "y": 0.385
+      },
+      "uncertain": false,
+      "faceDetected": true,
+      "crop": {
+        "x": 62,
+        "y": 41,
+        "width": 116,
+        "height": 154
+      },
+      "derived300": "/politicians/portraits/vip170-300.webp",
+      "derived600": "/politicians/portraits/vip170-600.webp",
+      "editorialOverride": false
+    },
+    "vip173": {
+      "focalPoint": {
+        "x": 0.5,
+        "y": 0.385
+      },
+      "uncertain": false,
+      "faceDetected": true,
+      "crop": {
+        "x": 2145,
+        "y": 1064,
+        "width": 842,
+        "height": 1122
+      },
+      "derived300": "/politicians/portraits/vip173-300.webp",
+      "derived600": "/politicians/portraits/vip173-600.webp",
+      "editorialOverride": false
+    },
+    "vip176": {
+      "focalPoint": {
+        "x": 0.5,
+        "y": 0.3
+      },
+      "uncertain": true,
+      "faceDetected": true,
+      "crop": {
+        "x": 0,
+        "y": 380,
+        "width": 724,
+        "height": 965
+      },
+      "derived300": null,
+      "derived600": null,
+      "editorialOverride": false
+    },
+    "vip177": {
+      "focalPoint": {
+        "x": 0.5,
+        "y": 0.385
+      },
+      "uncertain": false,
+      "faceDetected": true,
+      "crop": {
+        "x": 2043,
+        "y": 619,
+        "width": 852,
+        "height": 1136
+      },
+      "derived300": "/politicians/portraits/vip177-300.webp",
+      "derived600": "/politicians/portraits/vip177-600.webp",
+      "editorialOverride": false
+    },
+    "vip178": {
+      "focalPoint": {
+        "x": 0.5,
+        "y": 0.385
+      },
+      "uncertain": false,
+      "faceDetected": true,
+      "crop": {
+        "x": 241,
+        "y": 120,
+        "width": 122,
+        "height": 163
+      },
+      "derived300": "/politicians/portraits/vip178-300.webp",
+      "derived600": "/politicians/portraits/vip178-600.webp",
+      "editorialOverride": false
+    },
+    "vip179": {
+      "focalPoint": {
+        "x": 0.5,
+        "y": 0.385
+      },
+      "uncertain": false,
+      "faceDetected": true,
+      "crop": {
+        "x": 73,
+        "y": 104,
+        "width": 145,
+        "height": 193
+      },
+      "derived300": "/politicians/portraits/vip179-300.webp",
+      "derived600": "/politicians/portraits/vip179-600.webp",
+      "editorialOverride": false
+    },
+    "vip180": {
+      "focalPoint": {
+        "x": 0.5,
+        "y": 0.385
+      },
+      "uncertain": false,
+      "faceDetected": true,
+      "crop": {
+        "x": 2093,
+        "y": 1028,
+        "width": 806,
+        "height": 1075
+      },
+      "derived300": "/politicians/portraits/vip180-300.webp",
+      "derived600": "/politicians/portraits/vip180-600.webp",
+      "editorialOverride": false
+    },
+    "vip181": {
+      "focalPoint": {
+        "x": 0.5,
+        "y": 0.385
+      },
+      "uncertain": false,
+      "faceDetected": true,
+      "crop": {
+        "x": 1915,
+        "y": 1014,
+        "width": 716,
+        "height": 955
+      },
+      "derived300": "/politicians/portraits/vip181-300.webp",
+      "derived600": "/politicians/portraits/vip181-600.webp",
+      "editorialOverride": false
+    },
+    "vip182": {
+      "focalPoint": {
+        "x": 0.5,
+        "y": 0.385
+      },
+      "uncertain": false,
+      "faceDetected": true,
+      "crop": {
+        "x": 1706,
+        "y": 1094,
+        "width": 816,
+        "height": 1089
+      },
+      "derived300": "/politicians/portraits/vip182-300.webp",
+      "derived600": "/politicians/portraits/vip182-600.webp",
+      "editorialOverride": false
+    },
+    "vip184": {
+      "focalPoint": {
+        "x": 0.5,
+        "y": 0.385
+      },
+      "uncertain": false,
+      "faceDetected": true,
+      "crop": {
+        "x": 243,
+        "y": 113,
+        "width": 124,
+        "height": 166
+      },
+      "derived300": "/politicians/portraits/vip184-300.webp",
+      "derived600": "/politicians/portraits/vip184-600.webp",
+      "editorialOverride": false
+    },
+    "vip186": {
+      "focalPoint": {
+        "x": 0.5,
+        "y": 0.385
+      },
+      "uncertain": false,
+      "faceDetected": true,
+      "crop": {
+        "x": 2033,
+        "y": 1059,
+        "width": 728,
+        "height": 971
+      },
+      "derived300": "/politicians/portraits/vip186-300.webp",
+      "derived600": "/politicians/portraits/vip186-600.webp",
+      "editorialOverride": false
+    },
+    "vip187": {
+      "focalPoint": {
+        "x": 0.5,
+        "y": 0.385
+      },
+      "uncertain": false,
+      "faceDetected": true,
+      "crop": {
+        "x": 236,
+        "y": 132,
+        "width": 132,
+        "height": 176
+      },
+      "derived300": "/politicians/portraits/vip187-300.webp",
+      "derived600": "/politicians/portraits/vip187-600.webp",
+      "editorialOverride": false
+    },
+    "vip188": {
+      "focalPoint": {
+        "x": 0.5,
+        "y": 0.3
+      },
+      "uncertain": true,
+      "faceDetected": true,
+      "crop": {
+        "x": 80,
+        "y": 0,
+        "width": 576,
+        "height": 768
+      },
+      "derived300": null,
+      "derived600": null,
+      "editorialOverride": false
+    },
+    "vip189": {
+      "focalPoint": {
+        "x": 0.5,
+        "y": 0.385
+      },
+      "uncertain": false,
+      "faceDetected": true,
+      "crop": {
+        "x": 153,
+        "y": 52,
+        "width": 357,
+        "height": 476
+      },
+      "derived300": "/politicians/portraits/vip189-300.webp",
+      "derived600": "/politicians/portraits/vip189-600.webp",
+      "editorialOverride": false
+    },
+    "vip192": {
+      "focalPoint": {
+        "x": 0.5,
+        "y": 0.385
+      },
+      "uncertain": false,
+      "faceDetected": true,
+      "crop": {
+        "x": 85,
+        "y": 3,
+        "width": 419,
+        "height": 559
+      },
+      "derived300": "/politicians/portraits/vip192-300.webp",
+      "derived600": "/politicians/portraits/vip192-600.webp",
+      "editorialOverride": false
+    },
+    "vip193": {
+      "focalPoint": {
+        "x": 0.5,
+        "y": 0.385
+      },
+      "uncertain": false,
+      "faceDetected": true,
+      "crop": {
+        "x": 254,
+        "y": 1,
+        "width": 708,
+        "height": 944
+      },
+      "derived300": "/politicians/portraits/vip193-300.webp",
+      "derived600": "/politicians/portraits/vip193-600.webp",
+      "editorialOverride": false
+    },
+    "vip194": {
+      "focalPoint": {
+        "x": 0.5,
+        "y": 0.385
+      },
+      "uncertain": false,
+      "faceDetected": true,
+      "crop": {
+        "x": 1898,
+        "y": 1219,
+        "width": 832,
+        "height": 1109
+      },
+      "derived300": "/politicians/portraits/vip194-300.webp",
+      "derived600": "/politicians/portraits/vip194-600.webp",
+      "editorialOverride": false
+    },
+    "vip196": {
+      "focalPoint": {
+        "x": 0.5,
+        "y": 0.385
+      },
+      "uncertain": false,
+      "faceDetected": true,
+      "crop": {
+        "x": 2178,
+        "y": 987,
+        "width": 896,
+        "height": 1195
+      },
+      "derived300": "/politicians/portraits/vip196-300.webp",
+      "derived600": "/politicians/portraits/vip196-600.webp",
+      "editorialOverride": false
+    },
+    "vip197": {
+      "focalPoint": {
+        "x": 0.5,
+        "y": 0.385
+      },
+      "uncertain": false,
+      "faceDetected": true,
+      "crop": {
+        "x": 1524,
+        "y": 842,
+        "width": 827,
+        "height": 1102
+      },
+      "derived300": "/politicians/portraits/vip197-300.webp",
+      "derived600": "/politicians/portraits/vip197-600.webp",
+      "editorialOverride": false
+    },
+    "vip198": {
+      "focalPoint": {
+        "x": 0.5,
+        "y": 0.385
+      },
+      "uncertain": false,
+      "faceDetected": true,
+      "crop": {
+        "x": 156,
+        "y": 14,
+        "width": 130,
+        "height": 173
+      },
+      "derived300": "/politicians/portraits/vip198-300.webp",
+      "derived600": "/politicians/portraits/vip198-600.webp",
+      "editorialOverride": false
+    },
+    "vip201": {
+      "focalPoint": {
+        "x": 0.5,
+        "y": 0.385
+      },
+      "uncertain": false,
+      "faceDetected": true,
+      "crop": {
+        "x": 63,
+        "y": 11,
+        "width": 114,
+        "height": 152
+      },
+      "derived300": "/politicians/portraits/vip201-300.webp",
+      "derived600": "/politicians/portraits/vip201-600.webp",
+      "editorialOverride": false
+    },
+    "vip202": {
+      "focalPoint": {
+        "x": 0.5,
+        "y": 0.385
+      },
+      "uncertain": false,
+      "faceDetected": true,
+      "crop": {
+        "x": 439,
+        "y": 220,
+        "width": 618,
+        "height": 823
+      },
+      "derived300": "/politicians/portraits/vip202-300.webp",
+      "derived600": "/politicians/portraits/vip202-600.webp",
+      "editorialOverride": false
+    },
+    "vip203": {
+      "focalPoint": {
+        "x": 0.5,
+        "y": 0.3
+      },
+      "uncertain": true,
+      "faceDetected": true,
+      "crop": {
+        "x": 50,
+        "y": 0,
+        "width": 125,
+        "height": 166
+      },
+      "derived300": null,
+      "derived600": null,
+      "editorialOverride": false
+    },
+    "vip204": {
+      "focalPoint": {
+        "x": 0.5,
+        "y": 0.385
+      },
+      "uncertain": false,
+      "faceDetected": true,
+      "crop": {
+        "x": 223,
+        "y": 84,
+        "width": 166,
+        "height": 221
+      },
+      "derived300": "/politicians/portraits/vip204-300.webp",
+      "derived600": "/politicians/portraits/vip204-600.webp",
+      "editorialOverride": false
+    },
+    "vip205": {
+      "focalPoint": {
+        "x": 0.5,
+        "y": 0.385
+      },
+      "uncertain": false,
+      "faceDetected": true,
+      "crop": {
+        "x": 1795,
+        "y": 664,
+        "width": 795,
+        "height": 1060
+      },
+      "derived300": "/politicians/portraits/vip205-300.webp",
+      "derived600": "/politicians/portraits/vip205-600.webp",
+      "editorialOverride": false
+    },
+    "vip207": {
+      "focalPoint": {
+        "x": 0.5,
+        "y": 0.3
+      },
+      "uncertain": true,
+      "faceDetected": true,
+      "crop": {
+        "x": 50,
+        "y": 0,
+        "width": 134,
+        "height": 179
+      },
+      "derived300": null,
+      "derived600": null,
+      "editorialOverride": false
+    },
+    "vip209": {
+      "focalPoint": {
+        "x": 0.5,
+        "y": 0.385
+      },
+      "uncertain": false,
+      "faceDetected": true,
+      "crop": {
+        "x": 2190,
+        "y": 888,
+        "width": 815,
+        "height": 1086
+      },
+      "derived300": "/politicians/portraits/vip209-300.webp",
+      "derived600": "/politicians/portraits/vip209-600.webp",
+      "editorialOverride": false
+    },
+    "vip210": {
+      "focalPoint": {
+        "x": 0.5,
+        "y": 0.3
+      },
+      "uncertain": true,
+      "faceDetected": false,
+      "crop": null,
+      "derived300": null,
+      "derived600": null,
+      "editorialOverride": false
+    },
+    "vip213": {
+      "focalPoint": {
+        "x": 0.5,
+        "y": 0.385
+      },
+      "uncertain": false,
+      "faceDetected": true,
+      "crop": {
+        "x": 1728,
+        "y": 1152,
+        "width": 842,
+        "height": 1123
+      },
+      "derived300": "/politicians/portraits/vip213-300.webp",
+      "derived600": "/politicians/portraits/vip213-600.webp",
+      "editorialOverride": false
+    },
+    "vip214": {
+      "focalPoint": {
+        "x": 0.5,
+        "y": 0.3
+      },
+      "uncertain": true,
+      "faceDetected": false,
+      "crop": null,
+      "derived300": null,
+      "derived600": null,
+      "editorialOverride": false
+    },
+    "vip215": {
+      "focalPoint": {
+        "x": 0.5,
+        "y": 0.385
+      },
+      "uncertain": false,
+      "faceDetected": true,
+      "crop": {
+        "x": 2040,
+        "y": 1182,
+        "width": 829,
+        "height": 1106
+      },
+      "derived300": "/politicians/portraits/vip215-300.webp",
+      "derived600": "/politicians/portraits/vip215-600.webp",
+      "editorialOverride": false
+    },
+    "vip216": {
+      "focalPoint": {
+        "x": 0.5,
+        "y": 0.385
+      },
+      "uncertain": false,
+      "faceDetected": true,
+      "crop": {
+        "x": 133,
+        "y": 14,
+        "width": 210,
+        "height": 280
+      },
+      "derived300": "/politicians/portraits/vip216-300.webp",
+      "derived600": "/politicians/portraits/vip216-600.webp",
+      "editorialOverride": false
+    },
+    "vip217": {
+      "focalPoint": {
+        "x": 0.5,
+        "y": 0.385
+      },
+      "uncertain": false,
+      "faceDetected": true,
+      "crop": {
+        "x": 1600,
+        "y": 952,
+        "width": 815,
+        "height": 1086
+      },
+      "derived300": "/politicians/portraits/vip217-300.webp",
+      "derived600": "/politicians/portraits/vip217-600.webp",
+      "editorialOverride": false
+    },
+    "vip218": {
+      "focalPoint": {
+        "x": 0.5,
+        "y": 0.3
+      },
+      "uncertain": true,
+      "faceDetected": false,
+      "crop": null,
+      "derived300": null,
+      "derived600": null,
+      "editorialOverride": false
+    },
+    "vip220": {
+      "focalPoint": {
+        "x": 0.5,
+        "y": 0.385
+      },
+      "uncertain": false,
+      "faceDetected": true,
+      "crop": {
+        "x": 2124,
+        "y": 1261,
+        "width": 689,
+        "height": 919
+      },
+      "derived300": "/politicians/portraits/vip220-300.webp",
+      "derived600": "/politicians/portraits/vip220-600.webp",
+      "editorialOverride": false
+    },
+    "vip221": {
+      "focalPoint": {
+        "x": 0.5,
+        "y": 0.385
+      },
+      "uncertain": false,
+      "faceDetected": true,
+      "crop": {
+        "x": 248,
+        "y": 118,
+        "width": 112,
+        "height": 149
+      },
+      "derived300": "/politicians/portraits/vip221-300.webp",
+      "derived600": "/politicians/portraits/vip221-600.webp",
+      "editorialOverride": false
+    },
+    "vip225": {
+      "focalPoint": {
+        "x": 0.5,
+        "y": 0.385
+      },
+      "uncertain": false,
+      "faceDetected": true,
+      "crop": {
+        "x": 1929,
+        "y": 761,
+        "width": 779,
+        "height": 1039
+      },
+      "derived300": "/politicians/portraits/vip225-300.webp",
+      "derived600": "/politicians/portraits/vip225-600.webp",
+      "editorialOverride": false
+    },
+    "vip226": {
+      "focalPoint": {
+        "x": 0.5,
+        "y": 0.385
+      },
+      "uncertain": false,
+      "faceDetected": true,
+      "crop": {
+        "x": 2019,
+        "y": 857,
+        "width": 811,
+        "height": 1081
+      },
+      "derived300": "/politicians/portraits/vip226-300.webp",
+      "derived600": "/politicians/portraits/vip226-600.webp",
+      "editorialOverride": false
+    },
+    "vip227": {
+      "focalPoint": {
+        "x": 0.5,
+        "y": 0.3
+      },
+      "uncertain": true,
+      "faceDetected": false,
+      "crop": null,
+      "derived300": null,
+      "derived600": null,
+      "editorialOverride": false
+    },
+    "vip228": {
+      "focalPoint": {
+        "x": 0.5,
+        "y": 0.385
+      },
+      "uncertain": false,
+      "faceDetected": true,
+      "crop": {
+        "x": 160,
+        "y": 121,
+        "width": 355,
+        "height": 473
+      },
+      "derived300": "/politicians/portraits/vip228-300.webp",
+      "derived600": "/politicians/portraits/vip228-600.webp",
+      "editorialOverride": false
+    },
+    "vip229": {
+      "focalPoint": {
+        "x": 0.5,
+        "y": 0.385
+      },
+      "uncertain": false,
+      "faceDetected": true,
+      "crop": {
+        "x": 1996,
+        "y": 1061,
+        "width": 855,
+        "height": 1140
+      },
+      "derived300": "/politicians/portraits/vip229-300.webp",
+      "derived600": "/politicians/portraits/vip229-600.webp",
+      "editorialOverride": false
+    },
+    "vip230": {
+      "focalPoint": {
+        "x": 0.5,
+        "y": 0.385
+      },
+      "uncertain": false,
+      "faceDetected": true,
+      "crop": {
+        "x": 1923,
+        "y": 1376,
+        "width": 796,
+        "height": 1061
+      },
+      "derived300": "/politicians/portraits/vip230-300.webp",
+      "derived600": "/politicians/portraits/vip230-600.webp",
+      "editorialOverride": false
+    },
+    "vip231": {
+      "focalPoint": {
+        "x": 0.5,
+        "y": 0.385
+      },
+      "uncertain": false,
+      "faceDetected": true,
+      "crop": {
+        "x": 141,
+        "y": 125,
+        "width": 445,
+        "height": 594
+      },
+      "derived300": "/politicians/portraits/vip231-300.webp",
+      "derived600": "/politicians/portraits/vip231-600.webp",
+      "editorialOverride": false
+    },
+    "vip232": {
+      "focalPoint": {
+        "x": 0.5,
+        "y": 0.3
+      },
+      "uncertain": true,
+      "faceDetected": true,
+      "crop": {
+        "x": 358,
+        "y": 77,
+        "width": 572,
+        "height": 762
+      },
+      "derived300": null,
+      "derived600": null,
+      "editorialOverride": false
+    },
+    "vip233": {
+      "focalPoint": {
+        "x": 0.5,
+        "y": 0.385
+      },
+      "uncertain": false,
+      "faceDetected": true,
+      "crop": {
+        "x": 115,
+        "y": 10,
+        "width": 476,
+        "height": 635
+      },
+      "derived300": "/politicians/portraits/vip233-300.webp",
+      "derived600": "/politicians/portraits/vip233-600.webp",
+      "editorialOverride": false
+    },
+    "vip234": {
+      "focalPoint": {
+        "x": 0.5,
+        "y": 0.385
+      },
+      "uncertain": false,
+      "faceDetected": true,
+      "crop": {
+        "x": 1398,
+        "y": 578,
+        "width": 760,
+        "height": 1014
+      },
+      "derived300": "/politicians/portraits/vip234-300.webp",
+      "derived600": "/politicians/portraits/vip234-600.webp",
+      "editorialOverride": false
+    },
+    "vip235": {
+      "focalPoint": {
+        "x": 0.5,
+        "y": 0.385
+      },
+      "uncertain": false,
+      "faceDetected": true,
+      "crop": {
+        "x": 124,
+        "y": 32,
+        "width": 670,
+        "height": 893
+      },
+      "derived300": "/politicians/portraits/vip235-300.webp",
+      "derived600": "/politicians/portraits/vip235-600.webp",
+      "editorialOverride": false
+    },
+    "vip236": {
+      "focalPoint": {
+        "x": 0.5,
+        "y": 0.385
+      },
+      "uncertain": false,
+      "faceDetected": true,
+      "crop": {
+        "x": 2213,
+        "y": 901,
+        "width": 961,
+        "height": 1281
+      },
+      "derived300": "/politicians/portraits/vip236-300.webp",
+      "derived600": "/politicians/portraits/vip236-600.webp",
+      "editorialOverride": false
+    },
+    "vip237": {
+      "focalPoint": {
+        "x": 0.5,
+        "y": 0.385
+      },
+      "uncertain": false,
+      "faceDetected": true,
+      "crop": {
+        "x": 1919,
+        "y": 998,
+        "width": 701,
+        "height": 935
+      },
+      "derived300": "/politicians/portraits/vip237-300.webp",
+      "derived600": "/politicians/portraits/vip237-600.webp",
+      "editorialOverride": false
+    },
+    "vip238": {
+      "focalPoint": {
+        "x": 0.5,
+        "y": 0.3
+      },
+      "uncertain": true,
+      "faceDetected": false,
+      "crop": null,
+      "derived300": null,
+      "derived600": null,
+      "editorialOverride": false
+    },
+    "vip239": {
+      "focalPoint": {
+        "x": 0.5,
+        "y": 0.385
+      },
+      "uncertain": false,
+      "faceDetected": true,
+      "crop": {
+        "x": 2252,
+        "y": 1273,
+        "width": 780,
+        "height": 1039
+      },
+      "derived300": "/politicians/portraits/vip239-300.webp",
+      "derived600": "/politicians/portraits/vip239-600.webp",
+      "editorialOverride": false
+    },
+    "vip240": {
+      "focalPoint": {
+        "x": 0.5,
+        "y": 0.3
+      },
+      "uncertain": true,
+      "faceDetected": false,
+      "crop": null,
+      "derived300": null,
+      "derived600": null,
+      "editorialOverride": false
+    },
+    "vip241": {
+      "focalPoint": {
+        "x": 0.5,
+        "y": 0.385
+      },
+      "uncertain": false,
+      "faceDetected": true,
+      "crop": {
+        "x": 24,
+        "y": 6,
+        "width": 136,
+        "height": 181
+      },
+      "derived300": "/politicians/portraits/vip241-300.webp",
+      "derived600": "/politicians/portraits/vip241-600.webp",
+      "editorialOverride": false
+    },
+    "vip242": {
+      "focalPoint": {
+        "x": 0.5,
+        "y": 0.385
+      },
+      "uncertain": false,
+      "faceDetected": true,
+      "crop": {
+        "x": 1973,
+        "y": 1616,
+        "width": 998,
+        "height": 1331
+      },
+      "derived300": "/politicians/portraits/vip242-300.webp",
+      "derived600": "/politicians/portraits/vip242-600.webp",
+      "editorialOverride": false
+    },
+    "vip243": {
+      "focalPoint": {
+        "x": 0.5,
+        "y": 0.385
+      },
+      "uncertain": false,
+      "faceDetected": true,
+      "crop": {
+        "x": 241,
+        "y": 119,
+        "width": 120,
+        "height": 159
+      },
+      "derived300": "/politicians/portraits/vip243-300.webp",
+      "derived600": "/politicians/portraits/vip243-600.webp",
+      "editorialOverride": false
+    },
+    "vip244": {
+      "focalPoint": {
+        "x": 0.5,
+        "y": 0.385
+      },
+      "uncertain": false,
+      "faceDetected": true,
+      "crop": {
+        "x": 7,
+        "y": 95,
+        "width": 488,
+        "height": 651
+      },
+      "derived300": "/politicians/portraits/vip244-300.webp",
+      "derived600": "/politicians/portraits/vip244-600.webp",
+      "editorialOverride": false
+    },
+    "vip245": {
+      "focalPoint": {
+        "x": 0.5,
+        "y": 0.385
+      },
+      "uncertain": false,
+      "faceDetected": true,
+      "crop": {
+        "x": 209,
+        "y": 186,
+        "width": 406,
+        "height": 541
+      },
+      "derived300": "/politicians/portraits/vip245-300.webp",
+      "derived600": "/politicians/portraits/vip245-600.webp",
+      "editorialOverride": false
+    },
+    "vip246": {
+      "focalPoint": {
+        "x": 0.5,
+        "y": 0.385
+      },
+      "uncertain": false,
+      "faceDetected": true,
+      "crop": {
+        "x": 2368,
+        "y": 1047,
+        "width": 843,
+        "height": 1124
+      },
+      "derived300": "/politicians/portraits/vip246-300.webp",
+      "derived600": "/politicians/portraits/vip246-600.webp",
+      "editorialOverride": false
+    },
+    "vip247": {
+      "focalPoint": {
+        "x": 0.5,
+        "y": 0.3
+      },
+      "uncertain": true,
+      "faceDetected": false,
+      "crop": null,
+      "derived300": null,
+      "derived600": null,
+      "editorialOverride": false
+    },
+    "vip248": {
+      "focalPoint": {
+        "x": 0.5,
+        "y": 0.385
+      },
+      "uncertain": false,
+      "faceDetected": true,
+      "crop": {
+        "x": 1979,
+        "y": 1315,
+        "width": 763,
+        "height": 1017
+      },
+      "derived300": "/politicians/portraits/vip248-300.webp",
+      "derived600": "/politicians/portraits/vip248-600.webp",
+      "editorialOverride": false
+    },
+    "vip249": {
+      "focalPoint": {
+        "x": 0.5,
+        "y": 0.385
+      },
+      "uncertain": false,
+      "faceDetected": true,
+      "crop": {
+        "x": 1966,
+        "y": 687,
+        "width": 863,
+        "height": 1151
+      },
+      "derived300": "/politicians/portraits/vip249-300.webp",
+      "derived600": "/politicians/portraits/vip249-600.webp",
+      "editorialOverride": false
+    },
+    "vip250": {
+      "focalPoint": {
+        "x": 0.5,
+        "y": 0.385
+      },
+      "uncertain": false,
+      "faceDetected": true,
+      "crop": {
+        "x": 229,
+        "y": 89,
+        "width": 155,
+        "height": 207
+      },
+      "derived300": "/politicians/portraits/vip250-300.webp",
+      "derived600": "/politicians/portraits/vip250-600.webp",
+      "editorialOverride": false
+    },
+    "vip251": {
+      "focalPoint": {
+        "x": 0.5,
+        "y": 0.385
+      },
+      "uncertain": false,
+      "faceDetected": true,
+      "crop": {
+        "x": 1707,
+        "y": 713,
+        "width": 782,
+        "height": 1042
+      },
+      "derived300": "/politicians/portraits/vip251-300.webp",
+      "derived600": "/politicians/portraits/vip251-600.webp",
+      "editorialOverride": false
+    },
+    "vip252": {
+      "focalPoint": {
+        "x": 0.5,
+        "y": 0.3
+      },
+      "uncertain": true,
+      "faceDetected": false,
+      "crop": null,
+      "derived300": null,
+      "derived600": null,
+      "editorialOverride": false
+    },
+    "vip253": {
+      "focalPoint": {
+        "x": 0.5,
+        "y": 0.3
+      },
+      "uncertain": true,
+      "faceDetected": false,
+      "crop": null,
+      "derived300": null,
+      "derived600": null,
+      "editorialOverride": false
+    },
+    "vip254": {
+      "focalPoint": {
+        "x": 0.5,
+        "y": 0.385
+      },
+      "uncertain": false,
+      "faceDetected": true,
+      "crop": {
+        "x": 161,
+        "y": 177,
+        "width": 441,
+        "height": 588
+      },
+      "derived300": "/politicians/portraits/vip254-300.webp",
+      "derived600": "/politicians/portraits/vip254-600.webp",
+      "editorialOverride": false
+    },
+    "vip255": {
+      "focalPoint": {
+        "x": 0.5,
+        "y": 0.3
+      },
+      "uncertain": true,
+      "faceDetected": false,
+      "crop": null,
+      "derived300": null,
+      "derived600": null,
+      "editorialOverride": false
+    },
+    "vip256": {
+      "focalPoint": {
+        "x": 0.5,
+        "y": 0.385
+      },
+      "uncertain": false,
+      "faceDetected": true,
+      "crop": {
+        "x": 1859,
+        "y": 866,
+        "width": 992,
+        "height": 1323
+      },
+      "derived300": "/politicians/portraits/vip256-300.webp",
+      "derived600": "/politicians/portraits/vip256-600.webp",
+      "editorialOverride": false
+    },
+    "vip257": {
+      "focalPoint": {
+        "x": 0.5,
+        "y": 0.385
+      },
+      "uncertain": false,
+      "faceDetected": true,
+      "crop": {
+        "x": 1933,
+        "y": 807,
+        "width": 825,
+        "height": 1100
+      },
+      "derived300": "/politicians/portraits/vip257-300.webp",
+      "derived600": "/politicians/portraits/vip257-600.webp",
+      "editorialOverride": false
+    },
+    "vip258": {
+      "focalPoint": {
+        "x": 0.5,
+        "y": 0.3
+      },
+      "uncertain": true,
+      "faceDetected": false,
+      "crop": null,
+      "derived300": null,
+      "derived600": null,
+      "editorialOverride": false
+    },
+    "vip259": {
+      "focalPoint": {
+        "x": 0.5,
+        "y": 0.385
+      },
+      "uncertain": false,
+      "faceDetected": true,
+      "crop": {
+        "x": 2228,
+        "y": 1098,
+        "width": 836,
+        "height": 1114
+      },
+      "derived300": "/politicians/portraits/vip259-300.webp",
+      "derived600": "/politicians/portraits/vip259-600.webp",
+      "editorialOverride": false
+    },
+    "vip260": {
+      "focalPoint": {
+        "x": 0.5,
+        "y": 0.385
+      },
+      "uncertain": false,
+      "faceDetected": true,
+      "crop": {
+        "x": 1956,
+        "y": 917,
+        "width": 827,
+        "height": 1103
+      },
+      "derived300": "/politicians/portraits/vip260-300.webp",
+      "derived600": "/politicians/portraits/vip260-600.webp",
+      "editorialOverride": false
+    },
+    "vip261": {
+      "focalPoint": {
+        "x": 0.5,
+        "y": 0.385
+      },
+      "uncertain": false,
+      "faceDetected": true,
+      "crop": {
+        "x": 2170,
+        "y": 1148,
+        "width": 788,
+        "height": 1050
+      },
+      "derived300": "/politicians/portraits/vip261-300.webp",
+      "derived600": "/politicians/portraits/vip261-600.webp",
+      "editorialOverride": false
+    },
+    "vip262": {
+      "focalPoint": {
+        "x": 0.5,
+        "y": 0.385
+      },
+      "uncertain": false,
+      "faceDetected": true,
+      "crop": {
+        "x": 247,
+        "y": 105,
+        "width": 121,
+        "height": 162
+      },
+      "derived300": "/politicians/portraits/vip262-300.webp",
+      "derived600": "/politicians/portraits/vip262-600.webp",
+      "editorialOverride": false
+    },
+    "vip263": {
+      "focalPoint": {
+        "x": 0.5,
+        "y": 0.385
+      },
+      "uncertain": false,
+      "faceDetected": true,
+      "crop": {
+        "x": 1939,
+        "y": 977,
+        "width": 882,
+        "height": 1176
+      },
+      "derived300": "/politicians/portraits/vip263-300.webp",
+      "derived600": "/politicians/portraits/vip263-600.webp",
+      "editorialOverride": false
+    },
+    "vip264": {
+      "focalPoint": {
+        "x": 0.5,
+        "y": 0.385
+      },
+      "uncertain": false,
+      "faceDetected": true,
+      "crop": {
+        "x": 1438,
+        "y": 795,
+        "width": 713,
+        "height": 951
+      },
+      "derived300": "/politicians/portraits/vip264-300.webp",
+      "derived600": "/politicians/portraits/vip264-600.webp",
+      "editorialOverride": false
+    },
+    "vip265": {
+      "focalPoint": {
+        "x": 0.5,
+        "y": 0.385
+      },
+      "uncertain": false,
+      "faceDetected": true,
+      "crop": {
+        "x": 2195,
+        "y": 947,
+        "width": 761,
+        "height": 1014
+      },
+      "derived300": "/politicians/portraits/vip265-300.webp",
+      "derived600": "/politicians/portraits/vip265-600.webp",
+      "editorialOverride": false
+    },
+    "vip266": {
+      "focalPoint": {
+        "x": 0.5,
+        "y": 0.385
+      },
+      "uncertain": false,
+      "faceDetected": true,
+      "crop": {
+        "x": 1950,
+        "y": 1019,
+        "width": 691,
+        "height": 922
+      },
+      "derived300": "/politicians/portraits/vip266-300.webp",
+      "derived600": "/politicians/portraits/vip266-600.webp",
+      "editorialOverride": false
+    },
+    "vip267": {
+      "focalPoint": {
+        "x": 0.5,
+        "y": 0.385
+      },
+      "uncertain": false,
+      "faceDetected": true,
+      "crop": {
+        "x": 1283,
+        "y": 721,
+        "width": 730,
+        "height": 973
+      },
+      "derived300": "/politicians/portraits/vip267-300.webp",
+      "derived600": "/politicians/portraits/vip267-600.webp",
+      "editorialOverride": false
+    },
+    "vip268": {
+      "focalPoint": {
+        "x": 0.5,
+        "y": 0.385
+      },
+      "uncertain": false,
+      "faceDetected": true,
+      "crop": {
+        "x": 945,
+        "y": 267,
+        "width": 957,
+        "height": 1276
+      },
+      "derived300": "/politicians/portraits/vip268-300.webp",
+      "derived600": "/politicians/portraits/vip268-600.webp",
+      "editorialOverride": false
+    },
+    "vip269": {
+      "focalPoint": {
+        "x": 0.5,
+        "y": 0.385
+      },
+      "uncertain": false,
+      "faceDetected": true,
+      "crop": {
+        "x": 1973,
+        "y": 1281,
+        "width": 749,
+        "height": 998
+      },
+      "derived300": "/politicians/portraits/vip269-300.webp",
+      "derived600": "/politicians/portraits/vip269-600.webp",
+      "editorialOverride": false
+    },
+    "vip270": {
+      "focalPoint": {
+        "x": 0.5,
+        "y": 0.3
+      },
+      "uncertain": true,
+      "faceDetected": false,
+      "crop": null,
+      "derived300": null,
+      "derived600": null,
+      "editorialOverride": false
+    },
+    "vip271": {
+      "focalPoint": {
+        "x": 0.5,
+        "y": 0.385
+      },
+      "uncertain": false,
+      "faceDetected": true,
+      "crop": {
+        "x": 2164,
+        "y": 1155,
+        "width": 855,
+        "height": 1139
+      },
+      "derived300": "/politicians/portraits/vip271-300.webp",
+      "derived600": "/politicians/portraits/vip271-600.webp",
+      "editorialOverride": false
+    },
+    "vip272": {
+      "focalPoint": {
+        "x": 0.5,
+        "y": 0.385
+      },
+      "uncertain": false,
+      "faceDetected": true,
+      "crop": {
+        "x": 1980,
+        "y": 920,
+        "width": 850,
+        "height": 1133
+      },
+      "derived300": "/politicians/portraits/vip272-300.webp",
+      "derived600": "/politicians/portraits/vip272-600.webp",
+      "editorialOverride": false
+    },
+    "vip273": {
+      "focalPoint": {
+        "x": 0.5,
+        "y": 0.385
+      },
+      "uncertain": false,
+      "faceDetected": true,
+      "crop": {
+        "x": 2237,
+        "y": 1056,
+        "width": 803,
+        "height": 1071
+      },
+      "derived300": "/politicians/portraits/vip273-300.webp",
+      "derived600": "/politicians/portraits/vip273-600.webp",
+      "editorialOverride": false
+    },
+    "vip274": {
+      "focalPoint": {
+        "x": 0.5,
+        "y": 0.385
+      },
+      "uncertain": false,
+      "faceDetected": true,
+      "crop": {
+        "x": 1883,
+        "y": 1318,
+        "width": 823,
+        "height": 1097
+      },
+      "derived300": "/politicians/portraits/vip274-300.webp",
+      "derived600": "/politicians/portraits/vip274-600.webp",
+      "editorialOverride": false
+    },
+    "vip275": {
+      "focalPoint": {
+        "x": 0.5,
+        "y": 0.385
+      },
+      "uncertain": false,
+      "faceDetected": true,
+      "crop": {
+        "x": 2096,
+        "y": 1003,
+        "width": 835,
+        "height": 1113
+      },
+      "derived300": "/politicians/portraits/vip275-300.webp",
+      "derived600": "/politicians/portraits/vip275-600.webp",
+      "editorialOverride": false
+    },
+    "vip276": {
+      "focalPoint": {
+        "x": 0.5,
+        "y": 0.385
+      },
+      "uncertain": false,
+      "faceDetected": true,
+      "crop": {
+        "x": 2088,
+        "y": 1023,
+        "width": 808,
+        "height": 1077
+      },
+      "derived300": "/politicians/portraits/vip276-300.webp",
+      "derived600": "/politicians/portraits/vip276-600.webp",
+      "editorialOverride": false
+    },
+    "vip277": {
+      "focalPoint": {
+        "x": 0.5,
+        "y": 0.385
+      },
+      "uncertain": false,
+      "faceDetected": true,
+      "crop": {
+        "x": 1747,
+        "y": 851,
+        "width": 1018,
+        "height": 1357
+      },
+      "derived300": "/politicians/portraits/vip277-300.webp",
+      "derived600": "/politicians/portraits/vip277-600.webp",
+      "editorialOverride": false
+    },
+    "vip278": {
+      "focalPoint": {
+        "x": 0.5,
+        "y": 0.385
+      },
+      "uncertain": false,
+      "faceDetected": true,
+      "crop": {
+        "x": 2194,
+        "y": 971,
+        "width": 869,
+        "height": 1159
+      },
+      "derived300": "/politicians/portraits/vip278-300.webp",
+      "derived600": "/politicians/portraits/vip278-600.webp",
+      "editorialOverride": false
+    },
+    "vip279": {
+      "focalPoint": {
+        "x": 0.5,
+        "y": 0.385
+      },
+      "uncertain": false,
+      "faceDetected": true,
+      "crop": {
+        "x": 1868,
+        "y": 1001,
+        "width": 833,
+        "height": 1111
+      },
+      "derived300": "/politicians/portraits/vip279-300.webp",
+      "derived600": "/politicians/portraits/vip279-600.webp",
+      "editorialOverride": false
+    },
+    "vip280": {
+      "focalPoint": {
+        "x": 0.5,
+        "y": 0.385
+      },
+      "uncertain": false,
+      "faceDetected": true,
+      "crop": {
+        "x": 2038,
+        "y": 1017,
+        "width": 822,
+        "height": 1096
+      },
+      "derived300": "/politicians/portraits/vip280-300.webp",
+      "derived600": "/politicians/portraits/vip280-600.webp",
+      "editorialOverride": false
+    },
+    "vip281": {
+      "focalPoint": {
+        "x": 0.5,
+        "y": 0.385
+      },
+      "uncertain": false,
+      "faceDetected": true,
+      "crop": {
+        "x": 2194,
+        "y": 1062,
+        "width": 844,
+        "height": 1125
+      },
+      "derived300": "/politicians/portraits/vip281-300.webp",
+      "derived600": "/politicians/portraits/vip281-600.webp",
+      "editorialOverride": false
+    },
+    "vip282": {
+      "focalPoint": {
+        "x": 0.5,
+        "y": 0.3
+      },
+      "uncertain": true,
+      "faceDetected": true,
+      "crop": {
+        "x": 105,
+        "y": 0,
+        "width": 351,
+        "height": 468
+      },
+      "derived300": null,
+      "derived600": null,
+      "editorialOverride": false
+    }
+  }
+}

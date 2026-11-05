@@ -1,6 +1,6 @@
 // components/figurat-politike/PoliticianCard.tsx
 import React, { useState } from 'react';
-import { resolveDisplayPhotoUrl, UNVERIFIED_PHOTO_CREDIT } from '../../utils/officialPhoto';
+import { resolveDisplayPhotoUrl } from '../../utils/officialPhoto';
 import { VipProfile } from '../../types';
 import { PoliticianDetail, ParagonDimensionItem, CANONICAL_PARAGON_DIMENSIONS } from '../../types/politician';
 import { ScoreRing } from './primitives/ScoreRing';
@@ -193,16 +193,12 @@ export const PoliticianCard: React.FC<PoliticianCardProps> = ({
               score={scoringSuspended ? null : (typeof target.composite === 'number' ? target.composite : (target.dynamicScore ?? null))}
               coverage={coverageLabel}
               imageUrl={resolveDisplayPhotoUrl(target) || undefined}
+              profile={target}
               name={name}
               size={132}
               strokeWidth={5.5}
               suspended={scoringSuspended}
             />
-            {(target as any).photoStatus === UNVERIFIED_PHOTO_CREDIT && (
-              <p className="text-[10px] leading-snug text-center text-slate-500 dark:text-slate-400 max-w-[10.5rem]">
-                {UNVERIFIED_PHOTO_CREDIT}
-              </p>
-            )}
             {!scoringSuspended && typeof target.composite === 'number' && (
               <PartialRatingBadge
                 coverage={coverageLabel}

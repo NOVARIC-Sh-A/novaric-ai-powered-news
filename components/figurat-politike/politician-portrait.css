@@ -1,0 +1,20 @@
+.politician-portrait {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  overflow: hidden;
+  border-radius: 8px;
+  background: #30384b;
+}
+
+.politician-portrait img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: var(--portrait-position, 50% 30%);
+  display: block;
+}
+
+.politician-portrait--small { max-width: 96px; }
+.politician-portrait--medium { max-width: 100%; }
+.politician-portrait--large { max-width: 280px; }

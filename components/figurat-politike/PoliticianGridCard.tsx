@@ -1,9 +1,10 @@
 // components/figurat-politike/PoliticianGridCard.tsx
-import React, { useState } from 'react';
+import React from 'react';
 import { VipProfile } from '../../types';
 import { partyColor, normalizePartySlug, band, bandLabel } from '../../lib/brand-tokens';
-import { AWAITING_DATA, AwaitingPhoto, ratingBadgeForCoverage, PartialRatingBadge } from './primitives/awaiting';
-import { resolveDisplayPhotoUrl, UNVERIFIED_PHOTO_CREDIT } from '../../utils/officialPhoto';
+import { AWAITING_DATA, ratingBadgeForCoverage, PartialRatingBadge } from './primitives/awaiting';
+import { PoliticianPortrait } from './PoliticianPortrait';
+import { portraitPropsFromProfile } from '../../utils/portraitStandard';
 import { CANONICAL_PARAGON_DIMENSIONS } from '../../types/politician';
 import { ZodiacChip } from './primitives/ZodiacChip';
 import { useDotTooltip } from './SharedDotTooltip';
@@ -31,10 +32,6 @@ export const PoliticianGridCard: React.FC<PoliticianGridCardProps> = ({
   if (!targetPolitician) return null;
 
   const { showTooltip, hideTooltip } = useDotTooltip();
-  const [imageFailed, setImageFailed] = useState(false);
-  const photoUrl = resolveDisplayPhotoUrl(targetPolitician);
-  const photoCredit = (targetPolitician as any).photoStatus === UNVERIFIED_PHOTO_CREDIT ? UNVERIFIED_PHOTO_CREDIT : null;
-  React.useEffect(() => setImageFailed(false), [photoUrl]);
 
   const targetId = targetPolitician.numericId || targetPolitician.id;
   const linkHref = `/figurat-politike/${targetId}`;
@@ -127,39 +124,17 @@ export const PoliticianGridCard: React.FC<PoliticianGridCardProps> = ({
         e.currentTarget.style.boxShadow = 'none';
       }}
     >
-      {/* Fixed portrait frame. Cover + face bias; no stretch, no letterbox. */}
-      <div
-        className="relative w-full aspect-[3/4] overflow-hidden bg-slate-200 dark:bg-slate-800 pointer-events-none"
-        style={{
-          borderBottom: '2px solid var(--pc)',
-        }}
-      >
-        {photoUrl && !imageFailed ? (
-          <img
-            src={photoUrl}
-            alt={targetPolitician.name}
-            loading="lazy"
-            referrerPolicy="no-referrer"
-            onError={() => setImageFailed(true)}
-            className="absolute inset-0 h-full w-full object-cover"
-            style={{ objectPosition: 'center 20%' }}
-            title={photoCredit || undefined}
-          />
-        ) : (
-          <AwaitingPhoto />
-        )}
-
-        {/* Top-Left: Party Chip (white 9.5px text per E14) */}
-        <div className="absolute top-2 left-2">
+      <div className="pointer-events-none" style={{ borderBottom: '2px solid var(--pc)' }}>
+        <PoliticianPortrait
+          {...portraitPropsFromProfile(targetPolitician, { size: 'medium', showCredit: false, eager: index < 4 })}
+        />
+        <div className="flex items-center justify-between gap-1 px-2 py-1">
           <span
             className="px-1.5 py-0.5 rounded font-black text-white tracking-wider uppercase shadow-xs"
             style={{ backgroundColor: 'var(--pc)', fontSize: '9.5px' }}
           >
             {partySlug}
           </span>
-        </div>
-
-        <div className="absolute top-2 right-2">
           {ratingsOff ? (
             <div
               className="px-1.5 py-0.5 rounded text-[10px] font-bold text-amber-800 dark:text-amber-200 bg-amber-100/90 dark:bg-amber-950/80 border border-amber-300 dark:border-amber-700 shadow-sm"
