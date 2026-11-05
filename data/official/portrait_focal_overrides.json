@@ -1,0 +1,4 @@
+{
+  "note": "Editorial focal-point overrides. Keys are profile ids. x and y are fractions of the original image used as CSS object-position. An entry suppresses the automatic crop.",
+  "overrides": {}
+}
