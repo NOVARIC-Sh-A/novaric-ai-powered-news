@@ -5,7 +5,7 @@ import path from 'node:path';
 import React from 'react';
 import { JSDOM } from 'jsdom';
 import { canonicalProfileShareUrl, profileOpenGraph } from '../utils/profileShare';
-import { sanitizeSocialLinks, visibleSocialEntries } from '../utils/socialLinks';
+import { profileSocialLogos, sanitizeSocialLinks } from '../utils/socialLinks';
 
 const dom = new JSDOM('<!doctype html><html><body><div id="root"></div></body></html>', {
   url: 'http://localhost/',
@@ -131,66 +131,82 @@ describe('Profile share button and social logos', () => {
     await act(async () => { root.unmount(); });
   });
 
-  it('renders an unapproved logo with no href and no URL in the DOM', async () => {
+  it('links confirmed accounts and sends every other logo to the platform homepage', async () => {
     const root = createRoot(document.getElementById('root')!);
     const leaked = {
       facebook: {
         approved: false,
         approvedBy: null,
         approvedAt: null,
-        url: 'https://www.facebook.com/nard.ndoka.7',
+        url: 'https://www.facebook.com/secret.person',
       },
     };
     await act(async () => {
-      root.render(React.createElement(ProfileSocialLogos, { links: leaked }));
+      root.render(React.createElement(ProfileSocialLogos, { name: 'Filan Fisteku', links: leaked }));
     });
-    const icon = document.querySelector('[data-social-platform="facebook"]');
-    assert.ok(icon);
-    assert.equal(icon?.tagName, 'SPAN');
-    assert.equal(icon?.getAttribute('data-social-approved'), 'false');
-    assert.equal(icon?.getAttribute('aria-label'), 'Facebook – Në pritje të miratimit zyrtar');
-    assert.equal(icon?.getAttribute('href'), null);
-    assert.equal(document.querySelector('a[href]'), null);
-    assert.doesNotMatch(document.body.innerHTML, /nard\.ndoka\.7/);
-    assert.doesNotMatch(document.body.innerHTML, /facebook\.com\/nard/);
+    const logos = [...document.querySelectorAll('[data-social-platform]')];
+    assert.deepEqual(logos.map((node) => node.getAttribute('data-social-platform')), ['facebook', 'x', 'whatsapp', 'linkedin', 'telegram']);
+    for (const node of logos) {
+      assert.equal(node.tagName, 'A');
+      assert.equal(node.getAttribute('target'), '_blank');
+      assert.equal(node.getAttribute('rel'), 'noopener noreferrer');
+      assert.equal(node.getAttribute('data-social-confirmed'), 'false');
+    }
+    const facebook = document.querySelector('[data-social-platform="facebook"]') as HTMLAnchorElement;
+    assert.equal(facebook.getAttribute('href'), 'https://www.facebook.com/');
+    assert.equal(facebook.getAttribute('aria-label'), 'Facebook (faqja kryesore e platformës)');
+    assert.doesNotMatch(document.body.innerHTML, /secret\.person/);
+    assert.equal(document.querySelector('[data-social-platform="whatsapp"]')?.getAttribute('href'), 'https://www.whatsapp.com/');
+    assert.equal(document.querySelector('[data-social-platform="telegram"]')?.getAttribute('href'), 'https://telegram.org/');
 
     await act(async () => {
       root.render(React.createElement(ProfileSocialLogos, {
+        name: 'Nard Ndoka',
         links: {
           facebook: {
             approved: true,
-            approvedBy: 'Dr Thika',
+            approvedBy: 'Dr Alban Gj. THIKA',
             approvedAt: '2026-11-05',
-            url: 'https://www.facebook.com/example.page',
+            url: 'https://www.facebook.com/nard.ndoka.7',
           },
         },
       }));
     });
-    const link = document.querySelector('[data-social-platform="facebook"]') as HTMLAnchorElement;
-    assert.equal(link.tagName, 'A');
-    assert.equal(link.getAttribute('href'), 'https://www.facebook.com/example.page');
-    assert.equal(link.getAttribute('target'), '_blank');
-    assert.equal(link.getAttribute('rel'), 'noopener noreferrer');
-    await act(async () => {
-      root.render(React.createElement(ProfileSocialLogos, { links: null }));
-    });
-    assert.equal(document.querySelector('[data-profile-social]'), null);
+    const confirmed = document.querySelector('[data-social-platform="facebook"]') as HTMLAnchorElement;
+    assert.equal(confirmed.getAttribute('href'), 'https://www.facebook.com/nard.ndoka.7');
+    assert.equal(confirmed.getAttribute('data-social-confirmed'), 'true');
+    assert.equal(confirmed.getAttribute('aria-label'), 'Nard Ndoka në Facebook');
+    assert.equal(confirmed.getAttribute('target'), '_blank');
+    assert.equal(confirmed.getAttribute('rel'), 'noopener noreferrer');
+    assert.equal(document.querySelector('[data-social-platform="x"]')?.getAttribute('data-social-confirmed'), 'false');
     await act(async () => { root.unmount(); });
   });
 
-  it('keeps Ndoka’s Facebook URL in the editorial file and out of the public profile', () => {
+  it('publishes only Ndoka’s approved accounts and keeps unapproved URLs out of the page', () => {
     const editorial = JSON.parse(read('data/official/politician_social_links.json'));
     const exportJson = read('db/paragon_scores_export.json');
-    const ndoka = JSON.parse(exportJson).profiles.find((item: { id: string }) => item.id === 'vip282');
+    const profiles = JSON.parse(exportJson).profiles as Array<Record<string, any>>;
+    const ndoka = profiles.find((item) => item.id === 'vip282');
+    assert.equal(editorial.profiles.vip282.facebook.approved, true);
+    assert.equal(editorial.profiles.vip282.facebook.approvedBy, 'Dr Alban Gj. THIKA');
+    assert.equal(editorial.profiles.vip282.facebook.approvedAt, '2026-11-05');
     assert.equal(editorial.profiles.vip282.facebook.url, 'https://www.facebook.com/nard.ndoka.7');
-    assert.equal(editorial.profiles.vip282.facebook.approved, false);
-    assert.equal(editorial.profiles.vip282.facebook.source, 'supplied by NOVARIC® editor (Dr Thika)');
-    assert.equal(editorial.profiles.vip282.facebook.verifiedAt, '2026-11-05');
-    assert.equal(ndoka.socialLinks.facebook.approved, false);
-    assert.equal(Object.hasOwn(ndoka.socialLinks.facebook, 'url'), false);
-    assert.doesNotMatch(exportJson, /nard\.ndoka\.7/);
-    assert.equal(sanitizeSocialLinks(editorial.profiles.vip282)?.facebook?.url, undefined);
-    assert.equal(visibleSocialEntries(ndoka.socialLinks)[0].url, null);
+    assert.equal(editorial.profiles.vip282.x.url, 'https://x.com/NardNdoka');
+    assert.equal(editorial.profiles.vip282.linkedin.url, 'https://www.linkedin.com/in/nard-ndoka-63678819/');
+    assert.equal(ndoka.socialLinks.facebook.url, editorial.profiles.vip282.facebook.url);
+    assert.equal(ndoka.socialLinks.x.url, editorial.profiles.vip282.x.url);
+    assert.equal(ndoka.socialLinks.linkedin.url, editorial.profiles.vip282.linkedin.url);
+    assert.equal(ndoka.socialLinks.whatsapp, undefined);
+    assert.equal(ndoka.socialLinks.telegram, undefined);
+    const rendered = profileSocialLogos('Nard Ndoka', ndoka.socialLinks);
+    assert.equal(rendered.find((item) => item.platform === 'facebook')?.href, 'https://www.facebook.com/nard.ndoka.7');
+    assert.equal(rendered.find((item) => item.platform === 'x')?.href, 'https://x.com/NardNdoka');
+    assert.equal(rendered.find((item) => item.platform === 'linkedin')?.href, 'https://www.linkedin.com/in/nard-ndoka-63678819/');
+    assert.equal(rendered.find((item) => item.platform === 'whatsapp')?.href, 'https://www.whatsapp.com/');
+    assert.equal(rendered.find((item) => item.platform === 'telegram')?.href, 'https://telegram.org/');
+    assert.equal(sanitizeSocialLinks({ facebook: { approved: false, url: 'https://www.facebook.com/secret.person', approvedBy: null, approvedAt: null } })?.facebook?.url, undefined);
+    const others = profiles.filter((item) => item.id !== 'vip282' && item.socialLinks);
+    assert.equal(others.length, 0);
     const card = read('components/figurat-politike/PoliticianCard.tsx');
     const details = card.indexOf('data-profile-details="true"');
     const logos = card.indexOf('<ProfileSocialLogos');

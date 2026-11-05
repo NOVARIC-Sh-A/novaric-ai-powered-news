@@ -40,10 +40,14 @@ describe('Nard Ndoka profile', () => {
     assert.equal(ndoka?.imageUrl, '/photos/originals/nard_ndoka.png');
     assert.equal(ndoka?.photoStatus, 'Burimi i fotografisë: Në verifikim');
     assert.equal(ndoka?.photoLicence, null);
-    assert.equal(ndoka?.socialLinks.facebook.approved, false);
-    assert.equal(ndoka?.socialLinks.facebook.approvedBy, null);
-    assert.equal(ndoka?.socialLinks.facebook.approvedAt, null);
-    assert.equal(ndoka?.socialLinks.facebook.url, undefined);
+    assert.equal(ndoka?.socialLinks.facebook.approved, true);
+    assert.equal(ndoka?.socialLinks.facebook.approvedBy, 'Dr Alban Gj. THIKA');
+    assert.equal(ndoka?.socialLinks.facebook.approvedAt, '2026-11-05');
+    assert.equal(ndoka?.socialLinks.facebook.url, 'https://www.facebook.com/nard.ndoka.7');
+    assert.equal(ndoka?.socialLinks.x.url, 'https://x.com/NardNdoka');
+    assert.equal(ndoka?.socialLinks.linkedin.url, 'https://www.linkedin.com/in/nard-ndoka-63678819/');
+    assert.equal(ndoka?.socialLinks.whatsapp, undefined);
+    assert.equal(ndoka?.socialLinks.telegram, undefined);
   });
 
   it('records sourced offices and leaves unverified birth data awaiting', () => {

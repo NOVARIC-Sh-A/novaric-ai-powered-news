@@ -75239,9 +75239,22 @@
       "slug": "nard-ndoka",
       "socialLinks": {
         "facebook": {
-          "approved": false,
-          "approvedBy": null,
-          "approvedAt": null
+          "approved": true,
+          "approvedBy": "Dr Alban Gj. THIKA",
+          "approvedAt": "2026-11-05",
+          "url": "https://www.facebook.com/nard.ndoka.7"
+        },
+        "x": {
+          "approved": true,
+          "approvedBy": "Dr Alban Gj. THIKA",
+          "approvedAt": "2026-11-05",
+          "url": "https://x.com/NardNdoka"
+        },
+        "linkedin": {
+          "approved": true,
+          "approvedBy": "Dr Alban Gj. THIKA",
+          "approvedAt": "2026-11-05",
+          "url": "https://www.linkedin.com/in/nard-ndoka-63678819/"
         }
       },
       "category": "Politikë (PDK)",

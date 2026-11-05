@@ -1,6 +1,19 @@
-/** Public social-link shape. Unapproved entries must not carry a URL. */
+/** Public social-link shape. An unapproved entry must not carry a personal URL. */
 
-export const SOCIAL_PLATFORMS = ['facebook', 'instagram', 'x', 'tiktok', 'youtube', 'linkedin', 'website'] as const;
+export const SOCIAL_PLATFORMS = ['facebook', 'instagram', 'x', 'tiktok', 'youtube', 'linkedin', 'website', 'whatsapp', 'telegram'] as const;
+
+/** Logos drawn on every profile details card, in this order. */
+export const PROFILE_LOGO_PLATFORMS = ['facebook', 'x', 'whatsapp', 'linkedin', 'telegram'] as const;
+
+export type ProfileLogoPlatform = (typeof PROFILE_LOGO_PLATFORMS)[number];
+
+export const PLATFORM_HOME: Record<ProfileLogoPlatform, string> = {
+  facebook: 'https://www.facebook.com/',
+  x: 'https://x.com/',
+  whatsapp: 'https://www.whatsapp.com/',
+  linkedin: 'https://www.linkedin.com/',
+  telegram: 'https://telegram.org/',
+};
 
 export type SocialPlatform = (typeof SOCIAL_PLATFORMS)[number];
 
@@ -28,12 +41,16 @@ export const SOCIAL_PLATFORM_LABEL: Record<SocialPlatform, string> = {
   youtube: 'YouTube',
   linkedin: 'LinkedIn',
   website: 'Website',
+  whatsapp: 'WhatsApp',
+  telegram: 'Telegram',
 };
 
-const PENDING_LABEL = 'Në pritje të miratimit zyrtar';
+export function platformHomeLabel(platform: ProfileLogoPlatform): string {
+  return `${SOCIAL_PLATFORM_LABEL[platform]} (faqja kryesore e platformës)`;
+}
 
-export function socialPendingLabel(platform: SocialPlatform): string {
-  return `${SOCIAL_PLATFORM_LABEL[platform]} – ${PENDING_LABEL}`;
+export function confirmedSocialLabel(name: string, platform: ProfileLogoPlatform): string {
+  return `${name} në ${SOCIAL_PLATFORM_LABEL[platform]}`;
 }
 
 /** Drop any URL that has not been approved, so it cannot be rendered or shipped on the profile object. */
@@ -60,24 +77,26 @@ export function sanitizeSocialLinks(value: unknown): SocialLinks | null {
   return count > 0 ? out : null;
 }
 
-/** What the details card is allowed to draw. Unapproved entries have no URL. */
-export function visibleSocialEntries(links: SocialLinks | null | undefined): Array<{
-  platform: SocialPlatform;
+/**
+ * Five logos for every profile. A confirmed account uses its approved URL.
+ * Anything else links to the platform homepage. An unapproved personal URL is never returned.
+ */
+export function profileSocialLogos(name: string, links: SocialLinks | null | undefined): Array<{
+  platform: ProfileLogoPlatform;
   label: string;
-  approved: boolean;
-  url: string | null;
+  confirmed: boolean;
+  href: string;
 }> {
   const clean = sanitizeSocialLinks(links);
-  if (!clean) return [];
-  return SOCIAL_PLATFORMS.flatMap((platform) => {
-    const entry = clean[platform];
-    if (!entry) return [];
-    const approved = entry.approved === true && typeof entry.url === 'string';
-    return [{
+  const person = name.trim() || 'Profili';
+  return PROFILE_LOGO_PLATFORMS.map((platform) => {
+    const entry = clean?.[platform];
+    const personal = entry?.approved === true && typeof entry.url === 'string' ? entry.url : null;
+    return {
       platform,
-      label: approved ? SOCIAL_PLATFORM_LABEL[platform] : socialPendingLabel(platform),
-      approved,
-      url: approved ? entry.url ?? null : null,
-    }];
+      confirmed: Boolean(personal),
+      href: personal || PLATFORM_HOME[platform],
+      label: personal ? confirmedSocialLabel(person, platform) : platformHomeLabel(platform),
+    };
   });
 }

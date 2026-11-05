@@ -298,7 +298,7 @@ export const PoliticianCard: React.FC<PoliticianCardProps> = ({
             )}
           </div>
         </div>
-        <ProfileSocialLogos links={(target as { socialLinks?: SocialLinks | null }).socialLinks} />
+        <ProfileSocialLogos name={name} links={(target as { socialLinks?: SocialLinks | null }).socialLinks} />
       </div>
 
       <div className="mb-6 grid grid-cols-1 gap-6 lg:grid-cols-12" data-legacy-fingerprint="true">
