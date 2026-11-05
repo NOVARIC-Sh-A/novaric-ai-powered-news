@@ -343,8 +343,6 @@ export const PoliticianCard: React.FC<PoliticianCardProps> = ({
         </div>
       </div>
 
-      <ProfileDossierSections dossier={dossier} />
-
       {scoringSuspended ? (
         <div className="mb-6 p-4 rounded-2xl bg-amber-50/90 dark:bg-amber-950/40 border border-amber-200 dark:border-amber-800/60 shadow-xs flex items-start gap-3.5">
           <AlertTriangle className="w-5 h-5 text-amber-600 dark:text-amber-400 shrink-0 mt-0.5" />
@@ -372,6 +370,8 @@ export const PoliticianCard: React.FC<PoliticianCardProps> = ({
       )}
 
       <FactualObservatory profileId={target.id || target.numericId} />
+
+      <ProfileDossierSections dossier={dossier} />
 
       <EditorialRemarksCard remark={editorialRemark} paragonComposite={scoringSuspended ? null : paragonComposite} />
 

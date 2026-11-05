@@ -3,7 +3,7 @@
   "slug": "nard-ndoka",
   "accessed": "2026-11-05",
   "conflicts": [
-    "Minister term end: en.wikipedia text says August 2008, its infobox and sq.wikipedia say 23 July 2008; Tirana Times reports the new minister sworn in on 30.07.2008; the ministry history says only 2007–2008. The page shows the ministry range.",
+    "Minister term end: en.wikipedia text says August 2008, its infobox and sq.wikipedia say 23 July 2008; Tirana Times reports the new minister sworn in on 30.07.2008; the ministry history says only 2007–2008. The page shows 2007–2008, ended July 2008, with the 30.07.2008 swearing-in.",
     "Parliamentary years: sq.wikipedia says deputy 2005–2013; the Assembly book says he was not in legislature VII (2009–2013) and lists IV, V, VI, VIII and IX. The page follows the Assembly book.",
     "Number of terms: a GSH/Dita interview says he was elected deputy three times; the Assembly lists five legislatures. The page follows the Assembly book.",
     "Profession: he described himself as an auto-electrician; a Tirana Times opinion piece calls him a lathe-worker. The page shows only the sourced self-description.",
@@ -30,20 +30,29 @@
     {
       "key": "dateOfBirth",
       "label": "Datëlindja",
-      "display": "Në verifikim",
-      "verified": false
+      "display": "18.05.1963",
+      "verified": true,
+      "editorConfirmed": true,
+      "sourceUrl": "https://sq.wikipedia.org/wiki/Nard_Ndoka",
+      "sourceLabel": "Konfirmuar nga redaksia NOVARIC®, 5 Nov 2026"
     },
     {
       "key": "placeOfBirth",
       "label": "Vendlindja",
-      "display": "Në verifikim",
-      "verified": false
+      "display": "Laç",
+      "verified": true,
+      "editorConfirmed": true,
+      "sourceUrl": "https://en.wikipedia.org/wiki/Nard_Ndoka",
+      "sourceLabel": "Konfirmuar nga redaksia NOVARIC®, 5 Nov 2026"
     },
     {
       "key": "education",
       "label": "Arsimi",
-      "display": "Në verifikim",
-      "verified": false
+      "display": "Arsim i lartë. Institucioni, dega dhe viti nuk janë në burim.",
+      "verified": true,
+      "editorConfirmed": true,
+      "sourceUrl": "https://opinion.al/video-deputetet-shqiptare-dhe-problemet-ne-cv-e-tyre/",
+      "sourceLabel": "Konfirmuar nga redaksia NOVARIC®, 5 Nov 2026"
     },
     {
       "key": "committees",
@@ -60,8 +69,11 @@
     {
       "key": "deputyMinister2012",
       "label": "Posti i zëvendësministrit, 2012",
-      "display": "Në verifikim",
-      "verified": false
+      "display": "Zëvendësministër i Brendshëm, 2012",
+      "verified": true,
+      "editorConfirmed": true,
+      "sourceUrl": "https://www.cna.al/2016/05/21/nard-ndoka-sqaron-pse-ka-ndryshuar-emrin-2",
+      "sourceLabel": "Konfirmuar nga redaksia NOVARIC®, 5 Nov 2026"
     },
     {
       "key": "candidacy2025",
@@ -96,18 +108,19 @@
     {
       "key": "minister",
       "label": "Posti ministror",
-      "display": "Ministër i Shëndetësisë, 2007–2008",
+      "display": "Ministër i Shëndetësisë, 2007–2008 (përfundoi në korrik 2008)",
       "verified": true,
-      "sourceUrl": "https://shendetesia.gov.al/historiku/",
-      "sourceLabel": "Ministria e Shëndetësisë, historiku"
+      "sourceUrl": "https://www.tiranatimes.com/new-ministers-sworn-in_105065/",
+      "sourceLabel": "Ministria e Shëndetësisë, 2007–2008; Tirana Times, betimi më 30.07.2008"
     }
   ],
   "bio": {
-    "sq": "Nard Lazër NDOKA është kryetar i Partisë Demokristiane të Shqipërisë (PDK), sipas regjistrit të partive të KQZ-së për vitin 2025; vetë ai e daton kryesimin që nga viti 2006. Sipas listës së tij të karrierës, në vitet 1990 ka qenë ndër themeluesit e PD-së në Shkodër dhe kryetar i Bashkisë Vau i Dejës. Kuvendi i Shqipërisë e liston deputet në legjislaturat IV (1997–2001), V (2001–2005), VI (2005–2009), VIII (2013–2017) dhe IX (2017–2019), nga e cila dha dorëheqjen më 21 shkurt 2019. Nuk figuron në legjislaturën VII (2009–2013). Ka qenë ministër i Shëndetësisë në qeverinë e Sali BERISHËS në vitet 2007–2008 dhe u zëvendësua nga Anila GODO. Në zgjedhjet e vitit 2021 kandidoi në listën e PD-së në Shkodër, pa fituar mandat. Në vitin 2025 PDK ishte pjesë e koalicionit PD–Aleanca për Shqipërinë Madhështore, të regjistruar nga KQZ-ja. Më 31 maj 2025 ai deklaroi se PD-ja nuk mund të jetë më aleate e PDK-së. Në vitin 2026 ka folur publikisht për reformën zgjedhore e territoriale dhe ka kërkuar dorëheqjen e kryeministrit Edi RAMA.",
-    "en": "Nard Lazër NDOKA is chairman of the Christian Democratic Party of Albania (PDK), according to the 2025 Central Election Commission party register; he himself dates his leadership to 2006. By his own career account, in the 1990s he was among the founders of the Democratic Party in Shkodër and mayor of Vau i Dejës. The Assembly of Albania lists him as a deputy in legislatures IV (1997–2001), V (2001–2005), VI (2005–2009), VIII (2013–2017) and IX (2017–2019), resigning on 21 February 2019. He is not listed in legislature VII (2009–2013). He was Minister of Health in Sali BERISHA's government in 2007–2008 and was replaced by Anila GODO. In 2021 he stood on the Democratic Party list in Shkodër without winning a seat. In 2025 PDK was part of the PD–Alliance for a Magnificent Albania coalition registered by the CEC. On 31 May 2025 he said the Democratic Party could no longer be PDK's ally. In 2026 he has spoken on electoral and territorial reform and called for Prime Minister Edi RAMA to resign.",
+    "sq": "Nard Lazër NDOKA është kryetar i Partisë Demokristiane të Shqipërisë (PDK), sipas regjistrit të partive të KQZ-së për vitin 2025; vetë ai e daton kryesimin që nga viti 2006. Sipas listës së tij të karrierës, në vitet 1990 ka qenë ndër themeluesit e PD-së në Shkodër dhe kryetar i Bashkisë Vau i Dejës. Kuvendi i Shqipërisë e liston deputet në legjislaturat IV (1997–2001), V (2001–2005), VI (2005–2009), VIII (2013–2017) dhe IX (2017–2019), nga e cila dha dorëheqjen më 21 shkurt 2019. Nuk figuron në legjislaturën VII (2009–2013). Ka qenë ministër i Shëndetësisë në qeverinë e Sali BERISHËS në vitet 2007–2008. Mandati përfundoi në korrik 2008; Anila GODO u betua më 30 korrik 2008. Në vitin 2012 ka qenë zëvendësministër i Brendshëm. Në zgjedhjet e vitit 2021 kandidoi në listën e PD-së në Shkodër, pa fituar mandat. Në vitin 2025 PDK ishte pjesë e koalicionit PD–Aleanca për Shqipërinë Madhështore, të regjistruar nga KQZ-ja. Më 31 maj 2025 ai deklaroi se PD-ja nuk mund të jetë më aleate e PDK-së. Në vitin 2026 ka folur publikisht për reformën zgjedhore e territoriale dhe ka kërkuar dorëheqjen e kryeministrit Edi RAMA.",
+    "en": "Nard Lazër NDOKA is chairman of the Christian Democratic Party of Albania (PDK), according to the 2025 Central Election Commission party register; he himself dates his leadership to 2006. By his own career account, in the 1990s he was among the founders of the Democratic Party in Shkodër and mayor of Vau i Dejës. The Assembly of Albania lists him as a deputy in legislatures IV (1997–2001), V (2001–2005), VI (2005–2009), VIII (2013–2017) and IX (2017–2019), resigning on 21 February 2019. He is not listed in legislature VII (2009–2013). He was Minister of Health in Sali BERISHA's government in 2007–2008. The term ended in July 2008; Anila GODO was sworn in on 30 July 2008. In 2012 he was Deputy Minister of the Interior. In 2021 he stood on the Democratic Party list in Shkodër without winning a seat. In 2025 PDK was part of the PD–Alliance for a Magnificent Albania coalition registered by the CEC. On 31 May 2025 he said the Democratic Party could no longer be PDK's ally. In 2026 he has spoken on electoral and territorial reform and called for Prime Minister Edi RAMA to resign.",
     "sources": [
       { "label": "KQZ, regjistri i partive 2025", "url": "https://kqz.gov.al/lista-e-partive-politike" },
       { "label": "Ministria e Shëndetësisë, historiku", "url": "https://shendetesia.gov.al/historiku/" },
+      { "label": "Tirana Times, 30.07.2008", "url": "https://www.tiranatimes.com/new-ministers-sworn-in_105065/" },
       { "label": "Kuvendi i Shqipërisë, Ligjvënësit në vite", "url": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/LigjvenesitNeVite.pdf" },
       { "label": "CNA, 21.05.2016", "url": "https://www.cna.al/2016/05/21/nard-ndoka-sqaron-pse-ka-ndryshuar-emrin-2" },
       { "label": "ABC News, 04.06.2025", "url": "https://abcnews.al/nuk-pati-fryme-11-maji-nard-ndoka-berisha-e-ndertoi-fushaten-mbi-unin-e-tij-vota-e-diaspores-gafe-e-opozites/" },
@@ -119,17 +132,17 @@
     { "date": "1990", "text": "Ndër themeluesit e PD-së në Shkodër dhe anëtar i kryesisë së PD-së për disa vite (deklarim i tij).", "sourceUrl": "https://www.cna.al/2016/05/21/nard-ndoka-sqaron-pse-ka-ndryshuar-emrin-2", "sourceLabel": "CNA, 21.05.2016" },
     { "date": "1991", "text": "Kryetar i Komitetit Pluralist në Vau të Dejës (deklarim i tij).", "sourceUrl": "https://www.cna.al/2016/05/21/nard-ndoka-sqaron-pse-ka-ndryshuar-emrin-2", "sourceLabel": "CNA, 21.05.2016" },
     { "date": "1992", "text": "Sekretar i bashkisë së Vaut të Dejës (deklarim i tij).", "sourceUrl": "https://www.cna.al/2016/05/21/nard-ndoka-sqaron-pse-ka-ndryshuar-emrin-2", "sourceLabel": "CNA, 21.05.2016" },
-    { "date": "1996", "text": "Kryetar i bashkisë së Vaut të Dejës, kandidat i pavarur (deklarim i tij).", "sourceUrl": "https://www.cna.al/2016/05/21/nard-ndoka-sqaron-pse-ka-ndryshuar-emrin-2", "sourceLabel": "CNA, 21.05.2016" },
+    { "date": "1996", "text": "Kryetar i bashkisë së Vaut të Dejës, kandidat i pavarur.", "sourceUrl": "https://www.cna.al/2016/05/21/nard-ndoka-sqaron-pse-ka-ndryshuar-emrin-2", "sourceLabel": "Konfirmuar nga redaksia NOVARIC®, 5 Nov 2026", "editorConfirmed": true },
     { "date": "23.07.1997–03.09.2001", "text": "Deputet, Legjislatura IV. Filloi si deputet i PD-së dhe më 2000 kaloi në PDR.", "sourceUrl": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/LigjvenesitNeVite.pdf", "sourceLabel": "Kuvendi i Shqipërisë" },
     { "date": "03.09.2001–02.09.2005", "text": "Deputet, Legjislatura V (PDR).", "sourceUrl": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/LigjvenesitNeVite.pdf", "sourceLabel": "Kuvendi i Shqipërisë" },
     { "date": "Legjislatura V", "text": "Kryetar i grupit parlamentar Demokristian-Reformator (deklarim i tij).", "sourceUrl": "https://www.cna.al/2016/05/21/nard-ndoka-sqaron-pse-ka-ndryshuar-emrin-2", "sourceLabel": "CNA, 21.05.2016" },
     { "date": "02.09.2005–07.09.2009", "text": "Deputet, Legjislatura VI (PDK).", "sourceUrl": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/LigjvenesitNeVite.pdf", "sourceLabel": "Kuvendi i Shqipërisë" },
-    { "date": "2006", "text": "Kryetar i PDK-së (deklarim i tij; data e saktë nuk është e dokumentuar).", "sourceUrl": "https://www.cna.al/2016/05/21/nard-ndoka-sqaron-pse-ka-ndryshuar-emrin-2", "sourceLabel": "CNA, 21.05.2016" },
-    { "date": "2007–2008", "text": "Ministër i Shëndetësisë, 2007–2008.", "sourceUrl": "https://shendetesia.gov.al/historiku/", "sourceLabel": "Ministria e Shëndetësisë" },
+    { "date": "2006", "text": "Kryetar i PDK-së që nga viti 2006.", "sourceUrl": "https://www.cna.al/2016/05/21/nard-ndoka-sqaron-pse-ka-ndryshuar-emrin-2", "sourceLabel": "Konfirmuar nga redaksia NOVARIC®, 5 Nov 2026", "editorConfirmed": true },
+    { "date": "2007–2008", "text": "Ministër i Shëndetësisë, 2007–2008. Mandati përfundoi në korrik 2008; Anila GODO u betua më 30 korrik 2008.", "sourceUrl": "https://www.tiranatimes.com/new-ministers-sworn-in_105065/", "sourceLabel": "Ministria e Shëndetësisë; Tirana Times, 30.07.2008" },
     { "date": "17.08.2008", "text": "Pas largimit nga posti i ministrit, e quajti shkelje të marrëveshjes politike të PDK-së me PD-në.", "sourceUrl": "https://www.tiranatimes.com/former-health-minister-against-berisha_105170/", "sourceLabel": "Tirana Times, 17.08.2008" },
     { "date": "18.06.2009", "text": "Pas vrasjes së Aleksandër KEKËS, kreut të PDK-së në Malësi të Madhe, e quajti akt terrorist dhe nuk i pranoi pretendimet e policisë për të.", "sourceUrl": "https://balkaninsight.com/2009/06/18/albania-police-dead-politician-was-drug-dealer/bi/all-balkan-countries/", "sourceLabel": "Balkan Insight, 18.06.2009" },
     { "date": "2009–2013", "text": "Nuk figuron në Legjislaturën VII.", "sourceUrl": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/LigjvenesitNeVite.pdf", "sourceLabel": "Kuvendi i Shqipërisë" },
-    { "date": "2012", "text": "Në verifikim", "verified": false },
+    { "date": "2012", "text": "Zëvendësministër i Brendshëm.", "sourceUrl": "https://www.cna.al/2016/05/21/nard-ndoka-sqaron-pse-ka-ndryshuar-emrin-2", "sourceLabel": "Konfirmuar nga redaksia NOVARIC®, 5 Nov 2026", "editorConfirmed": true },
     { "date": "09.09.2013–09.09.2017", "text": "Deputet, Legjislatura VIII (PDK, i propozuar nga PD-ja).", "sourceUrl": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/LigjvenesitNeVite.pdf", "sourceLabel": "Kuvendi i Shqipërisë" },
     { "date": "21.05.2016", "text": "Në një deklaratë të raportuar nga CNA, thotë se emri zyrtar është Nard Ndoka dhe se «Mark» është emri i pagëzimit.", "sourceUrl": "https://www.cna.al/2016/05/21/nard-ndoka-sqaron-pse-ka-ndryshuar-emrin-2", "sourceLabel": "CNA, 21.05.2016" },
     { "date": "09.09.2017–21.02.2019", "text": "Deputet, Legjislatura IX (PDK, qarku i Shkodrës, listë e PD-së). Dha dorëheqjen më 21 shkurt 2019.", "sourceUrl": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/LigjvenesitNeVite.pdf", "sourceLabel": "Kuvendi i Shqipërisë" },

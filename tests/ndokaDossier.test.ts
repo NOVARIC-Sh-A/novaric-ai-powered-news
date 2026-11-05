@@ -15,24 +15,23 @@ describe('Nard Ndoka sourced dossier', () => {
     assert.ok(file.conflicts.length >= 4);
     assert.equal('conflicts' in (dossier as object), false);
     assert.equal(JSON.stringify(dossier).includes('lathe-worker'), false);
-    assert.equal(JSON.stringify(dossier).includes('1963-05-18'), false);
-    assert.equal(file.bio.sq.includes('1963'), false);
-    assert.equal(file.bio.sq.includes('Laç'), false);
   });
 
   it('shows Në verifikim for unverified fields and never their values', () => {
     const unverified = (dossier?.fields || []).filter((field) => !field.verified);
-    assert.deepEqual(unverified.map((field) => field.key), [
-      'dateOfBirth', 'placeOfBirth', 'education', 'committees', 'languages', 'deputyMinister2012', 'candidacy2025',
-    ]);
+    assert.deepEqual(unverified.map((field) => field.key), ['committees', 'languages', 'candidacy2025']);
     for (const field of unverified) {
       assert.equal(field.display, UNVERIFIED_LABEL);
       assert.equal(field.sourceUrl, undefined);
     }
     const minister = dossier?.fields.find((field) => field.key === 'minister');
-    assert.equal(minister?.display, 'Ministër i Shëndetësisë, 2007–2008');
+    assert.match(minister?.display || '', /2007–2008/);
+    assert.match(minister?.display || '', /korrik 2008/);
+    assert.equal(dossier?.fields.find((field) => field.key === 'dateOfBirth')?.display, '18.05.1963');
+    assert.equal(dossier?.fields.find((field) => field.key === 'placeOfBirth')?.display, 'Laç');
+    assert.match(dossier?.fields.find((field) => field.key === 'dateOfBirth')?.sourceLabel || '', /Konfirmuar nga redaksia/);
     assert.match(dossier?.bio.sq || '', /2007–2008/);
-    assert.doesNotMatch(dossier?.bio.sq || '', /korrik 2008/);
+    assert.match(dossier?.bio.sq || '', /30 korrik 2008/);
     assert.match(dossier?.bio.sq || '', /legjislaturën VII/);
     assert.equal(dossier?.social.profilesOnly.length, 2);
     assert.equal(JSON.stringify(dossier?.social.profilesOnly).includes('ndjek'), false);
@@ -43,7 +42,7 @@ describe('Nard Ndoka sourced dossier', () => {
     const fingerprint = page.indexOf('data-legacy-fingerprint="true"');
     const sections = page.indexOf('<ProfileDossierSections');
     const observatory = page.indexOf('<FactualObservatory');
-    assert.ok(details > 0 && fingerprint > details && sections > fingerprint && observatory > sections);
+    assert.ok(details > 0 && fingerprint > details && observatory > fingerprint && sections > observatory);
     assert.match(page, /<ProfileSocialLogos/);
     const logos = page.indexOf('<ProfileSocialLogos');
     assert.ok(logos > details && logos < fingerprint);

@@ -7,6 +7,7 @@ export interface DossierField {
   label: string;
   display: string;
   verified: boolean;
+  editorConfirmed?: boolean;
   sourceUrl?: string;
   sourceLabel?: string;
 }
@@ -17,6 +18,7 @@ export interface DossierEntry {
   sourceUrl?: string;
   sourceLabel?: string;
   verified?: boolean;
+  editorConfirmed?: boolean;
   label?: string;
 }
 
