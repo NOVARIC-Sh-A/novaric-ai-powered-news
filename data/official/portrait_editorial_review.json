@@ -34,19 +34,19 @@
       "uncertain": false
     },
     "vip3": {
-      "originalAvailable": false,
+      "originalAvailable": true,
       "sourceVerified": false,
       "usageRightsReviewed": false,
-      "faceDetected": false,
+      "faceDetected": true,
       "cropAcceptable": false,
       "headFullyVisible": false,
       "shouldersVisible": false,
-      "paddedBecauseSourceTooTight": false,
+      "paddedBecauseSourceTooTight": true,
       "creditDisplayed": true,
       "reviewer": null,
       "reviewedAt": null,
       "automatedAt": "2026-11-05",
-      "uncertain": true
+      "uncertain": false
     },
     "vip4": {
       "originalAvailable": true,
