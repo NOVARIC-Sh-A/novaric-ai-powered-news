@@ -3,7 +3,7 @@ import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import path from 'node:path';
 import { getProfilePhotoUrl } from '../utils/paragonProfileUtils';
-import { isOfficialPhotoUrl, resolveOfficialPhotoUrl } from '../utils/officialPhoto';
+import { isEditorSuppliedPhotoUrl, isOfficialPhotoUrl, resolveDisplayPhotoUrl, resolveOfficialPhotoUrl, UNVERIFIED_PHOTO_CREDIT } from '../utils/officialPhoto';
 
 const AWAITING_DATA = 'Në pritje të të dhënave / Awaiting data';
 
@@ -61,6 +61,11 @@ describe('NOVARIC® PARAGON Politicians Cards & Pipeline Contract (P1)', () => {
         awaiting++;
         assert.equal(url, null, `${card.id} awaiting card must not carry a photo`);
         assert.equal(card.photoStatus, AWAITING_DATA);
+      } else if (isEditorSuppliedPhotoUrl(url)) {
+        official++;
+        assert.equal(card.photoStatus, UNVERIFIED_PHOTO_CREDIT, card.id);
+        assert.equal(card.photoLicence, null, card.id);
+        assert.equal(isOfficialPhotoUrl(url), false, card.id);
       } else {
         official++;
         assert.ok(isOfficialPhotoUrl(url), `${card.id} imageUrl is not official: ${url}`);
@@ -70,7 +75,7 @@ describe('NOVARIC® PARAGON Politicians Cards & Pipeline Contract (P1)', () => {
       assert.ok(!raw.includes('MaleProfile') && !raw.includes('FemaleProfile'), `${card.id} uses mock photo`);
     });
     assert.equal(official + awaiting, 234);
-    assert.equal(awaiting, 26, 'profiles with no formal party, government, or parliament portrait');
+    assert.equal(awaiting, 25, 'profiles with no formal party, government, parliament, or editor-supplied portrait');
   });
 
   test('Approved replacements point at the official Parliament / Commons sources', () => {
@@ -116,6 +121,9 @@ describe('NOVARIC® PARAGON Politicians Cards & Pipeline Contract (P1)', () => {
     assert.equal(resolveOfficialPhotoUrl({ imageUrl: 'https://novaric.co/wp-content/uploads/2025/11/MaleProfile.jpg' }), null);
     assert.equal(resolveOfficialPhotoUrl({ imageUrl: 'https://example.com/a.jpg' }), null);
     assert.equal(resolveOfficialPhotoUrl({}), null);
+    assert.equal(resolveOfficialPhotoUrl({ imageUrl: '/photos/originals/nard_ndoka.png' }), null);
+    assert.equal(resolveDisplayPhotoUrl({ imageUrl: '/photos/originals/nard_ndoka.png' }), '/photos/originals/nard_ndoka.png');
+    assert.equal(isEditorSuppliedPhotoUrl('/photos/originals/nard_ndoka.png'), true);
   });
 
   test('Awaiting-data label and untouched zodiac label', () => {

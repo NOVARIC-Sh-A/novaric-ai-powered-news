@@ -74998,7 +74998,7 @@
       "peerAverage": 72.9,
       "benchmark": 72.9
     },
-    {
+        {
       "id": "vip282",
       "numericId": 282,
       "uuid": "p-0282",
@@ -75016,12 +75016,12 @@
       "presumptionOfInnocence": true,
       "legalStatusAsOf": null,
       "legalStatusSummary": null,
-      "imageUrl": null,
+      "imageUrl": "/photos/originals/nard_ndoka.png",
       "photo_source_url": null,
-      "photoPending": true,
-      "photoStatus": "Në pritje të të dhënave / Awaiting data",
-      "shortBio": null,
-      "detailedBio": null,
+      "photoPending": false,
+      "photoStatus": "Burimi i fotografisë: Në verifikim",
+      "shortBio": "Nard Ndoka është kryetar i Partisë Demokristiane të Shqipërisë, sipas regjistrit të partive të KQZ-së për vitin 2025. Ka qenë ministër i Shëndetësisë në vitet 2007–2008, sipas historikut të Ministrisë së Shëndetësisë. Kuvendi i Shqipërisë e liston deputet në legjislaturat IV, V, VI, VIII dhe IX. Në legjislaturën IX ka qenë deputet i PDK-së në qarkun e Shkodrës, i kandiduar nga PD-ja, dhe dha dorëheqjen më 21 shkurt 2019. Nuk figuron në legjislaturën VII.",
+      "detailedBio": "Nard Ndoka është kryetar i Partisë Demokristiane të Shqipërisë, sipas regjistrit të partive të KQZ-së për vitin 2025. Ka qenë ministër i Shëndetësisë në vitet 2007–2008, sipas historikut të Ministrisë së Shëndetësisë. Kuvendi i Shqipërisë e liston deputet në legjislaturat IV, V, VI, VIII dhe IX. Në legjislaturën IX ka qenë deputet i PDK-së në qarkun e Shkodrës, i kandiduar nga PD-ja, dhe dha dorëheqjen më 21 shkurt 2019. Nuk figuron në legjislaturën VII.\n\nNard Ndoka is chair of the Christian Democratic Party of Albania on the 2025 CEC party register. He was Minister of Health in 2007–2008. The Assembly of Albania lists him as a deputy in legislatures IV, V, VI, VIII and IX, and records his resignation on 21 February 2019 from the Shkodër seat. He is not listed in legislature VII.",
       "dynamicScore": null,
       "composite": null,
       "compositeDelta": null,
@@ -75035,14 +75035,14 @@
         null,
         null
       ],
-      "dateOfBirth": "1963-05-18",
+      "dateOfBirth": null,
       "dateOfBirthVerificationStatus": null,
-      "dateOfBirthSourceUrl": "https://www.wikidata.org/wiki/Q6965709",
+      "dateOfBirthSourceUrl": null,
       "dateOfBirthVerifiedAt": null,
-      "placeOfBirth": "Laç",
+      "placeOfBirth": null,
       "electoralZone": null,
       "dimsSource": null,
-      "last_updated": "2026-11-04T15:30:00+00:00",
+      "last_updated": "2026-11-05T13:53:00+00:00",
       "scoring_suspended": false,
       "scoring_suspension_notice": null,
       "politicianId": 282,
@@ -75051,8 +75051,8 @@
         "fullName": {
           "value": "Nard Ndoka",
           "sourceUrl": "https://kqz.gov.al/lista-e-partive-politike",
-          "retrievedAt": "2026-11-03",
-          "notes": "KQZ party register lists this name as chair of Partia Demokristiane e Shqipërisë."
+          "retrievedAt": "2026-11-05",
+          "notes": "KQZ party register, 2025, lists this name as chair. The Assembly book lists him as Nard Lazër Ndoka / Nard Lazer Ndoka."
         },
         "party": {
           "value": "PDK",
@@ -75072,16 +75072,16 @@
           "notes": "Official ministry history lists Nard Ndoka among Ministers of Health for 2007–2008. That page does not give the day the term started or ended."
         },
         "dateOfBirth": {
-          "value": "1963-05-18",
-          "sourceUrl": "https://www.wikidata.org/wiki/Q6965709",
-          "retrievedAt": "2026-11-03",
-          "notes": "Secondary. Wikidata day-precision date imported from Polish Wikipedia. Not a civil-registry extract, so it is not marked verified."
+          "value": null,
+          "sourceUrl": null,
+          "retrievedAt": "2026-11-05",
+          "notes": "Në pritje të të dhënave / Awaiting data. A Wikidata day (1963-05-18, Q6965709, imported from Polish Wikipedia) is not a civil-registry or official source, so it is not shown."
         },
         "placeOfBirth": {
-          "value": "Laç",
-          "sourceUrl": "https://www.wikidata.org/wiki/Q6965709",
-          "retrievedAt": "2026-11-03",
-          "notes": "Secondary. Same Wikidata item, imported from Polish Wikipedia."
+          "value": null,
+          "sourceUrl": null,
+          "retrievedAt": "2026-11-05",
+          "notes": "Në pritje të të dhënave / Awaiting data. Laç appears only on the same unverified Wikidata item and is not shown."
         },
         "parliamentaryTerm": {
           "value": "Legjislatura IV (23.07.1997–03.09.2001, PD; më 2000 kaloi në PDR); V (03.09.2001–02.09.2005, PDR); VI (02.09.2005–07.09.2009, PDK); VIII (09.09.2013–09.09.2017, PDK, i propozuar nga PD-ja); IX (09.09.2017–21.02.2019, PDK, qarku i Shkodrës, i kandiduar nga PD-ja, dorëheqje)",
@@ -75090,10 +75090,10 @@
           "notes": "Kuvendi i Shqipërisë, Deputetët ndër vite (1920–2021), file LigjvenesitNeVite.pdf linked from parlament.al. He is not listed in Legjislatura VII (07.09.2009–09.09.2013). Footnote 979: resigned 21.02.2019. The 2018 annual report of the Assembly also lists him among deputies outside parliamentary groups for 2018."
         },
         "photo": {
-          "value": null,
+          "value": "/photos/originals/nard_ndoka.png",
           "sourceUrl": null,
-          "retrievedAt": "2026-11-04",
-          "notes": "public/photos/nard_ndoka.jpg has been an empty 0-byte file since the repository import (git blob e69de29). No portrait was found on the Kuvendi file store, shendetesia.gov.al, kqz.gov.al, or a PDK official site. Press photographs and a Wikimedia signature recreation were not used. Credit remains Burimi i fotografisë: Në verifikim."
+          "retrievedAt": "2026-11-05",
+          "notes": "supplied by NOVARIC® editor (Dr Thika), 5 Nov 2026, source pending verification. Original PNG kept unchanged (554x554 RGB, sha256 4927105b4b196c01de3d292d5ae9587c7e259efc309f5f067655a41feba49ee1). The empty public/photos/nard_ndoka.jpg was removed. Credit: Burimi i fotografisë: Në verifikim. Not an official publication. No photographer and no licence."
         },
         "paragonScore": {
           "value": null,
@@ -75113,6 +75113,24 @@
           "sourceUrl": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/LigjvenesitNeVite.pdf",
           "retrievedAt": "2026-11-04",
           "notes": "Listed as Nard Lazër Ndoka / Nard Lazer Ndoka."
+        },
+        "education": {
+          "value": null,
+          "sourceUrl": null,
+          "retrievedAt": "2026-11-05",
+          "notes": "Në pritje të të dhënave / Awaiting data. No education record on the KQZ register, the ministry history page, or the Assembly deputies book."
+        },
+        "committee": {
+          "value": null,
+          "sourceUrl": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/LigjvenesitNeVite.pdf",
+          "retrievedAt": "2026-11-05",
+          "notes": "Në pritje të të dhënave / Awaiting data. The Assembly book footnotes on his lines do not name a committee."
+        },
+        "biography": {
+          "value": "Nard Ndoka është kryetar i Partisë Demokristiane të Shqipërisë, sipas regjistrit të partive të KQZ-së për vitin 2025. Ka qenë ministër i Shëndetësisë në vitet 2007–2008, sipas historikut të Ministrisë së Shëndetësisë. Kuvendi i Shqipërisë e liston deputet në legjislaturat IV, V, VI, VIII dhe IX. Në legjislaturën IX ka qenë deputet i PDK-së në qarkun e Shkodrës, i kandiduar nga PD-ja, dhe dha dorëheqjen më 21 shkurt 2019. Nuk figuron në legjislaturën VII.",
+          "sourceUrl": "https://kqz.gov.al/lista-e-partive-politike",
+          "retrievedAt": "2026-11-05",
+          "notes": "Summary of the KQZ register, shendetesia.gov.al/historiku/, and Deputetët ndër vite (LigjvenesitNeVite.pdf). No other claims."
         }
       },
       "sourceRetrievedAt": "2026-11-04",
@@ -75194,7 +75212,7 @@
       "officialPhoto": null,
       "officialPhotoPath": null,
       "photoLicence": null,
-      "photoRetrievedAt": null,
+      "photoRetrievedAt": "2026-11-05",
       "coverage": null,
       "coverageWeight": null,
       "compositeStatus": null,

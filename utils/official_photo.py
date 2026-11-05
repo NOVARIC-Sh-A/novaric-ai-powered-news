@@ -14,7 +14,9 @@ from urllib.parse import quote, urlparse
 
 AWAITING_PHOTO_STATUS = "Në pritje të të dhënave / Awaiting data"
 OFFICIAL_PHOTO_STATUS = "Foto zyrtare / Official photo"
+UNVERIFIED_PHOTO_CREDIT = "Burimi i fotografisë: Në verifikim"
 LOCAL_OFFICIAL_PREFIX = "/politicians/official/"
+LOCAL_SUPPLIED_PREFIX = "/photos/originals/"
 
 OFFICIAL_PHOTO_HOSTS = (
     "kuvendiwebfiles.blob.core.windows.net",
@@ -31,6 +33,11 @@ def _host(url: str) -> str:
         return (urlparse(url).hostname or "").lower()
     except ValueError:
         return ""
+
+
+def is_editor_supplied_photo(url: Optional[str]) -> bool:
+    """A local original from an editor. Shown, but not an official source and not a licence."""
+    return isinstance(url, str) and url.startswith(LOCAL_SUPPLIED_PREFIX) and ".." not in url
 
 
 def is_official_photo_source(url: Optional[str]) -> bool:
@@ -88,12 +95,19 @@ def apply_official_photo(card: Dict[str, Any], registry: Optional[Dict[str, Dict
             image = official_image_url(None, card.get("imageUrl"))
             source = card.get("imageUrl")
         licence = card.get("photoLicence")
-    if image and not is_official_photo_source(image):
+    supplied = is_editor_supplied_photo(image)
+    if image and not is_official_photo_source(image) and not supplied:
         image = None
+        supplied = False
     card["imageUrl"] = image
-    card["photo_source_url"] = source if image else None
-    card["officialPhotoPath"] = path if image else None
-    card["photoLicence"] = licence if image else None
+    card["photo_source_url"] = source if image and not supplied else None
+    card["officialPhotoPath"] = path if image and not supplied else None
+    card["photoLicence"] = licence if image and not supplied else None
     card["photoPending"] = image is None
-    card["photoStatus"] = OFFICIAL_PHOTO_STATUS if image else AWAITING_PHOTO_STATUS
+    if image is None:
+        card["photoStatus"] = AWAITING_PHOTO_STATUS
+    elif supplied:
+        card["photoStatus"] = (ref or {}).get("photoStatus") or UNVERIFIED_PHOTO_CREDIT
+    else:
+        card["photoStatus"] = OFFICIAL_PHOTO_STATUS
     return card

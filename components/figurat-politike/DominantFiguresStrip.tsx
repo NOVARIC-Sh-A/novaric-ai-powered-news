@@ -4,7 +4,7 @@ import { VipProfile } from '../../types';
 import { partyColor, normalizePartySlug } from '../../lib/brand-tokens';
 import { AWAITING_DATA, PartialRatingBadge } from './primitives/awaiting';
 import { ZodiacChip } from './primitives/ZodiacChip';
-import { resolveOfficialPhotoUrl } from '../../utils/officialPhoto';
+import { resolveDisplayPhotoUrl, UNVERIFIED_PHOTO_CREDIT } from '../../utils/officialPhoto';
 import { selectMainProfiles } from '../../utils/politicianNavigation';
 import { useParagonRatingsEnabled } from './useParagonRatings';
 
@@ -29,7 +29,8 @@ export const DominantFiguresStrip: React.FC<DominantFiguresStripProps> = ({
         const partySlug = (item as any).party || normalizePartySlug(item.category);
         const pc = partyColor(partySlug);
         const dob = (item as any).dateOfBirth || item.dateOfBirth;
-        const photoUrl = resolveOfficialPhotoUrl(item);
+        const photoUrl = resolveDisplayPhotoUrl(item);
+        const photoCredit = (item as any).photoStatus === UNVERIFIED_PHOTO_CREDIT ? UNVERIFIED_PHOTO_CREDIT : null;
         const targetId = item.numericId || item.id;
         const linkHref = `/figurat-politike/${targetId}`;
 
@@ -103,6 +104,7 @@ export const DominantFiguresStrip: React.FC<DominantFiguresStripProps> = ({
                     loading="lazy"
                     className="h-full w-full object-cover"
                     style={{ objectPosition: 'center 20%' }}
+                    title={photoCredit || undefined}
                     onError={(e) => {
                       e.currentTarget.style.display = 'none';
                       const fallback = e.currentTarget.nextElementSibling as HTMLElement;

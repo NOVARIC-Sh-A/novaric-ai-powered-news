@@ -3,7 +3,7 @@ import react from '@vitejs/plugin-react';
 import fs from 'fs';
 import path from 'path';
 import { pickFeedImage, pickArticleOpenGraphImage } from './services/imageResolverService';
-import { resolveOfficialPhotoUrl } from './utils/officialPhoto';
+import { isEditorSuppliedPhotoUrl, resolveDisplayPhotoUrl, resolveOfficialPhotoUrl, UNVERIFIED_PHOTO_CREDIT } from './utils/officialPhoto';
 import {
   processNewsFeedQuery,
   getNewsFeedOpsMetrics,
@@ -697,13 +697,15 @@ function novaricApiPlugin() {
             }
             cards.forEach(c => {
               const ref = photoRegistry.get(String(c.id).toLowerCase()) || photoRegistry.get(`name:${String(c.name || '').trim().toLowerCase()}`);
-              const photo = ref ? resolveOfficialPhotoUrl(ref) : resolveOfficialPhotoUrl(c);
+              const photo = ref ? resolveDisplayPhotoUrl(ref) : resolveDisplayPhotoUrl(c);
               c.imageUrl = photo;
               c.officialPhotoPath = ref ? (ref.officialPhotoPath || null) : (c.officialPhotoPath || null);
-              c.photo_source_url = photo ? ((ref && ref.photo_source_url) || c.photo_source_url || null) : null;
-              c.photoLicence = photo ? ((ref && ref.photoLicence) || c.photoLicence || null) : null;
+              c.photo_source_url = photo && !isEditorSuppliedPhotoUrl(photo) ? ((ref && ref.photo_source_url) || c.photo_source_url || null) : null;
+              c.photoLicence = photo && !isEditorSuppliedPhotoUrl(photo) ? ((ref && ref.photoLicence) || c.photoLicence || null) : null;
               c.photoPending = !photo;
-              c.photoStatus = photo ? 'Foto zyrtare / Official photo' : 'Në pritje të të dhënave / Awaiting data';
+              c.photoStatus = !photo
+                ? 'Në pritje të të dhënave / Awaiting data'
+                : (isEditorSuppliedPhotoUrl(photo) ? ((ref && ref.photoStatus) || UNVERIFIED_PHOTO_CREDIT) : 'Foto zyrtare / Official photo');
             });
 
             cards.forEach(c => {
@@ -1004,10 +1006,12 @@ function novaricApiPlugin() {
               caseStatus: politician.caseStatus ?? null,
               presumptionOfInnocence: politician.presumptionOfInnocence ?? null,
               legalStatusSummary: politician.legalStatusSummary || null,
-              imageUrl: resolveOfficialPhotoUrl(politician),
+              imageUrl: resolveDisplayPhotoUrl(politician),
               photo_source_url: resolveOfficialPhotoUrl(politician) ? (politician.photo_source_url || null) : null,
-              photoPending: !resolveOfficialPhotoUrl(politician),
-              photoStatus: resolveOfficialPhotoUrl(politician) ? 'Foto zyrtare / Official photo' : 'Në pritje të të dhënave / Awaiting data',
+              photoPending: !resolveDisplayPhotoUrl(politician),
+              photoStatus: !resolveDisplayPhotoUrl(politician)
+                ? 'Në pritje të të dhënave / Awaiting data'
+                : (isEditorSuppliedPhotoUrl(politician.imageUrl) ? (politician.photoStatus || UNVERIFIED_PHOTO_CREDIT) : 'Foto zyrtare / Official photo'),
               shortBio: politician.shortBio || null,
               detailedBio: politician.detailedBio || "",
               dynamicScore: ratingsOn ? (politician.dynamicScore ?? null) : null,
