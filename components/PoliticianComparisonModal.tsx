@@ -3,7 +3,9 @@ import React from "react";
 import { VipProfile } from "../types";
 import { XMarkIcon } from "./icons";
 import { CANONICAL_PARAGON_DIMENSIONS } from "../types/politician";
-import { formatVipName, getProfilePhotoUrl } from "../utils/paragonProfileUtils";
+import { formatVipName } from "../utils/paragonProfileUtils";
+import { PoliticianPortrait } from "./figurat-politike/PoliticianPortrait";
+import { portraitPropsFromProfile } from "../utils/portraitStandard";
 import { Clock, ShieldAlert } from "lucide-react";
 
 interface PoliticianComparisonModalProps {
@@ -86,23 +88,9 @@ export const PoliticianComparisonModal: React.FC<PoliticianComparisonModalProps>
 
               return (
                 <div key={p.id || p.numericId || index} className="flex flex-col items-center">
-                  <div className="relative">
-                    <img
-                      src={getProfilePhotoUrl(p)}
-                      onError={(e) => {
-                        e.currentTarget.src = "https://media.novaric.al/politicians/foto-ne-pritje.jpg";
-                      }}
-                      alt={safeName}
-                      className="w-20 h-20 rounded-full object-cover border-3 shadow-md"
-                      style={{ borderColor: colors[index] }}
-                    />
-                    <span
-                      className="absolute bottom-0 right-0 px-1.5 py-0.5 rounded text-[10px] font-bold text-white shadow-xs"
-                      style={{ backgroundColor: colors[index] }}
-                    >
-                      {party}
-                    </span>
-                  </div>
+                  <PoliticianPortrait
+                    {...portraitPropsFromProfile(p, { size: 'small', showCredit: true, partyLabel: party })}
+                  />
 
                   <h3 className="mt-3 text-sm font-bold text-slate-800 dark:text-slate-100">
                     {formatVipName(safeName)}

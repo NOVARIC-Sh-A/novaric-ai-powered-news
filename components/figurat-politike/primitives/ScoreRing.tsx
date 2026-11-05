@@ -1,11 +1,14 @@
 // components/figurat-politike/primitives/ScoreRing.tsx
-import React, { useState } from 'react';
-import { AWAITING_DATA, ratingBadgeForCoverage, AwaitingPhoto } from './awaiting';
+import React from 'react';
+import { AWAITING_DATA, ratingBadgeForCoverage } from './awaiting';
+import { PoliticianPortrait } from '../PoliticianPortrait';
+import { portraitPropsFromProfile } from '../../../utils/portraitStandard';
 
 export interface ScoreRingProps {
   score: number | null | undefined;
   coverage?: string | null;
   imageUrl?: string;
+  profile?: any;
   name: string;
   size?: number;
   strokeWidth?: number;
@@ -17,14 +20,13 @@ export const ScoreRing: React.FC<ScoreRingProps> = ({
   score,
   coverage,
   imageUrl,
+  profile,
   name,
   size = 132,
   strokeWidth = 5.5,
   className = '',
   suspended = true,
 }) => {
-  const [imgError, setImgError] = useState(false);
-  React.useEffect(() => setImgError(false), [imageUrl]);
   const radius = (size - strokeWidth * 2) / 2;
   const circumference = 2 * Math.PI * radius;
 
@@ -60,60 +62,26 @@ export const ScoreRing: React.FC<ScoreRingProps> = ({
       : '–');
 
   return (
-    <div className={`relative inline-flex items-center justify-center flex-shrink-0 ${className}`} style={{ width: size, height: size }}>
-      {/* SVG Progress Ring */}
-      <svg className="absolute inset-0 -rotate-90" width={size} height={size}>
-        {/* Background Track */}
-        <circle
-          cx={size / 2}
-          cy={size / 2}
-          r={radius}
-          fill="none"
-          stroke="currentColor"
-          className="text-slate-200 dark:text-slate-800"
-          strokeWidth={strokeWidth}
+    <div className={`relative inline-flex flex-col items-center justify-start flex-shrink-0 ${className}`} style={{ width: Math.max(size, 160) }}>
+      <div className="relative z-10 w-full">
+        <PoliticianPortrait
+          {...(profile
+            ? portraitPropsFromProfile(profile, { size: 'large', showCredit: true, eager: true })
+            : {
+                politicianId: name,
+                name,
+                imageUrl: imageUrl || null,
+                imageCredit: null,
+                size: 'large' as const,
+                showCredit: false,
+                eager: true,
+              })}
         />
-        {/* Active Value Progress (only if score is non-null) */}
-        {numericScore !== null && (
-          <circle
-            cx={size / 2}
-            cy={size / 2}
-            r={radius}
-            fill="none"
-            stroke="currentColor"
-            className={`${ringColorClass} transition-all duration-1000 ease-out`}
-            strokeWidth={strokeWidth}
-            strokeDasharray={circumference}
-            strokeDashoffset={offset}
-            strokeLinecap="round"
-          />
-        )}
-      </svg>
-
-      {/* Inner Avatar (112px inner diameter) */}
-      <div
-        className="rounded-full overflow-hidden flex items-center justify-center bg-slate-100 dark:bg-slate-800 shadow-inner z-10 border-2 border-white dark:border-slate-900"
-        style={{ width: size - strokeWidth * 3 - 4, height: size - strokeWidth * 3 - 4 }}
-      >
-        {imageUrl && !imgError ? (
-          <img
-            src={imageUrl}
-            alt={name}
-            referrerPolicy="no-referrer"
-            onError={() => setImgError(true)}
-            className="h-full w-full object-cover"
-            style={{ objectPosition: 'center 20%' }}
-            loading="lazy"
-          />
-        ) : (
-          /* No official photo, or it failed to load: neutral 'Awaiting data' state */
-          <AwaitingPhoto iconClassName="w-12 h-12" />
-        )}
       </div>
 
-      {/* Score Badge Overlay */}
+      {/* Score sits under the portrait so it cannot cover the face. */}
       <div
-        className={`absolute -bottom-1 z-20 px-2.5 py-0.5 rounded-full text-[11px] font-black shadow-md border-2 border-white dark:border-slate-900 tabular-nums whitespace-nowrap ${badgeBgClass}`}
+        className={`mt-2 z-20 px-2.5 py-0.5 rounded-full text-[11px] font-black shadow-md border border-white dark:border-slate-900 tabular-nums whitespace-nowrap ${badgeBgClass}`}
         title={numericScore !== null ? `${ratingBadgeForCoverage(coverage)}${coverage ? ` · ${coverage} dimensions` : ''}` : AWAITING_DATA}
       >
         {formattedScoreText}

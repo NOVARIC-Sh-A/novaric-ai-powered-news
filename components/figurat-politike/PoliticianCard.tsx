@@ -193,6 +193,7 @@ export const PoliticianCard: React.FC<PoliticianCardProps> = ({
               score={scoringSuspended ? null : (typeof target.composite === 'number' ? target.composite : (target.dynamicScore ?? null))}
               coverage={coverageLabel}
               imageUrl={resolveOfficialPhotoUrl(target) || undefined}
+              profile={target}
               name={name}
               size={132}
               strokeWidth={5.5}

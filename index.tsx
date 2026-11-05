@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { App } from './App';
+import './components/figurat-politike/politician-portrait.css';
 
 // Gracefully handle noisy third-party Web3 browser extension injection scripts (e.g. inpage.js)
 if (typeof window !== 'undefined') {

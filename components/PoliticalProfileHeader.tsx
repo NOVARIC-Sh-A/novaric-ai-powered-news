@@ -1,6 +1,7 @@
 import React from 'react';
 import { FullProfileAnalysis, VipProfile } from '../types';
-import { getProfilePhotoUrl } from '../utils/paragonProfileUtils';
+import { PoliticianPortrait } from './figurat-politike/PoliticianPortrait';
+import { portraitPropsFromProfile } from '../utils/portraitStandard';
 
 interface PoliticalProfileHeaderProps {
   profile: VipProfile;
@@ -26,21 +27,14 @@ export const PoliticalProfileHeader: React.FC<PoliticalProfileHeaderProps> = ({ 
       <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
         <div className="flex flex-col items-center text-center md:col-span-1">
           <div className="relative">
-            <img 
-              src={getProfilePhotoUrl(profile)}
-              onError={(e) => {
-                  const gender = profile?.gender?.toLowerCase();
-                  e.currentTarget.src =
-                      gender === "female" || gender === "f"
-                          ? "https://novaric.co/wp-content/uploads/2025/11/FemaleProfile.jpg"
-                          : "https://novaric.co/wp-content/uploads/2025/11/MaleProfile.jpg";
-              }}
-              alt={`Portreti i ${profile.name}`}
-              style={{ objectFit: "cover", objectPosition: "center" }}
-              className="w-32 h-32 rounded-full object-cover border-4 border-slate-200 dark:border-slate-600 shadow-lg"
-            />
-            <div className="absolute -bottom-1 -right-1 bg-red-600 text-white text-sm font-bold w-12 h-12 rounded-full flex items-center justify-center border-4 border-white dark:border-slate-800">
-              {party?.match(/\((.*?)\)/)?.[1] || 'N/A'}
+            <div className="w-32">
+              <PoliticianPortrait
+                {...portraitPropsFromProfile(profile, {
+                  size: 'medium',
+                  showCredit: true,
+                  partyLabel: party?.match(/\((.*?)\)/)?.[1] || null,
+                })}
+              />
             </div>
           </div>
         </div>

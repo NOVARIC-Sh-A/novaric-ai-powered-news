@@ -124,16 +124,19 @@ describe('NOVARIC® PARAGON Politicians Cards & Pipeline Contract (P1)', () => {
     assert.ok(src.includes('Nuk pikëzohet / Not scored'));
     assert.ok(src.includes('export function AwaitingPhoto') || src.includes('export const AwaitingPhoto'));
     const grid = fs.readFileSync(path.resolve(process.cwd(), 'components/figurat-politike/PoliticianGridCard.tsx'), 'utf-8');
-    assert.ok(grid.includes('onError'));
-    assert.ok(grid.includes('AwaitingPhoto'));
+    const portrait = fs.readFileSync(path.resolve(process.cwd(), 'components/figurat-politike/PoliticianPortrait.tsx'), 'utf-8');
+    const css = fs.readFileSync(path.resolve(process.cwd(), 'components/figurat-politike/politician-portrait.css'), 'utf-8');
+    assert.ok(grid.includes('PoliticianPortrait'));
+    assert.ok(portrait.includes('onError'));
+    assert.ok(portrait.includes('AwaitingPhoto'));
     const ring = fs.readFileSync(path.resolve(process.cwd(), 'components/figurat-politike/primitives/ScoreRing.tsx'), 'utf-8');
-    assert.ok(ring.includes('onError') && ring.includes('AwaitingPhoto'));
     const strip = fs.readFileSync(path.resolve(process.cwd(), 'components/figurat-politike/DominantFiguresStrip.tsx'), 'utf-8');
     for (const source of [grid, ring, strip]) {
-      assert.ok(source.includes('object-cover'));
-      assert.ok(source.includes("objectPosition: 'center 20%'"));
+      assert.ok(source.includes('PoliticianPortrait'));
     }
-    assert.ok(grid.includes('aspect-[3/4]'));
+    assert.ok(css.includes('aspect-ratio: 3 / 4'));
+    assert.ok(css.includes('object-position: var(--portrait-position, 50% 30%)'));
+    assert.ok(!grid.includes("objectPosition: 'center 20%'"));
   });
 
   test('Cloud Scheduler JSON spec is valid and enforces retry/backoff policy', () => {
