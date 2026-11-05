@@ -170,7 +170,6 @@ export function portraitPropsFromProfile(
 }
 
 export function derivedSources(politicianId: string | number | null | undefined): { src: string; srcSet: string; inset: PortraitInset | null } | null {
-  if (focalOverride(politicianId)) return null;
   const frame = frameFor(politicianId);
   if (!frame || frame.reference || frame.uncertain || !frame.faceDetected || !frame.derived300 || !frame.derived600) return null;
   return {

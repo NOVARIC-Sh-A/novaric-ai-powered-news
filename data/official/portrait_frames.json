@@ -1,23 +1,23 @@
 {
   "detector": "opencv-yunet-2023mar-face-detection",
   "recognition": false,
-  "generatedAt": "2026-11-05T14:50:23.366710+00:00",
-  "note": "Face detection only. Crops aim at Nard Ndoka's presentation: face about a third of the frame width, eyes about 38% from the top, headroom and shoulders. vip282 is the reference and is not re-cropped. Crops are not manually verified unless editorialOverride is true. Padded frames use only original pixels; the empty margin is CSS background.",
+  "generatedAt": "2026-11-05T15:02:10.672393+00:00",
+  "note": "Face detection only. Crops scale each face to Nard Ndoka's measured frame: face width 0.467 of the frame, eyes 0.313 from the top. vip282 is the reference and is not re-cropped. Crops are not manually verified unless editorialOverride is true. Padding is only the part of that frame the original does not cover; the empty margin is CSS background and the head is not shrunk to fill it.",
   "frames": {
     "vip1": {
       "focalPoint": {
         "x": 0.5,
-        "y": 0.38
+        "y": 0.313
       },
       "uncertain": false,
       "faceDetected": true,
       "padded": false,
       "inset": null,
       "crop": {
-        "x": 70,
-        "y": 0,
-        "width": 572,
-        "height": 763
+        "x": 147,
+        "y": 101,
+        "width": 417,
+        "height": 555
       },
       "derived300": "/politicians/portraits/vip1-300.webp",
       "derived600": "/politicians/portraits/vip1-600.webp",
@@ -27,17 +27,17 @@
     "vip2": {
       "focalPoint": {
         "x": 0.5,
-        "y": 0.38
+        "y": 0.313
       },
       "uncertain": false,
       "faceDetected": true,
       "padded": false,
       "inset": null,
       "crop": {
-        "x": 198,
-        "y": 293,
-        "width": 1543,
-        "height": 2058
+        "x": 171,
+        "y": 338,
+        "width": 1683,
+        "height": 2244
       },
       "derived300": "/politicians/portraits/vip2-300.webp",
       "derived600": "/politicians/portraits/vip2-600.webp",
@@ -47,7 +47,7 @@
     "vip3": {
       "focalPoint": {
         "x": 0.5,
-        "y": 0.38
+        "y": 0.313
       },
       "uncertain": true,
       "faceDetected": false,
@@ -62,22 +62,22 @@
     "vip4": {
       "focalPoint": {
         "x": 0.5,
-        "y": 0.38
+        "y": 0.313
       },
       "uncertain": false,
       "faceDetected": true,
       "padded": true,
       "inset": {
         "x": 0.0,
-        "y": 0.15696905505371533,
-        "width": 0.9999999999999998,
-        "height": 0.8430309449462847
+        "y": 0.0066604373826030525,
+        "width": 0.9999999999999999,
+        "height": 0.993339562617397
       },
       "crop": {
-        "x": 72,
+        "x": 90,
         "y": 0,
-        "width": 129,
-        "height": 145
+        "width": 94,
+        "height": 124
       },
       "derived300": "/politicians/portraits/vip4-300.webp",
       "derived600": "/politicians/portraits/vip4-600.webp",
@@ -87,22 +87,22 @@
     "vip6": {
       "focalPoint": {
         "x": 0.5,
-        "y": 0.38
+        "y": 0.313
       },
       "uncertain": false,
       "faceDetected": true,
       "padded": true,
       "inset": {
-        "x": 0.2236633568850794,
-        "y": 0.1381676230914195,
-        "width": 0.570739384693282,
-        "height": 0.570739384693282
+        "x": 0.1204434931333297,
+        "y": 0.0,
+        "width": 0.7839273313287137,
+        "height": 0.7647634489278105
       },
       "crop": {
         "x": 0,
-        "y": 0,
+        "y": 15,
         "width": 465,
-        "height": 620
+        "height": 605
       },
       "derived300": "/politicians/portraits/vip6-300.webp",
       "derived600": "/politicians/portraits/vip6-600.webp",
@@ -112,22 +112,22 @@
     "vip7": {
       "focalPoint": {
         "x": 0.5,
-        "y": 0.38
+        "y": 0.313
       },
       "uncertain": false,
       "faceDetected": true,
       "padded": true,
       "inset": {
         "x": 0.0,
-        "y": 0.06555701647349373,
-        "width": 1.0,
-        "height": 0.801892607395978
+        "y": 0.0,
+        "width": 1.0000000000000002,
+        "height": 0.9825263951383626
       },
       "crop": {
-        "x": 25,
-        "y": 0,
-        "width": 479,
-        "height": 512
+        "x": 90,
+        "y": 55,
+        "width": 349,
+        "height": 457
       },
       "derived300": "/politicians/portraits/vip7-300.webp",
       "derived600": "/politicians/portraits/vip7-600.webp",
@@ -137,17 +137,17 @@
     "vip9": {
       "focalPoint": {
         "x": 0.5,
-        "y": 0.38
+        "y": 0.313
       },
       "uncertain": false,
       "faceDetected": true,
       "padded": false,
       "inset": null,
       "crop": {
-        "x": 52,
-        "y": 61,
-        "width": 382,
-        "height": 509
+        "x": 104,
+        "y": 138,
+        "width": 278,
+        "height": 370
       },
       "derived300": "/politicians/portraits/vip9-300.webp",
       "derived600": "/politicians/portraits/vip9-600.webp",
@@ -157,22 +157,17 @@
     "vip10": {
       "focalPoint": {
         "x": 0.5,
-        "y": 0.38
+        "y": 0.313
       },
       "uncertain": false,
       "faceDetected": true,
-      "padded": true,
-      "inset": {
-        "x": 0.014267886293119503,
-        "y": 0.0,
-        "width": 0.9604793577973482,
-        "height": 0.9238819788043772
-      },
+      "padded": false,
+      "inset": null,
       "crop": {
-        "x": 0,
-        "y": 38,
-        "width": 726,
-        "height": 931
+        "x": 92,
+        "y": 191,
+        "width": 550,
+        "height": 734
       },
       "derived300": "/politicians/portraits/vip10-300.webp",
       "derived600": "/politicians/portraits/vip10-600.webp",
@@ -182,17 +177,17 @@
     "vip13": {
       "focalPoint": {
         "x": 0.5,
-        "y": 0.38
+        "y": 0.313
       },
       "uncertain": false,
       "faceDetected": true,
       "padded": false,
       "inset": null,
       "crop": {
-        "x": 183,
-        "y": 46,
-        "width": 235,
-        "height": 314
+        "x": 215,
+        "y": 94,
+        "width": 171,
+        "height": 228
       },
       "derived300": "/politicians/portraits/vip13-300.webp",
       "derived600": "/politicians/portraits/vip13-600.webp",
@@ -202,17 +197,17 @@
     "vip14": {
       "focalPoint": {
         "x": 0.5,
-        "y": 0.38
+        "y": 0.313
       },
       "uncertain": false,
       "faceDetected": true,
       "padded": false,
       "inset": null,
       "crop": {
-        "x": 57,
-        "y": 86,
-        "width": 186,
-        "height": 249
+        "x": 82,
+        "y": 124,
+        "width": 136,
+        "height": 181
       },
       "derived300": "/politicians/portraits/vip14-300.webp",
       "derived600": "/politicians/portraits/vip14-600.webp",
@@ -222,22 +217,17 @@
     "vip15": {
       "focalPoint": {
         "x": 0.5,
-        "y": 0.38
+        "y": 0.313
       },
       "uncertain": false,
       "faceDetected": true,
-      "padded": true,
-      "inset": {
-        "x": 0.0,
-        "y": 0.051164664868857755,
-        "width": 1.0,
-        "height": 0.9488353351311422
-      },
+      "padded": false,
+      "inset": null,
       "crop": {
-        "x": 566,
-        "y": 0,
-        "width": 1371,
-        "height": 1734
+        "x": 704,
+        "y": 138,
+        "width": 1074,
+        "height": 1432
       },
       "derived300": "/politicians/portraits/vip15-300.webp",
       "derived600": "/politicians/portraits/vip15-600.webp",
@@ -247,17 +237,17 @@
     "vip16": {
       "focalPoint": {
         "x": 0.5,
-        "y": 0.38
+        "y": 0.313
       },
       "uncertain": false,
       "faceDetected": true,
       "padded": false,
       "inset": null,
       "crop": {
-        "x": 86,
-        "y": 54,
-        "width": 715,
-        "height": 953
+        "x": 184,
+        "y": 199,
+        "width": 521,
+        "height": 694
       },
       "derived300": "/politicians/portraits/vip16-300.webp",
       "derived600": "/politicians/portraits/vip16-600.webp",
@@ -267,17 +257,17 @@
     "vip17": {
       "focalPoint": {
         "x": 0.5,
-        "y": 0.38
+        "y": 0.313
       },
       "uncertain": false,
       "faceDetected": true,
       "padded": false,
       "inset": null,
       "crop": {
-        "x": 39,
-        "y": 26,
-        "width": 327,
-        "height": 436
+        "x": 83,
+        "y": 92,
+        "width": 238,
+        "height": 317
       },
       "derived300": "/politicians/portraits/vip17-300.webp",
       "derived600": "/politicians/portraits/vip17-600.webp",
@@ -287,17 +277,17 @@
     "vip18": {
       "focalPoint": {
         "x": 0.5,
-        "y": 0.38
+        "y": 0.313
       },
       "uncertain": false,
       "faceDetected": true,
       "padded": false,
       "inset": null,
       "crop": {
-        "x": 244,
-        "y": 108,
-        "width": 1320,
-        "height": 1760
+        "x": 307,
+        "y": 260,
+        "width": 1198,
+        "height": 1597
       },
       "derived300": "/politicians/portraits/vip18-300.webp",
       "derived600": "/politicians/portraits/vip18-600.webp",
@@ -307,22 +297,22 @@
     "vip19": {
       "focalPoint": {
         "x": 0.5,
-        "y": 0.38
+        "y": 0.313
       },
       "uncertain": false,
       "faceDetected": true,
       "padded": true,
       "inset": {
         "x": 0.0,
-        "y": 0.151329772915964,
+        "y": 0.0070395329449986785,
         "width": 1.0,
-        "height": 0.848670227084036
+        "height": 0.9929604670550014
       },
       "crop": {
-        "x": 70,
+        "x": 151,
         "y": 0,
-        "width": 706,
-        "height": 799
+        "width": 534,
+        "height": 706
       },
       "derived300": "/politicians/portraits/vip19-300.webp",
       "derived600": "/politicians/portraits/vip19-600.webp",
@@ -332,21 +322,21 @@
     "vip20": {
       "focalPoint": {
         "x": 0.5,
-        "y": 0.38
+        "y": 0.313
       },
       "uncertain": false,
       "faceDetected": true,
       "padded": true,
       "inset": {
-        "x": 0.07304762785294633,
-        "y": 0.19369009242704452,
-        "width": 0.8778943370475931,
-        "height": 0.6584207527856949
+        "x": 0.0,
+        "y": 0.05709786224538173,
+        "width": 1.0,
+        "height": 0.9043602692674102
       },
       "crop": {
-        "x": 0,
+        "x": 16,
         "y": 0,
-        "width": 225,
+        "width": 187,
         "height": 225
       },
       "derived300": "/politicians/portraits/vip20-300.webp",
@@ -357,22 +347,17 @@
     "vip21": {
       "focalPoint": {
         "x": 0.5,
-        "y": 0.38
+        "y": 0.313
       },
       "uncertain": false,
       "faceDetected": true,
-      "padded": true,
-      "inset": {
-        "x": 0.0,
-        "y": 0.14203426539871694,
-        "width": 1.0,
-        "height": 0.8579657346012831
-      },
+      "padded": false,
+      "inset": null,
       "crop": {
-        "x": 23,
-        "y": 0,
-        "width": 180,
-        "height": 206
+        "x": 47,
+        "y": 2,
+        "width": 131,
+        "height": 175
       },
       "derived300": "/politicians/portraits/vip21-300.webp",
       "derived600": "/politicians/portraits/vip21-600.webp",
@@ -382,7 +367,7 @@
     "vip22": {
       "focalPoint": {
         "x": 0.5,
-        "y": 0.38
+        "y": 0.313
       },
       "uncertain": true,
       "faceDetected": false,
@@ -397,17 +382,17 @@
     "vip23": {
       "focalPoint": {
         "x": 0.5,
-        "y": 0.38
+        "y": 0.313
       },
       "uncertain": false,
       "faceDetected": true,
       "padded": false,
       "inset": null,
       "crop": {
-        "x": 179,
-        "y": 43,
-        "width": 247,
-        "height": 329
+        "x": 212,
+        "y": 93,
+        "width": 180,
+        "height": 240
       },
       "derived300": "/politicians/portraits/vip23-300.webp",
       "derived600": "/politicians/portraits/vip23-600.webp",
@@ -417,17 +402,17 @@
     "vip24": {
       "focalPoint": {
         "x": 0.5,
-        "y": 0.38
+        "y": 0.313
       },
       "uncertain": false,
       "faceDetected": true,
       "padded": false,
       "inset": null,
       "crop": {
-        "x": 180,
-        "y": 49,
-        "width": 233,
-        "height": 310
+        "x": 212,
+        "y": 96,
+        "width": 169,
+        "height": 226
       },
       "derived300": "/politicians/portraits/vip24-300.webp",
       "derived600": "/politicians/portraits/vip24-600.webp",
@@ -437,17 +422,17 @@
     "vip25": {
       "focalPoint": {
         "x": 0.5,
-        "y": 0.38
+        "y": 0.313
       },
       "uncertain": false,
       "faceDetected": true,
       "padded": false,
       "inset": null,
       "crop": {
-        "x": 3,
-        "y": 163,
-        "width": 829,
-        "height": 1106
+        "x": 123,
+        "y": 333,
+        "width": 602,
+        "height": 802
       },
       "derived300": "/politicians/portraits/vip25-300.webp",
       "derived600": "/politicians/portraits/vip25-600.webp",
@@ -457,22 +442,22 @@
     "vip26": {
       "focalPoint": {
         "x": 0.5,
-        "y": 0.38
+        "y": 0.313
       },
       "uncertain": false,
       "faceDetected": true,
       "padded": true,
       "inset": {
-        "x": 0.2541637848814764,
-        "y": 0.11706721241964244,
-        "width": 0.7458362151185236,
-        "height": 0.8829327875803575
+        "x": 0.1590419502732787,
+        "y": 0.0,
+        "width": 0.8409580497267213,
+        "height": 1.0
       },
       "crop": {
         "x": 0,
-        "y": 0,
-        "width": 802,
-        "height": 1266
+        "y": 49,
+        "width": 660,
+        "height": 1047
       },
       "derived300": "/politicians/portraits/vip26-300.webp",
       "derived600": "/politicians/portraits/vip26-600.webp",
@@ -482,22 +467,22 @@
     "vip27": {
       "focalPoint": {
         "x": 0.5,
-        "y": 0.38
+        "y": 0.313
       },
       "uncertain": false,
       "faceDetected": true,
       "padded": true,
       "inset": {
-        "x": 0.12655347194853056,
-        "y": 0.11117457539331706,
-        "width": 0.7179703667408741,
-        "height": 0.7187120716651931
+        "x": 0.0,
+        "y": 0.0,
+        "width": 0.9732136254939765,
+        "height": 0.9309325416950714
       },
       "crop": {
-        "x": 0,
-        "y": 0,
-        "width": 726,
-        "height": 969
+        "x": 10,
+        "y": 55,
+        "width": 716,
+        "height": 914
       },
       "derived300": "/politicians/portraits/vip27-300.webp",
       "derived600": "/politicians/portraits/vip27-600.webp",
@@ -507,17 +492,17 @@
     "vip28": {
       "focalPoint": {
         "x": 0.5,
-        "y": 0.38
+        "y": 0.313
       },
       "uncertain": false,
       "faceDetected": true,
       "padded": false,
       "inset": null,
       "crop": {
-        "x": 69,
-        "y": 42,
-        "width": 742,
-        "height": 989
+        "x": 170,
+        "y": 192,
+        "width": 540,
+        "height": 720
       },
       "derived300": "/politicians/portraits/vip28-300.webp",
       "derived600": "/politicians/portraits/vip28-600.webp",
@@ -527,17 +512,17 @@
     "vip30": {
       "focalPoint": {
         "x": 0.5,
-        "y": 0.38
+        "y": 0.313
       },
       "uncertain": false,
       "faceDetected": true,
       "padded": false,
       "inset": null,
       "crop": {
-        "x": 1280,
-        "y": 788,
-        "width": 1257,
-        "height": 1675
+        "x": 1421,
+        "y": 1019,
+        "width": 972,
+        "height": 1296
       },
       "derived300": "/politicians/portraits/vip30-300.webp",
       "derived600": "/politicians/portraits/vip30-600.webp",
@@ -547,17 +532,17 @@
     "vip33": {
       "focalPoint": {
         "x": 0.5,
-        "y": 0.38
+        "y": 0.313
       },
       "uncertain": false,
       "faceDetected": true,
       "padded": false,
       "inset": null,
       "crop": {
-        "x": 1225,
-        "y": 324,
-        "width": 1451,
-        "height": 1935
+        "x": 1288,
+        "y": 473,
+        "width": 1381,
+        "height": 1841
       },
       "derived300": "/politicians/portraits/vip33-300.webp",
       "derived600": "/politicians/portraits/vip33-600.webp",
@@ -567,17 +552,17 @@
     "vip34": {
       "focalPoint": {
         "x": 0.5,
-        "y": 0.38
+        "y": 0.313
       },
       "uncertain": false,
       "faceDetected": true,
       "padded": false,
       "inset": null,
       "crop": {
-        "x": 193,
-        "y": 44,
-        "width": 227,
-        "height": 302
+        "x": 224,
+        "y": 90,
+        "width": 165,
+        "height": 220
       },
       "derived300": "/politicians/portraits/vip34-300.webp",
       "derived600": "/politicians/portraits/vip34-600.webp",
@@ -587,17 +572,17 @@
     "vip35": {
       "focalPoint": {
         "x": 0.5,
-        "y": 0.38
+        "y": 0.313
       },
       "uncertain": false,
       "faceDetected": true,
       "padded": false,
       "inset": null,
       "crop": {
-        "x": 202,
-        "y": 60,
-        "width": 645,
-        "height": 861
+        "x": 290,
+        "y": 191,
+        "width": 470,
+        "height": 627
       },
       "derived300": "/politicians/portraits/vip35-300.webp",
       "derived600": "/politicians/portraits/vip35-600.webp",
@@ -607,17 +592,17 @@
     "vip37": {
       "focalPoint": {
         "x": 0.5,
-        "y": 0.38
+        "y": 0.313
       },
       "uncertain": false,
       "faceDetected": true,
       "padded": false,
       "inset": null,
       "crop": {
-        "x": 203,
-        "y": 82,
-        "width": 211,
-        "height": 282
+        "x": 231,
+        "y": 125,
+        "width": 154,
+        "height": 205
       },
       "derived300": "/politicians/portraits/vip37-300.webp",
       "derived600": "/politicians/portraits/vip37-600.webp",
@@ -627,17 +612,17 @@
     "vip38": {
       "focalPoint": {
         "x": 0.5,
-        "y": 0.38
+        "y": 0.313
       },
       "uncertain": false,
       "faceDetected": true,
       "padded": false,
       "inset": null,
       "crop": {
-        "x": 1950,
-        "y": 1055,
-        "width": 1516,
-        "height": 2021
+        "x": 2049,
+        "y": 1238,
+        "width": 1354,
+        "height": 1805
       },
       "derived300": "/politicians/portraits/vip38-300.webp",
       "derived600": "/politicians/portraits/vip38-600.webp",
@@ -647,22 +632,22 @@
     "vip40": {
       "focalPoint": {
         "x": 0.5,
-        "y": 0.38
+        "y": 0.313
       },
       "uncertain": false,
       "faceDetected": true,
       "padded": true,
       "inset": {
         "x": 0.0,
-        "y": 0.08846781666990851,
-        "width": 0.9803561329434636,
-        "height": 0.7447977843812507
+        "y": 0.0,
+        "width": 1.0000000000000002,
+        "height": 0.9355736343849744
       },
       "crop": {
-        "x": 3,
-        "y": 0,
-        "width": 222,
-        "height": 225
+        "x": 34,
+        "y": 19,
+        "width": 165,
+        "height": 206
       },
       "derived300": "/politicians/portraits/vip40-300.webp",
       "derived600": "/politicians/portraits/vip40-600.webp",
@@ -672,22 +657,22 @@
     "vip41": {
       "focalPoint": {
         "x": 0.5,
-        "y": 0.38
+        "y": 0.313
       },
       "uncertain": false,
       "faceDetected": true,
       "padded": true,
       "inset": {
         "x": 0.0,
-        "y": 0.15899124127143427,
+        "y": 0.009437969628705266,
         "width": 1.0,
-        "height": 0.8050892840774846
+        "height": 0.9905620303712948
       },
       "crop": {
-        "x": 8,
+        "x": 37,
         "y": 0,
-        "width": 211,
-        "height": 226
+        "width": 153,
+        "height": 202
       },
       "derived300": "/politicians/portraits/vip41-300.webp",
       "derived600": "/politicians/portraits/vip41-600.webp",
@@ -697,21 +682,21 @@
     "vip42": {
       "focalPoint": {
         "x": 0.5,
-        "y": 0.38
+        "y": 0.313
       },
       "uncertain": false,
       "faceDetected": true,
       "padded": true,
       "inset": {
-        "x": 0.09437410291836168,
-        "y": 0.1581682405340725,
-        "width": 0.8322900418272371,
-        "height": 0.6813289266964541
+        "x": 0.0,
+        "y": 0.008307553910034876,
+        "width": 1.0,
+        "height": 0.9358253199036589
       },
       "crop": {
-        "x": 0,
+        "x": 31,
         "y": 0,
-        "width": 623,
+        "width": 545,
         "height": 680
       },
       "derived300": "/politicians/portraits/vip42-300.webp",
@@ -722,17 +707,17 @@
     "vip43": {
       "focalPoint": {
         "x": 0.5,
-        "y": 0.38
+        "y": 0.313
       },
       "uncertain": false,
       "faceDetected": true,
       "padded": false,
       "inset": null,
       "crop": {
-        "x": 180,
-        "y": 33,
-        "width": 251,
-        "height": 335
+        "x": 214,
+        "y": 84,
+        "width": 183,
+        "height": 244
       },
       "derived300": "/politicians/portraits/vip43-300.webp",
       "derived600": "/politicians/portraits/vip43-600.webp",
@@ -742,17 +727,17 @@
     "vip44": {
       "focalPoint": {
         "x": 0.5,
-        "y": 0.38
+        "y": 0.313
       },
       "uncertain": false,
       "faceDetected": true,
       "padded": false,
       "inset": null,
       "crop": {
-        "x": 502,
-        "y": 220,
-        "width": 1577,
-        "height": 2102
+        "x": 107,
+        "y": 203,
+        "width": 1980,
+        "height": 2640
       },
       "derived300": "/politicians/portraits/vip44-300.webp",
       "derived600": "/politicians/portraits/vip44-600.webp",
@@ -762,17 +747,17 @@
     "vip45": {
       "focalPoint": {
         "x": 0.5,
-        "y": 0.38
+        "y": 0.313
       },
       "uncertain": false,
       "faceDetected": true,
       "padded": false,
       "inset": null,
       "crop": {
-        "x": 210,
-        "y": 383,
-        "width": 1783,
-        "height": 2378
+        "x": 1713,
+        "y": 804,
+        "width": 1726,
+        "height": 2302
       },
       "derived300": "/politicians/portraits/vip45-300.webp",
       "derived600": "/politicians/portraits/vip45-600.webp",
@@ -782,22 +767,22 @@
     "vip46": {
       "focalPoint": {
         "x": 0.5,
-        "y": 0.38
+        "y": 0.313
       },
       "uncertain": false,
       "faceDetected": true,
       "padded": true,
       "inset": {
         "x": 0.0,
-        "y": 0.15405190739941774,
-        "width": 0.6797772211135212,
-        "height": 0.7788596656180233
+        "y": 0.0026536492809649433,
+        "width": 0.7469293007647483,
+        "height": 0.9973463507190351
       },
       "crop": {
-        "x": 49,
+        "x": 116,
         "y": 0,
-        "width": 338,
-        "height": 517
+        "width": 271,
+        "height": 482
       },
       "derived300": "/politicians/portraits/vip46-300.webp",
       "derived600": "/politicians/portraits/vip46-600.webp",
@@ -807,17 +792,17 @@
     "vip47": {
       "focalPoint": {
         "x": 0.5,
-        "y": 0.38
+        "y": 0.313
       },
       "uncertain": false,
       "faceDetected": true,
       "padded": false,
       "inset": null,
       "crop": {
-        "x": 211,
-        "y": 73,
-        "width": 200,
-        "height": 267
+        "x": 238,
+        "y": 113,
+        "width": 146,
+        "height": 194
       },
       "derived300": "/politicians/portraits/vip47-300.webp",
       "derived600": "/politicians/portraits/vip47-600.webp",
@@ -827,17 +812,17 @@
     "vip48": {
       "focalPoint": {
         "x": 0.5,
-        "y": 0.38
+        "y": 0.313
       },
       "uncertain": false,
       "faceDetected": true,
       "padded": false,
       "inset": null,
       "crop": {
-        "x": 203,
-        "y": 85,
-        "width": 201,
-        "height": 267
+        "x": 231,
+        "y": 126,
+        "width": 146,
+        "height": 195
       },
       "derived300": "/politicians/portraits/vip48-300.webp",
       "derived600": "/politicians/portraits/vip48-600.webp",
@@ -847,22 +832,17 @@
     "vip49": {
       "focalPoint": {
         "x": 0.5,
-        "y": 0.38
+        "y": 0.313
       },
       "uncertain": false,
       "faceDetected": true,
-      "padded": true,
-      "inset": {
-        "x": 0.16126068768461363,
-        "y": 0.2972862008383427,
-        "width": 0.8387393123153863,
-        "height": 0.48066183121496525
-      },
+      "padded": false,
+      "inset": null,
       "crop": {
-        "x": 0,
-        "y": 0,
-        "width": 534,
-        "height": 408
+        "x": 221,
+        "y": 112,
+        "width": 163,
+        "height": 217
       },
       "derived300": "/politicians/portraits/vip49-300.webp",
       "derived600": "/politicians/portraits/vip49-600.webp",
@@ -872,17 +852,17 @@
     "vip50": {
       "focalPoint": {
         "x": 0.5,
-        "y": 0.38
+        "y": 0.313
       },
       "uncertain": false,
       "faceDetected": true,
       "padded": false,
       "inset": null,
       "crop": {
-        "x": 209,
-        "y": 84,
-        "width": 193,
-        "height": 257
+        "x": 235,
+        "y": 123,
+        "width": 140,
+        "height": 187
       },
       "derived300": "/politicians/portraits/vip50-300.webp",
       "derived600": "/politicians/portraits/vip50-600.webp",
@@ -892,7 +872,7 @@
     "vip51": {
       "focalPoint": {
         "x": 0.5,
-        "y": 0.38
+        "y": 0.313
       },
       "uncertain": true,
       "faceDetected": false,
@@ -907,17 +887,17 @@
     "vip52": {
       "focalPoint": {
         "x": 0.5,
-        "y": 0.38
+        "y": 0.313
       },
       "uncertain": false,
       "faceDetected": true,
       "padded": false,
       "inset": null,
       "crop": {
-        "x": 231,
-        "y": 117,
-        "width": 147,
-        "height": 196
+        "x": 251,
+        "y": 147,
+        "width": 107,
+        "height": 142
       },
       "derived300": "/politicians/portraits/vip52-300.webp",
       "derived600": "/politicians/portraits/vip52-600.webp",
@@ -927,7 +907,7 @@
     "vip53": {
       "focalPoint": {
         "x": 0.5,
-        "y": 0.38
+        "y": 0.313
       },
       "uncertain": true,
       "faceDetected": false,
@@ -942,17 +922,17 @@
     "vip55": {
       "focalPoint": {
         "x": 0.5,
-        "y": 0.38
+        "y": 0.313
       },
       "uncertain": false,
       "faceDetected": true,
       "padded": false,
       "inset": null,
       "crop": {
-        "x": 1448,
-        "y": 928,
-        "width": 1607,
-        "height": 2142
+        "x": 1531,
+        "y": 1147,
+        "width": 1427,
+        "height": 1902
       },
       "derived300": "/politicians/portraits/vip55-300.webp",
       "derived600": "/politicians/portraits/vip55-600.webp",
@@ -962,7 +942,7 @@
     "vip56": {
       "focalPoint": {
         "x": 0.5,
-        "y": 0.38
+        "y": 0.313
       },
       "uncertain": true,
       "faceDetected": false,
@@ -977,22 +957,17 @@
     "vip59": {
       "focalPoint": {
         "x": 0.5,
-        "y": 0.38
+        "y": 0.313
       },
       "uncertain": false,
       "faceDetected": true,
-      "padded": true,
-      "inset": {
-        "x": 0.0,
-        "y": 0.10019844313633704,
-        "width": 1.0,
-        "height": 0.8998015568636629
-      },
+      "padded": false,
+      "inset": null,
       "crop": {
-        "x": 45,
-        "y": 0,
-        "width": 143,
-        "height": 171
+        "x": 64,
+        "y": 10,
+        "width": 104,
+        "height": 138
       },
       "derived300": "/politicians/portraits/vip59-300.webp",
       "derived600": "/politicians/portraits/vip59-600.webp",
@@ -1002,17 +977,17 @@
     "vip60": {
       "focalPoint": {
         "x": 0.5,
-        "y": 0.38
+        "y": 0.313
       },
       "uncertain": false,
       "faceDetected": true,
       "padded": false,
       "inset": null,
       "crop": {
-        "x": 186,
-        "y": 37,
-        "width": 245,
-        "height": 326
+        "x": 219,
+        "y": 86,
+        "width": 178,
+        "height": 237
       },
       "derived300": "/politicians/portraits/vip60-300.webp",
       "derived600": "/politicians/portraits/vip60-600.webp",
@@ -1022,17 +997,17 @@
     "vip61": {
       "focalPoint": {
         "x": 0.5,
-        "y": 0.38
+        "y": 0.313
       },
       "uncertain": false,
       "faceDetected": true,
       "padded": false,
       "inset": null,
       "crop": {
-        "x": 186,
-        "y": 55,
-        "width": 235,
-        "height": 313
+        "x": 218,
+        "y": 102,
+        "width": 171,
+        "height": 228
       },
       "derived300": "/politicians/portraits/vip61-300.webp",
       "derived600": "/politicians/portraits/vip61-600.webp",
@@ -1042,17 +1017,17 @@
     "vip63": {
       "focalPoint": {
         "x": 0.5,
-        "y": 0.38
+        "y": 0.313
       },
       "uncertain": false,
       "faceDetected": true,
       "padded": false,
       "inset": null,
       "crop": {
-        "x": 1134,
-        "y": 711,
-        "width": 1190,
-        "height": 1587
+        "x": 1263,
+        "y": 932,
+        "width": 926,
+        "height": 1234
       },
       "derived300": "/politicians/portraits/vip63-300.webp",
       "derived600": "/politicians/portraits/vip63-600.webp",
@@ -1062,17 +1037,17 @@
     "vip64": {
       "focalPoint": {
         "x": 0.5,
-        "y": 0.38
+        "y": 0.313
       },
       "uncertain": false,
       "faceDetected": true,
       "padded": false,
       "inset": null,
       "crop": {
-        "x": 515,
-        "y": 306,
-        "width": 1673,
-        "height": 2231
+        "x": 379,
+        "y": 361,
+        "width": 1868,
+        "height": 2490
       },
       "derived300": "/politicians/portraits/vip64-300.webp",
       "derived600": "/politicians/portraits/vip64-600.webp",
@@ -1082,17 +1057,17 @@
     "vip65": {
       "focalPoint": {
         "x": 0.5,
-        "y": 0.38
+        "y": 0.313
       },
       "uncertain": false,
       "faceDetected": true,
       "padded": false,
       "inset": null,
       "crop": {
-        "x": 1585,
-        "y": 602,
-        "width": 1561,
-        "height": 2081
+        "x": 1625,
+        "y": 751,
+        "width": 1501,
+        "height": 2002
       },
       "derived300": "/politicians/portraits/vip65-300.webp",
       "derived600": "/politicians/portraits/vip65-600.webp",
@@ -1102,7 +1077,7 @@
     "vip66": {
       "focalPoint": {
         "x": 0.5,
-        "y": 0.38
+        "y": 0.313
       },
       "uncertain": true,
       "faceDetected": false,
@@ -1117,17 +1092,17 @@
     "vip67": {
       "focalPoint": {
         "x": 0.5,
-        "y": 0.38
+        "y": 0.313
       },
       "uncertain": false,
       "faceDetected": true,
       "padded": false,
       "inset": null,
       "crop": {
-        "x": 201,
-        "y": 75,
-        "width": 205,
-        "height": 274
+        "x": 229,
+        "y": 117,
+        "width": 149,
+        "height": 199
       },
       "derived300": "/politicians/portraits/vip67-300.webp",
       "derived600": "/politicians/portraits/vip67-600.webp",
@@ -1137,7 +1112,7 @@
     "vip68": {
       "focalPoint": {
         "x": 0.5,
-        "y": 0.38
+        "y": 0.313
       },
       "uncertain": true,
       "faceDetected": false,
@@ -1152,17 +1127,17 @@
     "vip69": {
       "focalPoint": {
         "x": 0.5,
-        "y": 0.38
+        "y": 0.313
       },
       "uncertain": false,
       "faceDetected": true,
       "padded": false,
       "inset": null,
       "crop": {
-        "x": 191,
-        "y": 49,
-        "width": 232,
-        "height": 309
+        "x": 223,
+        "y": 97,
+        "width": 169,
+        "height": 225
       },
       "derived300": "/politicians/portraits/vip69-300.webp",
       "derived600": "/politicians/portraits/vip69-600.webp",
@@ -1172,17 +1147,17 @@
     "vip70": {
       "focalPoint": {
         "x": 0.5,
-        "y": 0.38
+        "y": 0.313
       },
       "uncertain": false,
       "faceDetected": true,
       "padded": false,
       "inset": null,
       "crop": {
-        "x": 33,
-        "y": 0,
-        "width": 854,
-        "height": 1139
+        "x": 150,
+        "y": 171,
+        "width": 622,
+        "height": 829
       },
       "derived300": "/politicians/portraits/vip70-300.webp",
       "derived600": "/politicians/portraits/vip70-600.webp",
@@ -1192,22 +1167,22 @@
     "vip71": {
       "focalPoint": {
         "x": 0.5,
-        "y": 0.38
+        "y": 0.313
       },
       "uncertain": false,
       "faceDetected": true,
       "padded": true,
       "inset": {
-        "x": 0.051155237586971575,
-        "y": 0.18479284476391422,
-        "width": 0.940789688495372,
-        "height": 0.705592266371529
+        "x": 0.0,
+        "y": 0.044877230896317497,
+        "width": 0.9999999999999999,
+        "height": 0.9551227691036825
       },
       "crop": {
-        "x": 0,
+        "x": 20,
         "y": 0,
-        "width": 225,
-        "height": 225
+        "width": 174,
+        "height": 222
       },
       "derived300": "/politicians/portraits/vip71-300.webp",
       "derived600": "/politicians/portraits/vip71-600.webp",
@@ -1217,22 +1192,17 @@
     "vip72": {
       "focalPoint": {
         "x": 0.5,
-        "y": 0.38
+        "y": 0.313
       },
       "uncertain": false,
       "faceDetected": true,
-      "padded": true,
-      "inset": {
-        "x": 0.0,
-        "y": 0.10808846861767459,
-        "width": 1.0,
-        "height": 0.8919115313823254
-      },
+      "padded": false,
+      "inset": null,
       "crop": {
-        "x": 26,
-        "y": 0,
-        "width": 164,
-        "height": 196
+        "x": 49,
+        "y": 10,
+        "width": 120,
+        "height": 160
       },
       "derived300": "/politicians/portraits/vip72-300.webp",
       "derived600": "/politicians/portraits/vip72-600.webp",
@@ -1242,17 +1212,17 @@
     "vip73": {
       "focalPoint": {
         "x": 0.5,
-        "y": 0.38
+        "y": 0.313
       },
       "uncertain": false,
       "faceDetected": true,
       "padded": false,
       "inset": null,
       "crop": {
-        "x": 205,
-        "y": 80,
-        "width": 195,
-        "height": 260
+        "x": 232,
+        "y": 120,
+        "width": 142,
+        "height": 190
       },
       "derived300": "/politicians/portraits/vip73-300.webp",
       "derived600": "/politicians/portraits/vip73-600.webp",
@@ -1262,17 +1232,17 @@
     "vip74": {
       "focalPoint": {
         "x": 0.5,
-        "y": 0.38
+        "y": 0.313
       },
       "uncertain": false,
       "faceDetected": true,
       "padded": false,
       "inset": null,
       "crop": {
-        "x": 216,
-        "y": 98,
-        "width": 172,
-        "height": 229
+        "x": 239,
+        "y": 133,
+        "width": 125,
+        "height": 167
       },
       "derived300": "/politicians/portraits/vip74-300.webp",
       "derived600": "/politicians/portraits/vip74-600.webp",
@@ -1282,22 +1252,22 @@
     "vip75": {
       "focalPoint": {
         "x": 0.5,
-        "y": 0.38
+        "y": 0.313
       },
       "uncertain": false,
       "faceDetected": true,
       "padded": true,
       "inset": {
-        "x": 0.09491920653644048,
-        "y": 0.12530063751245127,
-        "width": 0.7130649943965383,
-        "height": 0.5347987457974036
+        "x": 0.0,
+        "y": 0.0,
+        "width": 0.9230253583402972,
+        "height": 0.6977247411932419
       },
       "crop": {
-        "x": 0,
-        "y": 0,
-        "width": 225,
-        "height": 225
+        "x": 13,
+        "y": 11,
+        "width": 212,
+        "height": 214
       },
       "derived300": "/politicians/portraits/vip75-300.webp",
       "derived600": "/politicians/portraits/vip75-600.webp",
@@ -1307,17 +1277,17 @@
     "vip76": {
       "focalPoint": {
         "x": 0.5,
-        "y": 0.38
+        "y": 0.313
       },
       "uncertain": false,
       "faceDetected": true,
       "padded": false,
       "inset": null,
       "crop": {
-        "x": 208,
-        "y": 73,
-        "width": 210,
-        "height": 281
+        "x": 237,
+        "y": 116,
+        "width": 153,
+        "height": 204
       },
       "derived300": "/politicians/portraits/vip76-300.webp",
       "derived600": "/politicians/portraits/vip76-600.webp",
@@ -1327,17 +1297,17 @@
     "vip77": {
       "focalPoint": {
         "x": 0.5,
-        "y": 0.38
+        "y": 0.313
       },
       "uncertain": false,
       "faceDetected": true,
       "padded": false,
       "inset": null,
       "crop": {
-        "x": 197,
-        "y": 57,
-        "width": 222,
-        "height": 296
+        "x": 227,
+        "y": 102,
+        "width": 162,
+        "height": 216
       },
       "derived300": "/politicians/portraits/vip77-300.webp",
       "derived600": "/politicians/portraits/vip77-600.webp",
@@ -1347,17 +1317,17 @@
     "vip78": {
       "focalPoint": {
         "x": 0.5,
-        "y": 0.38
+        "y": 0.313
       },
       "uncertain": false,
       "faceDetected": true,
       "padded": false,
       "inset": null,
       "crop": {
-        "x": 186,
-        "y": 75,
-        "width": 223,
-        "height": 297
+        "x": 216,
+        "y": 121,
+        "width": 162,
+        "height": 216
       },
       "derived300": "/politicians/portraits/vip78-300.webp",
       "derived600": "/politicians/portraits/vip78-600.webp",
@@ -1367,17 +1337,17 @@
     "vip79": {
       "focalPoint": {
         "x": 0.5,
-        "y": 0.38
+        "y": 0.313
       },
       "uncertain": false,
       "faceDetected": true,
       "padded": false,
       "inset": null,
       "crop": {
-        "x": 196,
-        "y": 57,
-        "width": 220,
-        "height": 294
+        "x": 226,
+        "y": 101,
+        "width": 160,
+        "height": 214
       },
       "derived300": "/politicians/portraits/vip79-300.webp",
       "derived600": "/politicians/portraits/vip79-600.webp",
@@ -1387,22 +1357,22 @@
     "vip80": {
       "focalPoint": {
         "x": 0.5,
-        "y": 0.38
+        "y": 0.313
       },
       "uncertain": false,
       "faceDetected": true,
       "padded": true,
       "inset": {
-        "x": 0.24691796516919862,
-        "y": 0.19423663829130794,
-        "width": 0.7422322196797376,
-        "height": 0.7566444957900238
+        "x": 0.1523843815706346,
+        "y": 0.05784855906482588,
+        "width": 0.8476156184293655,
+        "height": 0.9421514409351742
       },
       "crop": {
         "x": 0,
         "y": 0,
-        "width": 206,
-        "height": 280
+        "width": 171,
+        "height": 254
       },
       "derived300": "/politicians/portraits/vip80-300.webp",
       "derived600": "/politicians/portraits/vip80-600.webp",
@@ -1412,17 +1382,17 @@
     "vip81": {
       "focalPoint": {
         "x": 0.5,
-        "y": 0.38
+        "y": 0.313
       },
       "uncertain": false,
       "faceDetected": true,
       "padded": false,
       "inset": null,
       "crop": {
-        "x": 932,
-        "y": 101,
-        "width": 1577,
-        "height": 2103
+        "x": 964,
+        "y": 281,
+        "width": 1458,
+        "height": 1944
       },
       "derived300": "/politicians/portraits/vip81-300.webp",
       "derived600": "/politicians/portraits/vip81-600.webp",
@@ -1432,22 +1402,17 @@
     "vip82": {
       "focalPoint": {
         "x": 0.5,
-        "y": 0.38
+        "y": 0.313
       },
       "uncertain": false,
       "faceDetected": true,
-      "padded": true,
-      "inset": {
-        "x": 0.05154147129958496,
-        "y": 0.14616295949144636,
-        "width": 0.9484585287004151,
-        "height": 0.8538370405085536
-      },
+      "padded": false,
+      "inset": null,
       "crop": {
-        "x": 0,
-        "y": 0,
-        "width": 1242,
-        "height": 1490
+        "x": 115,
+        "y": 35,
+        "width": 929,
+        "height": 1238
       },
       "derived300": "/politicians/portraits/vip82-300.webp",
       "derived600": "/politicians/portraits/vip82-600.webp",
@@ -1457,17 +1422,17 @@
     "vip83": {
       "focalPoint": {
         "x": 0.5,
-        "y": 0.38
+        "y": 0.313
       },
       "uncertain": false,
       "faceDetected": true,
       "padded": false,
       "inset": null,
       "crop": {
-        "x": 210,
-        "y": 73,
-        "width": 199,
-        "height": 265
+        "x": 237,
+        "y": 113,
+        "width": 145,
+        "height": 193
       },
       "derived300": "/politicians/portraits/vip83-300.webp",
       "derived600": "/politicians/portraits/vip83-600.webp",
@@ -1477,17 +1442,17 @@
     "vip84": {
       "focalPoint": {
         "x": 0.5,
-        "y": 0.38
+        "y": 0.313
       },
       "uncertain": false,
       "faceDetected": true,
       "padded": false,
       "inset": null,
       "crop": {
-        "x": 200,
-        "y": 44,
-        "width": 210,
-        "height": 279
+        "x": 228,
+        "y": 86,
+        "width": 153,
+        "height": 203
       },
       "derived300": "/politicians/portraits/vip84-300.webp",
       "derived600": "/politicians/portraits/vip84-600.webp",
@@ -1497,17 +1462,17 @@
     "vip85": {
       "focalPoint": {
         "x": 0.5,
-        "y": 0.38
+        "y": 0.313
       },
       "uncertain": false,
       "faceDetected": true,
       "padded": false,
       "inset": null,
       "crop": {
-        "x": 1779,
-        "y": 364,
-        "width": 1575,
-        "height": 2101
+        "x": 1780,
+        "y": 502,
+        "width": 1568,
+        "height": 2090
       },
       "derived300": "/politicians/portraits/vip85-300.webp",
       "derived600": "/politicians/portraits/vip85-600.webp",
@@ -1517,17 +1482,17 @@
     "vip86": {
       "focalPoint": {
         "x": 0.5,
-        "y": 0.38
+        "y": 0.313
       },
       "uncertain": false,
       "faceDetected": true,
       "padded": false,
       "inset": null,
       "crop": {
-        "x": 206,
-        "y": 85,
-        "width": 200,
-        "height": 267
+        "x": 234,
+        "y": 125,
+        "width": 146,
+        "height": 194
       },
       "derived300": "/politicians/portraits/vip86-300.webp",
       "derived600": "/politicians/portraits/vip86-600.webp",
@@ -1537,22 +1502,22 @@
     "vip87": {
       "focalPoint": {
         "x": 0.5,
-        "y": 0.38
+        "y": 0.313
       },
       "uncertain": false,
       "faceDetected": true,
       "padded": true,
       "inset": {
-        "x": 0.09824409482968927,
-        "y": 0.10117831879516632,
-        "width": 0.7247946133787279,
-        "height": 0.5934255897038335
+        "x": 0.0,
+        "y": 0.0,
+        "width": 0.9437031668627377,
+        "height": 0.7451177213795086
       },
       "crop": {
-        "x": 0,
-        "y": 0,
-        "width": 600,
-        "height": 655
+        "x": 31,
+        "y": 56,
+        "width": 569,
+        "height": 599
       },
       "derived300": "/politicians/portraits/vip87-300.webp",
       "derived600": "/politicians/portraits/vip87-600.webp",
@@ -1562,17 +1527,17 @@
     "vip88": {
       "focalPoint": {
         "x": 0.5,
-        "y": 0.38
+        "y": 0.313
       },
       "uncertain": false,
       "faceDetected": true,
       "padded": false,
       "inset": null,
       "crop": {
-        "x": 176,
-        "y": 43,
-        "width": 244,
-        "height": 325
+        "x": 209,
+        "y": 92,
+        "width": 178,
+        "height": 237
       },
       "derived300": "/politicians/portraits/vip88-300.webp",
       "derived600": "/politicians/portraits/vip88-600.webp",
@@ -1582,22 +1547,17 @@
     "vip89": {
       "focalPoint": {
         "x": 0.5,
-        "y": 0.38
+        "y": 0.313
       },
       "uncertain": false,
       "faceDetected": true,
-      "padded": true,
-      "inset": {
-        "x": 0.0,
-        "y": 0.11051548774374258,
-        "width": 0.9999999999999999,
-        "height": 0.7742622649260463
-      },
+      "padded": false,
+      "inset": null,
       "crop": {
-        "x": 10,
-        "y": 0,
-        "width": 458,
-        "height": 473
+        "x": 72,
+        "y": 25,
+        "width": 334,
+        "height": 445
       },
       "derived300": "/politicians/portraits/vip89-300.webp",
       "derived600": "/politicians/portraits/vip89-600.webp",
@@ -1607,21 +1567,21 @@
     "vip92": {
       "focalPoint": {
         "x": 0.5,
-        "y": 0.38
+        "y": 0.313
       },
       "uncertain": false,
       "faceDetected": true,
       "padded": true,
       "inset": {
-        "x": 0.03610508132595311,
-        "y": 0.16630513679303627,
-        "width": 0.7751482729830855,
-        "height": 0.5813612047373141
+        "x": 0.0,
+        "y": 0.019483820242199818,
+        "width": 0.9275156366538854,
+        "height": 0.7985167135656637
       },
       "crop": {
-        "x": 0,
+        "x": 29,
         "y": 0,
-        "width": 225,
+        "width": 196,
         "height": 225
       },
       "derived300": "/politicians/portraits/vip92-300.webp",
@@ -1632,7 +1592,7 @@
     "vip113": {
       "focalPoint": {
         "x": 0.5,
-        "y": 0.38
+        "y": 0.313
       },
       "uncertain": true,
       "faceDetected": false,
@@ -1647,7 +1607,7 @@
     "vip106": {
       "focalPoint": {
         "x": 0.5,
-        "y": 0.38
+        "y": 0.313
       },
       "uncertain": true,
       "faceDetected": false,
@@ -1662,17 +1622,17 @@
     "vip94": {
       "focalPoint": {
         "x": 0.5,
-        "y": 0.38
+        "y": 0.313
       },
       "uncertain": false,
       "faceDetected": true,
       "padded": false,
       "inset": null,
       "crop": {
-        "x": 206,
-        "y": 82,
-        "width": 205,
-        "height": 274
+        "x": 234,
+        "y": 124,
+        "width": 150,
+        "height": 199
       },
       "derived300": "/politicians/portraits/vip94-300.webp",
       "derived600": "/politicians/portraits/vip94-600.webp",
@@ -1682,7 +1642,7 @@
     "vip95": {
       "focalPoint": {
         "x": 0.5,
-        "y": 0.38
+        "y": 0.313
       },
       "uncertain": true,
       "faceDetected": false,
@@ -1697,17 +1657,17 @@
     "vip96": {
       "focalPoint": {
         "x": 0.5,
-        "y": 0.38
+        "y": 0.313
       },
       "uncertain": false,
       "faceDetected": true,
       "padded": false,
       "inset": null,
       "crop": {
-        "x": 1270,
-        "y": 505,
-        "width": 1651,
-        "height": 2202
+        "x": 1262,
+        "y": 688,
+        "width": 1583,
+        "height": 2110
       },
       "derived300": "/politicians/portraits/vip96-300.webp",
       "derived600": "/politicians/portraits/vip96-600.webp",
@@ -1717,7 +1677,7 @@
     "vip97": {
       "focalPoint": {
         "x": 0.5,
-        "y": 0.38
+        "y": 0.313
       },
       "uncertain": true,
       "faceDetected": false,
@@ -1732,17 +1692,17 @@
     "vip98": {
       "focalPoint": {
         "x": 0.5,
-        "y": 0.38
+        "y": 0.313
       },
       "uncertain": false,
       "faceDetected": true,
       "padded": false,
       "inset": null,
       "crop": {
-        "x": 184,
-        "y": 35,
-        "width": 248,
-        "height": 331
+        "x": 217,
+        "y": 86,
+        "width": 180,
+        "height": 241
       },
       "derived300": "/politicians/portraits/vip98-300.webp",
       "derived600": "/politicians/portraits/vip98-600.webp",
@@ -1752,17 +1712,17 @@
     "vip99": {
       "focalPoint": {
         "x": 0.5,
-        "y": 0.38
+        "y": 0.313
       },
       "uncertain": false,
       "faceDetected": true,
       "padded": false,
       "inset": null,
       "crop": {
-        "x": 204,
-        "y": 77,
-        "width": 195,
-        "height": 261
+        "x": 230,
+        "y": 116,
+        "width": 142,
+        "height": 190
       },
       "derived300": "/politicians/portraits/vip99-300.webp",
       "derived600": "/politicians/portraits/vip99-600.webp",
@@ -1772,17 +1732,17 @@
     "vip100": {
       "focalPoint": {
         "x": 0.5,
-        "y": 0.38
+        "y": 0.313
       },
       "uncertain": false,
       "faceDetected": true,
       "padded": false,
       "inset": null,
       "crop": {
-        "x": 199,
-        "y": 81,
-        "width": 208,
-        "height": 277
+        "x": 227,
+        "y": 123,
+        "width": 151,
+        "height": 202
       },
       "derived300": "/politicians/portraits/vip100-300.webp",
       "derived600": "/politicians/portraits/vip100-600.webp",
@@ -1792,17 +1752,17 @@
     "vip101": {
       "focalPoint": {
         "x": 0.5,
-        "y": 0.38
+        "y": 0.313
       },
       "uncertain": false,
       "faceDetected": true,
       "padded": false,
       "inset": null,
       "crop": {
-        "x": 201,
-        "y": 66,
-        "width": 205,
-        "height": 273
+        "x": 229,
+        "y": 107,
+        "width": 149,
+        "height": 199
       },
       "derived300": "/politicians/portraits/vip101-300.webp",
       "derived600": "/politicians/portraits/vip101-600.webp",
@@ -1812,17 +1772,17 @@
     "vip102": {
       "focalPoint": {
         "x": 0.5,
-        "y": 0.38
+        "y": 0.313
       },
       "uncertain": false,
       "faceDetected": true,
       "padded": false,
       "inset": null,
       "crop": {
-        "x": 199,
-        "y": 46,
-        "width": 223,
-        "height": 297
+        "x": 230,
+        "y": 91,
+        "width": 162,
+        "height": 216
       },
       "derived300": "/politicians/portraits/vip102-300.webp",
       "derived600": "/politicians/portraits/vip102-600.webp",
@@ -1832,17 +1792,17 @@
     "vip103": {
       "focalPoint": {
         "x": 0.5,
-        "y": 0.38
+        "y": 0.313
       },
       "uncertain": false,
       "faceDetected": true,
       "padded": false,
       "inset": null,
       "crop": {
-        "x": 191,
-        "y": 53,
-        "width": 238,
-        "height": 318
+        "x": 223,
+        "y": 101,
+        "width": 173,
+        "height": 231
       },
       "derived300": "/politicians/portraits/vip103-300.webp",
       "derived600": "/politicians/portraits/vip103-600.webp",
@@ -1852,17 +1812,17 @@
     "vip104": {
       "focalPoint": {
         "x": 0.5,
-        "y": 0.38
+        "y": 0.313
       },
       "uncertain": false,
       "faceDetected": true,
       "padded": false,
       "inset": null,
       "crop": {
-        "x": 193,
-        "y": 63,
-        "width": 220,
-        "height": 293
+        "x": 223,
+        "y": 107,
+        "width": 160,
+        "height": 213
       },
       "derived300": "/politicians/portraits/vip104-300.webp",
       "derived600": "/politicians/portraits/vip104-600.webp",
@@ -1872,17 +1832,17 @@
     "vip105": {
       "focalPoint": {
         "x": 0.5,
-        "y": 0.38
+        "y": 0.313
       },
       "uncertain": false,
       "faceDetected": true,
       "padded": false,
       "inset": null,
       "crop": {
-        "x": 185,
-        "y": 45,
-        "width": 241,
-        "height": 322
+        "x": 218,
+        "y": 94,
+        "width": 176,
+        "height": 234
       },
       "derived300": "/politicians/portraits/vip105-300.webp",
       "derived600": "/politicians/portraits/vip105-600.webp",
@@ -1892,22 +1852,17 @@
     "vip108": {
       "focalPoint": {
         "x": 0.5,
-        "y": 0.38
+        "y": 0.313
       },
       "uncertain": false,
       "faceDetected": true,
-      "padded": true,
-      "inset": {
-        "x": 0.0,
-        "y": 0.062473471244128206,
-        "width": 0.9999999999999999,
-        "height": 0.9375265287558718
-      },
+      "padded": false,
+      "inset": null,
       "crop": {
-        "x": 16,
-        "y": 0,
-        "width": 171,
-        "height": 214
+        "x": 39,
+        "y": 20,
+        "width": 125,
+        "height": 166
       },
       "derived300": "/politicians/portraits/vip108-300.webp",
       "derived600": "/politicians/portraits/vip108-600.webp",
@@ -1917,17 +1872,17 @@
     "vip109": {
       "focalPoint": {
         "x": 0.5,
-        "y": 0.38
+        "y": 0.313
       },
       "uncertain": false,
       "faceDetected": true,
       "padded": false,
       "inset": null,
       "crop": {
-        "x": 179,
-        "y": 43,
-        "width": 247,
-        "height": 329
+        "x": 212,
+        "y": 93,
+        "width": 180,
+        "height": 240
       },
       "derived300": "/politicians/portraits/vip109-300.webp",
       "derived600": "/politicians/portraits/vip109-600.webp",
@@ -1937,22 +1892,17 @@
     "vip110": {
       "focalPoint": {
         "x": 0.5,
-        "y": 0.38
+        "y": 0.313
       },
       "uncertain": false,
       "faceDetected": true,
-      "padded": true,
-      "inset": {
-        "x": 0.009366748240741681,
-        "y": 0.09947975710557579,
-        "width": 0.9609559804628398,
-        "height": 0.9005202428944241
-      },
+      "padded": false,
+      "inset": null,
       "crop": {
-        "x": 0,
-        "y": 0,
-        "width": 361,
-        "height": 451
+        "x": 48,
+        "y": 26,
+        "width": 274,
+        "height": 365
       },
       "derived300": "/politicians/portraits/vip110-300.webp",
       "derived600": "/politicians/portraits/vip110-600.webp",
@@ -1962,22 +1912,17 @@
     "vip111": {
       "focalPoint": {
         "x": 0.5,
-        "y": 0.38
+        "y": 0.313
       },
       "uncertain": false,
       "faceDetected": true,
-      "padded": true,
-      "inset": {
-        "x": 0.04020273107165852,
-        "y": 0.08879857893782245,
-        "width": 0.8598059280297173,
-        "height": 0.8334219916100329
-      },
+      "padded": false,
+      "inset": null,
       "crop": {
-        "x": 0,
-        "y": 0,
-        "width": 1108,
-        "height": 1432
+        "x": 117,
+        "y": 91,
+        "width": 963,
+        "height": 1284
       },
       "derived300": "/politicians/portraits/vip111-300.webp",
       "derived600": "/politicians/portraits/vip111-600.webp",
@@ -1987,22 +1932,17 @@
     "vip112": {
       "focalPoint": {
         "x": 0.5,
-        "y": 0.38
+        "y": 0.313
       },
       "uncertain": false,
       "faceDetected": true,
-      "padded": true,
-      "inset": {
-        "x": 0.1298643626514221,
-        "y": 0.3490389082066241,
-        "width": 0.8701356373485778,
-        "height": 0.4887952273546635
-      },
+      "padded": false,
+      "inset": null,
       "crop": {
-        "x": 0,
-        "y": 0,
-        "width": 545,
-        "height": 408
+        "x": 224,
+        "y": 72,
+        "width": 184,
+        "height": 246
       },
       "derived300": "/politicians/portraits/vip112-300.webp",
       "derived600": "/politicians/portraits/vip112-600.webp",
@@ -2012,7 +1952,7 @@
     "vip114": {
       "focalPoint": {
         "x": 0.5,
-        "y": 0.38
+        "y": 0.313
       },
       "uncertain": true,
       "faceDetected": false,
@@ -2027,17 +1967,17 @@
     "vip115": {
       "focalPoint": {
         "x": 0.5,
-        "y": 0.38
+        "y": 0.313
       },
       "uncertain": false,
       "faceDetected": true,
       "padded": false,
       "inset": null,
       "crop": {
-        "x": 182,
-        "y": 30,
-        "width": 277,
-        "height": 370
+        "x": 220,
+        "y": 86,
+        "width": 202,
+        "height": 269
       },
       "derived300": "/politicians/portraits/vip115-300.webp",
       "derived600": "/politicians/portraits/vip115-600.webp",
@@ -2047,17 +1987,17 @@
     "vip116": {
       "focalPoint": {
         "x": 0.5,
-        "y": 0.38
+        "y": 0.313
       },
       "uncertain": false,
       "faceDetected": true,
       "padded": false,
       "inset": null,
       "crop": {
-        "x": 215,
-        "y": 96,
-        "width": 178,
-        "height": 237
+        "x": 240,
+        "y": 132,
+        "width": 129,
+        "height": 173
       },
       "derived300": "/politicians/portraits/vip116-300.webp",
       "derived600": "/politicians/portraits/vip116-600.webp",
@@ -2067,17 +2007,17 @@
     "vip117": {
       "focalPoint": {
         "x": 0.5,
-        "y": 0.38
+        "y": 0.313
       },
       "uncertain": false,
       "faceDetected": true,
       "padded": false,
       "inset": null,
       "crop": {
-        "x": 205,
-        "y": 90,
-        "width": 198,
-        "height": 265
+        "x": 232,
+        "y": 130,
+        "width": 144,
+        "height": 193
       },
       "derived300": "/politicians/portraits/vip117-300.webp",
       "derived600": "/politicians/portraits/vip117-600.webp",
@@ -2087,17 +2027,17 @@
     "vip118": {
       "focalPoint": {
         "x": 0.5,
-        "y": 0.38
+        "y": 0.313
       },
       "uncertain": false,
       "faceDetected": true,
       "padded": false,
       "inset": null,
       "crop": {
-        "x": 1434,
-        "y": 860,
-        "width": 1608,
-        "height": 2144
+        "x": 1463,
+        "y": 1013,
+        "width": 1521,
+        "height": 2028
       },
       "derived300": "/politicians/portraits/vip118-300.webp",
       "derived600": "/politicians/portraits/vip118-600.webp",
@@ -2107,17 +2047,17 @@
     "vip119": {
       "focalPoint": {
         "x": 0.5,
-        "y": 0.38
+        "y": 0.313
       },
       "uncertain": false,
       "faceDetected": true,
       "padded": false,
       "inset": null,
       "crop": {
-        "x": 200,
-        "y": 68,
-        "width": 216,
-        "height": 288
+        "x": 230,
+        "y": 112,
+        "width": 157,
+        "height": 210
       },
       "derived300": "/politicians/portraits/vip119-300.webp",
       "derived600": "/politicians/portraits/vip119-600.webp",
@@ -2127,22 +2067,22 @@
     "vip120": {
       "focalPoint": {
         "x": 0.5,
-        "y": 0.38
+        "y": 0.313
       },
       "uncertain": false,
       "faceDetected": true,
       "padded": true,
       "inset": {
         "x": 0.0,
-        "y": 0.10924734531653968,
-        "width": 0.9999999999999999,
-        "height": 0.7415818181553651
+        "y": 0.0,
+        "width": 0.9999999999999998,
+        "height": 0.959697703945234
       },
       "crop": {
-        "x": 155,
-        "y": 0,
-        "width": 740,
-        "height": 732
+        "x": 256,
+        "y": 42,
+        "width": 539,
+        "height": 690
       },
       "derived300": "/politicians/portraits/vip120-300.webp",
       "derived600": "/politicians/portraits/vip120-600.webp",
@@ -2152,22 +2092,22 @@
     "vip121": {
       "focalPoint": {
         "x": 0.5,
-        "y": 0.38
+        "y": 0.313
       },
       "uncertain": false,
       "faceDetected": true,
       "padded": true,
       "inset": {
-        "x": 0.15417926130747378,
-        "y": 0.10259083924242264,
-        "width": 0.6839381119354068,
-        "height": 0.7705171419950266
+        "x": 0.025005044207618413,
+        "y": 0.0,
+        "width": 0.9394091125701027,
+        "height": 0.9902983154055551
       },
       "crop": {
         "x": 0,
-        "y": 0,
+        "y": 46,
         "width": 472,
-        "height": 709
+        "height": 663
       },
       "derived300": "/politicians/portraits/vip121-300.webp",
       "derived600": "/politicians/portraits/vip121-600.webp",
@@ -2177,17 +2117,17 @@
     "vip123": {
       "focalPoint": {
         "x": 0.5,
-        "y": 0.38
+        "y": 0.313
       },
       "uncertain": false,
       "faceDetected": true,
       "padded": false,
       "inset": null,
       "crop": {
-        "x": 211,
-        "y": 91,
-        "width": 188,
-        "height": 250
+        "x": 237,
+        "y": 129,
+        "width": 137,
+        "height": 182
       },
       "derived300": "/politicians/portraits/vip123-300.webp",
       "derived600": "/politicians/portraits/vip123-600.webp",
@@ -2197,17 +2137,17 @@
     "vip124": {
       "focalPoint": {
         "x": 0.5,
-        "y": 0.38
+        "y": 0.313
       },
       "uncertain": false,
       "faceDetected": true,
       "padded": false,
       "inset": null,
       "crop": {
-        "x": 204,
-        "y": 80,
-        "width": 211,
-        "height": 281
+        "x": 233,
+        "y": 122,
+        "width": 154,
+        "height": 205
       },
       "derived300": "/politicians/portraits/vip124-300.webp",
       "derived600": "/politicians/portraits/vip124-600.webp",
@@ -2217,17 +2157,17 @@
     "vip125": {
       "focalPoint": {
         "x": 0.5,
-        "y": 0.38
+        "y": 0.313
       },
       "uncertain": false,
       "faceDetected": true,
       "padded": false,
       "inset": null,
       "crop": {
-        "x": 1626,
-        "y": 736,
-        "width": 1544,
-        "height": 2059
+        "x": 1623,
+        "y": 880,
+        "width": 1494,
+        "height": 1991
       },
       "derived300": "/politicians/portraits/vip125-300.webp",
       "derived600": "/politicians/portraits/vip125-600.webp",
@@ -2237,21 +2177,21 @@
     "vip126": {
       "focalPoint": {
         "x": 0.5,
-        "y": 0.38
+        "y": 0.313
       },
       "uncertain": false,
       "faceDetected": true,
       "padded": true,
       "inset": {
-        "x": 0.10468439235682225,
-        "y": 0.19694262580880495,
-        "width": 0.8641979837908267,
-        "height": 0.5636073807331479
+        "x": 0.0,
+        "y": 0.06156531250797621,
+        "width": 1.0,
+        "height": 0.7741313141246473
       },
       "crop": {
-        "x": 0,
+        "x": 18,
         "y": 0,
-        "width": 506,
+        "width": 426,
         "height": 440
       },
       "derived300": "/politicians/portraits/vip126-300.webp",
@@ -2262,22 +2202,17 @@
     "vip128": {
       "focalPoint": {
         "x": 0.5,
-        "y": 0.38
+        "y": 0.313
       },
       "uncertain": false,
       "faceDetected": true,
-      "padded": true,
-      "inset": {
-        "x": 0.0065386488945954726,
-        "y": 0.03660801513445235,
-        "width": 0.937851963971744,
-        "height": 0.9633919848655477
-      },
+      "padded": false,
+      "inset": null,
       "crop": {
-        "x": 0,
-        "y": 0,
-        "width": 340,
-        "height": 466
+        "x": 47,
+        "y": 56,
+        "width": 264,
+        "height": 352
       },
       "derived300": "/politicians/portraits/vip128-300.webp",
       "derived600": "/politicians/portraits/vip128-600.webp",
@@ -2287,17 +2222,17 @@
     "vip131": {
       "focalPoint": {
         "x": 0.5,
-        "y": 0.38
+        "y": 0.313
       },
       "uncertain": false,
       "faceDetected": true,
       "padded": false,
       "inset": null,
       "crop": {
-        "x": 207,
-        "y": 82,
-        "width": 188,
-        "height": 250
+        "x": 232,
+        "y": 120,
+        "width": 137,
+        "height": 182
       },
       "derived300": "/politicians/portraits/vip131-300.webp",
       "derived600": "/politicians/portraits/vip131-600.webp",
@@ -2307,17 +2242,17 @@
     "vip133": {
       "focalPoint": {
         "x": 0.5,
-        "y": 0.38
+        "y": 0.313
       },
       "uncertain": false,
       "faceDetected": true,
       "padded": false,
       "inset": null,
       "crop": {
-        "x": 1626,
-        "y": 736,
-        "width": 1544,
-        "height": 2059
+        "x": 1623,
+        "y": 880,
+        "width": 1494,
+        "height": 1991
       },
       "derived300": "/politicians/portraits/vip133-300.webp",
       "derived600": "/politicians/portraits/vip133-600.webp",
@@ -2327,17 +2262,17 @@
     "vip134": {
       "focalPoint": {
         "x": 0.5,
-        "y": 0.38
+        "y": 0.313
       },
       "uncertain": false,
       "faceDetected": true,
       "padded": false,
       "inset": null,
       "crop": {
-        "x": 204,
-        "y": 76,
-        "width": 190,
-        "height": 253
+        "x": 230,
+        "y": 114,
+        "width": 138,
+        "height": 184
       },
       "derived300": "/politicians/portraits/vip134-300.webp",
       "derived600": "/politicians/portraits/vip134-600.webp",
@@ -2347,17 +2282,17 @@
     "vip135": {
       "focalPoint": {
         "x": 0.5,
-        "y": 0.38
+        "y": 0.313
       },
       "uncertain": false,
       "faceDetected": true,
       "padded": false,
       "inset": null,
       "crop": {
-        "x": 186,
-        "y": 55,
-        "width": 235,
-        "height": 313
+        "x": 218,
+        "y": 102,
+        "width": 171,
+        "height": 228
       },
       "derived300": "/politicians/portraits/vip135-300.webp",
       "derived600": "/politicians/portraits/vip135-600.webp",
@@ -2367,17 +2302,17 @@
     "vip136": {
       "focalPoint": {
         "x": 0.5,
-        "y": 0.38
+        "y": 0.313
       },
       "uncertain": false,
       "faceDetected": true,
       "padded": false,
       "inset": null,
       "crop": {
-        "x": 207,
-        "y": 82,
-        "width": 188,
-        "height": 250
+        "x": 232,
+        "y": 120,
+        "width": 137,
+        "height": 182
       },
       "derived300": "/politicians/portraits/vip136-300.webp",
       "derived600": "/politicians/portraits/vip136-600.webp",
@@ -2387,17 +2322,17 @@
     "vip138": {
       "focalPoint": {
         "x": 0.5,
-        "y": 0.38
+        "y": 0.313
       },
       "uncertain": false,
       "faceDetected": true,
       "padded": false,
       "inset": null,
       "crop": {
-        "x": 1751,
-        "y": 660,
-        "width": 1523,
-        "height": 2031
+        "x": 1893,
+        "y": 874,
+        "width": 1271,
+        "height": 1694
       },
       "derived300": "/politicians/portraits/vip138-300.webp",
       "derived600": "/politicians/portraits/vip138-600.webp",
@@ -2407,17 +2342,17 @@
     "vip139": {
       "focalPoint": {
         "x": 0.5,
-        "y": 0.38
+        "y": 0.313
       },
       "uncertain": false,
       "faceDetected": true,
       "padded": false,
       "inset": null,
       "crop": {
-        "x": 196,
-        "y": 64,
-        "width": 230,
-        "height": 307
+        "x": 227,
+        "y": 111,
+        "width": 168,
+        "height": 224
       },
       "derived300": "/politicians/portraits/vip139-300.webp",
       "derived600": "/politicians/portraits/vip139-600.webp",
@@ -2427,22 +2362,17 @@
     "vip140": {
       "focalPoint": {
         "x": 0.5,
-        "y": 0.38
+        "y": 0.313
       },
       "uncertain": false,
       "faceDetected": true,
-      "padded": true,
-      "inset": {
-        "x": 0.020855448977810876,
-        "y": 0.047529493352626836,
-        "width": 0.9791445510221892,
-        "height": 0.9524705066473732
-      },
+      "padded": false,
+      "inset": null,
       "crop": {
-        "x": 0,
-        "y": 0,
-        "width": 536,
-        "height": 696
+        "x": 63,
+        "y": 76,
+        "width": 399,
+        "height": 532
       },
       "derived300": "/politicians/portraits/vip140-300.webp",
       "derived600": "/politicians/portraits/vip140-600.webp",
@@ -2452,17 +2382,17 @@
     "vip141": {
       "focalPoint": {
         "x": 0.5,
-        "y": 0.38
+        "y": 0.313
       },
       "uncertain": false,
       "faceDetected": true,
       "padded": false,
       "inset": null,
       "crop": {
-        "x": 212,
-        "y": 78,
-        "width": 185,
-        "height": 247
+        "x": 238,
+        "y": 115,
+        "width": 135,
+        "height": 180
       },
       "derived300": "/politicians/portraits/vip141-300.webp",
       "derived600": "/politicians/portraits/vip141-600.webp",
@@ -2472,17 +2402,17 @@
     "vip142": {
       "focalPoint": {
         "x": 0.5,
-        "y": 0.38
+        "y": 0.313
       },
       "uncertain": false,
       "faceDetected": true,
       "padded": false,
       "inset": null,
       "crop": {
-        "x": 207,
-        "y": 84,
-        "width": 192,
-        "height": 256
+        "x": 233,
+        "y": 123,
+        "width": 140,
+        "height": 186
       },
       "derived300": "/politicians/portraits/vip142-300.webp",
       "derived600": "/politicians/portraits/vip142-600.webp",
@@ -2492,17 +2422,17 @@
     "vip143": {
       "focalPoint": {
         "x": 0.5,
-        "y": 0.38
+        "y": 0.313
       },
       "uncertain": false,
       "faceDetected": true,
       "padded": false,
       "inset": null,
       "crop": {
-        "x": 173,
-        "y": 46,
-        "width": 247,
-        "height": 329
+        "x": 207,
+        "y": 96,
+        "width": 180,
+        "height": 240
       },
       "derived300": "/politicians/portraits/vip143-300.webp",
       "derived600": "/politicians/portraits/vip143-600.webp",
@@ -2512,17 +2442,17 @@
     "vip144": {
       "focalPoint": {
         "x": 0.5,
-        "y": 0.38
+        "y": 0.313
       },
       "uncertain": false,
       "faceDetected": true,
       "padded": false,
       "inset": null,
       "crop": {
-        "x": 227,
-        "y": 82,
-        "width": 174,
-        "height": 232
+        "x": 251,
+        "y": 117,
+        "width": 126,
+        "height": 169
       },
       "derived300": "/politicians/portraits/vip144-300.webp",
       "derived600": "/politicians/portraits/vip144-600.webp",
@@ -2532,17 +2462,17 @@
     "vip145": {
       "focalPoint": {
         "x": 0.5,
-        "y": 0.38
+        "y": 0.313
       },
       "uncertain": false,
       "faceDetected": true,
       "padded": false,
       "inset": null,
       "crop": {
-        "x": 214,
-        "y": 74,
-        "width": 197,
-        "height": 263
+        "x": 241,
+        "y": 113,
+        "width": 143,
+        "height": 191
       },
       "derived300": "/politicians/portraits/vip145-300.webp",
       "derived600": "/politicians/portraits/vip145-600.webp",
@@ -2552,17 +2482,17 @@
     "vip146": {
       "focalPoint": {
         "x": 0.5,
-        "y": 0.38
+        "y": 0.313
       },
       "uncertain": false,
       "faceDetected": true,
       "padded": false,
       "inset": null,
       "crop": {
-        "x": 219,
-        "y": 105,
-        "width": 183,
-        "height": 244
+        "x": 243,
+        "y": 142,
+        "width": 133,
+        "height": 178
       },
       "derived300": "/politicians/portraits/vip146-300.webp",
       "derived600": "/politicians/portraits/vip146-600.webp",
@@ -2572,17 +2502,22 @@
     "vip147": {
       "focalPoint": {
         "x": 0.5,
-        "y": 0.38
+        "y": 0.313
       },
       "uncertain": false,
       "faceDetected": true,
-      "padded": false,
-      "inset": null,
+      "padded": true,
+      "inset": {
+        "x": 0.0,
+        "y": 0.0,
+        "width": 1.0,
+        "height": 0.9668498299941475
+      },
       "crop": {
-        "x": 128,
-        "y": 209,
-        "width": 1563,
-        "height": 2084
+        "x": 1,
+        "y": 302,
+        "width": 1707,
+        "height": 2200
       },
       "derived300": "/politicians/portraits/vip147-300.webp",
       "derived600": "/politicians/portraits/vip147-600.webp",
@@ -2592,17 +2527,17 @@
     "vip148": {
       "focalPoint": {
         "x": 0.5,
-        "y": 0.38
+        "y": 0.313
       },
       "uncertain": false,
       "faceDetected": true,
       "padded": false,
       "inset": null,
       "crop": {
-        "x": 1619,
-        "y": 790,
-        "width": 1608,
-        "height": 2144
+        "x": 1530,
+        "y": 851,
+        "width": 1739,
+        "height": 2318
       },
       "derived300": "/politicians/portraits/vip148-300.webp",
       "derived600": "/politicians/portraits/vip148-600.webp",
@@ -2612,17 +2547,17 @@
     "vip149": {
       "focalPoint": {
         "x": 0.5,
-        "y": 0.38
+        "y": 0.313
       },
       "uncertain": false,
       "faceDetected": true,
       "padded": false,
       "inset": null,
       "crop": {
-        "x": 1665,
-        "y": 281,
-        "width": 1765,
-        "height": 2353
+        "x": 1742,
+        "y": 511,
+        "width": 1564,
+        "height": 2085
       },
       "derived300": "/politicians/portraits/vip149-300.webp",
       "derived600": "/politicians/portraits/vip149-600.webp",
@@ -2632,21 +2567,21 @@
     "vip151": {
       "focalPoint": {
         "x": 0.5,
-        "y": 0.38
+        "y": 0.313
       },
       "uncertain": false,
       "faceDetected": true,
       "padded": true,
       "inset": {
-        "x": 0.16518423421134476,
-        "y": 0.17441634512959833,
-        "width": 0.7887274132860701,
-        "height": 0.5915455599645526
+        "x": 0.04012069816675888,
+        "y": 0.030624803457418904,
+        "width": 0.9598793018332412,
+        "height": 0.8125052250101353
       },
       "crop": {
         "x": 0,
         "y": 0,
-        "width": 225,
+        "width": 199,
         "height": 225
       },
       "derived300": "/politicians/portraits/vip151-300.webp",
@@ -2657,17 +2592,17 @@
     "vip152": {
       "focalPoint": {
         "x": 0.5,
-        "y": 0.38
+        "y": 0.313
       },
       "uncertain": false,
       "faceDetected": true,
       "padded": false,
       "inset": null,
       "crop": {
-        "x": 1525,
-        "y": 644,
-        "width": 1634,
-        "height": 2178
+        "x": 1598,
+        "y": 819,
+        "width": 1501,
+        "height": 2001
       },
       "derived300": "/politicians/portraits/vip152-300.webp",
       "derived600": "/politicians/portraits/vip152-600.webp",
@@ -2677,17 +2612,17 @@
     "vip153": {
       "focalPoint": {
         "x": 0.5,
-        "y": 0.38
+        "y": 0.313
       },
       "uncertain": false,
       "faceDetected": true,
       "padded": false,
       "inset": null,
       "crop": {
-        "x": 206,
-        "y": 70,
-        "width": 194,
-        "height": 259
+        "x": 232,
+        "y": 110,
+        "width": 141,
+        "height": 189
       },
       "derived300": "/politicians/portraits/vip153-300.webp",
       "derived600": "/politicians/portraits/vip153-600.webp",
@@ -2697,22 +2632,17 @@
     "vip154": {
       "focalPoint": {
         "x": 0.5,
-        "y": 0.38
+        "y": 0.313
       },
       "uncertain": false,
       "faceDetected": true,
-      "padded": true,
-      "inset": {
-        "x": 0.07662763150905363,
-        "y": 0.31662585949670236,
-        "width": 0.9233723684909464,
-        "height": 0.5471094254888615
-      },
+      "padded": false,
+      "inset": null,
       "crop": {
-        "x": 0,
-        "y": 0,
-        "width": 516,
-        "height": 408
+        "x": 245,
+        "y": 114,
+        "width": 135,
+        "height": 179
       },
       "derived300": "/politicians/portraits/vip154-300.webp",
       "derived600": "/politicians/portraits/vip154-600.webp",
@@ -2722,17 +2652,17 @@
     "vip155": {
       "focalPoint": {
         "x": 0.5,
-        "y": 0.38
+        "y": 0.313
       },
       "uncertain": false,
       "faceDetected": true,
       "padded": false,
       "inset": null,
       "crop": {
-        "x": 1643,
-        "y": 266,
-        "width": 1545,
-        "height": 2060
+        "x": 1673,
+        "y": 416,
+        "width": 1525,
+        "height": 2033
       },
       "derived300": "/politicians/portraits/vip155-300.webp",
       "derived600": "/politicians/portraits/vip155-600.webp",
@@ -2742,17 +2672,17 @@
     "vip156": {
       "focalPoint": {
         "x": 0.5,
-        "y": 0.38
+        "y": 0.313
       },
       "uncertain": false,
       "faceDetected": true,
       "padded": false,
       "inset": null,
       "crop": {
-        "x": 12,
-        "y": 27,
-        "width": 264,
-        "height": 352
+        "x": 48,
+        "y": 80,
+        "width": 192,
+        "height": 256
       },
       "derived300": "/politicians/portraits/vip156-300.webp",
       "derived600": "/politicians/portraits/vip156-600.webp",
@@ -2762,7 +2692,7 @@
     "vip157": {
       "focalPoint": {
         "x": 0.5,
-        "y": 0.38
+        "y": 0.313
       },
       "uncertain": true,
       "faceDetected": false,
@@ -2777,17 +2707,17 @@
     "vip158": {
       "focalPoint": {
         "x": 0.5,
-        "y": 0.38
+        "y": 0.313
       },
       "uncertain": false,
       "faceDetected": true,
       "padded": false,
       "inset": null,
       "crop": {
-        "x": 1724,
-        "y": 788,
-        "width": 1509,
-        "height": 2012
+        "x": 1623,
+        "y": 819,
+        "width": 1677,
+        "height": 2236
       },
       "derived300": "/politicians/portraits/vip158-300.webp",
       "derived600": "/politicians/portraits/vip158-600.webp",
@@ -2797,17 +2727,17 @@
     "vip159": {
       "focalPoint": {
         "x": 0.5,
-        "y": 0.38
+        "y": 0.313
       },
       "uncertain": false,
       "faceDetected": true,
       "padded": false,
       "inset": null,
       "crop": {
-        "x": 1145,
-        "y": 305,
-        "width": 1403,
-        "height": 1871
+        "x": 1315,
+        "y": 549,
+        "width": 1075,
+        "height": 1433
       },
       "derived300": "/politicians/portraits/vip159-300.webp",
       "derived600": "/politicians/portraits/vip159-600.webp",
@@ -2817,17 +2747,17 @@
     "vip161": {
       "focalPoint": {
         "x": 0.5,
-        "y": 0.38
+        "y": 0.313
       },
       "uncertain": false,
       "faceDetected": true,
       "padded": false,
       "inset": null,
       "crop": {
-        "x": 1928,
-        "y": 746,
-        "width": 1836,
-        "height": 2448
+        "x": 1875,
+        "y": 880,
+        "width": 1800,
+        "height": 2399
       },
       "derived300": "/politicians/portraits/vip161-300.webp",
       "derived600": "/politicians/portraits/vip161-600.webp",
@@ -2837,21 +2767,21 @@
     "vip162": {
       "focalPoint": {
         "x": 0.5,
-        "y": 0.38
+        "y": 0.313
       },
       "uncertain": false,
       "faceDetected": true,
       "padded": true,
       "inset": {
         "x": 0.0,
-        "y": 0.1692058880427717,
-        "width": 0.9830597678451573,
-        "height": 0.47835088191224845
+        "y": 0.02346808739992464,
+        "width": 1.0,
+        "height": 0.6570290054500588
       },
       "crop": {
-        "x": 97,
+        "x": 172,
         "y": 0,
-        "width": 543,
+        "width": 402,
         "height": 352
       },
       "derived300": "/politicians/portraits/vip162-300.webp",
@@ -2862,17 +2792,17 @@
     "vip163": {
       "focalPoint": {
         "x": 0.5,
-        "y": 0.38
+        "y": 0.313
       },
       "uncertain": false,
       "faceDetected": true,
       "padded": false,
       "inset": null,
       "crop": {
-        "x": 171,
-        "y": 55,
-        "width": 261,
-        "height": 348
+        "x": 207,
+        "y": 108,
+        "width": 190,
+        "height": 254
       },
       "derived300": "/politicians/portraits/vip163-300.webp",
       "derived600": "/politicians/portraits/vip163-600.webp",
@@ -2882,22 +2812,22 @@
     "vip165": {
       "focalPoint": {
         "x": 0.5,
-        "y": 0.38
+        "y": 0.313
       },
       "uncertain": false,
       "faceDetected": true,
       "padded": true,
       "inset": {
-        "x": 0.1666123198901336,
-        "y": 0.0,
-        "width": 0.8333876801098663,
-        "height": 0.6341366960750588
+        "x": 0.0,
+        "y": 0.01316861892379372,
+        "width": 1.0,
+        "height": 0.9868313810762064
       },
       "crop": {
-        "x": 0,
-        "y": 845,
-        "width": 1057,
-        "height": 1073
+        "x": 353,
+        "y": 0,
+        "width": 855,
+        "height": 1126
       },
       "derived300": "/politicians/portraits/vip165-300.webp",
       "derived600": "/politicians/portraits/vip165-600.webp",
@@ -2907,17 +2837,17 @@
     "vip168": {
       "focalPoint": {
         "x": 0.5,
-        "y": 0.38
+        "y": 0.313
       },
       "uncertain": false,
       "faceDetected": true,
       "padded": false,
       "inset": null,
       "crop": {
-        "x": 2155,
-        "y": 226,
-        "width": 1652,
-        "height": 2203
+        "x": 2218,
+        "y": 411,
+        "width": 1550,
+        "height": 2067
       },
       "derived300": "/politicians/portraits/vip168-300.webp",
       "derived600": "/politicians/portraits/vip168-600.webp",
@@ -2927,17 +2857,17 @@
     "vip170": {
       "focalPoint": {
         "x": 0.5,
-        "y": 0.38
+        "y": 0.313
       },
       "uncertain": false,
       "faceDetected": true,
       "padded": false,
       "inset": null,
       "crop": {
-        "x": 18,
-        "y": 0,
-        "width": 204,
-        "height": 272
+        "x": 46,
+        "y": 38,
+        "width": 149,
+        "height": 198
       },
       "derived300": "/politicians/portraits/vip170-300.webp",
       "derived600": "/politicians/portraits/vip170-600.webp",
@@ -2947,17 +2877,17 @@
     "vip173": {
       "focalPoint": {
         "x": 0.5,
-        "y": 0.38
+        "y": 0.313
       },
       "uncertain": false,
       "faceDetected": true,
       "padded": false,
       "inset": null,
       "crop": {
-        "x": 1693,
-        "y": 612,
-        "width": 1744,
-        "height": 2326
+        "x": 1772,
+        "y": 779,
+        "width": 1644,
+        "height": 2192
       },
       "derived300": "/politicians/portraits/vip173-300.webp",
       "derived600": "/politicians/portraits/vip173-600.webp",
@@ -2967,22 +2897,22 @@
     "vip176": {
       "focalPoint": {
         "x": 0.5,
-        "y": 0.38
+        "y": 0.313
       },
       "uncertain": false,
       "faceDetected": true,
       "padded": true,
       "inset": {
-        "x": 0.3275412226552176,
+        "x": 0.24293899757837278,
         "y": 0.0,
-        "width": 0.6724587773447824,
-        "height": 0.9571527522758042
+        "width": 0.7570610024216272,
+        "height": 1.0
       },
       "crop": {
         "x": 0,
-        "y": 122,
-        "width": 835,
-        "height": 1585
+        "y": 420,
+        "width": 605,
+        "height": 1066
       },
       "derived300": "/politicians/portraits/vip176-300.webp",
       "derived600": "/politicians/portraits/vip176-600.webp",
@@ -2992,17 +2922,17 @@
     "vip177": {
       "focalPoint": {
         "x": 0.5,
-        "y": 0.38
+        "y": 0.313
       },
       "uncertain": false,
       "faceDetected": true,
       "padded": false,
       "inset": null,
       "crop": {
-        "x": 1624,
-        "y": 201,
-        "width": 1689,
-        "height": 2252
+        "x": 1727,
+        "y": 438,
+        "width": 1468,
+        "height": 1958
       },
       "derived300": "/politicians/portraits/vip177-300.webp",
       "derived600": "/politicians/portraits/vip177-600.webp",
@@ -3012,17 +2942,17 @@
     "vip178": {
       "focalPoint": {
         "x": 0.5,
-        "y": 0.38
+        "y": 0.313
       },
       "uncertain": false,
       "faceDetected": true,
       "padded": false,
       "inset": null,
       "crop": {
-        "x": 198,
-        "y": 77,
-        "width": 207,
-        "height": 276
+        "x": 226,
+        "y": 119,
+        "width": 151,
+        "height": 201
       },
       "derived300": "/politicians/portraits/vip178-300.webp",
       "derived600": "/politicians/portraits/vip178-600.webp",
@@ -3032,17 +2962,17 @@
     "vip179": {
       "focalPoint": {
         "x": 0.5,
-        "y": 0.38
+        "y": 0.313
       },
       "uncertain": false,
       "faceDetected": true,
       "padded": false,
       "inset": null,
       "crop": {
-        "x": 25,
-        "y": 56,
-        "width": 241,
-        "height": 322
+        "x": 58,
+        "y": 105,
+        "width": 176,
+        "height": 234
       },
       "derived300": "/politicians/portraits/vip179-300.webp",
       "derived600": "/politicians/portraits/vip179-600.webp",
@@ -3052,17 +2982,17 @@
     "vip180": {
       "focalPoint": {
         "x": 0.5,
-        "y": 0.38
+        "y": 0.313
       },
       "uncertain": false,
       "faceDetected": true,
       "padded": false,
       "inset": null,
       "crop": {
-        "x": 1680,
-        "y": 614,
-        "width": 1633,
-        "height": 2177
+        "x": 1714,
+        "y": 775,
+        "width": 1575,
+        "height": 2100
       },
       "derived300": "/politicians/portraits/vip180-300.webp",
       "derived600": "/politicians/portraits/vip180-600.webp",
@@ -3072,17 +3002,17 @@
     "vip181": {
       "focalPoint": {
         "x": 0.5,
-        "y": 0.38
+        "y": 0.313
       },
       "uncertain": false,
       "faceDetected": true,
       "padded": false,
       "inset": null,
       "crop": {
-        "x": 1535,
-        "y": 634,
-        "width": 1476,
-        "height": 1968
+        "x": 1520,
+        "y": 653,
+        "width": 1618,
+        "height": 2157
       },
       "derived300": "/politicians/portraits/vip181-300.webp",
       "derived600": "/politicians/portraits/vip181-600.webp",
@@ -3092,17 +3022,17 @@
     "vip182": {
       "focalPoint": {
         "x": 0.5,
-        "y": 0.38
+        "y": 0.313
       },
       "uncertain": false,
       "faceDetected": true,
       "padded": false,
       "inset": null,
       "crop": {
-        "x": 1269,
-        "y": 657,
-        "width": 1690,
-        "height": 2253
+        "x": 1014,
+        "y": 501,
+        "width": 1928,
+        "height": 2571
       },
       "derived300": "/politicians/portraits/vip182-300.webp",
       "derived600": "/politicians/portraits/vip182-600.webp",
@@ -3112,17 +3042,17 @@
     "vip184": {
       "focalPoint": {
         "x": 0.5,
-        "y": 0.38
+        "y": 0.313
       },
       "uncertain": false,
       "faceDetected": true,
       "padded": false,
       "inset": null,
       "crop": {
-        "x": 195,
-        "y": 66,
-        "width": 220,
-        "height": 293
+        "x": 225,
+        "y": 110,
+        "width": 160,
+        "height": 213
       },
       "derived300": "/politicians/portraits/vip184-300.webp",
       "derived600": "/politicians/portraits/vip184-600.webp",
@@ -3132,17 +3062,17 @@
     "vip186": {
       "focalPoint": {
         "x": 0.5,
-        "y": 0.38
+        "y": 0.313
       },
       "uncertain": false,
       "faceDetected": true,
       "padded": false,
       "inset": null,
       "crop": {
-        "x": 1582,
-        "y": 607,
-        "width": 1631,
-        "height": 2175
+        "x": 1639,
+        "y": 785,
+        "width": 1502,
+        "height": 2003
       },
       "derived300": "/politicians/portraits/vip186-300.webp",
       "derived600": "/politicians/portraits/vip186-600.webp",
@@ -3152,17 +3082,17 @@
     "vip187": {
       "focalPoint": {
         "x": 0.5,
-        "y": 0.38
+        "y": 0.313
       },
       "uncertain": false,
       "faceDetected": true,
       "padded": false,
       "inset": null,
       "crop": {
-        "x": 185,
-        "y": 81,
-        "width": 233,
-        "height": 311
+        "x": 217,
+        "y": 129,
+        "width": 170,
+        "height": 226
       },
       "derived300": "/politicians/portraits/vip187-300.webp",
       "derived600": "/politicians/portraits/vip187-600.webp",
@@ -3172,22 +3102,22 @@
     "vip188": {
       "focalPoint": {
         "x": 0.5,
-        "y": 0.38
+        "y": 0.313
       },
       "uncertain": false,
       "faceDetected": true,
       "padded": true,
       "inset": {
-        "x": 0.09651672150824958,
-        "y": 0.09574309340588372,
-        "width": 0.6382893653092208,
-        "height": 0.5604491988080963
+        "x": 0.0,
+        "y": 0.0,
+        "width": 0.8225130663051724,
+        "height": 0.6923582366586136
       },
       "crop": {
-        "x": 0,
-        "y": 0,
-        "width": 656,
-        "height": 768
+        "x": 41,
+        "y": 77,
+        "width": 615,
+        "height": 691
       },
       "derived300": "/politicians/portraits/vip188-300.webp",
       "derived600": "/politicians/portraits/vip188-600.webp",
@@ -3197,22 +3127,22 @@
     "vip189": {
       "focalPoint": {
         "x": 0.5,
-        "y": 0.38
+        "y": 0.313
       },
       "uncertain": false,
       "faceDetected": true,
       "padded": true,
       "inset": {
         "x": 0.0,
-        "y": 0.09031613829443788,
-        "width": 0.9210479511525643,
-        "height": 0.7760189988457405
+        "y": 0.0,
+        "width": 0.9999999999999999,
+        "height": 0.9809956148366568
       },
       "crop": {
-        "x": 27,
-        "y": 0,
-        "width": 561,
-        "height": 630
+        "x": 110,
+        "y": 50,
+        "width": 443,
+        "height": 580
       },
       "derived300": "/politicians/portraits/vip189-300.webp",
       "derived600": "/politicians/portraits/vip189-600.webp",
@@ -3222,22 +3152,22 @@
     "vip192": {
       "focalPoint": {
         "x": 0.5,
-        "y": 0.38
+        "y": 0.313
       },
       "uncertain": false,
       "faceDetected": true,
       "padded": true,
       "inset": {
-        "x": 0.0678240477575829,
-        "y": 0.13997207423989902,
-        "width": 0.8789751580359169,
-        "height": 0.6592313685269376
+        "x": 0.0,
+        "y": 0.0,
+        "width": 0.9999999999999999,
+        "height": 0.8887882581532727
       },
       "crop": {
-        "x": 0,
-        "y": 0,
-        "width": 600,
-        "height": 600
+        "x": 47,
+        "y": 11,
+        "width": 497,
+        "height": 589
       },
       "derived300": "/politicians/portraits/vip192-300.webp",
       "derived600": "/politicians/portraits/vip192-600.webp",
@@ -3247,22 +3177,17 @@
     "vip193": {
       "focalPoint": {
         "x": 0.5,
-        "y": 0.38
+        "y": 0.313
       },
       "uncertain": false,
       "faceDetected": true,
-      "padded": true,
-      "inset": {
-        "x": 0.0,
-        "y": 0.1531753939582281,
-        "width": 0.9712488035656907,
-        "height": 0.8071144973681051
-      },
+      "padded": false,
+      "inset": null,
       "crop": {
-        "x": 5,
+        "x": 169,
         "y": 0,
-        "width": 1171,
-        "height": 1298
+        "width": 878,
+        "height": 1169
       },
       "derived300": "/politicians/portraits/vip193-300.webp",
       "derived600": "/politicians/portraits/vip193-600.webp",
@@ -3272,17 +3197,17 @@
     "vip194": {
       "focalPoint": {
         "x": 0.5,
-        "y": 0.38
+        "y": 0.313
       },
       "uncertain": false,
       "faceDetected": true,
       "padded": false,
       "inset": null,
       "crop": {
-        "x": 1550,
-        "y": 871,
-        "width": 1529,
-        "height": 2039
+        "x": 1551,
+        "y": 1003,
+        "width": 1461,
+        "height": 1948
       },
       "derived300": "/politicians/portraits/vip194-300.webp",
       "derived600": "/politicians/portraits/vip194-600.webp",
@@ -3292,17 +3217,17 @@
     "vip196": {
       "focalPoint": {
         "x": 0.5,
-        "y": 0.38
+        "y": 0.313
       },
       "uncertain": false,
       "faceDetected": true,
       "padded": false,
       "inset": null,
       "crop": {
-        "x": 1801,
-        "y": 611,
-        "width": 1651,
-        "height": 2201
+        "x": 1849,
+        "y": 778,
+        "width": 1535,
+        "height": 2047
       },
       "derived300": "/politicians/portraits/vip196-300.webp",
       "derived600": "/politicians/portraits/vip196-600.webp",
@@ -3312,17 +3237,17 @@
     "vip197": {
       "focalPoint": {
         "x": 0.5,
-        "y": 0.38
+        "y": 0.313
       },
       "uncertain": false,
       "faceDetected": true,
       "padded": false,
       "inset": null,
       "crop": {
-        "x": 1092,
-        "y": 410,
-        "width": 1690,
-        "height": 2253
+        "x": 961,
+        "y": 415,
+        "width": 1974,
+        "height": 2633
       },
       "derived300": "/politicians/portraits/vip197-300.webp",
       "derived600": "/politicians/portraits/vip197-600.webp",
@@ -3332,22 +3257,17 @@
     "vip198": {
       "focalPoint": {
         "x": 0.5,
-        "y": 0.38
+        "y": 0.313
       },
       "uncertain": false,
       "faceDetected": true,
-      "padded": true,
-      "inset": {
-        "x": 0.0,
-        "y": 0.10410694181095438,
-        "width": 1.0000000000000002,
-        "height": 0.8958930581890455
-      },
+      "padded": false,
+      "inset": null,
       "crop": {
-        "x": 112,
-        "y": 0,
-        "width": 219,
-        "height": 261
+        "x": 141,
+        "y": 14,
+        "width": 159,
+        "height": 212
       },
       "derived300": "/politicians/portraits/vip198-300.webp",
       "derived600": "/politicians/portraits/vip198-600.webp",
@@ -3357,22 +3277,17 @@
     "vip201": {
       "focalPoint": {
         "x": 0.5,
-        "y": 0.38
+        "y": 0.313
       },
       "uncertain": false,
       "faceDetected": true,
-      "padded": true,
-      "inset": {
-        "x": 0.0,
-        "y": 0.09567032272330131,
-        "width": 0.9999999999999999,
-        "height": 0.9043296772766987
-      },
+      "padded": false,
+      "inset": null,
       "crop": {
-        "x": 27,
-        "y": 0,
-        "width": 185,
-        "height": 223
+        "x": 53,
+        "y": 14,
+        "width": 134,
+        "height": 179
       },
       "derived300": "/politicians/portraits/vip201-300.webp",
       "derived600": "/politicians/portraits/vip201-600.webp",
@@ -3382,17 +3297,17 @@
     "vip202": {
       "focalPoint": {
         "x": 0.5,
-        "y": 0.38
+        "y": 0.313
       },
       "uncertain": false,
       "faceDetected": true,
       "padded": false,
       "inset": null,
       "crop": {
-        "x": 248,
-        "y": 30,
-        "width": 1001,
-        "height": 1334
+        "x": 382,
+        "y": 228,
+        "width": 739,
+        "height": 985
       },
       "derived300": "/politicians/portraits/vip202-300.webp",
       "derived600": "/politicians/portraits/vip202-600.webp",
@@ -3402,22 +3317,22 @@
     "vip203": {
       "focalPoint": {
         "x": 0.5,
-        "y": 0.38
+        "y": 0.313
       },
       "uncertain": false,
       "faceDetected": true,
       "padded": true,
       "inset": {
-        "x": 0.05039681276203268,
-        "y": 0.20998219170181098,
-        "width": 0.9008371930557161,
-        "height": 0.6756278947917871
+        "x": 0.0,
+        "y": 0.07947553977866392,
+        "width": 1.0,
+        "height": 0.920524460221336
       },
       "crop": {
-        "x": 0,
+        "x": 21,
         "y": 0,
-        "width": 225,
-        "height": 225
+        "width": 182,
+        "height": 223
       },
       "derived300": "/politicians/portraits/vip203-300.webp",
       "derived600": "/politicians/portraits/vip203-600.webp",
@@ -3427,17 +3342,17 @@
     "vip204": {
       "focalPoint": {
         "x": 0.5,
-        "y": 0.38
+        "y": 0.313
       },
       "uncertain": false,
       "faceDetected": true,
       "padded": false,
       "inset": null,
       "crop": {
-        "x": 177,
-        "y": 39,
-        "width": 257,
-        "height": 343
+        "x": 212,
+        "y": 91,
+        "width": 187,
+        "height": 250
       },
       "derived300": "/politicians/portraits/vip204-300.webp",
       "derived600": "/politicians/portraits/vip204-600.webp",
@@ -3447,17 +3362,17 @@
     "vip205": {
       "focalPoint": {
         "x": 0.5,
-        "y": 0.38
+        "y": 0.313
       },
       "uncertain": false,
       "faceDetected": true,
       "padded": false,
       "inset": null,
       "crop": {
-        "x": 1419,
-        "y": 288,
-        "width": 1547,
-        "height": 2063
+        "x": 1335,
+        "y": 324,
+        "width": 1764,
+        "height": 2352
       },
       "derived300": "/politicians/portraits/vip205-300.webp",
       "derived600": "/politicians/portraits/vip205-600.webp",
@@ -3467,22 +3382,22 @@
     "vip207": {
       "focalPoint": {
         "x": 0.5,
-        "y": 0.38
+        "y": 0.313
       },
       "uncertain": false,
       "faceDetected": true,
       "padded": true,
       "inset": {
-        "x": 0.002093442068703681,
-        "y": 0.17523749969507038,
-        "width": 0.9597253193756871,
-        "height": 0.7070542729028845
+        "x": 0.0,
+        "y": 0.0317526834046996,
+        "width": 1.0,
+        "height": 0.9682473165953004
       },
       "crop": {
-        "x": 0,
+        "x": 32,
         "y": 0,
-        "width": 226,
-        "height": 222
+        "width": 171,
+        "height": 221
       },
       "derived300": "/politicians/portraits/vip207-300.webp",
       "derived600": "/politicians/portraits/vip207-600.webp",
@@ -3492,17 +3407,17 @@
     "vip209": {
       "focalPoint": {
         "x": 0.5,
-        "y": 0.38
+        "y": 0.313
       },
       "uncertain": false,
       "faceDetected": true,
       "padded": false,
       "inset": null,
       "crop": {
-        "x": 1877,
-        "y": 577,
-        "width": 1439,
-        "height": 1919
+        "x": 1813,
+        "y": 667,
+        "width": 1565,
+        "height": 2086
       },
       "derived300": "/politicians/portraits/vip209-300.webp",
       "derived600": "/politicians/portraits/vip209-600.webp",
@@ -3512,7 +3427,7 @@
     "vip210": {
       "focalPoint": {
         "x": 0.5,
-        "y": 0.38
+        "y": 0.313
       },
       "uncertain": true,
       "faceDetected": false,
@@ -3527,17 +3442,17 @@
     "vip213": {
       "focalPoint": {
         "x": 0.5,
-        "y": 0.38
+        "y": 0.313
       },
       "uncertain": false,
       "faceDetected": true,
       "padded": false,
       "inset": null,
       "crop": {
-        "x": 1280,
-        "y": 703,
-        "width": 1739,
-        "height": 2319
+        "x": 1414,
+        "y": 970,
+        "width": 1457,
+        "height": 1943
       },
       "derived300": "/politicians/portraits/vip213-300.webp",
       "derived600": "/politicians/portraits/vip213-600.webp",
@@ -3547,7 +3462,7 @@
     "vip214": {
       "focalPoint": {
         "x": 0.5,
-        "y": 0.38
+        "y": 0.313
       },
       "uncertain": true,
       "faceDetected": false,
@@ -3562,17 +3477,17 @@
     "vip215": {
       "focalPoint": {
         "x": 0.5,
-        "y": 0.38
+        "y": 0.313
       },
       "uncertain": false,
       "faceDetected": true,
       "padded": false,
       "inset": null,
       "crop": {
-        "x": 1681,
-        "y": 823,
-        "width": 1549,
-        "height": 2065
+        "x": 1704,
+        "y": 975,
+        "width": 1514,
+        "height": 2018
       },
       "derived300": "/politicians/portraits/vip215-300.webp",
       "derived600": "/politicians/portraits/vip215-600.webp",
@@ -3582,22 +3497,17 @@
     "vip216": {
       "focalPoint": {
         "x": 0.5,
-        "y": 0.38
+        "y": 0.313
       },
       "uncertain": false,
       "faceDetected": true,
-      "padded": true,
-      "inset": {
-        "x": 0.0,
-        "y": 0.11524460864397339,
-        "width": 1.0,
-        "height": 0.8847553913560267
-      },
+      "padded": false,
+      "inset": null,
       "crop": {
-        "x": 66,
-        "y": 0,
-        "width": 344,
-        "height": 406
+        "x": 113,
+        "y": 17,
+        "width": 251,
+        "height": 334
       },
       "derived300": "/politicians/portraits/vip216-300.webp",
       "derived600": "/politicians/portraits/vip216-600.webp",
@@ -3607,17 +3517,17 @@
     "vip217": {
       "focalPoint": {
         "x": 0.5,
-        "y": 0.38
+        "y": 0.313
       },
       "uncertain": false,
       "faceDetected": true,
       "padded": false,
       "inset": null,
       "crop": {
-        "x": 1249,
-        "y": 601,
-        "width": 1518,
-        "height": 2024
+        "x": 1276,
+        "y": 740,
+        "width": 1517,
+        "height": 2023
       },
       "derived300": "/politicians/portraits/vip217-300.webp",
       "derived600": "/politicians/portraits/vip217-600.webp",
@@ -3627,7 +3537,7 @@
     "vip218": {
       "focalPoint": {
         "x": 0.5,
-        "y": 0.38
+        "y": 0.313
       },
       "uncertain": true,
       "faceDetected": false,
@@ -3642,17 +3552,17 @@
     "vip220": {
       "focalPoint": {
         "x": 0.5,
-        "y": 0.38
+        "y": 0.313
       },
       "uncertain": false,
       "faceDetected": true,
       "padded": false,
       "inset": null,
       "crop": {
-        "x": 1694,
-        "y": 830,
-        "width": 1549,
-        "height": 2065
+        "x": 1682,
+        "y": 959,
+        "width": 1527,
+        "height": 2036
       },
       "derived300": "/politicians/portraits/vip220-300.webp",
       "derived600": "/politicians/portraits/vip220-600.webp",
@@ -3662,17 +3572,17 @@
     "vip221": {
       "focalPoint": {
         "x": 0.5,
-        "y": 0.38
+        "y": 0.313
       },
       "uncertain": false,
       "faceDetected": true,
       "padded": false,
       "inset": null,
       "crop": {
-        "x": 209,
-        "y": 80,
-        "width": 189,
-        "height": 252
+        "x": 235,
+        "y": 118,
+        "width": 138,
+        "height": 184
       },
       "derived300": "/politicians/portraits/vip221-300.webp",
       "derived600": "/politicians/portraits/vip221-600.webp",
@@ -3682,17 +3592,17 @@
     "vip225": {
       "focalPoint": {
         "x": 0.5,
-        "y": 0.38
+        "y": 0.313
       },
       "uncertain": false,
       "faceDetected": true,
       "padded": false,
       "inset": null,
       "crop": {
-        "x": 1554,
-        "y": 386,
-        "width": 1529,
-        "height": 2039
+        "x": 1501,
+        "y": 485,
+        "width": 1651,
+        "height": 2201
       },
       "derived300": "/politicians/portraits/vip225-300.webp",
       "derived600": "/politicians/portraits/vip225-600.webp",
@@ -3702,17 +3612,17 @@
     "vip226": {
       "focalPoint": {
         "x": 0.5,
-        "y": 0.38
+        "y": 0.313
       },
       "uncertain": false,
       "faceDetected": true,
       "padded": false,
       "inset": null,
       "crop": {
-        "x": 1711,
-        "y": 550,
-        "width": 1427,
-        "height": 1903
+        "x": 1714,
+        "y": 691,
+        "width": 1422,
+        "height": 1896
       },
       "derived300": "/politicians/portraits/vip226-300.webp",
       "derived600": "/politicians/portraits/vip226-600.webp",
@@ -3722,7 +3632,7 @@
     "vip227": {
       "focalPoint": {
         "x": 0.5,
-        "y": 0.38
+        "y": 0.313
       },
       "uncertain": true,
       "faceDetected": false,
@@ -3737,17 +3647,17 @@
     "vip228": {
       "focalPoint": {
         "x": 0.5,
-        "y": 0.38
+        "y": 0.313
       },
       "uncertain": false,
       "faceDetected": true,
       "padded": false,
       "inset": null,
       "crop": {
-        "x": 52,
-        "y": 14,
-        "width": 571,
-        "height": 761
+        "x": 130,
+        "y": 130,
+        "width": 415,
+        "height": 554
       },
       "derived300": "/politicians/portraits/vip228-300.webp",
       "derived600": "/politicians/portraits/vip228-600.webp",
@@ -3757,17 +3667,17 @@
     "vip229": {
       "focalPoint": {
         "x": 0.5,
-        "y": 0.38
+        "y": 0.313
       },
       "uncertain": false,
       "faceDetected": true,
       "padded": false,
       "inset": null,
       "crop": {
-        "x": 1672,
-        "y": 739,
-        "width": 1502,
-        "height": 2003
+        "x": 1806,
+        "y": 985,
+        "width": 1231,
+        "height": 1642
       },
       "derived300": "/politicians/portraits/vip229-300.webp",
       "derived600": "/politicians/portraits/vip229-600.webp",
@@ -3777,17 +3687,17 @@
     "vip230": {
       "focalPoint": {
         "x": 0.5,
-        "y": 0.38
+        "y": 0.313
       },
       "uncertain": false,
       "faceDetected": true,
       "padded": false,
       "inset": null,
       "crop": {
-        "x": 1552,
-        "y": 1006,
-        "width": 1536,
-        "height": 2049
+        "x": 1622,
+        "y": 1199,
+        "width": 1367,
+        "height": 1823
       },
       "derived300": "/politicians/portraits/vip230-300.webp",
       "derived600": "/politicians/portraits/vip230-600.webp",
@@ -3797,17 +3707,17 @@
     "vip231": {
       "focalPoint": {
         "x": 0.5,
-        "y": 0.38
+        "y": 0.313
       },
       "uncertain": false,
       "faceDetected": true,
       "padded": false,
       "inset": null,
       "crop": {
-        "x": 5,
-        "y": 0,
-        "width": 718,
-        "height": 958
+        "x": 102,
+        "y": 136,
+        "width": 523,
+        "height": 697
       },
       "derived300": "/politicians/portraits/vip231-300.webp",
       "derived600": "/politicians/portraits/vip231-600.webp",
@@ -3817,22 +3727,22 @@
     "vip232": {
       "focalPoint": {
         "x": 0.5,
-        "y": 0.38
+        "y": 0.313
       },
       "uncertain": false,
       "faceDetected": true,
       "padded": true,
       "inset": {
         "x": 0.0,
-        "y": 0.06050995865625759,
-        "width": 0.7937067803179785,
-        "height": 0.9394900413437425
+        "y": 0.0,
+        "width": 0.9034149012014587,
+        "height": 1.0000000000000002
       },
       "crop": {
-        "x": 240,
-        "y": 0,
-        "width": 690,
-        "height": 1089
+        "x": 358,
+        "y": 106,
+        "width": 572,
+        "height": 844
       },
       "derived300": "/politicians/portraits/vip232-300.webp",
       "derived600": "/politicians/portraits/vip232-600.webp",
@@ -3842,22 +3752,22 @@
     "vip233": {
       "focalPoint": {
         "x": 0.5,
-        "y": 0.38
+        "y": 0.313
       },
       "uncertain": false,
       "faceDetected": true,
       "padded": true,
       "inset": {
-        "x": 0.06907901336615725,
-        "y": 0.1475914120678476,
-        "width": 0.8542773269788559,
-        "height": 0.640707995234142
+        "x": 0.0,
+        "y": 0.0,
+        "width": 0.9999999999999998,
+        "height": 0.8738112447353797
       },
       "crop": {
-        "x": 0,
-        "y": 0,
-        "width": 700,
-        "height": 700
+        "x": 55,
+        "y": 5,
+        "width": 597,
+        "height": 695
       },
       "derived300": "/politicians/portraits/vip233-300.webp",
       "derived600": "/politicians/portraits/vip233-600.webp",
@@ -3867,17 +3777,17 @@
     "vip234": {
       "focalPoint": {
         "x": 0.5,
-        "y": 0.38
+        "y": 0.313
       },
       "uncertain": false,
       "faceDetected": true,
       "padded": false,
       "inset": null,
       "crop": {
-        "x": 1128,
-        "y": 309,
-        "width": 1301,
-        "height": 1734
+        "x": 1285,
+        "y": 548,
+        "width": 1010,
+        "height": 1347
       },
       "derived300": "/politicians/portraits/vip234-300.webp",
       "derived600": "/politicians/portraits/vip234-600.webp",
@@ -3887,22 +3797,17 @@
     "vip235": {
       "focalPoint": {
         "x": 0.5,
-        "y": 0.38
+        "y": 0.313
       },
       "uncertain": false,
       "faceDetected": true,
-      "padded": true,
-      "inset": {
-        "x": 0.09650016875987011,
-        "y": 0.1319581447520334,
-        "width": 0.90349983124013,
-        "height": 0.7830030390974696
-      },
+      "padded": false,
+      "inset": null,
       "crop": {
-        "x": 0,
-        "y": 0,
-        "width": 1028,
-        "height": 1188
+        "x": 45,
+        "y": 31,
+        "width": 828,
+        "height": 1105
       },
       "derived300": "/politicians/portraits/vip235-300.webp",
       "derived600": "/politicians/portraits/vip235-600.webp",
@@ -3912,17 +3817,17 @@
     "vip236": {
       "focalPoint": {
         "x": 0.5,
-        "y": 0.38
+        "y": 0.313
       },
       "uncertain": false,
       "faceDetected": true,
       "padded": false,
       "inset": null,
       "crop": {
-        "x": 1955,
-        "y": 645,
-        "width": 1477,
-        "height": 1969
+        "x": 1864,
+        "y": 771,
+        "width": 1462,
+        "height": 1950
       },
       "derived300": "/politicians/portraits/vip236-300.webp",
       "derived600": "/politicians/portraits/vip236-600.webp",
@@ -3932,17 +3837,17 @@
     "vip237": {
       "focalPoint": {
         "x": 0.5,
-        "y": 0.38
+        "y": 0.313
       },
       "uncertain": false,
       "faceDetected": true,
       "padded": false,
       "inset": null,
       "crop": {
-        "x": 1517,
-        "y": 596,
-        "width": 1505,
-        "height": 2007
+        "x": 1649,
+        "y": 867,
+        "width": 1195,
+        "height": 1593
       },
       "derived300": "/politicians/portraits/vip237-300.webp",
       "derived600": "/politicians/portraits/vip237-600.webp",
@@ -3952,7 +3857,7 @@
     "vip238": {
       "focalPoint": {
         "x": 0.5,
-        "y": 0.38
+        "y": 0.313
       },
       "uncertain": true,
       "faceDetected": false,
@@ -3967,17 +3872,17 @@
     "vip239": {
       "focalPoint": {
         "x": 0.5,
-        "y": 0.38
+        "y": 0.313
       },
       "uncertain": false,
       "faceDetected": true,
       "padded": false,
       "inset": null,
       "crop": {
-        "x": 1877,
-        "y": 899,
-        "width": 1528,
-        "height": 2037
+        "x": 1656,
+        "y": 857,
+        "width": 1726,
+        "height": 2302
       },
       "derived300": "/politicians/portraits/vip239-300.webp",
       "derived600": "/politicians/portraits/vip239-600.webp",
@@ -3987,7 +3892,7 @@
     "vip240": {
       "focalPoint": {
         "x": 0.5,
-        "y": 0.38
+        "y": 0.313
       },
       "uncertain": true,
       "faceDetected": false,
@@ -4002,21 +3907,21 @@
     "vip241": {
       "focalPoint": {
         "x": 0.5,
-        "y": 0.38
+        "y": 0.313
       },
       "uncertain": false,
       "faceDetected": true,
       "padded": true,
       "inset": {
-        "x": 0.14726187570036559,
-        "y": 0.16198324049046914,
-        "width": 0.8527381242996344,
-        "height": 0.6505392631198144
+        "x": 0.015503811623737408,
+        "y": 0.013547568556026698,
+        "width": 0.9844961883762626,
+        "height": 0.8935348114028039
       },
       "crop": {
         "x": 0,
         "y": 0,
-        "width": 221,
+        "width": 186,
         "height": 225
       },
       "derived300": "/politicians/portraits/vip241-300.webp",
@@ -4027,17 +3932,17 @@
     "vip242": {
       "focalPoint": {
         "x": 0.5,
-        "y": 0.38
+        "y": 0.313
       },
       "uncertain": false,
       "faceDetected": true,
       "padded": false,
       "inset": null,
       "crop": {
-        "x": 1653,
-        "y": 1299,
-        "width": 1637,
-        "height": 2183
+        "x": 1742,
+        "y": 1501,
+        "width": 1443,
+        "height": 1924
       },
       "derived300": "/politicians/portraits/vip242-300.webp",
       "derived600": "/politicians/portraits/vip242-600.webp",
@@ -4047,17 +3952,17 @@
     "vip243": {
       "focalPoint": {
         "x": 0.5,
-        "y": 0.38
+        "y": 0.313
       },
       "uncertain": false,
       "faceDetected": true,
       "padded": false,
       "inset": null,
       "crop": {
-        "x": 198,
-        "y": 77,
-        "width": 205,
-        "height": 273
+        "x": 226,
+        "y": 119,
+        "width": 149,
+        "height": 199
       },
       "derived300": "/politicians/portraits/vip243-300.webp",
       "derived600": "/politicians/portraits/vip243-600.webp",
@@ -4067,22 +3972,22 @@
     "vip244": {
       "focalPoint": {
         "x": 0.5,
-        "y": 0.38
+        "y": 0.313
       },
       "uncertain": false,
       "faceDetected": true,
       "padded": true,
       "inset": {
-        "x": 0.19208892151392537,
-        "y": 0.061937586077630565,
-        "width": 0.7808692458441499,
-        "height": 0.7814821730386899
+        "x": 0.07707507749118578,
+        "y": 0.0,
+        "width": 0.9229249225088143,
+        "height": 0.9495206691391813
       },
       "crop": {
         "x": 0,
-        "y": 0,
-        "width": 637,
-        "height": 850
+        "y": 98,
+        "width": 548,
+        "height": 752
       },
       "derived300": "/politicians/portraits/vip244-300.webp",
       "derived600": "/politicians/portraits/vip244-600.webp",
@@ -4092,17 +3997,17 @@
     "vip245": {
       "focalPoint": {
         "x": 0.5,
-        "y": 0.38
+        "y": 0.313
       },
       "uncertain": false,
       "faceDetected": true,
       "padded": false,
       "inset": null,
       "crop": {
-        "x": 64,
-        "y": 43,
-        "width": 695,
-        "height": 927
+        "x": 159,
+        "y": 184,
+        "width": 506,
+        "height": 675
       },
       "derived300": "/politicians/portraits/vip245-300.webp",
       "derived600": "/politicians/portraits/vip245-600.webp",
@@ -4112,17 +4017,17 @@
     "vip246": {
       "focalPoint": {
         "x": 0.5,
-        "y": 0.38
+        "y": 0.313
       },
       "uncertain": false,
       "faceDetected": true,
       "padded": false,
       "inset": null,
       "crop": {
-        "x": 1995,
-        "y": 675,
-        "width": 1588,
-        "height": 2118
+        "x": 2113,
+        "y": 888,
+        "width": 1366,
+        "height": 1822
       },
       "derived300": "/politicians/portraits/vip246-300.webp",
       "derived600": "/politicians/portraits/vip246-600.webp",
@@ -4132,7 +4037,7 @@
     "vip247": {
       "focalPoint": {
         "x": 0.5,
-        "y": 0.38
+        "y": 0.313
       },
       "uncertain": true,
       "faceDetected": false,
@@ -4147,17 +4052,17 @@
     "vip248": {
       "focalPoint": {
         "x": 0.5,
-        "y": 0.38
+        "y": 0.313
       },
       "uncertain": false,
       "faceDetected": true,
       "padded": false,
       "inset": null,
       "crop": {
-        "x": 1536,
-        "y": 870,
-        "width": 1650,
-        "height": 2200
+        "x": 1513,
+        "y": 983,
+        "width": 1607,
+        "height": 2142
       },
       "derived300": "/politicians/portraits/vip248-300.webp",
       "derived600": "/politicians/portraits/vip248-600.webp",
@@ -4167,17 +4072,17 @@
     "vip249": {
       "focalPoint": {
         "x": 0.5,
-        "y": 0.38
+        "y": 0.313
       },
       "uncertain": false,
       "faceDetected": true,
       "padded": false,
       "inset": null,
       "crop": {
-        "x": 1584,
-        "y": 306,
-        "width": 1627,
-        "height": 2169
+        "x": 1544,
+        "y": 391,
+        "width": 1726,
+        "height": 2302
       },
       "derived300": "/politicians/portraits/vip249-300.webp",
       "derived600": "/politicians/portraits/vip249-600.webp",
@@ -4187,17 +4092,17 @@
     "vip250": {
       "focalPoint": {
         "x": 0.5,
-        "y": 0.38
+        "y": 0.313
       },
       "uncertain": false,
       "faceDetected": true,
       "padded": false,
       "inset": null,
       "crop": {
-        "x": 171,
-        "y": 31,
-        "width": 271,
-        "height": 361
+        "x": 208,
+        "y": 86,
+        "width": 197,
+        "height": 263
       },
       "derived300": "/politicians/portraits/vip250-300.webp",
       "derived600": "/politicians/portraits/vip250-600.webp",
@@ -4207,17 +4112,17 @@
     "vip251": {
       "focalPoint": {
         "x": 0.5,
-        "y": 0.38
+        "y": 0.313
       },
       "uncertain": false,
       "faceDetected": true,
       "padded": false,
       "inset": null,
       "crop": {
-        "x": 1365,
-        "y": 372,
-        "width": 1466,
-        "height": 1954
+        "x": 1493,
+        "y": 628,
+        "width": 1171,
+        "height": 1561
       },
       "derived300": "/politicians/portraits/vip251-300.webp",
       "derived600": "/politicians/portraits/vip251-600.webp",
@@ -4227,7 +4132,7 @@
     "vip252": {
       "focalPoint": {
         "x": 0.5,
-        "y": 0.38
+        "y": 0.313
       },
       "uncertain": true,
       "faceDetected": false,
@@ -4242,7 +4147,7 @@
     "vip253": {
       "focalPoint": {
         "x": 0.5,
-        "y": 0.38
+        "y": 0.313
       },
       "uncertain": true,
       "faceDetected": false,
@@ -4257,17 +4162,17 @@
     "vip254": {
       "focalPoint": {
         "x": 0.5,
-        "y": 0.38
+        "y": 0.313
       },
       "uncertain": false,
       "faceDetected": true,
       "padded": false,
       "inset": null,
       "crop": {
-        "x": 26,
-        "y": 43,
-        "width": 711,
-        "height": 948
+        "x": 122,
+        "y": 187,
+        "width": 518,
+        "height": 691
       },
       "derived300": "/politicians/portraits/vip254-300.webp",
       "derived600": "/politicians/portraits/vip254-600.webp",
@@ -4277,7 +4182,7 @@
     "vip255": {
       "focalPoint": {
         "x": 0.5,
-        "y": 0.38
+        "y": 0.313
       },
       "uncertain": true,
       "faceDetected": false,
@@ -4292,17 +4197,17 @@
     "vip256": {
       "focalPoint": {
         "x": 0.5,
-        "y": 0.38
+        "y": 0.313
       },
       "uncertain": false,
       "faceDetected": true,
       "padded": false,
       "inset": null,
       "crop": {
-        "x": 1537,
-        "y": 546,
-        "width": 1636,
-        "height": 2181
+        "x": 1536,
+        "y": 685,
+        "width": 1624,
+        "height": 2165
       },
       "derived300": "/politicians/portraits/vip256-300.webp",
       "derived600": "/politicians/portraits/vip256-600.webp",
@@ -4312,17 +4217,17 @@
     "vip257": {
       "focalPoint": {
         "x": 0.5,
-        "y": 0.38
+        "y": 0.313
       },
       "uncertain": false,
       "faceDetected": true,
       "padded": false,
       "inset": null,
       "crop": {
-        "x": 1493,
-        "y": 365,
-        "width": 1707,
-        "height": 2275
+        "x": 1549,
+        "y": 546,
+        "width": 1618,
+        "height": 2157
       },
       "derived300": "/politicians/portraits/vip257-300.webp",
       "derived600": "/politicians/portraits/vip257-600.webp",
@@ -4332,7 +4237,7 @@
     "vip258": {
       "focalPoint": {
         "x": 0.5,
-        "y": 0.38
+        "y": 0.313
       },
       "uncertain": true,
       "faceDetected": false,
@@ -4347,17 +4252,17 @@
     "vip259": {
       "focalPoint": {
         "x": 0.5,
-        "y": 0.38
+        "y": 0.313
       },
       "uncertain": false,
       "faceDetected": true,
       "padded": false,
       "inset": null,
       "crop": {
-        "x": 1828,
-        "y": 698,
-        "width": 1636,
-        "height": 2182
+        "x": 1960,
+        "y": 943,
+        "width": 1366,
+        "height": 1822
       },
       "derived300": "/politicians/portraits/vip259-300.webp",
       "derived600": "/politicians/portraits/vip259-600.webp",
@@ -4367,17 +4272,17 @@
     "vip260": {
       "focalPoint": {
         "x": 0.5,
-        "y": 0.38
+        "y": 0.313
       },
       "uncertain": false,
       "faceDetected": true,
       "padded": false,
       "inset": null,
       "crop": {
-        "x": 1560,
-        "y": 522,
-        "width": 1619,
-        "height": 2159
+        "x": 1563,
+        "y": 689,
+        "width": 1591,
+        "height": 2122
       },
       "derived300": "/politicians/portraits/vip260-300.webp",
       "derived600": "/politicians/portraits/vip260-600.webp",
@@ -4387,17 +4292,17 @@
     "vip261": {
       "focalPoint": {
         "x": 0.5,
-        "y": 0.38
+        "y": 0.313
       },
       "uncertain": false,
       "faceDetected": true,
       "padded": false,
       "inset": null,
       "crop": {
-        "x": 1840,
-        "y": 819,
-        "width": 1448,
-        "height": 1931
+        "x": 1745,
+        "y": 838,
+        "width": 1658,
+        "height": 2211
       },
       "derived300": "/politicians/portraits/vip261-300.webp",
       "derived600": "/politicians/portraits/vip261-600.webp",
@@ -4407,17 +4312,17 @@
     "vip262": {
       "focalPoint": {
         "x": 0.5,
-        "y": 0.38
+        "y": 0.313
       },
       "uncertain": false,
       "faceDetected": true,
       "padded": false,
       "inset": null,
       "crop": {
-        "x": 203,
-        "y": 61,
-        "width": 209,
-        "height": 279
+        "x": 232,
+        "y": 104,
+        "width": 152,
+        "height": 203
       },
       "derived300": "/politicians/portraits/vip262-300.webp",
       "derived600": "/politicians/portraits/vip262-600.webp",
@@ -4427,17 +4332,17 @@
     "vip263": {
       "focalPoint": {
         "x": 0.5,
-        "y": 0.38
+        "y": 0.313
       },
       "uncertain": false,
       "faceDetected": true,
       "padded": false,
       "inset": null,
       "crop": {
-        "x": 1553,
-        "y": 592,
-        "width": 1653,
-        "height": 2205
+        "x": 1547,
+        "y": 763,
+        "width": 1573,
+        "height": 2097
       },
       "derived300": "/politicians/portraits/vip263-300.webp",
       "derived600": "/politicians/portraits/vip263-600.webp",
@@ -4447,17 +4352,17 @@
     "vip264": {
       "focalPoint": {
         "x": 0.5,
-        "y": 0.38
+        "y": 0.313
       },
       "uncertain": false,
       "faceDetected": true,
       "padded": false,
       "inset": null,
       "crop": {
-        "x": 1123,
-        "y": 480,
-        "width": 1343,
-        "height": 1791
+        "x": 1136,
+        "y": 623,
+        "width": 1263,
+        "height": 1684
       },
       "derived300": "/politicians/portraits/vip264-300.webp",
       "derived600": "/politicians/portraits/vip264-600.webp",
@@ -4467,17 +4372,17 @@
     "vip265": {
       "focalPoint": {
         "x": 0.5,
-        "y": 0.38
+        "y": 0.313
       },
       "uncertain": false,
       "faceDetected": true,
       "padded": false,
       "inset": null,
       "crop": {
-        "x": 1795,
-        "y": 546,
-        "width": 1561,
-        "height": 2081
+        "x": 1929,
+        "y": 791,
+        "width": 1271,
+        "height": 1695
       },
       "derived300": "/politicians/portraits/vip265-300.webp",
       "derived600": "/politicians/portraits/vip265-600.webp",
@@ -4487,17 +4392,17 @@
     "vip266": {
       "focalPoint": {
         "x": 0.5,
-        "y": 0.38
+        "y": 0.313
       },
       "uncertain": false,
       "faceDetected": true,
       "padded": false,
       "inset": null,
       "crop": {
-        "x": 1694,
-        "y": 764,
-        "width": 1204,
-        "height": 1605
+        "x": 1313,
+        "y": 677,
+        "width": 1657,
+        "height": 2209
       },
       "derived300": "/politicians/portraits/vip266-300.webp",
       "derived600": "/politicians/portraits/vip266-600.webp",
@@ -4507,17 +4412,17 @@
     "vip267": {
       "focalPoint": {
         "x": 0.5,
-        "y": 0.38
+        "y": 0.313
       },
       "uncertain": false,
       "faceDetected": true,
       "padded": false,
       "inset": null,
       "crop": {
-        "x": 1046,
-        "y": 486,
-        "width": 1204,
-        "height": 1605
+        "x": 1192,
+        "y": 699,
+        "width": 930,
+        "height": 1240
       },
       "derived300": "/politicians/portraits/vip267-300.webp",
       "derived600": "/politicians/portraits/vip267-600.webp",
@@ -4527,17 +4432,17 @@
     "vip268": {
       "focalPoint": {
         "x": 0.5,
-        "y": 0.38
+        "y": 0.313
       },
       "uncertain": false,
       "faceDetected": true,
       "padded": false,
       "inset": null,
       "crop": {
-        "x": 603,
-        "y": 0,
-        "width": 1640,
-        "height": 2186
+        "x": 741,
+        "y": 189,
+        "width": 1343,
+        "height": 1791
       },
       "derived300": "/politicians/portraits/vip268-300.webp",
       "derived600": "/politicians/portraits/vip268-600.webp",
@@ -4547,17 +4452,17 @@
     "vip269": {
       "focalPoint": {
         "x": 0.5,
-        "y": 0.38
+        "y": 0.313
       },
       "uncertain": false,
       "faceDetected": true,
       "padded": false,
       "inset": null,
       "crop": {
-        "x": 1499,
-        "y": 805,
-        "width": 1697,
-        "height": 2263
+        "x": 1475,
+        "y": 910,
+        "width": 1676,
+        "height": 2234
       },
       "derived300": "/politicians/portraits/vip269-300.webp",
       "derived600": "/politicians/portraits/vip269-600.webp",
@@ -4567,7 +4472,7 @@
     "vip270": {
       "focalPoint": {
         "x": 0.5,
-        "y": 0.38
+        "y": 0.313
       },
       "uncertain": true,
       "faceDetected": false,
@@ -4582,17 +4487,17 @@
     "vip271": {
       "focalPoint": {
         "x": 0.5,
-        "y": 0.38
+        "y": 0.313
       },
       "uncertain": false,
       "faceDetected": true,
       "padded": false,
       "inset": null,
       "crop": {
-        "x": 1685,
-        "y": 675,
-        "width": 1812,
-        "height": 2416
+        "x": 1694,
+        "y": 849,
+        "width": 1752,
+        "height": 2337
       },
       "derived300": "/politicians/portraits/vip271-300.webp",
       "derived600": "/politicians/portraits/vip271-600.webp",
@@ -4602,17 +4507,17 @@
     "vip272": {
       "focalPoint": {
         "x": 0.5,
-        "y": 0.38
+        "y": 0.313
       },
       "uncertain": false,
       "faceDetected": true,
       "padded": false,
       "inset": null,
       "crop": {
-        "x": 1700,
-        "y": 642,
-        "width": 1410,
-        "height": 1880
+        "x": 1822,
+        "y": 875,
+        "width": 1168,
+        "height": 1557
       },
       "derived300": "/politicians/portraits/vip272-300.webp",
       "derived600": "/politicians/portraits/vip272-600.webp",
@@ -4622,17 +4527,17 @@
     "vip273": {
       "focalPoint": {
         "x": 0.5,
-        "y": 0.38
+        "y": 0.313
       },
       "uncertain": false,
       "faceDetected": true,
       "padded": false,
       "inset": null,
       "crop": {
-        "x": 1808,
-        "y": 626,
-        "width": 1662,
-        "height": 2216
+        "x": 1859,
+        "y": 787,
+        "width": 1525,
+        "height": 2033
       },
       "derived300": "/politicians/portraits/vip273-300.webp",
       "derived600": "/politicians/portraits/vip273-600.webp",
@@ -4642,17 +4547,17 @@
     "vip274": {
       "focalPoint": {
         "x": 0.5,
-        "y": 0.38
+        "y": 0.313
       },
       "uncertain": false,
       "faceDetected": true,
       "padded": false,
       "inset": null,
       "crop": {
-        "x": 1530,
-        "y": 966,
-        "width": 1528,
-        "height": 2037
+        "x": 1646,
+        "y": 1181,
+        "width": 1328,
+        "height": 1770
       },
       "derived300": "/politicians/portraits/vip274-300.webp",
       "derived600": "/politicians/portraits/vip274-600.webp",
@@ -4662,17 +4567,17 @@
     "vip275": {
       "focalPoint": {
         "x": 0.5,
-        "y": 0.38
+        "y": 0.313
       },
       "uncertain": false,
       "faceDetected": true,
       "padded": false,
       "inset": null,
       "crop": {
-        "x": 1751,
-        "y": 660,
-        "width": 1523,
-        "height": 2031
+        "x": 1893,
+        "y": 874,
+        "width": 1271,
+        "height": 1694
       },
       "derived300": "/politicians/portraits/vip275-300.webp",
       "derived600": "/politicians/portraits/vip275-600.webp",
@@ -4682,17 +4587,17 @@
     "vip276": {
       "focalPoint": {
         "x": 0.5,
-        "y": 0.38
+        "y": 0.313
       },
       "uncertain": false,
       "faceDetected": true,
       "padded": false,
       "inset": null,
       "crop": {
-        "x": 1742,
-        "y": 677,
-        "width": 1501,
-        "height": 2001
+        "x": 1835,
+        "y": 874,
+        "width": 1325,
+        "height": 1766
       },
       "derived300": "/politicians/portraits/vip276-300.webp",
       "derived600": "/politicians/portraits/vip276-600.webp",
@@ -4702,17 +4607,17 @@
     "vip277": {
       "focalPoint": {
         "x": 0.5,
-        "y": 0.38
+        "y": 0.313
       },
       "uncertain": false,
       "faceDetected": true,
       "padded": false,
       "inset": null,
       "crop": {
-        "x": 1370,
-        "y": 476,
-        "width": 1771,
-        "height": 2361
+        "x": 1444,
+        "y": 689,
+        "width": 1608,
+        "height": 2144
       },
       "derived300": "/politicians/portraits/vip277-300.webp",
       "derived600": "/politicians/portraits/vip277-600.webp",
@@ -4722,17 +4627,17 @@
     "vip278": {
       "focalPoint": {
         "x": 0.5,
-        "y": 0.38
+        "y": 0.313
       },
       "uncertain": false,
       "faceDetected": true,
       "padded": false,
       "inset": null,
       "crop": {
-        "x": 1724,
-        "y": 501,
-        "width": 1809,
-        "height": 2412
+        "x": 1782,
+        "y": 677,
+        "width": 1739,
+        "height": 2319
       },
       "derived300": "/politicians/portraits/vip278-300.webp",
       "derived600": "/politicians/portraits/vip278-600.webp",
@@ -4742,17 +4647,17 @@
     "vip279": {
       "focalPoint": {
         "x": 0.5,
-        "y": 0.38
+        "y": 0.313
       },
       "uncertain": false,
       "faceDetected": true,
       "padded": false,
       "inset": null,
       "crop": {
-        "x": 1472,
-        "y": 606,
-        "width": 1625,
-        "height": 2167
+        "x": 1558,
+        "y": 827,
+        "width": 1400,
+        "height": 1867
       },
       "derived300": "/politicians/portraits/vip279-300.webp",
       "derived600": "/politicians/portraits/vip279-600.webp",
@@ -4762,17 +4667,17 @@
     "vip280": {
       "focalPoint": {
         "x": 0.5,
-        "y": 0.38
+        "y": 0.313
       },
       "uncertain": false,
       "faceDetected": true,
       "padded": false,
       "inset": null,
       "crop": {
-        "x": 1531,
-        "y": 509,
-        "width": 1835,
-        "height": 2447
+        "x": 1636,
+        "y": 748,
+        "width": 1570,
+        "height": 2093
       },
       "derived300": "/politicians/portraits/vip280-300.webp",
       "derived600": "/politicians/portraits/vip280-600.webp",
@@ -4782,17 +4687,17 @@
     "vip281": {
       "focalPoint": {
         "x": 0.5,
-        "y": 0.38
+        "y": 0.313
       },
       "uncertain": false,
       "faceDetected": true,
       "padded": false,
       "inset": null,
       "crop": {
-        "x": 1781,
-        "y": 649,
-        "width": 1670,
-        "height": 2227
+        "x": 1904,
+        "y": 835,
+        "width": 1535,
+        "height": 2047
       },
       "derived300": "/politicians/portraits/vip281-300.webp",
       "derived600": "/politicians/portraits/vip281-600.webp",
