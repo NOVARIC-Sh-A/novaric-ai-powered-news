@@ -191,7 +191,7 @@ function FieldValue({ value }: { value?: string | null }) {
             <OfficialLinks links={(politician as any).officialLinks} />
             <FieldSourceList sources={(politician as any).fieldSources} photoLicence={(politician as any).photoLicence} />
 
-            {politician.detailedBio && (
+            {!(politician as { dossierOwnsBio?: boolean }).dossierOwnsBio && politician.detailedBio && (
               <div className="mt-4 p-3 bg-slate-50 dark:bg-slate-800/50 rounded-xl border border-slate-200/60 dark:border-slate-700/60 text-xs text-slate-600 dark:text-slate-300 leading-relaxed">
                 {politician.detailedBio}
               </div>

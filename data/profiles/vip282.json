@@ -1,0 +1,189 @@
+{
+  "id": "vip282",
+  "slug": "nard-ndoka",
+  "accessed": "2026-11-05",
+  "conflicts": [
+    "Minister term end: en.wikipedia text says August 2008, its infobox and sq.wikipedia say 23 July 2008; Tirana Times reports the new minister sworn in on 30.07.2008; the ministry history says only 2007–2008. The page shows the ministry range.",
+    "Parliamentary years: sq.wikipedia says deputy 2005–2013; the Assembly book says he was not in legislature VII (2009–2013) and lists IV, V, VI, VIII and IX. The page follows the Assembly book.",
+    "Number of terms: a GSH/Dita interview says he was elected deputy three times; the Assembly lists five legislatures. The page follows the Assembly book.",
+    "Profession: he described himself as an auto-electrician; a Tirana Times opinion piece calls him a lathe-worker. The page shows only the sourced self-description.",
+    "The X bio still says MP, although the Assembly records his resignation on 21.02.2019.",
+    "2025 candidacy: ABC News says he headed the coalition open-list names; a Sot.al headline, now 404, quotes him as choosing not to run. The page does not state either claim."
+  ],
+  "fields": [
+    {
+      "key": "fullName",
+      "label": "Emri i plotë",
+      "display": "Nard Lazër NDOKA",
+      "verified": true,
+      "sourceUrl": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/LigjvenesitNeVite.pdf",
+      "sourceLabel": "Kuvendi i Shqipërisë, Ligjvënësit në vite"
+    },
+    {
+      "key": "baptismalName",
+      "label": "Emri i pagëzimit",
+      "display": "Mark",
+      "verified": true,
+      "sourceUrl": "https://www.cna.al/2016/05/21/nard-ndoka-sqaron-pse-ka-ndryshuar-emrin-2",
+      "sourceLabel": "CNA, 21.05.2016"
+    },
+    {
+      "key": "dateOfBirth",
+      "label": "Datëlindja",
+      "display": "Në verifikim",
+      "verified": false
+    },
+    {
+      "key": "placeOfBirth",
+      "label": "Vendlindja",
+      "display": "Në verifikim",
+      "verified": false
+    },
+    {
+      "key": "education",
+      "label": "Arsimi",
+      "display": "Në verifikim",
+      "verified": false
+    },
+    {
+      "key": "committees",
+      "label": "Komisionet parlamentare",
+      "display": "Në verifikim",
+      "verified": false
+    },
+    {
+      "key": "languages",
+      "label": "Gjuhët",
+      "display": "Në verifikim",
+      "verified": false
+    },
+    {
+      "key": "deputyMinister2012",
+      "label": "Posti i zëvendësministrit, 2012",
+      "display": "Në verifikim",
+      "verified": false
+    },
+    {
+      "key": "candidacy2025",
+      "label": "Kandidimi dhe votat, 2025",
+      "display": "Në verifikim",
+      "verified": false
+    },
+    {
+      "key": "profession",
+      "label": "Profesioni para politikës",
+      "display": "Elektro-auto në Shkodër, para vitit 1990 (deklarim i tij)",
+      "verified": true,
+      "sourceUrl": "https://arkiva.gazetadita.al/ndoka-ne-vegjeli-skam-lene-liber-pa-lexuar-filozofia-ne-facebook-corbe-elektronike/",
+      "sourceLabel": "Gazeta DITA, arkivë"
+    },
+    {
+      "key": "party",
+      "label": "Partia",
+      "display": "Partia Demokristiane e Shqipërisë (PDK)",
+      "verified": true,
+      "sourceUrl": "https://kqz.gov.al/lista-e-partive-politike",
+      "sourceLabel": "KQZ, regjistri i partive 2025"
+    },
+    {
+      "key": "constituency",
+      "label": "Qarku",
+      "display": "Qarku i Shkodrës (legjislatura IX)",
+      "verified": true,
+      "sourceUrl": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/LigjvenesitNeVite.pdf",
+      "sourceLabel": "Kuvendi i Shqipërisë, Ligjvënësit në vite"
+    },
+    {
+      "key": "minister",
+      "label": "Posti ministror",
+      "display": "Ministër i Shëndetësisë, 2007–2008",
+      "verified": true,
+      "sourceUrl": "https://shendetesia.gov.al/historiku/",
+      "sourceLabel": "Ministria e Shëndetësisë, historiku"
+    }
+  ],
+  "bio": {
+    "sq": "Nard Lazër NDOKA është kryetar i Partisë Demokristiane të Shqipërisë (PDK), sipas regjistrit të partive të KQZ-së për vitin 2025; vetë ai e daton kryesimin që nga viti 2006. Sipas listës së tij të karrierës, në vitet 1990 ka qenë ndër themeluesit e PD-së në Shkodër dhe kryetar i Bashkisë Vau i Dejës. Kuvendi i Shqipërisë e liston deputet në legjislaturat IV (1997–2001), V (2001–2005), VI (2005–2009), VIII (2013–2017) dhe IX (2017–2019), nga e cila dha dorëheqjen më 21 shkurt 2019. Nuk figuron në legjislaturën VII (2009–2013). Ka qenë ministër i Shëndetësisë në qeverinë e Sali BERISHËS në vitet 2007–2008 dhe u zëvendësua nga Anila GODO. Në zgjedhjet e vitit 2021 kandidoi në listën e PD-së në Shkodër, pa fituar mandat. Në vitin 2025 PDK ishte pjesë e koalicionit PD–Aleanca për Shqipërinë Madhështore, të regjistruar nga KQZ-ja. Më 31 maj 2025 ai deklaroi se PD-ja nuk mund të jetë më aleate e PDK-së. Në vitin 2026 ka folur publikisht për reformën zgjedhore e territoriale dhe ka kërkuar dorëheqjen e kryeministrit Edi RAMA.",
+    "en": "Nard Lazër NDOKA is chairman of the Christian Democratic Party of Albania (PDK), according to the 2025 Central Election Commission party register; he himself dates his leadership to 2006. By his own career account, in the 1990s he was among the founders of the Democratic Party in Shkodër and mayor of Vau i Dejës. The Assembly of Albania lists him as a deputy in legislatures IV (1997–2001), V (2001–2005), VI (2005–2009), VIII (2013–2017) and IX (2017–2019), resigning on 21 February 2019. He is not listed in legislature VII (2009–2013). He was Minister of Health in Sali BERISHA's government in 2007–2008 and was replaced by Anila GODO. In 2021 he stood on the Democratic Party list in Shkodër without winning a seat. In 2025 PDK was part of the PD–Alliance for a Magnificent Albania coalition registered by the CEC. On 31 May 2025 he said the Democratic Party could no longer be PDK's ally. In 2026 he has spoken on electoral and territorial reform and called for Prime Minister Edi RAMA to resign.",
+    "sources": [
+      { "label": "KQZ, regjistri i partive 2025", "url": "https://kqz.gov.al/lista-e-partive-politike" },
+      { "label": "Ministria e Shëndetësisë, historiku", "url": "https://shendetesia.gov.al/historiku/" },
+      { "label": "Kuvendi i Shqipërisë, Ligjvënësit në vite", "url": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/LigjvenesitNeVite.pdf" },
+      { "label": "CNA, 21.05.2016", "url": "https://www.cna.al/2016/05/21/nard-ndoka-sqaron-pse-ka-ndryshuar-emrin-2" },
+      { "label": "ABC News, 04.06.2025", "url": "https://abcnews.al/nuk-pati-fryme-11-maji-nard-ndoka-berisha-e-ndertoi-fushaten-mbi-unin-e-tij-vota-e-diaspores-gafe-e-opozites/" },
+      { "label": "Hashtag.al, 04.03.2025", "url": "https://www.hashtag.al/en/index.php/2025/03/04/kqz-miraton-regjistrimin-e-tre-koalicioneve-qe-do-te-marrin-pjese-ne-zgjedhjet-e-11-majit/" },
+      { "label": "CNA, 31.05.2025", "url": "https://www.cna.al/politike/krisje-nard-ndoka-nuk-mund-te-jemi-me-aleate-me-pd-ne-na-goditen-pas-sh-i431452" }
+    ]
+  },
+  "timeline": [
+    { "date": "1990", "text": "Ndër themeluesit e PD-së në Shkodër dhe anëtar i kryesisë së PD-së për disa vite (deklarim i tij).", "sourceUrl": "https://www.cna.al/2016/05/21/nard-ndoka-sqaron-pse-ka-ndryshuar-emrin-2", "sourceLabel": "CNA, 21.05.2016" },
+    { "date": "1991", "text": "Kryetar i Komitetit Pluralist në Vau të Dejës (deklarim i tij).", "sourceUrl": "https://www.cna.al/2016/05/21/nard-ndoka-sqaron-pse-ka-ndryshuar-emrin-2", "sourceLabel": "CNA, 21.05.2016" },
+    { "date": "1992", "text": "Sekretar i bashkisë së Vaut të Dejës (deklarim i tij).", "sourceUrl": "https://www.cna.al/2016/05/21/nard-ndoka-sqaron-pse-ka-ndryshuar-emrin-2", "sourceLabel": "CNA, 21.05.2016" },
+    { "date": "1996", "text": "Kryetar i bashkisë së Vaut të Dejës, kandidat i pavarur (deklarim i tij).", "sourceUrl": "https://www.cna.al/2016/05/21/nard-ndoka-sqaron-pse-ka-ndryshuar-emrin-2", "sourceLabel": "CNA, 21.05.2016" },
+    { "date": "23.07.1997–03.09.2001", "text": "Deputet, Legjislatura IV. Filloi si deputet i PD-së dhe më 2000 kaloi në PDR.", "sourceUrl": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/LigjvenesitNeVite.pdf", "sourceLabel": "Kuvendi i Shqipërisë" },
+    { "date": "03.09.2001–02.09.2005", "text": "Deputet, Legjislatura V (PDR).", "sourceUrl": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/LigjvenesitNeVite.pdf", "sourceLabel": "Kuvendi i Shqipërisë" },
+    { "date": "Legjislatura V", "text": "Kryetar i grupit parlamentar Demokristian-Reformator (deklarim i tij).", "sourceUrl": "https://www.cna.al/2016/05/21/nard-ndoka-sqaron-pse-ka-ndryshuar-emrin-2", "sourceLabel": "CNA, 21.05.2016" },
+    { "date": "02.09.2005–07.09.2009", "text": "Deputet, Legjislatura VI (PDK).", "sourceUrl": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/LigjvenesitNeVite.pdf", "sourceLabel": "Kuvendi i Shqipërisë" },
+    { "date": "2006", "text": "Kryetar i PDK-së (deklarim i tij; data e saktë nuk është e dokumentuar).", "sourceUrl": "https://www.cna.al/2016/05/21/nard-ndoka-sqaron-pse-ka-ndryshuar-emrin-2", "sourceLabel": "CNA, 21.05.2016" },
+    { "date": "2007–2008", "text": "Ministër i Shëndetësisë, 2007–2008.", "sourceUrl": "https://shendetesia.gov.al/historiku/", "sourceLabel": "Ministria e Shëndetësisë" },
+    { "date": "17.08.2008", "text": "Pas largimit nga posti i ministrit, e quajti shkelje të marrëveshjes politike të PDK-së me PD-në.", "sourceUrl": "https://www.tiranatimes.com/former-health-minister-against-berisha_105170/", "sourceLabel": "Tirana Times, 17.08.2008" },
+    { "date": "18.06.2009", "text": "Pas vrasjes së Aleksandër KEKËS, kreut të PDK-së në Malësi të Madhe, e quajti akt terrorist dhe nuk i pranoi pretendimet e policisë për të.", "sourceUrl": "https://balkaninsight.com/2009/06/18/albania-police-dead-politician-was-drug-dealer/bi/all-balkan-countries/", "sourceLabel": "Balkan Insight, 18.06.2009" },
+    { "date": "2009–2013", "text": "Nuk figuron në Legjislaturën VII.", "sourceUrl": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/LigjvenesitNeVite.pdf", "sourceLabel": "Kuvendi i Shqipërisë" },
+    { "date": "2012", "text": "Në verifikim", "verified": false },
+    { "date": "09.09.2013–09.09.2017", "text": "Deputet, Legjislatura VIII (PDK, i propozuar nga PD-ja).", "sourceUrl": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/LigjvenesitNeVite.pdf", "sourceLabel": "Kuvendi i Shqipërisë" },
+    { "date": "21.05.2016", "text": "Në një deklaratë të raportuar nga CNA, thotë se emri zyrtar është Nard Ndoka dhe se «Mark» është emri i pagëzimit.", "sourceUrl": "https://www.cna.al/2016/05/21/nard-ndoka-sqaron-pse-ka-ndryshuar-emrin-2", "sourceLabel": "CNA, 21.05.2016" },
+    { "date": "09.09.2017–21.02.2019", "text": "Deputet, Legjislatura IX (PDK, qarku i Shkodrës, listë e PD-së). Dha dorëheqjen më 21 shkurt 2019.", "sourceUrl": "https://kuvendiwebfiles.blob.core.windows.net/webfiles/LigjvenesitNeVite.pdf", "sourceLabel": "Kuvendi i Shqipërisë" },
+    { "date": "25.04.2021", "text": "Kandidat në listën e PD-së në qarkun e Shkodrës: 228 vota parapëlqyese, i fundit në listë, pa mandat.", "sourceUrl": "https://abcnews.al/lista-e-kandidateve-qe-u-renditen-te-fundit/", "sourceLabel": "ABC News" },
+    { "date": "04.03.2025", "text": "PDK, me kryetar Nard NDOKA, një nga 26 partitë e koalicionit PD–Aleanca për Shqipërinë Madhështore, u regjistrua nga KQZ-ja.", "sourceUrl": "https://www.hashtag.al/en/index.php/2025/03/04/kqz-miraton-regjistrimin-e-tre-koalicioneve-qe-do-te-marrin-pjese-ne-zgjedhjet-e-11-majit/", "sourceLabel": "Hashtag.al, 04.03.2025" },
+    { "date": "2025", "text": "Në verifikim", "verified": false, "label": "Kandidimi dhe votat" },
+    { "date": "31.05.2025", "text": "Deklaroi se PD-ja nuk mund të jetë më aleate e PDK-së.", "sourceUrl": "https://www.cna.al/politike/krisje-nard-ndoka-nuk-mund-te-jemi-me-aleate-me-pd-ne-na-goditen-pas-sh-i431452", "sourceLabel": "CNA, 31.05.2025" }
+  ],
+  "positions": [
+    { "date": "01.11.2026", "text": "I kërkon PD-së të zhbëjë Kodin Zgjedhor të 2008-s, të rënë dakord me PS-në, sepse thotë se i dëmtoi pluralizmin.", "sourceUrl": "https://gazetareforma.com/en/nard-ndoka-kritikon-pd-ne-kerkoni-ndjese-per-kodin-zgjedhor-te-2008-s-pastaj-dilni-me-studentet/", "sourceLabel": "Gazeta Reforma" },
+    { "date": "03.10.2026", "text": "Mbron më shumë se 200 bashki dhe e quan të pamjaftueshëm propozimin e PD-së për 100. Kritikon mungesën e këshillimit me aleatët.", "sourceUrl": "https://en.panorama.com.al/degjesat-me-ps-u-duken-si-muaj-mjalti-nard-ndoka-kritika-pd-se-skishim-asnje-informacion-si-aleat-per-territorialen-edhe-propozimi-per-100-bash/", "sourceLabel": "Panorama" },
+    { "date": "15.10.2026", "text": "I kërkon dorëheqjen kryeministrit Edi RAMA gjatë protestave të vitit 2026 dhe kritikon trajtimin e studentëve nga qeveria.", "sourceUrl": "https://fjala.al/koha-jote-politike-ka-mbaruar-nard-ndoka-rama-padrino-i-nje-pushteti-qe-po-shembet-mbi-veten/", "sourceLabel": "Gazeta Fjala" },
+    { "date": "04.06.2025", "text": "Kritikon strategjinë e PD-së dhe të Sali BERISHËS pas zgjedhjeve të 11 majit 2025 dhe e quan gabim të opozitës qasjen ndaj votës së diasporës.", "sourceUrl": "https://abcnews.al/nuk-pati-fryme-11-maji-nard-ndoka-berisha-e-ndertoi-fushaten-mbi-unin-e-tij-vota-e-diaspores-gafe-e-opozites/", "sourceLabel": "ABC News" }
+  ],
+  "media": [
+    { "date": "2026-11-01", "outlet": "Gazeta Reforma", "title": "Nard Ndoka kritikon PD-në: Kërkoni ndjesë për Kodin Zgjedhor të 2008-s...", "url": "https://gazetareforma.com/en/nard-ndoka-kritikon-pd-ne-kerkoni-ndjese-per-kodin-zgjedhor-te-2008-s-pastaj-dilni-me-studentet/", "summary": "I kërkon PD-së të zhbëjë ndryshimet zgjedhore të 2008-s përpara se të dalë me protestat e studentëve." },
+    { "date": "2026-10-15", "outlet": "Gazeta Fjala", "title": "“Koha jote politike ka mbaruar”/ Nard Ndoka: Rama, padrino...", "url": "https://fjala.al/koha-jote-politike-ka-mbaruar-nard-ndoka-rama-padrino-i-nje-pushteti-qe-po-shembet-mbi-veten/", "summary": "Deklaratë në rrjetet sociale kundër qeverisjes dhe mënyrës se si u trajtuan studentët." },
+    { "date": "2026-10-03", "outlet": "Panorama", "title": "The hearings with the SP seemed like a honeymoon – Nard Ndoka criticizes the DP", "url": "https://en.panorama.com.al/degjesat-me-ps-u-duken-si-muaj-mjalti-nard-ndoka-kritika-pd-se-skishim-asnje-informacion-si-aleat-per-territorialen-edhe-propozimi-per-100-bash/", "summary": "Në një tryezë të aleatëve flet për reformën territoriale dhe atë zgjedhore." },
+    { "date": null, "outlet": "Report TV", "title": "I kënaqur që nuk jam më pjesë e Kuvendit, Ndoka për Report Tv...", "url": "https://report-tv.al/lajm/i-kenaqur-qe-nuk-jam-me-pjese-e-parlamentit-ndoka-per-report-tv-berishes-i-ka-ikur-treni-per-te-protestuar-sheshi-nuk-eshte-prone-e-opozites", "summary": "Në intervistë thotë se opozita e humbi momentin për të protestuar." },
+    { "date": null, "outlet": "Albeu", "title": "Nard Ndoka: Rama must leave, his hold on power costs Albania", "url": "https://albeu.com/english/nard-ndoka-rama-must-leave-his-hold-on-power-costs-albania/1002624/", "summary": "Intervistë për Vila24, në ditën e 101-të të protestave, ku kërkon largimin e kryeministrit." },
+    { "date": "2025-06-04", "outlet": "ABC News Albania", "title": "“Nuk pati frymë”/ 11 maji, Nard Ndoka: Berisha e ndërtoi fushatën mbi unin e tij", "url": "https://abcnews.al/nuk-pati-fryme-11-maji-nard-ndoka-berisha-e-ndertoi-fushaten-mbi-unin-e-tij-vota-e-diaspores-gafe-e-opozites/", "summary": "Vlerësim pas zgjedhjeve, kritik ndaj fushatës së opozitës." },
+    { "date": null, "outlet": "NTV", "title": "Nard Ndoka: Më iku jeta në opozitë...", "url": "https://ntv.al/nard-ndoka-me-iku-jeta-ne-opozite-fitorja-ne-zgjedhje-e-pamundur-vota-e-diaspores-gafe-e-opozites/", "summary": "Përsërit vërejtjet e qershorit 2025 për fushatën dhe votën e diasporës." },
+    { "date": "2025-05-31", "outlet": "CNA", "title": "Krisje/ Nard Ndoka: Nuk mund të jemi më aleatë me PD-në", "url": "https://www.cna.al/politike/krisje-nard-ndoka-nuk-mund-te-jemi-me-aleate-me-pd-ne-na-goditen-pas-sh-i431452", "summary": "Thotë se PDK-ja nuk e sheh më PD-në si aleate." },
+    { "date": "2025-03-16", "outlet": "Vizion Plus", "title": "Sa shanse ka “Shqipëria Madhështore” të mundë Ramën?", "url": "https://www.vizionplus.tv/sa-shanse-ka-shqiperia-madheshtore-te-munde-ramen-nard-ndoka-duket-e-pamundur-por-i-ka-mbaruar-cikli/", "summary": "Intervistë para zgjedhjeve për shanset e koalicionit." },
+    { "date": "2025-03-04", "outlet": "Hashtag.al", "title": "CEC approves registration of three coalitions...", "url": "https://www.hashtag.al/en/index.php/2025/03/04/kqz-miraton-regjistrimin-e-tre-koalicioneve-qe-do-te-marrin-pjese-ne-zgjedhjet-e-11-majit/", "summary": "PDK-ja, me kryetar Nard NDOKA, figuron në koalicionin e regjistruar nga KQZ-ja." },
+    { "date": "2025-03-04", "outlet": "ABC News Albania", "title": "Berisha, një koalicion… portokalli", "url": "https://abcnews.al/berisha-nje-koalicion-portokalli-ben-bashke-greke-e-came-pensioniste-balliste-e-legaliste/", "summary": "Përshkruan përbërjen e koalicionit të regjistruar atë ditë." },
+    { "date": "2009-06-18", "outlet": "Balkan Insight", "title": "Albania Police: Dead Politician Was Drug Dealer", "url": "https://balkaninsight.com/2009/06/18/albania-police-dead-politician-was-drug-dealer/bi/all-balkan-countries/", "summary": "Vrasja e kreut lokal të PDK-së në Malësi të Madhe dhe reagimi i Nard NDOKËS." }
+  ],
+  "social": {
+    "x": {
+      "url": "https://x.com/NardNdoka",
+      "asOf": "2026-11-05",
+      "followers": 1437,
+      "following": 1519,
+      "posts": 2934,
+      "joined": "2011-11-04",
+      "frequency": "25 postime origjinale, pa përgjigjet, nga 10.10.2026 deri më 04.11.2026. Pesëmbëdhjetë prej tyre janë më 10.10.2026, klip nga një intervistë në A2 CNN.",
+      "themes": "Kritika ndaj kryeministrit Edi RAMA dhe ndaj PD-së e Sali BERISHËS; kodi zgjedhor dhe reforma territoriale; protestat e studentëve në 2026; njoftime për dalje në televizion.",
+      "sourceUrl": "https://x.com/NardNdoka",
+      "recentPosts": [
+        { "date": "2026-11-04", "text": "Koment ironik për Edi RAMËN dhe një rezultat të lidhur me Donald Trumpin.", "url": "https://x.com/NardNdoka/status/2117982902378283110" },
+        { "date": "2026-11-03", "text": "Ndaj një video të fjalës së tij pas një vizite në burg, me kritika për qeverinë.", "url": "https://x.com/NardNdoka/status/2117674604517093606" },
+        { "date": "2026-11-03", "text": "Njofton paraqitjen në MCN TV në orën 16:30.", "url": "https://x.com/NardNdoka/status/2117536290933440605" },
+        { "date": "2026-10-31", "text": "Vëren se PD-ja thirri një protestë kombëtare që përkon me protestën e studentëve.", "url": "https://x.com/NardNdoka/status/2116637014456259030" },
+        { "date": "2026-10-14", "text": "Thotë se kriza do të mbyllej po të jepte dorëheqjen kryeministri.", "url": "https://x.com/NardNdoka/status/2110451467450777927" },
+        { "date": "2026-10-10", "text": "Në një klip thotë se koalicioni me PD-në nuk ka më kuptim.", "url": "https://x.com/NardNdoka/status/2108916904366583932" },
+        { "date": "2026-10-10", "text": "Në një klip thotë se Sali BERISHA ia dha Edi RAMËS Kodin Zgjedhor në vitin 2008.", "url": "https://x.com/NardNdoka/status/2108917789297955230" },
+        { "date": "2026-10-10", "text": "Në një klip thotë se drafti territorial i PD-së nuk ndryshonte nga një draft i mëparshëm.", "url": "https://x.com/NardNdoka/status/2108914307064881175" },
+        { "date": "2026-10-10", "text": "Njofton paraqitjen në A2 CNN në orën 11:30.", "url": "https://x.com/NardNdoka/status/2108814290203660360" }
+      ]
+    },
+    "profilesOnly": [
+      { "label": "Facebook", "url": "https://www.facebook.com/nard.ndoka.7" },
+      { "label": "LinkedIn", "url": "https://www.linkedin.com/in/nard-ndoka-63678819/" }
+    ]
+  }
+}

@@ -69,8 +69,11 @@ describe('Nard Ndoka profile', () => {
     assert.equal(ndoka?.dateOfBirthVerificationStatus, null);
     assert.equal(ndoka?.education, null);
     assert.equal(ndoka?.fieldSources.committee.value, null);
-    assert.match(ndoka?.shortBio, /^Nard Ndoka është kryetar/);
-    assert.match(ndoka?.detailedBio, /^Nard Ndoka është kryetar/);
+    assert.match(ndoka?.shortBio, /^Nard Lazër NDOKA është kryetar/);
+    assert.match(ndoka?.detailedBio, /^Nard Lazër NDOKA është kryetar/);
+    assert.match(ndoka?.detailedBio, /Minister of Health in Sali BERISHA's government in 2007–2008/);
+    assert.equal(ndoka?.electoralZone, 'Qarku i Shkodrës (legjislatura IX)');
+    assert.doesNotMatch(ndoka?.shortBio, /1963|Laç|korrik 2008/);
     assert.match(ndoka?.fieldSources.photo.notes, /supplied by NOVARIC® editor \(Dr Thika\), 5 Nov 2026, source pending verification/);
     assert.equal(ndoka?.parliamentaryStatus, 'not_an_active_mp');
     assert.equal(ndoka?.photoStatus, 'Burimi i fotografisë: Në verifikim');

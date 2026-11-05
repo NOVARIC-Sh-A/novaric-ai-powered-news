@@ -34,7 +34,7 @@ describe('Legacy seven-axis fingerprint', () => {
     const fingerprint = card.indexOf('data-legacy-fingerprint="true"');
     const observatory = card.indexOf('<FactualObservatory');
     assert.ok(details > 0 && fingerprint > details && observatory > fingerprint);
-    assert.match(card, /PARAGON® Fingerprint \(7 Dimensione\)/);
+    assert.match(card, /PARAGON<sup className="registered-mark">®<\/sup> Fingerprint \(7 Dimensione\)/);
     assert.match(card, /<RadarChart/);
     assert.doesNotMatch(card, /<CountFingerprint/);
   });
