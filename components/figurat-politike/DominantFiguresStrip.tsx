@@ -4,7 +4,8 @@ import { VipProfile } from '../../types';
 import { partyColor, normalizePartySlug } from '../../lib/brand-tokens';
 import { AWAITING_DATA, PartialRatingBadge } from './primitives/awaiting';
 import { ZodiacChip } from './primitives/ZodiacChip';
-import { resolveOfficialPhotoUrl } from '../../utils/officialPhoto';
+import { PoliticianPortrait } from './PoliticianPortrait';
+import { portraitPropsFromProfile } from '../../utils/portraitStandard';
 import { selectMainProfiles } from '../../utils/politicianNavigation';
 import { useParagonRatingsEnabled } from './useParagonRatings';
 
@@ -29,7 +30,6 @@ export const DominantFiguresStrip: React.FC<DominantFiguresStripProps> = ({
         const partySlug = (item as any).party || normalizePartySlug(item.category);
         const pc = partyColor(partySlug);
         const dob = (item as any).dateOfBirth || item.dateOfBirth;
-        const photoUrl = resolveOfficialPhotoUrl(item);
         const targetId = item.numericId || item.id;
         const linkHref = `/figurat-politike/${targetId}`;
 
@@ -92,32 +92,10 @@ export const DominantFiguresStrip: React.FC<DominantFiguresStripProps> = ({
 
             {/* Profile Avatar & Name */}
             <div className="flex items-center gap-2.5 mb-2">
-              <div
-                className="w-10 h-10 rounded-full overflow-hidden shrink-0 border relative bg-slate-200 dark:bg-slate-800"
-                style={{ borderColor: pc }}
-              >
-                {photoUrl ? (
-                  <img
-                    src={photoUrl}
-                    alt={item.name}
-                    loading="lazy"
-                    className="h-full w-full object-cover"
-                    style={{ objectPosition: 'center 20%' }}
-                    onError={(e) => {
-                      e.currentTarget.style.display = 'none';
-                      const fallback = e.currentTarget.nextElementSibling as HTMLElement;
-                      if (fallback) fallback.style.display = 'flex';
-                    }}
-                  />
-                ) : null}
-                <div
-                  className="w-full h-full items-center justify-center bg-slate-200 dark:bg-slate-800 text-slate-500"
-                  style={{ display: photoUrl ? 'none' : 'flex' }}
-                >
-                  <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z" />
-                  </svg>
-                </div>
+              <div className="w-16 shrink-0" style={{ borderColor: pc }}>
+                <PoliticianPortrait
+                  {...portraitPropsFromProfile(item, { size: 'small', showCredit: false, eager: index < 2 })}
+                />
               </div>
 
               <div className="min-w-0 flex-1">

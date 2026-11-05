@@ -2,7 +2,9 @@
 import React, { useState, useMemo, useEffect } from 'react';
 import { VipProfile, ProcessedVipProfile } from '../types';
 import { ArrowUpIcon } from '../components/icons';
-import { formatVipName, processVipProfile, getSurname, getSortKey, albanianAlphabet, getProfilePhotoUrl } from '../utils/paragonProfileUtils';
+import { formatVipName, processVipProfile, getSurname, getSortKey, albanianAlphabet } from '../utils/paragonProfileUtils';
+import { PoliticianPortrait } from '../components/figurat-politike/PoliticianPortrait';
+import { portraitPropsFromProfile } from '../utils/portraitStandard';
 import { PoliticianComparisonModal } from '../components/PoliticianComparisonModal';
 import { CategoryNavigation } from '../components/CategoryNavigation';
 import { ParagonInfoBox } from '../components/ParagonInfoBox';
@@ -30,19 +32,9 @@ const MostClickedSection: React.FC<{ profiles: (VipProfile & { clicks: number })
               aria-label={`Shiko profilin për ${profile.name}`}
             >
               <span className="text-lg font-bold text-primary-600 dark:text-primary-400">{index + 1}.</span>
-              <img
-                src={getProfilePhotoUrl(profile)}
-                onError={(e) => {
-                    const gender = profile?.gender?.toLowerCase();
-                    e.currentTarget.src =
-                        gender === "female" || gender === "f"
-                            ? "https://novaric.co/wp-content/uploads/2025/11/FemaleProfile.jpg"
-                            : "https://novaric.co/wp-content/uploads/2025/11/MaleProfile.jpg";
-                }}
-                alt={profile.name}
-                style={{ objectFit: "cover" }}
-                className="w-10 h-10 rounded-full object-cover"
-              />
+              <div className="w-12 shrink-0">
+                <PoliticianPortrait {...portraitPropsFromProfile(profile, { size: 'small', showCredit: false })} />
+              </div>
               <div className="text-left">
                 <p className="font-semibold text-sm">{formatVipName(profile.name)}</p>
                 <p className="text-xs text-slate-500 dark:text-slate-400">{profile.clicks} klikime</p>

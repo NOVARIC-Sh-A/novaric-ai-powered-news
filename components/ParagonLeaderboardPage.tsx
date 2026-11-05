@@ -7,7 +7,9 @@ import {
   getParagonTrends,
   getCrisisAlerts,
 } from "../services/paragonEngine";
-import { formatVipName, getProfilePhotoUrl } from "../utils/paragonProfileUtils";
+import { formatVipName } from "../utils/paragonProfileUtils";
+import { PoliticianPortrait } from "./figurat-politike/PoliticianPortrait";
+import { portraitPropsFromProfile } from "../utils/portraitStandard";
 import { PARTIAL_RANKING_LABEL, PARTIAL_RATING_NOTE, PartialRatingBadge } from "./figurat-politike/primitives/awaiting";
 
 interface ParagonLeaderboardPageProps {
@@ -190,19 +192,9 @@ export const ParagonLeaderboardPage: React.FC<ParagonLeaderboardPageProps> = ({
               </div>
 
               {/* Photo */}
-              <img
-                src={getProfilePhotoUrl(p)}
-                onError={(e) => {
-                    const gender = p?.gender?.toLowerCase();
-                    e.currentTarget.src =
-                        gender === "female" || gender === "f"
-                            ? "https://novaric.co/wp-content/uploads/2025/11/FemaleProfile.jpg"
-                            : "https://novaric.co/wp-content/uploads/2025/11/MaleProfile.jpg";
-                }}
-                alt={p.name}
-                style={{ objectFit: "cover" }}
-                className="w-20 h-20 rounded-md object-cover border border-slate-300 dark:border-slate-600"
-              />
+              <div className="w-20 shrink-0">
+                <PoliticianPortrait {...portraitPropsFromProfile(p, { size: 'small', showCredit: false })} />
+              </div>
 
               {/* Details */}
               <div className="flex-grow">

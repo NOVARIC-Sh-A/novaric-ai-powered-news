@@ -4,7 +4,8 @@ import { VipProfile } from '../types';
 import { municipalityPerformanceData, shkoderPoliticalData } from '../data/mockShkoderData';
 import { PieChart } from './PieChart';
 import { BarChart } from './BarChart';
-import { getProfilePhotoUrl } from '../utils/paragonProfileUtils';
+import { PoliticianPortrait } from './figurat-politike/PoliticianPortrait';
+import { portraitPropsFromProfile } from '../utils/portraitStandard';
 
 interface ShkoderPoliticsPageProps {
   profiles: VipProfile[];
@@ -56,19 +57,9 @@ export const ShkoderPoliticsPage: React.FC<ShkoderPoliticsPageProps> = ({ profil
         <section className="mb-12 p-6 bg-slate-50 dark:bg-slate-900/50 rounded-xl shadow-inner">
             <h2 className="text-2xl font-bold text-center text-slate-800 dark:text-slate-200 mb-6">Analiza e Kryetarit të Bashkisë: Benet Beci</h2>
             <div className="flex flex-col md:flex-row items-center gap-6 mb-6">
-                 <img
-                    src={getProfilePhotoUrl(mayor)}
-                    onError={(e) => {
-                        const gender = mayor?.gender?.toLowerCase();
-                        e.currentTarget.src =
-                            gender === "female" || gender === "f"
-                                ? "https://novaric.co/wp-content/uploads/2025/11/FemaleProfile.jpg"
-                                : "https://novaric.co/wp-content/uploads/2025/11/MaleProfile.jpg";
-                    }}
-                    alt={mayor.name}
-                    style={{ objectFit: "cover" }}
-                    className="w-24 h-24 rounded-full object-cover border-4 border-primary-500/50 shadow-lg"
-                />
+                 <div className="w-24 shrink-0">
+                    <PoliticianPortrait {...portraitPropsFromProfile(mayor, { size: 'small', showCredit: true })} />
+                 </div>
                 <div>
                     <p className="text-lg text-slate-700 dark:text-slate-300">Vlerësim i detajuar i karakteristikave kyçe të lidershipit bazuar në performancën publike.</p>
                      <div className="flex flex-wrap gap-4 mt-2">

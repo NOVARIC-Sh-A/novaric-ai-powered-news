@@ -20,7 +20,9 @@ import {
   InformationCircleIcon
 } from './icons';
 import { MiniRadarChart } from './MiniRadarChart';
-import { formatVipName, getProfilePhotoUrl } from '../utils/paragonProfileUtils';
+import { formatVipName } from '../utils/paragonProfileUtils';
+import { PoliticianPortrait } from './figurat-politike/PoliticianPortrait';
+import { portraitPropsFromProfile } from '../utils/portraitStandard';
 
 interface PoliticianCardProps {
   profile: ProcessedVipProfile;
@@ -101,8 +103,9 @@ export const PoliticianCard = React.memo<PoliticianCardProps>(
 
               <div className="flex-grow flex flex-col items-center text-center pl-8">
                 <div className="relative mb-3">
-                  <img src={getProfilePhotoUrl(profile)} alt={profile.name} className="w-28 h-28 rounded-full object-cover border-4 border-slate-200 dark:border-slate-600 shadow-md" />
-                  <div className={`absolute -bottom-1 right-0 text-white rounded-full h-10 w-10 flex items-center justify-center ${partyColor} text-[10px] font-black shadow-lg border-2 border-white dark:border-slate-800`}>{partyLabel}</div>
+                  <div className="w-28">
+                    <PoliticianPortrait {...portraitPropsFromProfile(profile, { size: 'small', showCredit: false, partyLabel })} />
+                  </div>
                 </div>
 
                 <h3 className="text-xl font-bold text-slate-800 dark:text-slate-100 tracking-tight">{formatVipName(profile.name)}</h3>
