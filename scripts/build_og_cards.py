@@ -48,6 +48,40 @@ def text_width(draw: ImageDraw.ImageDraw, text: str, face: ImageFont.FreeTypeFon
     return int(draw.textlength(text, font=face))
 
 
+def _smaller(face: ImageFont.FreeTypeFont, ratio: float = 0.58) -> ImageFont.FreeTypeFont:
+    return font(face.path, max(1, int(round(face.size * ratio))))
+
+
+def _mark_is_oversized(face: ImageFont.FreeTypeFont, mark: str) -> bool:
+    cap = face.getbbox("H")
+    glyph = face.getbbox(mark)
+    cap_h = cap[3] - cap[1]
+    mark_h = glyph[3] - glyph[1]
+    return cap_h > 0 and mark_h > cap_h * 0.7
+
+
+def draw_marked(draw: ImageDraw.ImageDraw, xy: tuple[int, int], text: str, face: ImageFont.FreeTypeFont, fill: tuple[int, int, int]) -> None:
+    """Draw ® (and an oversized ™) at about 58% size, top near the cap height, with no gap before it."""
+    x, y = xy
+    cap_top = face.getbbox("H")[1]
+    run = ""
+    for char in text:
+        superscript = char == "®" or (char == "™" and _mark_is_oversized(face, char))
+        if superscript:
+            if run:
+                draw.text((x, y), run, font=face, fill=fill)
+                x += text_width(draw, run, face)
+                run = ""
+            small = _smaller(face)
+            mark_top = small.getbbox(char)[1]
+            draw.text((x, y + cap_top - mark_top), char, font=small, fill=fill)
+            x += text_width(draw, char, small)
+        else:
+            run += char
+    if run:
+        draw.text((x, y), run, font=face, fill=fill)
+
+
 def paste_rounded(base: Image.Image, image: Image.Image, xy: tuple[int, int], radius: int) -> None:
     mask = Image.new("L", image.size, 0)
     ImageDraw.Draw(mask).rounded_rectangle((0, 0, image.size[0] - 1, image.size[1] - 1), radius=radius, fill=255)
@@ -84,7 +118,7 @@ def draw_chrome() -> Image.Image:
     draw.rectangle((0, CONTENT_BOTTOM + 4, W, H), fill=WHITE)
 
     slogan_font = font(FONT_BOLD, 22)
-    draw.text((96, HEADER_H + 18), SLOGAN_TEXT, font=slogan_font, fill=SLOGAN)
+    draw_marked(draw, (96, HEADER_H + 18), SLOGAN_TEXT, slogan_font, SLOGAN)
 
     dark = fit_logo(LOGO_DARK, 58)
     card.paste(dark, (W - 36 - dark.width, (HEADER_H - dark.height) // 2), dark)
@@ -97,7 +131,7 @@ def draw_chrome() -> Image.Image:
     text_x = 28 + light.width + 22
     brand = font(FONT_BOLD, 26)
     domain = font(FONT_BOLD, 20)
-    draw.text((text_x, footer_top + 28), "NOVARIC® Sh.A.", font=brand, fill=NAVY)
+    draw_marked(draw, (text_x, footer_top + 28), "NOVARIC® Sh.A.", brand, NAVY)
     draw.text((text_x, footer_top + 62), "media.novaric.al", font=domain, fill=CONTACT_LIGHT)
     return card
 
@@ -111,7 +145,7 @@ def listing_card() -> Image.Image:
     draw.text((96, 168), "Figurat Politike", font=title_font, fill=WHITE)
     draw.text((96, 240), "Profilet e figurave", font=sub_font, fill=CYAN)
     draw.text((96, 276), "politike shqiptare", font=sub_font, fill=CYAN)
-    draw.text((96, 328), "PARAGON®", font=para, fill=WHITE)
+    draw_marked(draw, (96, 328), "PARAGON®", para, WHITE)
 
     tile_w, tile_h = 108, 144
     gap = 14

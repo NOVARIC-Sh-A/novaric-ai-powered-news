@@ -176,7 +176,7 @@ export const ParagonLeaderboardPage: React.FC<ParagonLeaderboardPageProps> = ({
           className="text-3xl sm:text-4xl font-extrabold text-white mb-8 text-center leading-tight drop-shadow-md"
           style={{ textShadow: "0 2px 4px rgba(0,0,0,0.8)" }}
         >
-          Renditja PARAGON<sup className="text-white ml-1">®</sup> — {PARTIAL_RANKING_LABEL}
+          Renditja PARAGON<sup className="registered-mark text-white">®</sup> — {PARTIAL_RANKING_LABEL}
         </h1>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">

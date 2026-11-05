@@ -48,7 +48,7 @@ export const PoliticalProfileHeader: React.FC<PoliticalProfileHeaderProps> = ({ 
             <span className={`text-6xl font-extrabold ${scoreColorClass} ${liveScore ? 'animate-pulse' : ''}`}>
                 {displayScore}
             </span>
-            <span className="text-lg font-semibold text-slate-500 dark:text-slate-400">Pikët PARAGON®</span>
+            <span className="text-lg font-semibold text-slate-500 dark:text-slate-400">Pikët PARAGON<sup className="registered-mark">®</sup></span>
           </div>
           <div className="text-xs text-slate-500 dark:text-slate-400 mt-1 space-x-3">
             <span>Mes. Partisë: {partyAvg}</span>
