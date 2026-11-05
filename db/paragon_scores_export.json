@@ -742,10 +742,10 @@
       "presumptionOfInnocence": true,
       "legalStatusAsOf": "2026-09-24",
       "legalStatusSummary": "Kryetar i Partisë së Lirisë dhe Ish-President. Ndodhet në proces gjyqësor me masë paraburgimi; zbatohet parimi kushtetues i prezumimit të pafajësisë.",
-      "imageUrl": null,
+      "imageUrl": "/photos/originals/ilir_meta.png",
       "photo_source_url": null,
-      "photoPending": true,
-      "photoStatus": "Në pritje të të dhënave / Awaiting data",
+      "photoPending": false,
+      "photoStatus": "Burimi i fotografisë: Në verifikim",
       "shortBio": null,
       "detailedBio": null,
       "dynamicScore": null,
@@ -786,11 +786,11 @@
           "retrievedAt": "2026-10-31"
         },
         "photo": {
-          "value": "",
-          "sourceUrl": "",
-          "retrievedAt": "2026-10-31",
-          "licence": "",
-          "notes": "no official portrait; Commons file is a European Commission audiovisual still, not a presidency portrait. president.al blocked automated access."
+          "value": "/photos/originals/ilir_meta.png",
+          "sourceUrl": null,
+          "retrievedAt": "2026-11-05",
+          "licence": null,
+          "notes": "supplied by NOVARIC® editor (Dr Thika), 5 Nov 2026, source pending verification. Original PNG kept unchanged (565x543 RGB, sha256 3907af802621594eccd69c7fc67eabebb0d7ddc2307a651e0d02438687e36fb3). Credit: Burimi i fotografisë: Në verifikim. Not an official publication. No photographer and no licence."
         },
         "fullName": {
           "value": "Ilir Meta",

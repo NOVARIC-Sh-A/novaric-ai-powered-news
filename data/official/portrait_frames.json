@@ -49,13 +49,23 @@
         "x": 0.5,
         "y": 0.313
       },
-      "uncertain": true,
-      "faceDetected": false,
-      "padded": false,
-      "inset": null,
-      "crop": null,
-      "derived300": null,
-      "derived600": null,
+      "uncertain": false,
+      "faceDetected": true,
+      "padded": true,
+      "inset": {
+        "x": 0.0,
+        "y": 0.0,
+        "width": 1.0,
+        "height": 0.8254236233597679
+      },
+      "crop": {
+        "x": 60,
+        "y": 19,
+        "width": 476,
+        "height": 524
+      },
+      "derived300": "/politicians/portraits/vip3-300.webp",
+      "derived600": "/politicians/portraits/vip3-600.webp",
       "editorialOverride": false,
       "reference": false
     },

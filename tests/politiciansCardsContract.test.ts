@@ -1,5 +1,6 @@
 import { test, describe } from 'node:test';
 import assert from 'node:assert/strict';
+import { createHash } from 'node:crypto';
 import fs from 'node:fs';
 import path from 'node:path';
 import { getProfilePhotoUrl } from '../utils/paragonProfileUtils';
@@ -75,7 +76,7 @@ describe('NOVARIC® PARAGON Politicians Cards & Pipeline Contract (P1)', () => {
       assert.ok(!raw.includes('MaleProfile') && !raw.includes('FemaleProfile'), `${card.id} uses mock photo`);
     });
     assert.equal(official + awaiting, 234);
-    assert.equal(awaiting, 25, 'profiles with no formal party, government, parliament, or editor-supplied portrait');
+    assert.equal(awaiting, 24, 'profiles with no formal party, government, parliament, or editor-supplied portrait');
   });
 
   test('Approved replacements point at the official Parliament / Commons sources', () => {
@@ -85,6 +86,15 @@ describe('NOVARIC® PARAGON Politicians Cards & Pipeline Contract (P1)', () => {
       const c: any = byId.get(id);
       assert.ok(c.imageUrl.startsWith('https://kuvendiwebfiles.blob.core.windows.net/'), `${id}: ${c.imageUrl}`);
     });
+    const meta: any = byId.get('vip3');
+    assert.equal(meta.name, 'Ilir Meta');
+    assert.equal(meta.imageUrl, '/photos/originals/ilir_meta.png');
+    assert.equal(meta.photoPending, false);
+    assert.equal(meta.photoStatus, UNVERIFIED_PHOTO_CREDIT);
+    assert.equal(meta.photoLicence, null);
+    assert.equal(isOfficialPhotoUrl(meta.imageUrl), false);
+    const original = fs.readFileSync(path.resolve(process.cwd(), 'public/photos/originals/ilir_meta.png'));
+    assert.equal(createHash('sha256').update(original).digest('hex'), '3907af802621594eccd69c7fc67eabebb0d7ddc2307a651e0d02438687e36fb3');
     ['vip2', 'vip7', 'vip233'].forEach((id) => {
       const c: any = byId.get(id);
       assert.equal(c.imageUrl, `/politicians/official/${id}.jpg`);

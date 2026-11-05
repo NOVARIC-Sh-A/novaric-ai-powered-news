@@ -72,7 +72,7 @@ class TestOfficialPhotos(unittest.TestCase):
             profiles = json.load(f)["profiles"]
         self.assertEqual(len(profiles), 234)
         pending = [p for p in profiles if p.get("photoPending")]
-        self.assertEqual(len(pending), 25)
+        self.assertEqual(len(pending), 24)
         for p in profiles:
             if p.get("photoPending"):
                 self.assertIsNone(p.get("imageUrl"))
@@ -116,6 +116,9 @@ class TestOfficialPhotos(unittest.TestCase):
                 img = c.get("imageUrl")
                 if img is None:
                     self.assertEqual(c.get("photoStatus"), AWAITING_PHOTO_STATUS)
+                elif is_editor_supplied_photo(img):
+                    self.assertEqual(c.get("photoStatus"), UNVERIFIED_PHOTO_CREDIT)
+                    self.assertIsNone(c.get("photoLicence"))
                 else:
                     self.assertTrue(img.startswith("/politicians/official/") or is_official_photo_source(img), img)
         finally:
