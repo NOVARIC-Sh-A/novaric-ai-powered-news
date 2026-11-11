@@ -1517,6 +1517,12 @@
           "retrievedAt": "2026-10-31",
           "notes": "Parliament CV"
         },
+        "profession": {
+          "value": "Ekonomist",
+          "sourceUrl": "mailto:belind.kellici@parlament.al",
+          "retrievedAt": "2026-11-11",
+          "notes": "Subject's own written confirmation by email on 11 Nov 2026 from Belind.Kellici@parlament.al. Approved by NOVARIC® Sh.A. editorial decision (Dr Alban Gj. THIKA, 11 Nov 2026). English: Economist."
+        },
         "currentRole": {
           "value": "Deputet i Kuvendit të Shqipërisë",
           "sourceUrl": "https://kuvendiapi.azurewebsites.net/api/anetaret/ba651771-4c82-4353-97c3-ee24ef9ef2f8",
@@ -1655,7 +1661,7 @@
       "bio": {
         "fullName": "Belind Këlliçi",
         "education": "Ka kryer studimet universitare në Shtetet e Bashkuara të Amerikës në universitetin Coppin State University , ku është diplomuar për shkenca menaxhimi me vlerësimi",
-        "profession": null,
+        "profession": "Ekonomist",
         "email": "belind.kellici@parlament.al",
         "party": "PD-ASHM",
         "activeStatus": true
