@@ -1012,6 +1012,10 @@ export interface TvShowData {
     discussionQuality: number;
   };
   maragonSummary?: MaragonDimensionScores;
+  /** Absent means the show's scores are not assessed. */
+  maragonAssessmentStatus?: MaragonAssessmentStatus;
+  scoringSuspended?: boolean;
+  methodologyApproved?: boolean;
 }
 
 export interface MaragonIndicatorScore {
@@ -1023,6 +1027,10 @@ export interface MaragonFullReport extends MaragonDimensionScores {
   entityId: string;
   entityType: 'individual' | 'tvShow';
   compositeScore: number;
+  /** Absent or anything other than approved keeps the numbers unpublished. */
+  assessmentStatus?: MaragonAssessmentStatus;
+  scoringSuspended?: boolean;
+  methodologyApproved?: boolean;
   benchmarks: {
     peerAverage: MaragonDimensionScores;
     standardAdherence: MaragonDimensionScores;

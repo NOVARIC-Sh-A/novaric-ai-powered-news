@@ -3,6 +3,7 @@ import { ProcessedVipProfile } from "../types";
 import { getHeatColor } from "../utils/heatmapColors";
 import { getProfilePhotoUrl } from "../utils/paragonProfileUtils";
 import { formatPersonName } from "../utils/formatPersonName";
+import { rankableMaragonScore } from "../utils/maragonPublication";
 
 /**
  * Renders a Top 10 ranking of media personalities based on MARAGON® score.
@@ -17,13 +18,10 @@ export const Top10MediaInfluencers: React.FC<{
     const arr = Object.values(profiles) as ProcessedVipProfile[];
 
     return arr
-      .filter((p) => p?.processedAnalysis?.overallScore !== undefined)
-      .sort(
-        (a, b) =>
-          // FIX: overallScore is now safely accessible because of the cast above.
-          (b.processedAnalysis.overallScore ?? 0) - (a.processedAnalysis.overallScore ?? 0)
-      )
-      .slice(0, 10); // Top 10 only
+      .map((profile) => ({ profile, score: rankableMaragonScore(profile) }))
+      .filter((entry): entry is { profile: ProcessedVipProfile; score: number } => entry.score !== null)
+      .sort((a, b) => b.score - a.score || String(a.profile.name).localeCompare(String(b.profile.name)))
+      .slice(0, 10);
   }, [profiles]);
 
   if (list.length === 0) return null;
@@ -35,8 +33,7 @@ export const Top10MediaInfluencers: React.FC<{
       </h2>
 
       <div className="space-y-4">
-        {list.map((p, index) => {
-          const score = p.processedAnalysis.overallScore;
+        {list.map(({ profile: p, score }, index) => {
           const heat = getHeatColor(score);
 
           return (

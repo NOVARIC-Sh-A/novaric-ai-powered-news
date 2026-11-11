@@ -23,8 +23,12 @@ export interface MaragonPublicationInput {
   id?: string | number | null;
   category?: string | null;
   maragonAssessmentStatus?: MaragonAssessmentStatus | null;
+  /** Report and show payloads use this name; it is the same gate as maragonAssessmentStatus. */
+  assessmentStatus?: MaragonAssessmentStatus | null;
   biographyStatus?: MaragonBiographyStatus | null;
   scoringSuspended?: boolean | null;
+  /** Required before a report or a TV-show gauge may show a number. */
+  methodologyApproved?: boolean | null;
 }
 
 export function notAssessedLabel(lang: MaragonLanguage = 'sq'): string {
@@ -50,7 +54,50 @@ export function isMediaProfile(profile: MaragonPublicationInput | null | undefin
 export function isMaragonAssessmentPublished(profile: MaragonPublicationInput | null | undefined): boolean {
   if (!profile) return false;
   if (profile.scoringSuspended === true) return false;
-  return profile.maragonAssessmentStatus === 'approved';
+  const status = profile.maragonAssessmentStatus ?? profile.assessmentStatus;
+  return status === 'approved';
+}
+
+/**
+ * Numeric report and show gauges. Approval alone is not enough:
+ * an approved methodology has to be recorded as well.
+ * A dev preview does not unlock these numbers.
+ */
+export function maragonScoresArePublic(entity: MaragonPublicationInput | null | undefined): boolean {
+  if (!isMaragonAssessmentPublished(entity)) return false;
+  return entity?.methodologyApproved === true;
+}
+
+/**
+ * A show's mock gauges stay hidden unless the show itself has an approved
+ * methodology, and a linked media host is not itself unpublished.
+ */
+export function maragonShowScoresArePublic(
+  show: MaragonPublicationInput | null | undefined,
+  host?: MaragonPublicationInput | null,
+): boolean {
+  if (host && isMediaProfile(host) && !isMaragonAssessmentPublished(host)) return false;
+  return maragonScoresArePublic(show);
+}
+
+/** Score used for ordering. Unpublished and unknown values are null, never 0. */
+export function rankableMaragonScore(profile: (MaragonPublicationInput & {
+  maragonAnalysis?: Array<{ score?: unknown }> | null;
+  latestScore?: unknown;
+  aletheiaScore?: unknown;
+  averageMaragonScore?: unknown;
+  processedAnalysis?: { overallScore?: unknown } | null;
+}) | null | undefined): number | null {
+  if (!isMaragonAssessmentPublished(profile)) return null;
+  const average = publishedMaragonAverage(profile);
+  if (average !== null) return average;
+  const explicit = firstPublishedScore(profile, [
+    profile?.latestScore,
+    profile?.aletheiaScore,
+    profile?.averageMaragonScore,
+  ]);
+  if (explicit !== null) return explicit;
+  return measuredNumber(profile?.processedAnalysis?.overallScore);
 }
 
 /**

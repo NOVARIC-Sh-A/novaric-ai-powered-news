@@ -56,6 +56,9 @@ export const fetchMaragonReport = async (
   const mockReport: MaragonFullReport = {
     entityId: String(entityId),
     entityType: entityType,
+    assessmentStatus: 'not_assessed',
+    scoringSuspended: true,
+    methodologyApproved: false,
     compositeScore: 82,
     Readiness: 88,
     Aptitude: 92,
