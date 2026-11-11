@@ -8,6 +8,16 @@ import { LikertScaleVote } from './LikertScaleVote';
 import { SimplePoll } from './SimplePoll';
 import { AriesIcon, TaurusIcon, GeminiIcon, CancerIcon, LeoIcon, VirgoIcon, LibraIcon, ScorpioIcon, SagittariusIcon, CapricornIcon, AquariusIcon, PiscesIcon, ChartBarIcon, ArrowPathIcon, InformationCircleIcon } from './icons';
 import { formatVipName, getProfilePhotoUrl } from '../utils/paragonProfileUtils';
+import { useLanguage } from '../contexts/LanguageContext';
+import {
+  firstPublishedScore,
+  isMediaProfile as profileIsMedia,
+  isMaragonAssessmentPublished,
+  measuredNumber,
+  notAssessedLabel,
+  publishedSeries,
+} from '../utils/maragonPublication';
+import { MaragonDossierView } from './maragon/MaragonDossierView';
 import { MaragonSummaryDisplay } from './MaragonSummaryDisplay';
 import { PsycholinguisticSpectrogram } from './PsycholinguisticSpectrogram';
 import { LetheVoidMap } from './LetheVoidMap';
@@ -48,12 +58,14 @@ const ZodiacDisplay: React.FC<{ sign: ZodiacSign, onNavigate: () => void }> = ({
 };
 
 export const VipProfilePage: React.FC<VipProfilePageProps> = ({ profile, onBack, onNavigateToTvShow, tvShows, onNavigateToZodiacInfoPage, onNavigateToMaragonReport }) => {
+  const { language } = useLanguage();
   const displayName = formatVipName(profile.name);
   const pageTitle = `${displayName} | Profili | NOVARIC® AI-Powered News`;
+  const unassessedLabel = notAssessedLabel(language);
   useSeo(pageTitle, profile.shortBio, profile.imageUrl, undefined, undefined, displayName);
 
   // Determine if this is a Media Profile for special styling
-  const isMediaProfile = (profile.category || '').toLowerCase().includes('media');
+  const isMediaProfile = profileIsMedia(profile);
 
   const [vote, setVote] = useState<number | null>(() => {
     const saved = localStorage.getItem(`vote_${profile.id}`);
@@ -102,37 +114,52 @@ export const VipProfilePage: React.FC<VipProfilePageProps> = ({ profile, onBack,
     },
   };
   
-  // Horizon Rigidity Visualization (Visual Slider)
-  const horizonRigidity = profile.horizonRigidity ?? 0; 
-  const aletheiaScore = profile.aletheiaScore ?? profile.averageMaragonScore ?? 0;
-  const aletheiaColor = aletheiaScore > 80 ? 'text-green-400' : aletheiaScore > 50 ? 'text-yellow-400' : 'text-red-400';
+  // Media assessments stay unpublished until the MARAGON® gate opens.
+  // Other dossiers on this page keep their previous score display.
+  const mediaSubject = isMediaProfile;
+  const mediaPublished = mediaSubject && isMaragonAssessmentPublished(profile);
+  const horizonRigidity = mediaSubject
+    ? (mediaPublished ? measuredNumber(profile.horizonRigidity) : null)
+    : (profile.horizonRigidity ?? 0);
+  const aletheiaScore = mediaSubject
+    ? firstPublishedScore(profile, [profile.aletheiaScore, profile.averageMaragonScore])
+    : (profile.aletheiaScore ?? profile.averageMaragonScore ?? 0);
+  const aletheiaMeasured = typeof aletheiaScore === 'number';
+  const aletheiaColor = !aletheiaMeasured
+    ? 'text-slate-500'
+    : aletheiaScore > 80 ? 'text-green-400' : aletheiaScore > 50 ? 'text-yellow-400' : 'text-red-400';
 
   // --- Radar Chart Setup for Profile Page ---
   const radarLabels = profile.maragonAnalysis?.map(d => d.dimension.split(' ').slice(0,2).join(' ')) || [];
-  const radarValues = profile.maragonAnalysis?.map(d => d.score) || [];
+  const publishedRadar = mediaSubject
+    ? publishedSeries(profile, profile.maragonAnalysis?.map(d => d.score))
+    : (profile.maragonAnalysis?.map(d => d.score) || null);
+  const drawMediaPolygon = !mediaSubject || (mediaPublished && publishedRadar !== null);
   
   const radarData = {
-      labels: radarLabels,
-      datasets: [
+      labels: radarLabels.length > 0 ? radarLabels : ['R', 'A', 'G', 'O'],
+      datasets: drawMediaPolygon && publishedRadar ? [
           {
               label: 'Target (Benchmark)',
-              data: [90, 90, 90, 90, 90, 90, 90], // Ideal
+              data: publishedRadar.map(() => 90),
               backgroundColor: 'rgba(255, 255, 255, 0.05)',
               borderColor: 'rgba(255, 255, 255, 0.2)',
               borderWidth: 1,
               pointRadius: 0,
-              borderDash: [5, 5]
+              borderDash: [5, 5],
+              spanGaps: false,
           },
           {
               label: displayName,
-              data: radarValues,
+              data: publishedRadar,
               backgroundColor: 'rgba(14, 165, 233, 0.2)',
               borderColor: '#0ea5e9',
               borderWidth: 2,
               pointBackgroundColor: '#0ea5e9',
               pointBorderColor: '#fff',
+              spanGaps: false,
           }
-      ]
+      ] : []
   };
 
   const radarOptions: any = {
@@ -151,8 +178,12 @@ export const VipProfilePage: React.FC<VipProfilePageProps> = ({ profile, onBack,
       }
   };
 
+  if (isMediaProfile) {
+    return <MaragonDossierView profile={profile} onBack={onBack} />;
+  }
+
   return (
-    <main className={`flex-grow container mx-auto px-4 py-8 ${isMediaProfile ? 'font-sans' : ''}`}>
+    <main className="flex-grow container mx-auto px-4 py-8">
       <JsonLd data={jsonLdData} />
       
       {/* Dark Mode Analytics Container */}
@@ -219,15 +250,21 @@ export const VipProfilePage: React.FC<VipProfilePageProps> = ({ profile, onBack,
                <div className="relative w-28 h-28 flex items-center justify-center">
                     <svg className="w-full h-full transform -rotate-90" viewBox="0 0 100 100">
                         <circle cx="50" cy="50" r="45" fill="none" stroke="#1e293b" strokeWidth="8" />
-                        <circle cx="50" cy="50" r="45" fill="none" stroke="currentColor" strokeWidth="8" 
-                            className={`${aletheiaColor} transition-all duration-1000 ease-out`}
-                            strokeDasharray="283" 
-                            strokeDashoffset={283 - (283 * aletheiaScore) / 100} 
-                        />
+                        {aletheiaMeasured && (
+                          <circle cx="50" cy="50" r="45" fill="none" stroke="currentColor" strokeWidth="8" 
+                              className={`${aletheiaColor} transition-all duration-1000 ease-out`}
+                              strokeDasharray="283" 
+                              strokeDashoffset={283 - (283 * aletheiaScore) / 100} 
+                          />
+                        )}
                     </svg>
-                    <span className="absolute text-4xl font-black text-white">{aletheiaScore}</span>
+                    <span className={`absolute text-center px-2 leading-tight ${aletheiaMeasured ? 'text-4xl font-black text-white' : 'text-xs font-bold text-slate-200'}`}>
+                      {aletheiaMeasured ? aletheiaScore : unassessedLabel}
+                    </span>
                </div>
-               <span className="text-[10px] font-bold uppercase text-slate-400 mt-3 tracking-widest">ALETHEIA SCORE</span>
+               <span className="text-[10px] font-bold uppercase text-slate-400 mt-3 tracking-widest">
+                 {aletheiaMeasured ? 'ALETHEIA SCORE' : unassessedLabel}
+               </span>
           </div>
         </header>
         
@@ -245,15 +282,18 @@ export const VipProfilePage: React.FC<VipProfilePageProps> = ({ profile, onBack,
                     <div className="absolute inset-0 flex justify-between px-1">
                         {[...Array(20)].map((_, i) => <div key={i} className="w-px h-full bg-slate-900/50"></div>)}
                     </div>
-                    {/* Indicator */}
-                    <div 
-                        className="absolute top-0 h-full w-1 bg-white shadow-[0_0_10px_rgba(255,255,255,0.8)]"
-                        style={{ left: `${horizonRigidity}%` }}
-                    >
-                        <div className="absolute -top-1 -left-1.5 w-4 h-5 bg-white clip-triangle"></div>
-                    </div>
+                    {typeof horizonRigidity === 'number' && (
+                      <div 
+                          className="absolute top-0 h-full w-1 bg-white shadow-[0_0_10px_rgba(255,255,255,0.8)]"
+                          style={{ left: `${horizonRigidity}%` }}
+                      >
+                          <div className="absolute -top-1 -left-1.5 w-4 h-5 bg-white clip-triangle"></div>
+                      </div>
+                    )}
                 </div>
-                <div className="text-center mt-1 text-[10px] text-cyan-500 font-mono">HORIZON RIGIDITY INDEX: {horizonRigidity}/100</div>
+                <div className="text-center mt-1 text-[10px] text-cyan-500 font-mono">
+                  HORIZON RIGIDITY INDEX: {typeof horizonRigidity === 'number' ? `${horizonRigidity}/100` : unassessedLabel}
+                </div>
             </div>
         )}
         
@@ -270,6 +310,9 @@ export const VipProfilePage: React.FC<VipProfilePageProps> = ({ profile, onBack,
                 {isMediaProfile && (
                     <section className="bg-slate-800/30 p-6 rounded-lg border border-slate-700/50">
                         <h3 className="text-xs font-bold text-slate-500 uppercase mb-4 tracking-wider border-b border-slate-700 pb-2">MARAGON-Ω KINETIC RADAR</h3>
+                        {!drawMediaPolygon && (
+                          <p className="text-center text-sm font-semibold text-slate-200 mb-2">{unassessedLabel}</p>
+                        )}
                         <div className="h-72 w-full">
                              <Radar data={radarData} options={radarOptions} />
                         </div>
@@ -360,7 +403,7 @@ export const VipProfilePage: React.FC<VipProfilePageProps> = ({ profile, onBack,
         </div>
 
         {/* Maragon Summary Link */}
-        {profile.maragonSummary && onNavigateToMaragonReport && (
+        {profile.maragonSummary && onNavigateToMaragonReport && (!mediaSubject || mediaPublished) && (
           <div className="mt-8 text-center">
             <button
                 onClick={() => onNavigateToMaragonReport(profile.id, isMediaProfile ? 'individual' : 'tvShow')} // Assuming individual for now

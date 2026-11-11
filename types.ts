@@ -374,6 +374,20 @@ export interface MaragonDimensionScores {
   OversightNurturing: number;
 }
 
+/**
+ * Publication state of a MARAGON® media assessment.
+ * Absent on a media profile means not assessed. Stored scores are not a publication.
+ */
+export type MaragonAssessmentStatus =
+  | 'not_assessed'
+  | 'research_only'
+  | 'pending_review'
+  | 'approved'
+  | 'withheld'
+  | 'suspended';
+
+export type MaragonBiographyStatus = 'draft' | 'pending_review' | 'approved' | 'withheld';
+
 export interface VipProfile {
   id: string | number;
   name: string;
@@ -448,6 +462,15 @@ export interface VipProfile {
   dateOfBirthSourceUrl?: string;
   dateOfBirthVerifiedAt?: string;
   roleHistory?: any[];
+  /**
+   * MARAGON® publication gate. Only 'approved' may be rendered, and only when
+   * scoringSuspended is not true. Missing means not assessed.
+   */
+  maragonAssessmentStatus?: MaragonAssessmentStatus;
+  /** Narrative biography and evidence. Draft text is not rendered in production. */
+  biographyStatus?: MaragonBiographyStatus;
+  shortBio_en?: string;
+  detailedBio_en?: string;
   scoringSuspended?: boolean;
   scoringSuspensionNotice?: string;
   assetTimeline?: any[];

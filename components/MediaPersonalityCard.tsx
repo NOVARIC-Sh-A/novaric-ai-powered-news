@@ -1,10 +1,7 @@
-import React, { useState, useMemo } from 'react';
+import React, { useState } from 'react';
 import ReactDOM from 'react-dom';
 import { 
   VipProfile, 
-  TranslatedParagonEntry, 
-  MaragonDimension, 
-  ParagonDimension as ParagonDimensionType 
 } from '../types';
 // Ensure these icons are exported from your icons file, or import from heroicons/lucide
 import { 
@@ -14,7 +11,6 @@ import {
   EyeSlashIcon, 
   ChartBarIcon 
 } from './icons'; 
-import { MARAGON_DIMENSIONS_AL } from '../utils/translations';
 import { Radar } from 'react-chartjs-2';
 import { 
   Chart as ChartJS, 
@@ -27,6 +23,14 @@ import {
 } from 'chart.js';
 import { SocialToxicityModal } from './SocialToxicityModal';
 import { formatVipName, getProfilePhotoUrl } from '../utils/paragonProfileUtils';
+import { AwaitingPhoto } from './figurat-politike/primitives/awaiting';
+import {
+  firstPublishedScore,
+  isMaragonAssessmentPublished,
+  notAssessedLabel,
+  publishedSeries,
+  publishedTrajectory,
+} from '../utils/maragonPublication';
 
 // Register ChartJS components
 ChartJS.register(RadialLinearScale, PointElement, LineElement, Filler, Tooltip, Legend);
@@ -64,6 +68,7 @@ const translations = {
         age: 'MOSHA',
         zodiac: 'SHENJA',
         socialToxicity: 'TOKSICITETI SOCIAL',
+        notAssessed: notAssessedLabel('sq'),
         fullDossier: 'DOSJA E PLOTË',
         structuralEvolution: 'EVOLUCIONI STRUKTUROR',
         dominance: 'DOMINANCA NË ETER',
@@ -79,6 +84,7 @@ const translations = {
         age: 'AGE',
         zodiac: 'ZODIAC',
         socialToxicity: 'SOCIAL TOXICITY',
+        notAssessed: notAssessedLabel('en'),
         fullDossier: 'FULL DOSSIER',
         structuralEvolution: 'STRUCTURAL EVOLUTION',
         dominance: 'AIRTIME DOMINANCE',
@@ -112,33 +118,14 @@ export const MediaPersonalityCard: React.FC<MediaPersonalityCardProps> = ({
   const [isFlipped, setIsFlipped] = useState(false);
   const [isToxicityModalOpen, setIsToxicityModalOpen] = useState(false);
   const t = translations[lang];
+  const assessmentPublished = isMaragonAssessmentPublished(profile);
+  const trajectory = publishedTrajectory(profile, profile.genome?.evolutionaryStatus);
+  const evolutionColor = trajectory === 'Ascending'
+      ? 'text-green-400 bg-green-950/50 border-green-800'
+      : trajectory
+        ? 'text-yellow-400 bg-yellow-950/50 border-yellow-800'
+        : 'text-slate-300 bg-slate-900 border-slate-600';
 
-  // --- MOCK DATA FALLBACK (If API hasn't populated genome yet) ---
-  const genome = profile.genome || {
-      evolutionaryStatus: "Compromised",
-      careerStartStats: [90, 85, 95, 80, 85], // Strong start
-      currentStats: [80, 70, 40, 50, 45],     // Degraded over time
-      topRhetoricShift: "Nga Investigues në Opinionist",
-      letheEvent: "Heshtje mbi Inceneratorët (2022)",
-      dominanceMetric: 88
-  };
-
-  // Evolution Badge Styling
-  const evolutionColor = 
-      genome.evolutionaryStatus === "Ascending" ? "text-green-400 bg-green-950/50 border-green-800" :
-      genome.evolutionaryStatus === "Compromised" ? "text-red-400 bg-red-950/50 border-red-800" :
-      "text-yellow-400 bg-yellow-950/50 border-yellow-800";
-
-  // Data Processing
-  const translatedAnalysis: TranslatedParagonEntry[] = useMemo(() => {
-    if (!profile.maragonAnalysis) return [];
-    return profile.maragonAnalysis.map(dim => ({
-        ...dim,
-        dimension: MARAGON_DIMENSIONS_AL[dim.dimension as MaragonDimension] || dim.dimension,
-        originalDimension: dim.dimension as unknown as ParagonDimensionType,
-    }));
-  }, [profile.maragonAnalysis]);
-  
   const handleNavigation = (e: React.MouseEvent) => {
     e.stopPropagation();
     onNavigate(profile);
@@ -149,49 +136,75 @@ export const MediaPersonalityCard: React.FC<MediaPersonalityCardProps> = ({
       onCompareToggle(profile.id);
   }
 
-  // Scoring Visuals
-  const aletheiaScore = Math.round(profile.latestScore ?? profile.aletheiaScore ?? profile.averageMaragonScore ?? 0); 
-  const pulseColorClass = aletheiaScore >= 80 ? 'shadow-[0_0_30px_5px_rgba(34,197,94,0.6)] border-green-500' : aletheiaScore >= 50 ? 'shadow-[0_0_30px_5px_rgba(250,204,21,0.6)] border-yellow-500' : 'shadow-[0_0_30px_5px_rgba(239,68,68,0.6)] border-red-500';
-  const scoreTextColor = aletheiaScore >= 80 ? 'text-green-400' : aletheiaScore >= 50 ? 'text-yellow-400' : 'text-red-400';
+  // Scoring visuals. Missing and unpublished values stay null; a measured 0 is kept.
+  const aletheiaScore = firstPublishedScore(profile, [
+    profile.latestScore,
+    profile.aletheiaScore,
+    profile.averageMaragonScore,
+  ]);
+  const scoreIsMeasured = aletheiaScore !== null;
+  const pulseColorClass = !scoreIsMeasured
+    ? 'border-slate-600'
+    : aletheiaScore >= 80
+      ? 'shadow-[0_0_30px_5px_rgba(34,197,94,0.6)] border-green-500'
+      : aletheiaScore >= 50
+        ? 'shadow-[0_0_30px_5px_rgba(250,204,21,0.6)] border-yellow-500'
+        : 'shadow-[0_0_30px_5px_rgba(239,68,68,0.6)] border-red-500';
+  const scoreTextColor = !scoreIsMeasured
+    ? 'text-slate-200'
+    : aletheiaScore >= 80
+      ? 'text-green-400'
+      : aletheiaScore >= 50
+        ? 'text-yellow-400'
+        : 'text-red-400';
   
   const displayName = formatVipName(profile.name);
-  const ageDisplay = calculateAge(profile.dateOfBirth, profile.age);
-  const zodiacDisplay = profile.zodiacSign || "N/A";
+  const ageDisplay = profile.biographyStatus === 'approved'
+    ? calculateAge(profile.dateOfBirth, profile.age)
+    : 'N/A';
+  const zodiacDisplay = profile.biographyStatus === 'approved' ? (profile.zodiacSign || 'N/A') : 'N/A';
+  const photoUrl = profile.photoPending ? undefined : getProfilePhotoUrl(profile);
 
-  // Toxicity Visuals
-  let riskLevel = profile.csrRiskLevel || 'Moderate';
-  if (!profile.csrRiskLevel) {
-      const ethicsScore = translatedAnalysis.find(d => d.originalDimension.includes('Etik'))?.score ?? 0;
-      if (ethicsScore < 50) riskLevel = 'Critical';
-      else if (ethicsScore > 80) riskLevel = 'Low';
-  }
-  const csrRiskPercentage = riskLevel === 'Critical' ? 90 : riskLevel === 'Moderate' ? 50 : 15;
-  const riskColor = riskLevel === 'Critical' ? 'bg-red-500 shadow-[0_0_10px_#ef4444]' : riskLevel === 'Moderate' ? 'bg-yellow-500 shadow-[0_0_10px_#eab308]' : 'bg-green-500 shadow-[0_0_10px_#22c55e]';
+  const historySeries = assessmentPublished ? publishedSeries(profile, profile.genome?.careerStartStats) : null;
+  const currentSeries = assessmentPublished ? publishedSeries(profile, profile.genome?.currentStats) : null;
+  const radarDatasets = [
+    ...(historySeries ? [{
+      label: 'History',
+      data: historySeries,
+      backgroundColor: 'transparent',
+      borderColor: '#475569',
+      borderWidth: 1,
+      borderDash: [4, 4],
+      pointRadius: 0,
+      spanGaps: false,
+    }] : []),
+    ...(currentSeries ? [{
+      label: 'Current',
+      data: currentSeries,
+      backgroundColor: 'rgba(6, 182, 212, 0.2)',
+      borderColor: '#22d3ee',
+      borderWidth: 2,
+      pointRadius: 2,
+      pointBackgroundColor: '#22d3ee',
+      spanGaps: false,
+    }] : []),
+  ];
 
-  // --- CHART CONFIG: GHOST RADAR (History vs Current) ---
+  // Axes stay visible. Unpublished or missing values are omitted, never drawn as zero.
   const ghostRadarData = {
-      labels: ["R", "A", "G", "O", "C"], // Shortened labels for compact view
-      datasets: [
-          {
-              label: "History", // Ghost Trace
-              data: genome.careerStartStats,
-              backgroundColor: 'transparent',
-              borderColor: '#475569', // Slate-600
-              borderWidth: 1,
-              borderDash: [4, 4], // Dashed line
-              pointRadius: 0,
-          },
-          {
-              label: "Current", // Live Trace
-              data: genome.currentStats,
-              backgroundColor: 'rgba(6, 182, 212, 0.2)', // Cyan fill
-              borderColor: '#22d3ee', // Cyan border
-              borderWidth: 2,
-              pointRadius: 2,
-              pointBackgroundColor: '#22d3ee',
-          }
-      ]
+      labels: ["R", "A", "G", "O", "C"],
+      datasets: radarDatasets,
   };
+
+  const rhetoricShift = assessmentPublished && profile.genome?.topRhetoricShift
+    ? String(profile.genome.topRhetoricShift)
+    : null;
+  const letheEvent = assessmentPublished && profile.genome?.letheEvent
+    ? String(profile.genome.letheEvent)
+    : null;
+  const dominanceMetric = assessmentPublished
+    ? firstPublishedScore(profile, [profile.genome?.dominanceMetric])
+    : null;
 
   const ghostRadarOptions: any = {
       scales: {
@@ -210,33 +223,38 @@ export const MediaPersonalityCard: React.FC<MediaPersonalityCardProps> = ({
 
   return (
     <>
-    <div className={`card-container h-[550px] group perspective-1000 relative ${isFlipped ? 'z-50' : 'z-auto'}`} onClick={() => setIsFlipped(!isFlipped)}>
-      <div className={`card relative w-full h-full transition-transform duration-700 transform-style-3d ${isFlipped ? 'is-flipped' : ''}`}>
+    <div className={`card-container h-[550px] group relative ${isFlipped ? 'z-50' : 'z-auto'}`} onClick={() => setIsFlipped(!isFlipped)}>
+      <div className="card relative w-full h-full">
         
         {/* ================= FRONT FACE ================= */}
-        <div className="card-face card-front absolute inset-0 bg-slate-950 border border-slate-700 rounded-xl overflow-hidden shadow-2xl backface-hidden">
+        <div className={`card-face card-front absolute inset-0 bg-slate-950 border border-slate-700 rounded-xl overflow-hidden shadow-2xl ${isFlipped ? 'hidden' : ''}`}>
             <div className="absolute inset-0 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-950 animate-fog opacity-60 z-0"></div>
             <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')] opacity-20 z-0"></div>
             
             <div className="relative h-full w-full z-10">
                 <div className="absolute bottom-[140px] right-4 z-10">
                      <div className={`relative w-48 h-48 rounded-full p-1 ${pulseColorClass} border-2 transition-all duration-500`}>
+                         {photoUrl ? (
                          <img 
-                            src={getProfilePhotoUrl(profile)}
-                            onError={(e) => {
-                                const gender = profile?.gender?.toLowerCase();
-                                e.currentTarget.src =
-                                    gender === "female" || gender === "f"
-                                        ? "https://novaric.co/wp-content/uploads/2025/11/FemaleProfile.jpg"
-                                        : "https://novaric.co/wp-content/uploads/2025/11/MaleProfile.jpg";
-                            }}
+                            src={photoUrl}
                             alt={displayName}
                             style={{ objectFit: "cover", objectPosition: "center" }}
-                            className="w-full h-full rounded-full object-cover"
+                            className="w-full h-full rounded-full object-cover bg-slate-900"
                         />
-                        <div className="absolute -bottom-2 -left-2 w-16 h-16 rounded-full bg-slate-900 border-2 border-slate-600 flex flex-col items-center justify-center z-30 shadow-[0_0_15px_rgba(0,0,0,0.8)]">
-                             <span className="text-[8px] font-bold text-slate-500 uppercase tracking-wider">SCORE</span>
-                             <span className={`font-mono font-black text-2xl ${scoreTextColor}`}>{aletheiaScore}</span>
+                         ) : (
+                         <div className="h-full w-full overflow-hidden rounded-full">
+                            <AwaitingPhoto iconClassName="w-16 h-16" compact />
+                         </div>
+                         )}
+                        <div className={`absolute -bottom-2 -left-2 z-30 shadow-[0_0_15px_rgba(0,0,0,0.8)] bg-slate-900 border-2 border-slate-600 flex flex-col items-center justify-center ${scoreIsMeasured ? 'w-16 h-16 rounded-full' : 'min-w-[5.75rem] max-w-[7.5rem] px-2 py-1.5 rounded-md'}`}>
+                             {scoreIsMeasured ? (
+                               <>
+                                 <span className="text-[8px] font-bold text-slate-500 uppercase tracking-wider">SCORE</span>
+                                 <span className={`font-mono font-black text-2xl ${scoreTextColor}`}>{aletheiaScore}</span>
+                               </>
+                             ) : (
+                               <span className="text-[10px] font-bold text-slate-200 uppercase tracking-wide text-center leading-tight">{t.notAssessed}</span>
+                             )}
                         </div>
                     </div>
                 </div>
@@ -295,7 +313,7 @@ export const MediaPersonalityCard: React.FC<MediaPersonalityCardProps> = ({
         </div>
 
         {/* ================= BACK FACE (The Neuro-Linguistic Genome) ================= */}
-        <div className="card-face card-back absolute inset-0 bg-slate-950 border border-slate-800 rounded-xl shadow-2xl p-4 flex flex-col overflow-hidden transform rotate-y-180 backface-hidden">
+        <div className={`card-face card-back absolute inset-0 bg-slate-950 border border-slate-800 rounded-xl shadow-2xl p-4 flex flex-col overflow-hidden ${isFlipped ? '' : 'hidden'}`}>
             
             {/* Blueprint Grid Background */}
             <div className="absolute inset-0 bg-[linear-gradient(to_right,#1e293b_1px,transparent_1px),linear-gradient(to_bottom,#1e293b_1px,transparent_1px)] bg-[size:20px_20px] opacity-[0.1] z-0"></div>
@@ -304,7 +322,7 @@ export const MediaPersonalityCard: React.FC<MediaPersonalityCardProps> = ({
             <div className="flex justify-between items-center z-10 border-b border-slate-800 pb-2 mb-1 flex-shrink-0">
                 <span className="text-[9px] font-mono text-slate-500">ID: {profile.id.toString().substring(0,6)}</span>
                 <span className={`px-2 py-0.5 rounded border text-[9px] font-mono uppercase tracking-widest ${evolutionColor}`}>
-                    {genome.evolutionaryStatus}
+                    {trajectory ?? t.notAssessed}
                 </span>
             </div>
 
@@ -331,7 +349,7 @@ export const MediaPersonalityCard: React.FC<MediaPersonalityCardProps> = ({
                             <span className="text-[8px] font-bold text-slate-500 uppercase">{t.rhetoricShift}</span>
                         </div>
                         <p className="text-[10px] text-slate-300 font-mono leading-tight truncate">
-                            {genome.topRhetoricShift}
+                            {rhetoricShift ?? t.notAssessed}
                         </p>
                     </div>
 
@@ -341,8 +359,8 @@ export const MediaPersonalityCard: React.FC<MediaPersonalityCardProps> = ({
                             <EyeSlashIcon className="w-3 h-3 text-orange-500" />
                             <span className="text-[8px] font-bold text-orange-500/80 uppercase">{t.letheEvent}</span>
                         </div>
-                        <p className="text-[10px] text-orange-400 font-bold font-mono leading-tight truncate">
-                            {genome.letheEvent}
+                        <p className="text-[10px] text-slate-300 font-mono leading-tight truncate">
+                            {letheEvent ?? t.notAssessed}
                         </p>
                     </div>
                 </div>
@@ -357,13 +375,19 @@ export const MediaPersonalityCard: React.FC<MediaPersonalityCardProps> = ({
                         <span className="text-[9px] text-slate-400 font-mono uppercase">{t.dominance}</span>
                     </div>
                     <div className="flex items-center gap-2">
-                        <div className="w-16 h-1.5 bg-slate-800 rounded-full overflow-hidden">
-                            <div 
-                                className="h-full bg-cyan-500 transition-all duration-1000" 
-                                style={{ width: `${genome.dominanceMetric}%` }}
-                            ></div>
-                        </div>
-                        <span className="text-[9px] text-cyan-400 font-bold font-mono">{genome.dominanceMetric}%</span>
+                        {dominanceMetric === null ? (
+                          <span className="text-[9px] text-slate-300 font-bold font-mono">{t.notAssessed}</span>
+                        ) : (
+                          <>
+                            <div className="w-16 h-1.5 bg-slate-800 rounded-full overflow-hidden">
+                                <div 
+                                    className="h-full bg-cyan-500 transition-all duration-1000" 
+                                    style={{ width: `${dominanceMetric}%` }}
+                                ></div>
+                            </div>
+                            <span className="text-[9px] text-cyan-400 font-bold font-mono">{dominanceMetric}%</span>
+                          </>
+                        )}
                     </div>
                 </div>
 

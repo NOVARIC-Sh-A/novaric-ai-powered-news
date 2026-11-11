@@ -5,6 +5,8 @@ import { VipProfile, FullProfileAnalysis, TvShowData } from "../types";
 import { runAnalysisForVip } from "../services/paragonEngine";
 import { fetchPoliticianProfile } from "../services/apiService";
 import { canonicalPoliticianKey, profileViewState } from "../utils/politicianNavigation";
+import { isMediaIdentity, isMediaProfile } from "../utils/maragonPublication";
+import { mediaProfilesData } from "../data/mediaProfiles";
 
 interface VipProfilePageWrapperProps {
   profile: VipProfile | FullProfileAnalysis | string;
@@ -55,6 +57,26 @@ export const VipProfilePageWrapper: React.FC<VipProfilePageWrapperProps> = (prop
     let alive = true;
     setLoading(true);
     setDetail(null);
+
+    const passedProfile = isProfileObject && "id" in (profile as object) ? (profile as VipProfile) : null;
+    if (isMediaIdentity(activeId) || isMediaProfile(passedProfile)) {
+      const local = mediaProfilesData.find((entry) =>
+        String(entry.id) === String(activeId) || (passedProfile && String(entry.id) === String(passedProfile.id))
+      );
+      const merged = local && passedProfile
+        ? {
+            ...local,
+            ...passedProfile,
+            maragonAssessmentStatus: passedProfile.maragonAssessmentStatus ?? local.maragonAssessmentStatus,
+            scoringSuspended: passedProfile.scoringSuspended ?? local.scoringSuspended,
+          }
+        : (passedProfile || local || null);
+      if (alive) {
+        setDetail(merged);
+        setLoading(false);
+      }
+      return () => { alive = false; };
+    }
 
     fetchPoliticianProfile(activeId)
       .then((data) => {
@@ -126,7 +148,7 @@ export const VipProfilePageWrapper: React.FC<VipProfilePageWrapperProps> = (prop
     return (
       <VipProfilePage
         profile={vipProfile}
-        onBack={onBack}
+        onBack={isMediaProfile(vipProfile) ? () => onNavigate('mediaPersonalitiesPage') : onBack}
         onNavigateToTvShow={(tvShow) => onNavigate("tvShowPage", tvShow)}
         tvShows={tvShows}
         onNavigateToZodiacInfoPage={onNavigateToZodiacInfoPage}

@@ -28,6 +28,7 @@ import {
 } from './types';
 import { fetchMaragonReport } from './services/dataService';
 import { canonicalPoliticianKey, findPolitician, politicianPathId, routeFromLocation, POLITICIANS_LIST_PATH } from './utils/politicianNavigation';
+import { isMediaIdentity } from './utils/maragonPublication';
 import { LiveUpdateToast } from './components/LiveUpdateToast';
 import { FloatingHomeButton } from './components/FloatingHomeButton';
 import { useSeo } from './hooks/useSeo';
@@ -493,6 +494,14 @@ export const App: React.FC = () => {
     }
   }, [appData]);
 
+  useEffect(() => {
+    if (!appData || appData.profiles.length > 0) return;
+    const mediaDossier = currentPage === 'vipProfilePage' && isMediaIdentity(selectedVipRouteId);
+    if (currentPage === 'mediaPersonalitiesPage' || currentPage === 'tvPersonalitiesAnalysis' || mediaDossier) {
+      ensureProfilesLoaded();
+    }
+  }, [appData, currentPage, selectedVipRouteId, ensureProfilesLoaded]);
+
   const ensurePoliticianCardsLoaded = useCallback(async () => {
     if (politicianCards.length > 0) return;
 
@@ -544,7 +553,8 @@ export const App: React.FC = () => {
       'mediaPersonalitiesPage',
       'judiciaryPage',
       'businessPage',
-      'vipProfilePage'
+      'vipProfilePage',
+      'tvPersonalitiesAnalysis',
     ];
 
     let currentProfiles = appData?.profiles || [];
