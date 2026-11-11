@@ -1,27 +1,25 @@
 
-import React, { useState, useMemo, useEffect } from 'react';
+import React, { useState, useMemo } from 'react';
 import ReactDOM from 'react-dom';
-import { VipProfile, ParagonEntry, Archetype, ProcessedVipProfile, ParagonLiveScore } from '../types';
+import { VipProfile, ParagonEntry, Archetype } from '../types';
 import { PoliticianComparisonModal } from './PoliticianComparisonModal';
 import { MediaPersonalityCard } from './MediaPersonalityCard';
 import { renderWithSuperscript } from '../utils/textUtils';
-import { fetchProfilesAnalysis, ProfileAnalysisMap } from '../services/profileAnalysisService';
-import { processVipProfile } from '../utils/paragonProfileUtils';
 import { CpuChipIcon, HeartIcon, ArrowPathIcon } from './icons';
 import { SocialToxicityModal } from './SocialToxicityModal';
 import { AletheiaModal } from './AletheiaModal';
 import { LetheModal } from './LetheModal';
 import { HorizonModal } from './HorizonModal';
 import { useLanguage } from '../contexts/LanguageContext';
-import { getLatestParagonScores } from "../services/paragonService";
+import { isMaragonAssessmentPublished, publishedMaragonAverage } from '../utils/maragonPublication';
 
 /* --------------------------------------------------------
    TYPES
 -------------------------------------------------------- */
 
-type RankedMediaProfile = ProcessedVipProfile & {
-  averageMaragonScore: number;
-  influenceScore: number;
+type RankedMediaProfile = VipProfile & {
+  averageMaragonScore: number | null;
+  influenceScore: number | null;
   archetype: Archetype;
 };
 
@@ -38,36 +36,43 @@ const clamp = (value: number, min = 0, max = 100): number =>
 const getArchetype = (analysis: ParagonEntry[] | undefined): Archetype => {
   if (!analysis || analysis.length === 0) return 'I Paidentifikuar';
 
-  const scores: { [key: string]: number } = {};
+  const scores: { [key: string]: number | null } = {};
   analysis.forEach((dim) => {
-    scores[dim.dimension] = dim.score;
+    scores[dim.dimension] = typeof dim.score === 'number' && Number.isFinite(dim.score) ? dim.score : null;
   });
 
   const highThreshold = 85;
 
+  const atLeast = (key: string, threshold: number) => {
+    const value = scores[key];
+    return value !== null && value !== undefined && value >= threshold;
+  };
+
   if (
-    (scores['Thellësia e Analizës/Pyetjeve'] || 0) >= highThreshold &&
-    (scores['Saktësia Faktike & Verifikimi'] || 0) >= highThreshold
+    atLeast('Thellësia e Analizës/Pyetjeve', highThreshold) &&
+    atLeast('Saktësia Faktike & Verifikimi', highThreshold)
   ) {
     return 'Analisti';
   }
   if (
-    (scores['Paanshmëria, Balanca & Anshmëria'] || 0) >= highThreshold &&
-    (scores['Profesionalizmi në Kriza'] || 0) >= highThreshold
+    atLeast('Paanshmëria, Balanca & Anshmëria', highThreshold) &&
+    atLeast('Profesionalizmi në Kriza', highThreshold)
   ) {
     return 'Moderatori';
   }
-  if ((scores['Qartësia & Koherenca'] || 0) >= 90) {
+  if (atLeast('Qartësia & Koherenca', 90)) {
     return 'Komunikatori';
   }
   if (
-    (scores['Pajtueshmëria Etike'] || 0) >= highThreshold &&
-    (scores['Promovimi i të Menduarit Kritik'] || 0) >= 80
+    atLeast('Pajtueshmëria Etike', highThreshold) &&
+    atLeast('Promovimi i të Menduarit Kritik', 80)
   ) {
     return 'Roja Publik';
   }
 
-  const sorted = Object.entries(scores).sort(([, a], [, b]) => b - a);
+  const sorted = Object.entries(scores)
+    .filter((entry): entry is [string, number] => typeof entry[1] === 'number')
+    .sort(([, a], [, b]) => b - a);
   switch (sorted[0]?.[0]) {
     case 'Thellësia e Analizës/Pyetjeve':
       return 'Analisti';
@@ -105,12 +110,13 @@ const normalizeSentiment = (rawSentiment?: number): number => {
 };
 
 const computeInfluenceScore = (params: {
-  maragonAvg: number;
+  maragonAvg: number | null;
   reachScore: number;
   engagementScore: number;
   sentimentScore: number;
-}): number => {
+}): number | null => {
   const { maragonAvg, reachScore, engagementScore, sentimentScore } = params;
+  if (maragonAvg === null) return null;
   const maragonWeight = 0.6;
   const reachWeight = 0.25;
   const engagementSentimentWeight = 0.15;
@@ -157,25 +163,8 @@ export const MediaPersonalitiesPage: React.FC<MediaPersonalitiesPageProps> = ({
   const [isAletheiaModalOpen, setIsAletheiaModalOpen] = useState(false);
   const [isLetheModalOpen, setIsLetheModalOpen] = useState(false);
   const [isHorizonModalOpen, setIsHorizonModalOpen] = useState(false);
-  const [analysisById, setAnalysisById] = useState<ProfileAnalysisMap>({});
-  
   // Use global language context
   const { language: lang, toggleLanguage } = useLanguage();
-  
-  // State for live scores
-  const [liveScores, setLiveScores] = useState<Record<number, ParagonLiveScore>>({});
-
-  useEffect(() => {
-    async function loadScores() {
-      const scores = await getLatestParagonScores();
-      const map: Record<number, ParagonLiveScore> = {};
-      scores.forEach(s => {
-          map[s.politician_id] = s;
-      });
-      setLiveScores(map);
-    }
-    loadScores();
-  }, []);
 
   const translations = {
       sq: {
@@ -261,7 +250,7 @@ export const MediaPersonalitiesPage: React.FC<MediaPersonalitiesPageProps> = ({
   const t = translations[lang];
 
   const [sortMode, setSortMode] = useState<'influence' | 'maragon' | 'name'>(
-    'influence'
+    'name'
   );
   const [archetypeFilter, setArchetypeFilter] = useState<
     Archetype | 'Të Gjithë'
@@ -290,24 +279,8 @@ export const MediaPersonalitiesPage: React.FC<MediaPersonalitiesPageProps> = ({
       })),
     [initialProfiles]
   );
-  
-  useEffect(() => {
-    const mediaIds = normalizedProfiles
-      .filter((p) => {
-        const cat = (p.category || '').toLowerCase();
-        return !cat.startsWith('politik') && !cat.startsWith('gjykata') && cat !== 'biznes';
-      })
-      .map((p) => p.id);
-      
-    if (!mediaIds.length) return;
 
-    (async () => {
-      const map = await fetchProfilesAnalysis(mediaIds, 'media');
-      setAnalysisById(map);
-    })();
-  }, [normalizedProfiles]);
-  
-  const processedAndRankedMedia = useMemo(() => {
+  const rankedMedia = useMemo(() => {
     const mediaPersonalities = normalizedProfiles.filter(profile => {
         const cat = (profile.category || 'Media').toLowerCase();
         if (cat.startsWith('politikë') || cat.startsWith('politike')) return false;
@@ -316,16 +289,11 @@ export const MediaPersonalitiesPage: React.FC<MediaPersonalitiesPageProps> = ({
         return true;
     });
 
-    const processed = mediaPersonalities.map(p => processVipProfile(p, analysisById[p.id]));
+    const enriched: RankedMediaProfile[] = mediaPersonalities.map(p => {
+        const published = isMaragonAssessmentPublished(p);
+        const averageMaragonScore = publishedMaragonAverage(p);
+        const archetype = published ? getArchetype(p.maragonAnalysis) : 'I Paidentifikuar';
 
-    const enriched: RankedMediaProfile[] = processed.map(p => {
-        const idNum = typeof p.id === 'string' ? parseInt(p.id.replace(/\D/g, ''), 10) : Number(p.id);
-        const liveData = liveScores[idNum];
-        
-        // Use live score if available, else static
-        const averageMaragonScore = liveData ? liveData.overall_score : p.processedAnalysis.overallScore;
-        const archetype = getArchetype(p.maragonAnalysis);
-        
         const audienceReach: number | undefined = (p as any).audienceReach;
         const engagementRate: number | undefined = (p as any).engagementRate;
         const sentimentScoreRaw: number | undefined = (p as any).sentimentScore;
@@ -334,39 +302,60 @@ export const MediaPersonalitiesPage: React.FC<MediaPersonalitiesPageProps> = ({
         const engagementScore = normalizeEngagement(engagementRate);
         const sentimentScore = normalizeSentiment(sentimentScoreRaw);
 
-        const influenceScore = computeInfluenceScore({
+        const influenceScore = published ? computeInfluenceScore({
             maragonAvg: averageMaragonScore,
             reachScore,
             engagementScore,
             sentimentScore
-        });
+        }) : null;
 
-        // Inject latestScore directly into the object so MediaPersonalityCard can use it
         return {
             ...p,
             averageMaragonScore,
-            latestScore: liveData?.overall_score,
-            paragon: liveData,
+            latestScore: published ? p.latestScore : undefined,
+            aletheiaScore: published ? p.aletheiaScore : undefined,
             influenceScore,
-            archetype
+            archetype,
+            paragon: undefined,
         };
     });
 
+    const scoreRankingAvailable = enriched.some(
+      (profile) => profile.averageMaragonScore !== null || profile.influenceScore !== null
+    );
+    const effectiveSort = scoreRankingAvailable ? sortMode : 'name';
+
+    const byMeasuredDesc = (left: number | null, right: number | null) => {
+      if (left === null && right === null) return 0;
+      if (left === null) return 1;
+      if (right === null) return -1;
+      return right - left;
+    };
+
     const sorted = [...enriched].sort((a, b) => {
-      switch (sortMode) {
-        case 'maragon': return (b.averageMaragonScore || 0) - (a.averageMaragonScore || 0);
+      switch (effectiveSort) {
+        case 'maragon': return byMeasuredDesc(a.averageMaragonScore, b.averageMaragonScore) || String(a.name).localeCompare(String(b.name));
         case 'name': return String(a.name).localeCompare(String(b.name));
-        case 'influence': default: return (b.influenceScore || 0) - (a.influenceScore || 0);
+        case 'influence':
+        default: return byMeasuredDesc(a.influenceScore, b.influenceScore) || String(a.name).localeCompare(String(b.name));
       }
     });
 
-    return sorted.filter((p) => {
-      const scoreToCheck = sortMode === 'maragon' ? p.averageMaragonScore : p.influenceScore;
-      if (scoreToCheck < minScoreFilter) return false;
+    const visible = sorted.filter((p) => {
+      if (effectiveSort !== 'name') {
+        const scoreToCheck = effectiveSort === 'maragon' ? p.averageMaragonScore : p.influenceScore;
+        if (scoreToCheck === null || scoreToCheck < minScoreFilter) return false;
+      }
       if (archetypeFilter !== 'Të Gjithë' && p.archetype !== archetypeFilter) return false;
       return true;
     });
-  }, [initialProfiles, analysisById, sortMode, archetypeFilter, minScoreFilter, liveScores]);
+
+    return { profiles: visible, scoreRankingAvailable, effectiveSort };
+  }, [normalizedProfiles, sortMode, archetypeFilter, minScoreFilter]);
+
+  const processedAndRankedMedia = rankedMedia.profiles;
+  const scoreRankingAvailable = rankedMedia.scoreRankingAvailable;
+  const effectiveSort = rankedMedia.effectiveSort;
 
 
   const comparisonProfiles = useMemo(() => {
@@ -429,12 +418,12 @@ export const MediaPersonalitiesPage: React.FC<MediaPersonalitiesPageProps> = ({
                         <div className="flex items-center gap-2">
                             <label className="text-[10px] uppercase text-slate-500 font-bold">{t.sort}</label>
                             <select 
-                                value={sortMode}
-                                onChange={(e) => setSortMode(e.target.value as any)}
+                                value={effectiveSort}
+                                onChange={(e) => setSortMode(e.target.value as 'influence' | 'maragon' | 'name')}
                                 className="bg-slate-100 dark:bg-slate-700 border border-slate-300 dark:border-slate-600 text-slate-800 dark:text-slate-200 text-xs font-bold px-2 py-1 rounded focus:ring-1 focus:ring-primary-500 outline-none uppercase"
                             >
-                                <option value="influence">{t.sortOptions.influence}</option>
-                                <option value="maragon">{t.sortOptions.maragon}</option>
+                                {scoreRankingAvailable && <option value="influence">{t.sortOptions.influence}</option>}
+                                {scoreRankingAvailable && <option value="maragon">{t.sortOptions.maragon}</option>}
                                 <option value="name">{t.sortOptions.name}</option>
                             </select>
                         </div>

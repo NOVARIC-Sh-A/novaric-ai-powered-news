@@ -21,6 +21,17 @@ for (const profile of ((scoresExport as { profiles?: StoredProfile[] }).profiles
   idBySlug.set(slug, id);
 }
 
+/** A politician id, a bare number, or a slug from the PARAGON® roster. Media ids such as vip_m1 are not. */
+export function isPoliticianIdentity(id: string | number | null | undefined): boolean {
+  const raw = String(id ?? '').trim();
+  if (!raw) return false;
+  if (/^\d+$/.test(raw) || /^vip\d+$/i.test(raw)) return true;
+  if (idBySlug.has(raw.toLowerCase())) return true;
+  const redirected = canonicalProfileId(raw);
+  if (redirected !== raw && (/^\d+$/.test(redirected) || /^vip\d+$/i.test(redirected))) return true;
+  return false;
+}
+
 /** `2`, `"2"`, `"vip2"` and `"sali-berisha"` are the same profile. The id stays canonical. */
 export function canonicalPoliticianKey(id: string | number | null | undefined): string {
   const raw = String(id ?? '').trim();
@@ -40,6 +51,7 @@ export function canonicalPoliticianKey(id: string | number | null | undefined): 
 
 /** Public URL segment. Stored slug when the profile has one; numeric id only as a fallback. */
 export function politicianPathId(id: string | number | null | undefined): string {
+  if (!isPoliticianIdentity(id)) return '';
   const key = canonicalPoliticianKey(id);
   return slugByCanonicalId.get(key) || key.replace(/^vip/i, '') || key;
 }
@@ -74,8 +86,10 @@ export function routeFromLocation(pathname: string, search = ''): PoliticianRout
   }
   if (params.get('page') === 'vipProfilePage') {
     const raw = params.get('id');
-    const id = raw ? canonicalPoliticianKey(raw) : '';
-    if (id) return { page: 'vipProfilePage', id };
+    if (!raw || !isPoliticianIdentity(raw)) return null;
+    const id = canonicalPoliticianKey(raw);
+    if (!id || !isPoliticianIdentity(id)) return null;
+    return { page: 'vipProfilePage', id };
   }
   return null;
 }

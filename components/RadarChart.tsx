@@ -4,7 +4,7 @@ import { ZoomInIcon, ZoomOutIcon, ArrowPathIcon } from './icons';
 
 interface RadarChartDataset {
     label: string;
-    data: number[];
+    data: Array<number | null>;
     backgroundColor: string;
     borderColor: string;
     borderWidth: number;
@@ -21,6 +21,8 @@ interface RadarChartProps {
     };
     labels?: string[];
     values?: number[];
+    /** Draw the axis grid only. Unknown values are not plotted, including as zero. */
+    axesOnly?: boolean;
 }
 
 // Helper to store label render information
@@ -68,7 +70,7 @@ function wrapText(
     });
 }
 
-export const RadarChart: React.FC<RadarChartProps> = ({ data: providedData, labels, values }) => {
+export const RadarChart: React.FC<RadarChartProps> = ({ data: providedData, labels, values, axesOnly = false }) => {
     const canvasRef = useRef<HTMLCanvasElement | null>(null);
     const [zoomLevel, setZoomLevel] = useState(1);
     // Increased base size to 800 for higher resolution on larger displays
@@ -187,18 +189,25 @@ export const RadarChart: React.FC<RadarChartProps> = ({ data: providedData, labe
 
         // Draw Polygon Shapes
         allDatasets.forEach(dataset => {
+            const finitePoints = dataset.data
+                .map((value, index) => (typeof value === 'number' && Number.isFinite(value) ? { value, index } : null))
+                .filter((point): point is { value: number; index: number } => point !== null);
+            if (axesOnly || finitePoints.length === 0) return;
+
             const doFill = dataset.label === 'Mesatarja e Sistemeve të Ngjashme' || dataset.label === 'Pikët' || (dataset.backgroundColor && dataset.backgroundColor !== 'transparent');
             ctx.setLineDash([]); // Reset dash
             ctx.strokeStyle = dataset.borderColor;
             ctx.fillStyle = dataset.backgroundColor;
             ctx.lineWidth = dataset.borderWidth * zoomLevel;
             ctx.beginPath();
-            dataset.data.forEach((value, i) => {
+            finitePoints.forEach((point, drawnIndex) => {
+                const value = point.value;
+                const i = point.index;
                 const pointRadius = (value / 100) * radius;
                 const angle = i * angleSlice - Math.PI / 2;
                 const x = centerX + pointRadius * Math.cos(angle);
                 const y = centerY + pointRadius * Math.sin(angle);
-                if (i === 0) {
+                if (drawnIndex === 0) {
                     ctx.moveTo(x, y);
                 } else {
                     ctx.lineTo(x, y);
@@ -250,6 +259,7 @@ export const RadarChart: React.FC<RadarChartProps> = ({ data: providedData, labe
             ctx.save();
             albanDataset.data.forEach((val, i) => {
                 const targetVal = europeDataset.data[i];
+                if (typeof val !== 'number' || typeof targetVal !== 'number' || !Number.isFinite(val) || !Number.isFinite(targetVal)) return;
                 // If there is a gap to close (target > current)
                 if (targetVal > val) {
                     const angle = i * angleSlice - Math.PI / 2;
@@ -425,7 +435,7 @@ export const RadarChart: React.FC<RadarChartProps> = ({ data: providedData, labe
             wrapText(ctx, label, x, y, maxWidth > 100 * zoomLevel ? maxWidth : 140 * zoomLevel, lineHeight);
         });
 
-    }, [data, zoomLevel]);
+    }, [data, zoomLevel, axesOnly]);
 
     if (!data) return null;
 
@@ -455,6 +465,7 @@ export const RadarChart: React.FC<RadarChartProps> = ({ data: providedData, labe
                 </button>
             </div>
             <canvas ref={canvasRef} className="w-full h-auto"></canvas>
+            {!axesOnly && (
             <div className="mt-2 flex justify-center items-center gap-4 text-[10px] text-slate-500 dark:text-slate-400 font-mono border-b border-slate-200 dark:border-slate-700 pb-2 mb-2 w-3/4 mx-auto">
                 <div className="flex items-center gap-1">
                     <span className="font-bold">0</span>
@@ -466,6 +477,7 @@ export const RadarChart: React.FC<RadarChartProps> = ({ data: providedData, labe
                     <span>= Standardi BE</span>
                 </div>
             </div>
+            )}
             <div className="flex flex-wrap justify-center gap-x-4 gap-y-2 text-xs text-slate-600 dark:text-slate-300">
                 {data.datasets.map(dataset => (
                     <div key={dataset.label} className="flex items-center">

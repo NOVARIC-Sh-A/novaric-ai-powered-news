@@ -5,10 +5,16 @@ export const mediaProfilesData: VipProfile[] = [
     id: 'vip_m1',
     numericId: 1001,
     name: 'Blendi Fevziu',
-    imageUrl: 'https://novaricstorage.blob.core.windows.net/media/Profile-Photos/BF_Opinion.jfif',
+    imageUrl: '',
+    photoPending: true,
+    photoStatus: 'candidate_recorded_no_documented_reuse_basis',
     category: 'Media',
     shortBio: 'Gazetar dhe drejtues i emisionit "Opinion".',
     detailedBio: 'Blendi Fevziu është një nga figurat më jetëgjata dhe me ndikim në median shqiptare...',
+    /** Research dossier is not an approved biography or scoring run. */
+    maragonAssessmentStatus: 'research_only',
+    biographyStatus: 'draft',
+    scoringSuspended: true,
     dynamicScore: 88,
     maragonAnalysis: [
       { dimension: 'Pajtueshmëria Etike', score: 85, peerAverage: 70, globalBenchmark: 80, description: '', commentary: '' },

@@ -1,0 +1,847 @@
+{
+  "integrationContract": {
+    "label": "Proposed research payload aligned to REPO-CONTRACT-FINDINGS-20261111.md — not a drop-in VipProfile",
+    "repoContractFindingsPath": "/workspace/brands/novaric-media/maragon/REPO-CONTRACT-FINDINGS-20261111.md",
+    "repoContractFindingsExistedAtWrite": true,
+    "compatibleWithLiveVipProfileWithoutAdapter": false,
+    "applicationContractVerified": "partial — types, mock data and UI behaviour inspected in REPO-CONTRACT-FINDINGS-20261111.md; no Zod schema or publication gate exists for MARAGON® practitioner assessments",
+    "doNotLoadIntoMediaPersonalityCardWithoutAdapter": true,
+    "legacyAdapters": [
+      {
+        "proposed": [
+          "shortBio_sq",
+          "shortBio_en"
+        ],
+        "existing": [
+          "shortBio",
+          "short_bio"
+        ],
+        "rule": "Do not silently rename. Until bilingual fields exist, map shortBio_sq to shortBio; keep shortBio_en separate. Do not overwrite shortBio with English."
+      },
+      {
+        "proposed": [
+          "detailedBio_sq",
+          "detailedBio_en"
+        ],
+        "existing": [
+          "detailedBio",
+          "detailed_bio"
+        ],
+        "rule": "Same as shortBio: Albanian may fill detailedBio; English stays on detailedBio_en."
+      },
+      {
+        "proposed": "trajectory",
+        "existing": "genome.evolutionaryStatus",
+        "rule": "Use trajectory.status = not_assessed. Do not populate genome with the MediaPersonalityCard mock fallback. Never set Compromised."
+      },
+      {
+        "proposed": [
+          "aletheiaScore",
+          "composite",
+          "averageMaragonScore",
+          "latestScore",
+          "maragonSummary",
+          "dynamicScore"
+        ],
+        "existing": "non-nullable numbers in types.ts; UI defaults missing values to 0",
+        "rule": "Transmit null. UI must render 'Pa vlerësim / Not assessed' and must not paint a score halo or SCORE 0."
+      },
+      {
+        "proposed": "maragonIndicators (ten canonical IDs once each)",
+        "existing": "maragonAnalysis (seven named dimensions) and MaragonDimensionScores (R-A-G-O)",
+        "rule": "Do not project ten null indicators onto seven or four numeric axes. Do not copy hardcoded mediaProfiles.ts scores."
+      },
+      {
+        "proposed": "photoPending",
+        "existing": "photoPending, photoStatus, officialPhotoPath, photoLicence, photo_source_url",
+        "rule": "Set photoPending true. Record the FSHF candidate in photoCandidates only. Do not treat BF_Opinion.jfif as cleared."
+      },
+      {
+        "proposed": "scoringSuspended",
+        "existing": "scoringSuspended / ratingsEnabled (PARAGON® publication gate)",
+        "rule": "Set scoringSuspended true for this media record so numeric MARAGON® fields are not published."
+      }
+    ]
+  },
+  "meta": {
+    "documentId": "DOS-COM-MARAGON-vip_m1-v0.1-20261111",
+    "dossierPath": "/workspace/brands/novaric-media/maragon/vip_m1/DOS-COM-MARAGON-vip_m1-v0.1-20261111.md",
+    "schemaName": "novaric.maragon.practitionerResearchPayload",
+    "schemaVersion": "0.1-proposed",
+    "methodologyId": null,
+    "methodologyApproved": false,
+    "languagePrimary": "sq",
+    "languageSecondary": "en",
+    "accessDate": "2026-11-11",
+    "accessDateTimeZone": "Europe/Tirana",
+    "producedAt": "2026-11-11",
+    "subjectContacted": false,
+    "rightOfReplyRequested": false,
+    "publishedExternally": false
+  },
+  "subject": {
+    "id": "vip_m1",
+    "numericId": 1001,
+    "fullName": "Blendi FEVZIU",
+    "nameAsInSources": "Blendi Fevziu",
+    "category": "Media",
+    "primaryRole_sq": "Gazetar, shkrimtar dhe drejtues i emisionit televiziv «Opinion»",
+    "primaryRole_en": "Journalist, writer and host of the television programme Opinion",
+    "dateOfBirth": "1969-05-18",
+    "dateOfBirthVerificationStatus": "verified",
+    "dateOfBirthSourceUrl": "https://fshf.org/sq/cv/blendi-fevziu/",
+    "dateOfBirthVerifiedAt": "2026-11-11",
+    "dateOfBirthEvidenceIds": [
+      "EV-002",
+      "EV-006"
+    ],
+    "placeOfBirth": "Tiranë",
+    "placeOfBirthVerificationStatus": "reported",
+    "placeOfBirthEvidenceIds": [
+      "EV-006"
+    ],
+    "age": 57,
+    "ageDerivedFromVerifiedDateOfBirthAsOf": "2026-11-11",
+    "gender": null,
+    "zodiacSign": null,
+    "nationality_sq": "Shqiptar",
+    "nationalityEvidenceIds": [
+      "EV-002"
+    ],
+    "education_sq": "Diplomuar më 1991 në Universitetin e Tiranës, Fakulteti i Histori-Filologjisë, dega Gjuhë-Letërsi (studimet të nisura më 1987, sipas EV-006).",
+    "education_en": "Graduated in 1991 from the University of Tirana, Faculty of History and Philology, Albanian Language and Literature (studies begun in 1987, according to EV-006).",
+    "educationEvidenceIds": [
+      "EV-002",
+      "EV-006"
+    ],
+    "shortBio": "Gazetar, shkrimtar dhe drejtues i emisionit televiziv «Opinion» në TV Klan.",
+    "shortBio_sq": "Gazetar, shkrimtar dhe drejtues i emisionit televiziv «Opinion» në TV Klan.",
+    "shortBio_en": "Journalist, writer and host of the television programme Opinion on TV Klan.",
+    "detailedBio": "Blendi FEVZIU (i lindur më 18 maj 1969) është gazetar, shkrimtar dhe drejtues i emisionit «Opinion» në TV Klan. Sipas CV-së së FSHF, ka qenë pjesë e gazetës së studentëve nga 1989, bashkëthemelues i «RD» më 5 janar 1991, dhe ka mbajtur role redaktuese në disa tituj të shtypit; në televizion nisi në TVSH më 1997 dhe emisioni u riemërtua «Opinion» më 2001. Është autor i disa librave, përfshirë biografinë në anglisht të Enver HOXHA (2016), dhe që nga 16 shkurt 2026 është anëtar i Komitetit Ekzekutiv të FSHF. Ky tekst është draft kërkimor, jo biografi e aprovuar.",
+    "detailedBio_sq": "Blendi FEVZIU (i lindur më 18 maj 1969) është gazetar, shkrimtar dhe drejtues i emisionit «Opinion» në TV Klan. Sipas CV-së së FSHF, ka qenë pjesë e gazetës së studentëve nga 1989, bashkëthemelues i «RD» më 5 janar 1991, dhe ka mbajtur role redaktuese në disa tituj të shtypit; në televizion nisi në TVSH më 1997 dhe emisioni u riemërtua «Opinion» më 2001. Është autor i disa librave, përfshirë biografinë në anglisht të Enver HOXHA (2016), dhe që nga 16 shkurt 2026 është anëtar i Komitetit Ekzekutiv të FSHF. Ky tekst është draft kërkimor, jo biografi e aprovuar.",
+    "detailedBio_en": "Blendi FEVZIU (born 18 May 1969) is a journalist, writer and host of the programme Opinion on TV Klan. According to the FSHF CV, he was on the student newspaper staff from 1989, a co-founder of RD on 5 January 1991, and later held editorial roles at several print titles; he began on television at TVSH in 1997 and the programme was renamed Opinion in 2001. He is the author of several books, including the 2016 English-language biography of Enver HOXHA, and has been a member of the FSHF Executive Committee since 16 February 2026. This text is a research draft, not an approved biography.",
+    "aliases": [
+      "Blendi Fevziu"
+    ],
+    "officialLinks": [
+      {
+        "label": "Opinion — TV Klan",
+        "url": "https://tvklan.al/programe/opinion"
+      },
+      {
+        "label": "CV FSHF (sq)",
+        "url": "https://fshf.org/sq/cv/blendi-fevziu/"
+      }
+    ]
+  },
+  "entities": {
+    "journalist": {
+      "name": "Blendi FEVZIU",
+      "id": "vip_m1"
+    },
+    "programme": {
+      "name": "Opinion",
+      "outlet": "TV Klan",
+      "startedOn": "1997-08-31",
+      "renamedOpinionIn": "2001",
+      "schedule_sq": "E hënë–e mërkurë 22:00; e enjte 21:00",
+      "evidenceIds": [
+        "EV-001",
+        "EV-002"
+      ]
+    },
+    "broadcaster": {
+      "legalName": "Tv Klan sh.a.",
+      "licenceType_sq": "Licencë private kombëtare transmetimi audioviziv",
+      "evidenceIds": [
+        "EV-009"
+      ]
+    },
+    "owners": {
+      "source": "AMA, citing QKB, accessed 2026-11-11",
+      "shareholders": [
+        {
+          "name": "Aleksandër FRANGAJ",
+          "sharePercent": 60,
+          "nature": "direct"
+        },
+        {
+          "name": "Alba GINA",
+          "sharePercent": 40,
+          "nature": "direct"
+        }
+      ],
+      "subjectListedAsShareholder": false,
+      "evidenceIds": [
+        "EV-008",
+        "EV-020"
+      ]
+    },
+    "otherAffiliations": [
+      {
+        "organization": "Federata Shqiptare e Futbollit (FSHF)",
+        "role_sq": "Anëtar i Komitetit Ekzekutiv",
+        "start": "2026-02-16",
+        "termYears": 4,
+        "votesReported": 40,
+        "evidenceIds": [
+          "EV-004",
+          "EV-005",
+          "EV-002"
+        ]
+      }
+    ]
+  },
+  "photo": {
+    "photoPending": true,
+    "photoStatus": "candidate_recorded_no_documented_reuse_basis",
+    "officialPhotoPath": null,
+    "imageUrl": null,
+    "photoLicence": null,
+    "photo_source_url": null,
+    "photoCandidates": [
+      {
+        "evidenceId": "EV-024",
+        "sourcePage": "https://fshf.org/sq/cv/blendi-fevziu/",
+        "imageUrl": "https://fshf.org/app/uploads/2017/09/Blendi-Fevziu.jpg-scaled.jpeg",
+        "credit": "Federata Shqiptare e Futbollit (FSHF); individual photographer not named on the page accessed",
+        "reuseBasis": null,
+        "reuseBasisDocumented": false,
+        "widthPx": 1707,
+        "heightPx": 2560,
+        "croppableTo3x4": true,
+        "cropNote": "Native aspect is approximately 2:3. A 3:4 crop would use the full width and a height of about 2276 px.",
+        "inspectedOn": "2026-11-11"
+      }
+    ]
+  },
+  "relationshipToNovaric": {
+    "status": "unknown",
+    "statement_sq": "Në këtë hulumtim nuk u identifikua marrëdhënie, spor ose konflikt i njohur midis NOVARIC® dhe Blendi FEVZIU. Kjo nuk është dëshmi e mungesës absolute. Para publikimit nevojitet konfirmim dhe, nëse merret, rishikim i pavarur.",
+    "statement_en": "This research identified no known relationship, dispute or conflict between NOVARIC® and Blendi FEVZIU. That is not proof that none exists. Confirmation, and independent review if a relationship is later found, is required before publication."
+  },
+  "sampling": {
+    "validated": false,
+    "method_sq": "Hulumtim tavoline i burimeve të hapura; lexim faqesh dhe shkrimesh. Jo kodim i incizimeve të plota.",
+    "method_en": "Open-source desk research; reading of pages and write-ups. No coding of full recordings.",
+    "inclusionCriteria": "Publicly accessible items attributable to the subject, the programme Opinion, the broadcaster TV Klan, or its ownership/regulator, accessed on 2026-11-11.",
+    "proposedAssessmentWindow": {
+      "start": "2026-10-01",
+      "end": "2026-11-11",
+      "reason_sq": "Përfshin emisionin e 22 tetorit të lidhur me sanksionin e raportuar, përgjigjet e drejtuesit dhe të rregullatorit, dhe shkrimet zyrtare fqinje. Nuk është kampion vjetor i validuar."
+    },
+    "identitySourcesSpan": {
+      "start": "1989",
+      "end": "2026"
+    },
+    "auditedCounts": {
+      "officialProgrammePages": 1,
+      "officialEpisodeOrSegmentWriteUps": 6,
+      "programmeEditionCitedWithoutDedicatedPage": 1,
+      "institutionalCvsAndElectionPages": 4,
+      "publisherPages": 1,
+      "republishedInterviews": 1,
+      "regulatorOwnershipOrLicencePages": 2,
+      "officialRegulatorNoticesOnEditorialSanctions": 2,
+      "secondaryReportsOnReportedFine": 3
+    },
+    "sampleItemIds": [
+      "EV-001",
+      "EV-014",
+      "EV-015",
+      "EV-016",
+      "EV-017",
+      "EV-018",
+      "EV-010"
+    ],
+    "limitations": [
+      "Not a random or stratified sample of a four-nights-a-week programme.",
+      "TV Klan write-ups are short summaries, not full transcripts.",
+      "The 22 October 2026 edition was documented via later reports, not a dedicated full episode page in this sample.",
+      "No speaking-time, interruption or claim-accuracy coding was performed."
+    ]
+  },
+  "publication": {
+    "biographyStatus": "draft",
+    "assessmentStatus": "research_only",
+    "reviewerIdentity": null,
+    "reviewDate": null,
+    "approvalReference": null,
+    "reviewCompleteness": "research_draft_not_reviewed",
+    "authorizedForPublicDisplay": false,
+    "publicDisplayWhenUnassessed_sq": "Pa vlerësim / Not assessed",
+    "publicDisplayWhenUnassessed_en": "Pa vlerësim / Not assessed"
+  },
+  "scoring": {
+    "scoringSuspended": true,
+    "scoringSuspensionReason": "No approved MARAGON® scoring methodology or documented coding rules were available. Numeric scoring, composites, benchmarks, Aletheia, speaking-time and interruption fields are therefore null.",
+    "composite": null,
+    "averageMaragonScore": null,
+    "latestScore": null,
+    "aletheiaScore": null,
+    "dynamicScore": null,
+    "benchmarks": {
+      "peerAverage": null,
+      "standardAdherence": null
+    },
+    "claimCountRecords": null,
+    "speakingTimeMeasurements": null,
+    "interruptionMeasurements": null,
+    "historicalRadarData": null,
+    "maragonSummary": {
+      "Readiness": null,
+      "Aptitude": null,
+      "Governance": null,
+      "OversightNurturing": null
+    },
+    "legacyMaragonAnalysis": null,
+    "ignoreHardcodedMediaProfilesScores": true
+  },
+  "trajectory": {
+    "status": "not_assessed",
+    "evolutionaryStatus": null,
+    "doNotUseLabel": "Compromised",
+    "commentary_sq": "Nuk vlerësohet. Etiketa COMPROMISED dhe fraza «Nga Investigues në Opinionist» në kartën e gjallë janë fallback i kodit, jo gjetje (EV-019).",
+    "commentary_en": "Not assessed. The live card's COMPROMISED badge and the line 'Nga Investigues në Opinionist' are code fallbacks, not findings (EV-019).",
+    "genome": null
+  },
+  "indicators": [
+    {
+      "id": "maragon:R1.1",
+      "code": "R1.1",
+      "title_sq": "Pajtueshmëria Rregullatore",
+      "title_en": "Regulatory Compliance",
+      "status": "assessed-qualitative",
+      "score": null,
+      "evidenceIds": [
+        "EV-009",
+        "EV-010",
+        "EV-011",
+        "EV-012",
+        "EV-013",
+        "EV-022",
+        "EV-023",
+        "EV-025"
+      ],
+      "commentary_sq": "TV Klan ka licencë kombëtare. Për «Opinion» të 22 tetorit 2026, transmetuesi raporton një gjobë të AMA-s ndaj operatorit; Shteg raporton 100 mijë lekë dhe datën 30 tetor 2026. Masa, sipas këtyre burimeve, është administrative ndaj transmetuesit, e lidhur me fjalën e të ftuarit Armand SHKULLAKU, jo një dënim penal personal i Blendi FEVZIU. Akti zyrtar nuk u gjet. FEVZIU e ka kundërshtuar publikisht kornizën e sanksionit. AMA, në njoftimet e 4 dhe 10 nëntorit, mbron ligjshmërinë e masave për nxitje të dhunës pa i emërtuar të gjitha rastet.",
+      "commentary_en": "TV Klan holds a national licence. For the 22 October 2026 edition of Opinion, the broadcaster reports an AMA fine against the operator; Shteg reports a 100,000 lekë fine dated 30 October 2026. On these accounts the measure is administrative against the broadcaster and concerns a guest's remarks (Armand SHKULLAKU), not a personal criminal finding against Blendi FEVZIU. The official decision text was not retrieved. FEVZIU has publicly contested the sanction's framing. AMA's 4 and 10 November notices defend measures against incitement without naming every case.",
+      "limitations": "Official AMA decision text not found (EV-025). Appeal status unverified. No full regulatory history audit.",
+      "missingDataReason": "Primary AMA instrument missing; no approved scoring method."
+    },
+    {
+      "id": "maragon:R1.2",
+      "code": "R1.2",
+      "title_sq": "Pajtueshmëria Etike",
+      "title_en": "Ethical Adherence",
+      "status": "insufficient_evidence",
+      "score": null,
+      "evidenceIds": [
+        "EV-010",
+        "EV-011",
+        "EV-022",
+        "EV-023",
+        "EV-027"
+      ],
+      "commentary_sq": "Episodi i tetorit 2026 prek edhe etikën e transmetimit (distancimi nga fjala e të ftuarit). Nuk u gjet arkiv korrigjimesh ose lëndë e emërtuar e Këshillit të Ankesave. Nuk mund të merret një gjykim i përgjithshëm etik mbi karrierën.",
+      "commentary_en": "The October 2026 episode also raises broadcast-ethics questions (distance from a guest's remarks). No corrections archive or named Complaints Council case was found. No career-wide ethics judgement can be drawn.",
+      "limitations": "Sample was not ethically coded. AMA general notices are not an audit of this journalist.",
+      "missingDataReason": "No corrections corpus and no coded ethics protocol."
+    },
+    {
+      "id": "maragon:A2.1",
+      "code": "A2.1",
+      "title_sq": "Saktësia Faktike",
+      "title_en": "Factual Precision",
+      "status": "insufficient_evidence",
+      "score": null,
+      "evidenceIds": [
+        "EV-014",
+        "EV-015",
+        "EV-018"
+      ],
+      "commentary_sq": "Kampioni tregon kryesisht debat. EV-018 përshkruan prezantimin e një videoje kundër një pretendimi; materiali nuk u verifikua pavarësisht. Nuk u mat saktësia pretendim-për-pretendim.",
+      "commentary_en": "The sample is mainly debate. EV-018 describes presentation of a video against a claim; the material was not independently verified here. Claim-by-claim accuracy was not measured.",
+      "limitations": "Short write-ups, not transcripts; no accuracy coding.",
+      "missingDataReason": "No coding rules and no full-recording review."
+    },
+    {
+      "id": "maragon:A2.2",
+      "code": "A2.2",
+      "title_sq": "Kornizimi dhe Paanshmëria",
+      "title_en": "Framing and Impartiality",
+      "status": "insufficient_evidence",
+      "score": null,
+      "evidenceIds": [
+        "EV-001",
+        "EV-016",
+        "EV-017",
+        "EV-010"
+      ],
+      "commentary_sq": "Formati zyrtar është debat me këndvështrime të ndryshme. Më 21 tetor 2026, Nikola KEDHI e akuzoi emisionin për kornizim pro qeverisë; FEVZIU e mohoi. Këto janë shkëmbime të izoluara, jo indeks i paanshmërisë.",
+      "commentary_en": "The official format is debate with differing viewpoints. On 21 October 2026 Nikola KEDHI alleged a pro-government frame; FEVZIU denied it. These are isolated exchanges, not an impartiality index.",
+      "limitations": "No speaking-time or guest-balance measurement in a validated sample.",
+      "missingDataReason": "No framing or balance coding."
+    },
+    {
+      "id": "maragon:A2.3",
+      "code": "A2.3",
+      "title_sq": "Raportimi Origjinal",
+      "title_en": "Original Reporting",
+      "status": "assessed-qualitative",
+      "score": null,
+      "evidenceIds": [
+        "EV-001",
+        "EV-002",
+        "EV-007",
+        "EV-014",
+        "EV-018"
+      ],
+      "commentary_sq": "Veprimtaria televizive e kampionit është kryesisht moderim debati. Ka raste prezantimi materialesh ose librash. Veç kësaj, subjekti ka botuar punë të gjata, përfshirë biografinë në anglisht të Enver HOXHA (2016). Emisioni live dhe libri nuk duhen ngatërruar.",
+      "commentary_en": "The sampled television work is mainly debate hosting. There are instances of presenting materials or books. Separately, the subject has published long-form work, including the 2016 English-language Hoxha biography. Live television and books must not be conflated.",
+      "limitations": "Television originality was not audited. The book catalogue remains incomplete.",
+      "missingDataReason": "No measurement of originality in the television output."
+    },
+    {
+      "id": "maragon:A2.4",
+      "code": "A2.4",
+      "title_sq": "Kontekstualizimi",
+      "title_en": "Contextualization",
+      "status": "insufficient_evidence",
+      "score": null,
+      "evidenceIds": [
+        "EV-014",
+        "EV-015",
+        "EV-017"
+      ],
+      "commentary_sq": "Përmbledhjet e shkurtra nuk lejojnë të dallohet në mënyrë të besueshme raportimi tematik nga ai episodik.",
+      "commentary_en": "Short write-ups do not reliably distinguish thematic from episodic reporting.",
+      "limitations": "Full editions were not viewed.",
+      "missingDataReason": "No contextualization coding."
+    },
+    {
+      "id": "maragon:G3.1",
+      "code": "G3.1",
+      "title_sq": "Transparenca e Pronësisë dhe Konfliktet",
+      "title_en": "Ownership Transparency and Conflicts",
+      "status": "assessed-qualitative",
+      "score": null,
+      "evidenceIds": [
+        "EV-008",
+        "EV-009",
+        "EV-020",
+        "EV-002",
+        "EV-004",
+        "EV-005"
+      ],
+      "commentary_sq": "AMA boton pronësinë e transmetuesit: Aleksandër FRANGAJ 60%, Alba GINA 40%. Në burimet e shqyrtuara, FEVZIU nuk figuron si aksionar. Që nga 16 shkurt 2026 ai është anëtar i Komitetit Ekzekutiv të FSHF, lidhje e hapur që mund të kërkojë deklarim kur emisioni mbulon futbollin ose federatën. Nuk u audituan deklarimet në ekran pas shkurtit 2026.",
+      "commentary_en": "AMA publishes the broadcaster's ownership: Aleksandër FRANGAJ 60%, Alba GINA 40%. In the sources reviewed, FEVZIU does not appear as a shareholder. Since 16 February 2026 he has been an FSHF Executive Committee member, an open affiliation that may require disclosure when the programme covers football or the federation. On-air disclosure after February 2026 was not audited.",
+      "limitations": "Primary QKB extract not inspected. Other possible interests not reviewed.",
+      "missingDataReason": "No full interest declaration and no post-mandate sports-coverage audit."
+    },
+    {
+      "id": "maragon:G3.2",
+      "code": "G3.2",
+      "title_sq": "Autonomia Editoriale",
+      "title_en": "Editorial Autonomy",
+      "status": "insufficient_evidence",
+      "score": null,
+      "evidenceIds": [
+        "EV-008",
+        "EV-010",
+        "EV-011",
+        "EV-016"
+      ],
+      "commentary_sq": "Autonomia ndaj pronarëve, reklamuesve ose presionit politik nuk mund të vlerësohet nga ky kampion.",
+      "commentary_en": "Autonomy from owners, advertisers or political pressure cannot be assessed from this sample.",
+      "limitations": "No editorial statute, contract or internal newsroom evidence was seen.",
+      "missingDataReason": "No primary sources on internal editorial autonomy."
+    },
+    {
+      "id": "maragon:O4.1",
+      "code": "O4.1",
+      "title_sq": "Edukimi Mediatik",
+      "title_en": "Media Literacy",
+      "status": "insufficient_evidence",
+      "score": null,
+      "evidenceIds": [
+        "EV-001",
+        "EV-014",
+        "EV-018"
+      ],
+      "commentary_sq": "Në kampionin e shkrimeve nuk u identifikuan segmente të qarta që mësojnë publikun si të verifikojë informacionin, përtej prezantimit të një videoje ose diskutimit të dosjeve.",
+      "commentary_en": "The write-up sample did not identify clear segments that teach the public how to verify information, beyond presenting a video or discussing case files.",
+      "limitations": "Write-ups may have omitted such segments.",
+      "missingDataReason": "No media-literacy content coding."
+    },
+    {
+      "id": "maragon:O4.2",
+      "code": "O4.2",
+      "title_sq": "Kontributi në Sferën Publike",
+      "title_en": "Public Sphere Contribution",
+      "status": "assessed-qualitative",
+      "score": null,
+      "evidenceIds": [
+        "EV-001",
+        "EV-002",
+        "EV-006",
+        "EV-014",
+        "EV-015",
+        "EV-016",
+        "EV-017"
+      ],
+      "commentary_sq": "«Opinion» është emision i gjatë politik në një kanal kombëtar. Kampioni tregon të ftuar nga politika, gazetaria dhe analiza, dhe tema të axhendës publike. Kjo përshkruan funksionin e platformës, jo cilësinë e matur të diskursit. Pretendimi «më i ndjekuri» është i transmetuesit.",
+      "commentary_en": "Opinion is a long-running political programme on a national channel. The sample shows guests from politics, journalism and commentary, and public-agenda topics. That describes the platform's function, not a measured quality of discourse. The 'most watched' claim is the broadcaster's.",
+      "limitations": "Pluralism and audience impact were not measured.",
+      "missingDataReason": "No pluralism or audience measurement."
+    },
+    {
+      "id": "maragon:C",
+      "code": "C",
+      "title_sq": "Përgjegjësia Qytetare (plotësuese)",
+      "title_en": "Civic Responsibility (supplementary)",
+      "status": "not_assessed",
+      "score": null,
+      "evidenceIds": [],
+      "commentary_sq": "Nuk ka përkufizim të miratuar. Boshti C në kartën e aplikacionit (CSR) nuk është metodologji e miratuar.",
+      "commentary_en": "There is no approved definition. The application's C axis (CSR) is not an approved methodology.",
+      "limitations": "Cannot be scored until a definition is approved.",
+      "missingDataReason": "No approved definition of C.",
+      "supplementary": true,
+      "notPartOfTenCanonicalIndicators": true
+    }
+  ],
+  "canonicalIndicatorIdsInOrder": [
+    "maragon:R1.1",
+    "maragon:R1.2",
+    "maragon:A2.1",
+    "maragon:A2.2",
+    "maragon:A2.3",
+    "maragon:A2.4",
+    "maragon:G3.1",
+    "maragon:G3.2",
+    "maragon:O4.1",
+    "maragon:O4.2"
+  ],
+  "evidenceRegister": [
+    {
+      "evidenceId": "EV-001",
+      "title": "Opinion — official programme page",
+      "publisher": "TV Klan",
+      "url": "https://tvklan.al/programe/opinion",
+      "publicationDate": null,
+      "accessDate": "2026-11-11",
+      "excerpt": "Emisioni politik më i ndjekur dhe më i preferuar në ekranet shqiptare nga Blendi Fevziu. Arena e politikës shqiptare që prej 31 Gushtit 1997.",
+      "observation": "Identifies Blendi FEVZIU as host and states the broadcaster's schedule, format and start date.",
+      "limitations": "Marketing copy; no independent audience measurement; does not separate the 1997 start from the 2001 renaming recorded in EV-002."
+    },
+    {
+      "evidenceId": "EV-002",
+      "title": "Blendi Fevziu — Curriculum Vitae (Albanian)",
+      "publisher": "Federata Shqiptare e Futbollit (FSHF)",
+      "url": "https://fshf.org/sq/cv/blendi-fevziu/",
+      "publicationDate": "2026",
+      "accessDate": "2026-11-11",
+      "excerpt": "Kombësia: Shqiptar. Datëlindja: 18 maj 1969. Anëtar i Komitetit Ekzekutiv që prej vitit: 2026.",
+      "observation": "Institutional professional biography; strongest source found for date of birth; career and book outline; FSHF membership.",
+      "limitations": "Sports-federation CV, not a civil-status record. Some print roles lack years. Footer contact details belong to FSHF."
+    },
+    {
+      "evidenceId": "EV-003",
+      "title": "Blendi Fevziu — Curriculum Vitae (English)",
+      "publisher": "FSHF",
+      "url": "https://fshf.org/en/cv/blendi-fevziu-2/",
+      "publicationDate": "2026",
+      "accessDate": "2026-11-11",
+      "excerpt": "Same professional narrative in English. A following table lists First name Bardhyl, Last name Jera, Birthday 04/02/1960.",
+      "observation": "Corroborates EV-002. The personal-data table appears to be template contamination from another person and must not be attributed to FEVZIU.",
+      "limitations": "Do not use any field from the stray table."
+    },
+    {
+      "evidenceId": "EV-004",
+      "title": "The members of the Executive Committee of the Albanian Football Association have been elected for the next four years",
+      "publisher": "FSHF",
+      "url": "https://fshf.org/en/the-members-of-the-executive-committee-of-the-albanian-football-association-have-been-elected-for-the-next-four-years/",
+      "publicationDate": "2026-02-16",
+      "accessDate": "2026-11-11",
+      "excerpt": "Blendi Fevziu – 40 votes, among members elected for the next four years.",
+      "observation": "Confirms the election and the reported vote tally.",
+      "limitations": "Does not describe platforms or conflict-of-interest declarations."
+    },
+    {
+      "evidenceId": "EV-005",
+      "title": "Komiteti Ekzekutiv",
+      "publisher": "FSHF",
+      "url": "https://fshf.org/komiteti-ekzekutiv/",
+      "publicationDate": "2026",
+      "accessDate": "2026-11-11",
+      "excerpt": "Composition includes Armand DUKA (president) and, among ten members, 5. Blendi Fevziu. Mandate: four years.",
+      "observation": "On the institutional page accessed, FEVZIU is listed as a sitting member.",
+      "limitations": "Not compared with an assembly minute."
+    },
+    {
+      "evidenceId": "EV-006",
+      "title": "Gazetari i njohur Blendi Fevziu, rrëfen për “KJ”…",
+      "publisher": "Koha Jonë (interviewer Esmeralda GJOKA)",
+      "url": "https://kohajone.com/30-vite-koha-jone/gazetari-i-njohur-blendi-fevziu-rrefen-per-kj-detaje-qe-lidhen-me-angazhimet-e-tij-profesionale-dhe-jeten-familjare/",
+      "publicationDate": "2004-09-30",
+      "republicationDate": "2021-05-27",
+      "accessDate": "2026-11-11",
+      "excerpt": "Ai vetë ka lindur në Tiranë më 18 Maj 1969… diplomohet më 1991.",
+      "observation": "Corroborates date of birth and education; first-person account of early press work.",
+      "limitations": "Date and place of birth appear in the interviewer's framing. Family details from 2004 are not used here."
+    },
+    {
+      "evidenceId": "EV-007",
+      "title": "Enver Hoxha: The Iron Fist of Albania",
+      "publisher": "Bloomsbury Academic (formerly I.B. Tauris)",
+      "url": "https://www.bloomsbury.com/us/enver-hoxha-9780857729088/",
+      "publicationDate": "2016-02-01",
+      "accessDate": "2026-11-11",
+      "excerpt": "Using unseen documents and first-hand interviews, journalist Blendi Fevziu pieces together the life of a tyrannical ruler… ISBN 9780857729088. Introduction/editing Robert ELSIE; translation Majlinda NISHKU.",
+      "observation": "Confirms English-language authorship and publication date.",
+      "limitations": "Publisher copy about 'unseen documents' was not audited against the book's sources."
+    },
+    {
+      "evidenceId": "EV-008",
+      "title": "Struktura Pronësore e Shoqërisë “Tv Klan” SH.A / Pronarë Përfitues sipas QKB",
+      "publisher": "Autoriteti i Mediave Audiovizive (AMA)",
+      "url": "https://ama.gov.al/struktura-pronesore-e-shoqerise-tv-klan-sh-a-pronare-perfitues-sipas-qkb/",
+      "publicationDate": null,
+      "accessDate": "2026-11-11",
+      "excerpt": "Aleksandër Frangaj 60% (direkte); Alba Gina 40% (direkte).",
+      "observation": "Official regulator statement of broadcaster ownership, citing QKB.",
+      "limitations": "Primary QKB extract not inspected; as-of date not stated on the page. Does not address FEVZIU shareholding or editorial influence."
+    },
+    {
+      "evidenceId": "EV-009",
+      "title": "Subjekte audiovizive të pajisur me licencë private kombëtare transmetimi audioviziv",
+      "publisher": "AMA",
+      "url": "https://ama.gov.al/subjekte-audiovizive-tabela/",
+      "publicationDate": null,
+      "accessDate": "2026-11-11",
+      "excerpt": "Row 1: Shoqëria “Tv Klan” sh.a.; www.tvklan.al.",
+      "observation": "Confirms the broadcaster's national private audiovisual licence.",
+      "limitations": "Table does not list programmes or journalists."
+    },
+    {
+      "evidenceId": "EV-010",
+      "title": "Ndodh e papritura në “Opinion”, Blendi Fevziu vishet si “polic” i AMA-s",
+      "publisher": "TV Klan",
+      "url": "https://tvklan.al/ndodh-e-papritura-ne-opinion-blendi-fevziu-vishet-si-polic-i-ama-s",
+      "publicationDate": "2026-11-05",
+      "accessDate": "2026-11-11",
+      "excerpt": "Gjoba e AMA-s i është vendosur TV Klan për emisionin e 22 tetorit të “Opinion” për “përmbajtje të gjuhës së papërshtatshme”, e lidhur me një sekuencë kur Armand Shkullaku ka kritikuar Edi Rama. Fevziu: “Unë nuk po ankimoj gjobën.”",
+      "observation": "The broadcaster publicly acknowledges a fine against TV Klan for that edition and publishes the host's on-air response.",
+      "limitations": "Does not replace the official AMA decision. Party source (the broadcaster)."
+    },
+    {
+      "evidenceId": "EV-011",
+      "title": "Kur një fjali në studio kushton 100 mijë lekë",
+      "publisher": "Shteg Investigativ (Gisela TROPLINI)",
+      "url": "https://shteg.org/kur-nje-fjali-ne-studio-kushton-100-mije-leke/",
+      "publicationDate": "2026-11-06",
+      "accessDate": "2026-11-11",
+      "excerpt": "Reports six decisions signed on 30 October; a 100,000 lekë fine against Klan TV for the 22 October Opinion edition; quotes Armand SHKULLAKU; quotes FEVZIU describing disguised censorship and saying he would pursue the measure legally.",
+      "observation": "Detailed secondary reporting, including the subject's remarks and the stated legal appeal path.",
+      "limitations": "Not the official instrument."
+    },
+    {
+      "evidenceId": "EV-012",
+      "title": "AMA kundërshton akuzat për censurë pas gjobave ndaj televizioneve",
+      "publisher": "Shteg Investigativ (Gisela TROPLINI)",
+      "url": "https://shteg.org/ama-kundershton-akuzat-per-censure-pas-gjobave-ndaj-televizioneve/",
+      "publicationDate": "2026-11-10",
+      "accessDate": "2026-11-11",
+      "excerpt": "Summarises AMA chair Armela KRASNIQI: media remain responsible for guests' words; being critical of the government does not exempt one from the law.",
+      "observation": "Documents the regulator's response as contrary evidence to the censorship allegation.",
+      "limitations": "Secondary; the original social-media post was not separately archived (parallel official text in EV-023)."
+    },
+    {
+      "evidenceId": "EV-013",
+      "title": "Albanian Talk Show Hosts Slam TV Regulator’s ‘Orwellian’ Fines",
+      "publisher": "Balkan Insight (Blerina GJOKA)",
+      "url": "https://balkaninsight.com/2026/11/10/albanian-talk-show-hosts-slam-tv-regulators-orwellian-fines/bi/",
+      "publicationDate": "2026-11-10",
+      "accessDate": "2026-11-11",
+      "excerpt": "Describes FEVZIU's symbolic 'AMA Police' protest and quotes the same principle as EV-010.",
+      "observation": "International secondary corroboration of the 5 November on-air protest.",
+      "limitations": "Does not supply the AMA decision text."
+    },
+    {
+      "evidenceId": "EV-014",
+      "title": "Opinion – Miliona euro dhe lingota ari të fshehura në Shqipëri! – 10 Nëntor 2026",
+      "publisher": "TV Klan",
+      "url": "https://tvklan.al/opinion-miliona-euro-dhe-lingota-ari-te-fshehura-ne-shqiperi-10-nentor-2026",
+      "publicationDate": "2026-11-11",
+      "accessDate": "2026-11-11",
+      "excerpt": "First part: Çapja–Çela file; guests Klodiana LALA, Eugen BECI, Merin MAÇI, Eni FERHATI. Later parts: Baton HAXHIU's book on the Kosovo war.",
+      "observation": "Example of recent format: investigative-file debate and a book presentation.",
+      "limitations": "One-minute summary, not a transcript."
+    },
+    {
+      "evidenceId": "EV-015",
+      "title": "Opinion – Agasi, Vlora dhe 450 mijë euro! – 9 Nëntor 2026",
+      "publisher": "TV Klan",
+      "url": "https://tvklan.al/opinion-agasi-vlora-dhe-450-mije-euro-9-nentor-2026",
+      "publicationDate": "2026-11-10",
+      "accessDate": "2026-11-11",
+      "excerpt": "Discussion of SPAK cases including Albanian Files, accusations concerning Vlora HYSENI, incinerators, the Çopja group, and a request related to Erion VELIAJ. Named guests listed in the dossier.",
+      "observation": "Example of a recent crime/investigation agenda with a journalists' panel.",
+      "limitations": "Short summary without a transcript."
+    },
+    {
+      "evidenceId": "EV-016",
+      "title": "“Ramës i bëhet qejfi me emisionin tuaj”, Fevziu nxehet me Kedhin",
+      "publisher": "TV Klan",
+      "url": "https://tvklan.al/rames-i-behet-qejfi-me-emisionin-tuaj-fevziu-nxehet-me-kedhin-ta-tregoj-une-do-ikesh-nga-frika",
+      "publicationDate": "2026-10-21",
+      "accessDate": "2026-11-11",
+      "excerpt": "Nikola KEDHI alleged the programme pleased Edi RAMA; Blendi FEVZIU replied that the studio includes both supporters and opponents.",
+      "observation": "Documents an attributed framing allegation and the host's reply.",
+      "limitations": "Broadcaster write-up, not a speaking-time measurement."
+    },
+    {
+      "evidenceId": "EV-017",
+      "title": "Opinion – A do të bashkohet opozita? – 29 Janar 2026",
+      "publisher": "TV Klan",
+      "url": "https://tvklan.al/opinion-a-do-te-bashkohet-opozita-29-janar-2026",
+      "publicationDate": "2026-01-30",
+      "accessDate": "2026-11-11",
+      "excerpt": "Opposition guests facing journalists/an analyst. The write-up attributes to FEVZIU the view that Belinda BALLUKU should have resigned and that the opposition was barely heard.",
+      "observation": "Example of a mixed panel and of evaluative interventions by the host, according to the broadcaster's summary.",
+      "limitations": "Summary, not impartiality coding. Outside the October–November 2026 window but in the exploratory sample."
+    },
+    {
+      "evidenceId": "EV-018",
+      "title": "“Me shpejtësi skëterrë…”, “Opinion” publikon videon e lëvizjes së autorit 4 sekonda para aksidentit",
+      "publisher": "TV Klan",
+      "url": "https://tvklan.al/me-shpejtesi-sketerre-opinion-publikon-videon-e-levizjes-se-autorit-4-sekonda-para-aksidentit",
+      "publicationDate": "2026-05-05",
+      "accessDate": "2026-11-11",
+      "excerpt": "A father sent FEVZIU a video from four seconds before a Durrës crash; the write-up says studio experts assessed speed at over 80 km/h, contrary to a 30 km/h claim.",
+      "observation": "Example of the programme presenting visual material supplied to the host against an attributed claim.",
+      "limitations": "The video and any independent expertise were not inspected in this research."
+    },
+    {
+      "evidenceId": "EV-019",
+      "title": "Application state for vip_m1 (media.novaric.al / repository)",
+      "publisher": "NOVARIC® (internal data and code, not an external biographical source)",
+      "url": "https://media.novaric.al/?page=tvPersonalitiesAnalysis&id=vip_m1",
+      "publicationDate": "2026-11-05",
+      "accessDate": "2026-11-11",
+      "excerpt": "mediaProfiles.ts hardcodes dynamicScore 88 and seven maragonAnalysis numbers; genome is absent. MediaPersonalityCard then invents evolutionaryStatus Compromised and the line 'Nga Investigues në Opinionist'; SCORE falls to 0 when paragonAnalysis is empty.",
+      "observation": "The live COMPROMISED badge, SCORE 0 and rhetoric-shift line are interface artefacts, not findings of this research.",
+      "limitations": "Does not describe the subject's conduct. Hardcoded scores are not an approved assessment. See REPO-CONTRACT-FINDINGS-20261111.md."
+    },
+    {
+      "evidenceId": "EV-020",
+      "title": "TV KLAN | Media Ownership Monitor",
+      "publisher": "Media Ownership Monitor / Reporters Without Borders",
+      "url": "https://albania.mom-gmr.org/en/media/detail/outlet/tv-klan-3/",
+      "publicationDate": "2023",
+      "accessDate": "2026-11-11",
+      "excerpt": "Frangaj family owns 100% (Aleksandër 60%, Alba GINA 40%). FEVZIU is described as host of Opinion, not as an owner.",
+      "observation": "Secondary corroboration of EV-008; separates the journalist from ownership.",
+      "limitations": "May be dated for other group facts. Does not replace AMA/QKB for a 2026 cut-off."
+    },
+    {
+      "evidenceId": "EV-021",
+      "title": "AMA gjobit emisionin Opinion, revoltohet Fevziu: Tentativë për censurë nga një grup anonimësh!",
+      "publisher": "Start News",
+      "url": "https://startnews.al/2026/11/04/ama-gjobit-emisionin-opinion-revoltohet-fevziu-tentative-per-censure-nga-nje-grup-anonimesh/",
+      "publicationDate": "2026-11-04",
+      "accessDate": "2026-11-11",
+      "excerpt": "Attributes to FEVZIU remarks that SHKULLAKU has criticised RAMA for years and that a host cannot dictate a guest's words.",
+      "observation": "Earlier secondary report of a public reaction, before the 5 November edition.",
+      "limitations": "Weaker secondary source; quotations not corroborated against a recording. Not used as a sole source."
+    },
+    {
+      "evidenceId": "EV-022",
+      "title": "Apeli i Autoritetit të Mediave Audiovizive: Liria e shprehjes nuk justifikon thirrjet për dhunë në studiot televizive",
+      "publisher": "AMA",
+      "url": "https://ama.gov.al/apeli-i-autoritetit-te-mediave-audiovizive-liria-e-shprehjes-nuk-justifikon-thirrjet-per-dhune-ne-studiot-televizive/",
+      "publicationDate": "2026-11-04",
+      "accessDate": "2026-11-11",
+      "excerpt": "Calls on audiovisual media service providers to take care when violence is incited, including by guests. Cites Law 97/2013, Article 4(2)(dh) and Article 33(1)(d). States that journalists should intervene, object and clearly distance themselves. Says AMA has taken measures, without labelling the outlets in this notice.",
+      "observation": "Official regulator position in the same week; claimed legal basis.",
+      "limitations": "Does not name TV Klan, Opinion or FEVZIU. Not a numbered decision."
+    },
+    {
+      "evidenceId": "EV-023",
+      "title": "Kur në ekran bëhet thirrje për luftë civile",
+      "publisher": "AMA",
+      "url": "https://ama.gov.al/kur-ne-ekran-behet-thirrje-per-lufte-civile/",
+      "publicationDate": "2026-11-10",
+      "accessDate": "2026-11-11",
+      "excerpt": "Lists many monitored quotations, including 'Në fund Rama do të tërhiqet zvarrë…', and describes a broadcast in which a moderator asked 'Si do të tërhiqet zvarrë?'. States that 11 of 15 large free-to-air televisions featured in the monitoring, and that by 9 November 2026 AMA had imposed 47 administrative fines, 27 of them content-related.",
+      "observation": "Official contrary framing: the regulator presents the debate as editorial responsibility for incitement, not as punishment of political criticism.",
+      "limitations": "Quotations are drawn from multiple broadcasts and must not all be attributed to Opinion or FEVZIU. The follow-up question does not name the moderator. The numbered decision for 22 October remains missing."
+    },
+    {
+      "evidenceId": "EV-024",
+      "title": "Portrait candidate on the FSHF CV",
+      "publisher": "FSHF",
+      "url": "https://fshf.org/app/uploads/2017/09/Blendi-Fevziu.jpg-scaled.jpeg",
+      "sourcePage": "https://fshf.org/sq/cv/blendi-fevziu/",
+      "publicationDate": "2017-09",
+      "accessDate": "2026-11-11",
+      "excerpt": "RGB image 1707×2560 (about 2:3), used on the official FSHF CV.",
+      "observation": "Authentic portrait used on the subject's official federation biography; croppable to 3:4.",
+      "limitations": "No documented reuse licence for NOVARIC®. Individual photographer not credited. photoPending remains true."
+    },
+    {
+      "evidenceId": "EV-025",
+      "title": "Search for the official AMA decision text (22/30 October 2026, TV Klan, Opinion)",
+      "publisher": "Research coverage note (AMA site)",
+      "url": "https://ama.gov.al/cat_doc/vendime/",
+      "publicationDate": null,
+      "accessDate": "2026-11-11",
+      "excerpt": "The decisions listing that loaded showed 2019–2020 compilations. Late October–November 2026 notices retrieved did not include a numbered PDF for the reported TV Klan / Opinion fine. https://ama.gov.al/ova_doc/2026/ timed out (504).",
+      "observation": "The official instrument was searched and not found on the pages that loaded; one URL was inaccessible at the time of access.",
+      "limitations": "This does not prove that the decision does not exist or that no fine was imposed."
+    },
+    {
+      "evidenceId": "EV-026",
+      "title": "Search for a freely licensed Wikimedia Commons portrait",
+      "publisher": "Research coverage note",
+      "url": null,
+      "publicationDate": null,
+      "accessDate": "2026-11-11",
+      "excerpt": "No Commons file with a documented licence for this person was identified.",
+      "observation": "No reuse basis was found through that channel.",
+      "limitations": "A file may exist under another filename."
+    },
+    {
+      "evidenceId": "EV-027",
+      "title": "Search for named Complaints Council cases or correction notices for Blendi FEVZIU / Opinion",
+      "publisher": "Research coverage note",
+      "url": null,
+      "publicationDate": null,
+      "accessDate": "2026-11-11",
+      "excerpt": "The search results did not return a named Complaints Council case or an archived correction notice for this subject.",
+      "observation": "A non-finding in this search, not proof that complaints or corrections do not exist.",
+      "limitations": "AMA complaints archives were not reviewed case by case."
+    }
+  ],
+  "coverageSearches": [
+    {
+      "evidenceId": "EV-025",
+      "question": "Official AMA decision text for the reported 22/30 October 2026 TV Klan / Opinion fine",
+      "result": "not_found_on_pages_that_loaded",
+      "oneUrlTimedOut": "https://ama.gov.al/ova_doc/2026/",
+      "doesNotProveEventDidNotOccur": true
+    },
+    {
+      "evidenceId": "EV-026",
+      "question": "Freely licensed Wikimedia Commons portrait of Blendi FEVZIU",
+      "result": "none_identified",
+      "doesNotProveFileDoesNotExist": true
+    },
+    {
+      "evidenceId": "EV-027",
+      "question": "Named AMA Complaints Council case or published correction notice for Blendi FEVZIU / Opinion",
+      "result": "none_identified_in_this_search",
+      "doesNotProveAbsence": true
+    }
+  ]
+}

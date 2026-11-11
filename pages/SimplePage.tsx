@@ -282,8 +282,12 @@ export const SimplePage: React.FC<SimplePageProps> = ({ page, onNavigate, profil
         return <NewsletterWelcome onBack={onBack} />;
     case 'newsletter':
         return <NewsletterData />;
-    case 'tvPersonalitiesAnalysis':
-        return <TvPersonalitiesAnalysisPage profiles={profiles} onBack={onBack} onProfileSelect={(page, id) => onNavigate(page, id)} />;
+    case 'tvPersonalitiesAnalysis': {
+        const initialProfileId = typeof window !== 'undefined'
+            ? new URLSearchParams(window.location.search).get('id') || undefined
+            : undefined;
+        return <TvPersonalitiesAnalysisPage profiles={profiles} onBack={onBack} initialProfileId={initialProfileId} onProfileSelect={(page, id) => onNavigate(page, id)} />;
+    }
      case 'hermeneuticFramework':
         return <HermeneuticFrameworkPage 
             onBack={onBack} 
