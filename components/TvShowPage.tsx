@@ -1,4 +1,6 @@
 import React from 'react';
+import { useLanguage } from '../contexts/LanguageContext';
+import { maragonShowScoresArePublic, notAssessedLabel } from '../utils/maragonPublication';
 // FIX: Corrected import path for types.
 import { TvShowData } from '../types';
 import GaugeChart from './GaugeChart';
@@ -32,9 +34,13 @@ export const TvShowPage: React.FC<TvShowPageProps> = ({ tvShow, profiles, onBack
     );
   }
 
+  const { language, toggleLanguage } = useLanguage();
+  const lang = language === 'en' ? 'en' : 'sq';
+  const unassessed = notAssessedLabel(lang);
   const { name, channel, logoUrl, description, host, commonTopics, statistics, maragonSummary } = tvShow;
   
   const hostProfile = profiles.find(p => p.name.toLowerCase() === host.toLowerCase());
+  const scoresPublic = maragonShowScoresArePublic(tvShow, hostProfile);
 
   const tvSeriesJsonLd = {
     '@context': 'https://schema.org',
@@ -56,6 +62,13 @@ export const TvShowPage: React.FC<TvShowPageProps> = ({ tvShow, profiles, onBack
     <main className="flex-grow container mx-auto px-4 py-8">
       <JsonLd data={tvSeriesJsonLd} />
       <article className="max-w-4xl mx-auto bg-white dark:bg-slate-800 p-6 sm:p-8 rounded-lg shadow-xl">
+        <div className="mb-4 flex justify-end">
+          <button type="button" onClick={toggleLanguage} className="rounded-full border border-slate-300 px-3 py-1 text-xs font-bold dark:border-slate-600">
+            <span className={lang === 'sq' ? 'text-primary-600' : 'text-slate-400'}>AL</span>
+            <span className="mx-1 text-slate-300">|</span>
+            <span className={lang === 'en' ? 'text-primary-600' : 'text-slate-400'}>EN</span>
+          </button>
+        </div>
         <header className="mb-8 text-center border-b border-slate-200 dark:border-slate-700 pb-8">
           <img 
             src={logoUrl} 
@@ -88,6 +101,7 @@ export const TvShowPage: React.FC<TvShowPageProps> = ({ tvShow, profiles, onBack
 
         <section className="mb-8 p-6 bg-slate-50 dark:bg-slate-800/50 rounded-lg shadow-inner">
              <h2 className="text-2xl font-semibold text-center text-slate-800 dark:text-slate-200 mb-6">Analiza e Perceptimit Publik</h2>
+             {scoresPublic ? (
              <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-start">
                 <div className="flex flex-col items-center text-center">
                     <MegaphoneIcon className="w-8 h-8 mb-2 text-primary-600 dark:text-primary-400" />
@@ -105,6 +119,9 @@ export const TvShowPage: React.FC<TvShowPageProps> = ({ tvShow, profiles, onBack
                      <p className="text-xs text-slate-500 dark:text-slate-400 mt-2 px-2">Analizon nivelin e debatit, moderimin, diversitetin e opinioneve dhe thellësinë e argumenteve.</p>
                 </div>
              </div>
+             ) : (
+               <p className="text-center text-lg font-semibold text-slate-700 dark:text-slate-200">{unassessed}</p>
+             )}
         </section>
         
         <section className="mb-8">
@@ -118,11 +135,15 @@ export const TvShowPage: React.FC<TvShowPageProps> = ({ tvShow, profiles, onBack
              </div>
         </section>
 
-        {maragonSummary && onNavigateToMaragonReport && (
+        {(maragonSummary || !scoresPublic) && onNavigateToMaragonReport && (
           <section className="mt-8 pt-6 border-t border-slate-200 dark:border-slate-700">
             <h3 className="text-xl font-semibold text-slate-800 dark:text-slate-200 mb-4 text-center">Përmbledhje MARAGON®</h3>
             <div className="p-4 bg-slate-50 dark:bg-slate-900/50 rounded-lg shadow-inner">
-                <MaragonSummaryDisplay scores={maragonSummary} />
+                {scoresPublic && maragonSummary ? (
+                  <MaragonSummaryDisplay scores={maragonSummary} />
+                ) : (
+                  <p className="text-center text-lg font-semibold text-slate-700 dark:text-slate-200">{unassessed}</p>
+                )}
             </div>
             <div className="text-center mt-4">
               <button

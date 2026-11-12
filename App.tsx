@@ -860,6 +860,16 @@ export const App: React.FC = () => {
         />;
       }
 
+      case 'maragonReportPage':
+        if (isMaragonReportLoading || !maragonAnalysisResult) {
+          return <LoadingSpinner />;
+        }
+        return (
+          <Suspense fallback={<LoadingSpinner />}>
+            <MaragonReportPage report={maragonAnalysisResult} onBack={handleNavigateBack} />
+          </Suspense>
+        );
+
       case 'vipProfilePage':
         return <VipProfilePageWrapper
             profile={selectedVipProfileForPage || ''}

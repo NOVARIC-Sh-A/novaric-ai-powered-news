@@ -4,6 +4,8 @@ import { VipProfile, ChartSegment } from '../types';
 import { PieChart } from './PieChart';
 import { MegaphoneIcon, ShieldCheckIcon, ChatBubbleLeftRightIcon } from './icons';
 import { formatVipName, getProfilePhotoUrl } from '../utils/paragonProfileUtils';
+import { isMaragonAssessmentPublished, isMediaProfile, notAssessedLabel } from '../utils/maragonPublication';
+import { useLanguage } from '../contexts/LanguageContext';
 
 interface PresenterAnalysisPageProps {
   presenter: VipProfile;
@@ -60,7 +62,24 @@ const AnalysisCharacteristic: React.FC<{ title: string; chartData?: ChartSegment
 };
 
 export const PresenterAnalysisPage: React.FC<PresenterAnalysisPageProps> = ({ presenter, onBack }) => {
+  const { language } = useLanguage();
   const { name, category, imageUrl, detailedBio, journalisticConduct } = presenter;
+  const mediaUnassessed = isMediaProfile(presenter) && !isMaragonAssessmentPublished(presenter);
+
+  if (mediaUnassessed) {
+    return (
+      <main className="flex-grow container mx-auto px-4 py-8 text-center">
+        <h1 className="text-3xl font-bold text-slate-900 dark:text-slate-100 mb-4">{formatVipName(name)}</h1>
+        <p className="text-xl font-semibold text-slate-700 dark:text-slate-200">{notAssessedLabel(language === 'en' ? 'en' : 'sq')}</p>
+        <button
+          onClick={onBack}
+          className="mt-6 px-6 py-2 bg-primary-600 hover:bg-primary-700 text-white font-semibold rounded-md shadow-md"
+        >
+          Kthehu Pas
+        </button>
+      </main>
+    );
+  }
 
   if (!journalisticConduct) {
     return (
