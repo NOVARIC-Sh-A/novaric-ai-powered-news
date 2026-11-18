@@ -40,6 +40,7 @@ interface HeaderProps {
   onNavigateToEuReferencesArchive?: () => void;
   onNavigateToCidaMethodology?: () => void;
   onNavigateToNexusAiGovernance?: () => void;
+  onNavigateToForecast2027?: () => void;
   onNavigateToNoraAiProfile?: () => void;
   onNavigateToAuthorProfile?: () => void;
 }

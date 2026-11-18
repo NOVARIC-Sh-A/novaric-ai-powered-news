@@ -1,5 +1,6 @@
 import React from 'react';
 import { NexusHumanistAiGovernancePage } from '../components/NexusHumanistAiGovernancePage';
+import { Forecast2027Page } from '../components/Forecast2027Page';
 import {
   PrivacyPolicy,
   SocialMediaPolicy,
@@ -214,6 +215,7 @@ export const SimplePage: React.FC<SimplePageProps> = ({ page, onNavigate, profil
             onNavigateToJudicialEcosystemAnalysisMethodology={() => nav('judicialEcosystemAnalysisMethodologyPage')}
             onNavigateToBibliografiaJurisprudences={() => nav('bibliografiaJurisprudences')}
             onNavigateToNovaricJournalManifesto={() => nav('novaricJournalManifesto')}
+            onNavigateToForecast2027={() => nav('forecast2027')}
             onNavigateToZodiacInfoPage={() => nav('zodiacInfoPage')}
             onNavigateToAiReadinessMatrix={() => nav('aiReadinessMatrix')}
             onNavigateToCorporatePositionStatement={() => nav('corporatePositionStatement')}
@@ -249,6 +251,8 @@ export const SimplePage: React.FC<SimplePageProps> = ({ page, onNavigate, profil
                 />;
     case 'corporatePositionStatement':
         return <CorporatePositionStatement onBack={onBack} onNavigateToGdpr={() => onNavigate('gdprPolicy')} />;
+    case 'forecast2027':
+        return <Forecast2027Page onBack={onBack} />;
     case 'nexusHumanistAiGovernance':
         return <NexusHumanistAiGovernancePage 
             onBack={onBack} 

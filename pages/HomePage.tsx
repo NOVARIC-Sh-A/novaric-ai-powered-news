@@ -72,6 +72,7 @@ interface HomePageProps {
   onNavigateToCidaMethodology: () => void;
   onNavigateToReputationWarRoom: () => void;
   onNavigateToNexusAiGovernance?: () => void;
+  onNavigateToForecast2027?: () => void;
   onNavigateToEuropeanCommission?: () => void;
   onNavigateToEuCodeOfConduct?: () => void;
   onNavigateToEuReferencesArchive?: () => void;

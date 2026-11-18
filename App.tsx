@@ -209,6 +209,10 @@ export const App: React.FC = () => {
         pageTitle = 'NOVARIC® Nexus Humanist AI Code of Conduct & Operations Governance | N-DOC-10010-092026';
         pageDescription = 'Authoritative operational governance standard for artificial intelligence systems, LLMs, and autonomous agents (OpenClaw) under EU AI Act Regulation (EU) 2024/1689 and GDPR.';
         break;
+      case 'forecast2027':
+        pageTitle = 'NOVARIC® Forecast 2027 | Parashikimi 2027 | Botimi i parë';
+        pageDescription = 'Botimi i parë i NOVARIC® Forecast 2027, 18 nëntor 2026, i nënshkruar nga Dr Alban Gj. THIKA. Nuk është këshillë investimi.';
+        break;
       case 'trademarkCertificate':
         pageTitle = 'Regjistrimet Ligjore & Certifikata Zyrtare | NOVARIC®';
         pageDescription = 'Dokumentacioni zyrtar i regjistrimit të medias në Bashkimin Evropian (Office of the Press Registrar, OPM PRESS 03/2025) dhe certifikata e markës tregtare EUIPO.';
@@ -315,6 +319,10 @@ export const App: React.FC = () => {
           return;
         } else if (pathname === '/profili-i-autorit' || pathname === '/profili-i-autorit/' || pathname === '/author-profile' || pathname === '/author-profile/') {
           setCurrentPage('authorProfile');
+          return;
+        } else if (pathname === '/forecast-2027' || pathname === '/forecast-2027/') {
+          setCurrentPage('forecast2027');
+          setCurrentUrl(`${CANONICAL_URL.replace(/\/$/, '')}/forecast-2027`);
           return;
         }
       }
@@ -644,6 +652,9 @@ export const App: React.FC = () => {
     if (page === 'politiciansPage' && window.location.protocol !== 'blob:') {
       window.history.pushState({ page: 'politiciansPage' }, '', POLITICIANS_LIST_PATH);
       setCurrentUrl(`${CANONICAL_URL}${POLITICIANS_LIST_PATH}`);
+    } else if (page === 'forecast2027' && window.location.protocol !== 'blob:') {
+      window.history.pushState({ page: 'forecast2027' }, '', '/forecast-2027');
+      setCurrentUrl(`${CANONICAL_URL.replace(/\/$/, '')}/forecast-2027`);
     } else {
       updateUrl(page, (typeof data === 'string' || typeof data === 'number') ? data : undefined);
     }
@@ -680,6 +691,10 @@ export const App: React.FC = () => {
         setSelectedVipProfileForPage(null);
         setSelectedVipRouteId(null);
         setCurrentPage('politiciansPage');
+        return;
+      }
+      if (path === '/forecast-2027' || path === '/forecast-2027/' || page === 'forecast2027') {
+        setCurrentPage('forecast2027');
         return;
       }
     };
@@ -804,6 +819,7 @@ export const App: React.FC = () => {
             onNavigateToCidaMethodology={() => navigateTo('cidaMethodology')}
             onNavigateToReputationWarRoom={() => navigateTo('reputationWarRoom')}
             onNavigateToNexusAiGovernance={() => navigateTo('nexusHumanistAiGovernance')}
+            onNavigateToForecast2027={() => navigateTo('forecast2027')}
             onNavigateToNoraAiProfile={() => navigateTo('noraAiProfile')}
             onNavigateToAuthorProfile={() => navigateTo('authorProfile')}
             onNavigateToEuropeanCommission={() => navigateTo('europeanCommission')}
@@ -978,6 +994,7 @@ export const App: React.FC = () => {
     onNavigateToCidaMethodology: () => navigateTo('cidaMethodology'),
     onNavigateToReputationWarRoom: () => navigateTo('reputationWarRoom'),
     onNavigateToNexusAiGovernance: () => navigateTo('nexusHumanistAiGovernance'),
+    onNavigateToForecast2027: () => navigateTo('forecast2027'),
     onNavigateToNoraAiProfile: () => navigateTo('noraAiProfile'),
     onNavigateToAuthorProfile: () => navigateTo('authorProfile'),
     onNavigateToShkoderCulture: () => navigateTo('shkoderCulturePage'),
