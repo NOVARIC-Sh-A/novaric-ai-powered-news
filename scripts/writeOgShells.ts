@@ -7,6 +7,8 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import { applyOgToIndexHtml, listingOg, profileOg } from '../utils/ogDocument';
+import { forecastSeo, homeSeo, newsArticleSeo, newsArticleShellName, newsListSeo, NewsSeoInput } from '../utils/routeSeo';
+import { publicationTimeMs } from '../utils/newsListOrder';
 
 const root = path.resolve(path.dirname(new URL(import.meta.url).pathname), '..');
 const dist = path.join(root, 'dist');
@@ -32,7 +34,73 @@ for (const profile of profiles) {
   written += 1;
 }
 
+const forecastDir = path.join(dist, 'forecast-2027');
+fs.mkdirSync(forecastDir, { recursive: true });
+fs.writeFileSync(path.join(forecastDir, 'index.html'), applyOgToIndexHtml(shell, forecastSeo()));
+
+const seoDir = path.join(dist, 'seo');
+fs.mkdirSync(seoDir, { recursive: true });
+fs.writeFileSync(path.join(seoDir, 'news-list.html'), applyOgToIndexHtml(shell, newsListSeo()));
+
+const newsPath = path.join(root, 'data', 'latestNews.json');
+const newsItems = fs.existsSync(newsPath)
+  ? JSON.parse(fs.readFileSync(newsPath, 'utf8')) as NewsSeoInput[]
+  : [];
+const newsDir = path.join(seoDir, 'news');
+fs.mkdirSync(newsDir, { recursive: true });
+let newsShells = 0;
+const sitemapNews: string[] = [];
+const sitemapPages: string[] = [
+  'https://media.novaric.al/',
+  'https://media.novaric.al/?page=newsList',
+  'https://media.novaric.al/forecast-2027',
+  'https://media.novaric.al/figurat-politike',
+];
+const newestFirst = [...newsItems].sort((a, b) => {
+  const ta = publicationTimeMs(a.publishedAt);
+  const tb = publicationTimeMs(b.publishedAt);
+  if (ta == null && tb == null) return 0;
+  if (ta == null) return 1;
+  if (tb == null) return -1;
+  return tb - ta;
+});
+const newsCutoff = Date.now() - 48 * 60 * 60 * 1000;
+for (const item of newestFirst) {
+  const fields = newsArticleSeo(item);
+  if (!fields) continue;
+  fs.writeFileSync(path.join(newsDir, `${newsArticleShellName(item.id)}.html`), applyOgToIndexHtml(shell, fields));
+  newsShells += 1;
+  if (sitemapPages.length < 500) sitemapPages.push(fields.url);
+  const published = publicationTimeMs(item.publishedAt);
+  if (published != null && published >= newsCutoff) {
+    sitemapNews.push(
+      `  <url><loc>${escapeXml(fields.url)}</loc><news:news><news:publication><news:name>NOVARIC®</news:name><news:language>sq</news:language></news:publication><news:publication_date>${new Date(published).toISOString()}</news:publication_date><news:title>${escapeXml(item.title_sq || item.title || 'Lajm')}</news:title></news:news></url>`,
+    );
+  }
+}
+
+fs.writeFileSync(path.join(dist, 'index.html'), applyOgToIndexHtml(shell, homeSeo()));
+fs.writeFileSync(path.join(dist, 'sitemap.xml'), sitemapXml(sitemapPages));
+fs.writeFileSync(path.join(dist, 'sitemap-news.xml'), newsSitemapXml(sitemapNews));
+
 if (!shell.includes('<div id="root">')) {
   throw new Error('SPA root missing from the shell');
 }
-console.log(`og shells listing=1 profiles=${written}`);
+console.log(`og shells listing=1 profiles=${written} forecast=1 newsList=1 news=${newsShells}`);
+
+function escapeXml(value: string): string {
+  return value
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;');
+}
+
+function sitemapXml(urls: string[]): string {
+  const body = urls.map((url) => `  <url><loc>${escapeXml(url)}</loc></url>`).join('\n');
+  return `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${body}\n</urlset>\n`;
+}
+
+function newsSitemapXml(entries: string[]): string {
+  return `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:news="http://www.google.com/schemas/sitemap-news/0.9">\n${entries.join('\n')}\n</urlset>\n`;
+}

@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://media.novaric.al/sitemap.xml
+Sitemap: https://media.novaric.al/sitemap-news.xml

@@ -17,6 +17,7 @@ import {
   getDedupeTelemetry,
 } from '../utils/dateWindowUtils';
 import { balanceTitlesPerSource } from '../utils/newsBalancingUtils';
+import { compareNewsListOrder } from '../utils/newsListOrder';
 
 interface CacheEntry {
   timestamp: number;
@@ -292,29 +293,7 @@ async function executeNewsFeedQuery(query: NewsFeedQuery, cacheKey: string): Pro
 
   // 5. Sorting
   const sortMode = query.sort || 'newest';
-  if (sortMode === 'ner_score') {
-    articles.sort((a, b) => {
-      const nerA = a.ecosystemRating ?? 0;
-      const nerB = b.ecosystemRating ?? 0;
-      if (nerB !== nerA) return nerB - nerA;
-      return new Date(b.publishedAt!).getTime() - new Date(a.publishedAt!).getTime();
-    });
-  } else if (sortMode === 'oldest') {
-    articles.sort((a, b) => {
-      const tA = new Date(a.publishedAt!).getTime();
-      const tB = new Date(b.publishedAt!).getTime();
-      if (tA !== tB) return tA - tB;
-      return a.id.localeCompare(b.id);
-    });
-  } else {
-    // Default: newest first (publishedAt DESC, id DESC)
-    articles.sort((a, b) => {
-      const tA = new Date(a.publishedAt!).getTime();
-      const tB = new Date(b.publishedAt!).getTime();
-      if (tB !== tA) return tB - tA;
-      return b.id.localeCompare(a.id);
-    });
-  }
+  articles.sort((a, b) => compareNewsListOrder(a, b, sortMode));
 
   const total = articles.length;
 
@@ -338,8 +317,8 @@ async function executeNewsFeedQuery(query: NewsFeedQuery, cacheKey: string): Pro
       nextCursor = null;
     }
   } else if (scope === 'latest') {
-    // Balance titles per source: maximum 3 major stories per source
-    if (query.balancePerSource !== false) {
+    // Source balancing is opt-in. The default list is breaking, then newest.
+    if (query.balancePerSource === true) {
       articles = balanceTitlesPerSource(articles, {
         maxStoriesPerSource: query.maxPerSource || 3,
         interleaveSources: !query.sourceName,

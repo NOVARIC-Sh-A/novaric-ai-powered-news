@@ -230,7 +230,7 @@ export const Forecast2027Page: React.FC<Forecast2027PageProps> = ({ onBack }) =>
 
   const structuredData = {
     '@context': 'https://schema.org',
-    '@type': 'Article',
+    '@type': 'Report',
     headline: 'NOVARIC® Forecast 2027',
     alternativeHeadline: 'Parashikimi NOVARIC® 2027',
     description: pageDescription,

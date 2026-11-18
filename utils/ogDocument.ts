@@ -14,6 +14,8 @@ export interface OgFields {
   url: string;
   image: string;
   imageAlt: string;
+  type?: 'website' | 'article';
+  jsonLd?: unknown;
 }
 
 export function escapeHtml(value: string): string {
@@ -52,14 +54,22 @@ export function profileOg(profile: { name?: string | null; slug?: string | null;
 
 export function ogMetaBlock(fields: OgFields): string {
   const title = escapeHtml(fields.title);
+  const documentTitle = fields.title.includes('NOVARIC® Lajme me IA')
+    ? title
+    : `${title} | NOVARIC® Lajme me IA`;
   const description = escapeHtml(fields.description);
   const url = escapeHtml(fields.url);
   const image = escapeHtml(fields.image);
   const imageAlt = escapeHtml(fields.imageAlt);
-  return [
-    `<title>${title} | NOVARIC® Lajme me IA</title>`,
+  const type = fields.type || 'website';
+  const lines = [
+    `<title>${documentTitle}</title>`,
     `<meta name="description" content="${description}" />`,
     `<link rel="canonical" href="${url}" />`,
+    `<link rel="alternate" hreflang="sq" href="${url}" />`,
+    `<link rel="alternate" hreflang="x-default" href="${url}" />`,
+    `<meta property="og:locale" content="sq_AL" />`,
+    `<meta property="og:site_name" content="NOVARIC® Lajme me IA" />`,
     `<meta property="og:title" content="${title}" />`,
     `<meta property="og:description" content="${description}" />`,
     `<meta property="og:image" content="${image}" />`,
@@ -67,22 +77,34 @@ export function ogMetaBlock(fields: OgFields): string {
     `<meta property="og:image:width" content="1200" />`,
     `<meta property="og:image:height" content="630" />`,
     `<meta property="og:url" content="${url}" />`,
-    `<meta property="og:type" content="website" />`,
+    `<meta property="og:type" content="${type}" />`,
     `<meta name="twitter:card" content="summary_large_image" />`,
+    `<meta name="twitter:site" content="@novaricmedia" />`,
     `<meta name="twitter:title" content="${title}" />`,
     `<meta name="twitter:description" content="${description}" />`,
     `<meta name="twitter:image" content="${image}" />`,
     `<meta name="twitter:image:alt" content="${imageAlt}" />`,
-  ].join('\n  ');
+  ];
+  if (fields.jsonLd) {
+    const json = JSON.stringify(fields.jsonLd).replace(/</g, '\\u003c');
+    lines.push(`<script type="application/ld+json" data-novaric-seo="1">${json}</script>`);
+  }
+  return lines.join('\n  ');
 }
 
 /** Replace the shell title and canonical link. The SPA scripts stay in place. */
 export function applyOgToIndexHtml(html: string, fields: OgFields): string {
-  const withoutTitle = html.replace(/<title>[\s\S]*?<\/title>/, '');
-  const withoutCanonical = withoutTitle.replace(/<link rel="canonical"[^>]*>/, '');
+  const stripped = html
+    .replace(/<title>[\s\S]*?<\/title>/gi, '')
+    .replace(/<link rel="canonical"[^>]*>/gi, '')
+    .replace(/<link rel="alternate" hreflang="[^"]+"[^>]*>/gi, '')
+    .replace(/<meta\s+name="description"[^>]*>/gi, '')
+    .replace(/<meta\s+property="og:[^"]+"[^>]*>/gi, '')
+    .replace(/<meta\s+name="twitter:[^"]+"[^>]*>/gi, '')
+    .replace(/<script type="application\/ld\+json" data-novaric-seo="1">[\s\S]*?<\/script>/gi, '');
   const block = ogMetaBlock(fields);
-  if (!withoutCanonical.includes('<meta charset="UTF-8">')) {
+  if (!stripped.includes('<meta charset="UTF-8">')) {
     throw new Error('index.html is missing the charset marker');
   }
-  return withoutCanonical.replace('<meta charset="UTF-8">', `<meta charset="UTF-8">\n  ${block}`);
+  return stripped.replace('<meta charset="UTF-8">', `<meta charset="UTF-8">\n  ${block}`);
 }

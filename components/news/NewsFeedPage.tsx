@@ -27,6 +27,7 @@ import {
   Scale
 } from 'lucide-react';
 import { balanceTitlesPerSource } from '../../utils/newsBalancingUtils';
+import { isBreakingNewsItem, orderNewsList } from '../../utils/newsListOrder';
 
 export interface NewsFeedPageProps {
   onNavigateToNewsArticle: (item: BreakingNewsArticle) => void;
@@ -50,7 +51,7 @@ export const NewsFeedPage: React.FC<NewsFeedPageProps> = ({
   const [searchTerm, setSearchTerm] = useState<string>('');
   const [selectedSource, setSelectedSource] = useState<string | null>(null);
   const [sortBy, setSortBy] = useState<'newest' | 'oldest' | 'ner_score'>('newest');
-  const [isSourceBalanced, setIsSourceBalanced] = useState<boolean>(true);
+  const [isSourceBalanced, setIsSourceBalanced] = useState<boolean>(false);
 
   // React to prop updates when category filter changes from external navigation
   useEffect(() => {
@@ -101,14 +102,26 @@ export const NewsFeedPage: React.FC<NewsFeedPageProps> = ({
     sortBy,
   });
 
-  // Balanced latest items: strictly at most 3 major stories per source
+  // Default: breaking items (severity critical or a live flag) stay pinned,
+  // then publication time, newest first. Source balancing is an explicit toggle.
   const displayedLatestItems = React.useMemo(() => {
-    if (!isSourceBalanced) return latestItems;
-    return balanceTitlesPerSource(latestItems, {
-      maxStoriesPerSource: 3,
-      interleaveSources: selectedSource === null,
-    });
-  }, [latestItems, isSourceBalanced, selectedSource]);
+    if (isSourceBalanced) {
+      return balanceTitlesPerSource(latestItems, {
+        maxStoriesPerSource: 3,
+        interleaveSources: selectedSource === null,
+      });
+    }
+    if (sortBy !== 'newest') {
+      return orderNewsList(latestItems, sortBy);
+    }
+    const pinnedFromArchive = archiveItems.filter(isBreakingNewsItem);
+    return orderNewsList([...latestItems, ...gapItems, ...pinnedFromArchive], 'newest');
+  }, [latestItems, gapItems, archiveItems, isSourceBalanced, selectedSource, sortBy]);
+
+  const archiveWithoutPinned = React.useMemo(() => {
+    if (isSourceBalanced || sortBy !== 'newest') return archiveItems;
+    return archiveItems.filter((item) => !isBreakingNewsItem(item));
+  }, [archiveItems, isSourceBalanced, sortBy]);
 
   const handleRefreshClick = async () => {
     if (onRefreshNews) {
@@ -501,7 +514,7 @@ export const NewsFeedPage: React.FC<NewsFeedPageProps> = ({
 
         {/* --- TRANSITION GAP (60m - 16h) TOGGLE --- */}
         <TransitionGapSection
-          items={gapItems}
+          items={isSourceBalanced || sortBy !== 'newest' ? gapItems : []}
           isOpen={showGap}
           onToggle={() => setShowGap(!showGap)}
           onNavigate={onNavigateToNewsArticle}
@@ -509,7 +522,7 @@ export const NewsFeedPage: React.FC<NewsFeedPageProps> = ({
 
         {/* --- SECTION B: ARCHIVE NEWS (> 16h) --- */}
         <ArchiveNewsSection
-          items={archiveItems}
+          items={archiveWithoutPinned}
           isLoading={isArchiveLoading}
           isLoadingMore={isArchiveLoadingMore}
           error={archiveError}

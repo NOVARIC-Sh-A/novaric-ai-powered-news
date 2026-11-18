@@ -12,6 +12,7 @@ import { sanitizeImageUrl } from '../utils/imageUtils';
 import staticNewsRaw from '../data/latestNews.json';
 import { fetchLiveAlbanianFeeds } from './liveAlbanianNewsService';
 import { balanceTitlesPerSource } from '../utils/newsBalancingUtils';
+import { compareNewsListOrder } from '../utils/newsListOrder';
 
 /**
  * GET news from NOVARIC backend with flexible query parameters.
@@ -343,17 +344,11 @@ export const fetchNewsFeed = async (
   }
 
   // Sort
-  if (options.sort === 'ner_score') {
-    fallbacks.sort((a, b) => (b.ecosystemRating || 0) - (a.ecosystemRating || 0));
-  } else if (options.sort === 'oldest') {
-    fallbacks.sort((a, b) => new Date(a.publishedAt).getTime() - new Date(b.publishedAt).getTime());
-  } else {
-    fallbacks.sort((a, b) => new Date(b.publishedAt).getTime() - new Date(a.publishedAt).getTime());
-  }
+  fallbacks.sort((a, b) => compareNewsListOrder(a, b, options.sort || 'newest'));
 
   let dedupedFallbacks = deduplicateNewsArticles(fallbacks);
 
-  const shouldBalanceFallback = options.balancePerSource !== false && (scope === 'latest' || options.balancePerSource === true);
+  const shouldBalanceFallback = options.balancePerSource === true;
   if (shouldBalanceFallback) {
     dedupedFallbacks = balanceTitlesPerSource(dedupedFallbacks, {
       maxStoriesPerSource: options.maxPerSource || 3,
