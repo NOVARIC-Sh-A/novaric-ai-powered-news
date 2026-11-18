@@ -78,41 +78,41 @@ function BandRadar({ traced }: { traced: boolean }) {
     : [];
   const tracePath = trace.length ? `${trace.map((point, index) => `${index === 0 ? 'M' : 'L'} ${point[0].toFixed(1)} ${point[1].toFixed(1)}`).join(' ')} Z` : '';
   return (
-    <div className="relative mx-auto h-36 w-36">
+    <div className="relative mx-auto h-60 w-60">
       <svg viewBox="0 0 200 200" className="h-full w-full" role="img" aria-label={traced ? 'Shembull i gjurmës sipas brezave / Example band trace' : 'Rrjetë pa vlerësim / Unassessed grid'}>
-        <circle cx={cx} cy={cy} r={maxR + 8} fill="#F8FAFC" />
+        <circle cx={cx} cy={cy} r={maxR + 8} fill="#FFFFFF" stroke="#E5E7EB" />
         {RINGS.map((ring) => (
-          <circle key={ring.sq} cx={cx} cy={cy} r={ring.radius * maxR} fill="none" stroke="#CBD5E1" strokeWidth="1" />
+          <circle key={ring.sq} cx={cx} cy={cy} r={ring.radius * maxR} fill="none" stroke={traced ? '#CBD5E1' : '#D1D5DB'} strokeWidth="1.25" />
         ))}
         {EXAMPLE_ROWS.map((row, index) => {
           const [x, y] = polar(index, 1, cx, cy, maxR);
-          return <line key={row.code} x1={cx} y1={cy} x2={x} y2={y} stroke="#CBD5E1" strokeWidth="1" />;
+          return <line key={row.code} x1={cx} y1={cy} x2={x} y2={y} stroke={traced ? '#CBD5E1' : '#D1D5DB'} strokeWidth="1.25" />;
         })}
         {RINGS.map((ring) => (
-          <text key={ring.en} x={cx - 58} y={cy + 4 - ring.radius * maxR} fill="#64748B" fontSize="7">
+          <text key={ring.en} x={cx - 56} y={cy + 3 - ring.radius * maxR} fill="#6B7280" fontSize="8">
             {ring.sq}
           </text>
         ))}
         {EXAMPLE_ROWS.map((row, index) => {
-          const [x, y] = polar(index, 1.18, cx, cy, maxR);
+          const [x, y] = polar(index, 1.22, cx, cy, maxR);
           return (
-            <text key={row.code} x={x} y={y} textAnchor="middle" dominantBaseline="middle" fill={traced ? NAVY : '#64748B'} fontSize="11" fontWeight="700">
+            <text key={row.code} x={x} y={y} textAnchor="middle" dominantBaseline="middle" fill={traced ? NAVY : '#9CA3AF'} fontSize="13" fontWeight="700">
               {row.code}
             </text>
           );
         })}
         {traced ? (
           <>
-            <path d={tracePath} fill="rgba(48,56,75,0.16)" stroke={NAVY} strokeWidth="2.5" />
+            <path d={tracePath} fill="rgba(48,56,75,0.12)" stroke={NAVY} strokeWidth="2.75" />
             {trace.map((point, index) => (
-              <circle key={EXAMPLE_ROWS[index].code} cx={point[0]} cy={point[1]} r="3.2" fill={NAVY} />
+              <circle key={EXAMPLE_ROWS[index].code} cx={point[0]} cy={point[1]} r="3.4" fill={NAVY} />
             ))}
           </>
         ) : null}
       </svg>
       {traced ? null : (
         <div className="pointer-events-none absolute inset-0 flex items-center justify-center">
-          <p className="max-w-[7.5rem] rounded-md bg-slate-900/80 px-2 py-1 text-center text-[11px] font-bold leading-tight text-slate-200">Pa vlerësim / Not assessed</p>
+          <p className="max-w-[8.5rem] rounded-md border border-slate-300 bg-white/95 px-2 py-1 text-center text-[11px] font-bold leading-tight text-slate-500">Pa vlerësim / Not assessed</p>
         </div>
       )}
     </div>
@@ -121,8 +121,8 @@ function BandRadar({ traced }: { traced: boolean }) {
 
 function Portrait({ approved }: { approved: boolean }) {
   return (
-    <div className={`relative mx-auto h-28 w-28 rounded-full border-2 p-1 ${approved ? 'border-slate-500' : 'border-slate-600'}`}>
-      <div className="flex h-full w-full flex-col items-center justify-center rounded-full bg-slate-900 text-slate-400">
+    <div className={`relative mx-auto h-28 w-28 rounded-full border-2 p-1 ${approved ? 'border-slate-300' : 'border-dashed border-slate-300'}`}>
+      <div className="flex h-full w-full flex-col items-center justify-center rounded-full bg-slate-100 text-slate-400">
         <svg viewBox="0 0 64 64" className="h-10 w-10" aria-hidden="true">
           <rect x="8" y="16" width="30" height="22" rx="3" fill="none" stroke="currentColor" strokeWidth="2" />
           <path d="M16 32l5-6 4 4 3-3 6 5" fill="none" stroke="currentColor" strokeWidth="2" />
@@ -130,7 +130,7 @@ function Portrait({ approved }: { approved: boolean }) {
           <path d="M48 26h6M48 30h5" stroke="currentColor" strokeWidth="2" />
         </svg>
       </div>
-      <span className={`absolute -bottom-2 left-1/2 w-max -translate-x-1/2 rounded-md border px-2 py-1 text-center text-[9px] font-bold uppercase tracking-wide ${approved ? 'border-slate-500 bg-slate-900 text-white' : 'border-slate-600 bg-slate-800 text-slate-300'}`} style={approved ? { backgroundColor: NAVY, borderColor: NAVY } : undefined}>
+      <span className={`absolute -bottom-2 left-1/2 w-max -translate-x-1/2 rounded-md border px-2 py-1 text-center text-[9px] font-bold uppercase tracking-wide ${approved ? 'text-white' : 'border-slate-300 bg-slate-100 text-slate-500'}`} style={approved ? { backgroundColor: NAVY, borderColor: NAVY } : undefined}>
         {approved ? 'Miratuar / Approved' : 'Pa vlerësim / Not assessed'}
       </span>
     </div>
@@ -140,10 +140,10 @@ function Portrait({ approved }: { approved: boolean }) {
 function Dock({ approved }: { approved: boolean }) {
   const [checked, setChecked] = useState(false);
   return (
-    <div className="mt-2 flex items-center justify-between gap-2 border-t border-slate-800 bg-slate-900/95 px-3 py-2">
+    <div className="mt-2 flex items-center justify-between gap-2 border-t border-slate-200 bg-white px-3 py-2">
       <div className="min-w-0">
-        <p className="truncate text-base font-black tracking-tight text-white">Shembull PROFILI</p>
-        <p className="text-[10px] font-bold uppercase tracking-[0.14em] text-slate-400">Top Story · Top Channel</p>
+        <p className="truncate text-base font-black tracking-tight" style={{ color: NAVY }}>Shembull PROFILI</p>
+        <p className="text-[10px] font-bold uppercase tracking-[0.14em] text-slate-500">Top Story · Top Channel</p>
       </div>
       <div className="flex shrink-0 items-center gap-2">
         <label className="flex items-center gap-1 text-[9px] font-bold uppercase tracking-wide text-slate-400" title={approved ? 'Shembull / Example' : 'Vetëm për profile të miratuara / Approved profiles only'}>
@@ -168,7 +168,7 @@ function Dock({ approved }: { approved: boolean }) {
 
 function Footer() {
   return (
-    <p className="border-t border-slate-800 px-3 py-2 text-[10px] text-slate-500">
+    <p className="border-t border-slate-200 px-3 py-2 text-[10px] text-slate-500">
       <Brand name="NOVARIC" /> Sh.A. · media.novaric.al
     </p>
   );
@@ -176,13 +176,13 @@ function Footer() {
 
 function CardFrame({ title, children }: { title: string; children: React.ReactNode }) {
   return (
-    <article className="flex w-full max-w-[380px] flex-col overflow-hidden rounded-2xl border border-slate-700 bg-slate-950 text-slate-100 shadow-2xl">
+    <article className="flex w-full max-w-[380px] flex-col overflow-hidden rounded-2xl border border-slate-200 bg-white text-slate-700 shadow-[0_8px_24px_rgba(48,56,75,0.12)]">
       <header className="flex items-start justify-between gap-2 px-3 pt-3">
         <div>
           <p className="text-[10px] font-bold uppercase tracking-[0.16em] text-slate-500">Shembull / Example</p>
-          <h2 className="text-sm font-bold text-white">{title}</h2>
+          <h2 className="text-sm font-bold" style={{ color: NAVY }}>{title}</h2>
         </div>
-        <span className="rounded-full border border-slate-700 px-2 py-1 text-[10px] font-bold uppercase tracking-wide text-slate-300">
+        <span className="rounded-full border border-slate-200 px-2 py-1 text-[10px] font-bold uppercase tracking-wide" style={{ color: NAVY }}>
           <Brand name="MARAGON" />
         </span>
       </header>
@@ -196,16 +196,16 @@ function ApprovedFront() {
     <CardFrame title="Ballina e miratuar / Approved front">
       <div className="px-3 pb-2 pt-3">
         <Portrait approved />
-        <p className="mt-4 text-center text-[10px] text-slate-400">Foto në verifikim / Photo pending verification</p>
+        <p className="mt-4 text-center text-[10px] text-slate-500">Foto në verifikim / Photo pending verification</p>
         <BandRadar traced />
         <ul className="mt-1 space-y-1">
           {EXAMPLE_ROWS.map((row) => (
-            <li key={row.code} className="rounded border border-slate-800 bg-slate-900 px-2 py-1">
-              <p className="text-[11px] font-bold text-white">
+            <li key={row.code} className="rounded border border-slate-200 bg-slate-50 px-2 py-1">
+              <p className="text-[11px] font-bold" style={{ color: NAVY }}>
                 {row.code} · {row.sq} / {row.en}
-                <span className="float-right font-semibold text-slate-300">{row.bandSq} / {row.bandEn}</span>
+                <span className="float-right font-semibold text-slate-600">{row.bandSq} / {row.bandEn}</span>
               </p>
-              <p className="text-[10px] text-slate-400">
+              <p className="text-[10px] text-slate-500">
                 Besueshmëri: {row.confidenceSq} / Confidence: {row.confidenceEn}
                 <span className="mx-1">·</span>
                 {row.evidence} prova / {row.evidence} evidence items
@@ -213,18 +213,18 @@ function ApprovedFront() {
             </li>
           ))}
         </ul>
-        <p className="mt-2 rounded-full border border-slate-600 bg-slate-800 px-2 py-1 text-center text-[10px] font-semibold text-slate-300">
+        <p className="mt-2 rounded-full border border-slate-300 bg-slate-100 px-2 py-1 text-center text-[10px] font-semibold text-slate-500">
           Boshti C · Nuk vlerësohet / Axis C · Unscored
         </p>
         <div className="mt-2 flex gap-2">
-          <button type="button" className="flex-1 rounded border border-slate-600 px-2 py-1 text-[10px] font-semibold text-slate-200">
+          <button type="button" className="flex-1 rounded border px-2 py-1 text-[10px] font-semibold" style={{ borderColor: NAVY, color: NAVY }}>
             Shiko prejardhjen / View lineage
           </button>
           <button type="button" className="flex-1 rounded px-2 py-1 text-[10px] font-semibold text-white" style={{ backgroundColor: NAVY }}>
             Raporti i plotë / Full report
           </button>
         </div>
-        <p className="mt-2 text-[10px] text-slate-400">E drejta e përgjigjes: 10 ditë pune / Right of reply: 10 working days</p>
+        <p className="mt-2 text-[10px] text-slate-500">E drejta e përgjigjes: 10 ditë pune / Right of reply: 10 working days</p>
       </div>
       <Dock approved />
       <Footer />
@@ -245,11 +245,11 @@ function LineageTrail({ indicator }: { indicator: MaragonIndicator }) {
     { k: 'Evidence', v: 'Shembull prove / Example evidence item' },
   ];
   return (
-    <ol className="space-y-1 border-l border-slate-600 pl-2">
+    <ol className="space-y-1 border-l border-slate-300 pl-2">
       {steps.map((stepItem, index) => (
-        <li key={stepItem.k} className="text-[10px] leading-snug text-slate-300">
-          <span className="font-bold text-white">{index + 1}. {stepItem.k}</span>
-          <span className="mt-0.5 block text-slate-400">{stepItem.v}</span>
+        <li key={stepItem.k} className="text-[10px] leading-snug text-slate-600">
+          <span className="font-bold" style={{ color: NAVY }}>{index + 1}. {stepItem.k}</span>
+          <span className="mt-0.5 block text-slate-500">{stepItem.v}</span>
         </li>
       ))}
     </ol>
@@ -261,13 +261,13 @@ function ApprovedBack() {
   return (
     <CardFrame title="Pasqyra e miratuar / Approved back drawer">
       <div className="min-h-0 flex-1 space-y-1 overflow-y-auto px-3 py-3" style={{ maxHeight: 640 }}>
-        <p className="text-[10px] text-slate-400">Metodologjia v1.0 · 18 nëntor 2026 / 18 November 2026</p>
+        <p className="text-[10px] text-slate-500">Metodologjia v1.0 · 18 nëntor 2026 / 18 November 2026</p>
         <ul className="space-y-1">
           {canonicalIndicators().map((indicator) => {
             const band = EXAMPLE_INDICATOR_BAND[indicator.code];
             const expanded = open === indicator.code;
             return (
-              <li key={indicator.code} className="rounded border border-slate-800 bg-slate-900">
+              <li key={indicator.code} className="rounded border border-slate-200 bg-slate-50">
                 <button
                   type="button"
                   className="flex w-full items-start justify-between gap-2 px-2 py-1.5 text-left"
@@ -275,8 +275,8 @@ function ApprovedBack() {
                   onClick={() => setOpen(expanded ? null : indicator.code)}
                 >
                   <span>
-                    <span className="block text-[11px] font-bold text-white">{indicator.code} · {indicator.title}</span>
-                    <span className="block text-[10px] text-slate-400">
+                    <span className="block text-[11px] font-bold" style={{ color: NAVY }}>{indicator.code} · {indicator.title}</span>
+                    <span className="block text-[10px] text-slate-500">
                       {band?.bandSq} / {band?.bandEn} · Besueshmëri: {band?.confidenceSq} / Confidence: {band?.confidenceEn}
                     </span>
                   </span>
@@ -287,7 +287,7 @@ function ApprovedBack() {
             );
           })}
         </ul>
-        <p className="text-[10px] text-slate-400">
+        <p className="text-[10px] text-slate-500">
           Burimet / Sources
           <span className="mt-0.5 block">Shembull i lidhjeve të metodologjisë / Example methodology links</span>
         </p>
@@ -306,13 +306,13 @@ function UnassessedFront() {
         <BandRadar traced={false} />
         <ul className="mt-1 space-y-1">
           {EXAMPLE_ROWS.map((row) => (
-            <li key={row.code} className="rounded border border-dashed border-slate-700 px-2 py-1.5 text-slate-500">
+            <li key={row.code} className="rounded border border-dashed border-slate-300 bg-slate-50 px-2 py-1.5 text-slate-400">
               <p className="text-[11px]">{row.code} · {row.sq} / {row.en}</p>
               <p className="text-[10px]">Pa vlerësim / Not assessed</p>
             </li>
           ))}
         </ul>
-        <p className="mt-2 rounded-full border border-dashed border-slate-600 px-2 py-1 text-center text-[10px] text-slate-500">
+        <p className="mt-2 rounded-full border border-dashed border-slate-300 bg-slate-50 px-2 py-1 text-center text-[10px] text-slate-400">
           Boshti C · Nuk vlerësohet / Axis C · Unscored
         </p>
         <p className="mt-2 text-[11px] leading-snug text-slate-400">
@@ -333,7 +333,7 @@ function UnassessedBack() {
         {canonicalIndicators().map((indicator) => {
           const expanded = open === indicator.code;
           return (
-            <li key={indicator.code} className="rounded border border-dashed border-slate-700">
+            <li key={indicator.code} className="rounded border border-dashed border-slate-300 bg-slate-50">
               <button
                 type="button"
                 className="flex w-full items-center justify-between gap-2 px-2 py-1.5 text-left text-slate-500"
@@ -360,19 +360,19 @@ function UnassessedBack() {
 
 export const MaragonCardMockupPage: React.FC<{ onBack: () => void }> = ({ onBack }) => {
   return (
-    <main className="min-h-screen bg-[#0b1220] px-4 py-8 text-slate-100">
+    <main className="min-h-screen bg-[#F3F4F6] px-4 py-8" style={{ color: NAVY }}>
       <div className="mx-auto mb-6 max-w-3xl">
-        <button type="button" onClick={onBack} className="mb-3 text-xs font-bold uppercase tracking-widest text-slate-400">
+        <button type="button" onClick={onBack} className="mb-3 text-xs font-bold uppercase tracking-widest text-slate-500">
           ← Kthehu / Back
         </button>
         <p className="text-[10px] font-bold uppercase tracking-[0.16em] text-slate-500">Shembull / Example</p>
-        <h1 className="text-2xl font-black text-white">
+        <h1 className="text-2xl font-black" style={{ color: NAVY }}>
           Karta <Brand name="NOVARIC" /> <Brand name="MARAGON" />
         </h1>
-        <p className="mt-1 text-sm text-slate-300">
+        <p className="mt-1 text-sm text-slate-600">
           Specifikim i kartës së skanerit. Shembull i fiksuar, jo një vlerësim i publikuar.
         </p>
-        <p className="text-sm text-slate-400">
+        <p className="text-sm text-slate-500">
           Scanner-card specification. A fixed example, not a published assessment.
         </p>
       </div>
