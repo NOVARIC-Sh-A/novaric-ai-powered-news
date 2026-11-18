@@ -506,7 +506,7 @@ export const MediaPersonalitiesPage: React.FC<MediaPersonalitiesPageProps> = ({
                   <a key={profile.id} href="/?page=maragonProfile&id=vip_m2" className="block rounded-2xl border border-slate-200 bg-white p-4 text-slate-800 shadow-sm">
                     <p className="text-[10px] font-bold uppercase tracking-[0.16em] text-slate-500">MARAGON® · Pa vlerësim</p>
                     <p className="mt-1 text-lg font-black">Grida DUMA</p>
-                    <p className="text-xs text-slate-500">Top Story · Top Channel · research_only</p>
+                    <p className="text-xs text-slate-500">Autore, moderatore dhe drejtuese e «Top Story», Top Channel</p>
                   </a>
                 ) : (
                   <MediaPersonalityCard

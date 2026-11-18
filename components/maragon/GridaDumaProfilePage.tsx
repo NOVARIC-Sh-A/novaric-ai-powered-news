@@ -3,6 +3,8 @@ import { CANONICAL_MARAGON_INDICATOR_IDS } from '../../lib/maragon-schemas';
 import { MARAGON_INDICATORS } from '../../data/maragonIndicators';
 import { getMaragonResearch } from '../../services/maragonResearchLoader';
 import { formatPersonName } from '../../utils/formatPersonName';
+import { isMaragonPreviewActive } from '../../services/maragonDossier';
+import draftCoding from '../../data/maragon/show_top_story.draft-coding.json';
 
 const NAVY = '#30384B';
 const PHOTO = 'https://kuvendiwebfiles.blob.core.windows.net/webfiles/gridashqina_foto.jpg';
@@ -28,7 +30,9 @@ function sectorPath(start: number, end: number, count: number, cx: number, cy: n
   return `M ${cx} ${cy} L ${edge.join(' L ')} Z`;
 }
 
-function UnassessedRadar({ title }: { title: string }) {
+const BAND_RADIUS: Record<string, number> = { weak: 0.5, moderate: 0.75, strong: 1 };
+
+function TenPointRadar({ title, bands, draft }: { title: string; bands?: Record<string, string | null>; draft?: boolean }) {
   const points = CANONICAL_MARAGON_INDICATOR_IDS.map((id) => MARAGON_INDICATORS.find((item) => item.id === id && item.scope === 'outlet')).filter((item) => item != null);
   const count = points.length;
   const cx = 200;
@@ -45,7 +49,7 @@ function UnassessedRadar({ title }: { title: string }) {
     groups.push({ start: index, end: index, fill: fills[groups.length % fills.length] });
   });
   return (
-    <div className="mx-auto w-full max-w-[420px]">
+    <div className="relative mx-auto w-full max-w-[420px]">
       <svg viewBox="0 0 400 400" className="h-auto w-full" role="img" aria-label={title}>
         <circle cx={cx} cy={cy} r={maxR + 6} fill="#FFFFFF" stroke="#E5E7EB" />
         {groups.map((group) => (
@@ -58,8 +62,27 @@ function UnassessedRadar({ title }: { title: string }) {
           const [x, y] = polar(index, count, 1, cx, cy, maxR);
           return <line key={indicator.id} x1={cx} y1={cy} x2={x} y2={y} stroke="#D1D5DB" />;
         })}
+        {draft ? (() => {
+          const segments: string[] = [];
+          let current = '';
+          points.forEach((indicator, index) => {
+            const band = bands?.[indicator.code];
+            if (!band || !BAND_RADIUS[band]) {
+              if (current) segments.push(current);
+              current = '';
+              return;
+            }
+            const [x, y] = polar(index, count, BAND_RADIUS[band], cx, cy, maxR);
+            current += `${current ? ' L' : 'M'} ${x.toFixed(1)} ${y.toFixed(1)}`;
+          });
+          if (current) segments.push(current);
+          return segments.map((segment) => <path key={segment} d={segment} fill="none" stroke={NAVY} strokeWidth="2.4" />);
+        })() : null}
         {points.map((indicator, index) => {
-          const [x, y] = polar(index, count, RINGS[0].radius, cx, cy, maxR);
+          const band = draft ? bands?.[indicator.code] : null;
+          const radius = band && BAND_RADIUS[band] ? BAND_RADIUS[band] : RINGS[0].radius;
+          const [x, y] = polar(index, count, radius, cx, cy, maxR);
+          if (band && BAND_RADIUS[band]) return <circle key={`${indicator.id}-point`} cx={x} cy={y} r="3.3" fill={NAVY} />;
           return <circle key={`${indicator.id}-gap`} cx={x} cy={y} r="3.2" fill="none" stroke="#9CA3AF" strokeWidth="1.4" strokeDasharray="2 1.5" />;
         })}
         {points.map((indicator, index) => {
@@ -74,7 +97,8 @@ function UnassessedRadar({ title }: { title: string }) {
           );
         })}
       </svg>
-      <p className="text-center text-[11px] font-bold text-slate-500">Pa vlerësim / Not assessed</p>
+      {draft ? <p className="pointer-events-none absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 rotate-[-18deg] text-center text-2xl font-black uppercase tracking-widest text-[#30384B]/30">DRAFT · research_only · not for publication</p> : null}
+      <p className="text-center text-[11px] font-bold text-slate-500">{draft ? 'DRAFT · research_only · not for publication' : 'Pa vlerësim / Not assessed'}</p>
       <p className="text-center text-[10px] text-slate-500">Unaza: Pa vlerësim · E dobët / Weak · Mesatare / Moderate · E fortë / Strong</p>
     </div>
   );
@@ -99,6 +123,10 @@ export const GridaDumaProfilePage: React.FC<{ onBack: () => void }> = ({ onBack 
   const person = getMaragonResearch('vip_m2');
   const show = getMaragonResearch('show_top_story');
   const name = formatPersonName(person?.subject.fullName || 'Grida Duma');
+  const preview = isMaragonPreviewActive();
+  const draftBands = Object.fromEntries(
+    (draftCoding.indicators as Array<{ id: string; band: string | null }>).map((item) => [item.id.replace('maragon:', ''), item.band]),
+  );
   return (
     <main className="min-h-screen bg-[#F3F4F6] px-4 py-8" style={{ color: NAVY }}>
       <button type="button" onClick={onBack} className="mb-4 text-xs font-bold uppercase tracking-widest text-slate-500">← Kthehu / Back</button>
@@ -112,11 +140,13 @@ export const GridaDumaProfilePage: React.FC<{ onBack: () => void }> = ({ onBack 
           <div className="mx-auto mt-3 h-40 w-[7.5rem] overflow-hidden rounded-md border border-slate-200 bg-slate-100" style={{ aspectRatio: '3 / 4' }}>
             <img src={PHOTO} alt={name} className="h-full w-full object-cover object-[center_20%]" referrerPolicy="no-referrer" />
           </div>
-          <p className="mt-2 text-center text-[10px] text-slate-500">Burimi i fotografisë: Në verifikim</p>
-          <p className="text-center text-[10px]"><a className="underline" href={PHOTO}>Kuvendi i Shqipërisë · 18 nëntor 2026</a></p>
+          <p className="mt-2 text-center text-[10px] text-slate-500">Portret institucional. Burimi: Kuvendi i Shqipërisë. Krediti: Në verifikim.</p>
+          <p className="text-center text-[10px]"><a className="underline" href={PHOTO}>gridashqina_foto.jpg · 18 nëntor 2026</a></p>
           <h2 className="mt-3 text-center text-xl font-black">{name}</h2>
+          <p className="text-center text-sm font-semibold" data-current-role="true">Autore, moderatore dhe drejtuese e «Top Story», Top Channel</p>
+          <p className="text-center text-[11px] text-slate-500">Në të shkuarën: ish-deputete e Partisë Demokratike. Top Channel, 5 gusht 2026, shkruan se mandatin e dorëzoi rreth katër vjet më parë.</p>
           <p className="text-center text-[11px] text-slate-500">Pa vlerësim / Not assessed · Pa indeks</p>
-          <UnassessedRadar title="Radar i pa vlerësuar për Grida DUMA" />
+          <TenPointRadar title="Radar i pa vlerësuar për Grida DUMA" />
           <p className="mt-2 text-[11px] text-slate-500">Boshti C · Nuk vlerësohet / Axis C · Unscored</p>
           <SourceList id="vip_m2" />
         </article>
@@ -126,7 +156,7 @@ export const GridaDumaProfilePage: React.FC<{ onBack: () => void }> = ({ onBack 
           <p className="text-sm text-slate-500">Top Channel</p>
           <p className="mt-2 text-sm text-slate-600">{show?.subject.detailedBio_sq}</p>
           <p className="mt-2 text-sm text-slate-500">{show?.subject.detailedBio_en}</p>
-          <UnassessedRadar title="Radar i pa vlerësuar për Top Story" />
+          <TenPointRadar title="Radar i Top Story" bands={preview ? draftBands : undefined} draft={preview} />
           <p className="mt-2 text-[11px] text-slate-500">Pa drejtues të lidhur. Pa indeks individual. / No linked host. No individual index.</p>
           <SourceList id="show_top_story" />
         </article>

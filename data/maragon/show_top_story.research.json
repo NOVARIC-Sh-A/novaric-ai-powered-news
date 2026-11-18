@@ -12,8 +12,8 @@
     "category": "Show",
     "shortBio_sq": "Emision politik në Top Channel. Vlerësimi i synon emisionin, pa drejtues të lidhur dhe pa indeks individual.",
     "shortBio_en": "A political programme on Top Channel. The assessment target is the show, with no linked host and no individual index.",
-    "detailedBio_sq": "Top Channel e emërton «Top Story» si talk-show politik dhe, në faqet e tërhequra më 18 nëntor 2026, e quan Grida DUMËN autore, moderatore dhe drejtuese. Kjo është një shënim faktik. Kartela e vlerësimit të emisionit nuk lidh një drejtues dhe nuk llogarit indeks. Të dhjetë treguesit mbeten pa vlerësim.",
-    "detailedBio_en": "Top Channel names Top Story as a political talk show and, on pages retrieved on 18 November 2026, calls Grida DUMA its author, moderator and host. That is a factual note. The show's assessment card links no host and calculates no index. All ten indicators stay not assessed.",
+    "detailedBio_sq": "Top Channel e emërton «Top Story» si talk-show politik. Kartela e vlerësimit i takon emisionit: pa drejtues të lidhur dhe pa indeks individual. Roli aktual i Grida DUMËS, sipas të njëjtave faqe, është autore, moderatore dhe drejtuese. Karriera e saj politike është e shkuar. Kodimi draft i episodeve është research_only dhe nuk publikohet.",
+    "detailedBio_en": "Top Channel names Top Story as a political talk show. The assessment card belongs to the show: no linked host and no individual index. Grida DUMA's current role, on those same pages, is author, moderator and host. Her political career is in the past. The episode coding is research_only and is not published.",
     "dateOfBirth": null,
     "age": null,
     "zodiacSign": null
@@ -245,5 +245,14 @@
     }
   ],
   "outlet": "Top Channel",
-  "linkedHostId": null
+  "linkedHostId": null,
+  "draftCoding": {
+    "label": "DRAFT – research_only – not for publication",
+    "file": "data/maragon/show_top_story.draft-coding.json",
+    "memo": "data/maragon/show_top_story.DRAFT.md",
+    "assessmentStatus": "research_only",
+    "methodologyApproved": false,
+    "publicDisplay": "Pa vlerësim until approval",
+    "composite": null
+  }
 }

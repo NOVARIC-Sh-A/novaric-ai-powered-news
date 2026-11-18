@@ -4,6 +4,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import { mediaProfilesData } from '../data/mediaProfiles';
 import { getMaragonResearch } from '../services/maragonResearchLoader';
+import draftCoding from '../data/maragon/show_top_story.draft-coding.json';
 import { formatPersonName } from '../utils/formatPersonName';
 import { isMaragonAssessmentPublished } from '../utils/maragonPublication';
 
@@ -37,8 +38,10 @@ describe('Grida Duma is a MARAGON media profile', () => {
     assert.equal(person?.scoring.composite, null);
     assert.equal(person?.subject.fullName, 'Grida DUMA');
     assert.ok(person?.indicators.filter((item) => item.id !== 'maragon:C').every((item) => item.score === null && item.status === 'not_assessed'));
-    assert.match(person?.subject.detailedBio_sq || '', /^Grida DUMA/);
-    assert.match(person?.subject.detailedBio_en || '', /^Grida DUMA/);
+    assert.match(person?.subject.detailedBio_sq || '', /^Grida DUMA është autore, moderatore dhe drejtuese/);
+    assert.match(person?.subject.detailedBio_en || '', /^Grida DUMA is the author, moderator and host/);
+    assert.doesNotMatch(card?.primaryRole || '', /Deputet|deputete|\bMP\b/i);
+    assert.match(card?.shortBio || '', /Në të shkuarën/);
   });
 
   it('records Top Story with no linked host and no score', () => {
@@ -49,6 +52,12 @@ describe('Grida Duma is a MARAGON media profile', () => {
     assert.equal((show?.scoring as { linkedHostId?: string | null }).linkedHostId, null);
     assert.ok(show?.indicators.every((item) => item.score === null));
     assert.ok(show?.evidenceRegister.some((item) => item.url?.includes('top-channel.tv')));
+    assert.equal(draftCoding.label, 'DRAFT – research_only – not for publication');
+    assert.equal(draftCoding.methodologyApproved, false);
+    assert.equal(draftCoding.composite, null);
+    assert.equal(draftCoding.indicators.find((item) => item.id === 'maragon:R1.1')?.band, null);
+    assert.equal(draftCoding.indicators.find((item) => item.id === 'maragon:O4.2')?.band, 'strong');
+    assert.equal(draftCoding.episodes.length, 8);
   });
 
   it('uses the Assembly portrait and the unverified credit', () => {

@@ -11,10 +11,10 @@
     "numericId": 1002,
     "fullName": "Grida DUMA",
     "category": "Media",
-    "shortBio_sq": "Moderatore dhe autore e emisionit «Top Story» në Top Channel. Më parë deputete e Partisë Demokratike.",
-    "shortBio_en": "Moderator and author of the programme Top Story on Top Channel. Formerly a Democratic Party deputy.",
-    "detailedBio_sq": "Grida DUMA është moderatore dhe autore e emisionit «Top Story» në Top Channel, sipas faqeve të vetë Top Channel të tërhequra më 18 nëntor 2026. Një shkrim i 5 gushtit 2026 thotë se katër vjet më parë ajo dorëzoi mandatin për të marrë këtë detyrë. Regjistri i anëtarëve të Kuvendit e liston GRIDA DUMA, Partia Demokratike, me status 2, i ndryshuar së fundi më 13 dhjetor 2022, dhe jo ndër 140 rekordet me status 0. Data e lindjes në atë rekord është vulë krijimi dhe nuk përdoret. Jetëshkrimi i depozituar në Kuvend deklaron 11 qershor 1977 dhe studime në Universitetin e Tiranës; këto mbeten deklarime, jo verifikime të veçanta. Ky tekst është draft kërkimor, jo biografi e miratuar. Asnjë tregues MARAGON® nuk është vlerësuar.",
-    "detailedBio_en": "Grida DUMA is the moderator and author of the programme Top Story on Top Channel, according to Top Channel pages retrieved on 18 November 2026. A 5 August 2026 article says that four years earlier she gave up her mandate to take that role. The Assembly member register lists GRIDA DUMA, Democratic Party, status 2, last modified on 13 December 2022, and not among the 140 records with status 0. The birth date on that record is a creation stamp and is not used. The CV filed with the Assembly declares 11 June 1977 and studies at the University of Tirana; those remain declarations, not separate checks. This text is a research draft, not an approved biography. No MARAGON® indicator has been assessed.",
+    "shortBio_sq": "Autore, moderatore dhe drejtuese e emisionit «Top Story» në Top Channel. Në të shkuarën ka qenë ish-deputete e Partisë Demokratike.",
+    "shortBio_en": "Author, moderator and host of Top Story on Top Channel. She was formerly a Democratic Party MP.",
+    "detailedBio_sq": "Grida DUMA është autore, moderatore dhe drejtuese e emisionit «Top Story» në Top Channel. Ky është roli i saj aktual, sipas faqeve të Top Channel të tërhequra më 18 nëntor 2026. Karriera politike i përket së shkuarës: shkrimi i 5 gushtit 2026 thotë se rreth katër vjet më parë ajo dorëzoi mandatin. Regjistri i anëtarëve të Kuvendit e ruan si GRIDA DUMA, me status 2, i ndryshuar së fundi më 13 dhjetor 2022, dhe jo ndër 140 rekordet me status 0. Data e lindjes në atë rekord është vulë krijimi dhe nuk përdoret. Jetëshkrimi i depozituar në Kuvend deklaron 11 qershor 1977 dhe studime në Universitetin e Tiranës; këto mbeten deklarime, jo verifikime të veçanta. Ky tekst është draft kërkimor, jo biografi e miratuar.",
+    "detailedBio_en": "Grida DUMA is the author, moderator and host of Top Story on Top Channel. That is her current role, according to Top Channel pages retrieved on 18 November 2026. Her political career is in the past: the 5 August 2026 article says she gave up her mandate about four years earlier. The Assembly member register still lists GRIDA DUMA at status 2, last modified on 13 December 2022, and not among the 140 records with status 0. The birth date on that record is a creation stamp and is not used. The CV filed with the Assembly declares 11 June 1977 and studies at the University of Tirana; those remain declarations, not separate checks. This text is a research draft, not an approved biography.",
     "dateOfBirth": null,
     "age": null,
     "zodiacSign": null
@@ -30,7 +30,9 @@
         "reuseBasisDocumented": false,
         "credit": "Burimi i fotografisë: Në verifikim"
       }
-    ]
+    ],
+    "caption_sq": "Portret institucional. Burimi: Kuvendi i Shqipërisë. Krediti: Në verifikim.",
+    "caption_en": "Institutional portrait. Source: Assembly of Albania. Credit: pending verification."
   },
   "publication": {
     "biographyStatus": "draft",
