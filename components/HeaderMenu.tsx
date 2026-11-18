@@ -71,6 +71,7 @@ interface HeaderMenuProps {
   onNavigateToCidaMethodology?: () => void;
   onNavigateToReputationWarRoom?: () => void;
   onNavigateToNexusAiGovernance?: () => void;
+  onNavigateToForecast2027?: () => void;
   onNavigateToNoraAiProfile?: () => void;
   onNavigateToAuthorProfile?: () => void;
   onNavigateToShkoderCulture?: () => void;
@@ -170,6 +171,19 @@ export const HeaderMenu: React.FC<HeaderMenuProps> = ({ onClose, isMobile = fals
                 )}
                 {navProps.onNavigateToAcademicJournalsList && <MenuButton onClick={() => handleNavigation(navProps.onNavigateToAcademicJournalsList)} ariaLabel="Navigo te Revistat Akademike"><AcademicCapIcon className={iconClass} /><span>Revistat Akademike</span></MenuButton>}
                 {navProps.onNavigateToNovaricJournalManifesto && <MenuButton onClick={() => handleNavigation(navProps.onNavigateToNovaricJournalManifesto)} ariaLabel="Navigo te NOVARIC® AI Journal"><AcademicCapIcon className={iconClass} /><span>NOVARIC<sup>®</sup> AI Journal</span></MenuButton>}
+                {navProps.onNavigateToForecast2027 && (
+                  <MenuButton
+                    onClick={() => handleNavigation(navProps.onNavigateToForecast2027)}
+                    ariaLabel="Navigo te NOVARIC® Forecast 2027"
+                    isActive={navProps.currentPage === 'forecast2027'}
+                  >
+                    <PresentationChartLineIcon className={`${iconClass} text-sky-600 dark:text-sky-300`} />
+                    <span className="flex flex-col items-start leading-tight">
+                      <span className="font-semibold">NOVARIC<sup>®</sup> Forecast 2027</span>
+                      <span className="text-[10px] font-normal text-slate-500 dark:text-slate-400">Parashikimi 2027</span>
+                    </span>
+                  </MenuButton>
+                )}
                 {navProps.onNavigateToNexusAiGovernance && (
                   <MenuButton 
                     onClick={() => handleNavigation(navProps.onNavigateToNexusAiGovernance!)} 

@@ -97,6 +97,7 @@ interface SitemapPageProps {
   onNavigateToAiReadinessMatrix: () => void;
   onNavigateToCorporatePositionStatement: () => void;
   onNavigateToNexusAiGovernance?: () => void;
+  onNavigateToForecast2027?: () => void;
 }
 
 const Section: React.FC<{ title: string; children: React.ReactNode }> = ({ title, children }) => (
@@ -227,6 +228,12 @@ export const SitemapPage: React.FC<SitemapPageProps> = (props) => {
                 <PageLink onClick={props.onNavigateToNexusAiGovernance} icon={<ScaleIcon className={`${iconClass} text-[#009AE4]`}/>}>Kodi & Qeverisja AI (Nexus Humanist AI)</PageLink>
                 <PageLink onClick={props.onNavigateToNoraAiProfile} icon={<CpuChipIcon className={`${iconClass} text-cyan-500`}/>}>Nora (AI) — Analiste & Publikime</PageLink>
                 <PageLink onClick={props.onNavigateToNovaricJournalManifesto} icon={<BookOpenIcon className={iconClass}/>}>NOVARIC<sup>®</sup> AI Journal</PageLink>
+                <PageLink onClick={props.onNavigateToForecast2027} icon={<PresentationChartLineIcon className={`${iconClass} text-sky-600`}/>}>
+                    <span className="flex flex-col items-start leading-tight">
+                        <span>NOVARIC<sup>®</sup> Forecast 2027</span>
+                        <span className="text-[11px] text-slate-500 dark:text-slate-400">Parashikimi 2027</span>
+                    </span>
+                </PageLink>
                 <PageLink onClick={props.onNavigateToFakeNewsArchive} icon={<LightBulbIcon className={iconClass}/>}>Arkiva 'Fake News'</PageLink>
                 <PageLink onClick={props.onNavigateToDeconstructNews} icon={<CpuChipIcon className={iconClass}/>}>Dekonstrukto Lajmin</PageLink>
                 <PageLink onClick={props.onNavigateToAiReadinessMatrix} icon={<CpuChipIcon className={iconClass}/>}>AI Readiness Matrix</PageLink>

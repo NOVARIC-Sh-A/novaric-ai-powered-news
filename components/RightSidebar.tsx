@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 /* Corrected typo: ChevronDownIconIcon -> ChevronDownIcon */
-import { BookOpenIcon, BriefcaseIcon, ChartBarIcon, LightBulbIcon, CpuChipIcon, BeakerIcon, ChevronDownIcon, UserGroupIcon, ScaleIcon, ShieldCheckIcon, GlobeEuropeAfricaIcon, DocumentTextIcon } from './icons';
+import { BookOpenIcon, BriefcaseIcon, ChartBarIcon, LightBulbIcon, CpuChipIcon, BeakerIcon, ChevronDownIcon, UserGroupIcon, ScaleIcon, ShieldCheckIcon, GlobeEuropeAfricaIcon, DocumentTextIcon, PresentationChartLineIcon } from './icons';
 import { ShkoderWeather } from './ShkoderWeather';
 import { TiranaWeather } from './TiranaWeather';
 import { NovaricBrand } from './NovaricBrand';
@@ -53,6 +53,7 @@ interface RightSidebarProps {
   onNavigateToCidaMethodology?: () => void;
   onNavigateToReputationWarRoom?: () => void;
   onNavigateToNexusAiGovernance?: () => void;
+  onNavigateToForecast2027?: () => void;
   onNavigateToNoraAiProfile?: () => void;
   onNavigateToAuthorProfile?: () => void;
 }
@@ -300,6 +301,15 @@ export const RightSidebar: React.FC<RightSidebarProps> = (props) => {
                 </NavButton>
                 <NavButton onClick={props.onNavigateToNovaricJournalManifesto} icon={<BookOpenIcon className="w-4 h-4" />}>
                   <NovaricBrand suffix=" AI Journal" />
+                </NavButton>
+                <NavButton
+                    onClick={props.onNavigateToForecast2027}
+                    icon={<PresentationChartLineIcon className="w-4 h-4 text-sky-600 dark:text-sky-300" />}
+                >
+                    <span className="flex flex-col items-start leading-tight py-0.5">
+                        <span><NovaricBrand suffix=" Forecast 2027" /></span>
+                        <span className="text-[10px] font-normal text-slate-500 dark:text-slate-400">Parashikimi 2027</span>
+                    </span>
                 </NavButton>
                 <NavButton onClick={props.onNavigateToReputationWarRoom} icon={<ShieldCheckIcon className="w-4 h-4 text-rose-500" />}>War Room (Defense SOC)</NavButton>
                 <NavButton 

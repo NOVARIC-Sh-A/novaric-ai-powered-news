@@ -111,6 +111,7 @@ export type Page =
   | 'cidaMethodology'
   | 'reputationWarRoom'
   | 'nexusHumanistAiGovernance'
+  | 'forecast2027'
   | 'authorProfile'
   | 'profiliIAutorit';
 
