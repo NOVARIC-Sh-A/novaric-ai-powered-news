@@ -149,42 +149,97 @@ export function isWithinGapWindow(publishedAtISO: string, anchorISO?: string): b
   return pubMs >= gapStartMs && pubMs < gapEndMs;
 }
 
+/** Albania standard time. Naive editorial clocks are read as Tirana, UTC+1. */
+export const TIRANA_UTC_OFFSET = '+01:00';
+
+function pad2(value: number): string {
+  return String(value).padStart(2, '0');
+}
+
+/** Calendar date in Tirana (fixed UTC+1) for an absolute instant. */
+export function tiranaCalendarDate(ms: number): { year: number; month: number; day: number } {
+  const shifted = new Date(ms + 60 * 60 * 1000);
+  return {
+    year: shifted.getUTCFullYear(),
+    month: shifted.getUTCMonth() + 1,
+    day: shifted.getUTCDate(),
+  };
+}
+
+/** Wall clock in Tirana (UTC+1) to an absolute millisecond instant. */
+export function tiranaWallTimeMs(year: number, month: number, day: number, hour: number, minute: number, second = 0): number | null {
+  const iso = `${year}-${pad2(month)}-${pad2(day)}T${pad2(hour)}:${pad2(minute)}:${pad2(second)}${TIRANA_UTC_OFFSET}`;
+  const ms = Date.parse(iso);
+  return Number.isNaN(ms) ? null : ms;
+}
+
 /**
- * Normalizes any relative or textual date representation into a standardized ISO 8601 UTC timestamp.
+ * Parse a publication timestamp.
+ * Values with Z or a numeric offset are absolute.
+ * Values with no zone are Tirana wall time (UTC+1), not the server's local zone.
+ * Returns null when the value is missing or invalid. Never substitutes "now".
+ */
+export function parsePublicationTimestamp(value?: string | null): number | null {
+  if (!value) return null;
+  const raw = value.trim();
+  if (!raw) return null;
+  if (/[zZ]$|[+-]\d{2}:?\d{2}$/.test(raw)) {
+    const ms = Date.parse(raw);
+    return Number.isNaN(ms) ? null : ms;
+  }
+  const naive = raw.match(/^(\d{4})-(\d{2})-(\d{2})[T ](\d{2}):(\d{2})(?::(\d{2}))?/);
+  if (naive) {
+    return tiranaWallTimeMs(
+      Number(naive[1]),
+      Number(naive[2]),
+      Number(naive[3]),
+      Number(naive[4]),
+      Number(naive[5]),
+      naive[6] ? Number(naive[6]) : 0,
+    );
+  }
+  if (/^\d{4}-\d{2}-\d{2}$/.test(raw)) {
+    const [year, month, day] = raw.split('-').map(Number);
+    return tiranaWallTimeMs(year, month, day, 0, 0, 0);
+  }
+  return null;
+}
+
+/**
+ * Normalizes a publication time into ISO UTC.
+ * A stored absolute publishedAt wins over a relative label such as "Para 6 minutash",
+ * so a later page load cannot move an old item to "now".
+ * Missing or invalid dates stay empty. They are not replaced with the clock.
  */
 export function normalizeArticlePublishedAt(
   article: Partial<BreakingNewsArticle>,
   anchorISO?: string
 ): string {
+  const stored = parsePublicationTimestamp(article.publishedAt);
+  if (stored != null) {
+    return new Date(stored).toISOString();
+  }
+
   const anchor = anchorISO ? new Date(anchorISO) : new Date();
   const anchorMs = isNaN(anchor.getTime()) ? Date.now() : anchor.getTime();
   const dateStr = (article.publishedDate || '').trim();
 
-  // Prioritize explicit relative minutes ("Para 25 minutash", "Para 56 minutash")
-  // against anchor time to guarantee strict UI and 60-minute window consistency
   const minMatch = dateStr.match(/Para\s+(\d+)\s*min/i) || dateStr.match(/(\d+)\s*minuta?\s*më parë/i);
   if (minMatch) {
     const mins = parseInt(minMatch[1], 10);
     return new Date(anchorMs - mins * 60 * 1000).toISOString();
   }
 
-  // 1. If explicit valid publishedAt is already set
-  if (article.publishedAt) {
-    const d = new Date(article.publishedAt);
-    if (!isNaN(d.getTime())) {
-      return d.toISOString();
-    }
-  }
-
   if (!dateStr) {
-    return new Date(anchorMs).toISOString();
+    return '';
   }
 
-  // 2. Direct ISO or standard date parse
-  const directDate = new Date(dateStr);
-  if (!isNaN(directDate.getTime()) && directDate.getFullYear() > 2000 && !dateStr.includes('Para') && !dateStr.includes('Sot') && !dateStr.includes('Dje')) {
-    return directDate.toISOString();
+  const labeledInstant = parsePublicationTimestamp(dateStr);
+  if (labeledInstant != null && !dateStr.includes('Para') && !dateStr.includes('Sot') && !dateStr.includes('Dje')) {
+    return new Date(labeledInstant).toISOString();
   }
+
+  const directDate = new Date(dateStr);
 
   // 4. Match relative hours: "Para 1 ore", "Para 3 orësh", "2 orë më parë"
   const hourMatch = dateStr.match(/Para\s+(\d+)\s*or[ëe]/i) || dateStr.match(/(\d+)\s*orë?\s*më parë/i);
@@ -198,28 +253,26 @@ export function normalizeArticlePublishedAt(
   if (todayMatch) {
     const hours = parseInt(todayMatch[1], 10);
     const mins = parseInt(todayMatch[2], 10);
-    const today = new Date(anchorMs);
-    today.setUTCHours(hours, mins, 0, 0);
-    // If future because of UTC vs local, keep it reasonable
-    return today.toISOString();
+    const today = tiranaCalendarDate(anchorMs);
+    const ms = tiranaWallTimeMs(today.year, today.month, today.day, hours, mins, 0);
+    return ms == null ? '' : new Date(ms).toISOString();
   }
 
-  // 6. Match yesterday: "Dje, 21:40"
+  // 6. Match yesterday: "Dje, 21:40" on the Tirana calendar
   const yestMatch = dateStr.match(/Dje,\s*(\d{1,2}):(\d{2})/i);
   if (yestMatch) {
     const hours = parseInt(yestMatch[1], 10);
     const mins = parseInt(yestMatch[2], 10);
-    const yest = new Date(anchorMs - 24 * 3600 * 1000);
-    yest.setUTCHours(hours, mins, 0, 0);
-    return yest.toISOString();
+    const yesterday = tiranaCalendarDate(anchorMs - 24 * 3600 * 1000);
+    const ms = tiranaWallTimeMs(yesterday.year, yesterday.month, yesterday.day, hours, mins, 0);
+    return ms == null ? '' : new Date(ms).toISOString();
   }
 
-  // Fallback to direct parse or anchor time
-  if (!isNaN(directDate.getTime())) {
+  if (!isNaN(directDate.getTime()) && directDate.getFullYear() > 2000 && !dateStr.includes('Para') && !dateStr.includes('Sot') && !dateStr.includes('Dje')) {
     return directDate.toISOString();
   }
 
-  return new Date(anchorMs).toISOString();
+  return '';
 }
 
 /**

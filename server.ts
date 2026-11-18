@@ -1,9 +1,11 @@
 import express from 'express';
 import type { Request, Response } from 'express';
+import fs from 'fs';
 import http from 'http';
 import path from 'path';
 import { fileURLToPath } from 'url';
 import { WebSocketServer, WebSocket } from 'ws';
+import { seoShellRelativePath } from './utils/seoShell';
 import { GoogleGenAI, Type, Modality } from '@google/genai';
 import type { GenerateContentResponse, LiveServerMessage } from '@google/genai';
 // Self-contained image resolver tool declaration & fallback executor for server
@@ -640,6 +642,25 @@ server.on('upgrade', (request, socket, head) => {
 
 const PORT = parseInt(process.env.PORT || '3000', 10);
 const isProduction = process.env.NODE_ENV === 'production';
+
+const distPathForSeo = path.resolve(__dirname, 'dist');
+app.use((req: Request, res: Response, next) => {
+  if (req.method !== 'GET' && req.method !== 'HEAD') {
+    next();
+    return;
+  }
+  const rel = seoShellRelativePath(req.path, req.url.includes('?') ? req.url.slice(req.url.indexOf('?')) : '');
+  if (!rel) {
+    next();
+    return;
+  }
+  const file = path.join(distPathForSeo, rel);
+  if (!fs.existsSync(file)) {
+    next();
+    return;
+  }
+  res.sendFile(file);
+});
 
 async function startServer() {
   if (!isProduction) {

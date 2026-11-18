@@ -209,6 +209,10 @@ export const App: React.FC = () => {
         pageTitle = 'NOVARIC® Nexus Humanist AI Code of Conduct & Operations Governance | N-DOC-10010-092026';
         pageDescription = 'Authoritative operational governance standard for artificial intelligence systems, LLMs, and autonomous agents (OpenClaw) under EU AI Act Regulation (EU) 2024/1689 and GDPR.';
         break;
+      case 'newsList':
+        pageTitle = 'Arkiva e Lajmeve | NOVARIC® Lajme me IA | Shqipëri';
+        pageDescription = 'Lajmet e fundit dhe lajmet e shënuara si të ndërprera, të renditura sipas kohës së publikimit. NOVARIC® Lajme me IA.';
+        break;
       case 'forecast2027':
         pageTitle = 'NOVARIC® Forecast 2027 | Parashikimi 2027 | Botimi i parë';
         pageDescription = 'Botimi i parë i NOVARIC® Forecast 2027, 18 nëntor 2026, i nënshkruar nga Dr Alban Gj. THIKA. Nuk është këshillë investimi.';
