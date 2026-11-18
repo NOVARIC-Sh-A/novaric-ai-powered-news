@@ -1,13 +1,12 @@
 import React, { useState } from 'react';
 import { MARAGON_INDICATORS, type MaragonIndicator } from '../data/maragonIndicators';
+import { CANONICAL_MARAGON_INDICATOR_IDS } from '../lib/maragon-schemas';
 import { getLineageForMetric, getLineageForMethodStep } from '../data/analyticalMappings';
 
 /**
  * Specification mockup only. The example bands below are not assessments,
  * do not read or write methodologyApproved, and are not used by any profile.
  */
-const CANONICAL_CODES = ['R1.1', 'R1.2', 'A2.1', 'A2.2', 'A2.3', 'A2.4', 'G3.1', 'G3.2', 'O4.1', 'O4.2'] as const;
-
 type AxisCode = 'R' | 'A' | 'G' | 'O';
 type BandKey = 'weak' | 'moderate' | 'strong';
 
@@ -51,8 +50,17 @@ const RINGS: Array<{ radius: number; sq: string; en: string }> = [
 const BAND_RADIUS: Record<BandKey, number> = { weak: 0.5, moderate: 0.75, strong: 1 };
 
 function canonicalIndicators(): MaragonIndicator[] {
-  return CANONICAL_CODES.map((code) => MARAGON_INDICATORS.find((item) => item.code === code && item.scope === 'outlet'))
+  return CANONICAL_MARAGON_INDICATOR_IDS.map((id) => MARAGON_INDICATORS.find((item) => item.id === id && item.scope === 'outlet'))
     .filter((item): item is MaragonIndicator => Boolean(item));
+}
+
+function bandRadiusFor(code: string): number | null {
+  const band = EXAMPLE_INDICATOR_BAND[code];
+  if (!band) return null;
+  if (band.bandEn === 'Strong') return BAND_RADIUS.strong;
+  if (band.bandEn === 'Moderate') return BAND_RADIUS.moderate;
+  if (band.bandEn === 'Weak') return BAND_RADIUS.weak;
+  return null;
 }
 
 function Brand({ name }: { name: 'NOVARIC' | 'MARAGON' }) {
@@ -64,57 +72,149 @@ function Brand({ name }: { name: 'NOVARIC' | 'MARAGON' }) {
   );
 }
 
-function polar(index: number, radius: number, cx: number, cy: number, maxR: number): [number, number] {
-  const angle = -Math.PI / 2 + index * (Math.PI / 2);
+function polar(index: number, count: number, radius: number, cx: number, cy: number, maxR: number): [number, number] {
+  const angle = -Math.PI / 2 + (index * 2 * Math.PI) / count;
   return [cx + Math.cos(angle) * radius * maxR, cy + Math.sin(angle) * radius * maxR];
 }
 
+function sectorPath(start: number, end: number, count: number, cx: number, cy: number, maxR: number): string {
+  const a0 = -Math.PI / 2 + ((start - 0.5) * 2 * Math.PI) / count;
+  const a1 = -Math.PI / 2 + ((end + 0.5) * 2 * Math.PI) / count;
+  const steps = 12;
+  const edge = Array.from({ length: steps + 1 }, (_, step) => {
+    const angle = a0 + ((a1 - a0) * step) / steps;
+    return `${(cx + Math.cos(angle) * maxR).toFixed(1)} ${(cy + Math.sin(angle) * maxR).toFixed(1)}`;
+  });
+  return `M ${cx} ${cy} L ${edge.join(' L ')} Z`;
+}
+
 function BandRadar({ traced }: { traced: boolean }) {
-  const cx = 100;
-  const cy = 100;
-  const maxR = 62;
-  const trace = traced
-    ? EXAMPLE_ROWS.map((row, index) => polar(index, BAND_RADIUS[row.band], cx, cy, maxR))
-    : [];
-  const tracePath = trace.length ? `${trace.map((point, index) => `${index === 0 ? 'M' : 'L'} ${point[0].toFixed(1)} ${point[1].toFixed(1)}`).join(' ')} Z` : '';
+  const indicators = canonicalIndicators();
+  const count = indicators.length;
+  const cx = 200;
+  const cy = 200;
+  const maxR = 118;
+  const radii = indicators.map((indicator) => (traced ? bandRadiusFor(indicator.code) : null));
+  const segments: string[] = [];
+  let current: string[] = [];
+  radii.forEach((radius, index) => {
+    if (radius === null) {
+      if (current.length) segments.push(current.join(' '));
+      current = [];
+      return;
+    }
+    const [x, y] = polar(index, count, radius, cx, cy, maxR);
+    current.push(`${current.length === 0 ? 'M' : 'L'} ${x.toFixed(1)} ${y.toFixed(1)}`);
+  });
+  if (current.length) segments.push(current.join(' '));
+  const closed = traced && radii.every((radius) => radius !== null) && segments.length === 1;
+  const sectorFill = ['rgba(48,56,75,0.05)', 'rgba(48,56,75,0.09)', 'rgba(48,56,75,0.04)', 'rgba(48,56,75,0.08)'];
+  const groups: Array<{ start: number; end: number; fill: string }> = [];
+  indicators.forEach((indicator, index) => {
+    const previous = groups[groups.length - 1];
+    if (previous && indicators[previous.start].dimension === indicator.dimension) {
+      previous.end = index;
+      return;
+    }
+    groups.push({ start: index, end: index, fill: sectorFill[groups.length % sectorFill.length] });
+  });
   return (
-    <div className="relative mx-auto h-60 w-60">
-      <svg viewBox="0 0 200 200" className="h-full w-full" role="img" aria-label={traced ? 'Shembull i gjurmës sipas brezave / Example band trace' : 'Rrjetë pa vlerësim / Unassessed grid'}>
-        <circle cx={cx} cy={cy} r={maxR + 8} fill="#FFFFFF" stroke="#E5E7EB" />
+    <div className="relative mx-auto w-full max-w-[420px]">
+      <svg viewBox="0 0 400 400" className="h-auto w-full" role="img" aria-label={traced ? 'Shembull i gjurmës sipas dhjetë treguesve / Example trace across ten indicators' : 'Rrjetë pa vlerësim / Unassessed grid'}>
+        <circle cx={cx} cy={cy} r={maxR + 6} fill="#FFFFFF" stroke="#E5E7EB" />
+        {groups.map((group) => (
+          <path key={group.start} d={sectorPath(group.start, group.end, count, cx, cy, maxR)} fill={group.fill} />
+        ))}
         {RINGS.map((ring) => (
           <circle key={ring.sq} cx={cx} cy={cy} r={ring.radius * maxR} fill="none" stroke={traced ? '#CBD5E1' : '#D1D5DB'} strokeWidth="1.25" />
         ))}
-        {EXAMPLE_ROWS.map((row, index) => {
-          const [x, y] = polar(index, 1, cx, cy, maxR);
-          return <line key={row.code} x1={cx} y1={cy} x2={x} y2={y} stroke={traced ? '#CBD5E1' : '#D1D5DB'} strokeWidth="1.25" />;
+        {indicators.map((indicator, index) => {
+          const [x, y] = polar(index, count, 1, cx, cy, maxR);
+          return <line key={indicator.id} x1={cx} y1={cy} x2={x} y2={y} stroke={traced ? '#CBD5E1' : '#D1D5DB'} strokeWidth="1.15" />;
         })}
-        {RINGS.map((ring) => (
-          <text key={ring.en} x={cx - 56} y={cy + 3 - ring.radius * maxR} fill="#6B7280" fontSize="8">
-            {ring.sq}
-          </text>
-        ))}
-        {EXAMPLE_ROWS.map((row, index) => {
-          const [x, y] = polar(index, 1.22, cx, cy, maxR);
+        {RINGS.map((ring) => {
+          const [x, y] = polar(0.45, count, ring.radius, cx, cy, maxR);
           return (
-            <text key={row.code} x={x} y={y} textAnchor="middle" dominantBaseline="middle" fill={traced ? NAVY : '#9CA3AF'} fontSize="13" fontWeight="700">
-              {row.code}
+            <text key={ring.en} x={x + 3} y={y} fill="#6B7280" fontSize="8">
+              {ring.sq}
             </text>
           );
         })}
-        {traced ? (
-          <>
-            <path d={tracePath} fill="rgba(48,56,75,0.12)" stroke={NAVY} strokeWidth="2.75" />
-            {trace.map((point, index) => (
-              <circle key={EXAMPLE_ROWS[index].code} cx={point[0]} cy={point[1]} r="3.4" fill={NAVY} />
-            ))}
-          </>
-        ) : null}
+        {closed ? (
+          <path d={`${segments[0]} Z`} fill="rgba(48,56,75,0.12)" stroke={NAVY} strokeWidth="2.4" />
+        ) : (
+          segments.map((segment) => <path key={segment} d={segment} fill="none" stroke={NAVY} strokeWidth="2.4" />)
+        )}
+        {indicators.map((indicator, index) => {
+          const radius = radii[index];
+          if (radius === null) {
+            const [x, y] = polar(index, count, RINGS[0].radius, cx, cy, maxR);
+            return <circle key={indicator.id} cx={x} cy={y} r="3.2" fill="none" stroke="#9CA3AF" strokeWidth="1.4" strokeDasharray="2 1.5" />;
+          }
+          const [x, y] = polar(index, count, radius, cx, cy, maxR);
+          return <circle key={indicator.id} cx={x} cy={y} r="3.3" fill={NAVY} />;
+        })}
+        {indicators.map((indicator, index) => {
+          const [x, y] = polar(index, count, 1.22, cx, cy, maxR);
+          const anchor = x < cx - 14 ? 'end' : x > cx + 14 ? 'start' : 'middle';
+          const baseline = y < cy - 14 ? 'auto' : y > cy + 14 ? 'hanging' : 'middle';
+          return (
+            <text key={`${indicator.id}-label`} x={x} y={y} textAnchor={anchor} dominantBaseline={baseline} fill={traced ? NAVY : '#9CA3AF'} fontSize="15" fontWeight="700">
+              <title>{`${indicator.id} · ${indicator.title} · ${indicator.dimension_name_sq}`}</title>
+              {indicator.code}
+            </text>
+          );
+        })}
       </svg>
+      <p className="text-center text-[10px] leading-snug text-slate-500">
+        Unaza / Rings: Pa vlerësim · E dobët / Weak · Mesatare / Moderate · E fortë / Strong
+      </p>
       {traced ? null : (
-        <div className="pointer-events-none absolute inset-0 flex items-center justify-center">
-          <p className="max-w-[8.5rem] rounded-md border border-slate-300 bg-white/95 px-2 py-1 text-center text-[11px] font-bold leading-tight text-slate-500">Pa vlerësim / Not assessed</p>
-        </div>
+        <p className="mt-1 text-center text-[11px] font-bold text-slate-500">Pa vlerësim / Not assessed</p>
       )}
+    </div>
+  );
+}
+
+function IndicatorLegend({ assessed }: { assessed: boolean }) {
+  const indicators = canonicalIndicators();
+  return (
+    <div className="mt-2 space-y-2">
+      {EXAMPLE_ROWS.map((group) => {
+        const rows = indicators.filter((indicator) => indicator.dimension === group.code);
+        return (
+          <section key={group.code}>
+            <p className="text-[10px] font-bold" style={{ color: NAVY }}>
+              {rows[0]?.dimension_name_sq || group.sq}
+            </p>
+            <ul className="mt-1 space-y-1">
+              {rows.map((indicator) => {
+                const band = EXAMPLE_INDICATOR_BAND[indicator.code];
+                return (
+                  <li key={indicator.id} className={`rounded px-2 py-1 ${assessed ? 'border border-slate-200 bg-slate-50' : 'border border-dashed border-slate-300 bg-slate-50 text-slate-400'}`} title={`${indicator.id} · ${indicator.title} · ${indicator.dimension_name_sq}`}>
+                    {assessed && band ? (
+                      <>
+                        <p className="text-[11px] font-bold" style={{ color: NAVY }}>
+                          {indicator.code} · {indicator.title}
+                          <span className="float-right font-semibold text-slate-600">{band.bandSq} / {band.bandEn}</span>
+                        </p>
+                        <p className="text-[10px] text-slate-500">
+                          Besueshmëri: {band.confidenceSq} / Confidence: {band.confidenceEn}
+                        </p>
+                      </>
+                    ) : (
+                      <p className="text-[11px]">{indicator.code} · {indicator.title} — Pa vlerësim / Not assessed</p>
+                    )}
+                  </li>
+                );
+              })}
+            </ul>
+            {assessed ? (
+              <p className="mt-1 text-[10px] text-slate-500">{group.evidence} prova / {group.evidence} evidence items</p>
+            ) : null}
+          </section>
+        );
+      })}
     </div>
   );
 }
@@ -176,7 +276,7 @@ function Footer() {
 
 function CardFrame({ title, children }: { title: string; children: React.ReactNode }) {
   return (
-    <article className="flex w-full max-w-[380px] flex-col overflow-hidden rounded-2xl border border-slate-200 bg-white text-slate-700 shadow-[0_8px_24px_rgba(48,56,75,0.12)]">
+    <article className="flex w-full max-w-[440px] flex-col overflow-hidden rounded-2xl border border-slate-200 bg-white text-slate-700 shadow-[0_8px_24px_rgba(48,56,75,0.12)]">
       <header className="flex items-start justify-between gap-2 px-3 pt-3">
         <div>
           <p className="text-[10px] font-bold uppercase tracking-[0.16em] text-slate-500">Shembull / Example</p>
@@ -198,21 +298,7 @@ function ApprovedFront() {
         <Portrait approved />
         <p className="mt-4 text-center text-[10px] text-slate-500">Foto në verifikim / Photo pending verification</p>
         <BandRadar traced />
-        <ul className="mt-1 space-y-1">
-          {EXAMPLE_ROWS.map((row) => (
-            <li key={row.code} className="rounded border border-slate-200 bg-slate-50 px-2 py-1">
-              <p className="text-[11px] font-bold" style={{ color: NAVY }}>
-                {row.code} · {row.sq} / {row.en}
-                <span className="float-right font-semibold text-slate-600">{row.bandSq} / {row.bandEn}</span>
-              </p>
-              <p className="text-[10px] text-slate-500">
-                Besueshmëri: {row.confidenceSq} / Confidence: {row.confidenceEn}
-                <span className="mx-1">·</span>
-                {row.evidence} prova / {row.evidence} evidence items
-              </p>
-            </li>
-          ))}
-        </ul>
+        <IndicatorLegend assessed />
         <p className="mt-2 rounded-full border border-slate-300 bg-slate-100 px-2 py-1 text-center text-[10px] font-semibold text-slate-500">
           Boshti C · Nuk vlerësohet / Axis C · Unscored
         </p>
@@ -304,14 +390,7 @@ function UnassessedFront() {
         <Portrait approved={false} />
         <p className="mt-4 text-center text-[10px] text-slate-500">Foto në verifikim / Photo pending verification</p>
         <BandRadar traced={false} />
-        <ul className="mt-1 space-y-1">
-          {EXAMPLE_ROWS.map((row) => (
-            <li key={row.code} className="rounded border border-dashed border-slate-300 bg-slate-50 px-2 py-1.5 text-slate-400">
-              <p className="text-[11px]">{row.code} · {row.sq} / {row.en}</p>
-              <p className="text-[10px]">Pa vlerësim / Not assessed</p>
-            </li>
-          ))}
-        </ul>
+        <IndicatorLegend assessed={false} />
         <p className="mt-2 rounded-full border border-dashed border-slate-300 bg-slate-50 px-2 py-1 text-center text-[10px] text-slate-400">
           Boshti C · Nuk vlerësohet / Axis C · Unscored
         </p>
