@@ -1,6 +1,7 @@
 import React from 'react';
 import { NexusHumanistAiGovernancePage } from '../components/NexusHumanistAiGovernancePage';
 import { Forecast2027Page } from '../components/Forecast2027Page';
+import { MaragonCardMockupPage } from '../components/MaragonCardMockupPage';
 import {
   PrivacyPolicy,
   SocialMediaPolicy,
@@ -253,6 +254,8 @@ export const SimplePage: React.FC<SimplePageProps> = ({ page, onNavigate, profil
         return <CorporatePositionStatement onBack={onBack} onNavigateToGdpr={() => onNavigate('gdprPolicy')} />;
     case 'forecast2027':
         return <Forecast2027Page onBack={onBack} />;
+    case 'maragonCardMockup':
+        return <MaragonCardMockupPage onBack={onBack} />;
     case 'nexusHumanistAiGovernance':
         return <NexusHumanistAiGovernancePage 
             onBack={onBack} 

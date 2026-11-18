@@ -6,7 +6,7 @@ import { PieChart } from './PieChart';
 import { formatPersonName } from '../utils/formatPersonName';
 import { useLanguage } from '../contexts/LanguageContext';
 import {
-  isMaragonAssessmentPublished,
+  maragonScoresArePublic,
   measuredNumber,
   notAssessedLabel,
   publishedSeries,
@@ -59,18 +59,52 @@ const DimensionDetail: React.FC<{ category: ParagonEntry; unassessedLabel: strin
 };
 
 
-export const TvPersonalitiesAnalysisPage: React.FC<PerformanceAnalysisPageProps> = ({ onBack, profiles, initialProfileId, onProfileSelect }) => {
+const UnassessedNotice: React.FC<{ name?: string }> = ({ name }) => (
+    <section className="mb-8 rounded-xl border border-dashed border-slate-300 bg-slate-50 p-6 text-center dark:border-slate-600 dark:bg-slate-900/40">
+        <h2 className="text-2xl font-bold text-slate-700 dark:text-slate-100">Pa vlerësim / Not assessed</h2>
+        {name ? <p className="mt-2 text-sm text-slate-500">{name}</p> : null}
+        <p className="mx-auto mt-3 max-w-xl text-sm text-slate-600 dark:text-slate-300">
+            Vlerësimi publikohet vetëm pas miratimit. Nuk ka numra në këtë pamje.
+        </p>
+        <p className="mx-auto max-w-xl text-sm text-slate-500">
+            Assessment is published only after approval. This view has no numbers.
+        </p>
+    </section>
+);
+
+class AnalysisErrorBoundary extends React.Component<{ children: React.ReactNode }, { failed: boolean }> {
+    state = { failed: false };
+    static getDerivedStateFromError() {
+        return { failed: true };
+    }
+    render() {
+        if (this.state.failed) return <UnassessedNotice />;
+        return this.props.children;
+    }
+}
+
+export const TvPersonalitiesAnalysisPage: React.FC<PerformanceAnalysisPageProps> = (props) => (
+    <AnalysisErrorBoundary>
+        <TvPersonalitiesAnalysisBody {...props} />
+    </AnalysisErrorBoundary>
+);
+
+const TvPersonalitiesAnalysisBody: React.FC<PerformanceAnalysisPageProps> = ({ onBack, profiles, initialProfileId, onProfileSelect }) => {
     const { language, toggleLanguage } = useLanguage();
     const unassessedLabel = notAssessedLabel(language);
+    const safeProfiles = useMemo(
+        () => (Array.isArray(profiles) ? profiles.filter((profile) => Boolean(profile && profile.id != null)) : []),
+        [profiles],
+    );
     const profilesWithAnalysis = useMemo(() => 
-        profiles.filter(p => {
+        safeProfiles.filter(p => {
             const category = (p.category || '').toLowerCase();
             return category.includes('media')
                 || /^vip_m/i.test(String(p.id))
                 || p.maragonAssessmentStatus != null
                 || (p.maragonAnalysis && p.maragonAnalysis.length > 0);
-        }).sort((a, b) => a.name.localeCompare(b.name)),
-    [profiles]);
+        }).sort((a, b) => (a.name || '').localeCompare(b.name || '', 'sq')),
+    [safeProfiles]);
     
     const [selectedId, setSelectedId] = useState(() => {
         if (initialProfileId && profilesWithAnalysis.some(p => p.id.toString() === initialProfileId.toString())) {
@@ -82,8 +116,12 @@ export const TvPersonalitiesAnalysisPage: React.FC<PerformanceAnalysisPageProps>
     useEffect(() => {
         if (initialProfileId && profilesWithAnalysis.some(p => p.id.toString() === initialProfileId.toString())) {
             setSelectedId(initialProfileId);
+            return;
         }
-    }, [initialProfileId, profilesWithAnalysis]);
+        if (!selectedId && profilesWithAnalysis[0]) {
+            setSelectedId(profilesWithAnalysis[0].id);
+        }
+    }, [initialProfileId, profilesWithAnalysis, selectedId]);
 
 
     const [openDimension, setOpenDimension] = useState<string | null>(null);
@@ -102,7 +140,7 @@ export const TvPersonalitiesAnalysisPage: React.FC<PerformanceAnalysisPageProps>
         }
     };
 
-    const assessmentPublished = isMaragonAssessmentPublished(selectedAnalysis);
+    const assessmentPublished = maragonScoresArePublic(selectedAnalysis);
     const axisLabels = selectedAnalysis?.maragonAnalysis?.map(a => a.dimension) ?? [];
     const subjectSeries = publishedSeries(selectedAnalysis, selectedAnalysis?.maragonAnalysis?.map(a => a.score));
     const peerSeries = publishedSeries(selectedAnalysis, selectedAnalysis?.maragonAnalysis?.map(a => a.peerAverage));
@@ -187,7 +225,7 @@ export const TvPersonalitiesAnalysisPage: React.FC<PerformanceAnalysisPageProps>
                   <MaragonAnalysisView profileId={selectedAnalysis.id} name={formatPersonName(selectedAnalysis.name)} />
                 )}
 
-                {selectedAnalysis && !isMediaProfile(selectedAnalysis) && radarChartData && (
+                {assessmentPublished && selectedAnalysis && !isMediaProfile(selectedAnalysis) && radarChartData && (
                      <section className="mb-12 p-6 bg-slate-50 dark:bg-slate-900/50 rounded-xl shadow-inner">
                         <h2 className="text-2xl font-bold text-center text-slate-800 dark:text-slate-200 mb-2">
                           {assessmentPublished
@@ -200,12 +238,6 @@ export const TvPersonalitiesAnalysisPage: React.FC<PerformanceAnalysisPageProps>
                         <div className="max-w-xl mx-auto">
                            <RadarChart data={radarChartData} axesOnly={!assessmentPublished} />
                         </div>
-                    </section>
-                )}
-
-                {selectedAnalysis && !isMediaProfile(selectedAnalysis) && !assessmentPublished && (
-                    <section className="mb-8 text-center">
-                        <p className="text-lg font-semibold text-slate-700 dark:text-slate-200">{unassessedLabel}</p>
                     </section>
                 )}
 
@@ -232,10 +264,9 @@ export const TvPersonalitiesAnalysisPage: React.FC<PerformanceAnalysisPageProps>
                     </section>
                 )}
                 
-                {!selectedAnalysis && (
-                    <div className="text-center p-8 text-slate-500 dark:text-slate-400">
-                        <p>Ju lutemi, zgjidhni një personalitet për të parë analizën.</p>
-                    </div>
+                {!selectedAnalysis && <UnassessedNotice />}
+                {selectedAnalysis && !assessmentPublished && !isMediaProfile(selectedAnalysis) && (
+                    <UnassessedNotice name={formatPersonName(selectedAnalysis.name)} />
                 )}
 
                 <div className="mt-12 text-center">

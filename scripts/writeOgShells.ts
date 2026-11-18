@@ -7,7 +7,7 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import { applyOgToIndexHtml, listingOg, profileOg } from '../utils/ogDocument';
-import { forecastSeo, homeSeo, newsArticleSeo, newsArticleShellName, newsListSeo, NewsSeoInput } from '../utils/routeSeo';
+import { forecastSeo, homeSeo, maragonMockupSeo, newsArticleSeo, newsArticleShellName, newsListSeo, NewsSeoInput } from '../utils/routeSeo';
 import { publicationTimeMs } from '../utils/newsListOrder';
 
 const root = path.resolve(path.dirname(new URL(import.meta.url).pathname), '..');
@@ -41,6 +41,15 @@ fs.writeFileSync(path.join(forecastDir, 'index.html'), applyOgToIndexHtml(shell,
 const seoDir = path.join(dist, 'seo');
 fs.mkdirSync(seoDir, { recursive: true });
 fs.writeFileSync(path.join(seoDir, 'news-list.html'), applyOgToIndexHtml(shell, newsListSeo()));
+fs.writeFileSync(path.join(seoDir, 'maragon-card-mockup.html'), applyOgToIndexHtml(shell, maragonMockupSeo()));
+fs.writeFileSync(path.join(seoDir, 'maragon-analysis.html'), applyOgToIndexHtml(shell, {
+  title: 'Analiza MARAGON®',
+  description: 'Analiza e figurave mediatike. Vlerësimi publikohet vetëm pas miratimit. Pa vlerësim derisa të miratohet.',
+  url: 'https://media.novaric.al/?page=tvPersonalitiesAnalysis',
+  image: 'https://novaric.co/wp-content/uploads/2025/07/NOVARIC-Logos_Master-WB-R_12062025_500x500.webp',
+  imageAlt: 'Analiza MARAGON®',
+  type: 'website',
+}));
 
 const newsPath = path.join(root, 'data', 'latestNews.json');
 const newsItems = fs.existsSync(newsPath)

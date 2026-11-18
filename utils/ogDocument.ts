@@ -16,6 +16,7 @@ export interface OgFields {
   imageAlt: string;
   type?: 'website' | 'article';
   jsonLd?: unknown;
+  robots?: string;
 }
 
 export function escapeHtml(value: string): string {
@@ -85,6 +86,9 @@ export function ogMetaBlock(fields: OgFields): string {
     `<meta name="twitter:image" content="${image}" />`,
     `<meta name="twitter:image:alt" content="${imageAlt}" />`,
   ];
+  if (fields.robots) {
+    lines.push(`<meta name="robots" content="${escapeHtml(fields.robots)}" />`);
+  }
   if (fields.jsonLd) {
     const json = JSON.stringify(fields.jsonLd).replace(/</g, '\\u003c');
     lines.push(`<script type="application/ld+json" data-novaric-seo="1">${json}</script>`);
