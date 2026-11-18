@@ -223,8 +223,8 @@ function renderBlock(block: ForecastBlock, index: number): React.ReactNode {
 }
 
 export const Forecast2027Page: React.FC<Forecast2027PageProps> = ({ onBack }) => {
-  const pageTitle = 'NOVARIC® Forecast 2027 | Parashikimi 2027 | Botim paraprak';
-  const pageDescription = 'Botim paraprak i NOVARIC® Forecast 2027. Draft i panënshkruar, në pritje të nënshkrimit nga Dr Alban Gj. THIKA dhe të rishikimit ligjor. Nuk është këshillë investimi.';
+  const pageTitle = 'NOVARIC® Forecast 2027 | Parashikimi 2027 | Botimi i parë';
+  const pageDescription = 'Botimi i parë i NOVARIC® Forecast 2027, 18 nëntor 2026, i nënshkruar nga Dr Alban Gj. THIKA. Nuk është këshillë investimi.';
 
   useSeo(pageTitle, pageDescription, undefined, PAGE_URL, 'sq_AL');
 
@@ -237,7 +237,7 @@ export const Forecast2027Page: React.FC<Forecast2027PageProps> = ({ onBack }) =>
     inLanguage: ['sq-AL', 'en'],
     datePublished: '2026-11-18',
     dateModified: '2026-11-18',
-    creativeWorkStatus: 'Draft',
+    creativeWorkStatus: 'Published',
     url: PAGE_URL,
     author: {
       '@type': 'Person',
@@ -255,14 +255,13 @@ export const Forecast2027Page: React.FC<Forecast2027PageProps> = ({ onBack }) =>
     <article className="min-h-screen bg-slate-50 text-slate-800 dark:bg-slate-950 dark:text-slate-100">
       <JsonLd data={structuredData} />
 
-      <div role="status" className="border-b border-amber-400 bg-amber-100 px-4 py-4 text-amber-950 dark:border-amber-700 dark:bg-amber-950/50 dark:text-amber-50">
+      <div className="border-b border-slate-300 bg-slate-100 px-4 py-4 text-[#30384B] dark:border-slate-700 dark:bg-slate-900 dark:text-slate-100">
         <div className="mx-auto max-w-6xl">
-          <p className="text-xs font-bold uppercase tracking-[0.16em]">Statusi / Status</p>
-          <p className="mt-1 text-base font-semibold leading-snug sm:text-lg">
-            Botim paraprak / Draft edition — në pritje të nënshkrimit nga Dr Alban Gj. THIKA dhe rishikimit ligjor të mohimit të përgjegjësisë
+          <p className="text-base font-semibold leading-snug sm:text-lg">
+            Botimi i parë · 18 nëntor 2026 · Nënshkruar nga Dr Alban Gj. THIKA
           </p>
-          <p className="mt-1 text-sm leading-snug text-amber-900/80 dark:text-amber-100/80">
-            Draft edition — awaiting the signature of Dr Alban Gj. THIKA and legal review of the disclaimer.
+          <p className="mt-1 text-sm leading-snug text-slate-600 dark:text-slate-300">
+            First edition · 18 November 2026 · Signed by Dr Alban Gj. THIKA
           </p>
         </div>
       </div>
@@ -305,7 +304,7 @@ export const Forecast2027Page: React.FC<Forecast2027PageProps> = ({ onBack }) =>
             <div>
               <dt className="text-[11px] uppercase tracking-wide text-slate-400">Nënshkruesi / Signatory</dt>
               <dd>Dr Alban Gj. THIKA</dd>
-              <dd className="text-xs text-slate-300">I panënshkruar / Unsigned</dd>
+              <dd className="text-xs text-slate-300">I nënshkruar / Signed</dd>
             </div>
             <div>
               <dt className="text-[11px] uppercase tracking-wide text-slate-400">Botuesit / Publishers</dt>

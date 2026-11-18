@@ -1,5 +1,5 @@
 /**
- * NOVARIC® Forecast 2027 — public draft text.
+ * NOVARIC® Forecast 2027 — first edition, signed 18 November 2026.
  * English strings are the 18 November 2026 paper. Albanian follows them.
  * No figure in this module is estimated. Missing series stay as data gaps.
  * Internal filesystem paths are not included. Jobs Hub counts are labelled
@@ -121,8 +121,8 @@ export const FORECAST_PATH = '/forecast-2027';
 export const FORECAST_PAGE_ID = 'forecast2027' as const;
 
 export const forecastSummary: BiText = t(
-  'Drafti i parë për shqyrtimin pilot të brendshëm. I panënshkruar. Një parashikim i shtëpisë për perspektivën e vitit 2027 për industritë e NOVARIC®, dhe çfarë do të thotë ai për veprimtarinë aktuale dhe të ardhshme të NOVARIC® Sh.A. dhe të NOVARIC® DOO. Prerja e të dhënave: 18 nëntor 2026, ora e Tiranës (UTC+1). Ky tekst nuk është këshillë investimi dhe nuk është publikuar, postuar apo dërguar.',
-  'First draft for internal pilot review. Unsigned. A house forecast of the 2027 outlook for NOVARIC® industries, and what it means for current and prospective operations of NOVARIC® Sh.A. and NOVARIC® DOO. Data cut-off 18 November 2026, Tirana time (UTC+1). This is not investment advice and has not been published, posted or sent.',
+  'Botimi i parë, 18 nëntor 2026, i nënshkruar nga Dr Alban Gj. THIKA. Një parashikim i shtëpisë për perspektivën e vitit 2027 për industritë e NOVARIC®, dhe çfarë do të thotë ai për veprimtarinë aktuale dhe të ardhshme të NOVARIC® Sh.A. dhe të NOVARIC® DOO. Prerja e të dhënave: 18 nëntor 2026, ora e Tiranës (UTC+1). Ky tekst nuk është këshillë investimi.',
+  'First edition, 18 November 2026, signed by Dr Alban Gj. THIKA. A house forecast of the 2027 outlook for NOVARIC® industries, and what it means for current and prospective operations of NOVARIC® Sh.A. and NOVARIC® DOO. Data cut-off 18 November 2026, Tirana time (UTC+1). This is not investment advice.',
 );
 
 export const forecastSections: ForecastSection[] = [
@@ -130,30 +130,30 @@ export const forecastSections: ForecastSection[] = [
     id: 'status',
     heading: t('Statusi dhe kufiri', 'Status and boundary'),
     caption: t(
-      'Draft i përgatitur më 18 nëntor 2026, ora e Tiranës (UTC+1). Nënshkruesi: Dr Alban Gj. THIKA. Statusi: i panënshkruar.',
-      'Draft prepared 18 November 2026, Tirana time (UTC+1). Signatory: Dr Alban Gj. THIKA. Status: unsigned.',
+      'Botimi i parë, 18 nëntor 2026, ora e Tiranës (UTC+1). Nënshkruesi: Dr Alban Gj. THIKA. Rishikimi ligjor i mohimit të përgjegjësisë është i përfunduar.',
+      'First edition, 18 November 2026, Tirana time (UTC+1). Signatory: Dr Alban Gj. THIKA. Legal review of the disclaimer is complete.',
     ),
     blocks: [
       {
         kind: 'callout',
-        tone: 'warning',
+        tone: 'info',
         text: t(
-          'DRAFT vetëm për shqyrtimin pilot të brendshëm. Ky dokument është i panënshkruar. Nuk është botim publik, nuk është kërkim investimi dhe nuk është miratim për të dalë live. Asgjë nuk duhet të publikohet, të postohet apo të dërgohet derisa një këshilltar ligjor të ketë shqyrtuar mohimin e përgjegjësisë (D5) dhe Dr Alban Gj. THIKA të ketë nënshkruar një botim të caktuar.',
-          'DRAFT for internal pilot review only. This paper is unsigned. It is not a public edition, not investment research, and not approval to go live. Nothing should be published, posted or sent until counsel has reviewed the disclaimer (D5) and Dr Alban Gj. THIKA has signed a specific edition.',
+          'Botimi i parë, 18 nëntor 2026. I nënshkruar nga Dr Alban Gj. THIKA. Rishikimi ligjor i mohimit të përgjegjësisë është i përfunduar.',
+          'First edition, 18 November 2026. Signed by Dr Alban Gj. THIKA. Legal review of the disclaimer is complete.',
         ),
       },
       {
         kind: 'prose',
         text: t(
-          'Më 18 nëntor 2026, në orën 09:53 me orën e Tiranës, Dr Alban Gj. THIKA kërkoi që dokumenti i dakorduar i qasjes të shndërrohet në parashikimin e vet të NOVARIC®, të lidhur me industritë e saj dhe me veprimtarinë aktuale dhe të ardhshme. Ky draft e bën këtë. Ai mbulon rekrutimin dhe lëvizshmërinë e punës (Jobs Hub i Shqipërisë dhe i Malit të Zi; NOVARIC® DOO, kodi i aktivitetit 7810), Akademinë, Media House, pasuritë e paluajtshme dhe këshillimin e biznesit, përfshirë shërbimet e inteligjencës artificiale dhe të teknologjisë (Nexus, NVRCX) aty ku është e rëndësishme.',
-          'At 09:53 Tirana time on 18 November 2026, Dr Alban Gj. THIKA asked that the agreed approach paper be converted into NOVARIC®’s own forecast, relevant to its industries and to current and prospective business operations. This draft does that. It covers recruitment and labour mobility (Albania and Montenegro Jobs Hub; NOVARIC® DOO, activity code 7810), the Academy, Media House, real estate, and business consulting including AI and technology services (Nexus, NVRCX) where relevant.',
+          'Më 18 nëntor 2026, në orën 09:53 me orën e Tiranës, Dr Alban Gj. THIKA kërkoi që dokumenti i dakorduar i qasjes të shndërrohet në parashikimin e vet të NOVARIC®, të lidhur me industritë e saj dhe me veprimtarinë aktuale dhe të ardhshme. Ky botim e bën këtë. Ai mbulon rekrutimin dhe lëvizshmërinë e punës (Jobs Hub i Shqipërisë dhe i Malit të Zi; NOVARIC® DOO, kodi i aktivitetit 7810), Akademinë, Media House, pasuritë e paluajtshme dhe këshillimin e biznesit, përfshirë shërbimet e inteligjencës artificiale dhe të teknologjisë (Nexus, NVRCX) aty ku është e rëndësishme.',
+          'At 09:53 Tirana time on 18 November 2026, Dr Alban Gj. THIKA asked that the agreed approach paper be converted into NOVARIC®’s own forecast, relevant to its industries and to current and prospective business operations. This edition does that. It covers recruitment and labour mobility (Albania and Montenegro Jobs Hub; NOVARIC® DOO, activity code 7810), the Academy, Media House, real estate, and business consulting including AI and technology services (Nexus, NVRCX) where relevant.',
         ),
       },
       {
         kind: 'prose',
         text: t(
-          'NOVARIC® Sh.A. dhe NOVARIC® DOO nuk janë këshilltarë të licencuar investimesh. Ky dokument nuk jep këshillë investimi, udhëzim për ndarjen e aktiveve, apo thirrje për blerje ose shitje të letrave me vlerë, valutave, mallrave, fondeve apo pasurisë. Parashikimet e palëve të treta (FMN, Banka Botërore, Komisioni Evropian, qeveria shqiptare) jepen si të tyret. Probabilitetet e skenarëve në këtë draft janë gjykime redaktoriale, jo një model statistikor, dhe mbeten të panënshkruara sipas D9 derisa Dr THIKA të nënshkruajë botimin. Çdo shifër më poshtë ka një burim. Aty ku një shifër nuk u gjet, kjo thuhet hapur.',
-          'NOVARIC® Sh.A. and NOVARIC® DOO are not licensed investment advisers. This paper does not give investment advice, asset-allocation guidance, or buy/sell calls on securities, currencies, commodities, funds or property. Third-party forecasts (IMF, World Bank, European Commission, the Albanian government) are reported as theirs. Scenario probabilities in this draft are editorial judgments, not a statistical model, and remain unsigned under D9 until Dr THIKA signs the edition. Every figure below has a source. Where a figure was not found, that is stated.',
+          'NOVARIC® Sh.A. dhe NOVARIC® DOO nuk janë këshilltarë të licencuar investimesh. Ky dokument nuk jep këshillë investimi, udhëzim për ndarjen e aktiveve, apo thirrje për blerje ose shitje të letrave me vlerë, valutave, mallrave, fondeve apo pasurisë. Parashikimet e palëve të treta (FMN, Banka Botërore, Komisioni Evropian, qeveria shqiptare) jepen si të tyret. Probabilitetet e skenarëve në këtë botim janë gjykime redaktoriale, jo një model statistikor, dhe janë të nënshkruara nga Dr Alban Gj. THIKA. Çdo shifër më poshtë ka një burim. Aty ku një shifër nuk u gjet, kjo thuhet hapur.',
+          'NOVARIC® Sh.A. and NOVARIC® DOO are not licensed investment advisers. This paper does not give investment advice, asset-allocation guidance, or buy/sell calls on securities, currencies, commodities, funds or property. Third-party forecasts (IMF, World Bank, European Commission, the Albanian government) are reported as theirs. Scenario probabilities in this edition are editorial judgments, not a statistical model, and are signed by Dr Alban Gj. THIKA. Every figure below has a source. Where a figure was not found, that is stated.',
         ),
       },
     ],
@@ -162,8 +162,8 @@ export const forecastSections: ForecastSection[] = [
     id: 'house-view',
     heading: t('Qëndrimi i shtëpisë', 'House view'),
     caption: t(
-      'Gjykimi i draftit, i panënshkruar. Prerja e të dhënave: 18 nëntor 2026, ora e Tiranës.',
-      'Draft judgment, unsigned. Data cut-off 18 November 2026, Tirana time.',
+      'Gjykimi i shtëpisë. Prerja e të dhënave: 18 nëntor 2026, ora e Tiranës.',
+      'House judgment. Data cut-off 18 November 2026, Tirana time.',
     ),
     blocks: [
       {
@@ -176,8 +176,8 @@ export const forecastSections: ForecastSection[] = [
       {
         kind: 'prose',
         text: t(
-          'Rasti bazë i draftit është që Shqipëria dhe Mali i Zi vazhdojnë të rriten më shpejt se zona e euros, që mungesat e punës dhe presioni mbi pagat vazhdojnë, dhe që turizmi mbetet një motor kryesor edhe pse rritja e hyrjeve të të huajve në Shqipëri është ngadalësuar në një ritëm më të matur. Rruga e Bashkimit Evropian është një erë mbështetëse strukturore, veçanërisht për Malin e Zi, të cilin Komisioni tani e vendos afër fazës së fundit të anëtarësimit. Rreziku kryesor i jashtëm është goditja energjetike dhe e sigurisë rreth Ngushticës së Hormuzit dhe konflikti më i gjerë në Lindjen e Mesme, të cilin parashikimi i vjeshtës 2026 i Komisionit e trajton tashmë si një fakt të perspektivës evropiane, jo si një ngjarje të skajshme. Zgjedhjet vendore të Shqipërisë më 9 maj 2027 do të rrisin zhurmën politike; ato nuk janë zgjedhje të përgjithshme parlamentare.',
-          'The draft base case is that Albania and Montenegro keep growing faster than the euro area, that labour shortages and wage pressure persist, and that tourism remains a main engine even as the rise in Albanian foreign arrivals has slowed to a more moderate pace. The European Union path is a structural tailwind, especially for Montenegro, which the Commission now places close to the final stage of accession. The principal external risk is the energy and security shock around the Strait of Hormuz and the wider Middle East conflict, which the Commission’s Autumn 2026 forecast already treats as a fact of the European outlook, not a tail event. Albania’s local elections on 9 May 2027 will raise political noise; they are not a parliamentary general election.',
+          'Rasti bazë është që Shqipëria dhe Mali i Zi vazhdojnë të rriten më shpejt se zona e euros, që mungesat e punës dhe presioni mbi pagat vazhdojnë, dhe që turizmi mbetet një motor kryesor edhe pse rritja e hyrjeve të të huajve në Shqipëri është ngadalësuar në një ritëm më të matur. Rruga e Bashkimit Evropian është një erë mbështetëse strukturore, veçanërisht për Malin e Zi, të cilin Komisioni tani e vendos afër fazës së fundit të anëtarësimit. Rreziku kryesor i jashtëm është goditja energjetike dhe e sigurisë rreth Ngushticës së Hormuzit dhe konflikti më i gjerë në Lindjen e Mesme, të cilin parashikimi i vjeshtës 2026 i Komisionit e trajton tashmë si një fakt të perspektivës evropiane, jo si një ngjarje të skajshme. Zgjedhjet vendore të Shqipërisë më 9 maj 2027 do të rrisin zhurmën politike; ato nuk janë zgjedhje të përgjithshme parlamentare.',
+          'The base case is that Albania and Montenegro keep growing faster than the euro area, that labour shortages and wage pressure persist, and that tourism remains a main engine even as the rise in Albanian foreign arrivals has slowed to a more moderate pace. The European Union path is a structural tailwind, especially for Montenegro, which the Commission now places close to the final stage of accession. The principal external risk is the energy and security shock around the Strait of Hormuz and the wider Middle East conflict, which the Commission’s Autumn 2026 forecast already treats as a fact of the European outlook, not a tail event. Albania’s local elections on 9 May 2027 will raise political noise; they are not a parliamentary general election.',
         ),
       },
       {
@@ -290,8 +290,8 @@ export const forecastSections: ForecastSection[] = [
       {
         kind: 'prose',
         text: t(
-          'Intervali zyrtar i rritjes për vitin 2027 është pra mesi i 3% për Shqipërinë nëse ndiqen FMN, Komisioni dhe Banka Botërore, dhe rreth 3% për Malin e Zi. Buxheti draft 2027 i qeverisë shqiptare, i paraqitur nga Ministri i Financave Petrit MALAJ më 29 tetor 2026, është më optimist, në 4.0% si për 2026 ashtu edhe për 2027. Ky draft i përdor agjencitë ndërkombëtare si interval referencë dhe e trajton shifrën 4.0% si supozimin e vet të planifikimit të qeverisë, jo si parashikim të shtëpisë.',
-          'The official growth range for 2027 is therefore mid-3% for Albania if one follows the IMF, the Commission and the World Bank, and about 3% for Montenegro. The Albanian government’s draft 2027 budget, presented by Finance Minister Petrit MALAJ on 29 October 2026, is more optimistic, at 4.0% for both 2026 and 2027. This draft uses the international agencies as the reference range and treats the 4.0% figure as the government’s own planning assumption, not as a house forecast.',
+          'Intervali zyrtar i rritjes për vitin 2027 është pra mesi i 3% për Shqipërinë nëse ndiqen FMN, Komisioni dhe Banka Botërore, dhe rreth 3% për Malin e Zi. Buxheti draft 2027 i qeverisë shqiptare, i paraqitur nga Ministri i Financave Petrit MALAJ më 29 tetor 2026, është më optimist, në 4.0% si për 2026 ashtu edhe për 2027. Ky botim i përdor agjencitë ndërkombëtare si interval referencë dhe e trajton shifrën 4.0% si supozimin e vet të planifikimit të qeverisë, jo si parashikim të shtëpisë.',
+          'The official growth range for 2027 is therefore mid-3% for Albania if one follows the IMF, the Commission and the World Bank, and about 3% for Montenegro. The Albanian government’s draft 2027 budget, presented by Finance Minister Petrit MALAJ on 29 October 2026, is more optimistic, at 4.0% for both 2026 and 2027. This edition uses the international agencies as the reference range and treats the 4.0% figure as the government’s own planning assumption, not as a house forecast.',
         ),
       },
       {
@@ -309,7 +309,7 @@ export const forecastSections: ForecastSection[] = [
           ],
           [
             t('Inflacioni, Mali i Zi', 'Inflation, Montenegro'),
-            t('FMN WEO: 3.5% në 2026, duke zbritur në 3.3% në 2027. Banka Botërore: 3.9% në 2026, duke zbritur në 2.5% deri në 2028. Një publikim zyrtar i MONSTAT për tetorin 2026 nuk u hap në këtë draft.', 'IMF WEO: 3.5% in 2026, easing to 3.3% in 2027. World Bank: 3.9% in 2026, easing to 2.5% by 2028. An official October 2026 MONSTAT print was not opened in this draft.'),
+            t('FMN WEO: 3.5% në 2026, duke zbritur në 3.3% në 2027. Banka Botërore: 3.9% në 2026, duke zbritur në 2.5% deri në 2028. Një publikim zyrtar i MONSTAT për tetorin 2026 nuk u hap në këtë botim.', 'IMF WEO: 3.5% in 2026, easing to 3.3% in 2027. World Bank: 3.9% in 2026, easing to 2.5% by 2028. An official October 2026 MONSTAT print was not opened in this edition.'),
             t('MINA duke cituar FMN WEO, 13 tetor 2026; fletëfakti i Bankës Botërore për Malin e Zi, vjeshta 2026.', 'MINA citing IMF WEO, 13 Oct 2026; World Bank Montenegro factsheet, Fall 2026.'),
           ],
           [
@@ -329,7 +329,7 @@ export const forecastSections: ForecastSection[] = [
           ],
           [
             t('Leku dhe euro', 'Lek and euro'),
-            t('Kursi zyrtar i referencës i Bankës së Shqipërisë më 17 nëntor 2026 në orën 12:14: EUR 90.48 lekë; USD 82.37 lekë. Guvernatori tha se vlerësimi i lekut e ka zbutur pjesërisht inflacionin e importuar. Një seri afatgjatë vlerësimi nuk u përpilua në këtë draft.', 'Official Bank of Albania reference rate on 17 November 2026 at 12:14: EUR 90.48 lek; USD 82.37 lek. The Governor said lek appreciation has partly cushioned imported inflation. A long-run appreciation series was not compiled in this draft.'),
+            t('Kursi zyrtar i referencës i Bankës së Shqipërisë më 17 nëntor 2026 në orën 12:14: EUR 90.48 lekë; USD 82.37 lekë. Guvernatori tha se vlerësimi i lekut e ka zbutur pjesërisht inflacionin e importuar. Një seri afatgjatë vlerësimi nuk u përpilua në këtë botim.', 'Official Bank of Albania reference rate on 17 November 2026 at 12:14: EUR 90.48 lek; USD 82.37 lek. The Governor said lek appreciation has partly cushioned imported inflation. A long-run appreciation series was not compiled in this edition.'),
             t('Faqja zyrtare e kursit të këmbimit e Bankës së Shqipërisë; Guvernatori SEJKO, 3 nëntor 2026.', 'Bank of Albania official exchange-rate page; Governor SEJKO, 3 Nov 2026.'),
           ],
           [
@@ -344,7 +344,7 @@ export const forecastSections: ForecastSection[] = [
           ],
           [
             t('Turizmi, Mali i Zi', 'Tourism, Montenegro'),
-            t('Banka Botërore thotë se perspektiva e 2026 mbështetet nga një sezon i fortë turizmi. Një publikim kumultativ i MONSTAT për ardhjet e 2026 nuk u hap në këtë draft (nuk u gjet këtu).', 'The World Bank says the 2026 outlook is supported by a strong tourism season. A MONSTAT cumulative 2026 arrivals print was not opened in this draft (not found here).'),
+            t('Banka Botërore thotë se perspektiva e 2026 mbështetet nga një sezon i fortë turizmi. Një publikim kumultativ i MONSTAT për ardhjet e 2026 nuk u hap në këtë botim (nuk u gjet këtu).', 'The World Bank says the 2026 outlook is supported by a strong tourism season. A MONSTAT cumulative 2026 arrivals print was not opened in this edition (not found here).'),
             t('Fletëfakti i Bankës Botërore për Malin e Zi, vjeshta 2026.', 'World Bank Montenegro factsheet, Fall 2026.'),
           ],
           [
@@ -359,7 +359,7 @@ export const forecastSections: ForecastSection[] = [
           ],
           [
             t('Financat publike, Mali i Zi', 'Public finances, Montenegro'),
-            t('Banka Botërore: deficiti i llogarisë korrente 20.1% e PBB në 2026; borxhi publik dhe i garantuar publikisht i parashikuar në 68.6% e PBB në 2026. FMN: deficiti i llogarisë korrente 19.7% e PBB në 2026 dhe 19% në 2027. Fletëfakti i Bankës Botërore u mbyll para masave të pagave «Euro Model» të qeverisë dhe nuk i vlerëson ato. Një total i plotë i buxhetit 2027 nuk u gjet në këtë draft; monitorimi i brendshëm më 18 nëntor vuri në dukje se buxheti e kishte humbur afatin e 15 nëntorit.', 'World Bank: current-account deficit 20.1% of GDP in 2026; public and publicly guaranteed debt projected at 68.6% of GDP in 2026. IMF: current-account deficit 19.7% of GDP in 2026 and 19% in 2027. The World Bank factsheet was finalised before the government’s ‘Euro Model’ wage measures and does not assess them. A full 2027 budget total was not found in this draft; internal monitoring on 18 November noted that the budget had missed a 15 November deadline.'),
+            t('Banka Botërore: deficiti i llogarisë korrente 20.1% e PBB në 2026; borxhi publik dhe i garantuar publikisht i parashikuar në 68.6% e PBB në 2026. FMN: deficiti i llogarisë korrente 19.7% e PBB në 2026 dhe 19% në 2027. Fletëfakti i Bankës Botërore u mbyll para masave të pagave «Euro Model» të qeverisë dhe nuk i vlerëson ato. Një total i plotë i buxhetit 2027 nuk u gjet në këtë botim; monitorimi i brendshëm më 18 nëntor vuri në dukje se buxheti e kishte humbur afatin e 15 nëntorit.', 'World Bank: current-account deficit 20.1% of GDP in 2026; public and publicly guaranteed debt projected at 68.6% of GDP in 2026. IMF: current-account deficit 19.7% of GDP in 2026 and 19% in 2027. The World Bank factsheet was finalised before the government’s ‘Euro Model’ wage measures and does not assess them. A full 2027 budget total was not found in this edition; internal monitoring on 18 November noted that the budget had missed a 15 November deadline.'),
             t('Fletëfakti i Bankës Botërore për Malin e Zi; MINA duke cituar FMN WEO; shënim i brendshëm i arbitrazhit të Jobs Hub, 18 nëntor 2026, ora 08:50 me orën e Tiranës, i etiketuar si të dhëna të brendshme të NOVARIC®.', 'World Bank Montenegro factsheet; MINA citing IMF WEO; internal Jobs Hub arbitrage note, 18 Nov 2026, 08:50 Tirana time, labelled internal.'),
           ],
           [
@@ -374,7 +374,7 @@ export const forecastSections: ForecastSection[] = [
           ],
           [
             t('Rreziku gjeopolitik dhe energjetik', 'Geopolitical and energy risk'),
-            t('Parashikimi i vjeshtës 2026 i Komisionit (17 nëntor) thotë se, gati tetë muaj pas fillimit të konfliktit në Lindjen e Mesme, flukset e energjisë përmes Ngushticës së Hormuzit mbeten rëndë të ndërprera. Brent e kaloi 100 dollarë në tetor; çmimet e naftës diesel u dyfishuan nga viti në vit; gazi TTF u tregtua mbi 95 euro/MWh në fund të tetorit, më shumë se trefishi i nivelit të fundit të shkurtit. BQE, më 29 tetor, i mbajti normat por tha se çmimet e energjisë kanë vazhduar të rriten, duke paraqitur rreziqe në rritje për inflacionin dhe rreziqe në rënie për rritjen. Një përditësim i veçantë i sasishëm i 2026 mbi luftën në Ukrainë nuk u përpilua në këtë draft; ajo mbetet një sfond strukturor evropian i sigurisë, i energjisë dhe i punës.', 'The Commission’s Autumn 2026 forecast (17 November) states that, almost eight months after the start of the conflict in the Middle East, energy flows through the Strait of Hormuz remain severely disrupted. Brent exceeded 100 dollars in October; diesel prices doubled year on year; TTF gas traded above €95/MWh in late October, more than three times the late-February level. The ECB, on 29 October, kept rates on hold but said energy prices have continued to rise, posing upside risks to inflation and downside risks to growth. A separate quantified 2026 update on the war in Ukraine was not compiled in this draft; it remains a structural European security, energy and labour backdrop.'),
+            t('Parashikimi i vjeshtës 2026 i Komisionit (17 nëntor) thotë se, gati tetë muaj pas fillimit të konfliktit në Lindjen e Mesme, flukset e energjisë përmes Ngushticës së Hormuzit mbeten rëndë të ndërprera. Brent e kaloi 100 dollarë në tetor; çmimet e naftës diesel u dyfishuan nga viti në vit; gazi TTF u tregtua mbi 95 euro/MWh në fund të tetorit, më shumë se trefishi i nivelit të fundit të shkurtit. BQE, më 29 tetor, i mbajti normat por tha se çmimet e energjisë kanë vazhduar të rriten, duke paraqitur rreziqe në rritje për inflacionin dhe rreziqe në rënie për rritjen. Një përditësim i veçantë i sasishëm i 2026 mbi luftën në Ukrainë nuk u përpilua në këtë botim; ajo mbetet një sfond strukturor evropian i sigurisë, i energjisë dhe i punës.', 'The Commission’s Autumn 2026 forecast (17 November) states that, almost eight months after the start of the conflict in the Middle East, energy flows through the Strait of Hormuz remain severely disrupted. Brent exceeded 100 dollars in October; diesel prices doubled year on year; TTF gas traded above €95/MWh in late October, more than three times the late-February level. The ECB, on 29 October, kept rates on hold but said energy prices have continued to rise, posing upside risks to inflation and downside risks to growth. A separate quantified 2026 update on the war in Ukraine was not compiled in this edition; it remains a structural European security, energy and labour backdrop.'),
             t('Parashikimi i vjeshtës 2026 i KE, 17 nëntor 2026; BQE, 29 tetor 2026.', 'EC Autumn 2026 forecast, 17 Nov 2026; ECB, 29 Oct 2026.'),
           ],
         ],

@@ -60,7 +60,7 @@ describe('NOVARIC® Forecast 2027', () => {
     assert.equal(FORECAST_PATH, '/forecast-2027');
   });
 
-  it('drops internal paths and keeps the public draft boundary', () => {
+  it('drops internal paths and shows the signed first edition', () => {
     const bundle = `${text}\n${page}\n${sidebar}\n${headerMenu}`;
     assert.equal(bundle.includes('/workspace/'), false);
     assert.equal(bundle.includes('arbitrage-20261118'), false);
@@ -68,7 +68,14 @@ describe('NOVARIC® Forecast 2027', () => {
     assert.equal(bundle.includes('grok/canvas'), false);
     assert.equal(text.includes('PARAGON'), false);
     assert.equal(text.includes('MARAGON'), false);
-    assert.ok(page.includes('Botim paraprak / Draft edition — në pritje të nënshkrimit nga Dr Alban Gj. THIKA dhe rishikimit ligjor të mohimit të përgjegjësisë'));
+    assert.ok(page.includes('Botimi i parë · 18 nëntor 2026 · Nënshkruar nga Dr Alban Gj. THIKA'));
+    assert.ok(page.includes('First edition · 18 November 2026 · Signed by Dr Alban Gj. THIKA'));
+    assert.equal(page.includes('Botim paraprak'), false);
+    assert.equal(page.includes('në pritje të nënshkrimit'), false);
+    assert.equal(text.includes('pilot review only'), false);
+    assert.equal(text.includes('DRAFT for internal'), false);
+    assert.ok(text.includes('in an unsigned text'));
+    assert.equal(DATA_PENDING_LABEL, 'Pa të dhëna / Data pending');
     assert.ok(page.includes('This is not investment advice.'));
     assert.ok(page.includes('Ky dokument nuk është këshillë investimi.'));
     assert.ok(page.includes('DATA_PENDING_LABEL'));

@@ -210,8 +210,8 @@ export const App: React.FC = () => {
         pageDescription = 'Authoritative operational governance standard for artificial intelligence systems, LLMs, and autonomous agents (OpenClaw) under EU AI Act Regulation (EU) 2024/1689 and GDPR.';
         break;
       case 'forecast2027':
-        pageTitle = 'NOVARIC® Forecast 2027 | Parashikimi 2027 | Botim paraprak';
-        pageDescription = 'Botim paraprak i NOVARIC® Forecast 2027. Draft i panënshkruar, në pritje të nënshkrimit nga Dr Alban Gj. THIKA dhe të rishikimit ligjor. Nuk është këshillë investimi.';
+        pageTitle = 'NOVARIC® Forecast 2027 | Parashikimi 2027 | Botimi i parë';
+        pageDescription = 'Botimi i parë i NOVARIC® Forecast 2027, 18 nëntor 2026, i nënshkruar nga Dr Alban Gj. THIKA. Nuk është këshillë investimi.';
         break;
       case 'trademarkCertificate':
         pageTitle = 'Regjistrimet Ligjore & Certifikata Zyrtare | NOVARIC®';

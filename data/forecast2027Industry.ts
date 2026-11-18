@@ -88,8 +88,8 @@ export const forecastIndustrySections: ForecastSection[] = [
       {
         kind: 'prose',
         text: t(
-          'Pasojat për veprimtarinë aktuale. Së pari, cilësia e inventarit të trajtohet si rrezik operativ i 2027: një qendër që tregon shpallje të ndenjura të Maltës, ose që lidh vetëm 1.2% të vendeve të lira me një çështje, nuk do ta shndërrojë trafikun në vendosje. Së dyti, Shqipëria është tani inventari më i madh i brendshëm dhe është tregu i licencuar i shtëpisë — duhet të stafoset në përputhje me këtë. Së treti, Mali i Zi është i ndjeshëm ndaj kohës: monitorimi i brendshëm më 18 nëntor gjeti se kuota e punëtorëve të huaj për 2027 nuk ishte miratuar ende dhe se afati ligjor është 30 nëntor 2026; ky konstatim duhet të verifikohet kundrejt Fletës Zyrtare para çdo mesazhi për klientin, dhe nevojat e punëdhënësve duhet të përgatiten, jo të premtohen. Së katërti, një seri zyrtare e vëllimit të lejeve të punës për të huajt për 2026/2027 për Shqipërinë nuk u gjet në këtë draft; mos u shpikni një kuotë apo një numër lejesh.',
-          'Implications for current operations. First, treat inventory quality as a 2027 operating risk: a hub that shows stale Malta listings, or that links only 1.2% of vacancies to a case, will not convert traffic into placements. Second, Albania is now the largest internal inventory and is the licensed home market — it should be staffed accordingly. Third, Montenegro is time-sensitive: internal monitoring on 18 November found that the 2027 foreign-worker quota had not yet been adopted and that the legal deadline is 30 November 2026; that finding should be verified against the Official Gazette before any client message, and employer needs should be prepared, not promised. Fourth, an official 2026/2027 foreign-work-permit volume series for Albania was not found in this draft; do not invent a quota or a permit count.',
+          'Pasojat për veprimtarinë aktuale. Së pari, cilësia e inventarit të trajtohet si rrezik operativ i 2027: një qendër që tregon shpallje të ndenjura të Maltës, ose që lidh vetëm 1.2% të vendeve të lira me një çështje, nuk do ta shndërrojë trafikun në vendosje. Së dyti, Shqipëria është tani inventari më i madh i brendshëm dhe është tregu i licencuar i shtëpisë — duhet të stafoset në përputhje me këtë. Së treti, Mali i Zi është i ndjeshëm ndaj kohës: monitorimi i brendshëm më 18 nëntor gjeti se kuota e punëtorëve të huaj për 2027 nuk ishte miratuar ende dhe se afati ligjor është 30 nëntor 2026; ky konstatim duhet të verifikohet kundrejt Fletës Zyrtare para çdo mesazhi për klientin, dhe nevojat e punëdhënësve duhet të përgatiten, jo të premtohen. Së katërti, një seri zyrtare e vëllimit të lejeve të punës për të huajt për 2026/2027 për Shqipërinë nuk u gjet në këtë botim; mos u shpikni një kuotë apo një numër lejesh.',
+          'Implications for current operations. First, treat inventory quality as a 2027 operating risk: a hub that shows stale Malta listings, or that links only 1.2% of vacancies to a case, will not convert traffic into placements. Second, Albania is now the largest internal inventory and is the licensed home market — it should be staffed accordingly. Third, Montenegro is time-sensitive: internal monitoring on 18 November found that the 2027 foreign-worker quota had not yet been adopted and that the legal deadline is 30 November 2026; that finding should be verified against the Official Gazette before any client message, and employer needs should be prepared, not promised. Fourth, an official 2026/2027 foreign-work-permit volume series for Albania was not found in this edition; do not invent a quota or a permit count.',
         ),
       },
       {
@@ -105,15 +105,15 @@ export const forecastIndustrySections: ForecastSection[] = [
     id: 'b2',
     heading: t('B2. Akademia dhe formimi profesional', 'B2. Academy and vocational training'),
     caption: t(
-      'NOVARIC® Academy. Regjistrimi i brendshëm nuk u verifikua në kuti në këtë draft.',
-      'NOVARIC® Academy. Internal enrolment was not verified on the box in this draft.',
+      'NOVARIC® Academy. Regjistrimi i brendshëm nuk u verifikua në kuti në këtë botim.',
+      'NOVARIC® Academy. Internal enrolment was not verified on the box in this edition.',
     ),
     blocks: [
       {
         kind: 'prose',
         text: t(
-          'Perspektiva dhe shtytësit. Pagat zyrtare në rritje, një treg pune i shtrënguar dhe një përzierje rritjeje e turizmit dhe e ndërtimit të gjitha tregojnë kërkesë për formim profesional të shkurtër, të lidhur me punën, në 2027, veçanërisht në ndërtim, hoteleri, shitje me pakicë dhe zeje të afërta. Buxheti draft i qeverisë e lidh tashmë të ardhurën më të lartë nga kontributet shoqërore me rritjen e pagave dhe me formalizimin. Anëtarësimi në BE, nëse qëndron në rrugën e Komisionit për 2027 për Shqipërinë dhe në rrugën e fazës së fundit për Malin e Zi, duhet gjithashtu të rrisë kërkesën për standarde, gjuhë dhe aftësi të lidhura me përputhshmërinë. Çfarë nuk ka ky draft është një seri zyrtare kombëtare e regjistrimit në AFP për 2026, ose një numër i verifikuar i Akademisë; ato janë boshllëqe të dhënash, jo zero.',
-          'Outlook and drivers. Rising official wages, a tight labour market and a tourism-and-construction growth mix all point to demand for short, job-linked vocational training in 2027, especially in construction, hospitality, retail and related trades. The government’s draft budget already ties higher social-contribution revenue to rising wages and formalisation. EU accession, if it stays on the Commission’s 2027 path for Albania and the end-stage path for Montenegro, should also raise demand for standards, languages and compliance-related skills. What this draft does not have is an official national VET enrolment series for 2026, or a verified Academy headcount; those are data gaps, not zeros.',
+          'Perspektiva dhe shtytësit. Pagat zyrtare në rritje, një treg pune i shtrënguar dhe një përzierje rritjeje e turizmit dhe e ndërtimit të gjitha tregojnë kërkesë për formim profesional të shkurtër, të lidhur me punën, në 2027, veçanërisht në ndërtim, hoteleri, shitje me pakicë dhe zeje të afërta. Buxheti draft i qeverisë e lidh tashmë të ardhurën më të lartë nga kontributet shoqërore me rritjen e pagave dhe me formalizimin. Anëtarësimi në BE, nëse qëndron në rrugën e Komisionit për 2027 për Shqipërinë dhe në rrugën e fazës së fundit për Malin e Zi, duhet gjithashtu të rrisë kërkesën për standarde, gjuhë dhe aftësi të lidhura me përputhshmërinë. Çfarë nuk ka ky botim është një seri zyrtare kombëtare e regjistrimit në AFP për 2026, ose një numër i verifikuar i Akademisë; ato janë boshllëqe të dhënash, jo zero.',
+          'Outlook and drivers. Rising official wages, a tight labour market and a tourism-and-construction growth mix all point to demand for short, job-linked vocational training in 2027, especially in construction, hospitality, retail and related trades. The government’s draft budget already ties higher social-contribution revenue to rising wages and formalisation. EU accession, if it stays on the Commission’s 2027 path for Albania and the end-stage path for Montenegro, should also raise demand for standards, languages and compliance-related skills. What this edition does not have is an official national VET enrolment series for 2026, or a verified Academy headcount; those are data gaps, not zeros.',
         ),
       },
       {
@@ -147,7 +147,7 @@ export const forecastIndustrySections: ForecastSection[] = [
         columns: leadColumns,
         rows: [
           [
-            t('Paga dhe punësimi i INSTAT sipas sektorit; veprimtaria e turizmit dhe e ndërtimit; çdo publikim zyrtar i AFP ose i të nxënit gjatë gjithë jetës (nuk u gjet në këtë draft); regjistrimi, përfundimi dhe vendosja e Akademisë sapo të verifikohen brenda.', 'INSTAT wage and employment by sector; tourism and construction activity; any official VET or lifelong-learning release (not found in this draft); Academy enrolment, completion and placement once verified internally.'),
+            t('Paga dhe punësimi i INSTAT sipas sektorit; veprimtaria e turizmit dhe e ndërtimit; çdo publikim zyrtar i AFP ose i të nxënit gjatë gjithë jetës (nuk u gjet në këtë botim); regjistrimi, përfundimi dhe vendosja e Akademisë sapo të verifikohen brenda.', 'INSTAT wage and employment by sector; tourism and construction activity; any official VET or lifelong-learning release (not found in this edition); Academy enrolment, completion and placement once verified internally.'),
             t('Kurse të shkurtra të ndërtuara rreth profesioneve me mungesë të dokumentuara; paketa të përbashkëta Jobs Hub plus Akademi; ofrim në Mal të Zi nëse kërkesa konfirmohet; mikro-kredenciale të lidhura me nevojat e punëdhënësit.', 'Short courses built around documented shortage occupations; joint Jobs Hub plus Academy packages; Montenegro delivery if demand is confirmed; micro-credentials tied to employer needs.'),
             t('Publikimi i shkallëve të vendosjes pa burim; dyshime akreditimi ose cilësie; numra të brendshëm që mungojnë; ofrues konkurrues me kosto të ulët.', 'Publishing unsourced placement rates; accreditation or quality doubts; missing internal numbers; competing low-cost providers.'),
           ],
@@ -173,8 +173,8 @@ export const forecastIndustrySections: ForecastSection[] = [
       {
         kind: 'prose',
         text: t(
-          'Perspektiva dhe shtytësit. Viti 2027 do të jetë një vit i rëndë lajmesh në rajonin e shtëpisë së NOVARIC®: zgjedhjet vendore të Shqipërisë më 9 maj, lëvizja e mundshme e Malit të Zi përmes kapitujve të fundit të anëtarësimit, objektivi i deklaruar i negociatave të Shqipërisë për 2027, dhe një histori evropiane energjie dhe sigurie që tashmë sundon perspektivat e Komisionit dhe të BQE. Kjo mbështet kërkesën për lajme të kujdesshme, dygjuhëshe, me burim të cituar. Çfarë nuk mund të bëjë ky draft është të masë tregun e reklamës shqiptar ose malazez: një shifër zyrtare ose e burimit të mirë e shpenzimit reklamues të 2026 nuk u gjet. Shpërndarja në platforma (Instagram @novaric.media dhe, më vonë, kanale të tjera të dakorduara) mbetet një mjet shtrirjeje, jo një zëvendësues i faqes së internetit si shtëpia kanonike.',
-          'Outlook and drivers. 2027 will be a heavy news year in NOVARIC®’s home region: Albania’s local elections on 9 May, Montenegro’s possible movement through the last accession chapters, Albania’s stated 2027 negotiation objective, and a European energy and security story that already dominates the Commission and ECB outlooks. That supports demand for careful, bilingual, source-cited news. What this draft cannot do is size the Albanian or Montenegrin advertising market: an official or well-sourced 2026 ad-spend figure was not found. Platform distribution (Instagram @novaric.media and, later, other agreed channels) remains a reach tool, not a substitute for the website as the canonical home.',
+          'Perspektiva dhe shtytësit. Viti 2027 do të jetë një vit i rëndë lajmesh në rajonin e shtëpisë së NOVARIC®: zgjedhjet vendore të Shqipërisë më 9 maj, lëvizja e mundshme e Malit të Zi përmes kapitujve të fundit të anëtarësimit, objektivi i deklaruar i negociatave të Shqipërisë për 2027, dhe një histori evropiane energjie dhe sigurie që tashmë sundon perspektivat e Komisionit dhe të BQE. Kjo mbështet kërkesën për lajme të kujdesshme, dygjuhëshe, me burim të cituar. Çfarë nuk mund të bëjë ky botim është të masë tregun e reklamës shqiptar ose malazez: një shifër zyrtare ose e burimit të mirë e shpenzimit reklamues të 2026 nuk u gjet. Shpërndarja në platforma (Instagram @novaric.media dhe, më vonë, kanale të tjera të dakorduara) mbetet një mjet shtrirjeje, jo një zëvendësues i faqes së internetit si shtëpia kanonike.',
+          'Outlook and drivers. 2027 will be a heavy news year in NOVARIC®’s home region: Albania’s local elections on 9 May, Montenegro’s possible movement through the last accession chapters, Albania’s stated 2027 negotiation objective, and a European energy and security story that already dominates the Commission and ECB outlooks. That supports demand for careful, bilingual, source-cited news. What this edition cannot do is size the Albanian or Montenegrin advertising market: an official or well-sourced 2026 ad-spend figure was not found. Platform distribution (Instagram @novaric.media and, later, other agreed channels) remains a reach tool, not a substitute for the website as the canonical home.',
         ),
       },
       {
@@ -217,8 +217,8 @@ export const forecastIndustrySections: ForecastSection[] = [
       {
         kind: 'prose',
         text: t(
-          'Pasojat për veprimtarinë aktuale. Forecast të mbahet i brendshëm derisa këshilltari dhe Dr THIKA ta nënshkruajnë. Përdorni tubacionin ekzistues MONITOR të Redaktorit të Lajmeve për lajmet e përditshme, dhe etiketoni vetëm ato zëra që e lëvizin materialisht një temë të Forecast, secili ende duke pasur nevojë për miratim ndërsa D6 është pezull. Qëndroni të paanshëm para 9 majit 2027. Linjat e ardhshme përfshijnë familjen publike të Forecast tashmë të dakorduar, një buletin, dhe LinkedIn e X sapo llogaritë dhe bazat ligjore të jenë gati — jo më parë.',
-          'Implications for current operations. Keep the Forecast internal until counsel and Dr THIKA sign it. Use the existing News Editor MONITOR pipeline for daily news, and tag only those items that materially move a Forecast theme, each still needing approval while D6 is pending. Stay impartial before 9 May 2027. Prospective lines include the public Forecast family already agreed, a newsletter, and LinkedIn and X once accounts and legal bases are ready — not before.',
+          'Pasojat për veprimtarinë aktuale. Botimi është nënshkruar nga Dr Alban Gj. THIKA dhe rishikimi ligjor i mohimit të përgjegjësisë është i përfunduar. Përdorni tubacionin ekzistues MONITOR të Redaktorit të Lajmeve për lajmet e përditshme, dhe etiketoni vetëm ato zëra që e lëvizin materialisht një temë të Forecast, secili ende duke pasur nevojë për miratim ndërsa D6 është pezull. Qëndroni të paanshëm para 9 majit 2027. Linjat e ardhshme përfshijnë familjen publike të Forecast tashmë të dakorduar, një buletin, dhe LinkedIn e X sapo llogaritë dhe bazat ligjore të jenë gati — jo më parë.',
+          'Implications for current operations. The edition is signed by Dr Alban Gj. THIKA and legal review of the disclaimer is complete. Use the existing News Editor MONITOR pipeline for daily news, and tag only those items that materially move a Forecast theme, each still needing approval while D6 is pending. Stay impartial before 9 May 2027. Prospective lines include the public Forecast family already agreed, a newsletter, and LinkedIn and X once accounts and legal bases are ready — not before.',
         ),
       },
     ],
@@ -234,8 +234,8 @@ export const forecastIndustrySections: ForecastSection[] = [
       {
         kind: 'prose',
         text: t(
-          'Perspektiva dhe shtytësit. Ndërtimi dhe shërbimet kanë qenë kontribuuesit kryesorë të rritjes shqiptare në 2026, dhe turizmi mbetet një motor zyrtar i deklaruar. Rritja e çmimeve të banesave, megjithatë, është ftohur tashmë. CNA, duke raportuar anketën e banimit të Bankës së Shqipërisë për gjysmën e parë të 2026 (Raporti i Stabilitetit Financiar i asaj gjysme viti u botua më 23 shtator 2026), tha se indeksi Fisher i çmimeve të banesave ishte i pandryshuar nga gjysma e dytë e 2025 dhe në rritje 10% nga viti në vit, pas 28% në G2 2025 dhe 41.7% në G1 2025. Për Tiranën, i njëjti raport siç u përcoll nga CNA tha se çmimet ishin në rritje 10% ndaj gjysmës së mëparshme të vitit dhe 9% nga viti në vit. Koha mesatare e shitjes u zgjat në 9.9 muaj në shkallë kombëtare dhe 9.7 muaj në Tiranë, ndërsa kohët e shitjes në bregdet u shkurtuan në 8.2 muaj. Rreth 20% e shitjeve të banesave ishin për jorezidentë, nga të cilët rreth 85% ishin shtetas të BE. Guvernatori SEJKO tha më vonë se inflacioni i qirave u ngadalësua në tremujorin e tretë, gjë që ndihmoi të tërhiqej poshtë inflacioni kryesor në shtator. Ky draft nuk miraton një shteg çmimi për 2027 dhe nuk këshillon blerjen ose shitjen e pasurisë.',
-          'Outlook and drivers. Construction and services have been primary contributors to Albanian growth in 2026, and tourism remains a stated official engine. House-price growth, however, has already cooled. CNA, reporting the Bank of Albania’s residential survey for the first half of 2026 (the Financial Stability Report of that half-year was published on 23 September 2026), said the Fisher house-price index was unchanged from the second half of 2025 and up 10% year on year, after 28% in H2 2025 and 41.7% in H1 2025. For Tirana, the same report as relayed by CNA said prices were up 10% on the previous half-year and 9% year on year. Average time to sell lengthened to 9.9 months nationally and 9.7 months in Tirana, while coastal selling times shortened to 8.2 months. About 20% of housing sales were to non-residents, of whom about 85% were EU citizens. Governor SEJKO later said rental inflation slowed in the third quarter, which helped pull headline inflation down in September. This draft does not adopt a 2027 price path and does not advise buying or selling property.',
+          'Perspektiva dhe shtytësit. Ndërtimi dhe shërbimet kanë qenë kontribuuesit kryesorë të rritjes shqiptare në 2026, dhe turizmi mbetet një motor zyrtar i deklaruar. Rritja e çmimeve të banesave, megjithatë, është ftohur tashmë. CNA, duke raportuar anketën e banimit të Bankës së Shqipërisë për gjysmën e parë të 2026 (Raporti i Stabilitetit Financiar i asaj gjysme viti u botua më 23 shtator 2026), tha se indeksi Fisher i çmimeve të banesave ishte i pandryshuar nga gjysma e dytë e 2025 dhe në rritje 10% nga viti në vit, pas 28% në G2 2025 dhe 41.7% në G1 2025. Për Tiranën, i njëjti raport siç u përcoll nga CNA tha se çmimet ishin në rritje 10% ndaj gjysmës së mëparshme të vitit dhe 9% nga viti në vit. Koha mesatare e shitjes u zgjat në 9.9 muaj në shkallë kombëtare dhe 9.7 muaj në Tiranë, ndërsa kohët e shitjes në bregdet u shkurtuan në 8.2 muaj. Rreth 20% e shitjeve të banesave ishin për jorezidentë, nga të cilët rreth 85% ishin shtetas të BE. Guvernatori SEJKO tha më vonë se inflacioni i qirave u ngadalësua në tremujorin e tretë, gjë që ndihmoi të tërhiqej poshtë inflacioni kryesor në shtator. Ky botim nuk miraton një shteg çmimi për 2027 dhe nuk këshillon blerjen ose shitjen e pasurisë.',
+          'Outlook and drivers. Construction and services have been primary contributors to Albanian growth in 2026, and tourism remains a stated official engine. House-price growth, however, has already cooled. CNA, reporting the Bank of Albania’s residential survey for the first half of 2026 (the Financial Stability Report of that half-year was published on 23 September 2026), said the Fisher house-price index was unchanged from the second half of 2025 and up 10% year on year, after 28% in H2 2025 and 41.7% in H1 2025. For Tirana, the same report as relayed by CNA said prices were up 10% on the previous half-year and 9% year on year. Average time to sell lengthened to 9.9 months nationally and 9.7 months in Tirana, while coastal selling times shortened to 8.2 months. About 20% of housing sales were to non-residents, of whom about 85% were EU citizens. Governor SEJKO later said rental inflation slowed in the third quarter, which helped pull headline inflation down in September. This edition does not adopt a 2027 price path and does not advise buying or selling property.',
         ),
       },
       {
@@ -269,7 +269,7 @@ export const forecastIndustrySections: ForecastSection[] = [
         columns: leadColumns,
         rows: [
           [
-            t('Anketa e çmimeve të banesave dhe e agjentëve e Bankës së Shqipërisë; ndërtimi dhe turizmi i INSTAT; normat e BQE dhe të Bankës së Shqipërisë; pesha e jorezidentëve në transaksione; publikimet e turizmit dhe të ndërtimit të Malit të Zi (faqja e MONSTAT nuk u hap në këtë draft).', 'Bank of Albania house-price and agents’ survey; INSTAT construction and tourism; ECB and Bank of Albania rates; non-resident share of transactions; Montenegro tourism and construction prints (MONSTAT page not opened in this draft).'),
+            t('Anketa e çmimeve të banesave dhe e agjentëve e Bankës së Shqipërisë; ndërtimi dhe turizmi i INSTAT; normat e BQE dhe të Bankës së Shqipërisë; pesha e jorezidentëve në transaksione; publikimet e turizmit dhe të ndërtimit të Malit të Zi (faqja e MONSTAT nuk u hap në këtë botim).', 'Bank of Albania house-price and agents’ survey; INSTAT construction and tourism; ECB and Bank of Albania rates; non-resident share of transactions; Montenegro tourism and construction prints (MONSTAT page not opened in this edition).'),
             t('Ndërmjetësim dhe këshillim profesional në një treg më të ftohtë dhe më të përzgjedhur; shërbime pasurie të lidhura me turizmin; paketa pune ndërtimi me Jobs Hub dhe Akademinë.', 'Professional brokerage and advisory in a cooler, more selective market; tourism-linked property services; construction-labour packages with Jobs Hub and Academy.'),
             t('Të folurit e tregut lart; publikimi i parashikimeve të çmimeve pa burim; një peshë e madhe jorezidentësh që mund të kthehet nëse udhëtimi ose kërkesa e BE lëkundet; ngatërrimi i shërbimeve me këshillën e investimit.', 'Talking the market up; publishing unsourced price forecasts; a large non-resident share that can reverse if travel or EU demand wobbles; confusing services with investment advice.'),
           ],
@@ -278,8 +278,8 @@ export const forecastIndustrySections: ForecastSection[] = [
       {
         kind: 'prose',
         text: t(
-          'Pasojat për veprimtarinë aktuale. Përshkruani kushtet dhe politikën; mos lëshoni synime çmimi kërkese apo gjuhë «bli tani». Përdorni anketa zyrtare, dhe etiketoni çdo të dhënë të brendshme shpalljesh si të brendshme. Linjat e ardhshme duhet të jenë shërbime (ndërmjetësim, bashkërendim i kujdesit të duhur, mbështetje e menaxhimit të pasurisë turistike), jo një indeks çmimi i pronarit derisa të ekzistojë një metodë. Një seri zyrtare e çmimeve të banimit të Malit të Zi nuk u gjet në këtë draft.',
-          'Implications for current operations. Describe conditions and policy; do not issue asking-price targets or “buy now” language. Use official surveys, and label any internal listing data as internal. Prospective lines should be services (brokerage, due diligence coordination, tourism-property management support), not a proprietary price index until a method exists. An official Montenegro residential-price series was not found in this draft.',
+          'Pasojat për veprimtarinë aktuale. Përshkruani kushtet dhe politikën; mos lëshoni synime çmimi kërkese apo gjuhë «bli tani». Përdorni anketa zyrtare, dhe etiketoni çdo të dhënë të brendshme shpalljesh si të brendshme. Linjat e ardhshme duhet të jenë shërbime (ndërmjetësim, bashkërendim i kujdesit të duhur, mbështetje e menaxhimit të pasurisë turistike), jo një indeks çmimi i pronarit derisa të ekzistojë një metodë. Një seri zyrtare e çmimeve të banimit të Malit të Zi nuk u gjet në këtë botim.',
+          'Implications for current operations. Describe conditions and policy; do not issue asking-price targets or “buy now” language. Use official surveys, and label any internal listing data as internal. Prospective lines should be services (brokerage, due diligence coordination, tourism-property management support), not a proprietary price index until a method exists. An official Montenegro residential-price series was not found in this edition.',
         ),
       },
     ],
@@ -295,8 +295,8 @@ export const forecastIndustrySections: ForecastSection[] = [
       {
         kind: 'prose',
         text: t(
-          'Perspektiva dhe shtytësit. Të njëjtat forca që i japin formë linjave të tjera — anëtarësimi në BE, shtrëngimi i tregut të punës, formalizimi dhe një sfond më i vështirë energjie dhe financimi — e rrisin gjithashtu kërkesën për këshillë praktike: planifikim force pune, bashkërendim dokumentacioni, dixhitalizim procesesh dhe përdorim i kujdesshëm i mjeteve të IA. Nexus, si një sistem i brendshëm rastesh dhe komunikimesh, është një avantazh operativ nëse qëndron i saktë dhe i shqyrtuar nga njeriu. NVRCX mund të bëhet një linjë teknologjie tregtare, por ky draft nuk pohon një status nisjeje apo një shifër të ardhurash që nuk u verifikua këtu. Një vlerësim zyrtar i tregut shqiptar ose malazez të IA ose të këshillimit nuk u gjet.',
-          'Outlook and drivers. The same forces that shape the other lines — EU accession, labour-market tightness, formalisation, and a more difficult energy and financing backdrop — also raise demand for practical advice: workforce planning, documentation coordination, process digitalisation, and careful use of AI tools. Nexus, as an internal case and communications system, is an operating advantage if it stays accurate and human-reviewed. NVRCX may become a commercial technology line, but this draft does not assert a launch status or a revenue figure that was not verified here. An official estimate of the Albanian or Montenegrin AI or consulting market was not found.',
+          'Perspektiva dhe shtytësit. Të njëjtat forca që i japin formë linjave të tjera — anëtarësimi në BE, shtrëngimi i tregut të punës, formalizimi dhe një sfond më i vështirë energjie dhe financimi — e rrisin gjithashtu kërkesën për këshillë praktike: planifikim force pune, bashkërendim dokumentacioni, dixhitalizim procesesh dhe përdorim i kujdesshëm i mjeteve të IA. Nexus, si një sistem i brendshëm rastesh dhe komunikimesh, është një avantazh operativ nëse qëndron i saktë dhe i shqyrtuar nga njeriu. NVRCX mund të bëhet një linjë teknologjie tregtare, por ky botim nuk pohon një status nisjeje apo një shifër të ardhurash që nuk u verifikua këtu. Një vlerësim zyrtar i tregut shqiptar ose malazez të IA ose të këshillimit nuk u gjet.',
+          'Outlook and drivers. The same forces that shape the other lines — EU accession, labour-market tightness, formalisation, and a more difficult energy and financing backdrop — also raise demand for practical advice: workforce planning, documentation coordination, process digitalisation, and careful use of AI tools. Nexus, as an internal case and communications system, is an operating advantage if it stays accurate and human-reviewed. NVRCX may become a commercial technology line, but this edition does not assert a launch status or a revenue figure that was not verified here. An official estimate of the Albanian or Montenegrin AI or consulting market was not found.',
         ),
       },
       {
@@ -330,7 +330,7 @@ export const forecastIndustrySections: ForecastSection[] = [
         columns: leadColumns,
         rows: [
           [
-            t('Mbylljet e kapitujve të anëtarësimit; miratimi i buxhetit 2027 në të dy vendet; kërkesa e punëdhënësve e kaluar përmes Jobs Hub dhe Akademisë; cilësia e brendshme e Nexus (e pavlerësuar në këtë draft).', 'Accession chapter closures; 2027 budget adoption in both countries; employer demand routed through Jobs Hub and Academy; internal Nexus quality (not scored in this draft).'),
+            t('Mbylljet e kapitujve të anëtarësimit; miratimi i buxhetit 2027 në të dy vendet; kërkesa e punëdhënësve e kaluar përmes Jobs Hub dhe Akademisë; cilësia e brendshme e Nexus (e pavlerësuar në këtë botim).', 'Accession chapter closures; 2027 budget adoption in both countries; employer demand routed through Jobs Hub and Academy; internal Nexus quality (not scored in this edition).'),
             t('Mbështetje e paketuar për punëdhënësin (punë plus aftësi plus proces); hartim procesesh i përafruar me BE; mjete IA të shqyrtuara nga njeriu për rrjedha të brendshme dhe, më vonë, për klientin.', 'Packaged employer support (labour plus skills plus process); EU-aligned process mapping; human-reviewed AI tools for internal and, later, client workflows.'),
             t('Mbi-shitja e IA; veprimi sikur të jesh i licencuar për të dhënë këshillë ligjore, tatimore ose investimi; nisja e një produkti teknologjie para se të jetë gati.', 'Overselling AI; acting as if licensed to give legal, tax or investment advice; launching a technology product before it is ready.'),
           ],
@@ -339,8 +339,8 @@ export const forecastIndustrySections: ForecastSection[] = [
       {
         kind: 'prose',
         text: t(
-          'Pasojat për veprimtarinë aktuale. Shisni atë që grupi e bën tashmë mirë: lëvizshmërinë e punës, formimin dhe mbështetjen e dokumentuar të procesit. Mbani një shqyrtim njerëzor mbi çdo produkt të jashtëm të ndihmuar nga IA, në përputhje me metodën e dakorduar të Forecast. Linjat e ardhshme përfshijnë punë teknike të financuar nga BE ose nga donatorë, dixhitalizim të administratës publike në Shqipëri dhe në Mal të Zi, dhe një ofertë tregtare NVRCX vetëm kur statusi dhe kushtet e saj të jenë nënshkruar — jo në këtë draft të panënshkruar.',
-          'Implications for current operations. Sell what the group already does well: labour mobility, training, and documented process support. Keep a human review on every AI-assisted external deliverable, in line with the agreed Forecast method. Prospective lines include EU-funded or donor technical work, public-administration digitalisation in Albania and Montenegro, and a commercial NVRCX offer only when its status and terms are signed off — not in this unsigned draft.',
+          'Pasojat për veprimtarinë aktuale. Shisni atë që grupi e bën tashmë mirë: lëvizshmërinë e punës, formimin dhe mbështetjen e dokumentuar të procesit. Mbani një shqyrtim njerëzor mbi çdo produkt të jashtëm të ndihmuar nga IA, në përputhje me metodën e dakorduar të Forecast. Linjat e ardhshme përfshijnë punë teknike të financuar nga BE ose nga donatorë, dixhitalizim të administratës publike në Shqipëri dhe në Mal të Zi, dhe një ofertë tregtare NVRCX vetëm kur statusi dhe kushtet e saj të jenë nënshkruar — e papohuar në këtë botim.',
+          'Implications for current operations. Sell what the group already does well: labour mobility, training, and documented process support. Keep a human review on every AI-assisted external deliverable, in line with the agreed Forecast method. Prospective lines include EU-funded or donor technical work, public-administration digitalisation in Albania and Montenegro, and a commercial NVRCX offer only when its status and terms are signed off — not asserted in this edition.',
         ),
       },
     ],
@@ -352,8 +352,8 @@ export const forecastIndustrySections: ForecastSection[] = [
       {
         kind: 'prose',
         text: t(
-          'Përmbledhje e portofolit. Në rastin bazë të draftit, lëvizshmëria e punës është bërthama e 2027, sepse të dhënat zyrtare tregojnë tashmë tregje të shtrënguara dhe sepse qendra e brendshme ka tashmë inventar të gjallë shqiptar dhe malazez. Akademia duhet të ulet pranë asaj bërthame, jo si një shpresë e veçantë. Media House është zëri publik i grupit dhe shtëpia e ardhshme e një Forecast të nënshkruar; nuk duhet t’i kërkohet të mbajë një parashikim reklame të pamatur. Pasuria e paluajtshme është një linjë e vërtetë shërbimesh e lidhur me turizmin, në një treg rritja e çmimeve të të cilit është ngadalësuar tashmë. Këshillimi dhe IA janë mundësues. Mali i Zi është strategjikisht i rëndësishëm — si pararendës i BE dhe si treg i Jobs Hub — por kuota, buxheti dhe masat e pagave të 2027 janë ende të pazgjidhura.',
-          'Portfolio summary. In the draft base case, labour mobility is the 2027 core, because official data already show tight markets and because the internal hub already has live Albanian and Montenegrin inventory. The Academy should sit next to that core, not as a separate hope. Media House is the group’s public voice and the future home of a signed Forecast; it should not be asked to carry an unsized advertising forecast. Real estate is a real, tourism-linked services line in a market whose price growth has already slowed. Consulting and AI are enablers. Montenegro is strategically important — both as an EU frontrunner and as a Jobs Hub market — but its 2027 quota, budget and wage measures are still unsettled.',
+          'Përmbledhje e portofolit. Në rastin bazë, lëvizshmëria e punës është bërthama e 2027, sepse të dhënat zyrtare tregojnë tashmë tregje të shtrënguara dhe sepse qendra e brendshme ka tashmë inventar të gjallë shqiptar dhe malazez. Akademia duhet të ulet pranë asaj bërthame, jo si një shpresë e veçantë. Media House është zëri publik i grupit dhe shtëpia e ardhshme e një Forecast të nënshkruar; nuk duhet t’i kërkohet të mbajë një parashikim reklame të pamatur. Pasuria e paluajtshme është një linjë e vërtetë shërbimesh e lidhur me turizmin, në një treg rritja e çmimeve të të cilit është ngadalësuar tashmë. Këshillimi dhe IA janë mundësues. Mali i Zi është strategjikisht i rëndësishëm — si pararendës i BE dhe si treg i Jobs Hub — por kuota, buxheti dhe masat e pagave të 2027 janë ende të pazgjidhura.',
+          'Portfolio summary. In the base case, labour mobility is the 2027 core, because official data already show tight markets and because the internal hub already has live Albanian and Montenegrin inventory. The Academy should sit next to that core, not as a separate hope. Media House is the group’s public voice and the future home of a signed Forecast; it should not be asked to carry an unsized advertising forecast. Real estate is a real, tourism-linked services line in a market whose price growth has already slowed. Consulting and AI are enablers. Montenegro is strategically important — both as an EU frontrunner and as a Jobs Hub market — but its 2027 quota, budget and wage measures are still unsettled.',
         ),
       },
       {
@@ -379,9 +379,9 @@ export const forecastIndustrySections: ForecastSection[] = [
           ],
           [
             t('P3', 'P3'),
-            t('Përfundoni shqyrtimin ligjor të Forecast dhe mbajeni këtë botim të brendshëm derisa të nënshkruhet.', 'Finish the Forecast legal review and keep this edition internal until it is signed.'),
+            t('Shqyrtimi ligjor i mohimit të përgjegjësisë është i përfunduar dhe botimi është nënshkruar nga Dr Alban Gj. THIKA.', 'Legal review of the disclaimer is complete and the edition is signed by Dr Alban Gj. THIKA.'),
             t('D5 është dakorduar; mesi i janarit 2027 është dritarja e parë publike e dakorduar; D6 ende kërkon miratim zë për zë.', 'D5 is agreed; mid-January 2027 is the agreed first public window; D6 still requires item-by-item approval.'),
-            t('Këshilltari ende për t’u emëruar.', 'Counsel still to be named.'),
+            t('Rishikimi ligjor është i përfunduar. Nënshkruar nga Dr Alban Gj. THIKA më 18 nëntor 2026.', 'Legal review is complete. Signed by Dr Alban Gj. THIKA on 18 November 2026.'),
           ],
           [
             t('P4', 'P4'),
@@ -440,7 +440,7 @@ export const forecastIndustrySections: ForecastSection[] = [
             t('Të dhëna të holla zyrtare ose të brendshme mbushen me shifra të shpikura', 'Thin official or internal data is filled with invented figures'),
             t('Rrezik procesi', 'Process risk'),
             t('I lartë', 'High'),
-            t('Citoni ose hiqni; ky draft i lë tashmë boshllëqet bosh.', 'Cite or omit; this draft already leaves gaps blank.'),
+            t('Citoni ose hiqni; ky botim i lë tashmë boshllëqet bosh.', 'Cite or omit; this edition already leaves gaps blank.'),
           ],
         ],
       },
@@ -491,7 +491,7 @@ export const forecastIndustrySections: ForecastSection[] = [
           ],
           [
             t('Mesi i janarit 2027', 'Mid-January 2027'),
-            t('NOVARIC® Forecast 2027 i parë publik, vetëm nëse është shqyrtuar ligjërisht dhe nënshkruar.', 'First public NOVARIC® Forecast 2027, only if legally reviewed and signed.'),
+            t('NOVARIC® Forecast 2027, botimi i parë publik.', 'First public NOVARIC® Forecast 2027.'),
             t('Rruga e dakorduar e nisjes (D2).', 'Agreed launch path (D2).'),
           ],
           [
@@ -531,10 +531,10 @@ export const forecastIndustrySections: ForecastSection[] = [
         kind: 'steps',
         steps: [
           {
-            title: t('Përfundoni këtë pilot të brendshëm, dhjetor 2026', 'Complete this internal pilot, December 2026'),
+            title: t('Plotësoni boshllëqet e të dhënave, dhjetor 2026', 'Close the data gaps, December 2026'),
             detail: t(
-              'Emërtoni këshilltarin dhe filloni shqyrtimin D5; verifikoni kuotën dhe buxhetin e Malit të Zi në tekste zyrtare; plotësoni boshllëqet e të dhënave të listuara më poshtë; shtoni shifra të brendshme të verifikuara të Akademisë dhe të Media House nëse ekzistojnë; pastaj sillni një draft të shtrënguar te Dr THIKA. Asnjë postim publik.',
-              'Name counsel and start the D5 review; verify Montenegro quota and budget in official texts; fill the data gaps listed below; add verified Academy and Media House internal figures if they exist; then bring a tightened draft to Dr THIKA. No public posting.',
+              'Verifikoni kuotën dhe buxhetin e Malit të Zi në tekste zyrtare; plotësoni boshllëqet e të dhënave të listuara më poshtë; shtoni shifra të brendshme të verifikuara të Akademisë dhe të Media House nëse ekzistojnë.',
+              'Verify Montenegro quota and budget in official texts; fill the data gaps listed below; add verified Academy and Media House internal figures if they exist.',
             ),
           },
           {
@@ -545,10 +545,10 @@ export const forecastIndustrySections: ForecastSection[] = [
             ),
           },
           {
-            title: t('Botimi i parë publik, mesi i janarit 2027, vetëm nëse nënshkruhet', 'First public edition, mid-January 2027, only if signed'),
+            title: t('Botimi i parë publik, mesi i janarit 2027', 'First public edition, mid-January 2027'),
             detail: t(
-              'Pas shqyrtimit ligjor dhe një teksti të nënshkruar, shpërndajeni në kanalet tashmë të dakorduara. Derisa D6 të zgjidhet, buletinet javore dhe zërat e përditshëm të etiketuar Forecast kanë ende nevojë për miratimin e tij.',
-              'After legal review and a signed text, distribute across the already agreed channels. Until D6 is settled, weeklies and Forecast-tagged daily items still need his approval.',
+              'Rishikimi ligjor është i përfunduar dhe teksti është nënshkruar nga Dr Alban Gj. THIKA. Derisa D6 të zgjidhet, buletinet javore dhe zërat e përditshëm të etiketuar Forecast kanë ende nevojë për miratimin e tij.',
+              'Legal review is complete and the text is signed by Dr Alban Gj. THIKA. Until D6 is settled, weeklies and Forecast-tagged daily items still need his approval.',
             ),
           },
         ],
@@ -559,8 +559,8 @@ export const forecastIndustrySections: ForecastSection[] = [
     id: 'disclaimer',
     heading: t('Mohimi i përgjegjësisë', 'Disclaimer'),
     caption: t(
-      'Tekst drafti. Jo për përdorim publik derisa të bëhet shqyrtimi i këshilltarit (D5) dhe nënshkrimi.',
-      'Draft text. Not for public use until counsel review (D5) and sign-off.',
+      'Mohimi i përgjegjësisë i këtij botimi.',
+      'Disclaimer of this edition.',
     ),
     blocks: [
       {
@@ -704,8 +704,8 @@ export const forecastIndustrySections: ForecastSection[] = [
             lead: 'D2',
             title: t('Data e nisjes', 'Launch date'),
             detail: t(
-              'Fjala për fjalë: «as recomened». E miratuar: pilot i brendshëm në dhjetor 2026; botimi i parë publik në mes të janarit 2027.',
-              'Verbatim: ‘as recomened’. Adopted: internal pilot in December 2026; first public edition mid-January 2027.',
+              'Fjala për fjalë: «as recomened». E miratuar: botimi i parë më 18 nëntor 2026; dritarja e mëparshme e dakorduar për një botim të mëtejshëm ishte mesi i janarit 2027.',
+              'Verbatim: ‘as recomened’. Adopted: first edition on 18 November 2026; the earlier agreed window for a further edition was mid-January 2027.',
             ),
             status: t('Dakorduar', 'Agreed'),
             tone: 'success',
@@ -724,8 +724,8 @@ export const forecastIndustrySections: ForecastSection[] = [
             lead: 'D4',
             title: t('Nënshkruesi', 'Signatory'),
             detail: t(
-              'Fjala për fjalë: «Dr Alban». Nënshkruesi: Dr Alban Gj. THIKA, si botues. Ky draft është ende i panënshkruar.',
-              'Verbatim: ‘Dr Alban’. Signatory: Dr Alban Gj. THIKA, as publisher. This draft is still unsigned.',
+              'Fjala për fjalë: «Dr Alban». Nënshkruesi: Dr Alban Gj. THIKA, si botues. Ky botim është nënshkruar nga Dr Alban Gj. THIKA.',
+              'Verbatim: ‘Dr Alban’. Signatory: Dr Alban Gj. THIKA, as publisher. This edition is signed by Dr Alban Gj. THIKA.',
             ),
             status: t('Dakorduar', 'Agreed'),
             tone: 'success',
@@ -734,10 +734,10 @@ export const forecastIndustrySections: ForecastSection[] = [
             lead: 'D5',
             title: t('Mohimi i përgjegjësisë dhe shqyrtimi ligjor', 'Disclaimer and legal review'),
             detail: t(
-              'Fjala për fjalë: «Agreed». Këshilltari duhet ta shqyrtojë mohimin draft të përgjegjësisë sipas së drejtës shqiptare dhe malazeze para çdo përdorimi publik. Këshilltari nuk është emëruar ende.',
-              'Verbatim: ‘Agreed’. Counsel should review the draft disclaimer under Albanian and Montenegrin law before any public use. Counsel has not yet been named.',
+              'Fjala për fjalë: «Agreed». Rishikimi ligjor i mohimit të përgjegjësisë është i përfunduar, i konfirmuar nga Dr Alban Gj. THIKA më 18 nëntor 2026, ora 17:53 me orën e Tiranës.',
+              'Verbatim: ‘Agreed’. Legal review of the disclaimer is complete, confirmed by Dr Alban Gj. THIKA at 17:53 Tirana time on 18 November 2026.',
             ),
-            status: t('Dakorduar; këshilltari për t’u emëruar', 'Agreed; counsel to name'),
+            status: t('Dakorduar; rishikimi ligjor i përfunduar', 'Agreed; legal review complete'),
             tone: 'success',
           },
           {
@@ -754,8 +754,8 @@ export const forecastIndustrySections: ForecastSection[] = [
             lead: 'D7',
             title: t('Kanalet', 'Channels'),
             detail: t(
-              'Fjala për fjalë: «Across the board including all». Të gjitha kanalet e listuara janë në shtrirje për një botim publik të nënshkruar, jo për këtë draft.',
-              'Verbatim: ‘Across the board including all’. All listed channels are in scope for a signed public edition, not for this draft.',
+              'Fjala për fjalë: «Across the board including all». Të gjitha kanalet e listuara janë në shtrirje për botimin publik të nënshkruar.',
+              'Verbatim: ‘Across the board including all’. All listed channels are in scope for the signed public edition.',
             ),
             status: t('Dakorduar (të gjitha kanalet)', 'Agreed (all channels)'),
             tone: 'success',
@@ -764,8 +764,8 @@ export const forecastIndustrySections: ForecastSection[] = [
             lead: 'D8',
             title: t('Të dhënat e brendshme', 'Internal data'),
             detail: t(
-              'Fjala për fjalë: «Yes». Shifrat e brendshme të Jobs Hub në këtë draft janë të etiketuara si të brendshme.',
-              'Verbatim: ‘Yes’. Internal Jobs Hub figures in this draft are labelled internal.',
+              'Fjala për fjalë: «Yes». Shifrat e brendshme të Jobs Hub në këtë botim janë të etiketuara si të brendshme.',
+              'Verbatim: ‘Yes’. Internal Jobs Hub figures in this edition are labelled internal.',
             ),
             status: t('Po', 'Yes'),
             tone: 'success',
@@ -774,11 +774,11 @@ export const forecastIndustrySections: ForecastSection[] = [
             lead: 'D9',
             title: t('Teza dhe skenarët', 'Thesis and scenarios'),
             detail: t(
-              'Fjala për fjalë: «approved». Ky draft tani propozon një pyetje kornize, skenarë të emërtuar dhe probabilitete gjykuese, ende të panënshkruara, për shqyrtimin e tij.',
-              'Verbatim: ‘approved’. This draft now proposes a framing question, named scenarios and judgmental probabilities, still unsigned, for his review.',
+              'Fjala për fjalë: «approved». Ky botim propozon një pyetje kornize, skenarë të emërtuar dhe probabilitete gjykuese, të nënshkruara nga Dr Alban Gj. THIKA.',
+              'Verbatim: ‘approved’. This edition proposes a framing question, named scenarios and judgmental probabilities, signed by Dr Alban Gj. THIKA.',
             ),
-            status: t('Metoda e miratuar; teksti i panënshkruar', 'Approved method; text unsigned'),
-            tone: 'warning',
+            status: t('Metoda e miratuar; teksti i nënshkruar', 'Approved method; text signed'),
+            tone: 'success',
           },
         ],
       },
@@ -786,8 +786,8 @@ export const forecastIndustrySections: ForecastSection[] = [
         kind: 'callout',
         tone: 'success',
         text: t(
-          'Statusi: drafti i parë i Forecast 2027, i brendshëm, i panënshkruar, 18 nëntor 2026, ora e Tiranës. Asgjë nuk është publikuar, postuar apo dërguar.',
-          'Status: first Forecast 2027 draft, internal, unsigned, 18 November 2026, Tirana time. Nothing has been published, posted or sent.',
+          'Statusi: botimi i parë i Forecast 2027, 18 nëntor 2026, ora e Tiranës. I nënshkruar nga Dr Alban Gj. THIKA. Rishikimi ligjor i mohimit të përgjegjësisë është i përfunduar.',
+          'Status: first Forecast 2027 edition, 18 November 2026, Tirana time. Signed by Dr Alban Gj. THIKA. Legal review of the disclaimer is complete.',
         ),
       },
     ],
