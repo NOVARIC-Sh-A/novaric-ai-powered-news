@@ -76,6 +76,12 @@ export const ParagonHeader: React.FC<ParagonHeaderProps> = ({
             >
                {language === 'sq' ? 'ANALIZA' : 'ANALYSIS'}
             </a>
+            <a
+               href="/?page=maragonCardMockup"
+               className="text-xs font-medium text-white hover:bg-white/10 px-3 py-1.5 rounded-md transition-all duration-200"
+            >
+               Karta MARAGON<sup className="registered-mark">®</sup> (Mockup)
+            </a>
              
              {/* Divider */}
              <div className="h-3 w-px bg-white/20 mx-1"></div>

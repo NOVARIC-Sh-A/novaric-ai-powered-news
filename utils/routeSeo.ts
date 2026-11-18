@@ -72,6 +72,27 @@ export function newsListSeo(): OgFields {
   };
 }
 
+export function maragonMockupSeo(): OgFields {
+  const url = `${OG_SITE}/?page=maragonCardMockup`;
+  return {
+    title: 'Karta MARAGON® (shembull)',
+    description: 'Specifikim shembull i kartës MARAGON®. Nuk është një vlerësim i publikuar.',
+    url,
+    image: DEFAULT_OG_IMAGE,
+    imageAlt: 'Karta MARAGON® (shembull)',
+    type: 'website',
+    robots: 'noindex, nofollow',
+    jsonLd: graph([{
+      '@type': 'WebPage',
+      url,
+      name: 'Karta MARAGON® (shembull)',
+      description: 'Specifikim shembull. Nuk është një vlerësim i publikuar.',
+      inLanguage: 'sq',
+      isAccessibleForFree: true,
+    }]),
+  };
+}
+
 export function forecastSeo(): OgFields {
   const url = `${OG_SITE}/forecast-2027`;
   return {

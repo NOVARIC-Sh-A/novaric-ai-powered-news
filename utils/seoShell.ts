@@ -8,6 +8,8 @@ export function seoShellRelativePath(pathname: string, search = ''): string | nu
   const page = params.get('page');
   if (page === 'forecast2027') return 'forecast-2027/index.html';
   if (page === 'newsList') return 'seo/news-list.html';
+  if (page === 'maragonCardMockup') return 'seo/maragon-card-mockup.html';
+  if (page === 'tvPersonalitiesAnalysis') return 'seo/maragon-analysis.html';
   if (page === 'newsArticle') {
     const id = params.get('id') || '';
     if (!id || id.includes('/') || id.includes('..')) return null;

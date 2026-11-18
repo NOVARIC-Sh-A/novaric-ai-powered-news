@@ -217,6 +217,14 @@ export const App: React.FC = () => {
         pageTitle = 'NOVARIC® Forecast 2027 | Parashikimi 2027 | Botimi i parë';
         pageDescription = 'Botimi i parë i NOVARIC® Forecast 2027, 18 nëntor 2026, i nënshkruar nga Dr Alban Gj. THIKA. Nuk është këshillë investimi.';
         break;
+      case 'maragonCardMockup':
+        pageTitle = 'Karta MARAGON® (shembull) | NOVARIC® Lajme me IA';
+        pageDescription = 'Specifikim shembull i kartës MARAGON®. Nuk është një vlerësim i publikuar.';
+        break;
+      case 'tvPersonalitiesAnalysis':
+        pageTitle = 'Analiza MARAGON® | Pa vlerësim | NOVARIC® Lajme me IA';
+        pageDescription = 'Analiza e figurave mediatike sipas MARAGON®. Vlerësimi publikohet vetëm pas miratimit.';
+        break;
       case 'trademarkCertificate':
         pageTitle = 'Regjistrimet Ligjore & Certifikata Zyrtare | NOVARIC®';
         pageDescription = 'Dokumentacioni zyrtar i regjistrimit të medias në Bashkimin Evropian (Office of the Press Registrar, OPM PRESS 03/2025) dhe certifikata e markës tregtare EUIPO.';
