@@ -113,6 +113,7 @@ export type Page =
   | 'nexusHumanistAiGovernance'
   | 'forecast2027'
   | 'maragonCardMockup'
+  | 'maragonProfile'
   | 'authorProfile'
   | 'profiliIAutorit';
 

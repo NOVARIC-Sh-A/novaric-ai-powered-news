@@ -1,0 +1,222 @@
+{
+  "label": "DRAFT – research_only – not for publication",
+  "assessmentStatus": "research_only",
+  "methodologyApproved": false,
+  "retrievedAt": "2026-11-18",
+  "subject": "Top Story",
+  "outlet": "Top Channel",
+  "linkedHostId": null,
+  "composite": null,
+  "compositeReason": "No dimension is fully scored. R1.1, A2.1, G3.1, G3.2 and O4.1 stay null, so R, A, G and O are incomplete. Equal-weight composite is not calculated.",
+  "method": {
+    "window": "2026-05-01 to 2026-11-18",
+    "rule": "Top Channel article URLs under /2026/MM/ whose headline names Top Story as that broadcast and quotes the host or a guest. Per month, take the earliest such article. If another article that month is a different topic class and the sample is under 12, add the earliest of that class. Exclude pieces that are not an episode write-up.",
+    "augustGap": "August 2026 had no Top Story episode write-up in this search. The 5 August page is a UET Cast career interview. The 27 August page is an Instagram statement. Both are identity evidence, not episodes.",
+    "codingLimit": "Text only. No video was watched. Anchor text is the body_excerpt of each indicator in data/maragonIndicators.ts. Those anchors were not edited."
+  },
+  "episodes": [
+    {
+      "id": "E1",
+      "date": "2026-05-04",
+      "month": "2026-05",
+      "topic": "social",
+      "title": "Tragjedia në Durrës",
+      "guests": "Four studio guests, unnamed in the article",
+      "url": "https://top-channel.tv/2026/05/04/tragjedia-ne-durres-grida-duma-perlotet-ne-studion-e-top-story-nuk-e-di-si-mund-te-bashkejetohet-me-kete-humbje/",
+      "evidenceDepth": "detailed article",
+      "quote": "Jemi totalisht të dëshpëruar dhe të dorëzuar përpara faktit që ata dy djem kanë humbur jetën."
+    },
+    {
+      "id": "E2",
+      "date": "2026-06-01",
+      "month": "2026-06",
+      "topic": "social",
+      "title": "Zvërneci: dhuna ndaj protestuesve",
+      "guests": "Not named in the article",
+      "url": "https://top-channel.tv/2026/06/01/top-story-grida-duma-hyn-live-nga-jashte-shqiperise-per-zvernecin-e-patolerueshme-dhuna-ndaj-protestuesve/",
+      "evidenceDepth": "detailed article",
+      "quote": "nuk mund dhe s’duhet t’i largohemi aktualitetit... analiza mbi transparencën e kësaj ngjarje që lidhet me pronën private"
+    },
+    {
+      "id": "E3",
+      "date": "2026-06-15",
+      "month": "2026-06",
+      "topic": "social",
+      "title": "Editoriali për protestën dhe sondazhin",
+      "guests": "Not named; a Top Channel web poll is the cited material",
+      "url": "https://top-channel.tv/2026/06/15/te-mbash-qendrimet-e-duhura-nuk-eshte-aspak-e-thjeshte-editoriali-i-grida-dumes-ne-top-story-i-gezohem-protestes-dhe-numrave/",
+      "evidenceDepth": "detailed article",
+      "quote": "nuk kemi asnjë delir të mendojmë se ajo që do të shfaqet në shifrat e sotme do të jetë vula... unë kam marrë qëndrime të balancuara, shpresoj"
+    },
+    {
+      "id": "E4",
+      "date": "2026-07-16",
+      "month": "2026-07",
+      "topic": "politics",
+      "title": "Mocioni i Elisa Spiropalit",
+      "guests": "Elisa Spiropali is the subject; the article quotes the host, not a studio reply",
+      "url": "https://top-channel.tv/2026/07/16/elisa-spiropali-perfaqeson-nje-grupim-apo-idete-e-veta-individuale-grida-duma-ne-top-story/",
+      "evidenceDepth": "detailed article",
+      "quote": "Kjo do të jetë analiza e parë... a është vërtetë një lëvizje me të tjerë të pakënaqur"
+    },
+    {
+      "id": "E5",
+      "date": "2026-09-07",
+      "month": "2026-09",
+      "topic": "investigative",
+      "title": "Dosja Palasa, prona dhe vendimi i shtetit",
+      "guests": "Not named in the retrieved lead",
+      "url": "https://top-channel.tv/2026/09/07/palasa-dosja-qe-cel-sezonin-e-ri-te-top-story-nje-toke-dy-pretendime-dhe-nje-vendim-i-shtetit-kujt-i-perket-prona-dhe-kush-e-humbi-ate87987987/",
+      "evidenceDepth": "summary only",
+      "quote": "Top Story rikthehet... duke çelur sezonin e ri me një dosje që ngre pikëpyetje mbi pronën"
+    },
+    {
+      "id": "E6",
+      "date": "2026-09-29",
+      "month": "2026-09",
+      "topic": "politics",
+      "title": "Dosja e SPAK për SHISH",
+      "guests": "Not named; the retrieved text is the host monologue",
+      "url": "https://top-channel.tv/2026/09/29/dosja-e-spak-per-shish-pergjegjesi-morale-dhe-individuale-ka-grida-duma-po-pergjegjesine-politike-kush-e-mban0/",
+      "evidenceDepth": "detailed article",
+      "quote": "kush e kontrollon dhe monitoron SHISH-in... kontroll edhe balancë"
+    },
+    {
+      "id": "E7",
+      "date": "2026-10-19",
+      "month": "2026-10",
+      "topic": "guest debate",
+      "title": "Shpërblimi për policinë",
+      "guests": "Blendi Klosi, Sekretar i Përgjithshëm i PS-së",
+      "url": "https://top-channel.tv/2026/10/19/del-vendimi-2500-euro-per-cdo-polic-grida-duma-pyet-live-klosin-po-shperblehen-per-te-goditur/",
+      "evidenceDepth": "detailed article",
+      "quote": "Duma: Tani mbështetje për t’i gjuajtur njerëzve? ... Klosi: Jo e ke shumë gabim... për t’i mbrojtur shqiptarët"
+    },
+    {
+      "id": "E8",
+      "date": "2026-11-18",
+      "month": "2026-11",
+      "topic": "guest debate",
+      "title": "Hegjemonia amerikane dhe Trump",
+      "guests": "Arian Curri, analist; Erald Kapri, deputet i Partisë Mundësia",
+      "url": "https://top-channel.tv/2026/11/18/amerika-duhet-te-ruaje-hegjemonine-kapri-ne-top-story-pse-dominimi-amerikan-eshte-i-rendesishem-per-shqiperine/",
+      "evidenceDepth": "detailed article",
+      "quote": "Në studion e Top Story me Grida Dumën, deputeti i Partisë Mundësia, Erald Kapri, argumenton..."
+    }
+  ],
+  "indicators": [
+    {
+      "id": "maragon:R1.1",
+      "anchor": "data/maragonIndicators.ts body_excerpt: përputhshmëria me vendimet e AMA-s",
+      "band": null,
+      "confidence": null,
+      "evidenceCount": 0,
+      "result": "insufficient evidence",
+      "why": "No AMA decision naming Top Story was retrieved. A 2026 Gazeta Standard article says AMA fined Top Story on 30 October 2026, but that is not the decision text.",
+      "flag": "Lead only, for Dr THIKA. Do not score from the secondary report."
+    },
+    {
+      "id": "maragon:R1.2",
+      "anchor": "data/maragonIndicators.ts: korrigjime dhe ndarje e opinionit nga lajmi",
+      "band": "moderate",
+      "bandSq": "Mesatare",
+      "bandEn": "Moderate",
+      "confidence": "low",
+      "evidenceCount": 2,
+      "episodes": ["E3", "E6"],
+      "quote": "E3 calls the opening an editorial and separates poll figures from a final label. E6 is labelled a monologue.",
+      "url": "https://top-channel.tv/2026/06/15/te-mbash-qendrimet-e-duhura-nuk-eshte-aspak-e-thjeshte-editoriali-i-grida-dumes-ne-top-story-i-gezohem-protestes-dhe-numrave/",
+      "flag": "Borderline. Opinion is labelled. A corrections protocol was not found."
+    },
+    {
+      "id": "maragon:A2.1",
+      "anchor": "data/maragonIndicators.ts: kryqëzim i pretendimeve me baza të dhënash; disiplina e verifikimit",
+      "band": null,
+      "confidence": null,
+      "evidenceCount": 0,
+      "result": "insufficient evidence",
+      "why": "The write-ups quote claims. They do not show those claims checked against a record.",
+      "flag": null
+    },
+    {
+      "id": "maragon:A2.2",
+      "anchor": "data/maragonIndicators.ts: kornizimi; një lajm mund të jetë faktikisht i saktë dhe prapë i anshëm",
+      "band": "moderate",
+      "bandSq": "Mesatare",
+      "bandEn": "Moderate",
+      "confidence": "low",
+      "evidenceCount": 2,
+      "episodes": ["E3", "E7"],
+      "quote": "E3: qëndrime të balancuara, shpresoj. E7 frames the police bonus as a reward for striking citizens; the guest rejects that frame.",
+      "url": "https://top-channel.tv/2026/10/19/del-vendimi-2500-euro-per-cdo-polic-grida-duma-pyet-live-klosin-po-shperblehen-per-te-goditur/",
+      "flag": "Episodes diverge. E3 claims balance. E7 is an adversarial frame. For Dr THIKA."
+    },
+    {
+      "id": "maragon:A2.3",
+      "anchor": "data/maragonIndicators.ts: investigim kundrejt churnalism",
+      "band": null,
+      "confidence": null,
+      "evidenceCount": 0,
+      "result": "insufficient evidence",
+      "why": "Palasa is the only item described as a dossier, and that page was retrieved only as a lead. The other write-ups are commentary or debate, which does not test churnalism.",
+      "flag": "Palasa lead is not enough to score."
+    },
+    {
+      "id": "maragon:A2.4",
+      "anchor": "data/maragonIndicators.ts: raportim tematik kundrejt episodik",
+      "band": "moderate",
+      "bandSq": "Mesatare",
+      "bandEn": "Moderate",
+      "confidence": "low",
+      "evidenceCount": 3,
+      "episodes": ["E1", "E2", "E6"],
+      "quote": "E6 asks which institutions monitor SHISH and whether political responsibility is being delegated. E2 asks which criteria sent projects back. E1 stays with the grief of one crash.",
+      "url": "https://top-channel.tv/2026/09/29/dosja-e-spak-per-shish-pergjegjesi-morale-dhe-individuale-ka-grida-duma-po-pergjegjesine-politike-kush-e-mban0/",
+      "flag": "Episodes diverge: thematic governance questions beside an episodic tragedy. For Dr THIKA."
+    },
+    {
+      "id": "maragon:G3.1",
+      "anchor": "data/maragonIndicators.ts: kapja e medias; pronësia",
+      "band": null,
+      "confidence": null,
+      "evidenceCount": 0,
+      "result": "insufficient evidence",
+      "why": "No ownership register for Top Channel was retrieved. Channel-level indicator left null.",
+      "flag": null
+    },
+    {
+      "id": "maragon:G3.2",
+      "anchor": "data/maragonIndicators.ts: autonomia e linjës editoriale",
+      "band": null,
+      "confidence": null,
+      "evidenceCount": 0,
+      "result": "insufficient evidence",
+      "why": "The 5 August page quotes her saying the CEO and other shareholders were reconceiving the channel when she was hired. That is a hiring account, not a test of whether the editorial line is captured.",
+      "url": "https://top-channel.tv/2026/08/05/grida-duma-rrefen-biseden-me-lori-hoxhen-si-e-lashe-politiken-per-top-channel/",
+      "flag": "Lead only, for Dr THIKA. Not scored."
+    },
+    {
+      "id": "maragon:O4.1",
+      "anchor": "data/maragonIndicators.ts: segmente që demaskojnë dezinformimin; edukim mediatik",
+      "band": null,
+      "confidence": null,
+      "evidenceCount": 0,
+      "result": "insufficient evidence",
+      "why": "E3 says one poll is not a final label. One caveat is not a media-literacy segment.",
+      "flag": "Single caveat noted, not scored."
+    },
+    {
+      "id": "maragon:O4.2",
+      "anchor": "data/maragonIndicators.ts: pluralizmi i zërave; debati qytetar",
+      "band": "strong",
+      "bandSq": "E fortë",
+      "bandEn": "Strong",
+      "confidence": "medium",
+      "evidenceCount": 3,
+      "episodes": ["E4", "E7", "E8"],
+      "quote": "E7 prints a live exchange with a governing-party secretary. E8 quotes a Mundësia deputy and an analyst in the same studio. E4 opens competing readings of one party motion.",
+      "url": "https://top-channel.tv/2026/11/18/amerika-duhet-te-ruaje-hegjemonine-kapri-ne-top-story-pse-dominimi-amerikan-eshte-i-rendesishem-per-shqiperine/",
+      "flag": "The strong reading comes from the debate episodes. E1 is not a debate. For Dr THIKA."
+    }
+  ]
+}

@@ -1,0 +1,258 @@
+{
+  "meta": {
+    "documentId": "DOS-COM-MARAGON-show-top-story-v0.1-20261118",
+    "schemaVersion": "0.1-proposed",
+    "methodologyApproved": false,
+    "accessDate": "2026-11-18",
+    "publishedExternally": false
+  },
+  "subject": {
+    "id": "show_top_story",
+    "fullName": "Top Story",
+    "category": "Show",
+    "shortBio_sq": "Emision politik në Top Channel. Vlerësimi i synon emisionin, pa drejtues të lidhur dhe pa indeks individual.",
+    "shortBio_en": "A political programme on Top Channel. The assessment target is the show, with no linked host and no individual index.",
+    "detailedBio_sq": "Top Channel e emërton «Top Story» si talk-show politik. Kartela e vlerësimit i takon emisionit: pa drejtues të lidhur dhe pa indeks individual. Roli aktual i Grida DUMËS, sipas të njëjtave faqe, është autore, moderatore dhe drejtuese. Karriera e saj politike është e shkuar. Kodimi draft i episodeve është research_only dhe nuk publikohet.",
+    "detailedBio_en": "Top Channel names Top Story as a political talk show. The assessment card belongs to the show: no linked host and no individual index. Grida DUMA's current role, on those same pages, is author, moderator and host. Her political career is in the past. The episode coding is research_only and is not published.",
+    "dateOfBirth": null,
+    "age": null,
+    "zodiacSign": null
+  },
+  "photo": {
+    "photoPending": true,
+    "imageUrl": null,
+    "photoCandidates": []
+  },
+  "publication": {
+    "biographyStatus": "draft",
+    "assessmentStatus": "research_only",
+    "authorizedForPublicDisplay": false
+  },
+  "scoring": {
+    "scoringSuspended": true,
+    "composite": null,
+    "averageMaragonScore": null,
+    "latestScore": null,
+    "aletheiaScore": null,
+    "dynamicScore": null,
+    "linkedHostId": null
+  },
+  "trajectory": {
+    "status": "not_assessed"
+  },
+  "sampling": {
+    "validated": false,
+    "method_sq": "Identifikim i emrit të emisionit nga faqet e Top Channel. Pa kodim episodi.",
+    "method_en": "Show name identified from Top Channel pages. No episode coding.",
+    "limitations": [
+      "No indicator scored. No host is linked to this assessment."
+    ]
+  },
+  "canonicalIndicatorIdsInOrder": [
+    "maragon:R1.1",
+    "maragon:R1.2",
+    "maragon:A2.1",
+    "maragon:A2.2",
+    "maragon:A2.3",
+    "maragon:A2.4",
+    "maragon:G3.1",
+    "maragon:G3.2",
+    "maragon:O4.1",
+    "maragon:O4.2"
+  ],
+  "indicators": [
+    {
+      "id": "maragon:R1.1",
+      "code": "R1.1",
+      "title_sq": "Pajtueshmëria Rregullatore",
+      "title_en": "Regulatory Compliance",
+      "status": "not_assessed",
+      "score": null,
+      "evidenceIds": [],
+      "commentary_sq": "Pa vlerësim / Not assessed.",
+      "commentary_en": "Not assessed.",
+      "missingDataReason": "Nuk ka prova të cituara kundrejt ankorave të treguesit. Pa vlerësim.",
+      "limitations": "No cited evidence against this indicator's anchors. Not assessed."
+    },
+    {
+      "id": "maragon:R1.2",
+      "code": "R1.2",
+      "title_sq": "Pajtueshmëria Etike",
+      "title_en": "Ethical Adherence",
+      "status": "not_assessed",
+      "score": null,
+      "evidenceIds": [],
+      "commentary_sq": "Pa vlerësim / Not assessed.",
+      "commentary_en": "Not assessed.",
+      "missingDataReason": "Nuk ka prova të cituara kundrejt ankorave të treguesit. Pa vlerësim.",
+      "limitations": "No cited evidence against this indicator's anchors. Not assessed."
+    },
+    {
+      "id": "maragon:A2.1",
+      "code": "A2.1",
+      "title_sq": "Saktësia Faktike",
+      "title_en": "Factual Precision",
+      "status": "not_assessed",
+      "score": null,
+      "evidenceIds": [],
+      "commentary_sq": "Pa vlerësim / Not assessed.",
+      "commentary_en": "Not assessed.",
+      "missingDataReason": "Nuk ka prova të cituara kundrejt ankorave të treguesit. Pa vlerësim.",
+      "limitations": "No cited evidence against this indicator's anchors. Not assessed."
+    },
+    {
+      "id": "maragon:A2.2",
+      "code": "A2.2",
+      "title_sq": "Paanshmëria & Anshmëria",
+      "title_en": "Framing and Impartiality",
+      "status": "not_assessed",
+      "score": null,
+      "evidenceIds": [],
+      "commentary_sq": "Pa vlerësim / Not assessed.",
+      "commentary_en": "Not assessed.",
+      "missingDataReason": "Nuk ka prova të cituara kundrejt ankorave të treguesit. Pa vlerësim.",
+      "limitations": "No cited evidence against this indicator's anchors. Not assessed."
+    },
+    {
+      "id": "maragon:A2.3",
+      "code": "A2.3",
+      "title_sq": "Origjinaliteti & Thellësia",
+      "title_en": "Original Reporting",
+      "status": "not_assessed",
+      "score": null,
+      "evidenceIds": [],
+      "commentary_sq": "Pa vlerësim / Not assessed.",
+      "commentary_en": "Not assessed.",
+      "missingDataReason": "Nuk ka prova të cituara kundrejt ankorave të treguesit. Pa vlerësim.",
+      "limitations": "No cited evidence against this indicator's anchors. Not assessed."
+    },
+    {
+      "id": "maragon:A2.4",
+      "code": "A2.4",
+      "title_sq": "Kontekstualizimi",
+      "title_en": "Contextualization",
+      "status": "not_assessed",
+      "score": null,
+      "evidenceIds": [],
+      "commentary_sq": "Pa vlerësim / Not assessed.",
+      "commentary_en": "Not assessed.",
+      "missingDataReason": "Nuk ka prova të cituara kundrejt ankorave të treguesit. Pa vlerësim.",
+      "limitations": "No cited evidence against this indicator's anchors. Not assessed."
+    },
+    {
+      "id": "maragon:G3.1",
+      "code": "G3.1",
+      "title_sq": "Ndikimi i Pronësisë",
+      "title_en": "Ownership Transparency and Conflicts",
+      "status": "not_assessed",
+      "score": null,
+      "evidenceIds": [],
+      "commentary_sq": "Pa vlerësim / Not assessed.",
+      "commentary_en": "Not assessed.",
+      "missingDataReason": "Nuk ka prova të cituara kundrejt ankorave të treguesit. Pa vlerësim.",
+      "limitations": "No cited evidence against this indicator's anchors. Not assessed."
+    },
+    {
+      "id": "maragon:G3.2",
+      "code": "G3.2",
+      "title_sq": "Kontrolli Editorial",
+      "title_en": "Editorial Autonomy",
+      "status": "not_assessed",
+      "score": null,
+      "evidenceIds": [],
+      "commentary_sq": "Pa vlerësim / Not assessed.",
+      "commentary_en": "Not assessed.",
+      "missingDataReason": "Nuk ka prova të cituara kundrejt ankorave të treguesit. Pa vlerësim.",
+      "limitations": "No cited evidence against this indicator's anchors. Not assessed."
+    },
+    {
+      "id": "maragon:O4.1",
+      "code": "O4.1",
+      "title_sq": "Promovimi i Edukimit Mediatik",
+      "title_en": "Media Literacy",
+      "status": "not_assessed",
+      "score": null,
+      "evidenceIds": [],
+      "commentary_sq": "Pa vlerësim / Not assessed.",
+      "commentary_en": "Not assessed.",
+      "missingDataReason": "Nuk ka prova të cituara kundrejt ankorave të treguesit. Pa vlerësim.",
+      "limitations": "No cited evidence against this indicator's anchors. Not assessed."
+    },
+    {
+      "id": "maragon:O4.2",
+      "code": "O4.2",
+      "title_sq": "Kontributi në Diskursin Demokratik",
+      "title_en": "Public Sphere Contribution",
+      "status": "not_assessed",
+      "score": null,
+      "evidenceIds": [],
+      "commentary_sq": "Pa vlerësim / Not assessed.",
+      "commentary_en": "Not assessed.",
+      "missingDataReason": "Nuk ka prova të cituara kundrejt ankorave të treguesit. Pa vlerësim.",
+      "limitations": "No cited evidence against this indicator's anchors. Not assessed."
+    },
+    {
+      "id": "maragon:C",
+      "code": "C",
+      "title_sq": "Përgjegjësia Qytetare (plotësuese)",
+      "title_en": "Civic Responsibility (supplementary)",
+      "status": "not_assessed",
+      "score": null,
+      "evidenceIds": [],
+      "commentary_sq": "Nuk vlerësohet. Boshti C nuk është pikë e radarit.",
+      "commentary_en": "Unscored. Axis C is not a radar point.",
+      "missingDataReason": "Axis C stays unscored.",
+      "supplementary": true,
+      "notPartOfTenCanonicalIndicators": true
+    }
+  ],
+  "evidenceRegister": [
+    {
+      "evidenceId": "EV-TC-20260805",
+      "title": "Si e lashë politikën për Top Channel",
+      "publisher": "Top Channel",
+      "url": "https://top-channel.tv/2026/08/05/grida-duma-rrefen-biseden-me-lori-hoxhen-si-e-lashe-politiken-per-top-channel/",
+      "sourcePage": "https://top-channel.tv/2026/08/05/grida-duma-rrefen-biseden-me-lori-hoxhen-si-e-lashe-politiken-per-top-channel/",
+      "publicationDate": null,
+      "accessDate": "2026-11-18",
+      "excerpt": "emisionit politik në Top Channel, “Top Story”.",
+      "observation": "Names the programme Top Story.",
+      "limitations": "Desk check of the public page. Not an approved assessment."
+    },
+    {
+      "evidenceId": "EV-TC-20230904",
+      "title": "Grida Duma çel Top Story",
+      "publisher": "Top Channel",
+      "url": "https://top-channel.tv/video/grida-duma-cel-top-story-me-nje-interviste-me-presidenten-vjosa-osmani/",
+      "sourcePage": "https://top-channel.tv/video/grida-duma-cel-top-story-me-nje-interviste-me-presidenten-vjosa-osmani/",
+      "publicationDate": null,
+      "accessDate": "2026-11-18",
+      "excerpt": "Talk Show politik TOP STORY.",
+      "observation": "Names the programme Top Story on Top Channel.",
+      "limitations": "Desk check of the public page. Not an approved assessment."
+    },
+    {
+      "evidenceId": "EV-TC-20250325",
+      "title": "Refleksioni i Grida Dumës",
+      "publisher": "Top Channel",
+      "url": "https://top-channel.tv/2025/03/25/top-story-refleksioni-i-grida-dumes-kisha-nevoje-per-kete-emision-i-nisa-sms-shoqes-sime-qe-po-na-ndjek/",
+      "sourcePage": "https://top-channel.tv/2025/03/25/top-story-refleksioni-i-grida-dumes-kisha-nevoje-per-kete-emision-i-nisa-sms-shoqes-sime-qe-po-na-ndjek/",
+      "publicationDate": null,
+      "accessDate": "2026-11-18",
+      "excerpt": "Emisioni i Top Story.",
+      "observation": "Names the programme Top Story.",
+      "limitations": "Desk check of the public page. Not an approved assessment."
+    }
+  ],
+  "outlet": "Top Channel",
+  "linkedHostId": null,
+  "draftCoding": {
+    "label": "DRAFT – research_only – not for publication",
+    "file": "data/maragon/show_top_story.draft-coding.json",
+    "memo": "data/maragon/show_top_story.DRAFT.md",
+    "assessmentStatus": "research_only",
+    "methodologyApproved": false,
+    "publicDisplay": "Pa vlerësim until approval",
+    "composite": null
+  }
+}
