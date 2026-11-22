@@ -29,7 +29,9 @@ export const MethodologyMetrics: React.FC<MethodologyMetricsProps> = ({
 }) => {
   const [copied, setCopied] = useState(false);
 
-  const latestAudit = audits.length > 0 ? audits[0] : null;
+  // An audit is shown only with a link to its published report. No external audit, certification or
+  // EFCSN/IFCN assessment of NOVARIC® is evidenced (owner decision t329u; MARAGON® v1.0 §13).
+  const latestAudit = audits.find((audit) => typeof audit.evidence_url === 'string' && audit.evidence_url.trim() !== '') ?? null;
 
   const wordCount = calculatedWordCount || metrics.word_count_hint;
 
@@ -70,7 +72,7 @@ export const MethodologyMetrics: React.FC<MethodologyMetricsProps> = ({
             Metrikat e Artikullit në Detaj
           </h3>
           <p className="text-slate-600 dark:text-slate-300 text-sm max-w-2xl">
-            Treguesit sasiorë dhe cilësorë të metodologjisë dhe auditimit të pavarur të integritetit editorial.
+            Treguesit sasiorë dhe cilësorë të metodologjisë. Nuk ka ende auditim të pavarur të publikuar.
           </p>
         </div>
 
@@ -132,13 +134,13 @@ export const MethodologyMetrics: React.FC<MethodologyMetricsProps> = ({
         {/* Compliance score */}
         <div className="p-4 rounded-xl bg-emerald-50 dark:bg-emerald-950/40 border border-emerald-200 dark:border-emerald-800/60 space-y-1 col-span-2 sm:col-span-1">
           <span className="text-[11px] font-bold text-emerald-800 dark:text-emerald-300 uppercase tracking-wider block">
-            Auditimi i Pajtueshmërisë
+            Auditimi
           </span>
           <div className="text-2xl font-black text-emerald-700 dark:text-emerald-400 font-mono">
-            {latestAudit ? `${latestAudit.compliance_score}%` : 'Në proces'}
+            {latestAudit ? `${latestAudit.compliance_score}%` : 'Pa auditim'}
           </div>
           <span className="text-[11px] text-emerald-600 dark:text-emerald-300">
-            {latestAudit ? latestAudit.result_label_sq : 'Pa vërejtje'}
+            {latestAudit ? latestAudit.result_label_sq : 'Asnjë auditim i publikuar'}
           </span>
         </div>
       </div>
@@ -150,7 +152,7 @@ export const MethodologyMetrics: React.FC<MethodologyMetricsProps> = ({
             <div className="flex items-center gap-2">
               <Award className="w-5 h-5 text-emerald-600" />
               <span className="font-bold text-slate-900 dark:text-white text-sm">
-                Certifikata e Auditimit Metodologjik Q3 2026
+                Raporti i auditimit
               </span>
               <span className="font-mono text-xs text-slate-400">({latestAudit.id})</span>
             </div>
@@ -208,14 +210,14 @@ export const MethodologyMetrics: React.FC<MethodologyMetricsProps> = ({
               <span>Shiko regjistrin e plotë në Kodin e Standardeve</span>
               <ExternalLink className="w-3.5 h-3.5" />
             </button>
-            <span className="text-[11px] font-mono text-slate-400">
-              Standardi: EFCSN & IFCN Vlerësimi 2026
-            </span>
+            <a href={latestAudit.evidence_url ?? undefined} className="text-[11px] font-mono text-slate-400 hover:underline" rel="noopener noreferrer" target="_blank">
+              Raporti i publikuar
+            </a>
           </div>
         </div>
       ) : (
         <div className="p-4 rounded-xl bg-slate-50 dark:bg-slate-800/80 border border-slate-200 dark:border-slate-700 text-xs text-slate-500">
-          Në pritje të auditimit të parë periodik të regjistruar.
+          Nuk ka auditim të publikuar. Standardet EFCSN dhe IFCN përdoren vetëm si referencë; NOVARIC<sup>®</sup> nuk pretendon anëtarësim, certifikim, miratim ose auditim prej tyre.
         </div>
       )}
     </div>

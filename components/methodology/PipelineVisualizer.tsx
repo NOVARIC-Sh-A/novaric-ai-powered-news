@@ -303,7 +303,7 @@ export const PipelineVisualizer: React.FC<PipelineVisualizerProps> = ({
               <ShieldCheck className="w-3.5 h-3.5 text-[#e4191e]" /> Nenet Rregulluese në Kodin e Standardeve:
             </span>
             <span className="text-xs text-slate-600 dark:text-slate-300">
-              Ky hap auditohet drejtpërdrejt sipas klauzolave të verifikueshme:
+              Ky hap lidhet me klauzolat e mëposhtme:
             </span>
           </div>
 
