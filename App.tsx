@@ -28,6 +28,8 @@ import {
 } from './types';
 import { fetchMaragonReport } from './services/dataService';
 import { canonicalPoliticianKey, findPolitician, politicianPathId, routeFromLocation, POLITICIANS_LIST_PATH } from './utils/politicianNavigation';
+import { findMediaProfile, mediaProfilePath, mediaSlugFor, routeMediaFromLocation, MEDIA_LIST_PATH } from './utils/mediaNavigation';
+import { nameSurnameFromFull } from './components/maragon/maragonPresenterUi';
 import { isMediaIdentity } from './utils/maragonPublication';
 import { LiveUpdateToast } from './components/LiveUpdateToast';
 import { FloatingHomeButton } from './components/FloatingHomeButton';
@@ -238,7 +240,23 @@ export const App: React.FC = () => {
         pageTitle = 'Kodi i Standardeve NOVARIC® | Qendra e Transparencës & Integritetit';
         pageDescription = 'Qendra e Transparencës dhe Integritetit: 31 klauzola operacionale, vula e gjallë e përputhshmërisë 98.40%, gjurmueshmëria e integritetit dhe regjistri i korrigjimeve.';
         break;
+      case 'mediaPersonalitiesPage':
+        pageTitle = 'Personalitete Mediatike | MARAGON® | NOVARIC® Lajme me IA';
+        pageDescription = 'Profilet e personaliteteve mediatike. Pa vlerësim të publikuar.';
+        break;
       case 'vipProfilePage': {
+        const mediaId = selectedVipProfileForPage?.id ?? selectedVipRouteId;
+        if (isMediaIdentity(mediaId)) {
+          const mediaName = nameSurnameFromFull(selectedVipProfileForPage?.name || '');
+          pageTitle = mediaName ? `${mediaName} | MARAGON® | Pa vlerësim` : 'Profil mediatik | MARAGON® | Pa vlerësim';
+          pageDescription = mediaName
+            ? `${mediaName}. Pa vlerësim të miratuar.`
+            : 'Profil mediatik. Pa vlerësim të miratuar.';
+          const slug = mediaSlugFor(mediaId);
+          pageImageUrl = slug ? `https://media.novaric.al/og/personalitete-mediatike/${slug}.png` : undefined;
+          pageImageAlt = mediaName || 'Personalitet mediatik';
+          break;
+        }
         if (selectedVipProfileForPage?.name) {
           const graph = profileOpenGraph(selectedVipProfileForPage);
           pageTitle = graph.title;
@@ -269,6 +287,7 @@ export const App: React.FC = () => {
     factCheckResult,
     selectedJournal,
     selectedVipProfileForPage,
+    selectedVipRouteId,
     newsCategoryFilter,
     selectedCaseStudy,
   ]);
@@ -326,6 +345,39 @@ export const App: React.FC = () => {
         );
         setCurrentPage('vipProfilePage');
         setCurrentUrl(`${CANONICAL_URL}${cleanPath}`);
+        return;
+      }
+
+      const mediaLocated = routeMediaFromLocation(pathname, window.location.search);
+      if (mediaLocated?.page === 'vipProfilePage') {
+        const mediaId = mediaLocated.id;
+        const cleanPath = mediaProfilePath(mediaId);
+        if (
+          typeof window !== 'undefined' &&
+          window.location.protocol !== 'blob:' &&
+          cleanPath &&
+          (cleanPath !== pathname.replace(/\/+$/, '') || window.location.search)
+        ) {
+          window.history.replaceState({ page: 'vipProfilePage', id: mediaId }, '', cleanPath);
+        }
+        setSelectedVipRouteId(mediaId);
+        setSelectedVipProfileForPage(
+          findMediaProfile(mediaProfilesData, mediaId) || findMediaProfile(data.profiles, mediaId) || null
+        );
+        setCurrentPage('vipProfilePage');
+        setCurrentUrl(`${CANONICAL_URL.replace(/\/$/, '')}${cleanPath}`);
+        return;
+      }
+      if (mediaLocated?.page === 'mediaPersonalitiesPage') {
+        if (
+          typeof window !== 'undefined' &&
+          window.location.protocol !== 'blob:' &&
+          (pathname.replace(/\/+$/, '') !== MEDIA_LIST_PATH || window.location.search)
+        ) {
+          window.history.replaceState({ page: 'mediaPersonalitiesPage' }, '', MEDIA_LIST_PATH);
+        }
+        setCurrentPage('mediaPersonalitiesPage');
+        setCurrentUrl(`${CANONICAL_URL.replace(/\/$/, '')}${MEDIA_LIST_PATH}`);
         return;
       }
 
@@ -609,6 +661,15 @@ export const App: React.FC = () => {
       setSelectedVipRouteId(routeId ?? null);
       setSelectedVipProfileForPage(profile);
       setCurrentPage(page);
+      const mediaPath = mediaProfilePath(routeId);
+      if (mediaPath && window.location.protocol !== 'blob:') {
+        const mediaId = String(routeId);
+        window.history.pushState({ page, id: mediaId }, '', mediaPath);
+        setCurrentUrl(`${CANONICAL_URL.replace(/\/$/, '')}${mediaPath}`);
+        window.scrollTo(0, 0);
+        closeMobileMenu();
+        return;
+      }
       const pathId = politicianPathId(routeId);
       if (pathId && window.location.protocol !== 'blob:') {
         window.history.pushState({ page, id: pathId }, '', `/figurat-politike/${pathId}`);
@@ -668,6 +729,9 @@ export const App: React.FC = () => {
     if (page === 'politiciansPage' && window.location.protocol !== 'blob:') {
       window.history.pushState({ page: 'politiciansPage' }, '', POLITICIANS_LIST_PATH);
       setCurrentUrl(`${CANONICAL_URL}${POLITICIANS_LIST_PATH}`);
+    } else if (page === 'mediaPersonalitiesPage' && window.location.protocol !== 'blob:') {
+      window.history.pushState({ page: 'mediaPersonalitiesPage' }, '', MEDIA_LIST_PATH);
+      setCurrentUrl(`${CANONICAL_URL.replace(/\/$/, '')}${MEDIA_LIST_PATH}`);
     } else if (page === 'forecast2027' && window.location.protocol !== 'blob:') {
       window.history.pushState({ page: 'forecast2027' }, '', '/forecast-2027');
       setCurrentUrl(`${CANONICAL_URL.replace(/\/$/, '')}/forecast-2027`);
@@ -703,6 +767,19 @@ export const App: React.FC = () => {
         setCurrentPage('vipProfilePage');
         return;
       }
+      const mediaPop = routeMediaFromLocation(path, window.location.search);
+      if (mediaPop?.page === 'vipProfilePage') {
+        setSelectedVipProfileForPage(findMediaProfile(mediaProfilesData, mediaPop.id) || null);
+        setSelectedVipRouteId(mediaPop.id);
+        setCurrentPage('vipProfilePage');
+        return;
+      }
+      if (mediaPop?.page === 'mediaPersonalitiesPage') {
+        setSelectedVipProfileForPage(null);
+        setSelectedVipRouteId(null);
+        setCurrentPage('mediaPersonalitiesPage');
+        return;
+      }
       if (located?.page === 'politiciansPage' || page === 'politiciansPage') {
         setSelectedVipProfileForPage(null);
         setSelectedVipRouteId(null);
@@ -723,6 +800,10 @@ export const App: React.FC = () => {
 
   const handleNavigateBack = () => {
     if (currentPage === 'vipProfilePage') {
+      if (isMediaIdentity(selectedVipRouteId) || isMediaIdentity(selectedVipProfileForPage?.id)) {
+        navigateTo('mediaPersonalitiesPage');
+        return;
+      }
       navigateTo('politiciansPage');
       return;
     }

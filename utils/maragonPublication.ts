@@ -16,6 +16,58 @@ export type MaragonBiographyStatus = 'draft' | 'pending_review' | 'approved' | '
 
 export type MaragonLanguage = 'sq' | 'en';
 
+/** Band keys stored on a presenter record. They are not a public score. */
+export type MaragonBandKey = 'e_dobet' | 'mesatare' | 'e_forte';
+
+export type MaragonConfidence = 'none' | 'low' | 'medium' | 'high';
+
+export const MARAGON_BAND_LABELS: Record<MaragonBandKey, { sq: string; en: string; level: number }> = {
+  e_dobet: { sq: 'E dobët', en: 'Weak', level: 2 },
+  mesatare: { sq: 'Mesatare', en: 'Moderate', level: 3 },
+  e_forte: { sq: 'E fortë', en: 'Strong', level: 5 },
+};
+
+export const MARAGON_CONFIDENCE_LABELS: Record<MaragonConfidence, { sq: string; en: string }> = {
+  none: { sq: 'Pa besueshmëri', en: 'No confidence' },
+  low: { sq: 'E ulët', en: 'Low' },
+  medium: { sq: 'E mesme', en: 'Medium' },
+  high: { sq: 'E lartë', en: 'High' },
+};
+
+export const MARAGON_STATUS_LABELS: Record<MaragonAssessmentStatus, { sq: string; en: string }> = {
+  not_assessed: { sq: 'Pa vlerësim', en: 'Not assessed' },
+  research_only: { sq: 'Vetëm kërkim', en: 'Research only' },
+  pending_review: { sq: 'Në shqyrtim', en: 'Pending review' },
+  approved: { sq: 'I miratuar', en: 'Approved' },
+  withheld: { sq: 'I pezulluar', en: 'Withheld' },
+  suspended: { sq: 'I ndaluar', en: 'Suspended' },
+};
+
+export const PROVISIONAL_LABEL = {
+  sq: 'PROVIZOR',
+  en: 'PROVISIONAL',
+} as const;
+
+/**
+ * Indicative bands stay off the public page unless every publication gate is open.
+ * A dev preview does not call this; it uses maragonInternalPreview instead.
+ */
+export function maragonProvisionalBandsArePublic(entity: (MaragonPublicationInput & {
+  authorizedForPublicDisplay?: boolean | null;
+  am09ProvisionalApprovedInWriting?: boolean | null;
+}) | null | undefined): boolean {
+  if (!maragonScoresArePublic(entity)) return false;
+  if (entity?.authorizedForPublicDisplay !== true) return false;
+  return entity?.am09ProvisionalApprovedInWriting === true;
+}
+
+/** Dev-server preview only. Production builds drop this to false. */
+export function maragonInternalPreview(search?: string): boolean {
+  const dev = Boolean((import.meta as { env?: { DEV?: boolean } }).env?.DEV);
+  const query = search ?? (typeof window !== 'undefined' ? window.location.search : '');
+  return maragonPreviewFromEnv(dev, query);
+}
+
 /** Trajectory labels that may be shown. "Compromised" is never a publishable status. */
 export type MaragonTrajectory = 'Ascending' | 'Stagnant' | 'Regressing';
 

@@ -11,7 +11,8 @@ import { AletheiaModal } from './AletheiaModal';
 import { LetheModal } from './LetheModal';
 import { HorizonModal } from './HorizonModal';
 import { useLanguage } from '../contexts/LanguageContext';
-import { isMaragonAssessmentPublished, publishedMaragonAverage } from '../utils/maragonPublication';
+import { isMaragonAssessmentPublished, isMediaIdentity, publishedMaragonAverage } from '../utils/maragonPublication';
+import { mergeLocalMediaProfiles } from '../utils/mergeLocalMediaProfiles';
 
 /* --------------------------------------------------------
    TYPES
@@ -273,7 +274,7 @@ export const MediaPersonalitiesPage: React.FC<MediaPersonalitiesPageProps> = ({
   
   const normalizedProfiles = useMemo(
     () =>
-      initialProfiles.map((p) => ({
+      mergeLocalMediaProfiles(initialProfiles).map((p) => ({
         ...p,
         category: p.category || "Media",
       })),
@@ -281,13 +282,7 @@ export const MediaPersonalitiesPage: React.FC<MediaPersonalitiesPageProps> = ({
   );
 
   const rankedMedia = useMemo(() => {
-    const mediaPersonalities = normalizedProfiles.filter(profile => {
-        const cat = (profile.category || 'Media').toLowerCase();
-        if (cat.startsWith('politikë') || cat.startsWith('politike')) return false;
-        if (cat.startsWith('gjykata') || cat.includes('gjudiciar')) return false;
-        if (cat === 'biznes' || cat.startsWith('business')) return false;
-        return true;
-    });
+    const mediaPersonalities = normalizedProfiles.filter(profile => isMediaIdentity(profile.id));
 
     const enriched: RankedMediaProfile[] = mediaPersonalities.map(p => {
         const published = isMaragonAssessmentPublished(p);
@@ -502,13 +497,7 @@ export const MediaPersonalitiesPage: React.FC<MediaPersonalitiesPageProps> = ({
           <section>
             {processedAndRankedMedia.length > 0 ? (
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                {processedAndRankedMedia.map((profile) => profile.id === 'vip_m2' ? (
-                  <a key={profile.id} href="/?page=maragonProfile&id=vip_m2" className="block rounded-2xl border border-slate-200 bg-white p-4 text-slate-800 shadow-sm">
-                    <p className="text-[10px] font-bold uppercase tracking-[0.16em] text-slate-500">MARAGON® · Pa vlerësim</p>
-                    <p className="mt-1 text-lg font-black">Grida DUMA</p>
-                    <p className="text-xs text-slate-500">Autore, moderatore dhe drejtuese e «Top Story», Top Channel</p>
-                  </a>
-                ) : (
+                {processedAndRankedMedia.map((profile) => (
                   <MediaPersonalityCard
                     key={profile.id}
                     profile={profile}

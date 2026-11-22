@@ -7,6 +7,10 @@ import { fetchPoliticianProfile } from "../services/apiService";
 import { canonicalPoliticianKey, profileViewState } from "../utils/politicianNavigation";
 import { isMediaIdentity, isMediaProfile } from "../utils/maragonPublication";
 import { mediaProfilesData } from "../data/mediaProfiles";
+import { findMediaProfile } from "../utils/mediaNavigation";
+import { getPresenterRecord } from "../components/maragon/maragonPresenterUi";
+import { GridaDumaProfilePage } from "../components/maragon/GridaDumaProfilePage";
+import { MaragonPresenterProfilePage } from "../components/maragon/MaragonPresenterProfilePage";
 
 interface VipProfilePageWrapperProps {
   profile: VipProfile | FullProfileAnalysis | string;
@@ -60,9 +64,10 @@ export const VipProfilePageWrapper: React.FC<VipProfilePageWrapperProps> = (prop
 
     const passedProfile = isProfileObject && "id" in (profile as object) ? (profile as VipProfile) : null;
     if (isMediaIdentity(activeId) || isMediaProfile(passedProfile)) {
-      const local = mediaProfilesData.find((entry) =>
-        String(entry.id) === String(activeId) || (passedProfile && String(entry.id) === String(passedProfile.id))
-      );
+      const local = findMediaProfile(mediaProfilesData, String(activeId))
+        || mediaProfilesData.find((entry) =>
+          String(entry.id) === String(activeId) || (passedProfile && String(entry.id) === String(passedProfile.id))
+        );
       const merged = local && passedProfile
         ? {
             ...local,
@@ -134,6 +139,19 @@ export const VipProfilePageWrapper: React.FC<VipProfilePageWrapperProps> = (prop
         profile={vipProfile || undefined}
         analysis={analysis}
         onBack={onBack}
+      />
+    );
+  }
+
+  if (vipProfile && String(vipProfile.id) === 'vip_m2') {
+    return <GridaDumaProfilePage onBack={() => onNavigate('mediaPersonalitiesPage')} />;
+  }
+
+  if (vipProfile && getPresenterRecord(vipProfile)) {
+    return (
+      <MaragonPresenterProfilePage
+        profile={vipProfile}
+        onBack={() => onNavigate('mediaPersonalitiesPage')}
       />
     );
   }

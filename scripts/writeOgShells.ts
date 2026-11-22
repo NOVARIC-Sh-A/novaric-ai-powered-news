@@ -6,7 +6,8 @@
  */
 import fs from 'node:fs';
 import path from 'node:path';
-import { applyOgToIndexHtml, listingOg, profileOg } from '../utils/ogDocument';
+import { applyOgToIndexHtml, listingOg, mediaListingOg, mediaProfileOg, profileOg } from '../utils/ogDocument';
+import { mediaProfilesData } from '../data/mediaProfiles';
 import { forecastSeo, homeSeo, maragonMockupSeo, newsArticleSeo, newsArticleShellName, newsListSeo, NewsSeoInput } from '../utils/routeSeo';
 import { publicationTimeMs } from '../utils/newsListOrder';
 
@@ -32,6 +33,19 @@ for (const profile of profiles) {
   fs.mkdirSync(dir, { recursive: true });
   fs.writeFileSync(path.join(dir, 'index.html'), applyOgToIndexHtml(shell, profileOg(profile)));
   written += 1;
+}
+
+const mediaDir = path.join(dist, 'personalitete-mediatike');
+fs.mkdirSync(mediaDir, { recursive: true });
+fs.writeFileSync(path.join(mediaDir, 'index.html'), applyOgToIndexHtml(shell, mediaListingOg()));
+let mediaWritten = 0;
+for (const profile of mediaProfilesData) {
+  const slug = (profile.slug || '').trim();
+  if (!slug || slug.includes('/') || slug.includes('..')) continue;
+  const dir = path.join(mediaDir, slug);
+  fs.mkdirSync(dir, { recursive: true });
+  fs.writeFileSync(path.join(dir, 'index.html'), applyOgToIndexHtml(shell, mediaProfileOg(profile)));
+  mediaWritten += 1;
 }
 
 const forecastDir = path.join(dist, 'forecast-2027');
@@ -64,6 +78,11 @@ const sitemapPages: string[] = [
   'https://media.novaric.al/?page=newsList',
   'https://media.novaric.al/forecast-2027',
   'https://media.novaric.al/figurat-politike',
+  'https://media.novaric.al/personalitete-mediatike',
+  ...mediaProfilesData
+    .map((profile) => (profile.slug || '').trim())
+    .filter((slug) => slug && !slug.includes('/') && !slug.includes('..'))
+    .map((slug) => `https://media.novaric.al/personalitete-mediatike/${slug}`),
 ];
 const newestFirst = [...newsItems].sort((a, b) => {
   const ta = publicationTimeMs(a.publishedAt);
@@ -95,7 +114,7 @@ fs.writeFileSync(path.join(dist, 'sitemap-news.xml'), newsSitemapXml(sitemapNews
 if (!shell.includes('<div id="root">')) {
   throw new Error('SPA root missing from the shell');
 }
-console.log(`og shells listing=1 profiles=${written} forecast=1 newsList=1 news=${newsShells}`);
+console.log(`og shells listing=1 profiles=${written} mediaListing=1 mediaProfiles=${mediaWritten} forecast=1 newsList=1 news=${newsShells}`);
 
 function escapeXml(value: string): string {
   return value

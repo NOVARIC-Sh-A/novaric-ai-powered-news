@@ -11,6 +11,7 @@ import { PoliticianCardItemSchema } from "../lib/politician-schemas";
 
 // NON-POLITICAL PROFILES DATA (Media, Business, Judiciary)
 import { mediaProfilesData } from "../data/mediaProfiles";
+import { mergeLocalMediaProfiles } from "../utils/mergeLocalMediaProfiles";
 import { businessProfilesData } from "../data/businessProfiles";
 import { mockJudiciaryProfilesData } from "../data/mockJudiciaryProfiles";
 import paragonScoresExport from "../db/paragon_scores_export.json";
@@ -171,17 +172,18 @@ export const fetchAllProfiles = async (): Promise<VipProfile[]> => {
         .map(mapVipProfileResponseToVipProfile);
       // Merge live profiles with politicians if live doesn't have them
       const liveHasPoliticians = live.some(p => (p.category || "").toLowerCase().includes("politik"));
-      return liveHasPoliticians ? live : [...live, ...localPoliticians];
+      const base = liveHasPoliticians ? live : [...live, ...localPoliticians];
+      return mergeLocalMediaProfiles(base);
     }
     throw new Error("Invalid response format");
   } catch (error) {
     console.warn("Profiles API fallback active.", error);
-    return [
+    return mergeLocalMediaProfiles([
       ...localPoliticians,
       ...mediaProfilesData,
       ...businessProfilesData,
       ...mockJudiciaryProfilesData,
-    ];
+    ]);
   }
 };
 

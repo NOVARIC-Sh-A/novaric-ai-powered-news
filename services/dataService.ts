@@ -7,6 +7,7 @@ import { getApiEndpoint } from './apiConfig';
 
 // LOCAL MOCK DATA IMPORTS
 import { mediaProfilesData } from '../data/mediaProfiles';
+import { mergeLocalMediaProfiles } from '../utils/mergeLocalMediaProfiles';
 import { businessProfilesData } from '../data/businessProfiles';
 import { mockTvShows } from '../data/mockTvShows';
 import { mockArticles } from '../data/mockArticles';
@@ -132,7 +133,7 @@ export const fetchAppData = async (): Promise<AppData> => {
 
   return {
     news: newsFromBackend,
-    profiles: liveProfiles,
+    profiles: mergeLocalMediaProfiles(liveProfiles),
     tvShows: mockTvShows,
     articles: mockArticles,
     academicJournals: mockAcademicJournals,

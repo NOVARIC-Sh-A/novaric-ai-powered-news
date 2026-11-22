@@ -37,6 +37,37 @@ export function listingOg(): OgFields {
   };
 }
 
+export const MEDIA_LISTING_PATH = '/personalitete-mediatike';
+export const MEDIA_LISTING_TITLE = 'Personalitete Mediatike';
+export const MEDIA_LISTING_DESCRIPTION = 'Profilet e personaliteteve mediatike · MARAGON®. Pa vlerësim të publikuar.';
+export const MEDIA_LISTING_IMAGE = `${OG_SITE}/og/personalitete-mediatike.png`;
+
+export function mediaListingOg(): OgFields {
+  return {
+    title: MEDIA_LISTING_TITLE,
+    description: MEDIA_LISTING_DESCRIPTION,
+    url: `${OG_SITE}${MEDIA_LISTING_PATH}`,
+    image: MEDIA_LISTING_IMAGE,
+    imageAlt: MEDIA_LISTING_TITLE,
+  };
+}
+
+export function mediaProfileOg(profile: { name?: string | null; slug?: string | null; primaryRole?: string | null }): OgFields {
+  const name = formatPersonName(profile.name) || 'Profil mediatik';
+  const role = (profile.primaryRole || '').trim();
+  const description = role
+    ? `${name}. ${role}. Pa vlerësim.`
+    : `${name}. Profil në Personalitete Mediatike. Pa vlerësim.`;
+  const slug = (profile.slug || '').trim();
+  return {
+    title: name,
+    description,
+    url: `${OG_SITE}${MEDIA_LISTING_PATH}/${slug}`,
+    image: `${OG_SITE}/og/personalitete-mediatike/${slug}.png`,
+    imageAlt: name,
+  };
+}
+
 export function profileOg(profile: { name?: string | null; slug?: string | null; primaryRole?: string | null }): OgFields {
   const name = formatPersonName(profile.name) || 'Profil politik';
   const role = (profile.primaryRole || '').trim();

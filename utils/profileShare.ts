@@ -1,11 +1,18 @@
 import { CANONICAL_URL } from '../config/constants';
 import { resolveDisplayPhotoUrl } from './officialPhoto';
 import { politicianProfilePath } from './politicianNavigation';
+import { canonicalMediaKey, mediaProfilePath } from './mediaNavigation';
+import { isMediaIdentity } from './maragonPublication';
 import { formatPersonName } from './formatPersonName';
 
 /** Absolute canonical profile URL used by the card share button. */
 export function canonicalProfileShareUrl(id: string | number | null | undefined): string {
-  return `${CANONICAL_URL.replace(/\/$/, '')}${politicianProfilePath(id)}`;
+  const origin = CANONICAL_URL.replace(/\/$/, '');
+  if (isMediaIdentity(id) || canonicalMediaKey(id)) {
+    const mediaPath = mediaProfilePath(id);
+    if (mediaPath) return `${origin}${mediaPath}`;
+  }
+  return `${origin}${politicianProfilePath(id)}`;
 }
 
 export function profileOpenGraph(profile: {

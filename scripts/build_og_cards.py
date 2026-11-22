@@ -189,7 +189,7 @@ def wrap(draw: ImageDraw.ImageDraw, text: str, face: ImageFont.FreeTypeFont, lim
     return lines[:3]
 
 
-def profile_card(name: str, role: str, portrait: Path | None, *, cover: bool) -> Image.Image:
+def profile_card(name: str, role: str, portrait: Path | None, *, cover: bool, pending_note: str = "Burimi i fotografisë:\nNë verifikim") -> Image.Image:
     card = draw_chrome()
     draw = ImageDraw.Draw(card)
     name_font = font(FONT_BOLD, 54)
@@ -217,7 +217,7 @@ def profile_card(name: str, role: str, portrait: Path | None, *, cover: bool) ->
     else:
         panel = Image.new("RGB", box, (0x1E, 0x27, 0x32))
         pd = ImageDraw.Draw(panel)
-        note = "Burimi i fotografisë:\nNë verifikim"
+        note = pending_note
         note_font = font(FONT_BOLD, 22)
         pd.multiline_text((24, 140), note, font=note_font, fill=WHITE, spacing=8)
         paste_rounded(card, panel, (left, top), 10)
@@ -287,6 +287,53 @@ def write_profiles(out_dir: Path) -> None:
     print(f"profiles {out_dir}")
 
 
+def media_manifest() -> list[dict]:
+    cli = ROOT / "node_modules" / ".bin" / "tsx"
+    script = ROOT / "scripts" / "mediaOgManifest.ts"
+    proc = subprocess.run([str(cli), str(script)], text=True, capture_output=True, check=True, cwd=ROOT)
+    return json.loads(proc.stdout)
+
+
+def media_listing_card() -> Image.Image:
+    card = draw_chrome()
+    draw = ImageDraw.Draw(card)
+    title_font = font(FONT_BOLD, 46)
+    sub_font = font(FONT_BOLD, 26)
+    para = font(FONT_BOLD, 24)
+    draw.text((96, 168), "Personalitete", font=title_font, fill=WHITE)
+    draw.text((96, 228), "Mediatike", font=title_font, fill=WHITE)
+    draw_marked(draw, (96, 310), "MARAGON®", para, WHITE)
+    draw.text((96, 360), "Pa vlerësim të publikuar", font=sub_font, fill=CYAN)
+    return card
+
+
+def write_media_listing() -> None:
+    public = ROOT / "public" / "og" / "personalitete-mediatike.png"
+    dist = ROOT / "dist" / "og" / "personalitete-mediatike.png"
+    image = media_listing_card()
+    save_png(image, public)
+    if dist.parent.exists() or True:
+        save_png(image, dist)
+    print(f"media listing {public} {public.stat().st_size}")
+
+
+def write_media_profiles(out_dir: Path) -> None:
+    rows = media_manifest()
+    for row in rows:
+        slug = (row.get("slug") or "").strip()
+        if not slug:
+            continue
+        image = profile_card(
+            row.get("name") or slug,
+            row.get("role") or "Profil mediatik",
+            None,
+            cover=False,
+            pending_note="Foto në pritje",
+        )
+        save_png(image, out_dir / f"{slug}.png")
+    print(f"media profiles {out_dir} count={len(rows)}")
+
+
 def main() -> None:
     mode = sys.argv[1] if len(sys.argv) > 1 else "listing"
     if mode == "listing":
@@ -294,6 +341,11 @@ def main() -> None:
     elif mode == "profiles":
         dest = Path(sys.argv[2]) if len(sys.argv) > 2 else ROOT / "dist" / "og" / "profiles"
         write_profiles(dest)
+    elif mode == "media-listing":
+        write_media_listing()
+    elif mode == "media-profiles":
+        dest = Path(sys.argv[2]) if len(sys.argv) > 2 else ROOT / "dist" / "og" / "personalitete-mediatike"
+        write_media_profiles(dest)
     else:
         raise SystemExit(f"unknown mode {mode}")
 
