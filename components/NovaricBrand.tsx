@@ -9,7 +9,7 @@ interface NovaricBrandProps {
  * Canonical NOVARIC® Brand Mark Component
  * Adheres strictly to NOVARIC-BRAND-CONTROL-MASTER.md §6.1/§6.2:
  * - Wrapper class: .novaric-brand (inline, white-space: nowrap)
- * - Registered symbol class: .registered-mark (font-size: 58%, raised to the cap height, no gap before it)
+ * - Registered symbol class: .registered-mark (0.55em, vertical-align super, no gap before it)
  * - Accessibility: aria-hidden="true" on superscript
  */
 export const NovaricBrand: React.FC<NovaricBrandProps> = ({ suffix = '', className = '' }) => (

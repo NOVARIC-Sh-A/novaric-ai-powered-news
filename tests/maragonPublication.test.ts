@@ -28,8 +28,8 @@ describe('MARAGON publication stays closed until an assessment is approved', () 
     assert.ok(vip);
     assert.equal(vip?.maragonAssessmentStatus, 'research_only');
     assert.equal(vip?.biographyStatus, 'draft');
-    assert.equal(vip?.photoPending, true);
-    assert.equal(vip?.imageUrl, '');
+    assert.equal(vip?.photoPending, false);
+    assert.equal(vip?.imageUrl, '/media-personalities/portraits/blendi-fevziu-450x600.jpg');
     assert.equal(vip?.scoringSuspended, true);
     assert.equal(vip?.dynamicScore, 88);
     assert.equal(vip?.maragonAnalysis?.length, 7);

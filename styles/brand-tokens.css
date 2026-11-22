@@ -75,6 +75,7 @@
 .novaric-brand {
   display: inline;
   white-space: nowrap;
+  letter-spacing: 0;
 }
 
 .novaric-registered,
@@ -98,16 +99,19 @@ sup.novaric-registered {
   font-weight: inherit;
 }
 
-/* Header and footer ®. About 58% of the surrounding size, top near the cap height, no gap before it. */
+/* The ® hugs the preceding letter. A word space belongs only in the text after the mark. */
+.novaric-brand > sup.registered-mark,
 sup.registered-mark {
-  font-size: 0.58em;
+  font-size: 0.55em;
+  vertical-align: super;
   line-height: 0;
-  position: relative;
-  top: -0.55em;
-  margin: 0;
-  padding: 0;
-  font-weight: inherit;
   letter-spacing: 0;
+  margin-left: 0.02em;
+  margin-right: 0;
+  padding: 0;
+  position: static;
+  top: auto;
+  font-weight: inherit;
 }
 
 /* Exception — hero video wordmark only (novaric.co, 2026-08-27) */

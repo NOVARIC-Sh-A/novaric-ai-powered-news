@@ -39,7 +39,8 @@ import {
   type Lang,
 } from './maragonPresenterUi';
 import type { MaragonPillar } from './maragonPresenterTypes';
-import { resolvePresentableMediaPhoto } from '../../utils/officialMediaPhoto';
+import { ownerSuppliedMediaPortraitSrcSet, resolvePresentableMediaPhoto } from '../../utils/officialMediaPhoto';
+import { MARAGON_BENCHMARKS } from '../../data/maragon/benchmarks';
 
 /*
  * MARAGON® v1.0 — deeper profile page for a media personality (click-through from the cover card).
@@ -185,7 +186,7 @@ export const MaragonPresenterProfilePage: React.FC<Props> = ({ profile, onBack, 
             <div className="w-56 h-56 rounded-full p-[3px]" style={{ backgroundColor: CYAN }}>
               <div className="w-full h-full rounded-full overflow-hidden bg-white">
                 {showPhoto ? (
-                  <img src={photoUrl as string} alt={name} className="w-full h-full object-cover" style={{ objectPosition: officialPhoto?.objectPosition }} referrerPolicy="no-referrer" onError={() => setImgFailed(true)} />
+                  <img src={photoUrl as string} srcSet={ownerSuppliedMediaPortraitSrcSet(photoUrl)} sizes="224px" alt={name} className="w-full h-full object-cover" style={{ objectPosition: officialPhoto?.objectPosition }} referrerPolicy="no-referrer" onError={() => setImgFailed(true)} />
                 ) : (
                   <AwaitingPhoto label={t.photoPending} />
                 )}
@@ -276,7 +277,7 @@ export const MaragonPresenterProfilePage: React.FC<Props> = ({ profile, onBack, 
 
         <Card id="maragon" title={<Mark text={t.maragon} />}>
           <div className="grid grid-cols-1 md:grid-cols-[280px_1fr] gap-6 items-start">
-            <div className="w-full max-w-[280px] aspect-square mx-auto"><BandRadar rec={rec} mode={mode} lang={lang} /></div>
+            <div className="w-full max-w-[280px] mx-auto"><BandRadar rec={rec} mode={mode} lang={lang} benchmarks={MARAGON_BENCHMARKS} /></div>
             <div className="flex flex-col gap-3">
               <div className="flex flex-wrap items-center gap-2">
                 <span className={LABEL_CLASS} style={{ color: MUTED }}>{t.overall}</span>
@@ -410,12 +411,16 @@ export const MaragonPresenterProfilePage: React.FC<Props> = ({ profile, onBack, 
               <div className="text-[15px] leading-relaxed space-y-2" style={{ color: NAVY }}>
                 <p><span className="font-bold">{l.credit}</span></p>
                 <p>
-                  {lang === 'en' ? 'Source page: ' : 'Faqja burimore: '}
+                  {l.linkedByUrl
+                    ? (lang === 'en' ? 'Source page: ' : 'Faqja burimore: ')
+                    : (lang === 'en' ? 'File: ' : 'Skedari: ')}
                   <a href={l.sourcePageUrl} target="_blank" rel="noopener noreferrer" className="underline decoration-2 underline-offset-2" style={{ color: NAVY, textDecorationColor: CYAN }}>{l.sourcePageUrl}</a>
                 </p>
                 {l.imageUrl ? (
                   <p>
-                    {lang === 'en' ? 'Image (linked, not copied): ' : 'Imazhi (i lidhur, jo i kopjuar): '}
+                    {l.linkedByUrl
+                      ? (lang === 'en' ? 'Image (linked, not copied): ' : 'Imazhi (i lidhur, jo i kopjuar): ')
+                      : (lang === 'en' ? 'Image (local file): ' : 'Imazhi (skedar lokal): ')}
                     <a href={l.imageUrl} target="_blank" rel="noopener noreferrer" className="underline decoration-2 underline-offset-2" style={{ color: NAVY, textDecorationColor: CYAN }}>{l.imageUrl}</a>
                   </p>
                 ) : (

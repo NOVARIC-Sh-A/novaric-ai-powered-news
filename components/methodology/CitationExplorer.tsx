@@ -12,6 +12,7 @@ import {
   Building,
 } from 'lucide-react';
 import { MethodReference, ReferenceType } from '../../types/methodology';
+import { renderWithSuperscript } from '../../utils/textUtils';
 
 interface CitationExplorerProps {
   references: MethodReference[];
@@ -68,7 +69,7 @@ export const CitationExplorer: React.FC<CitationExplorerProps> = ({
           Eksploruesi i Citimeve dhe Referencave Akademike
         </h3>
         <p className="text-slate-600 dark:text-slate-300 text-sm sm:text-base leading-relaxed max-w-4xl">
-          Çdo parim metodologjik dhe rregull editorial i NOVARIC® mbështetet në literaturë të recensuar nga kolegët (peer-reviewed) mbi sistemet hibride mediatike, hermeneutikën filozofike dhe etikën gazetareske.
+          {renderWithSuperscript('Çdo parim metodologjik dhe rregull editorial i NOVARIC® mbështetet në literaturë të recensuar nga kolegët (peer-reviewed) mbi sistemet hibride mediatike, hermeneutikën filozofike dhe etikën gazetareske.')}
         </p>
       </div>
 

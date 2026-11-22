@@ -9,6 +9,7 @@ import { evaluateArticleMetrics } from '../../utils/articleMetricsCalculator';
 import { formatVipName } from '../../utils/paragonProfileUtils';
 import { ConceptTooltip } from '../analytics/ConceptTooltip';
 import { findConceptByTerm } from '../../data/conceptRegistry';
+import { AuthorAvatar } from '../AuthorAvatar';
 
 interface Author {
     name: string;
@@ -171,10 +172,11 @@ export const ArticleTemplate1: React.FC<ArticleTemplate1Props> = ({
                                         className={`focus:outline-none focus:ring-2 focus:ring-primary-500 rounded-full transition-transform hover:scale-105 ${index > 0 ? '-ml-5' : ''} ${author.isAi ? '' : 'z-10'}`}
                                         title={formatVipName(author.name)}
                                     >
-                                        <img 
-                                            src={author.imageUrl} 
-                                            alt={`Portreti i ${formatVipName(author.name)}`}
-                                            className="w-16 h-16 rounded-full object-cover border-4 border-white dark:border-slate-800 shadow-lg"
+                                        <AuthorAvatar
+                                            name={author.name}
+                                            imageUrl={author.imageUrl}
+                                            size={64}
+                                            className="border-4 border-white dark:border-slate-800 shadow-lg"
                                         />
                                     </button>
                                 ))}

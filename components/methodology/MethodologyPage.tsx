@@ -4,8 +4,6 @@ import {
   BookOpen,
   Calendar,
   Clock,
-  User,
-  Cpu,
   ArrowLeft,
   Share2,
   ShieldCheck,
@@ -25,6 +23,8 @@ import { AccountabilityCards } from './AccountabilityCards';
 import { CitationExplorer } from './CitationExplorer';
 import { MethodologyMetrics } from './MethodologyMetrics';
 import { methodologyService } from '../../services/methodologyService';
+import { renderWithSuperscript } from '../../utils/textUtils';
+import { AuthorAvatar } from '../AuthorAvatar';
 import {
   MethodologyStep,
   FrameworkPrinciple,
@@ -205,7 +205,7 @@ export const MethodologyPage: React.FC<MethodologyPageProps> = ({
               className="inline-flex items-center gap-2 text-sm font-semibold text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white transition"
             >
               <ArrowLeft className="w-4 h-4" />
-              <span>Ballina e NOVARIC®</span>
+              <span>{renderWithSuperscript('Ballina e NOVARIC®')}</span>
             </a>
           )}
 
@@ -256,7 +256,7 @@ export const MethodologyPage: React.FC<MethodologyPageProps> = ({
           {/* Main Title & Subtitle (Preserved Verbatim) */}
           <div className="space-y-4 max-w-5xl">
             <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slate-900 dark:text-white tracking-tight leading-tight">
-              Metodologjia e NOVARIC® dhe Korniza e Përgjegjësisë: Balancimi i Shkallës së IA-së me Integritetin Gazetarskor
+              {renderWithSuperscript('Metodologjia e NOVARIC® dhe Korniza e Përgjegjësisë: Balancimi i Shkallës së IA-së me Integritetin Gazetarskor')}
             </h1>
             <p className="text-lg sm:text-xl text-slate-600 dark:text-slate-300 font-serif leading-relaxed">
               Një qasje transparente ndaj të vërtetës, teknologjisë dhe mirëbesimit publik.
@@ -272,9 +272,7 @@ export const MethodologyPage: React.FC<MethodologyPageProps> = ({
                 onClick={() => onNavigateToVipProfile && onNavigateToVipProfile('Dr. Alban Gj. THIKA')}
                 className="flex items-center gap-3 cursor-pointer group"
               >
-                <div className="w-11 h-11 rounded-full bg-gradient-to-br from-[#e4191e] to-red-700 text-white flex items-center justify-center font-bold text-base shadow-sm group-hover:scale-105 transition">
-                  AT
-                </div>
+                <AuthorAvatar name="Dr. Alban Gj. THIKA" size={44} className="shadow-sm group-hover:scale-105 transition" />
                 <div>
                   <div className="font-bold text-slate-900 dark:text-white group-hover:text-[#e4191e] transition flex items-center gap-1.5">
                     <span>Dr. Alban Gj. THIKA</span>
@@ -291,9 +289,7 @@ export const MethodologyPage: React.FC<MethodologyPageProps> = ({
                 onClick={() => onNavigateToNoraAiProfile && onNavigateToNoraAiProfile()}
                 className="flex items-center gap-3 cursor-pointer group"
               >
-                <div className="w-11 h-11 rounded-full bg-gradient-to-br from-purple-600 to-indigo-700 text-white flex items-center justify-center shadow-sm group-hover:scale-105 transition">
-                  <Cpu className="w-5 h-5" />
-                </div>
+                <AuthorAvatar name="Nora AI" size={44} className="shadow-sm group-hover:scale-105 transition" />
                 <div>
                   <div className="font-bold text-slate-900 dark:text-white group-hover:text-purple-500 transition flex items-center gap-1.5">
                     <span>Nora AI</span>
@@ -331,7 +327,7 @@ export const MethodologyPage: React.FC<MethodologyPageProps> = ({
                 key={kw}
                 className="px-2.5 py-1 rounded-md text-xs font-medium bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700"
               >
-                {kw}
+                {renderWithSuperscript(kw)}
               </span>
             ))}
           </div>
@@ -391,7 +387,7 @@ export const MethodologyPage: React.FC<MethodologyPageProps> = ({
               >
                 <span>(Wardle & Derakhshan, 2017)</span>
               </button>
-              , NOVARIC® prezanton një model të ri të gazetarisë llogaridhënëse. Kjo faqe shpalos metodologjinë tonë unike dhe kornizën e përgjegjësisë që udhëheq çdo analizë, verifikim faktesh dhe vlerësim të kryer nga platforma jonë.
+              , {renderWithSuperscript('NOVARIC®')} prezanton një model të ri të gazetarisë llogaridhënëse. Kjo faqe shpalos metodologjinë tonë unike dhe kornizën e përgjegjësisë që udhëheq çdo analizë, verifikim faktesh dhe vlerësim të kryer nga platforma jonë.
             </p>
           </div>
         </section>
@@ -455,7 +451,7 @@ export const MethodologyPage: React.FC<MethodologyPageProps> = ({
               Gjurmueshmëri e Plotë e Dyanshme
             </span>
             <h4 className="text-xl sm:text-2xl font-bold">
-              Kodi i Standardeve NOVARIC® (Standards Hub)
+              {renderWithSuperscript('Kodi i Standardeve NOVARIC® (Standards Hub)')}
             </h4>
             <p className="text-slate-300 text-sm leading-relaxed">
               Çdo hap i kësaj metodologjie auditohet sipas Nenit 1–4 të Kodit të Standardeve. Eksploroni matricën e plotë të përputhshmërisë, qendrën e korrigjimeve dhe regjistrin e inteligjencës artificiale.

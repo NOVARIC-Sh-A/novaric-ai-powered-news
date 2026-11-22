@@ -1,6 +1,7 @@
 import React, { useMemo, useState } from 'react';
 import { CpuChipIcon, ShieldCheckIcon, BeakerIcon, ExclamationTriangleIcon, ChartBarIcon, ShareIcon, CheckIcon, InstagramIcon } from './icons';
 import { renderWithSuperscript } from '../utils/textUtils';
+import { AuthorAvatar, NORA_AI_PHOTO } from './AuthorAvatar';
 import GaugeChart from './GaugeChart';
 import { PieChart } from './PieChart';
 import { RadarChart } from './RadarChart';
@@ -34,7 +35,7 @@ const StatCard: React.FC<{ value: string; label: string; }> = ({ value, label })
 export const NoraAiProfilePage: React.FC<NoraAiProfilePageProps> = ({ onBack }) => {
   const pageTitle = `Profili i Analistes së IA: Nora | NOVARIC®`;
   const pageDescription = "Zbuloni rolin, metodologjinë dhe filozofinë e Norës, analistes së inteligjencës artificiale që fuqizon platformën NOVARIC®.";
-  const pageImageUrl = "https://novaric.wpcomstaging.com/wp-content/uploads/2025/10/Nora-AI.jpeg";
+  const pageImageUrl = NORA_AI_PHOTO;
     
   useSeo(pageTitle, pageDescription, pageImageUrl, window.location.href);
 
@@ -153,11 +154,7 @@ export const NoraAiProfilePage: React.FC<NoraAiProfilePageProps> = ({ onBack }) 
         </div>
         
         <header className="text-center mb-10">
-          <img 
-            src={pageImageUrl}
-            alt="Përfaqësimi artistik i Norës, analistes së inteligjencës artificiale"
-            className="w-32 h-32 rounded-full object-cover border-4 border-primary-500/50 shadow-lg mb-4 mx-auto"
-          />
+          <AuthorAvatar name="Nora AI" size={128} className="border-4 border-primary-500/50 shadow-lg mb-4 mx-auto" />
           <h1 className="text-3xl sm:text-4xl font-extrabold text-slate-800 dark:text-slate-100">
             Nora (AI)
           </h1>

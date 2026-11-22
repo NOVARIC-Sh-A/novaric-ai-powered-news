@@ -15,7 +15,7 @@ export const stripHighlights = (text: string): string => {
 
 /**
  * Renders a string with the canonical NOVARIC® registered symbol styling.
- * Applies .novaric-brand wrapper and .registered-mark superscript (58% size, cap-height, no gap).
+ * Applies .novaric-brand wrapper and .registered-mark superscript (0.55em, no gap before it).
  * Standard HTML pattern: <span class="novaric-brand">NOVARIC<sup aria-hidden="true" class="registered-mark">®</sup></span>
  * Authority: NOVARIC-BRAND-CONTROL-MASTER.md §6.1 / §6.2 (amended 2026-08-20)
  *
@@ -28,8 +28,9 @@ export const renderWithSuperscript = (text: string, symbol: string = '®'): Reac
         return text;
     }
     // Using React.createElement to avoid JSX syntax in a .ts file.
-    return text.split(symbol).map((part, index, arr) => {
-        const match = part.match(/^(.*?)(NOVARIC)$/);
+    return text.split(symbol).map((rawPart, index, arr) => {
+        const part = index < arr.length - 1 ? rawPart.replace(/\s+$/, '') : rawPart;
+        const match = part.match(/^(.*?)(NOVARIC|MARAGON|PARAGON)$/);
         if (match && index < arr.length - 1) {
             const prefix = match[1];
             return React.createElement(
@@ -39,7 +40,7 @@ export const renderWithSuperscript = (text: string, symbol: string = '®'): Reac
                 React.createElement(
                     'span',
                     { className: 'novaric-brand' },
-                    'NOVARIC',
+                    match[2],
                     React.createElement('sup', { className: 'registered-mark', 'aria-hidden': 'true' }, symbol)
                 )
             );

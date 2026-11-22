@@ -94,7 +94,8 @@ export interface MaragonPhotoLicenceRecord {
   imageUrl: string;
   credit: string;
   writtenReuseLicence: false;
-  linkedByUrl: true;
+  /** False when the file is stored on this site (the 22 Nov 2026 portraits). */
+  linkedByUrl: boolean;
   precedent_sq: string;
   precedent_en: string;
   status: 'pending_owner_confirmation' | 'recorded_official' | 'placeholder';

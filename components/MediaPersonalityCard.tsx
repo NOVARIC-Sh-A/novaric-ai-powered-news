@@ -26,7 +26,7 @@ import {
   type DisplayMode,
 } from './maragon/maragonPresenterUi';
 import { maragonInternalPreview } from '../utils/maragonPublication';
-import { resolvePresentableMediaPhoto } from '../utils/officialMediaPhoto';
+import { ownerSuppliedMediaPortraitSrcSet, resolvePresentableMediaPhoto, type OfficialMediaPhotoSource } from '../utils/officialMediaPhoto';
 import { mediaProfilePath } from '../utils/mediaNavigation';
 import { ProfileShareButton } from './figurat-politike/ProfileShareButton';
 
@@ -83,16 +83,14 @@ export const MediaPersonalityCard: React.FC<MediaPersonalityCardProps> = ({
   const published = isMaragonAssessmentPublished({ ...(profile as any), maragonAssessmentStatus: status });
 
   const displayName = rec ? formatNameSurname(rec.givenName, rec.familyName) : nameSurnameFromFull(profile.name);
-  // Official-channel photos only (utils/officialMediaPhoto.ts). Anything else shows the silhouette.
-  const gridaPortrait = profile.id === 'vip_m2' && profile.imageUrl
-    ? {
-        url: profile.imageUrl,
-        credit: 'Portret institucional. Burimi: Kuvendi i Shqipërisë. Krediti: Në verifikim.',
-        objectPosition: 'center 20%',
-      }
-    : null;
-  const officialPhoto = gridaPortrait || resolvePresentableMediaPhoto(
-    rec ? rec.photo : { imageUrl: profile.imageUrl, photoPending: (profile as { photoPending?: boolean }).photoPending, officialSource: (profile as { officialPhoto?: null }).officialPhoto },
+  // Official-channel photos, or one of the 24 owner-supplied local portraits. Anything else shows the silhouette.
+  const officialPhoto = resolvePresentableMediaPhoto(
+    rec ? rec.photo : {
+      imageUrl: profile.imageUrl,
+      photoPending: (profile as { photoPending?: boolean }).photoPending,
+      officialSource: (profile.officialPhoto ?? null) as Partial<OfficialMediaPhotoSource> | null,
+      awaitingOwnerConfirmation: (profile as { awaitingOwnerConfirmation?: boolean | null }).awaitingOwnerConfirmation,
+    },
     String(profile.id),
   );
   const photoUrl = officialPhoto ? officialPhoto.url : null;
@@ -151,7 +149,7 @@ export const MediaPersonalityCard: React.FC<MediaPersonalityCardProps> = ({
           <div className="w-[140px] h-[140px] rounded-full p-[3px]" style={{ backgroundColor: CYAN }}>
             <div className="w-full h-full rounded-full overflow-hidden bg-white">
               {showPhoto ? (
-                <img src={photoUrl as string} alt={displayName} className="w-full h-full object-cover" style={{ objectPosition: officialPhoto?.objectPosition }} referrerPolicy="no-referrer" loading="lazy" onError={() => setImgFailed(true)} />
+                <img src={photoUrl as string} srcSet={ownerSuppliedMediaPortraitSrcSet(photoUrl)} sizes="140px" alt={displayName} className="w-full h-full object-cover" style={{ objectPosition: officialPhoto?.objectPosition }} referrerPolicy="no-referrer" loading="lazy" onError={() => setImgFailed(true)} />
               ) : (
                 <AwaitingPhoto label={t.photoPending} />
               )}

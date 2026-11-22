@@ -8,7 +8,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import { applyOgToIndexHtml, listingOg, mediaListingOg, mediaProfileOg, profileOg } from '../utils/ogDocument';
 import { mediaProfilesData } from '../data/mediaProfiles';
-import { forecastSeo, homeSeo, maragonMockupSeo, newsArticleSeo, newsArticleShellName, newsListSeo, NewsSeoInput } from '../utils/routeSeo';
+import { forecastSeo, homeSeo, maragonMockupSeo, methodologySeo, newsArticleSeo, newsArticleShellName, newsListSeo, NewsSeoInput } from '../utils/routeSeo';
 import { publicationTimeMs } from '../utils/newsListOrder';
 
 const root = path.resolve(path.dirname(new URL(import.meta.url).pathname), '..');
@@ -48,6 +48,10 @@ for (const profile of mediaProfilesData) {
   mediaWritten += 1;
 }
 
+const methodologyDir = path.join(dist, 'metodologjia');
+fs.mkdirSync(methodologyDir, { recursive: true });
+fs.writeFileSync(path.join(methodologyDir, 'index.html'), applyOgToIndexHtml(shell, methodologySeo()));
+
 const forecastDir = path.join(dist, 'forecast-2027');
 fs.mkdirSync(forecastDir, { recursive: true });
 fs.writeFileSync(path.join(forecastDir, 'index.html'), applyOgToIndexHtml(shell, forecastSeo()));
@@ -79,6 +83,7 @@ const sitemapPages: string[] = [
   'https://media.novaric.al/forecast-2027',
   'https://media.novaric.al/figurat-politike',
   'https://media.novaric.al/personalitete-mediatike',
+  'https://media.novaric.al/metodologjia',
   ...mediaProfilesData
     .map((profile) => (profile.slug || '').trim())
     .filter((slug) => slug && !slug.includes('/') && !slug.includes('..'))

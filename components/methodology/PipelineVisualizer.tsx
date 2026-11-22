@@ -18,6 +18,7 @@ import {
   Info,
 } from 'lucide-react';
 import { MethodologyStep, MethodologyActorType } from '../../types/methodology';
+import { renderWithSuperscript } from '../../utils/textUtils';
 
 interface PipelineVisualizerProps {
   steps: MethodologyStep[];
@@ -68,7 +69,7 @@ export const PipelineVisualizer: React.FC<PipelineVisualizerProps> = ({
           Sinergjia Hermeneutike mes Inteligjencës Artificiale dhe Mbikëqyrjes Njerëzore
         </h3>
         <p className="text-slate-600 dark:text-slate-300 text-sm sm:text-base leading-relaxed max-w-4xl">
-          Në qendër të metodologjisë së NOVARIC® qëndron një proces me tre hapa që bashkon shkallën e llogaritjes algoritmike me thellësinë kritike të mendimit editorial njerëzor.
+          {renderWithSuperscript('Në qendër të metodologjisë së NOVARIC® qëndron një proces me tre hapa që bashkon shkallën e llogaritjes algoritmike me thellësinë kritike të mendimit editorial njerëzor.')}
         </p>
       </div>
 

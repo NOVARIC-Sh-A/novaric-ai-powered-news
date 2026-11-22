@@ -1,6 +1,8 @@
 import React from 'react';
 import { JsonLd } from './JsonLd';
 import { MethodologyPage } from './methodology/MethodologyPage';
+import { useSeo } from '../hooks/useSeo';
+import { DEFAULT_OG_IMAGE, METHODOLOGY_AUTHOR, METHODOLOGY_DESCRIPTION, METHODOLOGY_DOCUMENT_TITLE, methodologySeo } from '../utils/routeSeo';
 
 interface AnalysisMethodologyPageProps {
   onBack: () => void;
@@ -17,35 +19,22 @@ export const AnalysisMethodologyPage: React.FC<AnalysisMethodologyPageProps> = (
   onNavigateToArticleMetricsExplained,
   onNavigateToStandards,
 }) => {
-  const jsonLdData = {
-    "@context": "https://schema.org",
-    "@type": "Article",
-    "headline": "Metodologjia & Korniza e Përgjegjësisë: Sinergjia Hermeneutike mes Njeriut dhe Makinerisë",
-    "author": {
-      "@type": "Person",
-      "name": "Dr Alban Gj. THIKA"
-    },
-    "publisher": {
-      "@type": "Organization",
-      "name": "NOVARIC®",
-      "logo": {
-        "@type": "ImageObject",
-        "url": "https://novaricstorage.blob.core.windows.net/media/NOVARIC-Logos_Master-W+B-R_12062025_150x150.png"
-      }
-    },
-    "datePublished": "2025-09-01T22:00:00+02:00",
-    "dateModified": "2026-09-12T10:00:00+02:00",
-    "description": "Një shpjegim i thelluar i metodologjisë hibride të NOVARIC® për verifikimin e fakteve, e cila integron fuqinë e IA-së me mbikëqyrjen kritike njerëzore, në përputhje me standardet evropiane si DSA dhe EMFA për të luftuar dezinformimin.",
-    "mainEntityOfPage": {
-      "@type": "WebPage",
-      "@id": "https://media.novaric.al/?page=analysisMethodology"
-    },
-    "keywords": "Metodologji Verifikimi, Akti i Shërbimeve Dixhitale, DSA, EMFA, IA dhe Gazetaria, Analizë Hibride, Përgjegjësi Mediatike, Dezinformim Shqipëri, Mbikëqyrje Njerëzore, Etika Dixhitale"
-  };
+  const seo = methodologySeo();
+  useSeo(
+    METHODOLOGY_DOCUMENT_TITLE,
+    METHODOLOGY_DESCRIPTION,
+    DEFAULT_OG_IMAGE,
+    seo.url,
+    'sq_AL',
+    seo.imageAlt,
+    'article',
+    METHODOLOGY_AUTHOR,
+  );
+  const jsonLdData = seo.jsonLd;
 
   return (
     <div className="w-full">
-      <JsonLd data={jsonLdData} />
+      <JsonLd data={jsonLdData as object} />
       <MethodologyPage
         onBack={onBack}
         onNavigateToStandards={onNavigateToStandards}

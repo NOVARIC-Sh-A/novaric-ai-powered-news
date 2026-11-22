@@ -60,11 +60,10 @@ describe('Grida Duma is a MARAGON media profile', () => {
     assert.equal(draftCoding.episodes.length, 8);
   });
 
-  it('uses the Assembly portrait and the unverified credit', () => {
-    const photo = 'https://kuvendiwebfiles.blob.core.windows.net/webfiles/gridashqina_foto.jpg';
-    assert.equal(card?.imageUrl, photo);
-    assert.equal(card?.photoStatus, 'Burimi i fotografisë: Në verifikim');
-    assert.equal(card?.photoLicence, null);
-    assert.equal(person?.photo.imageUrl, photo);
+  it('shows the owner-supplied portrait and leaves the research dossier photo unchanged', () => {
+    assert.equal(card?.imageUrl, '/media-personalities/portraits/grida-duma-450x600.jpg');
+    assert.equal(card?.photoPending, false);
+    assert.equal(card?.photoCredit, 'Owner-supplied, 22 Nov 2026 (source to be recorded)');
+    assert.equal(person?.photo.imageUrl, 'https://kuvendiwebfiles.blob.core.windows.net/webfiles/gridashqina_foto.jpg');
   });
 });

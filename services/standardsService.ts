@@ -78,7 +78,7 @@ export const FALLBACK_CLAUSES: StandardClause[] = [
     text: 'Metodologjia jonë për përzgjedhjen, hulumtimin dhe përfundimin e hetimeve është plotësisht publike dhe e aksesueshme.',
     status: 'compliant',
     status_label_sq: 'PËRPUTHSHMËRI E PLOTË',
-    evidence_url: '/analysisMethodology',
+    evidence_url: '/metodologjia',
     evidence_title: 'Manuali i Procedurave të Verifikimit',
     owner: 'Redaksia e Verifikimit',
     last_verified_at: '2026-08-28T08:30:00Z',

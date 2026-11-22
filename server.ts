@@ -649,6 +649,19 @@ app.use((req: Request, res: Response, next) => {
     next();
     return;
   }
+  const pathOnly = (req.path || '/').replace(/\/+$/, '') || '/';
+  const page = typeof req.query.page === 'string' ? req.query.page : '';
+  if (pathOnly === '/' && page === 'analysisMethodology') {
+    res.redirect(301, '/metodologjia');
+    return;
+  }
+  next();
+});
+app.use((req: Request, res: Response, next) => {
+  if (req.method !== 'GET' && req.method !== 'HEAD') {
+    next();
+    return;
+  }
   const rel = seoShellRelativePath(req.path, req.url.includes('?') ? req.url.slice(req.url.indexOf('?')) : '');
   if (!rel) {
     next();

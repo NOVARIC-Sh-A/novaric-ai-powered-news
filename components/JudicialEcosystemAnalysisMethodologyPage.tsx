@@ -3,6 +3,7 @@ import { ArticleMetrics, ArticleIntegrityProfileData } from '../types';
 import { calculateArticleMetrics, calculateArticleIntegrityProfile } from '../utils/articleMetricsCalculator';
 import { ArticleTemplate1, ArticleSection, KeyConcept, PullQuote } from './templates/ArticleTemplate1';
 import { renderWithSuperscript } from '../utils/textUtils';
+import { AuthorAvatar } from './AuthorAvatar';
 import { GlossaryComponent } from './Glossary';
 
 interface JudicialEcosystemAnalysisMethodologyPageProps {
@@ -163,20 +164,10 @@ export const JudicialEcosystemAnalysisMethodologyPage: React.FC<JudicialEcosyste
                         <div className="relative flex items-center">
                             {/* Corrected prop name in onClick to onNavigateToNoraAiProfile */}
                             <button onClick={onNavigateToNoraAiProfile} className="focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-500 rounded-full transition-transform hover:scale-105 z-10">
-                                <img 
-                                    src="https://novaric.wpcomstaging.com/wp-content/uploads/2025/10/Nora-AI.jpeg" 
-                                    alt="Përfaqësimi i Nora (AI)"
-                                    className="w-16 h-16 rounded-full object-cover border-4 border-white dark:border-slate-800 shadow-lg"
-                                    title="Nora (AI)"
-                                />
+                                <AuthorAvatar name="Nora AI" size={64} className="border-4 border-white dark:border-slate-800 shadow-lg" />
                             </button>
                             <button onClick={() => onNavigateToVipProfile('vip33')} className="focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-500 rounded-full -ml-5 relative transition-transform hover:scale-105">
-                                <img 
-                                    src="https://novaric.co/wp-content/uploads/2025/10/NOVARIC_Team-Member_A-THIKA_Small.png" 
-                                    alt="Dr Alban Gj. THIKA"
-                                    className="w-16 h-16 rounded-full object-cover border-4 border-white dark:border-slate-800 shadow-lg"
-                                    title="Dr Alban Gj. THIKA"
-                                />
+                                <AuthorAvatar name="Dr. Alban Gj. THIKA" size={64} className="border-4 border-white dark:border-slate-800 shadow-lg" />
                             </button>
                         </div>
                     </div>

@@ -9,6 +9,14 @@ export const FORECAST_TITLE = 'NOVARIC® Forecast 2027';
 export const FORECAST_DESCRIPTION = 'Botimi i parë i NOVARIC® Forecast 2027, 18 nëntor 2026, i nënshkruar nga Dr Alban Gj. THIKA. Nuk është këshillë investimi.';
 export const DEFAULT_OG_IMAGE = 'https://novaric.co/wp-content/uploads/2025/07/NOVARIC-Logos_Master-WB-R_12062025_500x500.webp';
 
+export const METHODOLOGY_PATH = '/metodologjia';
+export const METHODOLOGY_TITLE = 'Metodologjia NOVARIC®: Balancimi i IA-së me Integritetin Gazetarskor';
+export const METHODOLOGY_DOCUMENT_TITLE = `${METHODOLOGY_TITLE} | NOVARIC® Lajme me IA`;
+/** Page subtitle, extended only with the article's own subject so the description is useful in search. */
+export const METHODOLOGY_DESCRIPTION = 'Një qasje transparente ndaj të vërtetës, teknologjisë dhe mirëbesimit publik. Metodologjia e NOVARIC® balancon shkallën e IA-së me integritetin gazetarskor.';
+export const METHODOLOGY_HEADLINE = 'Metodologjia e NOVARIC® dhe Korniza e Përgjegjësisë: Balancimi i Shkallës së IA-së me Integritetin Gazetarskor';
+export const METHODOLOGY_AUTHOR = 'Dr. Alban Gj. THIKA';
+
 export function newsMediaOrganization() {
   return {
     '@type': 'NewsMediaOrganization',
@@ -90,6 +98,29 @@ export function maragonMockupSeo(): OgFields {
       inLanguage: 'sq',
       isAccessibleForFree: true,
     }]),
+  };
+}
+
+export function methodologySeo(): OgFields {
+  const url = `${OG_SITE}${METHODOLOGY_PATH}`;
+  return {
+    title: METHODOLOGY_TITLE,
+    description: METHODOLOGY_DESCRIPTION,
+    url,
+    image: DEFAULT_OG_IMAGE,
+    imageAlt: 'NOVARIC® Lajme me IA',
+    type: 'article',
+    author: METHODOLOGY_AUTHOR,
+    jsonLd: {
+      '@context': 'https://schema.org',
+      '@type': 'Article',
+      headline: METHODOLOGY_HEADLINE,
+      description: METHODOLOGY_DESCRIPTION,
+      inLanguage: 'sq',
+      url,
+      author: { '@type': 'Person', name: METHODOLOGY_AUTHOR },
+      publisher: { '@type': 'Organization', name: 'NOVARIC®' },
+    },
   };
 }
 

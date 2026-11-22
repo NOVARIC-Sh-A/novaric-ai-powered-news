@@ -4,6 +4,7 @@ import {
     BookOpenIcon, AcademicCapIcon, ChainIcon, PresentationChartLineIcon, BeakerIcon, UsersIcon, UserGroupIcon
 } from './icons';
 import { TvShowData } from '../types';
+import { AuthorAvatar } from './AuthorAvatar';
 
 // Consolidated interface to remove duplicate identifiers and make props optional for flexibility.
 interface HeaderMenuProps {
@@ -200,11 +201,7 @@ export const HeaderMenu: React.FC<HeaderMenuProps> = ({ onClose, isMobile = fals
                     ariaLabel="Navigo te Nora (AI) — Analiste & Publikime"
                     isActive={navProps.currentPage === 'noraAiProfile'}
                   >
-                    <img 
-                      src="https://novaric.wpcomstaging.com/wp-content/uploads/2025/10/Nora-AI.jpeg" 
-                      alt="Nora AI" 
-                      className="w-5 h-5 rounded-full object-cover border border-cyan-400 shadow-xs flex-shrink-0" 
-                    />
+                    <AuthorAvatar name="Nora AI" size={20} className="border border-cyan-400 shadow-xs flex-shrink-0" />
                     <span className="font-semibold text-cyan-600 dark:text-cyan-300">Nora (AI) — Analiste & Publikime</span>
                   </MenuButton>
                 )}
@@ -214,11 +211,7 @@ export const HeaderMenu: React.FC<HeaderMenuProps> = ({ onClose, isMobile = fals
                     ariaLabel="Navigo te Profili i Autorit (Dr Alban Gj. THIKA)"
                     isActive={navProps.currentPage === 'authorProfile' || navProps.currentPage === 'profiliIAutorit'}
                   >
-                    <img 
-                      src="https://novaric.co/wp-content/uploads/2025/10/NOVARIC_Team-Member_A-THIKA_Small.png" 
-                      alt="Dr Alban Gj. THIKA" 
-                      className="w-5 h-5 rounded-full object-cover border border-primary-500 shadow-xs flex-shrink-0" 
-                    />
+                    <AuthorAvatar name="Dr. Alban Gj. THIKA" size={20} className="border border-primary-500 shadow-xs flex-shrink-0" />
                     <span className="font-semibold text-primary-600 dark:text-primary-400">Profili i Autorit — Dr Alban Gj. THIKA</span>
                   </MenuButton>
                 )}

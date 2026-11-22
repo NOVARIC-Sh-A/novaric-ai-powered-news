@@ -5,7 +5,7 @@ function withRegistered(text: string) {
   const parts = text.split('®');
   return parts.map((part, index) => (
     <React.Fragment key={`${part}-${index}`}>
-      {part}
+      {index < parts.length - 1 ? part.replace(/\s+$/, '') : part}
       {index < parts.length - 1 ? <sup className="registered-mark">®</sup> : null}
     </React.Fragment>
   ));

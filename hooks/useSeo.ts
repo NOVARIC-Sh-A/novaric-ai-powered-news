@@ -18,7 +18,9 @@ export const useSeo = (
   imageUrl?: string,
   pageUrl?: string,
   locale?: 'sq_AL' | 'en_US',
-  imageAlt?: string
+  imageAlt?: string,
+  type: 'website' | 'article' = 'website',
+  author?: string,
 ) => {
   useEffect(() => {
     document.title = title;
@@ -44,7 +46,8 @@ export const useSeo = (
       document.head.appendChild(canonical);
     }
     canonical.setAttribute('href', shareUrl);
-    setMetaTag('property', 'og:type', 'website');
+    setMetaTag('property', 'og:type', type);
+    if (author) setMetaTag('name', 'author', author);
     setMetaTag('property', 'og:site_name', 'NOVARIC® AI-Powered News');
     setMetaTag('property', 'og:locale', locale || 'sq_AL');
     
@@ -63,5 +66,5 @@ export const useSeo = (
       document.querySelector("meta[name='twitter:image:alt']")?.remove();
     }
 
-  }, [title, description, imageUrl, pageUrl, locale, imageAlt]);
+  }, [title, description, imageUrl, pageUrl, locale, imageAlt, type, author]);
 };
