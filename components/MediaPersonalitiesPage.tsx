@@ -12,6 +12,7 @@ import { LetheModal } from './LetheModal';
 import { HorizonModal } from './HorizonModal';
 import { useLanguage } from '../contexts/LanguageContext';
 import { isMaragonAssessmentPublished, isMediaIdentity, publishableMaragonAnalysis, publishedMaragonAverage } from '../utils/maragonPublication';
+import { compareMaragonNeutral, MARAGON_PUBLIC_RANKING_PERMITTED } from '../utils/maragonBandsOnly';
 import { mergeLocalMediaProfiles } from '../utils/mergeLocalMediaProfiles';
 
 /* --------------------------------------------------------
@@ -297,12 +298,10 @@ export const MediaPersonalitiesPage: React.FC<MediaPersonalitiesPageProps> = ({
         const engagementScore = normalizeEngagement(engagementRate);
         const sentimentScore = normalizeSentiment(sentimentScoreRaw);
 
-        const influenceScore = published ? computeInfluenceScore({
-            maragonAvg: averageMaragonScore,
-            reachScore,
-            engagementScore,
-            sentimentScore
-        }) : null;
+        // An "influence" index built from the MARAGON® average is not defined in signed v1.0 and would
+        // order subjects by a concealed number (§1.2, §3.1, §10). It is not computed for public use.
+        void computeInfluenceScore; void reachScore; void engagementScore; void sentimentScore;
+        const influenceScore: number | null = null;
 
         return {
             ...p,
@@ -315,7 +314,9 @@ export const MediaPersonalitiesPage: React.FC<MediaPersonalitiesPageProps> = ({
         };
     });
 
-    const scoreRankingAvailable = enriched.some(
+    // v1.0 §1.2: "any ranking of subjects against each other" is out of scope; §10 allows bands only.
+    // MARAGON_PUBLIC_RANKING_PERMITTED is false, so the public order is alphabetical.
+    const scoreRankingAvailable: boolean = MARAGON_PUBLIC_RANKING_PERMITTED && enriched.some(
       (profile) => profile.averageMaragonScore !== null || profile.influenceScore !== null
     );
     const effectiveSort = scoreRankingAvailable ? sortMode : 'name';
@@ -330,7 +331,7 @@ export const MediaPersonalitiesPage: React.FC<MediaPersonalitiesPageProps> = ({
     const sorted = [...enriched].sort((a, b) => {
       switch (effectiveSort) {
         case 'maragon': return byMeasuredDesc(a.averageMaragonScore, b.averageMaragonScore) || String(a.name).localeCompare(String(b.name));
-        case 'name': return String(a.name).localeCompare(String(b.name));
+        case 'name': return compareMaragonNeutral(a, b);
         case 'influence':
         default: return byMeasuredDesc(a.influenceScore, b.influenceScore) || String(a.name).localeCompare(String(b.name));
       }

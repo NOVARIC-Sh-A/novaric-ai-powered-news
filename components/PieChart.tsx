@@ -7,9 +7,11 @@ interface PieChartProps {
   data: ChartSegment[];
   size: number; // Diameter of the chart
   title?: string; // Optional accessibility title for the chart figure
+  /** Omit percentages from tooltips (MARAGON® bands-only surfaces, v1.0 §10). */
+  hideValues?: boolean;
 }
 
-export const PieChart: React.FC<PieChartProps> = ({ data, size, title }) => {
+export const PieChart: React.FC<PieChartProps> = ({ data, size, title, hideValues = false }) => {
   if (!data || data.length === 0) {
     return <div style={{ width: size, height: size }} className="flex items-center justify-center text-xs text-slate-400">S'ka të dhëna</div>;
   }
@@ -35,7 +37,7 @@ export const PieChart: React.FC<PieChartProps> = ({ data, size, title }) => {
               r={radius}
               fill={data[0].color}
             >
-              <title>{`${data[0].name}: ${Math.round(data[0].value)}%`}</title>
+              <title>{hideValues ? data[0].name : `${data[0].name}: ${Math.round(data[0].value)}%`}</title>
             </circle>
             {/* Percentage text rendering logic is removed */}
           </g>
@@ -68,7 +70,7 @@ export const PieChart: React.FC<PieChartProps> = ({ data, size, title }) => {
                   d={pathData}
                   fill={segment.color}
                 >
-                  <title>{`${segment.name}: ${Math.round(segment.value)}%`}</title>
+                  <title>{hideValues ? segment.name : `${segment.name}: ${Math.round(segment.value)}%`}</title>
                 </path>
                 {/* Percentage text rendering logic is removed */}
               </g>

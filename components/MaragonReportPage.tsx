@@ -1,9 +1,15 @@
 import React from 'react';
-import { MaragonFullReport, MaragonDimensionScores, MaragonIndicatorScore } from '../types';
-import GaugeChart from './GaugeChart';
+import { MaragonFullReport, MaragonDimensionScores } from '../types';
 import { useLanguage } from '../contexts/LanguageContext';
-import { maragonScoresArePublic, measuredNumber, notAssessedLabel } from '../utils/maragonPublication';
+import { maragonScoresArePublic, notAssessedLabel } from '../utils/maragonPublication';
 import { SIGNED_BENCHMARK_AMENDMENT_IDS } from '../data/maragon/benchmarks';
+import { publishedBand, publishedBandFromKey, publicBandText } from '../utils/maragonBandsOnly';
+import { MaragonBandChip } from './maragon/MaragonBandChip';
+
+interface MaragonReportPageProps {
+  report: MaragonFullReport;
+  onBack: () => void;
+}
 
 /**
  * Reference series on this report are shown only under a signed benchmark amendment.
@@ -15,33 +21,24 @@ export const maragonReportBenchmarksArePublic = (signedIds: readonly string[] = 
   peerAverage: false,
 });
 
-interface MaragonReportPageProps {
-  report: MaragonFullReport;
-  onBack: () => void;
-}
+const DIMENSIONS: Array<{ key: keyof MaragonDimensionScores; label: string }> = [
+  { key: 'Readiness', label: 'Readiness (Gatishmëria)' },
+  { key: 'Aptitude', label: 'Aptitude (Aftësia)' },
+  { key: 'Governance', label: 'Governance (Qeverisja)' },
+  { key: 'OversightNurturing', label: 'Oversight Nurturing (Kujdesi Mbikëqyrës)' },
+];
 
-const DimensionScores: React.FC<{ scores: MaragonDimensionScores; title: string }> = ({ scores, title }) => {
-    const axes = [
-        { key: 'Readiness' as const, label: 'Readiness' },
-        { key: 'Aptitude' as const, label: 'Aptitude' },
-        { key: 'Governance' as const, label: 'Governance' },
-        { key: 'OversightNurturing' as const, label: 'Oversight' },
-    ];
-    return (
-    <div className="p-4 bg-slate-50 dark:bg-slate-900/50 rounded-lg">
-        <h3 className="font-semibold text-center mb-4">{title}</h3>
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-            {axes.map((axis) => {
-                const value = measuredNumber(scores[axis.key]);
-                return value === null ? null : (
-                    <div key={axis.key} className="flex flex-col items-center"><GaugeChart value={value} label={axis.label} /></div>
-                );
-            })}
-        </div>
+/** Bands only (v1.0 §10): no gauge, number, percentage or score-proportional width. */
+const DimensionBands: React.FC<{ scores: MaragonDimensionScores; gateOpen: boolean; title: string; lang: 'sq' | 'en' }> = ({ scores, gateOpen, title, lang }) => (
+  <div className="p-4 bg-slate-50 dark:bg-slate-900/50 rounded-lg">
+    <h3 className="font-semibold text-center mb-4">{title}</h3>
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+      {DIMENSIONS.map((axis) => (
+        <MaragonBandChip key={axis.key} label={axis.label} band={publishedBand(gateOpen, scores?.[axis.key])} lang={lang} />
+      ))}
     </div>
-    );
-};
-
+  </div>
+);
 
 export const MaragonReportPage: React.FC<MaragonReportPageProps> = ({ report, onBack }) => {
   const { language, toggleLanguage } = useLanguage();
@@ -49,7 +46,7 @@ export const MaragonReportPage: React.FC<MaragonReportPageProps> = ({ report, on
   const unassessed = notAssessedLabel(lang);
   const scoresPublic = maragonScoresArePublic(report);
   const { compositeScore, entityType, entityId, benchmarks, indicatorDetails } = report;
-  const composite = scoresPublic ? measuredNumber(compositeScore) : null;
+  const compositeBand = publishedBand(scoresPublic, compositeScore);
   const benchmarkGate = maragonReportBenchmarksArePublic();
 
   return (
@@ -68,13 +65,11 @@ export const MaragonReportPage: React.FC<MaragonReportPageProps> = ({ report, on
           <p className="text-lg text-slate-600 dark:text-slate-400">Analizë e Detajuar për {entityType === 'individual' ? 'Individ' : 'Emision'}: {entityId}</p>
         </header>
 
-        <section>
-          <h2 className="text-2xl font-semibold text-center mb-4">Pikët e Përgjithshme</h2>
+        <section aria-label={lang === 'en' ? 'Overall band' : 'Brezi i përgjithshëm'}>
+          <h2 className="text-2xl font-semibold text-center mb-4">{lang === 'en' ? 'Overall band' : 'Brezi i Përgjithshëm'}</h2>
           <div className="flex justify-center">
-            <div className="relative">
-                <div className="w-48 h-48 rounded-full bg-slate-100 dark:bg-slate-700 flex items-center justify-center">
-                    <span className={`${composite === null ? 'text-xl px-4 text-center' : 'text-7xl'} font-bold text-primary-600 dark:text-primary-400`}>{composite === null ? unassessed : composite}</span>
-                </div>
+            <div className="w-48 h-48 rounded-full bg-slate-100 dark:bg-slate-700 flex items-center justify-center" data-maragon-band={compositeBand?.band ?? 'not_assessed'}>
+              <span className="text-xl px-4 text-center font-bold text-primary-600 dark:text-primary-400">{publicBandText(compositeBand, lang)}</span>
             </div>
           </div>
         </section>
@@ -82,29 +77,31 @@ export const MaragonReportPage: React.FC<MaragonReportPageProps> = ({ report, on
         {scoresPublic ? (
         <>
         <section>
-            <h2 className="text-2xl font-semibold text-center mb-4">Ndarja e Pikëve Sipas Dimensioneve</h2>
-            <DimensionScores scores={report} title="Pikët Aktuale" />
+            <h2 className="text-2xl font-semibold text-center mb-4">{lang === 'en' ? 'Bands by dimension' : 'Brezat sipas Dimensioneve'}</h2>
+            <DimensionBands scores={report} gateOpen={scoresPublic} title={lang === 'en' ? 'Current bands' : 'Brezat aktuale'} lang={lang} />
         </section>
 
         {benchmarkGate.standard || benchmarkGate.peerAverage ? (
         <section>
             <h2 className="text-2xl font-semibold text-center mb-4">Krahasimi (Benchmark)</h2>
             <div className="space-y-6">
-                {benchmarkGate.peerAverage ? <DimensionScores scores={benchmarks.peerAverage} title="Mesatarja e Kolegëve" /> : null}
-                {benchmarkGate.standard ? <DimensionScores scores={benchmarks.standardAdherence} title="Përputhshmëria me Standardin" /> : null}
+                {benchmarkGate.peerAverage ? <DimensionBands scores={benchmarks.peerAverage} gateOpen={scoresPublic} title="Mesatarja e Kolegëve" lang={lang} /> : null}
+                {benchmarkGate.standard ? <DimensionBands scores={benchmarks.standardAdherence} gateOpen={scoresPublic} title="Përputhshmëria me Standardin" lang={lang} /> : null}
             </div>
         </section>
         ) : null}
 
         <section>
-            <h2 className="text-2xl font-semibold text-center mb-4">Detajet e Treguesve</h2>
+            <h2 className="text-2xl font-semibold text-center mb-4">{lang === 'en' ? 'Indicators' : 'Detajet e Treguesve'}</h2>
             <div className="p-4 bg-slate-50 dark:bg-slate-900/50 rounded-lg space-y-2">
-                {Object.entries(indicatorDetails).map(([key, value]) => {
-                    const score = measuredNumber((value as MaragonIndicatorScore).score);
+                {Object.entries(indicatorDetails || {}).map(([key, value]) => {
+                    // Only a stored band key is shown. Numeric `score` values (the legacy mock uses a 0–3
+                    // scale that v1.0 does not define) are never read or converted for display.
+                    const band = publishedBandFromKey(scoresPublic, (value as { band?: unknown })?.band);
                     return (
-                    <div key={key} className="flex justify-between text-sm p-2 rounded bg-white dark:bg-slate-800">
+                    <div key={key} className="flex justify-between text-sm p-2 rounded bg-white dark:bg-slate-800" data-maragon-band={band?.band ?? 'not_assessed'}>
                         <span className="font-mono font-semibold">{key}</span>
-                        <span>{score === null ? unassessed : `Pikët: ${score}`}</span>
+                        <span>{publicBandText(band, lang)}</span>
                     </div>
                     );
                 })}

@@ -1,19 +1,17 @@
 import React, { useState, useMemo, useEffect } from 'react';
 import { VipProfile, ParagonEntry } from '../types';
-import { RadarChart } from './RadarChart';
 import { ChevronDownIcon } from './icons';
-import { PieChart } from './PieChart';
 import { formatPersonName } from '../utils/formatPersonName';
 import { useLanguage } from '../contexts/LanguageContext';
 import {
   maragonScoresArePublic,
-  measuredNumber,
   notAssessedLabel,
   publishableMaragonAnalysis,
-  publishedSeries,
 } from '../utils/maragonPublication';
 import { MaragonAnalysisView } from './maragon/MaragonDossierView';
 import { isMediaProfile } from '../utils/maragonPublication';
+import { publishedBand } from '../utils/maragonBandsOnly';
+import { MaragonBandChip } from './maragon/MaragonBandChip';
 
 interface PerformanceAnalysisPageProps {
     onBack: () => void;
@@ -22,23 +20,9 @@ interface PerformanceAnalysisPageProps {
     onProfileSelect: (page: 'tvPersonalitiesAnalysis', id: string | number) => void;
 }
 
-const DimensionDetail: React.FC<{ category: ParagonEntry; unassessedLabel: string }> = ({ category, unassessedLabel }) => {
-    const score = measuredNumber(category.score);
-    const peer = measuredNumber(category.peerAverage);
-    const benchmark = measuredNumber(category.globalBenchmark);
-    if (score === null && peer === null && benchmark === null) {
-        return (
-            <div className="p-4 bg-slate-50 dark:bg-slate-800">
-                <p className="text-sm font-semibold text-slate-700 dark:text-slate-200">{unassessedLabel}</p>
-            </div>
-        );
-    }
-    const slices = [
-        score === null ? null : { label: 'Vlerësimi', value: score, color: '#e4191e', text: 'text-primary-600 dark:text-primary-400' },
-        peer === null ? null : { label: 'Mes. e Kolegëve', value: peer, color: '#3b82f6', text: 'text-slate-700 dark:text-slate-300' },
-        benchmark === null ? null : { label: 'Standardi Global', value: benchmark, color: '#22c55e', text: 'text-green-600 dark:text-green-400' },
-    ].filter((slice): slice is { label: string; value: number; color: string; text: string } => slice !== null);
-
+/** Bands only (v1.0 §10). Peer-average and "global standard" series are not shown (no signed source; AM-10 unsigned). */
+const DimensionDetail: React.FC<{ category: ParagonEntry; unassessedLabel: string; gateOpen: boolean }> = ({ category, unassessedLabel, gateOpen }) => {
+    const band = publishedBand(gateOpen, category.score);
     return (
         <div className="p-4 space-y-3 bg-slate-50 dark:bg-slate-800">
             <p className="text-sm text-slate-600 dark:text-slate-400 italic">{category.description || ''}</p>
@@ -46,15 +30,7 @@ const DimensionDetail: React.FC<{ category: ParagonEntry; unassessedLabel: strin
                 <p className="font-medium text-blue-800 dark:text-blue-200">Komenti i Analizës:</p>
                 <p className="text-sm text-blue-700 dark:text-blue-300">{category.commentary || unassessedLabel}</p>
             </div>
-            <div className="flex flex-wrap justify-around text-center text-sm pt-2 gap-4">
-                {slices.map((slice) => (
-                    <div key={slice.label} className="flex flex-col items-center">
-                        <PieChart data={[{ name: slice.label, value: slice.value, color: slice.color }, { name: 'Gap', value: 100 - slice.value, color: '#f1f5f9' }]} size={80} />
-                        <p className={`font-bold text-lg mt-2 ${slice.text}`}>{slice.value}<span className="text-xs">/100</span></p>
-                        <p className="font-semibold text-xs">{slice.label}</p>
-                    </div>
-                ))}
-            </div>
+            <MaragonBandChip label="Vlerësimi / Assessment" band={band} />
         </div>
     );
 };
@@ -144,50 +120,6 @@ const TvPersonalitiesAnalysisBody: React.FC<PerformanceAnalysisPageProps> = ({ o
     const assessmentPublished = maragonScoresArePublic(selectedAnalysis);
     // Retired seven-label mock rows (v1.0 §1.3, §3.6) are never read for display.
     const legacyRows = publishableMaragonAnalysis(selectedAnalysis);
-    const axisLabels = legacyRows.map(a => a.dimension);
-    const subjectSeries = publishedSeries(selectedAnalysis, legacyRows.map(a => a.score));
-    const peerSeries = publishedSeries(selectedAnalysis, legacyRows.map(a => a.peerAverage));
-    const benchmarkSeries = publishedSeries(selectedAnalysis, legacyRows.map(a => a.globalBenchmark));
-    const radarDatasets = [
-        subjectSeries ? {
-            label: selectedAnalysis?.name || '',
-            data: subjectSeries,
-            backgroundColor: 'rgba(228, 25, 30, 0.2)',
-            borderColor: 'rgba(228, 25, 30, 1)',
-            borderWidth: 2,
-            pointBackgroundColor: 'rgba(228, 25, 30, 1)',
-            pointBorderColor: '#fff',
-            pointHoverBackgroundColor: '#fff',
-            pointHoverBorderColor: 'rgba(228, 25, 30, 1)',
-        } : null,
-        peerSeries ? {
-            label: 'Mesatarja e Kolegëve',
-            data: peerSeries,
-            backgroundColor: 'rgba(54, 162, 235, 0.2)',
-            borderColor: 'rgba(54, 162, 235, 1)',
-            borderWidth: 2,
-            pointBackgroundColor: 'rgba(54, 162, 235, 1)',
-            pointBorderColor: '#fff',
-            pointHoverBackgroundColor: '#fff',
-            pointHoverBorderColor: 'rgba(54, 162, 235, 1)',
-        } : null,
-        benchmarkSeries ? {
-            label: 'Standardi Global',
-            data: benchmarkSeries,
-            backgroundColor: 'rgba(75, 192, 192, 0.2)',
-            borderColor: 'rgba(75, 192, 192, 1)',
-            borderWidth: 2,
-            pointBackgroundColor: 'rgba(75, 192, 192, 1)',
-            pointBorderColor: '#fff',
-            pointHoverBackgroundColor: '#fff',
-            pointHoverBorderColor: 'rgba(75, 192, 192, 1)',
-        } : null,
-    ].filter((dataset): dataset is NonNullable<typeof dataset> => dataset !== null);
-
-    const radarChartData = axisLabels.length > 0 ? {
-        labels: axisLabels,
-        datasets: radarDatasets,
-    } : null;
 
     return (
         <main className="flex-grow container mx-auto px-4 py-8">
@@ -228,18 +160,15 @@ const TvPersonalitiesAnalysisBody: React.FC<PerformanceAnalysisPageProps> = ({ o
                   <MaragonAnalysisView profileId={selectedAnalysis.id} name={formatPersonName(selectedAnalysis.name)} />
                 )}
 
-                {assessmentPublished && selectedAnalysis && !isMediaProfile(selectedAnalysis) && radarChartData && (
+                {assessmentPublished && selectedAnalysis && !isMediaProfile(selectedAnalysis) && legacyRows.length > 0 && (
                      <section className="mb-12 p-6 bg-slate-50 dark:bg-slate-900/50 rounded-xl shadow-inner">
-                        <h2 className="text-2xl font-bold text-center text-slate-800 dark:text-slate-200 mb-2">
-                          {assessmentPublished
-                            ? `Krahasimi Vizual i Performancës për ${formatPersonName(selectedAnalysis.name)}`
-                            : unassessedLabel}
+                        <h2 className="text-2xl font-bold text-center text-slate-800 dark:text-slate-200 mb-4">
+                          {`Brezat MARAGON® për ${formatPersonName(selectedAnalysis.name)}`}
                         </h2>
-                        {!assessmentPublished && (
-                          <p className="text-center text-sm text-slate-500 dark:text-slate-400 mb-6">{formatPersonName(selectedAnalysis.name)}</p>
-                        )}
-                        <div className="max-w-xl mx-auto">
-                           <RadarChart data={radarChartData} axesOnly={!assessmentPublished} />
+                        <div className="max-w-xl mx-auto space-y-3">
+                          {legacyRows.map(row => (
+                            <MaragonBandChip key={row.dimension} label={row.dimension} band={publishedBand(assessmentPublished, row.score)} />
+                          ))}
                         </div>
                     </section>
                 )}
@@ -259,7 +188,7 @@ const TvPersonalitiesAnalysisBody: React.FC<PerformanceAnalysisPageProps> = ({ o
                                         <ChevronDownIcon className={`w-6 h-6 text-slate-500 dark:text-slate-400 transition-transform ${openDimension === category.dimension ? 'rotate-180' : ''}`} />
                                     </button>
                                     {openDimension === category.dimension && (
-                                        <DimensionDetail category={category} unassessedLabel={unassessedLabel} />
+                                        <DimensionDetail category={category} unassessedLabel={unassessedLabel} gateOpen={assessmentPublished} />
                                     )}
                                 </div>
                             ))}

@@ -140,7 +140,7 @@ export const TvShowPage: React.FC<TvShowPageProps> = ({ tvShow, profiles, onBack
             <h3 className="text-xl font-semibold text-slate-800 dark:text-slate-200 mb-4 text-center">Përmbledhje MARAGON®</h3>
             <div className="p-4 bg-slate-50 dark:bg-slate-900/50 rounded-lg shadow-inner">
                 {scoresPublic && maragonSummary ? (
-                  <MaragonSummaryDisplay scores={maragonSummary} />
+                  <MaragonSummaryDisplay scores={maragonSummary} gateOpen={scoresPublic} />
                 ) : (
                   <p className="text-center text-lg font-semibold text-slate-700 dark:text-slate-200">{unassessed}</p>
                 )}

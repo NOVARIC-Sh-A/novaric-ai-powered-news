@@ -87,7 +87,10 @@ describe('MARAGON scores stay gated on the remaining surfaces', () => {
     assert.match(comparison, /isMaragonAssessmentPublished/);
     assert.doesNotMatch(comparison, /\?\? 0/);
     assert.doesNotMatch(comparison, /averageMaragonScore \/ 10/);
-    assert.match(ranking, /rankableMaragonScore/);
+    // UD-19 (t329u): bands only, no ranking (v1.0 §1.2, §3.1, §10). The list is gated and alphabetical.
+    assert.match(ranking, /maragonScoresArePublic/);
+    assert.match(ranking, /compareMaragonNeutral/);
+    assert.doesNotMatch(ranking, /rankableMaragonScore/);
     assert.doesNotMatch(ranking, /\?\? 0/);
     assert.match(presenter, /isMaragonAssessmentPublished/);
   });
