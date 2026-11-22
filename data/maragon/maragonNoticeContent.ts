@@ -3,7 +3,7 @@
  * MARAGON® — Notice on assessments, methodology and rights
  *
  * Single source for the public page, the contextual notices and the review documents
- * (RPT-COM-MARAGON-NOTICE-PAGE-v0.1-20261122). Albanian is primary; English is a faithful version.
+ * (RPT-COM-MARAGON-NOTICE-PAGE-v0.2-20261123). Albanian is primary; English is a faithful version.
  *
  * STATUS: Draft for legal and editorial review. Not approved. Not published.
  * The page and its links stay hidden from the public until `status` is
@@ -16,6 +16,8 @@
  *
  * Inline links use [text](href). Allowed hrefs are listed in MARAGON_NOTICE_ALLOWED_HREFS.
  */
+
+import { MARAGON_BAND_KEYS, MARAGON_BAND_LABELS } from '../../utils/maragonPublication';
 
 export type NoticeLang = 'sq' | 'en';
 
@@ -42,9 +44,9 @@ export const MARAGON_NOTICE_QUERY_PAGE = 'maragonNotice';
 export const MARAGON_NOTICE_DOCUMENT_ID = 'RPT-COM-MARAGON-NOTICE-PAGE';
 
 export const MARAGON_NOTICE_META = {
-  version: '0.1',
+  version: '0.2',
   status: 'draft_for_legal_and_editorial_review' as MaragonNoticeStatus,
-  draftedOn: '2026-11-22',
+  draftedOn: '2026-11-23',
   /** Set only by Dr Alban Gj. THIKA after the legal and editorial review is recorded. */
   approval: null as MaragonNoticeApproval | null,
   /** Set only when the page actually goes live. */
@@ -77,6 +79,58 @@ export const MARAGON_NOTICE_ALLOWED_HREFS = [
   '/personalitete-mediatike',
 ] as const;
 
+/** Link labels approved by Dr Alban Gj. THIKA (23.11.2026). They render only when the page is live. */
+export const MARAGON_NOTICE_LINK_LABELS = {
+  footer: 'Njoftim MARAGON®',
+  profile: { sq: 'Mbi vlerësimin dhe të drejtat tuaja', en: 'About the assessment and your rights' },
+} as const;
+
+/**
+ * Correction and review request channel (B-01). null = not confirmed.
+ * contact@novaric.al is the company's verified general email, but it is NOT described as the
+ * MARAGON® request channel until mailbox access, a responsible person, a backup and request
+ * logging are confirmed in writing. Names are entered by the owner only; none are invented here.
+ */
+export interface MaragonRequestChannel {
+  /** mailto: or https: address of the confirmed channel. */
+  href: string;
+  label: string;
+  mailboxAccessConfirmed: boolean;
+  responsiblePersonConfirmed: boolean;
+  backupConfirmed: boolean;
+  requestLoggingConfirmed: boolean;
+  confirmedOn: string;
+  reference: string;
+}
+
+export const MARAGON_REQUEST_CHANNEL: MaragonRequestChannel | null = null;
+
+export function isRequestChannelConfirmed(channel: MaragonRequestChannel | null = MARAGON_REQUEST_CHANNEL): channel is MaragonRequestChannel {
+  return !!channel
+    && /^(mailto:|https:\/\/)/.test(channel.href)
+    && !!channel.label.trim()
+    && channel.mailboxAccessConfirmed
+    && channel.responsiblePersonConfirmed
+    && channel.backupConfirmed
+    && channel.requestLoggingConfirmed
+    && /^\d{4}-\d{2}-\d{2}$/.test(channel.confirmedOn)
+    && !!channel.reference.trim();
+}
+
+/** Token replaced by the confirmed channel, or by an internal fail-closed marker. */
+export const REQUEST_CHANNEL_TOKEN = '{{REQUEST_CHANNEL}}';
+export const REQUEST_CHANNEL_PENDING: Record<NoticeLang, string> = {
+  sq: '[[B-01 KANALI I KËRKESAVE NË PRITJE TË KONFIRMIMIT]]',
+  en: '[[B-01 REQUEST CHANNEL PENDING CONFIRMATION]]',
+};
+
+/** Band sentence built from the signed band table in code (v1.0 §10), so page and app cannot differ. */
+export function bandSentence(lang: NoticeLang): string {
+  const items = MARAGON_BAND_KEYS.map((key) => `${MARAGON_BAND_LABELS[key][lang]} (${MARAGON_BAND_LABELS[key].min}–${MARAGON_BAND_LABELS[key].max})`);
+  const joined = `${items.slice(0, -1).join(', ')} ${lang === 'sq' ? 'dhe' : 'and'} ${items[items.length - 1]}`;
+  return lang === 'sq' ? `Pesë brezat janë: ${joined}.` : `The five bands are: ${joined}.`;
+}
+
 export const MARAGON_NOTICE_TITLE: Record<NoticeLang, string> = {
   sq: 'MARAGON® — Njoftim mbi vlerësimet, metodologjinë dhe të drejtat',
   en: 'MARAGON® — Notice on assessments, methodology and rights',
@@ -104,12 +158,12 @@ export const MARAGON_NOTICE_SECTIONS: MaragonNoticeSection[] = [
     heading: { sq: 'Botuesi dhe qëllimi', en: 'Publisher and purpose' },
     body: {
       sq: [
-        'Ky njoftim botohet nga NOVARIC® Sh.A., botuesi i media.novaric.al. Adresa: Rruga Studenti, Shkodër 4001, Shqipëri. Email: [contact@novaric.al](mailto:contact@novaric.al). Faqja: [www.novaric.al](https://www.novaric.al). Administrator: Dr Alban Gj. THIKA.',
+        'Ky njoftim botohet nga NOVARIC® Sh.A., botuesi i media.novaric.al. Adresa: Rruga Studenti, Shkodër 4001, Shqipëri. Email i përgjithshëm i shoqërisë: [contact@novaric.al](mailto:contact@novaric.al). Faqja: [www.novaric.al](https://www.novaric.al). Administrator: Dr Alban Gj. THIKA.',
         'Qëllimi i njoftimit është të shpjegojë saktë çfarë mat MARAGON®, si arrihet një vlerësim, çfarë nuk përcakton ai dhe si mund të kërkoni korrigjim ose shqyrtim.',
         'Njoftimi nuk e kufizon përgjegjësinë e NOVARIC® Sh.A. për saktësinë e asaj që publikon dhe nuk kufizon asnjë të drejtë tuajën.',
       ],
       en: [
-        'This notice is published by NOVARIC® Sh.A., the publisher of media.novaric.al. Address: Rruga Studenti, Shkodër 4001, Albania. Email: [contact@novaric.al](mailto:contact@novaric.al). Website: [www.novaric.al](https://www.novaric.al). Administrator: Dr Alban Gj. THIKA.',
+        'This notice is published by NOVARIC® Sh.A., the publisher of media.novaric.al. Address: Rruga Studenti, Shkodër 4001, Albania. General company email: [contact@novaric.al](mailto:contact@novaric.al). Website: [www.novaric.al](https://www.novaric.al). Administrator: Dr Alban Gj. THIKA.',
         'Its purpose is to explain accurately what MARAGON® measures, how an assessment is reached, what it does not establish, and how you can ask for a correction or a review.',
         'The notice does not limit the responsibility of NOVARIC® Sh.A. for the accuracy of what it publishes, and it does not limit any of your rights.',
       ],
@@ -202,13 +256,13 @@ export const MARAGON_NOTICE_SECTIONS: MaragonNoticeSection[] = [
     heading: { sq: 'Pikët, brezat, besueshmëria dhe «Pa vlerësim»', en: 'Scores, bands, confidence and "Pa vlerësim / Not assessed"' },
     body: {
       sq: [
-        'Publiku sheh breza dhe nivelin e besueshmërisë, jo numra. Pesë brezat janë: Shumë e dobët (0–20), E dobët (21–40), Mesatare (41–60), E fortë (61–80) dhe Shumë e fortë (81–100). Intervalet tregojnë kufijtë e brezit në shkallën e brendshme 0–100. Pika e saktë mbahet në dosje dhe nuk publikohet.',
+        'Publiku sheh breza dhe nivelin e besueshmërisë, jo numra. {{BANDS}} Intervalet tregojnë kufijtë e brezit në shkallën e brendshme 0–100. Pika e saktë mbahet në dosje dhe nuk publikohet.',
         'Besueshmëria, e lartë ose mesatare, tregon sa e fortë dhe e qëndrueshme është baza e provave. Dy brezat ekstremë kërkojnë besueshmëri të lartë. Kur besueshmëria është e ulët ose provat nuk mjaftojnë, nuk publikohet brez dhe shfaqet «Pa vlerësim».',
         '«Pa vlerësim» do të thotë që nuk ka vlerë të miratuar dhe të publikuar. Nuk do të thotë zero, as dështim, as sukses. Një tregues që nuk zbatohet për një person, p.sh. kur ai nuk ka drejtuar asnjë program të rregulluar, nuk llogaritet.',
         'Vlerësimi i përgjithshëm shfaqet vetëm kur të katër dimensionet kanë vlerësime zyrtare me prova të mjaftueshme. Përndryshe shfaqet «Pa vlerësim».',
       ],
       en: [
-        'The public sees bands and the confidence level, not numbers. The five bands are: Very weak (0–20), Weak (21–40), Moderate (41–60), Strong (61–80) and Very strong (81–100). The ranges show the band limits on the internal 0–100 scale. The exact point is kept in the file and is not published.',
+        'The public sees bands and the confidence level, not numbers. {{BANDS}} The ranges show the band limits on the internal 0–100 scale. The exact point is kept in the file and is not published.',
         'Confidence, high or medium, shows how strong and consistent the evidence base is. The two extreme bands require high confidence. When confidence is low or the evidence is insufficient, no band is published and "Pa vlerësim / Not assessed" is shown.',
         '"Pa vlerësim / Not assessed" means that there is no approved and published value. It does not mean zero, failure or success. An indicator that does not apply to a person, for example when they have led no regulated programme, is not counted.',
         'The overall assessment is shown only when all four dimensions have official assessments with sufficient evidence. Otherwise "Pa vlerësim / Not assessed" is shown.',
@@ -300,7 +354,7 @@ export const MARAGON_NOTICE_SECTIONS: MaragonNoticeSection[] = [
         'Para publikimit. Para se të publikohet një brez për një person të identifikueshëm, NOVARIC® Sh.A. i dërgon atij ose asaj, nëpërmjet një kanali zyrtar, një njoftim në shqip dhe në anglisht me gjetjet, brezat e propozuar, besueshmërinë, listën e provave dhe mënyrën e përgjigjes. Afati për përgjigje është 10 ditë pune, pa llogaritur festat zyrtare në Shqipëri, dhe zgjatet me 5 ditë pune me kërkesë të arsyetuar.',
         'Ky afat është rregull i brendshëm i NOVARIC® Sh.A., jo afat i caktuar me ligj, dhe nuk zëvendëson asnjë afat ose procedurë që parashikon ligji.',
         'Korrigjimet faktike të dokumentuara e kthejnë dosjen në shqyrtim. Mosmarrëveshjet për interpretimin regjistrohen, dhe një përmbledhje e përgjigjes, në shqip dhe në anglisht, publikohet bashkë me profilin. Kur nuk vjen përgjigje brenda afatit, kjo regjistrohet dhe nuk e ndryshon vlerësimin.',
-        'Pas publikimit. Çdokush mund të kërkojë korrigjim ose shqyrtim. Shkruani te [contact@novaric.al](mailto:contact@novaric.al) ose me postë në adresën e NOVARIC® Sh.A. më sipër. Na ndihmon nëse përfshini:',
+        'Pas publikimit. Çdokush mund të kërkojë korrigjim ose shqyrtim. Kërkesat dërgohen te: {{REQUEST_CHANNEL}}. Na ndihmon nëse përfshini:',
         '- adresën (URL) e profilit;',
         '- pohimin, brezin ose provën që kundërshtoni;',
         '- shpjegimin tuaj;',
@@ -312,7 +366,7 @@ export const MARAGON_NOTICE_SECTIONS: MaragonNoticeSection[] = [
         'Before publication. Before a band about an identifiable person is published, NOVARIC® Sh.A. sends that person, through an official channel, a notice in Albanian and English with the findings, the proposed bands, the confidence, the evidence list and how to reply. The reply deadline is 10 working days, not counting Albanian public holidays, and is extended by 5 working days on a reasoned request.',
         'This deadline is an internal rule of NOVARIC® Sh.A., not a deadline set by law, and it does not replace any deadline or procedure provided by law.',
         'Documented factual corrections return the file to review. Disagreements about interpretation are recorded, and a summary of the reply, in Albanian and English, is published with the profile. When no reply arrives within the deadline, this is recorded and does not change the assessment.',
-        'After publication. Anyone may ask for a correction or a review. Write to [contact@novaric.al](mailto:contact@novaric.al) or by post to the NOVARIC® Sh.A. address above. It helps if you include:',
+        'After publication. Anyone may ask for a correction or a review. Requests are sent to: {{REQUEST_CHANNEL}}. It helps if you include:',
         '- the address (URL) of the profile;',
         '- the statement, band or evidence you dispute;',
         '- your explanation;',
@@ -330,12 +384,12 @@ export const MARAGON_NOTICE_SECTIONS: MaragonNoticeSection[] = [
       sq: [
         'Të dhënat personale në profilet MARAGON® përpunohen në lidhje me rolin publik të personit dhe me debatin publik për median, në përputhje me Ligjin nr. 124/2024 «Për mbrojtjen e të dhënave personale». Ju ruani të drejtat që ju jep ky ligj, përfshirë të drejtën për informim, akses, korrigjim dhe kundërshtim, brenda kufijve që parashikon vetë ligji, si dhe të drejtën t\'i drejtoheni [Komisionerit për të Drejtën e Informimit dhe Mbrojtjen e të Dhënave Personale](https://idp.al/).',
         'Më shumë informacion gjeni te [Politika e Privatësisë](/?page=privacy).',
-        'Burimet e fakteve listohen në çdo profil. Nëse jeni subjekti ose mbajtësi i të drejtave të një fotografie dhe kundërshtoni përdorimin ose atribuimin e saj, na shkruani; kërkesa juaj shqyrtohet.',
+        'Burimet e fakteve listohen në çdo profil. Nëse jeni subjekti ose mbajtësi i të drejtave të një fotografie dhe kundërshtoni përdorimin ose atribuimin e saj, përdorni kanalin e seksionit 10; kërkesa juaj shqyrtohet.',
       ],
       en: [
         'Personal data in MARAGON® profiles is processed in connection with the person\'s public role and the public debate about the media, in accordance with Law No. 124/2024 "On personal data protection". You keep the rights this law gives you, including the rights to information, access, rectification and objection, within the limits the law itself sets, as well as the right to apply to the [Commissioner for the Right to Information and Personal Data Protection](https://idp.al/).',
         'More information is in the [Privacy Policy](/?page=privacy).',
-        'The sources of facts are listed in every profile. If you are the subject or the rights holder of a photograph and object to its use or attribution, write to us; your request will be considered.',
+        'The sources of facts are listed in every profile. If you are the subject or the rights holder of a photograph and object to its use or attribution, use the channel in section 10; your request will be considered.',
       ],
     },
   },
@@ -385,8 +439,30 @@ export function versionSection(meta: typeof MARAGON_NOTICE_META = MARAGON_NOTICE
   };
 }
 
-export function allNoticeSections(meta: typeof MARAGON_NOTICE_META = MARAGON_NOTICE_META): MaragonNoticeSection[] {
-  return [...MARAGON_NOTICE_SECTIONS, versionSection(meta)];
+/** Fills the band sentence and the request channel. An unconfirmed channel leaves an internal marker. */
+export function resolveNoticeText(text: string, lang: NoticeLang, channel: MaragonRequestChannel | null = MARAGON_REQUEST_CHANNEL): string {
+  const channelText = isRequestChannelConfirmed(channel) ? `[${channel.label}](${channel.href})` : REQUEST_CHANNEL_PENDING[lang];
+  return text.split('{{BANDS}}').join(bandSentence(lang)).split(REQUEST_CHANNEL_TOKEN).join(channelText);
+}
+
+export function allNoticeSections(
+  meta: typeof MARAGON_NOTICE_META = MARAGON_NOTICE_META,
+  channel: MaragonRequestChannel | null = MARAGON_REQUEST_CHANNEL,
+): MaragonNoticeSection[] {
+  return [...MARAGON_NOTICE_SECTIONS, versionSection(meta)].map((section) => ({
+    ...section,
+    body: {
+      sq: section.body.sq.map((p) => resolveNoticeText(p, 'sq', channel)),
+      en: section.body.en.map((p) => resolveNoticeText(p, 'en', channel)),
+    },
+  }));
+}
+
+/** Internal markers still in the page text ([[B-01 …]]). Any marker blocks release. */
+export function noticeOpenMarkers(sections: MaragonNoticeSection[] = allNoticeSections()): string[] {
+  const ids = new Set<string>();
+  for (const s of sections) for (const p of [...s.body.sq, ...s.body.en]) for (const m of p.matchAll(/\[\[([A-Z]-\d+)/g)) ids.add(m[1]);
+  return [...ids].sort();
 }
 
 /** dd.mm.yyyy, the date style used across the NOVARIC® site. */

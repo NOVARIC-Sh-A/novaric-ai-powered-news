@@ -686,8 +686,8 @@ export const VIP_M1_PRESENTER: MaragonPresenterRecord =
       "nullableScoring_en": "Unknown is null, never 0 (§7). Low confidence yields score: null (§6.5). Without the S1 sample, content indicators receive no band (AR-2).",
       "bandsOnly_sq": "Dalja publike është vetëm brezi dhe besueshmëria, kurrë numra. Pesë etiketat: Shumë e dobët, E dobët, Mesatare, E fortë, Shumë e fortë (19.11.2026). Kompozita nuk shfaqet derisa R, A, G dhe O të kenë pikë zyrtare (AM-02/AM-04); një kompozitë provizore nuk shfaqet kurrë publikisht (AM-09).",
       "bandsOnly_en": "Public output is the band and confidence only, never numbers. The five labels: Very weak, Weak, Moderate, Strong, Very strong (19.11.2026). No composite until R, A, G and O all have official scores (AM-02/AM-04); a provisional composite is never shown publicly (AM-09).",
-      "rightOfReply_sq": "E drejta e përgjigjes (§12) është 10 ditë pune para publikimit. Nuk ka filluar. Subjekti nuk u kontaktua.",
-      "rightOfReply_en": "The right of reply (§12) is 10 working days before publication. It has not started. The subject was not contacted."
+      "rightOfReply_sq": "E drejta e përgjigjes (§12) është 10 ditë pune para publikimit, +5 ditë pune me kërkesë të arsyetuar (§12.3). Nuk ka filluar. Subjekti nuk u kontaktua.",
+      "rightOfReply_en": "The right of reply (§12) is 10 working days before publication, +5 working days on a reasoned request (§12.3). It has not started. The subject was not contacted."
     },
     "photoLicence": {
       "sourcePageUrl": "/media-personalities/portraits/blendi-fevziu-450x600.jpg",

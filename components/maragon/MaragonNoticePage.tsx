@@ -2,16 +2,18 @@ import React from 'react';
 import { useLanguage } from '../../contexts/LanguageContext';
 import {
   MARAGON_NOTICE_ALLOWED_HREFS,
+  MARAGON_REQUEST_CHANNEL,
+  isRequestChannelConfirmed,
   MARAGON_NOTICE_DRAFT_BANNER,
   MARAGON_NOTICE_META,
   MARAGON_NOTICE_TITLE,
   MARAGON_NOTICE_UNAVAILABLE,
   allNoticeSections,
-  isMaragonNoticeApproved,
   parseNoticeInline,
   type NoticeLang,
 } from '../../data/maragon/maragonNoticeContent';
 import { maragonNoticeVisible } from '../../utils/maragonNoticeNavigation';
+import { isMaragonNoticeLive } from '../../data/maragon/maragonNoticeRelease';
 import { LINE, Mark, MUTED, NAVY } from './maragonPresenterUi';
 
 function Inline({ text, onNavigate }: { text: string; onNavigate?: (href: string) => boolean }) {
@@ -19,7 +21,8 @@ function Inline({ text, onNavigate }: { text: string; onNavigate?: (href: string
     <>
       {parseNoticeInline(text).map((part, index) => {
         if (part.kind === 'text') return <Mark key={index} text={part.text} />;
-        if (!(MARAGON_NOTICE_ALLOWED_HREFS as readonly string[]).includes(part.href)) {
+        if (!(MARAGON_NOTICE_ALLOWED_HREFS as readonly string[]).includes(part.href)
+          && !(isRequestChannelConfirmed(MARAGON_REQUEST_CHANNEL) && MARAGON_REQUEST_CHANNEL.href === part.href)) {
           return <Mark key={index} text={part.text} />;
         }
         const external = part.href.startsWith('http');
@@ -74,7 +77,7 @@ export const MaragonNoticePage: React.FC<{
   let ctxLang: NoticeLang = 'sq';
   try { ctxLang = useLanguage().language === 'en' ? 'en' : 'sq'; } catch { ctxLang = 'sq'; }
   const visible = forceVisible || maragonNoticeVisible();
-  const approved = isMaragonNoticeApproved();
+  const approved = isMaragonNoticeLive();
   const handleNavigate = (href: string): boolean => {
     if (!onNavigate) return false;
     if (href === '/?page=privacy') { onNavigate('privacy'); return true; }

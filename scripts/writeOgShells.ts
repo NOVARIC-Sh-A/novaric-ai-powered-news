@@ -10,7 +10,7 @@ import { applyOgToIndexHtml, listingOg, mediaListingOg, mediaProfileOg, profileO
 import { mediaProfilesData } from '../data/mediaProfiles';
 import { forecastSeo, homeSeo, maragonMockupSeo, maragonNoticeSeo, methodologySeo, newsArticleSeo, newsArticleShellName, newsListSeo, NewsSeoInput } from '../utils/routeSeo';
 import { publicationTimeMs } from '../utils/newsListOrder';
-import { isMaragonNoticeApproved } from '../data/maragon/maragonNoticeContent';
+import { isMaragonNoticeLive } from '../data/maragon/maragonNoticeRelease';
 
 const root = path.resolve(path.dirname(new URL(import.meta.url).pathname), '..');
 const dist = path.join(root, 'dist');
@@ -90,7 +90,7 @@ const sitemapPages: string[] = [
   'https://media.novaric.al/personalitete-mediatike',
   'https://media.novaric.al/metodologjia',
   // The MARAGON® notice is listed only after its approval is recorded.
-  ...(isMaragonNoticeApproved() ? ['https://media.novaric.al/njoftim-maragon'] : []),
+  ...(isMaragonNoticeLive() ? ['https://media.novaric.al/njoftim-maragon'] : []),
   ...mediaProfilesData
     .map((profile) => (profile.slug || '').trim())
     .filter((slug) => slug && !slug.includes('/') && !slug.includes('..'))

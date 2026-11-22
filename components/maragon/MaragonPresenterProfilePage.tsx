@@ -41,8 +41,8 @@ import {
 import type { MaragonPillar } from './maragonPresenterTypes';
 import { ownerSuppliedMediaPortraitSrcSet, resolvePresentableMediaPhoto } from '../../utils/officialMediaPhoto';
 import { MARAGON_BENCHMARKS, isPlottableBenchmarkPoint } from '../../data/maragon/benchmarks';
-import { MaragonContextNotices } from './MaragonContextNotice';
-import { MARAGON_NOTICE_PATH, maragonNoticeVisible } from '../../utils/maragonNoticeNavigation';
+import { MaragonContextNotices, MaragonNoticeProfileLink } from './MaragonContextNotice';
+import { maragonNoticeVisible } from '../../utils/maragonNoticeNavigation';
 import type { MaragonDisplayState } from '../../data/maragon/maragonContextNotices';
 
 /*
@@ -470,11 +470,7 @@ export const MaragonPresenterProfilePage: React.FC<Props> = ({ profile, onBack, 
         <footer className="flex flex-wrap items-center justify-between gap-2 text-[13px] border-t pt-4" style={{ color: MUTED, borderColor: LINE }}>
           <span className="font-bold"><Mark text="NOVARIC® Media House · MARAGON® v1.0" /> · {t.methodology}: {m.methodology}</span>
           <span>{t.disclaimer}</span>
-          {noticeLinkVisible && (
-            <a href={MARAGON_NOTICE_PATH} className="font-bold underline decoration-2 underline-offset-2" style={{ color: NAVY, textDecorationColor: CYAN }} data-profile-link="maragon-notice">
-              <Mark text={lang === 'en' ? 'MARAGON® notice on assessments and rights' : 'Njoftimi MARAGON® për vlerësimet dhe të drejtat'} />
-            </a>
-          )}
+          <MaragonNoticeProfileLink lang={lang} visible={noticeLinkVisible} />
         </footer>
       </div>
     </main>

@@ -1,3 +1,4 @@
+import { isMaragonNoticeLive, type MaragonReleaseInput } from '../data/maragon/maragonNoticeRelease';
 import { OG_SITE, OgFields } from './ogDocument';
 import { publicationTimeMs } from './newsListOrder';
 import {
@@ -5,7 +6,6 @@ import {
   MARAGON_NOTICE_META,
   MARAGON_NOTICE_PATH,
   MARAGON_NOTICE_TITLE,
-  isMaragonNoticeApproved,
 } from '../data/maragon/maragonNoticeContent';
 
 export const HOME_TITLE = 'NOVARIC® Lajme me IA | Shqipëri';
@@ -135,9 +135,12 @@ export function methodologySeo(): OgFields {
  * /njoftim-maragon. While the notice is a draft for legal and editorial review it is
  * noindex/nofollow and stays out of the sitemap. Dates come only from recorded approval.
  */
-export function maragonNoticeSeo(meta: typeof MARAGON_NOTICE_META = MARAGON_NOTICE_META): OgFields {
+export function maragonNoticeSeo(
+  meta: typeof MARAGON_NOTICE_META = MARAGON_NOTICE_META,
+  release: Omit<MaragonReleaseInput, 'meta'> = {},
+): OgFields {
   const url = `${OG_SITE}${MARAGON_NOTICE_PATH}`;
-  const approved = isMaragonNoticeApproved(meta);
+  const approved = isMaragonNoticeLive({ ...release, meta });
   const page: Record<string, unknown> = {
     '@type': 'WebPage',
     '@id': `${url}#webpage`,

@@ -307,7 +307,7 @@ function ApprovedFront() {
             Raporti i plotë / Full report
           </button>
         </div>
-        <p className="mt-2 text-[10px] text-slate-500">E drejta e përgjigjes: 10 ditë pune / Right of reply: 10 working days</p>
+        <p className="mt-2 text-[10px] text-slate-500">E drejta e përgjigjes: 10 ditë pune, +5 me kërkesë të arsyetuar (§12.3) / Right of reply: 10 working days, +5 on a reasoned request (§12.3)</p>
       </div>
       <Dock approved />
       <Footer />

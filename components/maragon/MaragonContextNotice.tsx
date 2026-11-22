@@ -5,7 +5,7 @@ import {
   noticesForDisplay,
   type MaragonDisplayState,
 } from '../../data/maragon/maragonContextNotices';
-import type { NoticeLang } from '../../data/maragon/maragonNoticeContent';
+import { MARAGON_NOTICE_LINK_LABELS, MARAGON_NOTICE_PATH, type NoticeLang } from '../../data/maragon/maragonNoticeContent';
 import { maragonNoticeVisible } from '../../utils/maragonNoticeNavigation';
 import { Mark, NAVY } from './maragonPresenterUi';
 
@@ -59,3 +59,16 @@ export const MaragonContextNotices: React.FC<{
 };
 
 export default MaragonContextNotices;
+
+/**
+ * "Mbi vlerësimin dhe të drejtat tuaja" on each profile (owner decision t330u).
+ * Renders only when `visible` is true, i.e. the coordinated release gate is open (or dev preview).
+ */
+export const MaragonNoticeProfileLink: React.FC<{ lang: NoticeLang; visible: boolean }> = ({ lang, visible }) => {
+  if (!visible) return null;
+  return (
+    <a href={MARAGON_NOTICE_PATH} className="font-bold underline decoration-2 underline-offset-2" style={{ color: NAVY }} data-profile-link="maragon-notice" lang={lang}>
+      {MARAGON_NOTICE_LINK_LABELS.profile[lang]}
+    </a>
+  );
+};

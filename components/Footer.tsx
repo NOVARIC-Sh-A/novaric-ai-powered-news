@@ -95,7 +95,7 @@ export const Footer: React.FC<FooterProps> = (props) => {
             className="text-xs text-white hover:underline"
             data-footer-link="maragon-notice"
           >
-            Njoftimi MARAGON<sup aria-hidden="true" className="registered-mark">®</sup>
+            Njoftim MARAGON<sup aria-hidden="true" className="registered-mark">®</sup>
           </a>
         )}
         <button onClick={props.onNavigateToSocialMediaPolicy} className="text-xs text-white hover:underline">Politika e Mediave Sociale</button>

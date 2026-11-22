@@ -37,6 +37,16 @@ const sections = allNoticeSections();
 const allText = (lang: 'sq' | 'en') => [MARAGON_NOTICE_TITLE[lang], ...sections.flatMap((s) => [s.heading[lang], ...s.body[lang]])].join('\n');
 const digits = (value: string) => (value.match(/\d+(?:[.,]\d+)*/g) || []).join(' ');
 const links = (value: string) => parseNoticeInline(value).filter((p) => p.kind === 'link').map((p) => (p as { href: string }).href).join(' ');
+const TEST_CHANNEL = {
+  href: 'mailto:test-only@example.invalid',
+  label: 'test-only@example.invalid',
+  mailboxAccessConfirmed: true,
+  responsiblePersonConfirmed: true,
+  backupConfirmed: true,
+  requestLoggingConfirmed: true,
+  confirmedOn: '2099-01-01',
+  reference: 'TEST-ONLY',
+};
 const approvedMeta = {
   ...MARAGON_NOTICE_META,
   status: 'approved_for_publication' as const,
@@ -68,7 +78,7 @@ describe('MARAGON® notice route /njoftim-maragon', () => {
     assert.match(read('types.ts'), /\| 'maragonNotice'/);
     const shells = read('scripts/writeOgShells.ts');
     assert.match(shells, /njoftim-maragon/);
-    assert.match(shells, /isMaragonNoticeApproved\(\) \? \['https:\/\/media\.novaric\.al\/njoftim-maragon'\] : \[\]/);
+    assert.match(shells, /isMaragonNoticeLive\(\) \? \['https:\/\/media\.novaric\.al\/njoftim-maragon'\] : \[\]/);
   });
 
   it('keeps the draft out of the static sitemap and out of search', () => {
@@ -78,7 +88,7 @@ describe('MARAGON® notice route /njoftim-maragon', () => {
     assert.equal(seo.robots, 'noindex, nofollow');
     const ld = JSON.stringify(seo.jsonLd);
     assert.match(ld, /"@type":"WebPage"/);
-    assert.match(ld, /"version":"0\.1"/);
+    assert.match(ld, /"version":"0\.2"/);
     assert.doesNotMatch(ld, /datePublished|dateModified/);
     const shell = applyOgToIndexHtml('<html lang="sq"><head><meta charset="UTF-8"></head><body><div id="root"></div></body></html>', seo);
     assert.match(shell, /<link rel="canonical" href="https:\/\/media\.novaric\.al\/njoftim-maragon" \/>/);
@@ -86,7 +96,7 @@ describe('MARAGON® notice route /njoftim-maragon', () => {
   });
 
   it('becomes indexable only with a recorded approval, with real dates only', () => {
-    const seo = maragonNoticeSeo(approvedMeta);
+    const seo = maragonNoticeSeo(approvedMeta, { channel: TEST_CHANNEL, privacyLive: true });
     assert.equal(seo.robots, undefined);
     const ld = JSON.stringify(seo.jsonLd);
     assert.match(ld, /"datePublished":"2099-01-02"/);
@@ -132,10 +142,10 @@ describe('MARAGON® notice approval gate', () => {
   it('adds footer and profile links only behind the same gate', () => {
     const footer = read('components/Footer.tsx');
     assert.match(footer, /\{props\.onNavigateToMaragonNotice && \(/);
-    assert.match(footer, /Njoftimi MARAGON<sup aria-hidden="true" className="registered-mark">®<\/sup>/);
+    assert.match(footer, /Njoftim MARAGON<sup aria-hidden="true" className="registered-mark">®<\/sup>/);
     assert.match(read('App.tsx'), /onNavigateToMaragonNotice=\{maragonNoticeVisible\(\) \? \(\) => navigateTo\('maragonNotice'\) : undefined\}/);
     const profile = read('components/maragon/MaragonPresenterProfilePage.tsx');
-    assert.match(profile, /\{noticeLinkVisible && \(/);
+    assert.match(profile, /<MaragonNoticeProfileLink lang=\{lang\} visible=\{noticeLinkVisible\} \/>/);
     assert.match(profile, /<MaragonContextNotices state=\{displayState\} lang=\{lang\} \/>/);
   });
 });
@@ -175,8 +185,15 @@ describe('MARAGON® notice copy', () => {
     assert.doesNotMatch(text, /\+355|\bDOO\b|privacy@|dpo@|PIB|NUIS/);
   });
 
-  it('shows no placeholders, invented mechanisms or immunity language', () => {
-    const text = allText('sq') + '\n' + allText('en');
+  it('keeps exactly one internal marker (B-01) until the channel is confirmed', () => {
+    const draft = allText('sq') + allText('en');
+    assert.deepEqual([...new Set(draft.match(/\[\[[^\]]*\]\]/g))], ['[[B-01 KANALI I KËRKESAVE NË PRITJE TË KONFIRMIMIT]]', '[[B-01 REQUEST CHANNEL PENDING CONFIRMATION]]']);
+    assert.equal(draft.includes('{{'), false);
+  });
+
+  it('shows no placeholders, invented mechanisms or immunity language once the channel is confirmed', () => {
+    const confirmed = allNoticeSections(MARAGON_NOTICE_META, TEST_CHANNEL);
+    const text = [MARAGON_NOTICE_TITLE.sq, MARAGON_NOTICE_TITLE.en, ...confirmed.flatMap((s) => [s.heading.sq, s.heading.en, ...s.body.sq, ...s.body.en])].join('\n');
     const banned = [
       /\bTBD\b|\bTODO\b|\bXXX\b|\[\[|\{\{|PLACEHOLDER|\blorem\b/i,
       /\bFINAL\b|\bAPPROVED\b/,

@@ -1,8 +1,8 @@
 import {
   MARAGON_NOTICE_PATH,
   MARAGON_NOTICE_QUERY_PAGE,
-  isMaragonNoticeApproved,
 } from '../data/maragon/maragonNoticeContent';
+import { isMaragonNoticeLive } from '../data/maragon/maragonNoticeRelease';
 import { maragonInternalPreview } from './maragonPublication';
 
 export { MARAGON_NOTICE_PATH, MARAGON_NOTICE_QUERY_PAGE };
@@ -23,10 +23,10 @@ export function routeMaragonNoticeFromLocation(pathname: string, search = ''): M
 }
 
 /**
- * Links to the notice and the contextual notices appear only after the owner's recorded
- * approval, or in the dev-only internal preview (?maragonPreview=1 on a dev server).
+ * Links to the notice and the contextual notices appear only when the coordinated release gate
+ * (maragonNoticeRelease.ts) is open, or in the dev-only internal preview (?maragonPreview=1 on a dev server).
  * Fail-closed: production shows nothing new until the approval is recorded.
  */
-export function maragonNoticeVisible(search?: string): boolean {
-  return isMaragonNoticeApproved() || maragonInternalPreview(search);
+export function maragonNoticeVisible(search?: string, live: boolean = isMaragonNoticeLive()): boolean {
+  return live || maragonInternalPreview(search);
 }
