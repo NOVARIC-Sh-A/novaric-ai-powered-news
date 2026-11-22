@@ -11,7 +11,7 @@ import { AletheiaModal } from './AletheiaModal';
 import { LetheModal } from './LetheModal';
 import { HorizonModal } from './HorizonModal';
 import { useLanguage } from '../contexts/LanguageContext';
-import { isMaragonAssessmentPublished, isMediaIdentity, publishedMaragonAverage } from '../utils/maragonPublication';
+import { isMaragonAssessmentPublished, isMediaIdentity, publishableMaragonAnalysis, publishedMaragonAverage } from '../utils/maragonPublication';
 import { mergeLocalMediaProfiles } from '../utils/mergeLocalMediaProfiles';
 
 /* --------------------------------------------------------
@@ -287,7 +287,7 @@ export const MediaPersonalitiesPage: React.FC<MediaPersonalitiesPageProps> = ({
     const enriched: RankedMediaProfile[] = mediaPersonalities.map(p => {
         const published = isMaragonAssessmentPublished(p);
         const averageMaragonScore = publishedMaragonAverage(p);
-        const archetype = published ? getArchetype(p.maragonAnalysis) : 'I Paidentifikuar';
+        const archetype = published ? getArchetype(publishableMaragonAnalysis(p)) : 'I Paidentifikuar';
 
         const audienceReach: number | undefined = (p as any).audienceReach;
         const engagementRate: number | undefined = (p as any).engagementRate;

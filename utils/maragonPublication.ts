@@ -16,21 +16,42 @@ export type MaragonBiographyStatus = 'draft' | 'pending_review' | 'approved' | '
 
 export type MaragonLanguage = 'sq' | 'en';
 
-/** Band keys stored on a presenter record. They are not a public score. */
-export type MaragonBandKey = 'e_dobet' | 'mesatare' | 'e_forte';
+/**
+ * Band keys stored on a presenter record. They are not a public score.
+ * Five bands, as signed in STD-COM-MARAGON-METHODOLOGY-v1.0-20261121 §0 and §10
+ * (adopted 19.11.2026). `level` is the radar ring (1 = innermost, 5 = outermost);
+ * it is a drawing position, never a public number.
+ */
+export type MaragonBandKey = 'shume_e_dobet' | 'e_dobet' | 'mesatare' | 'e_forte' | 'shume_e_forte';
+
+export const MARAGON_BAND_KEYS: readonly MaragonBandKey[] = ['shume_e_dobet', 'e_dobet', 'mesatare', 'e_forte', 'shume_e_forte'];
+
+export const MARAGON_BAND_LABELS: Record<MaragonBandKey, { sq: string; en: string; level: number; min: number; max: number }> = {
+  shume_e_dobet: { sq: 'Shumë e dobët', en: 'Very weak', level: 1, min: 0, max: 20 },
+  e_dobet: { sq: 'E dobët', en: 'Weak', level: 2, min: 21, max: 40 },
+  mesatare: { sq: 'Mesatare', en: 'Moderate', level: 3, min: 41, max: 60 },
+  e_forte: { sq: 'E fortë', en: 'Strong', level: 4, min: 61, max: 80 },
+  shume_e_forte: { sq: 'Shumë e fortë', en: 'Very strong', level: 5, min: 81, max: 100 },
+};
+
+/** Internal helper: the band a human-final score falls in. Unknown stays null; 0 is a measurement. */
+export function bandForScore(score: unknown): MaragonBandKey | null {
+  if (typeof score !== 'number' || !Number.isFinite(score) || score < 0 || score > 100) return null;
+  const rounded = Math.round(score);
+  return MARAGON_BAND_KEYS.find((key) => rounded >= MARAGON_BAND_LABELS[key].min && rounded <= MARAGON_BAND_LABELS[key].max) ?? null;
+}
+
+/** The two extreme bands need `high` confidence (v1.0 §6.3, §6.5). */
+export function isExtremeBand(band: MaragonBandKey | null | undefined): boolean {
+  return band === 'shume_e_dobet' || band === 'shume_e_forte';
+}
 
 export type MaragonConfidence = 'none' | 'low' | 'medium' | 'high';
-
-export const MARAGON_BAND_LABELS: Record<MaragonBandKey, { sq: string; en: string; level: number }> = {
-  e_dobet: { sq: 'E dobët', en: 'Weak', level: 2 },
-  mesatare: { sq: 'Mesatare', en: 'Moderate', level: 3 },
-  e_forte: { sq: 'E fortë', en: 'Strong', level: 5 },
-};
 
 export const MARAGON_CONFIDENCE_LABELS: Record<MaragonConfidence, { sq: string; en: string }> = {
   none: { sq: 'Pa besueshmëri', en: 'No confidence' },
   low: { sq: 'E ulët', en: 'Low' },
-  medium: { sq: 'E mesme', en: 'Medium' },
+  medium: { sq: 'Mesatare', en: 'Medium' },
   high: { sq: 'E lartë', en: 'High' },
 };
 
@@ -46,6 +67,12 @@ export const MARAGON_STATUS_LABELS: Record<MaragonAssessmentStatus, { sq: string
 export const PROVISIONAL_LABEL = {
   sq: 'PROVIZOR',
   en: 'PROVISIONAL',
+} as const;
+
+/** Exact public label required by signed AM-09 for any indicative band shown in public. */
+export const AM09_PUBLIC_LABEL = {
+  sq: 'PROVIZOR — në pritje të miratimit',
+  en: 'PROVISIONAL — pending sign-off',
 } as const;
 
 /**
@@ -196,10 +223,45 @@ export function meanMeasured(values: unknown[] | null | undefined): number | nul
   return Math.round(measured.reduce((sum, score) => sum + score, 0) / measured.length);
 }
 
+/**
+ * The seven Albanian "dimension" strings of the pre-v1.0 mock model (types.ts `MaragonDimension`).
+ * Retired as a scoring frame by v1.0 §1.3 (D-06, D-07); their numbers (85/70/80 …) are mock
+ * values that v1.0 §3.6 forbids. Entries carrying them are never published, whatever the status.
+ */
+export const RETIRED_LEGACY_MARAGON_LABELS: readonly string[] = [
+  'Pajtueshmëria Etike',
+  'Profesionalizmi në Kriza',
+  'Saktësia Faktike & Verifikimi',
+  'Paanshmëria, Balanca & Anshmëria',
+  'Thellësia e Analizës/Pyetjeve',
+  'Qartësia & Koherenca',
+  'Promovimi i të Menduarit Kritik',
+];
+
+/** True when any entry uses a retired seven-label dimension (mock data path). */
+export function isRetiredLegacyMaragonAnalysis(entries: Array<{ dimension?: unknown } | null | undefined> | null | undefined): boolean {
+  if (!entries || entries.length === 0) return false;
+  return entries.some((entry) => typeof entry?.dimension === 'string' && RETIRED_LEGACY_MARAGON_LABELS.includes(entry.dimension));
+}
+
+/**
+ * Legacy `maragonAnalysis` rows that may be read for display: none unless the assessment is
+ * published, and never rows on the retired mock model.
+ */
+export function publishableMaragonAnalysis<T extends { dimension?: unknown }>(profile: (MaragonPublicationInput & {
+  maragonAnalysis?: T[] | null;
+}) | null | undefined): T[] {
+  if (!isMaragonAssessmentPublished(profile)) return [];
+  const entries = profile?.maragonAnalysis ?? [];
+  if (isRetiredLegacyMaragonAnalysis(entries)) return [];
+  return entries;
+}
+
 export function publishedMaragonAverage(profile: (MaragonPublicationInput & {
-  maragonAnalysis?: Array<{ score?: unknown }> | null;
+  maragonAnalysis?: Array<{ score?: unknown; dimension?: unknown }> | null;
 }) | null | undefined): number | null {
   if (!isMaragonAssessmentPublished(profile)) return null;
+  if (isRetiredLegacyMaragonAnalysis(profile?.maragonAnalysis)) return null;
   return meanMeasured((profile?.maragonAnalysis ?? []).map((entry) => entry?.score));
 }
 

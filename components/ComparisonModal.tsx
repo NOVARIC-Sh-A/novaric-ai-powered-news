@@ -4,7 +4,7 @@ import { VipProfile } from '../types';
 import { XMarkIcon, BeakerIcon, ScaleIcon, MegaphoneIcon, ShieldCheckIcon } from './icons';
 import { formatVipName, getProfilePhotoUrl } from '../utils/paragonProfileUtils';
 import { useLanguage } from '../contexts/LanguageContext';
-import { isMaragonAssessmentPublished, measuredNumber, notAssessedLabel } from '../utils/maragonPublication';
+import { isMaragonAssessmentPublished, measuredNumber, notAssessedLabel, publishableMaragonAnalysis } from '../utils/maragonPublication';
 
 interface ComparisonModalProps {
   profile1: VipProfile;
@@ -60,8 +60,8 @@ export const ComparisonModal: React.FC<ComparisonModalProps> = ({ profile1, prof
     return score === null ? unassessed : String(score);
   };
   const comparedDimensions = leftPublished && rightPublished
-    ? (profile1.maragonAnalysis ?? []).flatMap((dim1, index) => {
-        const dim2 = profile2.maragonAnalysis?.[index];
+    ? publishableMaragonAnalysis(profile1).flatMap((dim1, index) => {
+        const dim2 = publishableMaragonAnalysis(profile2)[index];
         if (!dim2 || dim1.dimension !== dim2.dimension) return [];
         const value1 = measuredNumber(dim1.score);
         const value2 = measuredNumber(dim2.score);

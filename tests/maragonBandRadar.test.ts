@@ -62,6 +62,13 @@ function openPresenter(band: MaragonBandKey) {
   maragon.scoringSuspended = false;
   maragon.methodologyApproved = true;
   maragon.rightOfReply = 'completed';
+  // Test fixture only (D-30 release authorisation is required by the official gate).
+  maragon.releaseAuthorization = {
+    methodologyId: maragon.methodology,
+    authorisedBy: 'TEST FIXTURE',
+    authorisedAt: '2026-11-22 Tirana',
+    reference: 'TEST-ONLY-NOT-LIVE',
+  };
   maragon.indicators = maragon.indicators.map((indicator) => ({
     ...indicator,
     status: 'assessed' as const,
@@ -141,7 +148,7 @@ describe('MARAGON three-level presenter radar', () => {
   });
 
   it('draws three series with distinct strokes and dash patterns once a test-only sign-off exists', () => {
-    const html = markup({ rec: openPresenter('mesatare'), mode: 'public', lang: 'sq', benchmarks: signedBenchmarks() });
+    const html = markup({ rec: openPresenter('mesatare'), mode: 'public', lang: 'sq', benchmarks: signedBenchmarks(), signedBenchmarkAmendments: ['TEST-ONLY-NOT-LIVE'] });
     const presenter = html.match(/data-radar-series="presenter"[\s\S]*?data-radar-mark="polygon"[^>]*/);
     const albania = html.match(/data-radar-series="albania_expected"[\s\S]*?data-radar-mark="polygon"[^>]*/);
     const europe = html.match(/data-radar-series="europe_industry"[\s\S]*?data-radar-mark="polygon"[^>]*/);
@@ -163,7 +170,7 @@ describe('MARAGON three-level presenter radar', () => {
   });
 
   it('keeps an unapproved presenter off the public polygon', () => {
-    const html = markup({ rec: { maragon: baseMaragon('vip_m1', [], []) }, mode: 'public', lang: 'en', benchmarks: signedBenchmarks() });
+    const html = markup({ rec: { maragon: baseMaragon('vip_m1', [], []) }, mode: 'public', lang: 'en', benchmarks: signedBenchmarks(), signedBenchmarkAmendments: ['TEST-ONLY-NOT-LIVE'] });
     assert.equal(html.includes('data-radar-series="presenter"'), false);
     assert.match(html, /data-radar-series="albania_expected"/);
     assert.match(html, /Pa vlerësim/);

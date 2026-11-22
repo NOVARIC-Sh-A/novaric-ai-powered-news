@@ -9,6 +9,7 @@ import {
   maragonScoresArePublic,
   measuredNumber,
   notAssessedLabel,
+  publishableMaragonAnalysis,
   publishedSeries,
 } from '../utils/maragonPublication';
 import { MaragonAnalysisView } from './maragon/MaragonDossierView';
@@ -141,10 +142,12 @@ const TvPersonalitiesAnalysisBody: React.FC<PerformanceAnalysisPageProps> = ({ o
     };
 
     const assessmentPublished = maragonScoresArePublic(selectedAnalysis);
-    const axisLabels = selectedAnalysis?.maragonAnalysis?.map(a => a.dimension) ?? [];
-    const subjectSeries = publishedSeries(selectedAnalysis, selectedAnalysis?.maragonAnalysis?.map(a => a.score));
-    const peerSeries = publishedSeries(selectedAnalysis, selectedAnalysis?.maragonAnalysis?.map(a => a.peerAverage));
-    const benchmarkSeries = publishedSeries(selectedAnalysis, selectedAnalysis?.maragonAnalysis?.map(a => a.globalBenchmark));
+    // Retired seven-label mock rows (v1.0 §1.3, §3.6) are never read for display.
+    const legacyRows = publishableMaragonAnalysis(selectedAnalysis);
+    const axisLabels = legacyRows.map(a => a.dimension);
+    const subjectSeries = publishedSeries(selectedAnalysis, legacyRows.map(a => a.score));
+    const peerSeries = publishedSeries(selectedAnalysis, legacyRows.map(a => a.peerAverage));
+    const benchmarkSeries = publishedSeries(selectedAnalysis, legacyRows.map(a => a.globalBenchmark));
     const radarDatasets = [
         subjectSeries ? {
             label: selectedAnalysis?.name || '',
@@ -241,11 +244,11 @@ const TvPersonalitiesAnalysisBody: React.FC<PerformanceAnalysisPageProps> = ({ o
                     </section>
                 )}
 
-                {assessmentPublished && selectedAnalysis && !isMediaProfile(selectedAnalysis) && selectedAnalysis.maragonAnalysis && (
+                {assessmentPublished && selectedAnalysis && !isMediaProfile(selectedAnalysis) && legacyRows.length > 0 && (
                     <section>
                          <h2 className="text-2xl font-bold text-center text-slate-800 dark:text-slate-200 mb-6">Vlerësim i Detajuar sipas Dimensioneve MARAGON®</h2>
                          <div className="space-y-4">
-                            {selectedAnalysis.maragonAnalysis.map(category => (
+                            {legacyRows.map(category => (
                                 <div key={category.dimension} className="border border-slate-200 dark:border-slate-700 rounded-lg overflow-hidden">
                                     <button
                                         onClick={() => toggleDimension(category.dimension)}
