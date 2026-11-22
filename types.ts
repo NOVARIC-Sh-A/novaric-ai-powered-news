@@ -41,6 +41,7 @@ export type Page =
   | 'parliamentMembersPage'
   | 'sitemap'
   | 'analysisMethodology'
+  | 'maragonNotice'
   | 'openLetterShkreliBeci'
   | 'newsFeatureShkreliBeci'
   | 'shkoderShockTherapy'

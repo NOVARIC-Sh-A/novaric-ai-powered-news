@@ -40,7 +40,10 @@ import {
 } from './maragonPresenterUi';
 import type { MaragonPillar } from './maragonPresenterTypes';
 import { ownerSuppliedMediaPortraitSrcSet, resolvePresentableMediaPhoto } from '../../utils/officialMediaPhoto';
-import { MARAGON_BENCHMARKS } from '../../data/maragon/benchmarks';
+import { MARAGON_BENCHMARKS, isPlottableBenchmarkPoint } from '../../data/maragon/benchmarks';
+import { MaragonContextNotices } from './MaragonContextNotice';
+import { MARAGON_NOTICE_PATH, maragonNoticeVisible } from '../../utils/maragonNoticeNavigation';
+import type { MaragonDisplayState } from '../../data/maragon/maragonContextNotices';
 
 /*
  * MARAGON® v1.0 — deeper profile page for a media personality (click-through from the cover card).
@@ -146,6 +149,21 @@ export const MaragonPresenterProfilePage: React.FC<Props> = ({ profile, onBack, 
   const publicSourceIds = new Set(['EV-001', 'EV-031', 'EV-002', 'EV-003', 'EV-005']);
   const sources = internal || rec.id !== 'vip_m1' ? rec.sources : rec.sources.filter((s) => publicSourceIds.has(s.id));
   const pillars: MaragonPillar[] = ['R', 'A', 'G', 'O'];
+  // What the assessment area really renders, for the contextual notices (they never change it).
+  const benchmarkVerticesDrawn = MARAGON_BENCHMARKS.reduce(
+    (sum, series) => sum + series.points.filter((point) => isPlottableBenchmarkPoint(series, point) && !!point.band).length,
+    0,
+  );
+  const displayState: MaragonDisplayState = {
+    mode,
+    officialBands: bands.filter((b) => b.v.band && !b.v.indicative).length,
+    provisionalBands: bands.filter((b) => b.v.band && b.v.indicative).length,
+    benchmarkVerticesDrawn,
+    // No signed benchmark amendment exists (AM-10 v0.1 is unsigned), so a drawn line is never treated as normative.
+    benchmarkIsNormative: false,
+    numbersVisible: false,
+  };
+  const noticeLinkVisible = maragonNoticeVisible();
 
   return (
     <main className="min-h-screen" style={{ backgroundColor: PAGE_BG, color: NAVY, fontFamily: FONT }}>
@@ -297,6 +315,7 @@ export const MaragonPresenterProfilePage: React.FC<Props> = ({ profile, onBack, 
               </div>
               {!internal && !anyIndicative && <p className="text-[15px] leading-relaxed" style={{ color: NAVY }}>{t.publicNote}</p>}
               <p className="text-[14px] leading-relaxed" style={{ color: MUTED }}>{internal ? (lang === 'en' ? m.statusNote_en : m.statusNote_sq) : (lang === 'en' ? 'Under editorial review. No point has an official band; overall: Not assessed.' : 'Në shqyrtim editorial. Asnjë pikë nuk ka brez zyrtar; vlerësimi i përgjithshëm: Pa vlerësim.')} · {t.ror}</p>
+              <MaragonContextNotices state={displayState} lang={lang} />
             </div>
           </div>
 
@@ -451,6 +470,11 @@ export const MaragonPresenterProfilePage: React.FC<Props> = ({ profile, onBack, 
         <footer className="flex flex-wrap items-center justify-between gap-2 text-[13px] border-t pt-4" style={{ color: MUTED, borderColor: LINE }}>
           <span className="font-bold"><Mark text="NOVARIC® Media House · MARAGON® v1.0" /> · {t.methodology}: {m.methodology}</span>
           <span>{t.disclaimer}</span>
+          {noticeLinkVisible && (
+            <a href={MARAGON_NOTICE_PATH} className="font-bold underline decoration-2 underline-offset-2" style={{ color: NAVY, textDecorationColor: CYAN }} data-profile-link="maragon-notice">
+              <Mark text={lang === 'en' ? 'MARAGON® notice on assessments and rights' : 'Njoftimi MARAGON® për vlerësimet dhe të drejtat'} />
+            </a>
+          )}
         </footer>
       </div>
     </main>

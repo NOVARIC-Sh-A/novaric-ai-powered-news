@@ -22,6 +22,8 @@ interface FooterProps {
   onNavigateToNoraAiProfile: () => void;
   onNavigateToNovaricMediaHouse: () => void;
   onNavigateToMaragonFramework: () => void;
+  /** Present only when the MARAGON® notice is approved (or in the dev-only internal preview). */
+  onNavigateToMaragonNotice?: () => void;
   onNavigateToNovaricJournalManifesto: () => void;
   onNavigateToAuthorProfile?: () => void;
 }
@@ -86,6 +88,16 @@ export const Footer: React.FC<FooterProps> = (props) => {
         <button onClick={props.onNavigateToJournalisticEthicsManual} className="text-xs text-white hover:underline">Manuali i Etikës</button>
         <button onClick={props.onNavigateToDataSourceCoverage} className="text-xs text-white hover:underline">Burimi i të Dhënave</button>
         <button onClick={props.onNavigateToPrivacy} className="text-xs text-white hover:underline">Politika e Privatësisë</button>
+        {props.onNavigateToMaragonNotice && (
+          <a
+            href="/njoftim-maragon"
+            onClick={(event) => { event.preventDefault(); props.onNavigateToMaragonNotice?.(); }}
+            className="text-xs text-white hover:underline"
+            data-footer-link="maragon-notice"
+          >
+            Njoftimi MARAGON<sup aria-hidden="true" className="registered-mark">®</sup>
+          </a>
+        )}
         <button onClick={props.onNavigateToSocialMediaPolicy} className="text-xs text-white hover:underline">Politika e Mediave Sociale</button>
         <button onClick={props.onNavigateToCopyrightPolicy} className="text-xs text-white hover:underline">Të Drejtat e Autorit</button>
         <button onClick={props.onNavigateToBrandGuidelines} className="text-xs text-white hover:underline">Udhëzime Brandi</button>

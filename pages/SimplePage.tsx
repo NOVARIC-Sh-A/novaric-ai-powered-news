@@ -3,6 +3,7 @@ import { NexusHumanistAiGovernancePage } from '../components/NexusHumanistAiGove
 import { Forecast2027Page } from '../components/Forecast2027Page';
 import { MaragonCardMockupPage } from '../components/MaragonCardMockupPage';
 import { GridaDumaProfilePage } from '../components/maragon/GridaDumaProfilePage';
+import { MaragonNoticePage } from '../components/maragon/MaragonNoticePage';
 import {
   PrivacyPolicy,
   SocialMediaPolicy,
@@ -257,6 +258,8 @@ export const SimplePage: React.FC<SimplePageProps> = ({ page, onNavigate, profil
         return <Forecast2027Page onBack={onBack} />;
     case 'maragonCardMockup':
         return <MaragonCardMockupPage onBack={onBack} />;
+    case 'maragonNotice':
+        return <MaragonNoticePage onBack={onBack} onNavigate={(target) => onNavigate(target as Page)} />;
     case 'maragonProfile':
         return <GridaDumaProfilePage onBack={onBack} />;
     case 'nexusHumanistAiGovernance':
