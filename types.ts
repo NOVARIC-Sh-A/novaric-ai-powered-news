@@ -495,6 +495,14 @@ export interface VipProfile {
   photoStatus?: string | null;
   photo_source_url?: string | null;
   photoLicence?: string | null;
+  photoCredit?: string | null;
+  officialPhoto?: unknown;
+  /** Profile-level MARAGON® methodology flag. Stays false until this profile is approved. */
+  methodologyApproved?: boolean | null;
+  /** Presenter dossier. Scores inside it stay behind the publication gate. */
+  maragonPresenter?: unknown;
+  /** Superseded app ids. Not public URLs. */
+  legacyIds?: Array<string | number>;
 }
 
 export interface ArticleData {
