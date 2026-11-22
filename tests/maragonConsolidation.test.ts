@@ -308,6 +308,18 @@ describe('7. Unapproved benchmark suppression', () => {
   });
 });
 
+describe('7b. Report-page benchmark suppression (Gemini reconciliation G3-26)', () => {
+  it('shows no peer average and no standard series on the MARAGON® report while no benchmark amendment is signed', async () => {
+    const { maragonReportBenchmarksArePublic, MaragonReportPage } = await import('../components/MaragonReportPage');
+    assert.deepEqual(maragonReportBenchmarksArePublic(), { standard: false, peerAverage: false });
+    assert.deepEqual(maragonReportBenchmarksArePublic(['SIGNED-TEST-ONLY']), { standard: true, peerAverage: false });
+    const src = read('components/MaragonReportPage.tsx');
+    assert.match(src, /benchmarkGate\.peerAverage \?/);
+    assert.match(src, /benchmarkGate\.standard \?/);
+    assert.ok(MaragonReportPage);
+  });
+});
+
 describe('8. Portrait provenance display', () => {
   it('shows the owner-supplied credit, records no written reuse licence and links no unverified source page', () => {
     let ownerSupplied = 0;

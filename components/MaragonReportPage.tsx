@@ -3,6 +3,17 @@ import { MaragonFullReport, MaragonDimensionScores, MaragonIndicatorScore } from
 import GaugeChart from './GaugeChart';
 import { useLanguage } from '../contexts/LanguageContext';
 import { maragonScoresArePublic, measuredNumber, notAssessedLabel } from '../utils/maragonPublication';
+import { SIGNED_BENCHMARK_AMENDMENT_IDS } from '../data/maragon/benchmarks';
+
+/**
+ * Reference series on this report are shown only under a signed benchmark amendment.
+ * AM-10 v0.1 is unsigned (normative floors, not peer averages), and no signed source
+ * defines an empirical peer-average method, so `peerAverage` is never shown.
+ */
+export const maragonReportBenchmarksArePublic = (signedIds: readonly string[] = SIGNED_BENCHMARK_AMENDMENT_IDS): { standard: boolean; peerAverage: boolean } => ({
+  standard: signedIds.length > 0,
+  peerAverage: false,
+});
 
 interface MaragonReportPageProps {
   report: MaragonFullReport;
@@ -39,6 +50,7 @@ export const MaragonReportPage: React.FC<MaragonReportPageProps> = ({ report, on
   const scoresPublic = maragonScoresArePublic(report);
   const { compositeScore, entityType, entityId, benchmarks, indicatorDetails } = report;
   const composite = scoresPublic ? measuredNumber(compositeScore) : null;
+  const benchmarkGate = maragonReportBenchmarksArePublic();
 
   return (
     <main className="flex-grow container mx-auto px-4 py-8">
@@ -74,13 +86,15 @@ export const MaragonReportPage: React.FC<MaragonReportPageProps> = ({ report, on
             <DimensionScores scores={report} title="Pikët Aktuale" />
         </section>
 
+        {benchmarkGate.standard || benchmarkGate.peerAverage ? (
         <section>
             <h2 className="text-2xl font-semibold text-center mb-4">Krahasimi (Benchmark)</h2>
             <div className="space-y-6">
-                <DimensionScores scores={benchmarks.peerAverage} title="Mesatarja e Kolegëve" />
-                <DimensionScores scores={benchmarks.standardAdherence} title="Përputhshmëria me Standardin" />
+                {benchmarkGate.peerAverage ? <DimensionScores scores={benchmarks.peerAverage} title="Mesatarja e Kolegëve" /> : null}
+                {benchmarkGate.standard ? <DimensionScores scores={benchmarks.standardAdherence} title="Përputhshmëria me Standardin" /> : null}
             </div>
         </section>
+        ) : null}
 
         <section>
             <h2 className="text-2xl font-semibold text-center mb-4">Detajet e Treguesve</h2>
