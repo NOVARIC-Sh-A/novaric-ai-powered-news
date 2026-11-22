@@ -3,6 +3,20 @@ import { VIP_M1_PRESENTER } from './maragon/vip_m1.presenter';
 import { OTHER_PRESENTERS } from './maragon/mediaPresenters';
 import type { MaragonPresenterRecord } from '../components/maragon/maragonPresenterTypes';
 import { assignProfileSlugs } from '../utils/politicianSlug';
+import { OWNER_SUPPLIED_MEDIA_PORTRAIT_CREDIT, type OfficialMediaPhotoSource } from '../utils/officialMediaPhoto';
+
+function ownerSuppliedPhoto(slug: string): OfficialMediaPhotoSource {
+  const imageUrl = `/media-personalities/portraits/${slug}-450x600.jpg`;
+  return {
+    sourceUrl: imageUrl,
+    pageUrl: '',
+    publisher: 'Owner',
+    channelType: 'owner_supplied',
+    credit: OWNER_SUPPLIED_MEDIA_PORTRAIT_CREDIT,
+    licence: 'Owner-supplied local file. Original source to be recorded.',
+    retrievedAt: '2026-11-22T20:02:00+01:00',
+  };
+}
 
 /**
  * Media personalities (MARAGON®). Kept separate from PARAGON®.
@@ -15,9 +29,12 @@ const vipM1: VipProfile = {
   id: 'vip_m1',
   numericId: 1001,
   name: 'Blendi Fevziu',
-  imageUrl: '',
-  photoPending: true,
-  photoStatus: 'candidate_recorded_no_documented_reuse_basis',
+  imageUrl: '/media-personalities/portraits/blendi-fevziu-450x600.jpg',
+  photoPending: false,
+  photoStatus: 'Foto zyrtare / Official photo',
+  photoCredit: OWNER_SUPPLIED_MEDIA_PORTRAIT_CREDIT,
+  photoLicence: OWNER_SUPPLIED_MEDIA_PORTRAIT_CREDIT,
+  officialPhoto: ownerSuppliedPhoto('blendi-fevziu'),
   category: 'Media',
   primaryRole: 'Gazetar, shkrimtar dhe drejtues i emisionit «Opinion» në TV Klan',
   shortBio: 'Gazetar dhe drejtues i emisionit "Opinion".',
@@ -45,11 +62,13 @@ const vipM2: VipProfile = {
   numericId: 1002,
   slug: 'grida-duma',
   name: 'Grida Duma',
-  imageUrl: 'https://kuvendiwebfiles.blob.core.windows.net/webfiles/gridashqina_foto.jpg',
-  photo_source_url: 'https://kuvendiwebfiles.blob.core.windows.net/webfiles/gridashqina_foto.jpg',
+  imageUrl: '/media-personalities/portraits/grida-duma-450x600.jpg',
+  photo_source_url: null,
   photoPending: false,
-  photoStatus: 'Burimi i fotografisë: Në verifikim',
-  photoLicence: null,
+  photoStatus: 'Foto zyrtare / Official photo',
+  photoCredit: OWNER_SUPPLIED_MEDIA_PORTRAIT_CREDIT,
+  photoLicence: OWNER_SUPPLIED_MEDIA_PORTRAIT_CREDIT,
+  officialPhoto: ownerSuppliedPhoto('grida-duma'),
   category: 'Media',
   primaryRole: 'Autore, moderatore dhe drejtuese e emisionit «Top Story» në Top Channel',
   shortBio: 'Autore, moderatore dhe drejtuese e emisionit «Top Story» në Top Channel. Në të shkuarën ka qenë ish-deputete e Partisë Demokratike; Top Channel, më 5 gusht 2026, shkruan se mandatin e dorëzoi rreth katër vjet më parë. Draft kërkimor, jo biografi e miratuar.',

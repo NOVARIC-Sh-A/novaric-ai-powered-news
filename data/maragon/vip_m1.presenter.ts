@@ -80,24 +80,36 @@ export const VIP_M1_PRESENTER: MaragonPresenterRecord =
   ],
   "personalSocials": [],
   "photo": {
-    "imageUrl": "https://tvklan.al/wp-content/uploads/2024/02/Group-671.jpg",
+    "imageUrl": "/media-personalities/portraits/blendi-fevziu-450x600.jpg",
     "photoPending": false,
     "photoStatus": "Foto zyrtare / Official photo",
-    "credit": "Foto: TV Klan · «Opinion»",
-    "licence": "Published by TV Klan on its programme page; no reuse licence stated. Referenced by URL (not copied), as PARAGON® does for Kuvendi portraits.",
-    "objectPosition": "50% 20%",
+    "credit": "Owner-supplied, 22 Nov 2026 (source to be recorded)",
+    "licence": "Owner-supplied local file. Original source to be recorded.",
+    "objectPosition": "50% 30%",
     "officialSource": {
-      "sourceUrl": "https://tvklan.al/wp-content/uploads/2024/02/Group-671.jpg",
-      "pageUrl": "https://tvklan.al/programe/opinion",
-      "publisher": "TV Klan",
-      "channelType": "broadcaster_programme_page",
-      "credit": "Foto: TV Klan · «Opinion»",
-      "licence": "Published by the official channel; no reuse licence stated.",
-      "retrievedAt": "2026-11-21T20:23:02+01:00"
+      "sourceUrl": "/media-personalities/portraits/blendi-fevziu-450x600.jpg",
+      "pageUrl": "",
+      "publisher": "Owner",
+      "channelType": "owner_supplied",
+      "credit": "Owner-supplied, 22 Nov 2026 (source to be recorded)",
+      "licence": "Owner-supplied local file. Original source to be recorded.",
+      "retrievedAt": "2026-11-22T20:02:00+01:00"
     },
-    "statusNote_sq": "Foto zyrtare: kopertina e emisionit «Opinion» në faqen e TV Klan, marrë më 21.11.2026.",
-    "statusNote_en": "Official photo: the «Opinion» programme cover on TV Klan’s page, retrieved 21.11.2026.",
+    "awaitingOwnerConfirmation": false,
+    "statusNote_sq": "Portret i standardizuar i dhënë nga pronari më 22.11.2026. Burimi origjinal mbetet për t'u regjistruar.",
+    "statusNote_en": "Owner-supplied standardised portrait, 22 Nov 2026. Original source still to be recorded.",
     "candidates": [
+      {
+        "url": "/media-personalities/portraits/blendi-fevziu-450x600.jpg",
+        "host": "/media-personalities/portraits/",
+        "provenance": "Owner-supplied standardised portrait, approved 22 Nov 2026 (Europe/Tirane). Original source still to be recorded.",
+        "licence": "Owner-supplied local file. Original source to be recorded.",
+        "credit": "Owner-supplied, 22 Nov 2026 (source to be recorded)",
+        "reuseBasisDocumented": false,
+        "resolves": true,
+        "checkedAt": "2026-11-22T20:02:00+01:00",
+        "note": "SELECTED: owner-supplied local file. Not a hotlink. media.novaric.al stays forbidden."
+      },
       {
         "url": "https://tvklan.al/wp-content/uploads/2024/02/Group-671.jpg",
         "host": "https://tvklan.al/programe/opinion",
@@ -107,7 +119,7 @@ export const VIP_M1_PRESENTER: MaragonPresenterRecord =
         "reuseBasisDocumented": false,
         "resolves": true,
         "checkedAt": "2026-11-21T20:23:02+01:00",
-        "note": "SELECTED: official channel (broadcaster programme page)."
+        "note": "Superseded 22.11.2026 by the owner-supplied local portrait. TV Klan file stays withheld."
       },
       {
         "url": "https://tvklan.al/wp-content/uploads/2024/02/Group-670-1-scaled.jpg",
@@ -519,7 +531,7 @@ export const VIP_M1_PRESENTER: MaragonPresenterRecord =
       "Teksti zyrtar i aktit të AMA të 30.10.2026 për «Opinion» të 22.10.2026 (nuk u gjet si vendim i Bordit).",
       "Vendimi për recency_boundary të rastit 04.11.2024 (R1.1).",
       "E drejta e përgjigjes (§12): kutia postare dhe autorizimi i dërgimit — nuk ka filluar; subjekti nuk u kontaktua.",
-      "Licencë e shkruar ripërdorimi nga TV Klan për foton e kopertinës (statusi: në pritje të konfirmimit të pronarit).",
+      "Portreti i shfaqur është i dhënë nga pronari (22.11.2026); burimi origjinal dhe licenca e shkruar mbeten për t'u regjistruar.",
       "Kontroll i plotë në burim i statutit editorial / politikës së korrigjimeve të TV Klan (faqe e dedikuar nuk u gjet)."
     ],
     "openItems_en": [
@@ -527,7 +539,7 @@ export const VIP_M1_PRESENTER: MaragonPresenterRecord =
       "Official text of AMA’s 30.10.2026 act on Opinion of 22.10.2026 (not found as a Board decision).",
       "Ruling on the recency_boundary of the 04.11.2024 case (R1.1).",
       "Right of reply (§12): sending mailbox and send authority — not started; the subject was not contacted.",
-      "A written reuse licence from TV Klan for the programme-cover photo (status: pending owner confirmation).",
+      "The portrait shown is owner-supplied (22.11.2026); the original source and a written licence are still to be recorded.",
       "A full source check of TV Klan’s editorial statute / corrections policy (no dedicated page found)."
     ]
   },
@@ -678,16 +690,16 @@ export const VIP_M1_PRESENTER: MaragonPresenterRecord =
       "rightOfReply_en": "The right of reply (§12) is 10 working days before publication. It has not started. The subject was not contacted."
     },
     "photoLicence": {
-      "sourcePageUrl": "https://tvklan.al/programe/opinion",
-      "imageUrl": "https://tvklan.al/wp-content/uploads/2024/02/Group-671.jpg",
-      "credit": "Foto: TV Klan · «Opinion»",
+      "sourcePageUrl": "/media-personalities/portraits/blendi-fevziu-450x600.jpg",
+      "imageUrl": "/media-personalities/portraits/blendi-fevziu-450x600.jpg",
+      "credit": "Owner-supplied, 22 Nov 2026 (source to be recorded)",
       "writtenReuseLicence": false,
-      "linkedByUrl": true,
-      "precedent_sq": "Imazhi referohet me URL (nuk kopjohet në serverin e NOVARIC®), sipas së njëjtës rregull të kanalit zyrtar që përdoret për portretet e Kuvendit. Kjo është rregull fotoje, jo përzierje e vlerësimit MARAGON® me PARAGON®.",
-      "precedent_en": "The image is referenced by URL (not copied onto a NOVARIC® server), following the same official-channel rule used for Assembly (Kuvendi) portraits. This is a photo rule, not a mixing of MARAGON® scoring with PARAGON®.",
-      "status": "pending_owner_confirmation",
-      "status_sq": "Statusi: në pritje të konfirmimit të pronarit. Nuk ka licencë të shkruar ripërdorimi në dosje.",
-      "status_en": "Status: pending owner confirmation. No written reuse licence is on file."
+      "linkedByUrl": false,
+      "precedent_sq": "Portret i standardizuar i dhënë nga pronari më 22.11.2026 dhe i vendosur si skedar lokal nën /media-personalities/portraits/. Nuk është lidhje e nxehtë dhe nuk vjen nga media.novaric.al. Burimi origjinal mbetet për t'u regjistruar. Kjo është rregull fotoje, jo ndryshim vlerësimi.",
+      "precedent_en": "Owner-supplied standardised portrait of 22 Nov 2026, stored as a local file under /media-personalities/portraits/. It is not a hotlink and it does not come from media.novaric.al. The original source is still to be recorded. This is a photo rule, not an assessment change.",
+      "status": "recorded_official",
+      "status_sq": "Portret i dhënë nga pronari, 22 nëntor 2026. Skedar lokal. Burimi origjinal mbetet për t'u regjistruar.",
+      "status_en": "Owner-supplied portrait, 22 Nov 2026. Local file. Original source still to be recorded."
     },
     "auditTrail": [
       {
@@ -704,6 +716,11 @@ export const VIP_M1_PRESENTER: MaragonPresenterRecord =
         "at": "21.11.2026 20:41–20:47 (Tirana)",
         "act_sq": "U kërkua popullimi i profilit vip_m1 (Blendi FEVZIU) me vlerësim sipas v1.0. Skedarët u përgatitën vetëm lokalisht; asgjë nuk u publikua dhe nuk u bë deploy. Flagu methodologyApproved i profilit mbetet false. Brezat zyrtarë mbeten null. Brezat indikativë u vendosën vetëm ku metodologjia e lejon. E drejta e përgjigjes nuk ka filluar; subjekti nuk u kontaktua. Miratimi AM-09 me shkrim nuk është dhënë.",
         "act_en": "A request was made to populate the vip_m1 profile (Blendi FEVZIU) under v1.0. Files were prepared locally only; nothing was published or deployed. The profile’s methodologyApproved flag stays false. Official bands stay null. Indicative bands were set only where the methodology allows. The right of reply has not started; the subject was not contacted. Written AM-09 approval has not been given."
+      },
+      {
+        "at": "22.11.2026, 20:02 (Europe/Tirane)",
+        "act_sq": "U vendos portreti i standardizuar i dhënë nga pronari për vip_m1 (Blendi FEVZIU), skedar lokal 450×600 nën /media-personalities/portraits/. Burimi origjinal mbetet për t'u regjistruar. Nuk u ndryshua asnjë pikë, brez, kompozitë apo flamur botimi.",
+        "act_en": "Owner-supplied standardised portrait applied for vip_m1 (Blendi FEVZIU), local 450×600 file under /media-personalities/portraits/. Original source still to be recorded. No score, band, composite or publication flag was changed."
       }
     ]
   }

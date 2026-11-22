@@ -6,6 +6,11 @@
 // recorded (pageUrl, publisher, credit, retrievedAt). NOVARIC® copies (novaricstorage, media.novaric.al,
 // novaric.co), third-party news sites, stock and AI images are never shown: the UI shows the
 // "Foto në pritje" silhouette instead. Fails closed: any doubt means no photo.
+//
+// Exception, owner approval 22 Nov 2026: the 24 standardised portraits copied into
+// /media-personalities/portraits/<slug>-450x600.jpg. Only those relative same-origin paths are
+// allowed. media.novaric.al stays forbidden. The exception does not extend to any other host,
+// directory, or filename. Withheld ids and tvklan.al are bypassed only for these local files.
 
 /** Official sites (broadcasters, institutions) whose own uploads may be hot-linked. */
 export const OFFICIAL_MEDIA_PHOTO_HOSTS = [
@@ -30,11 +35,45 @@ export const FORBIDDEN_MEDIA_PHOTO_HOSTS = ['media.novaric.al', 'novaric.co', 'n
 export const OFFICIAL_MEDIA_PHOTO_STATUS = 'Foto zyrtare / Official photo';
 export const AWAITING_MEDIA_PHOTO_STATUS = 'Foto në pritje / Photo pending';
 
+/** Credit recorded on the 24 owner-supplied portraits. The original source is still to be recorded. */
+export const OWNER_SUPPLIED_MEDIA_PORTRAIT_CREDIT = 'Owner-supplied, 22 Nov 2026 (source to be recorded)';
+export const OWNER_SUPPLIED_MEDIA_PORTRAIT_POSITION = '50% 30%';
+
+/** Slugs approved with the 22 Nov 2026 portrait set. Anything else under the directory stays hidden. */
+export const OWNER_SUPPLIED_MEDIA_PORTRAIT_SLUGS = new Set([
+  'blendi-fevziu',
+  'grida-duma',
+  'ardit-gjebrea',
+  'sokol-balla',
+  'eni-vasili',
+  'inva-mula',
+  'ermal-mamaqi',
+  'alketa-vejsiu',
+  'arian-cani',
+  'arbana-osmani',
+  'adi-krasta',
+  'sonila-meco',
+  'marin-mema',
+  'blendi-salaj',
+  'enkel-demi',
+  'armina-mevlani',
+  'bledi-mane',
+  'mustafa-nano',
+  'ermal-peci',
+  'ilva-tare',
+  'dalina-buzi',
+  'ledion-lico',
+  'dritan-shakohoxha',
+  'ylli-rakipi',
+]);
+
+const OWNER_PORTRAIT_PATH = /^\/media-personalities\/portraits\/([a-z0-9]+(?:-[a-z0-9]+)*)-450x600\.jpg$/;
+
 export interface OfficialMediaPhotoSource {
   sourceUrl: string;
   pageUrl: string;
   publisher: string;
-  channelType: 'broadcaster_programme_page' | 'broadcaster_press_article' | 'institutional_profile' | 'own_company_site' | 'verified_social';
+  channelType: 'broadcaster_programme_page' | 'broadcaster_press_article' | 'institutional_profile' | 'own_company_site' | 'verified_social' | 'owner_supplied';
   credit: string;
   licence: string;
   retrievedAt: string;
@@ -53,6 +92,29 @@ function hostOf(url: unknown): string | null {
 
 const matches = (host: string, list: string[]) => list.some((h) => host === h || host.endsWith(`.${h}`));
 
+/** The slug when `url` is one of the 24 local portraits, otherwise null. */
+export function ownerSuppliedMediaPortraitSlug(url: unknown): string | null {
+  if (typeof url !== 'string' || url !== url.trim()) return null;
+  if (!url.startsWith('/') || url.startsWith('//')) return null;
+  if (url.includes('\\') || url.includes('..') || url.includes('%') || url.includes('?') || url.includes('#')) return null;
+  const match = OWNER_PORTRAIT_PATH.exec(url);
+  if (!match || !OWNER_SUPPLIED_MEDIA_PORTRAIT_SLUGS.has(match[1])) return null;
+  return match[1];
+}
+
+export function isOwnerSuppliedMediaPortrait(url: unknown): boolean {
+  return ownerSuppliedMediaPortraitSlug(url) !== null;
+}
+
+/** 225×300 alongside 450×600. Undefined unless `url` is an allowlisted portrait. */
+export function ownerSuppliedMediaPortraitSrcSet(url: unknown): string | undefined {
+  const slug = ownerSuppliedMediaPortraitSlug(url);
+  if (!slug) return undefined;
+  const large = `/media-personalities/portraits/${slug}-450x600.jpg`;
+  const small = `/media-personalities/portraits/${slug}-225x300.jpg`;
+  return `${small} 225w, ${large} 450w`;
+}
+
 export function isOfficialMediaHost(url: unknown): boolean {
   const h = hostOf(url);
   return !!h && !matches(h, FORBIDDEN_MEDIA_PHOTO_HOSTS) && matches(h, OFFICIAL_MEDIA_PHOTO_HOSTS);
@@ -60,6 +122,9 @@ export function isOfficialMediaHost(url: unknown): boolean {
 
 /** True when `imageUrl` may be displayed for this recorded official source. */
 export function isOfficialMediaPhoto(imageUrl: unknown, source: Partial<OfficialMediaPhotoSource> | null | undefined): boolean {
+  if (isOwnerSuppliedMediaPortrait(imageUrl)) {
+    return !!source && !!source.credit && source.credit.trim() !== '' && source.sourceUrl === imageUrl;
+  }
   const h = hostOf(imageUrl);
   if (!h || matches(h, FORBIDDEN_MEDIA_PHOTO_HOSTS)) return false;
   if (!source || !source.pageUrl || !source.credit || source.sourceUrl !== imageUrl) return false;
@@ -80,13 +145,16 @@ export function resolveOfficialMediaPhoto(photo: {
   return {
     url: photo.imageUrl,
     credit: String(photo.officialSource?.credit || ''),
-    objectPosition: photo.objectPosition || '50% 25%',
+    objectPosition: isOwnerSuppliedMediaPortrait(photo.imageUrl)
+      ? OWNER_SUPPLIED_MEDIA_PORTRAIT_POSITION
+      : (photo.objectPosition || '50% 25%'),
   };
 }
 
 /**
  * TV Klan files have no documented reuse basis yet.
  * The four flagged frames stay hidden until the owner confirms them.
+ * Owner-supplied local portraits are the only bypass.
  */
 export const WITHHELD_MEDIA_PHOTO_IDS = new Set([
   'vip_m1',
@@ -114,7 +182,8 @@ export function resolvePresentableMediaPhoto(photo: {
   awaitingOwnerConfirmation?: boolean | null;
 } | null | undefined, profileId?: string | null): { url: string; credit: string; objectPosition: string } | null {
   if (!photo || photo.awaitingOwnerConfirmation) return null;
-  if (profileId && WITHHELD_MEDIA_PHOTO_IDS.has(profileId)) return null;
-  if (mediaPhotoHostIsWithheld(photo.imageUrl)) return null;
+  const ownerSupplied = isOwnerSuppliedMediaPortrait(photo.imageUrl);
+  if (!ownerSupplied && profileId && WITHHELD_MEDIA_PHOTO_IDS.has(profileId)) return null;
+  if (!ownerSupplied && mediaPhotoHostIsWithheld(photo.imageUrl)) return null;
   return resolveOfficialMediaPhoto(photo);
 }

@@ -1,13 +1,14 @@
 import React from 'react';
 import { CANONICAL_MARAGON_INDICATOR_IDS } from '../../lib/maragon-schemas';
 import { MARAGON_INDICATORS } from '../../data/maragonIndicators';
+import { mediaProfilesData } from '../../data/mediaProfiles';
 import { getMaragonResearch } from '../../services/maragonResearchLoader';
 import { formatPersonName } from '../../utils/formatPersonName';
 import { isMaragonPreviewActive } from '../../services/maragonDossier';
+import { ownerSuppliedMediaPortraitSrcSet, resolvePresentableMediaPhoto, type OfficialMediaPhotoSource } from '../../utils/officialMediaPhoto';
 import draftCoding from '../../data/maragon/show_top_story.draft-coding.json';
 
 const NAVY = '#30384B';
-const PHOTO = 'https://kuvendiwebfiles.blob.core.windows.net/webfiles/gridashqina_foto.jpg';
 const RINGS = [
   { radius: 0.28, label: 'Pa vlerësim' },
   { radius: 0.5, label: 'E dobët' },
@@ -124,6 +125,12 @@ export const GridaDumaProfilePage: React.FC<{ onBack: () => void }> = ({ onBack 
   const show = getMaragonResearch('show_top_story');
   const name = formatPersonName(person?.subject.fullName || 'Grida Duma');
   const preview = isMaragonPreviewActive();
+  const card = mediaProfilesData.find((profile) => profile.id === 'vip_m2');
+  const officialPhoto = resolvePresentableMediaPhoto({
+    imageUrl: card?.imageUrl,
+    photoPending: card?.photoPending,
+    officialSource: (card?.officialPhoto ?? null) as Partial<OfficialMediaPhotoSource> | null,
+  }, 'vip_m2');
   const draftBands = Object.fromEntries(
     (draftCoding.indicators as Array<{ id: string; band: string | null }>).map((item) => [item.id.replace('maragon:', ''), item.band]),
   );
@@ -137,11 +144,14 @@ export const GridaDumaProfilePage: React.FC<{ onBack: () => void }> = ({ onBack 
       <div className="mx-auto mt-6 flex max-w-[1100px] flex-col items-stretch justify-center gap-6 lg:flex-row lg:items-start">
         <article className="w-full max-w-[480px] rounded-2xl border border-slate-200 bg-white p-4 shadow-[0_8px_24px_rgba(48,56,75,0.12)]">
           <p className="text-[10px] font-bold uppercase tracking-[0.16em] text-slate-500">Profili mediatik / Media practitioner</p>
-          <div className="mx-auto mt-3 h-40 w-[7.5rem] overflow-hidden rounded-md border border-slate-200 bg-slate-100" style={{ aspectRatio: '3 / 4' }}>
-            <img src={PHOTO} alt={name} className="h-full w-full object-cover object-[center_20%]" referrerPolicy="no-referrer" />
+          <div className="mx-auto mt-3 h-56 w-56 overflow-hidden rounded-full border border-slate-200 bg-slate-100">
+            {officialPhoto ? (
+              <img src={officialPhoto.url} srcSet={ownerSuppliedMediaPortraitSrcSet(officialPhoto.url)} sizes="224px" alt={name} className="h-full w-full object-cover" style={{ objectPosition: officialPhoto.objectPosition }} referrerPolicy="no-referrer" />
+            ) : (
+              <div className="flex h-full w-full items-center justify-center px-4 text-center text-[11px] text-slate-500">Foto në pritje</div>
+            )}
           </div>
-          <p className="mt-2 text-center text-[10px] text-slate-500">Portret institucional. Burimi: Kuvendi i Shqipërisë. Krediti: Në verifikim.</p>
-          <p className="text-center text-[10px]"><a className="underline" href={PHOTO}>gridashqina_foto.jpg · 18 nëntor 2026</a></p>
+          <p className="mt-2 text-center text-[10px] text-slate-500">{officialPhoto?.credit || 'Foto në pritje'}</p>
           <h2 className="mt-3 text-center text-xl font-black">{name}</h2>
           <p className="text-center text-sm font-semibold" data-current-role="true">Autore, moderatore dhe drejtuese e «Top Story», Top Channel</p>
           <p className="text-center text-[11px] text-slate-500">Në të shkuarën: ish-deputete e Partisë Demokratike. Top Channel, 5 gusht 2026, shkruan se mandatin e dorëzoi rreth katër vjet më parë.</p>
