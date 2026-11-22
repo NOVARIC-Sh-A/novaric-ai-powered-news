@@ -93,8 +93,8 @@ export const MARAGON_RADAR_LEGEND = {
 } as const;
 
 export const MARAGON_BENCHMARK_AWAITING_NOTE = {
-  sq: 'Pa vlerësim / Not assessed. Vlerat presin një ndryshim të nënshkruar të metodologjisë.',
-  en: 'Pa vlerësim / Not assessed. The values await a signed methodology amendment.',
+  sq: 'Pa vlerësim / Not assessed. Propozim AM-10, i pa nënshkruar dhe jo në fuqi; linja nuk vizatohet.',
+  en: 'Pa vlerësim / Not assessed. AM-10 proposal, unsigned and not in force; the line is not drawn.',
 } as const;
 
 /**

@@ -386,7 +386,10 @@ export const BandRadar: React.FC<{
   };
   const albania = benchmarkVertices('albania_expected');
   const europe = benchmarkVertices('europe_industry');
-  const caption = 'Tre linja: vlerësimi i prezantuesit, standardi i pritur në Shqipëri, standardi i industrisë evropiane / ndërkombëtare. Linjat pa vlerë të miratuara nuk vizatohen si zero. / Three lines: the presenter\'s assessment, the expected standard in Albania, and the European / international industry standard. Lines without an approved value are not drawn as zero.';
+  // AM-10 is unsigned (owner decision t329u): no wording may imply that reference lines are adopted.
+  const caption = signedBenchmarkAmendments.length > 0
+    ? 'Tre linja: vlerësimi i prezantuesit, standardi i pritur në Shqipëri, standardi i industrisë evropiane / ndërkombëtare. Linjat pa vlerë të miratuara nuk vizatohen si zero. / Three lines: the presenter\'s assessment, the expected standard in Albania, and the European / international industry standard. Lines without an approved value are not drawn as zero.'
+    : 'Brezi i prezantuesit në pesë nivele, pa numra. Linjat referuese të propozuara në AM-10 nuk janë të nënshkruara, nuk janë në fuqi dhe nuk vizatohen. / The presenter\'s band on five levels, without numbers. The reference lines proposed in AM-10 are unsigned, not in force and not drawn.';
   return (
     <figure className="m-0 flex flex-col gap-3" data-maragon-radar="three-level">
       <div className="w-full aspect-square">
