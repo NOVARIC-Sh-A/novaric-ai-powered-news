@@ -4,6 +4,7 @@ import { BookOpenIcon, BriefcaseIcon, ChartBarIcon, LightBulbIcon, CpuChipIcon, 
 import { ShkoderWeather } from './ShkoderWeather';
 import { TiranaWeather } from './TiranaWeather';
 import { NovaricBrand } from './NovaricBrand';
+import { AuthorAvatar } from './AuthorAvatar';
 
 interface RightSidebarProps {
   onNavigateToPoliticians?: () => void; 
@@ -327,11 +328,7 @@ export const RightSidebar: React.FC<RightSidebarProps> = (props) => {
                   <NavButton 
                     onClick={props.onNavigateToNoraAiProfile} 
                     icon={
-                      <img 
-                        src="https://novaric.wpcomstaging.com/wp-content/uploads/2025/10/Nora-AI.jpeg" 
-                        alt="Nora AI" 
-                        className="w-4 h-4 rounded-full object-cover border border-cyan-400 shadow-xs" 
-                      />
+                      <AuthorAvatar name="Nora AI" size={16} className="border border-cyan-400 shadow-xs" />
                     }
                     className="bg-gradient-to-r from-cyan-900/20 to-primary-900/10 dark:from-cyan-950/40 dark:to-primary-950/20 border-l-4 border-l-cyan-500 font-semibold text-slate-800 dark:text-cyan-200"
                   >
@@ -342,11 +339,7 @@ export const RightSidebar: React.FC<RightSidebarProps> = (props) => {
                   <NavButton 
                     onClick={props.onNavigateToAuthorProfile} 
                     icon={
-                      <img 
-                        src="https://novaric.co/wp-content/uploads/2025/10/NOVARIC_Team-Member_A-THIKA_Small.png" 
-                        alt="Dr Alban Gj. THIKA" 
-                        className="w-4 h-4 rounded-full object-cover border border-primary-500 shadow-xs" 
-                      />
+                      <AuthorAvatar name="Dr. Alban Gj. THIKA" size={16} className="border border-primary-500 shadow-xs" />
                     }
                     className="bg-gradient-to-r from-primary-900/20 to-slate-900/10 dark:from-primary-950/40 dark:to-slate-950/20 border-l-4 border-l-primary-500 font-semibold text-slate-800 dark:text-primary-200"
                   >

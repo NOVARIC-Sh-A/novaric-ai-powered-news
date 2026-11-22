@@ -40,6 +40,7 @@ import {
 } from './maragonPresenterUi';
 import type { MaragonPillar } from './maragonPresenterTypes';
 import { ownerSuppliedMediaPortraitSrcSet, resolvePresentableMediaPhoto } from '../../utils/officialMediaPhoto';
+import { MARAGON_BENCHMARKS } from '../../data/maragon/benchmarks';
 
 /*
  * MARAGON® v1.0 — deeper profile page for a media personality (click-through from the cover card).
@@ -276,7 +277,7 @@ export const MaragonPresenterProfilePage: React.FC<Props> = ({ profile, onBack, 
 
         <Card id="maragon" title={<Mark text={t.maragon} />}>
           <div className="grid grid-cols-1 md:grid-cols-[280px_1fr] gap-6 items-start">
-            <div className="w-full max-w-[280px] aspect-square mx-auto"><BandRadar rec={rec} mode={mode} lang={lang} /></div>
+            <div className="w-full max-w-[280px] mx-auto"><BandRadar rec={rec} mode={mode} lang={lang} benchmarks={MARAGON_BENCHMARKS} /></div>
             <div className="flex flex-col gap-3">
               <div className="flex flex-wrap items-center gap-2">
                 <span className={LABEL_CLASS} style={{ color: MUTED }}>{t.overall}</span>

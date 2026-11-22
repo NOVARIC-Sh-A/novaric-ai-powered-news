@@ -6,6 +6,9 @@ import { getMaragonResearch } from '../../services/maragonResearchLoader';
 import { formatPersonName } from '../../utils/formatPersonName';
 import { isMaragonPreviewActive } from '../../services/maragonDossier';
 import { ownerSuppliedMediaPortraitSrcSet, resolvePresentableMediaPhoto, type OfficialMediaPhotoSource } from '../../utils/officialMediaPhoto';
+import { BandRadar } from './maragonPresenterUi';
+import { baseMaragon } from '../../data/maragon/presenterFactory';
+import { MARAGON_BENCHMARKS } from '../../data/maragon/benchmarks';
 import draftCoding from '../../data/maragon/show_top_story.draft-coding.json';
 
 const NAVY = '#30384B';
@@ -156,7 +159,7 @@ export const GridaDumaProfilePage: React.FC<{ onBack: () => void }> = ({ onBack 
           <p className="text-center text-sm font-semibold" data-current-role="true">Autore, moderatore dhe drejtuese e «Top Story», Top Channel</p>
           <p className="text-center text-[11px] text-slate-500">Në të shkuarën: ish-deputete e Partisë Demokratike. Top Channel, 5 gusht 2026, shkruan se mandatin e dorëzoi rreth katër vjet më parë.</p>
           <p className="text-center text-[11px] text-slate-500">Pa vlerësim / Not assessed · Pa indeks</p>
-          <TenPointRadar title="Radar i pa vlerësuar për Grida DUMA" />
+          <BandRadar rec={{ maragon: baseMaragon('vip_m2', [], []) }} mode="public" lang="sq" benchmarks={MARAGON_BENCHMARKS} />
           <p className="mt-2 text-[11px] text-slate-500">Boshti C · Nuk vlerësohet / Axis C · Unscored</p>
           <SourceList id="vip_m2" />
         </article>

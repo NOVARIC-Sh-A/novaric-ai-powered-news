@@ -13,6 +13,7 @@ import {
   BookOpen,
 } from 'lucide-react';
 import { FrameworkPrinciple } from '../../types/methodology';
+import { renderWithSuperscript } from '../../utils/textUtils';
 
 interface AccountabilityCardsProps {
   principles: FrameworkPrinciple[];
@@ -57,7 +58,7 @@ export const AccountabilityCards: React.FC<AccountabilityCardsProps> = ({
           Përputhshmëria me Aktet Evropiane (DSA & EMFA)
         </h3>
         <p className="text-slate-600 dark:text-slate-300 text-sm sm:text-base leading-relaxed max-w-4xl">
-          Korniza jonë e llogaridhënies harmonizon praktikat gazetareske të NOVARIC® me kërkesat e Aktit të Shërbimeve Dixhitale (DSA) dhe Aktit Evropian të Lirisë së Medias (EMFA), duke garantuar pavarësi dhe mbrojtje ligjore të paanshme.
+          {renderWithSuperscript('Korniza jonë e llogaridhënies harmonizon praktikat gazetareske të NOVARIC® me kërkesat e Aktit të Shërbimeve Dixhitale (DSA) dhe Aktit Evropian të Lirisë së Medias (EMFA), duke garantuar pavarësi dhe mbrojtje ligjore të paanshme.')}
         </p>
       </div>
 

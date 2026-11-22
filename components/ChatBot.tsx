@@ -2,6 +2,7 @@ import React, { useState, useRef, useEffect } from 'react';
 import { sendChatMessage, sendChatMessageStream, ChatMessage } from '../services/chatService';
 // FIX: Removed 'PaperAirplaneIcon' from the import statement as it is locally defined within this file and not exported from './icons'.
 import { XMarkIcon, ChatBubbleLeftRightIcon, CpuChipIcon } from './icons';
+import { AuthorAvatar } from './AuthorAvatar';
 
 export const ChatBot: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -98,7 +99,7 @@ export const ChatBot: React.FC = () => {
         <div className="p-4 bg-primary-600 text-white flex justify-between items-center shadow-md">
           <div className="flex items-center gap-3">
             <div className="w-10 h-10 rounded-full border-2 border-white/30 overflow-hidden bg-slate-800">
-              <img src="https://novaric.co/wp-content/uploads/2025/10/Nora-AI.jpeg" alt="Nora AI" className="w-full h-full object-cover" />
+              <AuthorAvatar name="Nora AI" fill className="rounded-none" />
             </div>
             <div>
               <h3 className="font-bold text-sm leading-none">Nora Assistant</h3>

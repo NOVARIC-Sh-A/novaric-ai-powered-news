@@ -65,10 +65,7 @@ function bandRadiusFor(code: string): number | null {
 
 function Brand({ name }: { name: 'NOVARIC' | 'MARAGON' }) {
   return (
-    <span className="novaric-brand">
-      {name}
-      <sup aria-hidden="true" className="registered-mark">®</sup>
-    </span>
+    <span className="novaric-brand">{name}<sup aria-hidden="true" className="registered-mark">®</sup></span>
   );
 }
 

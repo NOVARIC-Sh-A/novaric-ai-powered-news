@@ -16,6 +16,7 @@ import {
 import { useSeo } from '../hooks/useSeo';
 import { JsonLd } from './JsonLd';
 import { NovaricBrand } from './NovaricBrand';
+import { ALBAN_THIKA_PHOTO, AuthorAvatar } from './AuthorAvatar';
 
 export interface AuthorProfilePageProps {
   onBack: () => void;
@@ -486,7 +487,7 @@ export const AuthorProfilePage: React.FC<AuthorProfilePageProps> = ({ onBack, on
     ? "DEKLARATË PËR PËRFAQËSIMIN INDIVIDUAL TË AUTORIT, LIRINË E SHPREHJES DHE RRJETET SOCIALE. ID e dokumentit: NVR-MEDIA-LEG-001. Dr Alban Gj. THIKA (Shtetas Maltez | Autor dhe Komentues i Pavarur). Referencë zyrtare e regjistrimit të shtypit në Maltë: OPM PRESS 03/2025."
     : "INDIVIDUAL AUTHOR REPRESENTATION, FREEDOM OF EXPRESSION & SOCIAL MEDIA DISCLAIMER. Document ID: NVR-MEDIA-LEG-001. Author: Dr Alban Gj. THIKA (Maltese Citizen). Official Malta Press Registration: OPM PRESS 03/2025.";
 
-  const pageImageUrl = "https://novaric.co/wp-content/uploads/2025/10/NOVARIC_Team-Member_A-THIKA_Small.png";
+  const pageImageUrl = ALBAN_THIKA_PHOTO;
   const canonicalUrl = "https://media.novaric.al/?page=authorProfile";
 
   useSeo(pageTitle, pageDescription, pageImageUrl, canonicalUrl);
@@ -646,17 +647,7 @@ export const AuthorProfilePage: React.FC<AuthorProfilePageProps> = ({ onBack, on
             {/* Author Portrait */}
             <div className="relative flex-shrink-0">
               <div className="w-28 h-28 sm:w-36 sm:h-36 rounded-2xl overflow-hidden border-2 border-primary-500/50 shadow-xl bg-slate-800 ring-4 ring-primary-500/10">
-                <img
-                  src="https://novaric.co/wp-content/uploads/2025/10/NOVARIC_Team-Member_A-THIKA_Small.png"
-                  alt="Dr Alban Gj. THIKA"
-                  className="w-full h-full object-cover"
-                  onError={(e) => {
-                    const target = e.target as HTMLImageElement;
-                    if (target.src !== 'https://novaricstorage.blob.core.windows.net/media/Profile-Photos/NOVARIC_Team-Member_A-THIKA_Small.png') {
-                      target.src = 'https://novaricstorage.blob.core.windows.net/media/Profile-Photos/NOVARIC_Team-Member_A-THIKA_Small.png';
-                    }
-                  }}
-                />
+                <AuthorAvatar name="Dr. Alban Gj. THIKA" fill className="rounded-none" />
               </div>
               <div className="absolute -bottom-2 -right-2 bg-primary-600 text-white text-[10px] font-bold px-2 py-0.5 rounded-full shadow-md border border-slate-900">
                 AUTOR

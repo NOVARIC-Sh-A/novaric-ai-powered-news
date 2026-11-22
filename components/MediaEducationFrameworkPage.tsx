@@ -1,6 +1,7 @@
 // components/MediaEducationFrameworkPage.tsx
 import React, { useState } from 'react';
 import { renderWithSuperscript } from '../utils/textUtils';
+import { AuthorAvatar } from './AuthorAvatar';
 import { 
   ShieldCheckIcon, 
   BeakerIcon, 
@@ -163,7 +164,7 @@ export const MediaEducationFrameworkPage: React.FC<MediaEducationFrameworkPagePr
         break;
       case 'metoda':
         if (onNavigateToAnalysisMethodology) onNavigateToAnalysisMethodology();
-        else window.location.href = '/?page=analysisMethodology';
+        else window.location.href = '/metodologjia';
         break;
       case 'korniza':
         if (onNavigateToMaragonFramework) onNavigateToMaragonFramework();
@@ -220,24 +221,14 @@ export const MediaEducationFrameworkPage: React.FC<MediaEducationFrameworkPagePr
                   className="focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-500 rounded-full transition-transform hover:scale-105 z-10"
                   aria-label="Profili i Nora (AI)"
                 >
-                  <img 
-                    src="https://novaric.wpcomstaging.com/wp-content/uploads/2025/10/Nora-AI.jpeg" 
-                    alt="Përfaqësimi i Nora (AI)"
-                    className="w-16 h-16 rounded-full object-cover border-4 border-white dark:border-slate-800 shadow-lg"
-                    title="Nora (AI)"
-                  />
+                  <AuthorAvatar name="Nora AI" size={64} className="border-4 border-white dark:border-slate-800 shadow-lg" />
                 </button>
                 <button 
                   onClick={() => onNavigateToVipProfile && onNavigateToVipProfile('vip33')} 
                   className="focus:outline-none focus:ring-2 focus:ring-primary-500 rounded-full -ml-5 relative transition-transform hover:scale-105"
                   aria-label="Profili i Dr Alban Gj. THIKA"
                 >
-                  <img 
-                    src="https://novaric.co/wp-content/uploads/2025/10/NOVARIC_Team-Member_A-THIKA_Small.png" 
-                    alt="Dr Alban Gj. THIKA"
-                    className="w-16 h-16 rounded-full object-cover border-4 border-white dark:border-slate-800 shadow-lg"
-                    title="Dr Alban Gj. THIKA"
-                  />
+                  <AuthorAvatar name="Dr. Alban Gj. THIKA" size={64} className="border-4 border-white dark:border-slate-800 shadow-lg" />
                 </button>
               </div>
             </div>
@@ -407,7 +398,7 @@ export const MediaEducationFrameworkPage: React.FC<MediaEducationFrameworkPagePr
                 <div className="flex flex-wrap items-center gap-2 text-xs">
                   {/* Methodology Pipeline Steps */}
                   <a
-                    href="/?page=analysisMethodology#meth:step-1"
+                    href="/metodologjia#meth:step-1"
                     onClick={(e) => { if (onNavigateToAnalysisMethodology) { e.preventDefault(); onNavigateToAnalysisMethodology(); } }}
                     className="inline-flex items-center gap-1 px-2.5 py-1 rounded bg-teal-50 hover:bg-teal-100 dark:bg-teal-950/60 dark:hover:bg-teal-900/60 text-teal-800 dark:text-teal-300 border border-teal-200 dark:border-teal-800 font-mono text-[11px] font-semibold transition"
                     title="Hapi 1 i Metodologjisë: Analiza Fillestare IA"
@@ -416,7 +407,7 @@ export const MediaEducationFrameworkPage: React.FC<MediaEducationFrameworkPagePr
                     <span>meth:step-1</span>
                   </a>
                   <a
-                    href="/?page=analysisMethodology#meth:step-2"
+                    href="/metodologjia#meth:step-2"
                     onClick={(e) => { if (onNavigateToAnalysisMethodology) { e.preventDefault(); onNavigateToAnalysisMethodology(); } }}
                     className="inline-flex items-center gap-1 px-2.5 py-1 rounded bg-teal-50 hover:bg-teal-100 dark:bg-teal-950/60 dark:hover:bg-teal-900/60 text-teal-800 dark:text-teal-300 border border-teal-200 dark:border-teal-800 font-mono text-[11px] font-semibold transition"
                     title="Hapi 2 i Metodologjisë: Gjenerimi i Draftit"
@@ -425,7 +416,7 @@ export const MediaEducationFrameworkPage: React.FC<MediaEducationFrameworkPagePr
                     <span>meth:step-2</span>
                   </a>
                   <a
-                    href="/?page=analysisMethodology#meth:step-3"
+                    href="/metodologjia#meth:step-3"
                     onClick={(e) => { if (onNavigateToAnalysisMethodology) { e.preventDefault(); onNavigateToAnalysisMethodology(); } }}
                     className="inline-flex items-center gap-1 px-2.5 py-1 rounded bg-teal-50 hover:bg-teal-100 dark:bg-teal-950/60 dark:hover:bg-teal-900/60 text-teal-800 dark:text-teal-300 border border-teal-200 dark:border-teal-800 font-mono text-[11px] font-semibold transition"
                     title="Hapi 3 i Metodologjisë: Mbikëqyrja Hermeneutike (HITL)"

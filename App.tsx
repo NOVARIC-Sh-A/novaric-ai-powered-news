@@ -29,6 +29,7 @@ import {
 import { fetchMaragonReport } from './services/dataService';
 import { canonicalPoliticianKey, findPolitician, politicianPathId, routeFromLocation, POLITICIANS_LIST_PATH } from './utils/politicianNavigation';
 import { findMediaProfile, mediaProfilePath, mediaSlugFor, routeMediaFromLocation, MEDIA_LIST_PATH } from './utils/mediaNavigation';
+import { METHODOLOGY_PATH, routeMethodologyFromLocation } from './utils/methodologyNavigation';
 import { nameSurnameFromFull } from './components/maragon/maragonPresenterUi';
 import { isMediaIdentity } from './utils/maragonPublication';
 import { LiveUpdateToast } from './components/LiveUpdateToast';
@@ -270,7 +271,7 @@ export const App: React.FC = () => {
       case 'profiliIAutorit':
         pageTitle = 'Profili i Autorit | Dr Alban Gj. THIKA — Individual Representation & Social Media Disclaimer';
         pageDescription = 'INDIVIDUAL AUTHOR REPRESENTATION, FREEDOM OF EXPRESSION & SOCIAL MEDIA DISCLAIMER. Document ID: NVR-MEDIA-LEG-001. Author: Dr Alban Gj. THIKA (Maltese Citizen).';
-        pageImageUrl = 'https://novaric.co/wp-content/uploads/2025/10/NOVARIC_Team-Member_A-THIKA_Small.png';
+        pageImageUrl = '/authors/alban-thika.jpg';
         break;
       default:
         break;
@@ -378,6 +379,20 @@ export const App: React.FC = () => {
         }
         setCurrentPage('mediaPersonalitiesPage');
         setCurrentUrl(`${CANONICAL_URL.replace(/\/$/, '')}${MEDIA_LIST_PATH}`);
+        return;
+      }
+
+      if (routeMethodologyFromLocation(pathname, window.location.search)) {
+        const hash = typeof window !== 'undefined' ? window.location.hash : '';
+        if (
+          typeof window !== 'undefined' &&
+          window.location.protocol !== 'blob:' &&
+          (pathname.replace(/\/+$/, '') !== METHODOLOGY_PATH || window.location.search)
+        ) {
+          window.history.replaceState({ page: 'analysisMethodology' }, '', `${METHODOLOGY_PATH}${hash}`);
+        }
+        setCurrentPage('analysisMethodology');
+        setCurrentUrl(`${CANONICAL_URL.replace(/\/$/, '')}${METHODOLOGY_PATH}`);
         return;
       }
 
@@ -735,6 +750,9 @@ export const App: React.FC = () => {
     } else if (page === 'forecast2027' && window.location.protocol !== 'blob:') {
       window.history.pushState({ page: 'forecast2027' }, '', '/forecast-2027');
       setCurrentUrl(`${CANONICAL_URL.replace(/\/$/, '')}/forecast-2027`);
+    } else if (page === 'analysisMethodology' && window.location.protocol !== 'blob:') {
+      window.history.pushState({ page: 'analysisMethodology' }, '', METHODOLOGY_PATH);
+      setCurrentUrl(`${CANONICAL_URL.replace(/\/$/, '')}${METHODOLOGY_PATH}`);
     } else {
       updateUrl(page, (typeof data === 'string' || typeof data === 'number') ? data : undefined);
     }
@@ -788,6 +806,10 @@ export const App: React.FC = () => {
       }
       if (path === '/forecast-2027' || path === '/forecast-2027/' || page === 'forecast2027') {
         setCurrentPage('forecast2027');
+        return;
+      }
+      if (routeMethodologyFromLocation(path, window.location.search)) {
+        setCurrentPage('analysisMethodology');
         return;
       }
     };

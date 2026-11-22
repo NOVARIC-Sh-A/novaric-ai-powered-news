@@ -1,5 +1,6 @@
 import React from 'react';
 import { PresentationChartLineIcon, PrinterIcon } from './icons';
+import { AuthorAvatar } from './AuthorAvatar';
 
 interface ParagonMethodologyPageProps {
   onBack: () => void;
@@ -54,18 +55,8 @@ export const ParagonMethodologyPage: React.FC<ParagonMethodologyPageProps> = ({ 
                 <div className="text-center mb-8 -mt-4">
                     <div className="flex justify-center items-center mb-4">
                         <div className="relative flex items-center">
-                            <img 
-                                src="https://novaricstorage.blob.core.windows.net/media/AdobeStock_1030253027.jpeg" 
-                                alt="Përfaqësimi i Nora (AI)"
-                                className="w-12 h-12 rounded-full object-cover border-2 border-white dark:border-slate-800 shadow-lg"
-                                title="Nora (AI)"
-                            />
-                            <img 
-                                src="https://novaricstorage.blob.core.windows.net/media/Profile-Photos/NOVARIC_Team-Member_A-THIKA_Small.png"
-                                alt="Dr Alban Gj. THIKA"
-                                className="w-12 h-12 rounded-full object-cover border-2 border-white dark:border-slate-800 shadow-lg -ml-3"
-                                title="Dr Alban Gj. THIKA"
-                            />
+                            <AuthorAvatar name="Nora AI" size={48} className="border-2 border-white dark:border-slate-800 shadow-lg" />
+                            <AuthorAvatar name="Dr. Alban Gj. THIKA" size={48} className="border-2 border-white dark:border-slate-800 shadow-lg -ml-3" />
                         </div>
                     </div>
                     <p className="text-sm text-slate-600 dark:text-slate-300">

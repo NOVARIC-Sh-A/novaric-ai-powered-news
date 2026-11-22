@@ -17,6 +17,7 @@ export interface OgFields {
   type?: 'website' | 'article';
   jsonLd?: unknown;
   robots?: string;
+  author?: string;
 }
 
 export function escapeHtml(value: string): string {
@@ -117,6 +118,9 @@ export function ogMetaBlock(fields: OgFields): string {
     `<meta name="twitter:image" content="${image}" />`,
     `<meta name="twitter:image:alt" content="${imageAlt}" />`,
   ];
+  if (fields.author) {
+    lines.push(`<meta name="author" content="${escapeHtml(fields.author)}" />`);
+  }
   if (fields.robots) {
     lines.push(`<meta name="robots" content="${escapeHtml(fields.robots)}" />`);
   }
