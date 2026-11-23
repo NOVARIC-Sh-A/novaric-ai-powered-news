@@ -74,14 +74,19 @@ describe('MARAGON® AM-10 public page', () => {
     assert.match(html, />NOVARIC</);
   });
 
-  it('adds no 0–100 style ranges and contains no DRAFT', () => {
-    assert.equal(html.includes('DRAFT'), false);
-    assert.equal(rendered.includes('DRAFT'), false);
-    assert.equal(MARAGON_AM10_MARKDOWN.includes('DRAFT'), false);
+  it('contains no zero-to-one-hundred cut-off and no DRAFT', () => {
+    const enDash = '0' + '\u2013' + '100';
+    const hyphen = '0' + '-' + '100';
+    for (const surface of [html, rendered, MARAGON_AM10_MARKDOWN]) {
+      assert.equal(surface.includes('DRAFT'), false);
+      assert.equal(surface.includes(enDash), false);
+      assert.equal(surface.includes(hyphen), false);
+    }
+    assert.match(rendered, /kurrë numra dhe kurrë prerje numerike/);
+    assert.match(rendered, /never numbers and never numeric cut-offs/);
+    assert.match(rendered, /kurrë numra, kurrë prerje numerike/);
+    assert.match(rendered, /never numbers, never numeric cut-offs/);
     assert.deepEqual(rendered.match(RANGE), source.match(RANGE));
-    const ranges = rendered.match(RANGE) ?? [];
-    assert.deepEqual(ranges.filter((token) => token === '0–100'), ['0–100', '0–100', '0–100', '0–100']);
-    assert.equal(ranges.some((token) => /^\d+\s*-\s*\d+$/.test(token) && token !== '2026-11'), false);
   });
 
   it('publishes the clean path and the Publikime label without benchmark data', () => {
