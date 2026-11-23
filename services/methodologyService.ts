@@ -343,25 +343,18 @@ export const FALLBACK_REFERENCES: MethodReference[] = [
   },
 ];
 
-export const FALLBACK_AUDITS: MethodologyAudit[] = [
-  {
-    id: 'AUD-MET-2026-01',
-    audited_at: '2026-08-12T10:00:00Z',
-    auditor: 'Këshilli Mbikëqyrës i Pavarur & Zyra e Standardeve NOVARIC®',
-    result: 'passed',
-    result_label_sq: 'Miratuar pa Vërejtje Thelbësore',
-    compliance_score: 98.4,
-    notes:
-      'Auditim i plotë i zbatimit të sinergjisë hermeneutike mes LLM dhe ekipit njerëzor. Nuk u identifikua asnjë publikim autonom pa miratim editorial me dy nënshkrime.',
-    next_audit_at: '2026-11-15T09:00:00Z',
-  },
-];
+/**
+ * No audit record with published evidence exists. The former fallback audit seed dated 12.08.2026
+ * is uncorroborated (MARAGON® v1.0 §13) and its two-signature wording conflicts with sole sign-off
+ * (§2.2), so the fallback carries no audit. See RPT-COM-MARAGON-METHODOLOGY-CLAIMS-v0.1-20261123.
+ */
+export const FALLBACK_AUDITS: MethodologyAudit[] = [];
 
 export const FALLBACK_METRICS: MethodologyMetricsData = {
   word_count_hint: 940,
   methodology_version: 'v2.4.1 (Miratuar)',
-  last_audit_at: '2026-08-12T10:00:00Z',
-  next_audit_at: '2026-11-15T09:00:00Z',
+  last_audit_at: null,
+  next_audit_at: null,
   human_review_status: '100% Mbikëqyrje Njerëzore (Human-in-the-Loop)',
   ai_involvement_indicator: 'Ndihmës Hulumtues (Pa Publikim Autonom)',
   section_count: 5,

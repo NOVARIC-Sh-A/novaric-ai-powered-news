@@ -39,8 +39,8 @@ export const NULL_PROVISIONAL: MaragonProvisionalBand = {
   reviewLabel_en: 'PROVISIONAL · under review',
   confidence: 'none',
   evidenceIds: [],
-  notOfficialReason_sq: 'Nuk është kërkuar vlerësim për këtë profil; të dhjetë treguesit mbeten pa vlerësim derisa të ketë mostër 20-epizodësh dhe miratim me shkrim.',
-  notOfficialReason_en: 'No scoring was requested for this profile; all ten indicators stay not assessed until a 20-episode sample and written approval exist.',
+  notOfficialReason_sq: 'Nuk është kërkuar vlerësim për këtë profil; të dhjetë treguesit mbeten pa vlerësim derisa të ketë mostër S1 sipas §6.4 dhe miratim me shkrim.',
+  notOfficialReason_en: 'No scoring was requested for this profile; all ten indicators stay not assessed until an S1 sample under §6.4 and written approval exist.',
 };
 
 export function unassessedIndicators(): MaragonPresenterIndicator[] {
@@ -52,10 +52,10 @@ export function unassessedIndicators(): MaragonPresenterIndicator[] {
     provisional: { ...NULL_PROVISIONAL },
     confidence: 'none',
     evidenceCount: 0,
-    finding_sq: 'Nuk është kërkuar vlerësim. Nuk ka mostër S1 me 20 emisione dhe nuk është caktuar brez (zyrtar apo indikativ).',
-    finding_en: 'No scoring was requested. There is no 20-episode S1 sample and no official or indicative band is assigned.',
-    pathToOfficial_sq: 'Mostër e rastit me 20 emisione (vendimi 19.11.2026), kodim, e drejta e përgjigjes (§12) dhe shqyrtim me shkrim nga Dr Alban Gj. THIKA.',
-    pathToOfficial_en: 'A random 20-episode sample (19.11.2026 ruling), coding, the right of reply (§12) and written review by Dr Alban Gj. THIKA.',
+    finding_sq: 'Nuk është kërkuar vlerësim. Nuk ka mostër S1 dhe nuk është caktuar brez (zyrtar apo indikativ).',
+    finding_en: 'No scoring was requested. There is no S1 sample and no official or indicative band is assigned.',
+    pathToOfficial_sq: 'Mostër e rastit S1 sipas §6.4 (≥ 12 emisione javore / ≥ 20 ditore; rregulli i raportuar i 19.11.2026 për 20 emisione pret konfirmim me shkrim), kodim, e drejta e përgjigjes (§12) dhe shqyrtim me shkrim nga Dr Alban Gj. THIKA.',
+    pathToOfficial_en: 'A random S1 sample under §6.4 (≥ 12 weekly / ≥ 20 daily episodes; the reported 19.11.2026 20-episode rule awaits written confirmation), coding, the right of reply (§12) and written review by Dr Alban Gj. THIKA.',
     flags: ['not_assessed', 'no_scoring_requested'],
   }));
 }
@@ -67,14 +67,14 @@ export function methodologyNotes(): MaragonMethodologyNotes {
     signedBy: METHODOLOGY_SIGNED_BY,
     focus_sq: 'MARAGON® v1.0 vlerëson prezantuesit individualë; programet vlerësohen veçmas.',
     focus_en: 'MARAGON® v1.0 scores individual presenters; programmes are scored separately.',
-    sampleRule_sq: 'Për brez zyrtar në treguesit e mostrës duhet një mostër S1 me të paktën 20 emisione (vendimi 19.11.2026). Pa këtë mostër treguesi mbetet Pa vlerësim.',
-    sampleRule_en: 'An official band on sample-based indicators needs an S1 sample of at least 20 episodes (19.11.2026 ruling). Without that sample the indicator stays Not assessed.',
+    sampleRule_sq: 'Për brez në treguesit e mostrës duhet mostra S1 e §6.4: ≥ 12 emisione javore ose ≥ 20 ditore, në ≥ 6 muaj brenda 18 muajve, me seed; për prezantues pa seri S1-I (AM-06). Rregulli i raportuar i 19.11.2026 për 20 emisione pret konfirmim me shkrim. Pa mostër treguesi mbetet Pa vlerësim.',
+    sampleRule_en: 'A band on sample-based indicators needs the §6.4 S1 sample: ≥ 12 weekly or ≥ 20 daily episodes over ≥ 6 months within 18 months, with a recorded seed; S1-I for presenters without a series (AM-06). The reported 19.11.2026 20-episode rule awaits written confirmation. Without the sample the indicator stays Not assessed.',
     nullableScoring_sq: 'E panjohura është null dhe shfaqet «Pa vlerësim / Not assessed». Nuk shfaqen numra.',
     nullableScoring_en: 'Unknown is null and displays “Pa vlerësim / Not assessed”. Numbers are not shown.',
-    bandsOnly_sq: 'Dalja publike janë brezat, kurrë numrat. Brezat indikativë kërkojnë etiketën PROVIZOR dhe miratim me shkrim (AM-09).',
-    bandsOnly_en: 'Public output is bands, never numbers. Indicative bands need the PROVIZOR label and written approval (AM-09).',
-    rightOfReply_sq: 'E drejta e përgjigjes 10 ditë pune kërkohet para botimit. Subjektet nuk kontaktohen pa autorizim.',
-    rightOfReply_en: 'A 10-working-day right of reply is required before publishing. Subjects are not contacted without authorisation.',
+    bandsOnly_sq: 'Dalja publike janë brezat, kurrë numrat. Brezat indikativë kërkojnë etiketën «PROVIZOR — në pritje të miratimit» dhe miratim me shkrim të profilit (AM-09).',
+    bandsOnly_en: 'Public output is bands, never numbers. Indicative bands need the label “PROVISIONAL — pending sign-off” and written approval of the profile (AM-09).',
+    rightOfReply_sq: 'E drejta e përgjigjes kërkohet para botimit: 10 ditë pune, +5 ditë pune me kërkesë të arsyetuar (§12.3). Subjektet nuk kontaktohen pa autorizim.',
+    rightOfReply_en: 'A right of reply is required before publishing: 10 working days, +5 working days on a reasoned request (§12.3). Subjects are not contacted without authorisation.',
   };
 }
 

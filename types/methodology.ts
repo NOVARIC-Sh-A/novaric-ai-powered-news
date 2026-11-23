@@ -71,6 +71,8 @@ export interface MethodologyAudit {
   compliance_score: number;
   notes: string;
   next_audit_at: string | null;
+  /** Link to the published audit report. Without it the record is not displayed as an audit. */
+  evidence_url?: string | null;
 }
 
 export interface MethodologyMetricsData {

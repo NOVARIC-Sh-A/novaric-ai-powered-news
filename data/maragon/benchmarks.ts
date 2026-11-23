@@ -8,6 +8,14 @@ import type { MaragonBenchmarkPoint, MaragonBenchmarkSeries } from '../../compon
 
 export const MARAGON_BENCHMARK_METHODOLOGY_ID = 'STD-COM-MARAGON-METHODOLOGY-v1.0-20261121';
 
+/**
+ * Amendments that carry signed benchmark values. Empty: no benchmark amendment is signed.
+ * AM-10 (STD-COM-MARAGON-AM10-BENCHMARKS-v0.1-20261122) is an UNSIGNED proposal and is listed
+ * below so that it can never be plotted by setting a status field alone.
+ */
+export const SIGNED_BENCHMARK_AMENDMENT_IDS: readonly string[] = [];
+export const PROPOSED_UNSIGNED_BENCHMARK_AMENDMENT_IDS: readonly string[] = ['AM-10'];
+
 const AWAITING_SQ = 'Nuk ka vlerë të dokumentuar. Pret një ndryshim të nënshkruar të metodologjisë.';
 const AWAITING_EN = 'No documented value. Awaits a signed methodology amendment.';
 
@@ -85,8 +93,8 @@ export const MARAGON_RADAR_LEGEND = {
 } as const;
 
 export const MARAGON_BENCHMARK_AWAITING_NOTE = {
-  sq: 'Pa vlerësim / Not assessed. Vlerat presin një ndryshim të nënshkruar të metodologjisë.',
-  en: 'Pa vlerësim / Not assessed. The values await a signed methodology amendment.',
+  sq: 'Pa vlerësim / Not assessed. Propozim AM-10, i pa nënshkruar dhe jo në fuqi; linja nuk vizatohet.',
+  en: 'Pa vlerësim / Not assessed. AM-10 proposal, unsigned and not in force; the line is not drawn.',
 } as const;
 
 /**
@@ -96,9 +104,15 @@ export const MARAGON_BENCHMARK_AWAITING_NOTE = {
 export function isPlottableBenchmarkPoint(
   seriesRecord: MaragonBenchmarkSeries | undefined,
   point: MaragonBenchmarkPoint | undefined,
+  signedAmendmentIds: readonly string[] = SIGNED_BENCHMARK_AMENDMENT_IDS,
 ): boolean {
   if (!seriesRecord || !point) return false;
   if (seriesRecord.status !== 'approved' || !seriesRecord.ownerSignOff) return false;
+  const amendment = seriesRecord.amendmentId;
+  if (!amendment || !signedAmendmentIds.includes(amendment)) return false;
+  if (PROPOSED_UNSIGNED_BENCHMARK_AMENDMENT_IDS.includes(amendment)) return false;
+  if (seriesRecord.ownerSignOff.amendmentId !== amendment) return false;
+  if (seriesRecord.methodologyId !== MARAGON_BENCHMARK_METHODOLOGY_ID) return false;
   if (point.status !== 'approved' || point.band == null) return false;
   return true;
 }

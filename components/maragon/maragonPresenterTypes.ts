@@ -174,6 +174,8 @@ export interface MaragonPresenterRecord {
     am09ProvisionalApprovedInWriting: boolean;
     scoringSuspended: boolean;
     rightOfReply: 'not_offered' | 'offered' | 'completed';
+    /** Written release authorisation (D-30) bound to a methodology version. Absent = not authorised. */
+    releaseAuthorization?: import('../../utils/maragonPublicationDecision').MaragonReleaseAuthorization | null;
     composite: null;              // AM-02/AM-04: none until R, A, G, O are all officially scored
     dimensions: Record<MaragonPillar, MaragonBandKey | null>;
     asOf: string;                 // ISO date

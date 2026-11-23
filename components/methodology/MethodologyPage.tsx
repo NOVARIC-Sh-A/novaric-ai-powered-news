@@ -249,7 +249,7 @@ export const MethodologyPage: React.FC<MethodologyPageProps> = ({
               Kodi i Standardeve • Neni 2
             </span>
             <span className="px-3 py-1 rounded-full bg-emerald-100 dark:bg-emerald-950 text-emerald-800 dark:text-emerald-300 border border-emerald-200 dark:border-emerald-900">
-              EFCSN & IFCN Konform
+              Referencë: standardet e publikuara EFCSN & IFCN
             </span>
           </div>
 
@@ -454,7 +454,7 @@ export const MethodologyPage: React.FC<MethodologyPageProps> = ({
               {renderWithSuperscript('Kodi i Standardeve NOVARIC® (Standards Hub)')}
             </h4>
             <p className="text-slate-300 text-sm leading-relaxed">
-              Çdo hap i kësaj metodologjie auditohet sipas Nenit 1–4 të Kodit të Standardeve. Eksploroni matricën e plotë të përputhshmërisë, qendrën e korrigjimeve dhe regjistrin e inteligjencës artificiale.
+              Çdo hap i kësaj metodologjie lidhet me Nenet 1–4 të Kodit të Standardeve. Eksploroni matricën e plotë të përputhshmërisë, qendrën e korrigjimeve dhe regjistrin e inteligjencës artificiale.
             </p>
           </div>
 

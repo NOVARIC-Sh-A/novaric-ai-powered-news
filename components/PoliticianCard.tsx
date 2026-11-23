@@ -3,8 +3,7 @@ import React, { useState, useMemo } from 'react';
 import {
   ProcessedVipProfile,
   TranslatedParagonEntry,
-  ParagonDimension,
-  MaragonDimension
+  ParagonDimension
 } from './../types';
 // Added InformationCircleIcon to the imports to fix the reference error in DimensionIcon.
 import {

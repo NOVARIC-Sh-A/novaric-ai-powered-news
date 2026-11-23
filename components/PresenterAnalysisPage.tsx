@@ -25,29 +25,17 @@ const createConductChartData = (data: { excellent: number; good: number; average
     return segments.length > 0 ? segments : undefined;
 };
 
-const AnalysisCharacteristic: React.FC<{ title: string; chartData?: ChartSegment[]; whatToMonitor: string; whyItMatters: string; benchmark: number; }> = ({ title, chartData, whatToMonitor, whyItMatters, benchmark }) => {
+const AnalysisCharacteristic: React.FC<{ title: string; chartData?: ChartSegment[]; whatToMonitor: string; whyItMatters: string; benchmark?: number; }> = ({ title, chartData, whatToMonitor, whyItMatters }) => {
   if (!chartData || chartData.length === 0) return null;
 
-  const positiveValue = chartData.find(s => s.name === 'Pozitiv')?.value || 0;
-  const totalValue = chartData.reduce((sum, s) => sum + s.value, 0);
-  const score = totalValue > 0 ? Math.round((positiveValue / totalValue) * 100) : 0;
 
   return (
     <div className="flex flex-col md:flex-row gap-6 p-4 border-b border-slate-200 dark:border-slate-700 last:border-b-0 pb-4 last:pb-0">
       <div className="md:w-1/3 flex-shrink-0 flex flex-col items-center">
         <h4 className="text-lg font-semibold text-slate-800 dark:text-slate-200 mb-2 text-center">{title}</h4>
-        <PieChart data={chartData} size={100} />
-        <div className="mt-2 w-full flex flex-col items-center text-center space-y-2">
-            <div className="w-full">
-                <p className="text-xl font-bold text-slate-800 dark:text-slate-100">{score}%</p>
-                <p className="text-xs text-slate-500 dark:text-slate-400">Vlerësimi pozitiv</p>
-            </div>
-            <div className="w-full h-px bg-slate-200 dark:bg-slate-600 my-1"></div>
-            <div className="w-full">
-                <p className="text-lg font-semibold text-slate-700 dark:text-slate-300">{benchmark}%</p>
-                <p className="text-xs text-slate-500 dark:text-slate-400">Standardi i Industrisë</p>
-            </div>
-        </div>
+        <PieChart data={chartData} size={100} hideValues />
+        {/* No percentage and no "industry standard" figure: the reference values were unsourced constants,
+            and v1.0 §10 / AM-10 (unsigned) allow neither raw numbers nor reference lines in public. */}
       </div>
       <div className="md:w-2/3">
         <div className="prose prose-sm dark:prose-invert max-w-none">

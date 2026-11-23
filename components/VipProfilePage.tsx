@@ -15,6 +15,7 @@ import {
   isMaragonAssessmentPublished,
   measuredNumber,
   notAssessedLabel,
+  publishableMaragonAnalysis,
   publishedSeries,
 } from '../utils/maragonPublication';
 import { MaragonDossierView } from './maragon/MaragonDossierView';
@@ -130,16 +131,19 @@ export const VipProfilePage: React.FC<VipProfilePageProps> = ({ profile, onBack,
     : aletheiaScore > 80 ? 'text-green-400' : aletheiaScore > 50 ? 'text-yellow-400' : 'text-red-400';
 
   // --- Radar Chart Setup for Profile Page ---
-  const radarLabels = profile.maragonAnalysis?.map(d => d.dimension.split(' ').slice(0,2).join(' ')) || [];
+  // Media subjects: retired seven-label mock rows are never read (v1.0 §1.3, §3.6).
+  const radarRows = mediaSubject ? publishableMaragonAnalysis(profile) : (profile.maragonAnalysis || []);
+  const radarLabels = radarRows.map(d => d.dimension.split(' ').slice(0,2).join(' '));
   const publishedRadar = mediaSubject
-    ? publishedSeries(profile, profile.maragonAnalysis?.map(d => d.score))
-    : (profile.maragonAnalysis?.map(d => d.score) || null);
+    ? publishedSeries(profile, radarRows.map(d => d.score))
+    : (radarRows.length ? radarRows.map(d => d.score) : null);
   const drawMediaPolygon = !mediaSubject || (mediaPublished && publishedRadar !== null);
   
   const radarData = {
       labels: radarLabels.length > 0 ? radarLabels : ['R', 'A', 'G', 'O'],
       datasets: drawMediaPolygon && publishedRadar ? [
-          {
+          // A fixed "90" target is not a documented benchmark; media subjects never get it (v1.0 §3.6, AM-10 unsigned).
+          ...(mediaSubject ? [] : [{
               label: 'Target (Benchmark)',
               data: publishedRadar.map(() => 90),
               backgroundColor: 'rgba(255, 255, 255, 0.05)',
@@ -148,7 +152,7 @@ export const VipProfilePage: React.FC<VipProfilePageProps> = ({ profile, onBack,
               pointRadius: 0,
               borderDash: [5, 5],
               spanGaps: false,
-          },
+          }]),
           {
               label: displayName,
               data: publishedRadar,

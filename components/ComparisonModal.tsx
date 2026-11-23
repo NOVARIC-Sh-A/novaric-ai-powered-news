@@ -4,7 +4,9 @@ import { VipProfile } from '../types';
 import { XMarkIcon, BeakerIcon, ScaleIcon, MegaphoneIcon, ShieldCheckIcon } from './icons';
 import { formatVipName, getProfilePhotoUrl } from '../utils/paragonProfileUtils';
 import { useLanguage } from '../contexts/LanguageContext';
-import { isMaragonAssessmentPublished, measuredNumber, notAssessedLabel } from '../utils/maragonPublication';
+import { isMaragonAssessmentPublished, maragonScoresArePublic, notAssessedLabel, publishableMaragonAnalysis } from '../utils/maragonPublication';
+import { publishedBand, publicBandText, type PublicMaragonBand } from '../utils/maragonBandsOnly';
+import { MaragonBandChip } from './maragon/MaragonBandChip';
 
 interface ComparisonModalProps {
   profile1: VipProfile;
@@ -30,43 +32,38 @@ const ArchetypeBadge: React.FC<{ archetype: VipProfile['archetype'] }> = ({ arch
     );
 };
 
-const ComparisonBar: React.FC<{ label: string; value1: number | null; value2: number | null }> = ({ label, value1, value2 }) => {
-    if (value1 === null || value2 === null) return null;
-    const isValue1Greater = value1 > value2;
-    const isValue2Greater = value2 > value1;
-    return (
-        <div className="w-full">
-            <p className="text-center text-sm font-semibold text-slate-700 dark:text-slate-300 mb-1">{label}</p>
-            <div className="flex items-center gap-2">
-                <span className={`w-10 text-right font-bold ${isValue1Greater ? 'text-primary-600 dark:text-primary-400' : 'text-slate-600 dark:text-slate-300'}`}>{value1}</span>
-                <div className="flex-grow h-6 bg-slate-200 dark:bg-slate-700 rounded-full flex">
-                    <div className="bg-primary-500 rounded-l-full h-full" style={{ width: `${value1}%` }}></div>
-                    <div className="bg-sky-500 rounded-r-full h-full" style={{ width: `${value2}%`, marginLeft: 'auto' }}></div>
-                </div>
-                 <span className={`w-10 text-left font-bold ${isValue2Greater ? 'text-sky-500' : 'text-slate-600 dark:text-slate-300'}`}>{value2}</span>
-            </div>
+/**
+ * Bands only (v1.0 §10), side by side. No numbers, no score-proportional widths and no "greater" highlight:
+ * v1.0 §1.2 puts ranking of subjects against each other out of scope.
+ */
+const ComparisonBands: React.FC<{ label: string; band1: PublicMaragonBand | null; band2: PublicMaragonBand | null; lang: 'sq' | 'en' }> = ({ label, band1, band2, lang }) => (
+    <div className="w-full">
+        <div className="grid grid-cols-2 gap-4">
+            <MaragonBandChip label={label} band={band1} lang={lang} />
+            <MaragonBandChip label={label} band={band2} lang={lang} />
         </div>
-    );
-};
+    </div>
+);
 
 export const ComparisonModal: React.FC<ComparisonModalProps> = ({ profile1, profile2, onClose }) => {
   const { language } = useLanguage();
+  const lang = language === 'en' ? 'en' : 'sq';
   const unassessed = notAssessedLabel(language === 'en' ? 'en' : 'sq');
   const leftPublished = isMaragonAssessmentPublished(profile1);
   const rightPublished = isMaragonAssessmentPublished(profile2);
-  const scoreLabel = (profile: VipProfile, published: boolean) => {
-    if (!published) return unassessed;
-    const score = measuredNumber(profile.averageMaragonScore);
-    return score === null ? unassessed : String(score);
-  };
+  // Bands need the full gate, including a documented methodologyApproved === true.
+  const leftBands = maragonScoresArePublic(profile1);
+  const rightBands = maragonScoresArePublic(profile2);
+  const scoreLabel = (profile: VipProfile, published: boolean) =>
+    publicBandText(publishedBand(published && maragonScoresArePublic(profile), profile.averageMaragonScore), lang);
   const comparedDimensions = leftPublished && rightPublished
-    ? (profile1.maragonAnalysis ?? []).flatMap((dim1, index) => {
-        const dim2 = profile2.maragonAnalysis?.[index];
+    ? publishableMaragonAnalysis(profile1).flatMap((dim1, index) => {
+        const dim2 = publishableMaragonAnalysis(profile2)[index];
         if (!dim2 || dim1.dimension !== dim2.dimension) return [];
-        const value1 = measuredNumber(dim1.score);
-        const value2 = measuredNumber(dim2.score);
-        if (value1 === null || value2 === null) return [];
-        return [{ dimension: dim1.dimension, value1, value2 }];
+        const band1 = publishedBand(leftBands, dim1.score);
+        const band2 = publishedBand(rightBands, dim2.score);
+        if (band1 === null && band2 === null) return [];
+        return [{ dimension: dim1.dimension, band1, band2 }];
       })
     : [];
   return (
@@ -82,7 +79,7 @@ export const ComparisonModal: React.FC<ComparisonModalProps> = ({ profile1, prof
         onClick={e => e.stopPropagation()}
       >
         <header className="p-4 border-b border-slate-200 dark:border-slate-700 flex justify-between items-center flex-shrink-0">
-            <h2 id="comparison-title" className="text-xl font-bold text-slate-800 dark:text-slate-100">Krahasim Kokë më Kokë</h2>
+            <h2 id="comparison-title" className="text-xl font-bold text-slate-800 dark:text-slate-100">Krahasim sipas brezave MARAGON®</h2>
             <button
                 onClick={onClose}
                 className="p-1.5 bg-slate-200 dark:bg-slate-700 hover:bg-slate-300 dark:hover:bg-slate-600 rounded-full text-slate-600 dark:text-slate-300"
@@ -136,11 +133,12 @@ export const ComparisonModal: React.FC<ComparisonModalProps> = ({ profile1, prof
 
             <div className="mt-6 space-y-4">
                 {comparedDimensions.length > 0 ? comparedDimensions.map((dim) => (
-                        <ComparisonBar
+                        <ComparisonBands
                             key={dim.dimension}
                             label={dim.dimension}
-                            value1={dim.value1}
-                            value2={dim.value2}
+                            band1={dim.band1}
+                            band2={dim.band2}
+                            lang={lang}
                         />
                 )) : (
                     <p className="text-center font-semibold text-slate-600 dark:text-slate-300">{unassessed}</p>

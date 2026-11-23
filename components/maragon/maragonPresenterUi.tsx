@@ -3,8 +3,7 @@ import {
   MARAGON_BAND_LABELS,
   MARAGON_CONFIDENCE_LABELS,
   MARAGON_STATUS_LABELS,
-  PROVISIONAL_LABEL,
-  maragonProvisionalBandsArePublic,
+  AM09_PUBLIC_LABEL,
   notAssessedLabel,
   type MaragonBandKey,
   type MaragonConfidence,
@@ -12,10 +11,12 @@ import {
 } from '../../utils/maragonPublication';
 import type { MaragonPresenterIndicator, MaragonPresenterRecord, MaragonPillar } from './maragonPresenterTypes';
 import type { MaragonBenchmarkSeries } from './maragonBenchmarkTypes';
+import { officialIndicatorDecision, provisionalIndicatorDecision } from '../../utils/maragonPublicationDecision';
 import {
   MARAGON_BENCHMARKS,
   MARAGON_BENCHMARK_AWAITING_NOTE,
   MARAGON_RADAR_LEGEND,
+  SIGNED_BENCHMARK_AMENDMENT_IDS,
   isPlottableBenchmarkPoint,
 } from '../../data/maragon/benchmarks';
 
@@ -87,24 +88,11 @@ export function visibleIndicatorBand(rec: { maragon: MaragonPresenterRecord['mar
   if (ind.status === 'not_applicable') return { ...none, notApplicable: true };
   const m = rec.maragon;
   if (m.assessmentStatus === 'withheld' || m.assessmentStatus === 'suspended') return none;
-  const officialOk =
-    !!ind.officialBand &&
-    (ind.confidence === 'medium' || ind.confidence === 'high') &&
-    m.assessmentStatus === 'approved' &&
-    m.authorizedForPublicDisplay &&
-    !m.scoringSuspended &&
-    m.methodologyApproved &&
-    m.rightOfReply === 'completed';
-  if (officialOk) return { band: ind.officialBand, confidence: ind.confidence, indicative: false, notApplicable: false };
+  if (officialIndicatorDecision(m, ind).open) {
+    return { band: ind.officialBand, confidence: ind.confidence, indicative: false, notApplicable: false };
+  }
   if (!ind.indicativeBand) return none;
-  const provisionalPublic = maragonProvisionalBandsArePublic({
-    maragonAssessmentStatus: m.assessmentStatus,
-    methodologyApproved: m.methodologyApproved,
-    scoringSuspended: m.scoringSuspended,
-    authorizedForPublicDisplay: m.authorizedForPublicDisplay,
-    am09ProvisionalApprovedInWriting: m.am09ProvisionalApprovedInWriting,
-  });
-  if (mode === 'internal' || provisionalPublic) {
+  if (mode === 'internal' || provisionalIndicatorDecision(m, ind).open) {
     return { band: ind.indicativeBand, confidence: ind.confidence, indicative: true, notApplicable: false };
   }
   return none;
@@ -172,7 +160,7 @@ export const BandPill: React.FC<{ v: VisibleBand; lang: Lang; size?: 'sm' | 'md'
     <span
       className={`inline-flex items-center gap-1 rounded border font-bold ${size === 'md' ? 'px-3 py-1 text-[15px]' : 'px-2 py-0.5 text-[13px]'}`}
       style={style}
-      title={v.indicative ? `${PROVISIONAL_LABEL.sq} · ${PROVISIONAL_LABEL.en}` : undefined}
+      title={v.indicative ? `${AM09_PUBLIC_LABEL.sq} · ${AM09_PUBLIC_LABEL.en}` : undefined}
     >
       {bandText(v, lang)}
       {v.indicative && '*'}
@@ -185,7 +173,7 @@ export const BandPill: React.FC<{ v: VisibleBand; lang: Lang; size?: 'sm' | 'md'
 
 export const ProvisionalRibbon: React.FC = () => (
   <div className="text-white text-[13px] font-bold uppercase tracking-[0.04em] px-3 py-1.5 rounded text-center" style={{ backgroundColor: RED }}>
-    {PROVISIONAL_LABEL.sq} · <span className="font-bold">{PROVISIONAL_LABEL.en}</span>
+    {AM09_PUBLIC_LABEL.sq} · <span className="font-bold">{AM09_PUBLIC_LABEL.en}</span>
   </div>
 );
 
@@ -370,7 +358,9 @@ export const BandRadar: React.FC<{
   size?: number;
   lang: Lang;
   benchmarks?: MaragonBenchmarkSeries[];
-}> = ({ rec, mode, size = 260, lang, benchmarks = MARAGON_BENCHMARKS }) => {
+  /** Signed benchmark amendments. Defaults to the signed list (empty today); tests may inject a fixture id. */
+  signedBenchmarkAmendments?: readonly string[];
+}> = ({ rec, mode, size = 260, lang, benchmarks = MARAGON_BENCHMARKS, signedBenchmarkAmendments = SIGNED_BENCHMARK_AMENDMENT_IDS }) => {
   const inds = rec.maragon.indicators.filter((ind) => ind.id !== 'maragon:C' && ind.code !== 'C');
   const n = inds.length || 10;
   const c = size / 2;
@@ -389,14 +379,17 @@ export const BandRadar: React.FC<{
     const seriesRecord = benchmarks.find((item) => item.id === id);
     return inds.flatMap((ind, index) => {
       const point = seriesRecord?.points.find((item) => indicatorAliases(ind).has(item.indicatorId));
-      if (!isPlottableBenchmarkPoint(seriesRecord, point) || !point?.band) return [];
+      if (!isPlottableBenchmarkPoint(seriesRecord, point, signedBenchmarkAmendments) || !point?.band) return [];
       const level = MARAGON_BAND_LABELS[point.band].level;
       return level > 0 ? [{ i: index, level }] : [];
     });
   };
   const albania = benchmarkVertices('albania_expected');
   const europe = benchmarkVertices('europe_industry');
-  const caption = 'Tre linja: vlerësimi i prezantuesit, standardi i pritur në Shqipëri, standardi i industrisë evropiane / ndërkombëtare. Linjat pa vlerë të miratuara nuk vizatohen si zero. / Three lines: the presenter\'s assessment, the expected standard in Albania, and the European / international industry standard. Lines without an approved value are not drawn as zero.';
+  // AM-10 is unsigned (owner decision t329u): no wording may imply that reference lines are adopted.
+  const caption = signedBenchmarkAmendments.length > 0
+    ? 'Tre linja: vlerësimi i prezantuesit, standardi i pritur në Shqipëri, standardi i industrisë evropiane / ndërkombëtare. Linjat pa vlerë të miratuara nuk vizatohen si zero. / Three lines: the presenter\'s assessment, the expected standard in Albania, and the European / international industry standard. Lines without an approved value are not drawn as zero.'
+    : 'Brezi i prezantuesit në pesë nivele, pa numra. Linjat referuese të propozuara në AM-10 nuk janë të nënshkruara, nuk janë në fuqi dhe nuk vizatohen. / The presenter\'s band on five levels, without numbers. The reference lines proposed in AM-10 are unsigned, not in force and not drawn.';
   return (
     <figure className="m-0 flex flex-col gap-3" data-maragon-radar="three-level">
       <div className="w-full aspect-square">
