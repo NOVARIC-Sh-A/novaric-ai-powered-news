@@ -1,6 +1,6 @@
 /**
- * UD-19 (owner decision t329u): MARAGON® bands-only public presentation, and UD-02: both reference
- * lines hidden in every publication state. Signed v1.0 §10 (D-21), §1.2, §3.1; AM-09; AM-10 unsigned.
+ * UD-19 (owner decision t329u): MARAGON® bands-only public presentation.
+ * AM-10, signed 23.11.2026 10:56 Tirana, draws the two reference lines as band names only.
  */
 import { describe, it } from 'node:test';
 import assert from 'node:assert/strict';
@@ -15,7 +15,7 @@ import { Top10MediaInfluencers } from '../components/Top10MediaInfluencers';
 import { ComparisonModal } from '../components/ComparisonModal';
 import { PieChart } from '../components/PieChart';
 import { BandRadar } from '../components/maragon/maragonPresenterUi';
-import { MARAGON_BENCHMARKS, SIGNED_BENCHMARK_AMENDMENT_IDS, isPlottableBenchmarkPoint } from '../data/maragon/benchmarks';
+import { MARAGON_BENCHMARKS, SIGNED_BENCHMARK_AMENDMENT_IDS, isPlottableBenchmarkPoint, publicBenchmarkLines } from '../data/maragon/benchmarks';
 import { baseMaragon } from '../data/maragon/presenterFactory';
 import type { MaragonBenchmarkSeries } from '../components/maragon/maragonBenchmarkTypes';
 import type { MaragonBandKey } from '../utils/maragonPublication';
@@ -94,9 +94,9 @@ function presenter(status: string, extra: Record<string, unknown> = {}) {
   return { maragon };
 }
 
-describe('UD-02 — both reference lines hidden in every publication state', () => {
-  it('report page: no peer-average and no standard series in any state, with or without methodologyApproved', () => {
-    assert.deepEqual(SIGNED_BENCHMARK_AMENDMENT_IDS, []);
+describe('AM-10 — signed reference lines are bands, and mock benchmark figures stay hidden', () => {
+  it('report page: no peer-average and no mock standard series in any state, with or without methodologyApproved', () => {
+    assert.deepEqual([...SIGNED_BENCHMARK_AMENDMENT_IDS], ['AM-10']);
     assert.deepEqual(maragonReportBenchmarksArePublic(), { standard: false, peerAverage: false });
     for (const state of ALL_STATES) {
       for (const approved of [false, true]) {
@@ -107,23 +107,38 @@ describe('UD-02 — both reference lines hidden in every publication state', () 
     }
   });
 
-  it('presenter radar: no reference polygon in public or internal (PROVIZOR) mode, in any state, even with an AM-10 "approved" attempt', () => {
+  it('presenter radar: signed lines plot in every state, drafts and a foreign amendment id do not, and no public string has a number', () => {
     for (const state of ALL_STATES) {
       for (const mode of ['public', 'internal'] as const) {
-        for (const series of [MARAGON_BENCHMARKS, am10Series('draft_unapproved'), am10Series('approved')]) {
-          const extra = state === 'approved'
-            ? { authorizedForPublicDisplay: true, methodologyApproved: true, am09ProvisionalApprovedInWriting: true, rightOfReply: 'completed' }
-            : {};
-          const html = renderToStaticMarkup(React.createElement(BandRadar, { rec: presenter(state, extra), mode, lang: 'sq', benchmarks: series }));
-          assert.equal(html.includes('data-radar-series="albania_expected"'), false, `${state}/${mode}`);
-          assert.equal(html.includes('data-radar-series="europe_industry"'), false, `${state}/${mode}`);
-          assert.doesNotMatch(html, /Tre linja|Three lines/);
-          assert.match(html, /AM-10/);
-          assert.equal(hasDigit(html), false, `${state}/${mode}: ${firstDigits(html)}`);
+        const extra = state === 'approved'
+          ? { authorizedForPublicDisplay: true, methodologyApproved: true, am09ProvisionalApprovedInWriting: true, rightOfReply: 'completed' }
+          : {};
+        const rec = presenter(state, extra);
+        const before = JSON.stringify(rec.maragon);
+        const html = renderToStaticMarkup(React.createElement(BandRadar, { rec, mode, lang: 'sq', benchmarks: MARAGON_BENCHMARKS }));
+        assert.equal(JSON.stringify(rec.maragon), before, `${state}/${mode}`);
+        assert.match(html, /data-radar-series="albania_expected"/, `${state}/${mode}`);
+        assert.match(html, /data-radar-series="europe_industry"/, `${state}/${mode}`);
+        assert.match(html, /Standardi i pritur në Shqipëri \/ Expected standard in Albania/);
+        assert.match(html, /Standardi i industrisë europiane\/ndërkombëtare \/ European\/international industry standard/);
+        assert.doesNotMatch(html, /i pa nënshkruar|unsigned/);
+        assert.equal(html.includes('data-level="0"'), false);
+        assert.equal(hasDigit(html), false, `${state}/${mode}: ${firstDigits(html)}`);
+        for (const series of [am10Series('draft_unapproved')]) {
+          const hidden = renderToStaticMarkup(React.createElement(BandRadar, { rec, mode, lang: 'sq', benchmarks: series }));
+          assert.equal(hidden.includes('data-radar-series="albania_expected"'), false, `${state}/${mode} draft`);
         }
       }
     }
-    for (const series of am10Series('approved')) for (const point of series.points) assert.equal(isPlottableBenchmarkPoint(series, point), false);
+    const foreign = MARAGON_BENCHMARKS.map((series) => ({ ...series, amendmentId: 'AM-99', ownerSignOff: { by: 'Someone else', dateTirana: '2026-11-23T10:56:00+01:00', amendmentId: 'AM-99' } }));
+    for (const series of foreign) for (const point of series.points) assert.equal(isPlottableBenchmarkPoint(series, point), false);
+    const forged = am10Series('approved');
+    for (const series of forged) for (const point of series.points) assert.equal(isPlottableBenchmarkPoint(series, point), false);
+    for (const line of publicBenchmarkLines()) {
+      assert.equal(/\d/.test(line.label), false);
+      assert.equal(line.points.length, 10);
+      for (const point of line.points) assert.equal(/\d/.test(point.band), false);
+    }
   });
 
   it('analysis page and presenter page carry no peer-average, global-standard or industry-standard figure', () => {

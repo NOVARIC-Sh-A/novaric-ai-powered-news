@@ -218,7 +218,7 @@ export const MARAGON_RADAR_SERIES_STYLE = {
   europe_industry: { stroke: '#5B3A9E', dash: '2 3', fill: 'none' },
 } as const;
 
-type RadarVertex = { i: number; level: number };
+type RadarVertex = { i: number; level: number; tip?: string; band?: string };
 
 function indicatorAliases(ind: { id: string; code: string }): Set<string> {
   return new Set([ind.id, ind.code, `maragon:${ind.code}`, ind.id.replace(/^maragon:/, '')]);
@@ -307,6 +307,7 @@ function RadarSeriesMarks({
             key={`${seriesId}-pt-${vertex.i}`}
             data-radar-mark="point"
             data-level={vertex.level}
+            data-band={vertex.band}
             data-radius={radius.toFixed(2)}
             cx={x}
             cy={y}
@@ -314,7 +315,9 @@ function RadarSeriesMarks({
             fill={pointFill}
             stroke={stroke}
             strokeWidth={seriesId === 'presenter' ? 0 : 1.4}
-          />
+          >
+            {vertex.tip ? <title>{vertex.tip}</title> : null}
+          </circle>
         );
       })}
     </g>
@@ -358,7 +361,7 @@ export const BandRadar: React.FC<{
   size?: number;
   lang: Lang;
   benchmarks?: MaragonBenchmarkSeries[];
-  /** Signed benchmark amendments. Defaults to the signed list (empty today); tests may inject a fixture id. */
+  /** Signed benchmark amendments. Defaults to the signed list (AM-10); tests may inject a fixture id. */
   signedBenchmarkAmendments?: readonly string[];
 }> = ({ rec, mode, size = 260, lang, benchmarks = MARAGON_BENCHMARKS, signedBenchmarkAmendments = SIGNED_BENCHMARK_AMENDMENT_IDS }) => {
   const inds = rec.maragon.indicators.filter((ind) => ind.id !== 'maragon:C' && ind.code !== 'C');
@@ -375,21 +378,42 @@ export const BandRadar: React.FC<{
     .filter((vertex): vertex is RadarVertex & { indicative: boolean } => vertex !== null);
   const indicative = shown.some((vertex) => vertex.indicative);
   const presenterStyle = MARAGON_RADAR_SERIES_STYLE.presenter;
-  const benchmarkVertices = (id: MaragonBenchmarkSeries['id']): RadarVertex[] => {
+  const benchmarkVertices = (id: MaragonBenchmarkSeries['id']): { drawn: RadarVertex[]; missing: boolean } => {
     const seriesRecord = benchmarks.find((item) => item.id === id);
-    return inds.flatMap((ind, index) => {
+    const legend = MARAGON_RADAR_LEGEND[id];
+    const drawn: RadarVertex[] = [];
+    let missing = !seriesRecord || seriesRecord.points.length === 0;
+    inds.forEach((ind, index) => {
       const point = seriesRecord?.points.find((item) => indicatorAliases(ind).has(item.indicatorId));
-      if (!isPlottableBenchmarkPoint(seriesRecord, point, signedBenchmarkAmendments) || !point?.band) return [];
+      if (!isPlottableBenchmarkPoint(seriesRecord, point, signedBenchmarkAmendments) || !point?.band) {
+        missing = true;
+        return;
+      }
       const level = MARAGON_BAND_LABELS[point.band].level;
-      return level > 0 ? [{ i: index, level }] : [];
+      if (level <= 0) {
+        missing = true;
+        return;
+      }
+      const bandLabel = MARAGON_BAND_LABELS[point.band];
+      drawn.push({
+        i: index,
+        level,
+        band: point.band,
+        tip: `${legend.sq} / ${legend.en}: ${bandLabel.sq} / ${bandLabel.en}`,
+      });
     });
+    return { drawn, missing };
   };
-  const albania = benchmarkVertices('albania_expected');
-  const europe = benchmarkVertices('europe_industry');
-  // AM-10 is unsigned (owner decision t329u): no wording may imply that reference lines are adopted.
+  const albaniaSeries = benchmarkVertices('albania_expected');
+  const europeSeries = benchmarkVertices('europe_industry');
+  const albania = albaniaSeries.drawn;
+  const europe = europeSeries.drawn;
+  const albaniaLegend = `${MARAGON_RADAR_LEGEND.albania_expected.sq} / ${MARAGON_RADAR_LEGEND.albania_expected.en}`;
+  const europeLegend = `${MARAGON_RADAR_LEGEND.europe_industry.sq} / ${MARAGON_RADAR_LEGEND.europe_industry.en}`;
+  // AM-10 is signed. The caption names the two reference lines and does not call them unsigned.
   const caption = signedBenchmarkAmendments.length > 0
-    ? 'Tre linja: vlerësimi i prezantuesit, standardi i pritur në Shqipëri, standardi i industrisë evropiane / ndërkombëtare. Linjat pa vlerë të miratuara nuk vizatohen si zero. / Three lines: the presenter\'s assessment, the expected standard in Albania, and the European / international industry standard. Lines without an approved value are not drawn as zero.'
-    : 'Brezi i prezantuesit në pesë nivele, pa numra. Linjat referuese të propozuara në AM-10 nuk janë të nënshkruara, nuk janë në fuqi dhe nuk vizatohen. / The presenter\'s band on five levels, without numbers. The reference lines proposed in AM-10 are unsigned, not in force and not drawn.';
+    ? `Tre linja: vlerësimi i prezantuesit, ${MARAGON_RADAR_LEGEND.albania_expected.sq}, ${MARAGON_RADAR_LEGEND.europe_industry.sq}. Linjat pa vlerë të miratuara nuk vizatohen si zero. / Three lines: the presenter's assessment, ${MARAGON_RADAR_LEGEND.albania_expected.en}, and the ${MARAGON_RADAR_LEGEND.europe_industry.en}. Lines without an approved value are not drawn as zero.`
+    : 'Brezi i prezantuesit në pesë nivele, pa numra. Linjat pa vlerë të miratuara nuk vizatohen si zero. / The presenter\'s band on five levels, without numbers. Lines without an approved value are not drawn as zero.';
   return (
     <figure className="m-0 flex flex-col gap-3" data-maragon-radar="three-level">
       <div className="w-full aspect-square">
@@ -437,6 +461,16 @@ export const BandRadar: React.FC<{
             R={R}
             pt={pt}
           />
+          {albaniaSeries.missing ? (
+            <g data-radar-unscored="albania_expected">
+              <title>{`${albaniaLegend}: ${MARAGON_BENCHMARK_AWAITING_NOTE.sq}`}</title>
+            </g>
+          ) : null}
+          {europeSeries.missing ? (
+            <g data-radar-unscored="europe_industry">
+              <title>{`${europeLegend}: ${MARAGON_BENCHMARK_AWAITING_NOTE.sq}`}</title>
+            </g>
+          ) : null}
           <RadarSeriesMarks
             seriesId="presenter"
             vertices={shown}
@@ -465,8 +499,8 @@ export const BandRadar: React.FC<{
           indicative ? presenterStyle.indicativeStroke : presenterStyle.stroke,
           indicative ? presenterStyle.indicativeDash : presenterStyle.dash,
         )}
-        {legendLine('albania_expected', MARAGON_RADAR_LEGEND.albania_expected.sq, MARAGON_RADAR_LEGEND.albania_expected.en, albania.length === 0 ? MARAGON_BENCHMARK_AWAITING_NOTE.sq : null)}
-        {legendLine('europe_industry', MARAGON_RADAR_LEGEND.europe_industry.sq, MARAGON_RADAR_LEGEND.europe_industry.en, europe.length === 0 ? MARAGON_BENCHMARK_AWAITING_NOTE.sq : null)}
+        {legendLine('albania_expected', MARAGON_RADAR_LEGEND.albania_expected.sq, MARAGON_RADAR_LEGEND.albania_expected.en, albaniaSeries.missing ? MARAGON_BENCHMARK_AWAITING_NOTE.sq : null)}
+        {legendLine('europe_industry', MARAGON_RADAR_LEGEND.europe_industry.sq, MARAGON_RADAR_LEGEND.europe_industry.en, europeSeries.missing ? MARAGON_BENCHMARK_AWAITING_NOTE.sq : null)}
       </ul>
       <figcaption className="text-[12px] leading-snug" style={{ color: MUTED }}>{caption}</figcaption>
     </figure>

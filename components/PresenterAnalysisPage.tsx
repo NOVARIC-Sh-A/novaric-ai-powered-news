@@ -35,7 +35,7 @@ const AnalysisCharacteristic: React.FC<{ title: string; chartData?: ChartSegment
         <h4 className="text-lg font-semibold text-slate-800 dark:text-slate-200 mb-2 text-center">{title}</h4>
         <PieChart data={chartData} size={100} hideValues />
         {/* No percentage and no "industry standard" figure: the reference values were unsourced constants,
-            and v1.0 §10 / AM-10 (unsigned) allow neither raw numbers nor reference lines in public. */}
+            and v1.0 §10 allow no raw numbers in public. AM-10 reference lines are band names on the presenter radar, not on this page. */}
       </div>
       <div className="md:w-2/3">
         <div className="prose prose-sm dark:prose-invert max-w-none">

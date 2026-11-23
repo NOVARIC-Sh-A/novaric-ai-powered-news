@@ -142,7 +142,7 @@ export const VipProfilePage: React.FC<VipProfilePageProps> = ({ profile, onBack,
   const radarData = {
       labels: radarLabels.length > 0 ? radarLabels : ['R', 'A', 'G', 'O'],
       datasets: drawMediaPolygon && publishedRadar ? [
-          // A fixed "90" target is not a documented benchmark; media subjects never get it (v1.0 §3.6, AM-10 unsigned).
+          // A fixed "90" target is not a documented benchmark; media subjects never get it (v1.0 §3.6). AM-10 lines are not this chart.
           ...(mediaSubject ? [] : [{
               label: 'Target (Benchmark)',
               data: publishedRadar.map(() => 90),

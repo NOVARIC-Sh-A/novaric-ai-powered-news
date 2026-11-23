@@ -25,9 +25,13 @@ export interface MaragonBenchmarkPoint {
 }
 
 export interface MaragonBenchmarkSignOff {
+  /** Owner who signed. The data uses `by` for the name on the signed record. */
   by: string;
+  /** Tirana time of the signature. */
   dateTirana: string;
   amendmentId: string;
+  /** Written or voice-instruction reference, including the signed-record id. */
+  reference?: string;
 }
 
 export interface MaragonBenchmarkSeries {

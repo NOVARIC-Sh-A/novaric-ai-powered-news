@@ -12,12 +12,13 @@ interface MaragonReportPageProps {
 }
 
 /**
- * Reference series on this report are shown only under a signed benchmark amendment.
- * AM-10 v0.1 is unsigned (normative floors, not peer averages), and no signed source
- * defines an empirical peer-average method, so `peerAverage` is never shown.
+ * AM-10 signs the two presenter-radar reference lines only.
+ * It does not authorise this report's `standardAdherence` or `peerAverage` figures
+ * (those are not the signed bands, and no signed method defines a peer average).
+ * A different injected amendment id can still open the report standard series in tests.
  */
 export const maragonReportBenchmarksArePublic = (signedIds: readonly string[] = SIGNED_BENCHMARK_AMENDMENT_IDS): { standard: boolean; peerAverage: boolean } => ({
-  standard: signedIds.length > 0,
+  standard: signedIds.some((id) => id !== 'AM-10'),
   peerAverage: false,
 });
 
