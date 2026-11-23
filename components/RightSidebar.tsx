@@ -5,6 +5,7 @@ import { ShkoderWeather } from './ShkoderWeather';
 import { TiranaWeather } from './TiranaWeather';
 import { NovaricBrand } from './NovaricBrand';
 import { AuthorAvatar } from './AuthorAvatar';
+import { renderWithSuperscript } from '../utils/textUtils';
 
 interface RightSidebarProps {
   onNavigateToPoliticians?: () => void; 
@@ -55,6 +56,7 @@ interface RightSidebarProps {
   onNavigateToReputationWarRoom?: () => void;
   onNavigateToNexusAiGovernance?: () => void;
   onNavigateToForecast2027?: () => void;
+  onNavigateToMaragonAm10?: () => void;
   onNavigateToNoraAiProfile?: () => void;
   onNavigateToAuthorProfile?: () => void;
 }
@@ -311,6 +313,12 @@ export const RightSidebar: React.FC<RightSidebarProps> = (props) => {
                         <span><NovaricBrand suffix=" Forecast 2027" /></span>
                         <span className="text-[10px] font-normal text-slate-500 dark:text-slate-400">Parashikimi 2027</span>
                     </span>
+                </NavButton>
+                <NavButton
+                    onClick={props.onNavigateToMaragonAm10}
+                    icon={<DocumentTextIcon className="w-4 h-4 text-primary-600 dark:text-primary-400" />}
+                >
+                    {renderWithSuperscript('MARAGON® AM-10 — Brezat referues')}
                 </NavButton>
                 <NavButton onClick={props.onNavigateToReputationWarRoom} icon={<ShieldCheckIcon className="w-4 h-4 text-rose-500" />}>War Room (Defense SOC)</NavButton>
                 <NavButton 

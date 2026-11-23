@@ -1,6 +1,7 @@
 import React from 'react';
 import { NexusHumanistAiGovernancePage } from '../components/NexusHumanistAiGovernancePage';
 import { Forecast2027Page } from '../components/Forecast2027Page';
+import { MaragonAm10PublicPage } from '../components/MaragonAm10PublicPage';
 import { MaragonCardMockupPage } from '../components/MaragonCardMockupPage';
 import { GridaDumaProfilePage } from '../components/maragon/GridaDumaProfilePage';
 import { MaragonNoticePage } from '../components/maragon/MaragonNoticePage';
@@ -219,6 +220,7 @@ export const SimplePage: React.FC<SimplePageProps> = ({ page, onNavigate, profil
             onNavigateToBibliografiaJurisprudences={() => nav('bibliografiaJurisprudences')}
             onNavigateToNovaricJournalManifesto={() => nav('novaricJournalManifesto')}
             onNavigateToForecast2027={() => nav('forecast2027')}
+            onNavigateToMaragonAm10={() => nav('maragonAm10')}
             onNavigateToZodiacInfoPage={() => nav('zodiacInfoPage')}
             onNavigateToAiReadinessMatrix={() => nav('aiReadinessMatrix')}
             onNavigateToCorporatePositionStatement={() => nav('corporatePositionStatement')}
@@ -256,6 +258,8 @@ export const SimplePage: React.FC<SimplePageProps> = ({ page, onNavigate, profil
         return <CorporatePositionStatement onBack={onBack} onNavigateToGdpr={() => onNavigate('gdprPolicy')} />;
     case 'forecast2027':
         return <Forecast2027Page onBack={onBack} />;
+    case 'maragonAm10':
+        return <MaragonAm10PublicPage onBack={onBack} />;
     case 'maragonCardMockup':
         return <MaragonCardMockupPage onBack={onBack} />;
     case 'maragonNotice':

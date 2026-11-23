@@ -1,9 +1,10 @@
-import { newsArticleShellName } from './routeSeo';
+import { MARAGON_AM10_PATH, newsArticleShellName } from './routeSeo';
 
 /** Dist-relative HTML shell for a request, when one was written at build time. */
 export function seoShellRelativePath(pathname: string, search = ''): string | null {
   const path = pathname.replace(/\/+$/, '') || '/';
   if (path === '/forecast-2027') return 'forecast-2027/index.html';
+  if (path === MARAGON_AM10_PATH) return 'maragon-am10/index.html';
   if (path === '/metodologjia') return 'metodologjia/index.html';
   if (path === '/njoftim-maragon') return 'njoftim-maragon/index.html';
   if (path === '/personalitete-mediatike') return 'personalitete-mediatike/index.html';
@@ -12,6 +13,7 @@ export function seoShellRelativePath(pathname: string, search = ''): string | nu
   const params = new URLSearchParams(search.startsWith('?') ? search.slice(1) : search);
   const page = params.get('page');
   if (page === 'forecast2027') return 'forecast-2027/index.html';
+  if (page === 'maragonAm10') return 'maragon-am10/index.html';
   if (page === 'newsList') return 'seo/news-list.html';
   if (page === 'maragonCardMockup') return 'seo/maragon-card-mockup.html';
   if (page === 'tvPersonalitiesAnalysis') return 'seo/maragon-analysis.html';
