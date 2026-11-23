@@ -1,5 +1,12 @@
+import { isMaragonNoticeLive, type MaragonReleaseInput } from '../data/maragon/maragonNoticeRelease';
 import { OG_SITE, OgFields } from './ogDocument';
 import { publicationTimeMs } from './newsListOrder';
+import {
+  MARAGON_NOTICE_DESCRIPTION,
+  MARAGON_NOTICE_META,
+  MARAGON_NOTICE_PATH,
+  MARAGON_NOTICE_TITLE,
+} from '../data/maragon/maragonNoticeContent';
 
 export const HOME_TITLE = 'NOVARIC® Lajme me IA | Shqipëri';
 export const HOME_DESCRIPTION = 'Lajme me inteligjencë artificiale për Shqipërinë. Verifikim faktesh, analizë dhe publikime nga NOVARIC®.';
@@ -125,6 +132,41 @@ export function methodologySeo(): OgFields {
       author: { '@type': 'Person', name: METHODOLOGY_AUTHOR },
       publisher: { '@type': 'Organization', name: 'NOVARIC®' },
     },
+  };
+}
+
+/**
+ * /njoftim-maragon. While the notice is a draft for legal and editorial review it is
+ * noindex/nofollow and stays out of the sitemap. Dates come only from recorded approval.
+ */
+export function maragonNoticeSeo(
+  meta: typeof MARAGON_NOTICE_META = MARAGON_NOTICE_META,
+  release: Omit<MaragonReleaseInput, 'meta'> = {},
+): OgFields {
+  const url = `${OG_SITE}${MARAGON_NOTICE_PATH}`;
+  const approved = isMaragonNoticeLive({ ...release, meta });
+  const page: Record<string, unknown> = {
+    '@type': 'WebPage',
+    '@id': `${url}#webpage`,
+    url,
+    name: MARAGON_NOTICE_TITLE.sq,
+    description: MARAGON_NOTICE_DESCRIPTION.sq,
+    inLanguage: ['sq', 'en'],
+    version: meta.version,
+    isPartOf: { '@id': `${OG_SITE}/#website` },
+    publisher: { '@id': `${OG_SITE}/#organization` },
+  };
+  if (approved && meta.publishedOn) page.datePublished = meta.publishedOn;
+  if (approved && meta.approval) page.dateModified = meta.approval.approvedOn;
+  return {
+    title: MARAGON_NOTICE_TITLE.sq,
+    description: MARAGON_NOTICE_DESCRIPTION.sq,
+    url,
+    image: DEFAULT_OG_IMAGE,
+    imageAlt: MARAGON_NOTICE_TITLE.sq,
+    type: 'website',
+    ...(approved ? {} : { robots: 'noindex, nofollow' }),
+    jsonLd: graph([page]),
   };
 }
 

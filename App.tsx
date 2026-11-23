@@ -30,6 +30,8 @@ import { fetchMaragonReport } from './services/dataService';
 import { canonicalPoliticianKey, findPolitician, politicianPathId, routeFromLocation, POLITICIANS_LIST_PATH } from './utils/politicianNavigation';
 import { findMediaProfile, mediaProfilePath, mediaSlugFor, routeMediaFromLocation, MEDIA_LIST_PATH } from './utils/mediaNavigation';
 import { METHODOLOGY_PATH, routeMethodologyFromLocation } from './utils/methodologyNavigation';
+import { MARAGON_NOTICE_PATH, maragonNoticeVisible, routeMaragonNoticeFromLocation } from './utils/maragonNoticeNavigation';
+import { MARAGON_NOTICE_DESCRIPTION, MARAGON_NOTICE_TITLE } from './data/maragon/maragonNoticeContent';
 import { MARAGON_AM10_DESCRIPTION, MARAGON_AM10_PATH, MARAGON_AM10_TITLE } from './utils/routeSeo';
 import { nameSurnameFromFull } from './components/maragon/maragonPresenterUi';
 import { isMediaIdentity } from './utils/maragonPublication';
@@ -229,6 +231,10 @@ export const App: React.FC = () => {
         pageTitle = 'Grida DUMA | MARAGON® | Pa vlerësim';
         pageDescription = 'Profil kërkimor i Grida DUMËS dhe i emisionit Top Story. Pa vlerësim të miratuar.';
         break;
+      case 'maragonNotice':
+        pageTitle = `${MARAGON_NOTICE_TITLE.sq} | NOVARIC® Lajme me IA`;
+        pageDescription = MARAGON_NOTICE_DESCRIPTION.sq;
+        break;
       case 'maragonCardMockup':
         pageTitle = 'Karta MARAGON® (shembull) | NOVARIC® Lajme me IA';
         pageDescription = 'Specifikim shembull i kartës MARAGON®. Nuk është një vlerësim i publikuar.';
@@ -398,6 +404,19 @@ export const App: React.FC = () => {
         }
         setCurrentPage('analysisMethodology');
         setCurrentUrl(`${CANONICAL_URL.replace(/\/$/, '')}${METHODOLOGY_PATH}`);
+        return;
+      }
+
+      if (routeMaragonNoticeFromLocation(pathname, window.location.search)) {
+        if (
+          typeof window !== 'undefined' &&
+          window.location.protocol !== 'blob:' &&
+          (pathname.replace(/\/+$/, '') !== MARAGON_NOTICE_PATH || window.location.search)
+        ) {
+          window.history.replaceState({ page: 'maragonNotice' }, '', `${MARAGON_NOTICE_PATH}${window.location.hash}`);
+        }
+        setCurrentPage('maragonNotice');
+        setCurrentUrl(`${CANONICAL_URL.replace(/\/$/, '')}${MARAGON_NOTICE_PATH}`);
         return;
       }
 
@@ -765,6 +784,9 @@ export const App: React.FC = () => {
     } else if (page === 'analysisMethodology' && window.location.protocol !== 'blob:') {
       window.history.pushState({ page: 'analysisMethodology' }, '', METHODOLOGY_PATH);
       setCurrentUrl(`${CANONICAL_URL.replace(/\/$/, '')}${METHODOLOGY_PATH}`);
+    } else if (page === 'maragonNotice' && window.location.protocol !== 'blob:') {
+      window.history.pushState({ page: 'maragonNotice' }, '', MARAGON_NOTICE_PATH);
+      setCurrentUrl(`${CANONICAL_URL.replace(/\/$/, '')}${MARAGON_NOTICE_PATH}`);
     } else {
       updateUrl(page, (typeof data === 'string' || typeof data === 'number') ? data : undefined);
     }
@@ -826,6 +848,10 @@ export const App: React.FC = () => {
       }
       if (routeMethodologyFromLocation(path, window.location.search)) {
         setCurrentPage('analysisMethodology');
+        return;
+      }
+      if (routeMaragonNoticeFromLocation(path, window.location.search)) {
+        setCurrentPage('maragonNotice');
         return;
       }
     };
@@ -1227,6 +1253,7 @@ export const App: React.FC = () => {
             onNavigateToNoraAiProfile={() => navigateTo('noraAiProfile')}
             onNavigateToNovaricMediaHouse={() => navigateTo('novaricMediaHouse')}
             onNavigateToMaragonFramework={() => navigateTo('maragonFramework')}
+            onNavigateToMaragonNotice={maragonNoticeVisible() ? () => navigateTo('maragonNotice') : undefined}
             onNavigateToNovaricJournalManifesto={() => navigateTo('novaricJournalManifesto')}
             onNavigateToAuthorProfile={() => navigateTo('authorProfile')}
           />

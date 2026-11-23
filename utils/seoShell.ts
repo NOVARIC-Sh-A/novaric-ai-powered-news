@@ -6,6 +6,7 @@ export function seoShellRelativePath(pathname: string, search = ''): string | nu
   if (path === '/forecast-2027') return 'forecast-2027/index.html';
   if (path === MARAGON_AM10_PATH) return 'maragon-am10/index.html';
   if (path === '/metodologjia') return 'metodologjia/index.html';
+  if (path === '/njoftim-maragon') return 'njoftim-maragon/index.html';
   if (path === '/personalitete-mediatike') return 'personalitete-mediatike/index.html';
   const mediaProfile = path.match(/^\/personalitete-mediatike\/([a-z0-9-]+)$/);
   if (mediaProfile) return `personalitete-mediatike/${mediaProfile[1]}/index.html`;
