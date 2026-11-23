@@ -1,8 +1,9 @@
 import React from 'react';
 import { 
     NewspaperIcon, ShieldCheckIcon, ChartBarIcon, BriefcaseIcon, ScaleIcon, 
-    BookOpenIcon, AcademicCapIcon, ChainIcon, PresentationChartLineIcon, BeakerIcon, UsersIcon, UserGroupIcon
+    BookOpenIcon, AcademicCapIcon, ChainIcon, PresentationChartLineIcon, BeakerIcon, UsersIcon, UserGroupIcon, DocumentTextIcon
 } from './icons';
+import { renderWithSuperscript } from '../utils/textUtils';
 import { TvShowData } from '../types';
 import { AuthorAvatar } from './AuthorAvatar';
 
@@ -73,6 +74,7 @@ interface HeaderMenuProps {
   onNavigateToReputationWarRoom?: () => void;
   onNavigateToNexusAiGovernance?: () => void;
   onNavigateToForecast2027?: () => void;
+  onNavigateToMaragonAm10?: () => void;
   onNavigateToNoraAiProfile?: () => void;
   onNavigateToAuthorProfile?: () => void;
   onNavigateToShkoderCulture?: () => void;
@@ -183,6 +185,16 @@ export const HeaderMenu: React.FC<HeaderMenuProps> = ({ onClose, isMobile = fals
                       <span className="font-semibold">NOVARIC<sup>®</sup> Forecast 2027</span>
                       <span className="text-[10px] font-normal text-slate-500 dark:text-slate-400">Parashikimi 2027</span>
                     </span>
+                  </MenuButton>
+                )}
+                {navProps.onNavigateToMaragonAm10 && (
+                  <MenuButton
+                    onClick={() => handleNavigation(navProps.onNavigateToMaragonAm10)}
+                    ariaLabel="Navigo te MARAGON® AM-10 — Brezat referues"
+                    isActive={navProps.currentPage === 'maragonAm10'}
+                  >
+                    <DocumentTextIcon className={iconClass} />
+                    <span className="font-semibold">{renderWithSuperscript('MARAGON® AM-10 — Brezat referues')}</span>
                   </MenuButton>
                 )}
                 {navProps.onNavigateToNexusAiGovernance && (
