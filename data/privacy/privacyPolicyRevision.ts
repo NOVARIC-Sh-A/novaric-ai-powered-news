@@ -35,7 +35,7 @@ export interface PrivacySection {
 }
 
 export const PRIVACY_REVISION_META = {
-  documentId: 'POL-LEG-PRIVACY-POLICY',
+  documentId: 'POL-LEG-WEBSITE-PRIVACY',
   version: '0.1',
   status: 'draft_for_legal_and_editorial_review' as PrivacyRevisionStatus,
   draftedOn: '2026-11-23',
