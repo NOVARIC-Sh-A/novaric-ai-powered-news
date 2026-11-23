@@ -112,6 +112,7 @@ export type Page =
   | 'reputationWarRoom'
   | 'nexusHumanistAiGovernance'
   | 'forecast2027'
+  | 'maragonAm10'
   | 'maragonCardMockup'
   | 'maragonProfile'
   | 'authorProfile'

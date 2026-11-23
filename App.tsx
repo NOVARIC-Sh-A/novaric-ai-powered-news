@@ -30,6 +30,7 @@ import { fetchMaragonReport } from './services/dataService';
 import { canonicalPoliticianKey, findPolitician, politicianPathId, routeFromLocation, POLITICIANS_LIST_PATH } from './utils/politicianNavigation';
 import { findMediaProfile, mediaProfilePath, mediaSlugFor, routeMediaFromLocation, MEDIA_LIST_PATH } from './utils/mediaNavigation';
 import { METHODOLOGY_PATH, routeMethodologyFromLocation } from './utils/methodologyNavigation';
+import { MARAGON_AM10_DESCRIPTION, MARAGON_AM10_PATH, MARAGON_AM10_TITLE } from './utils/routeSeo';
 import { nameSurnameFromFull } from './components/maragon/maragonPresenterUi';
 import { isMediaIdentity } from './utils/maragonPublication';
 import { LiveUpdateToast } from './components/LiveUpdateToast';
@@ -220,6 +221,10 @@ export const App: React.FC = () => {
         pageTitle = 'NOVARIC® Forecast 2027 | Parashikimi 2027 | Botimi i parë';
         pageDescription = 'Botimi i parë i NOVARIC® Forecast 2027, 18 nëntor 2026, i nënshkruar nga Dr Alban Gj. THIKA. Nuk është këshillë investimi.';
         break;
+      case 'maragonAm10':
+        pageTitle = MARAGON_AM10_TITLE;
+        pageDescription = MARAGON_AM10_DESCRIPTION;
+        break;
       case 'maragonProfile':
         pageTitle = 'Grida DUMA | MARAGON® | Pa vlerësim';
         pageDescription = 'Profil kërkimor i Grida DUMËS dhe i emisionit Top Story. Pa vlerësim të miratuar.';
@@ -406,6 +411,10 @@ export const App: React.FC = () => {
         } else if (pathname === '/forecast-2027' || pathname === '/forecast-2027/') {
           setCurrentPage('forecast2027');
           setCurrentUrl(`${CANONICAL_URL.replace(/\/$/, '')}/forecast-2027`);
+          return;
+        } else if (pathname === MARAGON_AM10_PATH || pathname === `${MARAGON_AM10_PATH}/`) {
+          setCurrentPage('maragonAm10');
+          setCurrentUrl(`${CANONICAL_URL.replace(/\/$/, '')}${MARAGON_AM10_PATH}`);
           return;
         }
       }
@@ -750,6 +759,9 @@ export const App: React.FC = () => {
     } else if (page === 'forecast2027' && window.location.protocol !== 'blob:') {
       window.history.pushState({ page: 'forecast2027' }, '', '/forecast-2027');
       setCurrentUrl(`${CANONICAL_URL.replace(/\/$/, '')}/forecast-2027`);
+    } else if (page === 'maragonAm10' && window.location.protocol !== 'blob:') {
+      window.history.pushState({ page: 'maragonAm10' }, '', MARAGON_AM10_PATH);
+      setCurrentUrl(`${CANONICAL_URL.replace(/\/$/, '')}${MARAGON_AM10_PATH}`);
     } else if (page === 'analysisMethodology' && window.location.protocol !== 'blob:') {
       window.history.pushState({ page: 'analysisMethodology' }, '', METHODOLOGY_PATH);
       setCurrentUrl(`${CANONICAL_URL.replace(/\/$/, '')}${METHODOLOGY_PATH}`);
@@ -806,6 +818,10 @@ export const App: React.FC = () => {
       }
       if (path === '/forecast-2027' || path === '/forecast-2027/' || page === 'forecast2027') {
         setCurrentPage('forecast2027');
+        return;
+      }
+      if (path === MARAGON_AM10_PATH || path === `${MARAGON_AM10_PATH}/` || page === 'maragonAm10') {
+        setCurrentPage('maragonAm10');
         return;
       }
       if (routeMethodologyFromLocation(path, window.location.search)) {
@@ -939,6 +955,7 @@ export const App: React.FC = () => {
             onNavigateToReputationWarRoom={() => navigateTo('reputationWarRoom')}
             onNavigateToNexusAiGovernance={() => navigateTo('nexusHumanistAiGovernance')}
             onNavigateToForecast2027={() => navigateTo('forecast2027')}
+            onNavigateToMaragonAm10={() => navigateTo('maragonAm10')}
             onNavigateToNoraAiProfile={() => navigateTo('noraAiProfile')}
             onNavigateToAuthorProfile={() => navigateTo('authorProfile')}
             onNavigateToEuropeanCommission={() => navigateTo('europeanCommission')}
@@ -1114,6 +1131,7 @@ export const App: React.FC = () => {
     onNavigateToReputationWarRoom: () => navigateTo('reputationWarRoom'),
     onNavigateToNexusAiGovernance: () => navigateTo('nexusHumanistAiGovernance'),
     onNavigateToForecast2027: () => navigateTo('forecast2027'),
+    onNavigateToMaragonAm10: () => navigateTo('maragonAm10'),
     onNavigateToNoraAiProfile: () => navigateTo('noraAiProfile'),
     onNavigateToAuthorProfile: () => navigateTo('authorProfile'),
     onNavigateToShkoderCulture: () => navigateTo('shkoderCulturePage'),

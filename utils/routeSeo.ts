@@ -7,6 +7,10 @@ export const NEWS_LIST_TITLE = 'Arkiva e Lajmeve';
 export const NEWS_LIST_DESCRIPTION = 'Lajmet e fundit dhe lajmet e shënuara si të ndërprera, të renditura sipas kohës së publikimit. NOVARIC® Lajme me IA.';
 export const FORECAST_TITLE = 'NOVARIC® Forecast 2027';
 export const FORECAST_DESCRIPTION = 'Botimi i parë i NOVARIC® Forecast 2027, 18 nëntor 2026, i nënshkruar nga Dr Alban Gj. THIKA. Nuk është këshillë investimi.';
+export const MARAGON_AM10_PATH = '/maragon-am10';
+export const MARAGON_AM10_PAGE = 'maragonAm10';
+export const MARAGON_AM10_TITLE = 'MARAGON® AM-10 — brezat referues / reference bands';
+export const MARAGON_AM10_DESCRIPTION = 'Ky është teksti publik i amendamentit AM-10 të metodologjisë MARAGON® v1.0. Tregon vetëm emrat e brezave.';
 export const DEFAULT_OG_IMAGE = 'https://novaric.co/wp-content/uploads/2025/07/NOVARIC-Logos_Master-WB-R_12062025_500x500.webp';
 
 export const METHODOLOGY_PATH = '/metodologjia';
@@ -121,6 +125,30 @@ export function methodologySeo(): OgFields {
       author: { '@type': 'Person', name: METHODOLOGY_AUTHOR },
       publisher: { '@type': 'Organization', name: 'NOVARIC®' },
     },
+  };
+}
+
+export function maragonAm10Seo(): OgFields {
+  const url = `${OG_SITE}${MARAGON_AM10_PATH}`;
+  return {
+    title: MARAGON_AM10_TITLE,
+    description: MARAGON_AM10_DESCRIPTION,
+    url,
+    image: DEFAULT_OG_IMAGE,
+    imageAlt: MARAGON_AM10_TITLE,
+    type: 'article',
+    author: 'Dr Alban Gj. THIKA',
+    jsonLd: graph([{
+      '@type': 'Article',
+      '@id': `${url}#article`,
+      url,
+      headline: MARAGON_AM10_TITLE,
+      description: MARAGON_AM10_DESCRIPTION,
+      inLanguage: ['sq', 'en'],
+      datePublished: '2026-11-23',
+      author: { '@type': 'Person', name: 'Dr Alban Gj. THIKA' },
+      publisher: { '@id': `${OG_SITE}/#organization` },
+    }]),
   };
 }
 

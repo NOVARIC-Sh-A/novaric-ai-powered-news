@@ -72,6 +72,7 @@ interface MobileNavProps {
     onNavigateToReputationWarRoom: () => void;
     onNavigateToNexusAiGovernance?: () => void;
     onNavigateToForecast2027?: () => void;
+    onNavigateToMaragonAm10?: () => void;
     onNavigateToNoraAiProfile?: () => void;
     onNavigateToAuthorProfile?: () => void;
     onNavigateToShkoderCulture?: () => void;

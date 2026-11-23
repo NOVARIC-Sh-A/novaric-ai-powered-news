@@ -98,6 +98,7 @@ interface SitemapPageProps {
   onNavigateToCorporatePositionStatement: () => void;
   onNavigateToNexusAiGovernance?: () => void;
   onNavigateToForecast2027?: () => void;
+  onNavigateToMaragonAm10?: () => void;
 }
 
 const Section: React.FC<{ title: string; children: React.ReactNode }> = ({ title, children }) => (
@@ -233,6 +234,9 @@ export const SitemapPage: React.FC<SitemapPageProps> = (props) => {
                         <span>NOVARIC<sup>®</sup> Forecast 2027</span>
                         <span className="text-[11px] text-slate-500 dark:text-slate-400">Parashikimi 2027</span>
                     </span>
+                </PageLink>
+                <PageLink onClick={props.onNavigateToMaragonAm10} icon={<DocumentTextIcon className={iconClass}/>}>
+                    {renderWithSuperscript('MARAGON® AM-10 — Brezat referues')}
                 </PageLink>
                 <PageLink onClick={props.onNavigateToFakeNewsArchive} icon={<LightBulbIcon className={iconClass}/>}>Arkiva 'Fake News'</PageLink>
                 <PageLink onClick={props.onNavigateToDeconstructNews} icon={<CpuChipIcon className={iconClass}/>}>Dekonstrukto Lajmin</PageLink>

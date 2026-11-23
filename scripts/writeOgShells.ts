@@ -8,7 +8,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import { applyOgToIndexHtml, listingOg, mediaListingOg, mediaProfileOg, profileOg } from '../utils/ogDocument';
 import { mediaProfilesData } from '../data/mediaProfiles';
-import { forecastSeo, homeSeo, maragonMockupSeo, methodologySeo, newsArticleSeo, newsArticleShellName, newsListSeo, NewsSeoInput } from '../utils/routeSeo';
+import { forecastSeo, homeSeo, maragonAm10Seo, maragonMockupSeo, methodologySeo, newsArticleSeo, newsArticleShellName, newsListSeo, NewsSeoInput } from '../utils/routeSeo';
 import { publicationTimeMs } from '../utils/newsListOrder';
 
 const root = path.resolve(path.dirname(new URL(import.meta.url).pathname), '..');
@@ -56,6 +56,10 @@ const forecastDir = path.join(dist, 'forecast-2027');
 fs.mkdirSync(forecastDir, { recursive: true });
 fs.writeFileSync(path.join(forecastDir, 'index.html'), applyOgToIndexHtml(shell, forecastSeo()));
 
+const maragonAm10Dir = path.join(dist, 'maragon-am10');
+fs.mkdirSync(maragonAm10Dir, { recursive: true });
+fs.writeFileSync(path.join(maragonAm10Dir, 'index.html'), applyOgToIndexHtml(shell, maragonAm10Seo()));
+
 const seoDir = path.join(dist, 'seo');
 fs.mkdirSync(seoDir, { recursive: true });
 fs.writeFileSync(path.join(seoDir, 'news-list.html'), applyOgToIndexHtml(shell, newsListSeo()));
@@ -81,6 +85,7 @@ const sitemapPages: string[] = [
   'https://media.novaric.al/',
   'https://media.novaric.al/?page=newsList',
   'https://media.novaric.al/forecast-2027',
+  'https://media.novaric.al/maragon-am10',
   'https://media.novaric.al/figurat-politike',
   'https://media.novaric.al/personalitete-mediatike',
   'https://media.novaric.al/metodologjia',
@@ -119,7 +124,7 @@ fs.writeFileSync(path.join(dist, 'sitemap-news.xml'), newsSitemapXml(sitemapNews
 if (!shell.includes('<div id="root">')) {
   throw new Error('SPA root missing from the shell');
 }
-console.log(`og shells listing=1 profiles=${written} mediaListing=1 mediaProfiles=${mediaWritten} forecast=1 newsList=1 news=${newsShells}`);
+console.log(`og shells listing=1 profiles=${written} mediaListing=1 mediaProfiles=${mediaWritten} forecast=1 maragonAm10=1 newsList=1 news=${newsShells}`);
 
 function escapeXml(value: string): string {
   return value
