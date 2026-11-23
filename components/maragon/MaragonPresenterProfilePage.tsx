@@ -159,8 +159,8 @@ export const MaragonPresenterProfilePage: React.FC<Props> = ({ profile, onBack, 
     officialBands: bands.filter((b) => b.v.band && !b.v.indicative).length,
     provisionalBands: bands.filter((b) => b.v.band && b.v.indicative).length,
     benchmarkVerticesDrawn,
-    // No signed benchmark amendment exists (AM-10 v0.1 is unsigned), so a drawn line is never treated as normative.
-    benchmarkIsNormative: false,
+    // A drawn vertex has already passed the signed-amendment gate (AM-10). The notice gate itself is unchanged.
+    benchmarkIsNormative: benchmarkVerticesDrawn > 0,
     numbersVisible: false,
   };
   const noticeLinkVisible = maragonNoticeVisible();

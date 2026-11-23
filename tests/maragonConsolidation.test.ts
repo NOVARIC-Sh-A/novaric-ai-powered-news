@@ -282,34 +282,37 @@ describe('6. Mock-data exclusion', () => {
   });
 });
 
-describe('7. Unapproved benchmark suppression', () => {
-  function am10Attempt(): MaragonBenchmarkSeries[] {
+describe('7. Signed AM-10 benchmark lines, and rejection of any other amendment', () => {
+  function forgedAm10(): MaragonBenchmarkSeries[] {
     return MARAGON_BENCHMARKS.map((series) => ({
       ...series,
-      status: 'approved',
+      status: 'approved' as const,
       amendmentId: 'AM-10',
       ownerSignOff: { by: 'NOT SIGNED', dateTirana: '—', amendmentId: 'AM-10' },
       points: series.points.map((p) => ({ ...p, status: 'approved' as const, band: 'e_forte' as const })),
     }));
   }
-  it('lists no signed benchmark amendment and keeps AM-10 as unsigned', () => {
-    assert.deepEqual([...SIGNED_BENCHMARK_AMENDMENT_IDS], []);
-    assert.ok(PROPOSED_UNSIGNED_BENCHMARK_AMENDMENT_IDS.includes('AM-10'));
+  it('lists AM-10 as the only signed benchmark amendment', () => {
+    assert.deepEqual([...SIGNED_BENCHMARK_AMENDMENT_IDS], ['AM-10']);
+    assert.equal(PROPOSED_UNSIGNED_BENCHMARK_AMENDMENT_IDS.includes('AM-10'), false);
   });
-  it('does not plot AM-10 values even when status fields say approved', () => {
-    for (const series of am10Attempt()) for (const point of series.points) assert.equal(isPlottableBenchmarkPoint(series, point), false);
-    const html = renderToStaticMarkup(React.createElement(BandRadar, { rec: { maragon: baseMaragon('vip_test', [], []) }, mode: 'public', lang: 'sq', benchmarks: am10Attempt() }));
+  it('plots the signed series and rejects a sign-off that is not the owner record', () => {
+    for (const series of MARAGON_BENCHMARKS) for (const point of series.points) assert.equal(isPlottableBenchmarkPoint(series, point), true);
+    for (const series of forgedAm10()) for (const point of series.points) assert.equal(isPlottableBenchmarkPoint(series, point), false);
+    const html = renderToStaticMarkup(React.createElement(BandRadar, { rec: { maragon: baseMaragon('vip_test', [], []) }, mode: 'public', lang: 'sq', benchmarks: forgedAm10() }));
     assert.equal(html.includes('data-radar-series="albania_expected"'), false);
     assert.equal(html.includes('data-radar-series="europe_industry"'), false);
+    const other = { ...MARAGON_BENCHMARKS[0], amendmentId: 'AM-99', ownerSignOff: { by: 'Dr Alban Gj. THIKA', dateTirana: '2026-11-23T10:56:00+01:00', amendmentId: 'AM-99' } };
+    for (const point of other.points) assert.equal(isPlottableBenchmarkPoint(other, point), false);
   });
   it('never feeds benchmark series into the composite', () => {
-    const asInputs: CompositeIndicatorInput[] = am10Attempt()[0].points.map((p) => ({ id: p.indicatorId, status: 'assessed', humanFinalScore: 70, confidence: 'high', thresholdMet: true, referenceSeries: true }));
+    const asInputs: CompositeIndicatorInput[] = MARAGON_BENCHMARKS[0].points.map((p) => ({ id: p.indicatorId, status: 'assessed', humanFinalScore: 70, confidence: 'high', thresholdMet: true, referenceSeries: true }));
     assert.equal(gatedComposite(asInputs, 'individual').composite, null);
   });
 });
 
 describe('7b. Report-page benchmark suppression (Gemini reconciliation G3-26)', () => {
-  it('shows no peer average and no standard series on the MARAGON® report while no benchmark amendment is signed', async () => {
+  it('shows no peer average and no mock standard series on the MARAGON® report when the only signed amendment is AM-10', async () => {
     const { maragonReportBenchmarksArePublic, MaragonReportPage } = await import('../components/MaragonReportPage');
     assert.deepEqual(maragonReportBenchmarksArePublic(), { standard: false, peerAverage: false });
     assert.deepEqual(maragonReportBenchmarksArePublic(['SIGNED-TEST-ONLY']), { standard: true, peerAverage: false });

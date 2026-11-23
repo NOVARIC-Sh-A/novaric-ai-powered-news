@@ -20,7 +20,7 @@ interface PerformanceAnalysisPageProps {
     onProfileSelect: (page: 'tvPersonalitiesAnalysis', id: string | number) => void;
 }
 
-/** Bands only (v1.0 §10). Peer-average and "global standard" series are not shown (no signed source; AM-10 unsigned). */
+/** Bands only (v1.0 §10). Peer-average and "global standard" series are not shown. AM-10 lines belong on the presenter radar. */
 const DimensionDetail: React.FC<{ category: ParagonEntry; unassessedLabel: string; gateOpen: boolean }> = ({ category, unassessedLabel, gateOpen }) => {
     const band = publishedBand(gateOpen, category.score);
     return (

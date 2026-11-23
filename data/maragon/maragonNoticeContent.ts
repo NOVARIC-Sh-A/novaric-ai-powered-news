@@ -12,7 +12,8 @@
  * score, band or dossier.
  *
  * Governing source: STD-COM-MARAGON-METHODOLOGY-v1.0-20261121 with AM-01 … AM-09.
- * AM-10 v0.1 (benchmarks) is unsigned and is not relied on here.
+ * The two normative reference lines are signed and shown as band names on the presenter radar.
+ * This page's publication gate is unchanged: the notice stays unpublished until its own approval.
  *
  * Inline links use [text](href). Allowed hrefs are listed in MARAGON_NOTICE_ALLOWED_HREFS.
  */
@@ -312,13 +313,13 @@ export const MARAGON_NOTICE_SECTIONS: MaragonNoticeSection[] = [
         'MARAGON® mat sa i plotësojnë provat kriteret e shkruara. Nuk i rendit prezantuesit ndaj njëri-tjetrit. Mbajmë të ndara dy gjëra që në një grafik mund të duken të ngjashme:',
         '- standard normativ: niveli që pret një kod ose standard profesional, pra çfarë duhet të jetë;',
         '- mesatare empirike e kolegëve: mesatarja e vëzhguar e një grupi prezantuesish në një kampion, pra çfarë është.',
-        'Në datën e këtij versioni nuk ka vlera standardesh të miratuara. Për këtë arsye grafikët nuk vizatojnë asnjë vijë krahasuese, dhe metodologjia v1.0 nuk publikon mesatare kolegësh. Çdo vijë krahasuese në të ardhmen duhet të emërtohet qartë si standard normativ ose si mesatare e vëzhguar, me burimin e saj.',
+        'Dy standarde normative janë të nënshkruara dhe shfaqen vetëm me emrin e brezit: «Standardi i pritur në Shqipëri» dhe «Standardi i industrisë europiane/ndërkombëtare». Ato nuk janë mesatarja e prezantuesve të vëzhguar dhe nuk janë renditje. Një brez bosh lexohet «Pa vlerësim / Not assessed» dhe nuk vizatohet si zero. Metodologjia v1.0 nuk publikon mesatare kolegësh.',
       ],
       en: [
         'MARAGON® measures how far the evidence meets written criteria. It does not rank presenters against one another. We keep apart two things that can look alike in a chart:',
         '- a normative benchmark: the level a code or professional standard expects, that is, what ought to be;',
         '- an empirical peer average: the observed average of a group of presenters in a sample, that is, what is.',
-        'At the date of this version no benchmark values have been approved. For that reason the charts draw no comparison line, and methodology v1.0 publishes no peer averages. Any future comparison line must be labelled clearly as a normative benchmark or as an observed average, with its source.',
+        'Two normative standards are signed and are shown by band name only: "Expected standard in Albania" and "European/international industry standard". They are not an average of observed presenters and they are not a ranking. An empty band reads "Pa vlerësim / Not assessed" and is not drawn as zero. Methodology v1.0 publishes no peer averages.',
       ],
     },
   },
