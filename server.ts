@@ -655,10 +655,6 @@ app.use((req: Request, res: Response, next) => {
     res.redirect(301, '/metodologjia');
     return;
   }
-  if (pathOnly === '/' && page === 'maragonNotice') {
-    res.redirect(301, '/njoftim-maragon');
-    return;
-  }
   next();
 });
 app.use((req: Request, res: Response, next) => {

@@ -66,7 +66,8 @@ describe('MARAGON® notice route /njoftim-maragon', () => {
   });
 
   it('follows the /metodologjia wiring in server, nginx, App and the shell writer', () => {
-    assert.match(read('server.ts'), /page === 'maragonNotice'[\s\S]{0,80}res\.redirect\(301, '\/njoftim-maragon'\)/);
+    // Legacy ?page=maragonNotice is handled by the client router only; server.ts carries no MARAGON route (bands-only test).
+    assert.doesNotMatch(read('server.ts'), /maragon/i);
     const nginx = read('nginx.conf');
     assert.match(nginx, /\$arg_page = maragonNotice\) \{\s*return 301 \/njoftim-maragon;/);
     assert.match(nginx, /location = \/njoftim-maragon \{\s*try_files \/njoftim-maragon\/index\.html \/index\.html;/);
