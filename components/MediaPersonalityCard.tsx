@@ -22,13 +22,11 @@ import {
   formatNameSurname,
   getPresenterRecord,
   nameSurnameFromFull,
-  BandRadar,
   visibleIndicatorBand,
   type DisplayMode,
 } from './maragon/maragonPresenterUi';
 import { MediaPortrait } from './maragon/MediaPortrait';
-import { LiveIndicatorList } from './maragon/MaragonLiveScore';
-import { liveProfile } from '../data/maragon/scoring/publicLiveScoring';
+import { SevenPointPilotCard } from './maragon/SevenPointPilotCard';
 import { confirmedSocialUrls } from '../utils/maragonSocialAccounts';
 import { ProfileSocialLogos } from './figurat-politike/ProfileSocialLogos';
 import { maragonInternalPreview } from '../utils/maragonPublication';
@@ -219,10 +217,7 @@ export const MediaPersonalityCard: React.FC<MediaPersonalityCardProps> = ({
             </p>
           )}
         </div>
-        {rec && (
-          <BandRadar rec={rec} mode={mode} lang={lang} size={210} livePoints={liveProfile(String(profile.id))?.indicators ?? []} />
-        )}
-        <LiveIndicatorList profileId={String(profile.id)} lang={lang} />
+        <SevenPointPilotCard profileId={String(profile.id)} compact />
       </div>
 
       <footer className="mt-4 px-4 py-3 border-t flex flex-col gap-2" style={{ borderColor: LINE }}>

@@ -6,9 +6,14 @@ import React from 'react';
 import { renderToStaticMarkup } from 'react-dom/server';
 import { SevenPointAxes, SevenPointPilotCard } from '../components/maragon/SevenPointPilotCard';
 import {
+  blankSevenPoints,
+  calibrationElapsed,
+  overallSevenPointBand,
   projectSevenPointCard,
   sevenPointCardLeaksMeasurement,
+  sevenPointFrame,
   sevenPointPolygonAllowed,
+  sevenPointProfileIds,
   type SevenPointView,
 } from '../utils/maragonSevenPoint';
 
@@ -67,10 +72,10 @@ test('a third scored point is what allows the polygon', () => {
 test('the FEVZIU card shows bands, not-assessed reasons, and no overall result', () => {
   const html = renderToStaticMarkup(React.createElement(SevenPointPilotCard, { profileId: 'vip_m1' }));
   assert.match(html, /data-template-profile="true"/);
-  assert.match(html, /PILOT · DRAFT — Korniza 7-pikëshe v2.0, e pa nënshkruar, jo në fuqi/);
+  assert.match(html, /PILOT · DRAFT — Korniza 7-pikëshe v2.0, e nënshkruar 27.11.2026 22:51/);
   assert.match(html, /Pilot result: NO-GO \(2\/7\)/);
   assert.match(html, /Signed MARAGON/);
-  assert.match(html, /v1\.0 governs/);
+  assert.match(html, /v2\.0 governs/);
   assert.match(html, /Pajtueshmëria Etike/);
   assert.match(html, /Ethical Compliance/);
   assert.match(html, /data-seven-band="41–60"/);
@@ -83,7 +88,10 @@ test('the FEVZIU card shows bands, not-assessed reasons, and no overall result',
   assert.match(html, /background accuracy not checked; result on the cut-off\./);
   assert.match(html, /auto-captions cannot separate speech errors from transcription errors\./);
   assert.doesNotMatch(html, /Vlerësimi i përgjithshëm|Overall assessment|composite|5\.6|36\.0/);
-  assert.equal(renderToStaticMarkup(React.createElement(SevenPointPilotCard, { profileId: 'vip_m2' })), '');
+  const other = renderToStaticMarkup(React.createElement(SevenPointPilotCard, { profileId: 'vip_m2' }));
+  assert.match(other, /data-template-profile="false"/);
+  assert.doesNotMatch(other, /data-seven-band|PILOT · DRAFT|41–60|21–40/);
+  assert.match(other, /Pa vlerësim \/ Not assessed/);
 });
 
 test('bands-only output of the card has no raw score', () => {
@@ -93,10 +101,48 @@ test('bands-only output of the card has no raw score', () => {
   assert.match(html, /21–40/);
 });
 
+test('T4 keeps every profile null except the FEVZIU pilot bands', () => {
+  const ids = sevenPointProfileIds();
+  assert.equal(ids.length, 24);
+  const during = new Date('2026-11-27T22:56:00+01:00');
+  for (const id of ids) {
+    const frame = sevenPointFrame(id, during);
+    assert.equal(frame.polygon, false);
+    assert.equal(frame.overallBand, null);
+    if (id === 'vip_m1') {
+      assert.equal(frame.template, true);
+      assert.equal(frame.calibrationOpen, true);
+      assert.equal(frame.points.find((point) => point.code === 'P1')?.band, '41–60');
+      assert.equal(frame.points.find((point) => point.code === 'P7')?.band, '21–40');
+      assert.deepEqual(frame.points.filter((point) => point.band).map((point) => point.code), ['P1', 'P7']);
+    } else {
+      assert.equal(frame.points.every((point) => point.band === null && point.status === 'not_assessed'), true);
+      assert.equal(frame.firstScoreAt, null);
+    }
+  }
+});
+
+test('OD-S10 mean switches from five points to seven after the 24-hour cap, OD-S13', () => {
+  const points = blankSevenPoints().map((point) => {
+    if (point.code === 'P2' || point.code === 'P6') return { ...point, status: 'scored' as const, band: '21–40' as const, confidence: 'low' as const };
+    return { ...point, status: 'scored' as const, band: '41–60' as const, confidence: 'low' as const };
+  });
+  const start = '2026-11-27T22:32:00+01:00';
+  const during = new Date('2026-11-27T23:00:00+01:00');
+  const after = new Date('2026-11-28T23:00:00+01:00');
+  assert.equal(calibrationElapsed(start, during), false);
+  assert.equal(overallSevenPointBand(points, start, during), '41–60');
+  assert.equal(calibrationElapsed(start, after), true);
+  assert.equal(overallSevenPointBand(points, start, after), '41–60');
+  const html = renderToStaticMarkup(React.createElement(SevenPointPilotCard, { profileId: 'vip_m1', now: after }));
+  assert.match(html, /data-seven-overall="none"/);
+  assert.doesNotMatch(html, /data-p2p6-provisional/);
+});
+
 test('only the projector and this card read the pilot folder', () => {
   const allowed = new Set([
     'scripts/projectMaragonPublicScoring.ts',
-    'components/maragon/SevenPointPilotCard.tsx',
+    'utils/maragonSevenPoint.ts',
   ]);
   const hits = sourceFiles(ROOT).filter((file) => {
     const relative = path.relative(ROOT, file);

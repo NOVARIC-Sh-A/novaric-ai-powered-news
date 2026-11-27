@@ -1,11 +1,9 @@
 import React from 'react';
 import type { VipProfile } from '../../types';
-import { liveProfile } from '../../data/maragon/scoring/publicLiveScoring';
-import { nameSurnameFromFull, BandRadar, FONT, NAVY, RED, SURFACE, LINE, MUTED, Mark, getPresenterRecord } from './maragonPresenterUi';
+import { nameSurnameFromFull, FONT, NAVY, RED, SURFACE, LINE, MUTED, Mark, getPresenterRecord } from './maragonPresenterUi';
 import { MediaPortrait } from './MediaPortrait';
 import { ownerSuppliedMediaPortraitSrcSet, resolvePresentableMediaPhoto } from '../../utils/officialMediaPhoto';
-import { LiveIndicatorList } from './MaragonLiveScore';
-import { MARAGON_BENCHMARKS } from '../../data/maragon/benchmarks';
+import { SevenPointPilotCard } from './SevenPointPilotCard';
 
 /**
  * Side-by-side MARAGON® comparison. Order is the order the caller passes
@@ -36,7 +34,6 @@ export const MaragonCompareModal: React.FC<{
         <div className="overflow-y-auto p-5">
           <div className="grid gap-4" style={{ gridTemplateColumns: `repeat(${profiles.length}, minmax(0, 1fr))` }}>
             {profiles.map((profile) => {
-              const live = liveProfile(String(profile.id));
               const rec = getPresenterRecord(profile);
               const name = nameSurnameFromFull(profile.name);
               const photo = resolvePresentableMediaPhoto(rec ? rec.photo : { imageUrl: profile.imageUrl }, String(profile.id));
@@ -49,8 +46,7 @@ export const MaragonCompareModal: React.FC<{
                   <p className="mb-2 text-center text-[12px]" style={{ color: MUTED }}>
                     {lang === 'en' ? 'Overall: Not assessed' : 'Vlerësimi i përgjithshëm: Pa vlerësim'}
                   </p>
-                  {rec ? <BandRadar rec={rec} mode="public" lang={lang} size={220} benchmarks={MARAGON_BENCHMARKS} livePoints={live?.indicators ?? []} /> : null}
-                  <LiveIndicatorList profileId={String(profile.id)} lang={lang} />
+                  <SevenPointPilotCard profileId={String(profile.id)} compact />
                 </section>
               );
             })}
