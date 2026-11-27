@@ -11,7 +11,6 @@ import {
 import {
   AwaitingPhoto,
   BandPill,
-  BandRadar,
   CYAN,
   FONT,
   LABEL_CLASS,
@@ -40,11 +39,8 @@ import {
 } from './maragonPresenterUi';
 import type { MaragonPillar } from './maragonPresenterTypes';
 import { ownerSuppliedMediaPortraitSrcSet, resolvePresentableMediaPhoto } from '../../utils/officialMediaPhoto';
-import { MARAGON_BENCHMARKS, isPlottableBenchmarkPoint } from '../../data/maragon/benchmarks';
 import { MaragonContextNotices, MaragonNoticeProfileLink } from './MaragonContextNotice';
-import { LiveIndicatorList } from './MaragonLiveScore';
 import { SevenPointPilotCard } from './SevenPointPilotCard';
-import { liveProfile } from '../../data/maragon/scoring/publicLiveScoring';
 import { confirmedSocialUrls } from '../../utils/maragonSocialAccounts';
 import { ProfileSocialLogos } from '../figurat-politike/ProfileSocialLogos';
 import { MediaPortrait } from './MediaPortrait';
@@ -156,10 +152,8 @@ export const MaragonPresenterProfilePage: React.FC<Props> = ({ profile, onBack, 
   const sources = internal || rec.id !== 'vip_m1' ? rec.sources : rec.sources.filter((s) => publicSourceIds.has(s.id));
   const pillars: MaragonPillar[] = ['R', 'A', 'G', 'O'];
   // What the assessment area really renders, for the contextual notices (they never change it).
-  const benchmarkVerticesDrawn = MARAGON_BENCHMARKS.reduce(
-    (sum, series) => sum + series.points.filter((point) => isPlottableBenchmarkPoint(series, point) && !!point.band).length,
-    0,
-  );
+  // OD-S14: the seven-point graph draws no AM-10 reference lines.
+  const benchmarkVerticesDrawn = 0;
   const displayState: MaragonDisplayState = {
     mode,
     officialBands: bands.filter((b) => b.v.band && !b.v.indicative).length,
@@ -245,8 +239,6 @@ export const MaragonPresenterProfilePage: React.FC<Props> = ({ profile, onBack, 
           </div>
         </section>
 
-        <SevenPointPilotCard profileId={rec.id} />
-
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-5">
           <Card title={t.identity}>
             <Row k={t.show}>
@@ -310,9 +302,8 @@ export const MaragonPresenterProfilePage: React.FC<Props> = ({ profile, onBack, 
         </div>
 
         <Card id="maragon" title={<Mark text={t.maragon} />}>
-          <div className="grid grid-cols-1 md:grid-cols-[280px_1fr] gap-6 items-start">
-            <div className="w-full max-w-[280px] mx-auto"><BandRadar rec={rec} mode={mode} lang={lang} benchmarks={MARAGON_BENCHMARKS} livePoints={liveProfile(rec.id)?.indicators ?? []} /></div>
-            <div className="flex flex-col gap-3">
+          <SevenPointPilotCard profileId={rec.id} />
+          <div className="mt-6 flex flex-col gap-3">
               <div className="flex flex-wrap items-center gap-2">
                 <span className={LABEL_CLASS} style={{ color: MUTED }}>{t.overall}</span>
                 <BandPill v={{ band: null, confidence: null, indicative: false, notApplicable: false }} lang={lang} size="md" />
@@ -329,11 +320,10 @@ export const MaragonPresenterProfilePage: React.FC<Props> = ({ profile, onBack, 
                   ))}
                 </div>
               </div>
-              <LiveIndicatorList profileId={rec.id} lang={lang} />
+              <p className="text-[14px] leading-relaxed" style={{ color: MUTED }}>Dhjetë treguesit e v1.0 më poshtë janë referencë, jo pikë. / The ten v1.0 indicators below are reference, not scores.</p>
               {!internal && !anyIndicative && <p className="text-[15px] leading-relaxed" style={{ color: NAVY }}>{t.publicNote}</p>}
               <p className="text-[14px] leading-relaxed" style={{ color: MUTED }}>{internal ? (lang === 'en' ? m.statusNote_en : m.statusNote_sq) : (lang === 'en' ? 'Under editorial review. No point has an official band; overall: Not assessed.' : 'Në shqyrtim editorial. Asnjë pikë nuk ka brez zyrtar; vlerësimi i përgjithshëm: Pa vlerësim.')} · {t.ror}</p>
               <MaragonContextNotices state={displayState} lang={lang} />
-            </div>
           </div>
 
           <h3 className="mt-8 mb-2 text-[17px] font-bold" style={{ color: NAVY }}>{t.indicators}</h3>
