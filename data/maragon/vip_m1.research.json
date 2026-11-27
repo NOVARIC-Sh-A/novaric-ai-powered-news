@@ -729,7 +729,7 @@
       "url": "https://media.novaric.al/?page=tvPersonalitiesAnalysis&id=vip_m1",
       "publicationDate": "2026-11-05",
       "accessDate": "2026-11-11",
-      "excerpt": "mediaProfiles.ts hardcodes dynamicScore 88 and seven maragonAnalysis numbers; genome is absent. MediaPersonalityCard then invents evolutionaryStatus Compromised and the line 'Nga Investigues në Opinionist'; SCORE falls to 0 when paragonAnalysis is empty.",
+      "excerpt": "The retired mock dynamic score and seven-label maragonAnalysis rows were removed from mediaProfiles.ts. They are not a MARAGON® v1.0 result.",
       "observation": "The live COMPROMISED badge, SCORE 0 and rhetoric-shift line are interface artefacts, not findings of this research.",
       "limitations": "Does not describe the subject's conduct. Hardcoded scores are not an approved assessment. See REPO-CONTRACT-FINDINGS-20261111.md."
     },

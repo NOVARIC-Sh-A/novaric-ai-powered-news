@@ -55,7 +55,7 @@ describe('Media personality slug routes', () => {
 
   it('keeps every public indicator unassessed and shows the owner-supplied portraits', () => {
     const grida = mediaProfilesData.find((profile) => profile.id === 'vip_m2');
-    assert.equal(grida?.maragonAssessmentStatus, 'research_only');
+    assert.equal(grida?.maragonAssessmentStatus, 'not_assessed');
     assert.equal(grida?.composite ?? null, null);
     assert.equal(grida?.dynamicScore ?? null, null);
     for (const profile of mediaProfilesData) {

@@ -19,6 +19,7 @@ import {
   SIGNED_BENCHMARK_AMENDMENT_IDS,
   isPlottableBenchmarkPoint,
 } from '../../data/maragon/benchmarks';
+import { DRAFT_VALUE_LABEL, type PublicLiveIndicator } from '../../utils/maragonLiveScoring';
 
 /* NOVARIC® Media House tokens (sampled from media.novaric.al, 21.11.2026: header/footer #e4191e,
  * body #f1f5f9, Helvetica/Arial). Formal light theme. Contrast (WCAG 2.x) on white:
@@ -363,19 +364,35 @@ export const BandRadar: React.FC<{
   benchmarks?: MaragonBenchmarkSeries[];
   /** Signed benchmark amendments. Defaults to the signed list (AM-10); tests may inject a fixture id. */
   signedBenchmarkAmendments?: readonly string[];
-}> = ({ rec, mode, size = 260, lang, benchmarks = MARAGON_BENCHMARKS, signedBenchmarkAmendments = SIGNED_BENCHMARK_AMENDMENT_IDS }) => {
+  /** Live scoring axes. When set, these replace the gated presenter bands. Null cells are not drawn as zero. */
+  livePoints?: PublicLiveIndicator[] | null;
+}> = ({ rec, mode, size = 260, lang, benchmarks = MARAGON_BENCHMARKS, signedBenchmarkAmendments = SIGNED_BENCHMARK_AMENDMENT_IDS, livePoints }) => {
   const inds = rec.maragon.indicators.filter((ind) => ind.id !== 'maragon:C' && ind.code !== 'C');
   const n = inds.length || 10;
   const c = size / 2;
   const R = size * 0.34;
   const angle = (i: number) => -Math.PI / 2 + (i * 2 * Math.PI) / n;
   const pt = (i: number, r: number) => [c + r * Math.cos(angle(i)), c + r * Math.sin(angle(i))] as const;
-  const vis = inds.map((ind) => visibleIndicatorBand(rec, ind, mode));
-  const shown: Array<RadarVertex & { indicative: boolean }> = vis
+  const liveById = livePoints ? new Map(livePoints.map((point) => [point.id, point])) : null;
+  const vis = inds.map((ind) => {
+    if (!liveById) return { ...visibleIndicatorBand(rec, ind, mode), tip: undefined as string | undefined };
+    const live = liveById.get(ind.id);
+    if (!live?.band) return { band: null, confidence: null, indicative: false, notApplicable: false, tip: `${ind.code}: Pa vlerësim / Not assessed` };
+    const number = typeof live.draftValue === 'number' ? `${live.draftValue} · ` : '';
+    return {
+      band: live.band,
+      confidence: 'low' as const,
+      indicative: true,
+      notApplicable: false,
+      tip: `${ind.code}: ${number}${live.labelSq} / ${live.labelEn}. ${DRAFT_VALUE_LABEL.sq} / ${DRAFT_VALUE_LABEL.en}`,
+    };
+  });
+  const shown = vis
     .map((v, i) => (v.band && MARAGON_BAND_LABELS[v.band].level > 0
-      ? { i, level: MARAGON_BAND_LABELS[v.band].level, indicative: v.indicative }
+      ? { i, level: MARAGON_BAND_LABELS[v.band].level, indicative: v.indicative, tip: v.tip ?? '' }
       : null))
-    .filter((vertex): vertex is RadarVertex & { indicative: boolean } => vertex !== null);
+    .filter((vertex): vertex is { i: number; level: number; indicative: boolean; tip: string } => vertex !== null);
+  const draftCaption = liveById && shown.length > 0 ? `${DRAFT_VALUE_LABEL.sq} / ${DRAFT_VALUE_LABEL.en}` : null;
   const indicative = shown.some((vertex) => vertex.indicative);
   const presenterStyle = MARAGON_RADAR_SERIES_STYLE.presenter;
   const benchmarkVertices = (id: MaragonBenchmarkSeries['id']): { drawn: RadarVertex[]; missing: boolean } => {
@@ -495,7 +512,7 @@ export const BandRadar: React.FC<{
           'presenter',
           MARAGON_RADAR_LEGEND.presenter.sq,
           MARAGON_RADAR_LEGEND.presenter.en,
-          shown.length === 0 ? 'Pa vlerësim / Not assessed' : null,
+          shown.length === 0 ? 'Pa vlerësim / Not assessed' : draftCaption,
           indicative ? presenterStyle.indicativeStroke : presenterStyle.stroke,
           indicative ? presenterStyle.indicativeDash : presenterStyle.dash,
         )}

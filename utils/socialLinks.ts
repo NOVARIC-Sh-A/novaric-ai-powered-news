@@ -4,10 +4,18 @@ import { formatPersonName } from './formatPersonName';
 
 export const SOCIAL_PLATFORMS = ['facebook', 'instagram', 'x', 'tiktok', 'youtube', 'linkedin', 'website', 'whatsapp', 'telegram'] as const;
 
-/** Logos drawn on every profile details card, in this order. */
+/** Logos drawn on every political profile card, in this order. */
 export const PROFILE_LOGO_PLATFORMS = ['facebook', 'x', 'whatsapp', 'linkedin', 'telegram'] as const;
 
 export type ProfileLogoPlatform = (typeof PROFILE_LOGO_PLATFORMS)[number];
+
+/**
+ * MARAGON® media cards reuse the political row and add Instagram after X.
+ * YouTube and TikTok are extra slots, drawn only when that person has a renderable account.
+ */
+export const MEDIA_ICON_PLATFORMS = ['facebook', 'x', 'instagram', 'whatsapp', 'linkedin', 'telegram'] as const;
+export const MEDIA_EXTRA_PLATFORMS = ['youtube', 'tiktok'] as const;
+export type MediaLogoPlatform = (typeof MEDIA_ICON_PLATFORMS)[number] | (typeof MEDIA_EXTRA_PLATFORMS)[number];
 
 export const PLATFORM_HOME: Record<ProfileLogoPlatform, string> = {
   facebook: 'https://www.facebook.com/',
@@ -15,6 +23,13 @@ export const PLATFORM_HOME: Record<ProfileLogoPlatform, string> = {
   whatsapp: 'https://www.whatsapp.com/',
   linkedin: 'https://www.linkedin.com/',
   telegram: 'https://telegram.org/',
+};
+
+export const MEDIA_PLATFORM_HOME: Record<MediaLogoPlatform, string> = {
+  ...PLATFORM_HOME,
+  instagram: 'https://www.instagram.com/',
+  youtube: 'https://www.youtube.com/',
+  tiktok: 'https://www.tiktok.com/',
 };
 
 export type SocialPlatform = (typeof SOCIAL_PLATFORMS)[number];
@@ -51,7 +66,7 @@ export function platformHomeLabel(platform: ProfileLogoPlatform): string {
   return `${SOCIAL_PLATFORM_LABEL[platform]} (faqja kryesore e platformës)`;
 }
 
-export function confirmedSocialLabel(name: string, platform: ProfileLogoPlatform): string {
+export function confirmedSocialLabel(name: string, platform: ProfileLogoPlatform | MediaLogoPlatform): string {
   return `${name} në ${SOCIAL_PLATFORM_LABEL[platform]}`;
 }
 
@@ -101,4 +116,39 @@ export function profileSocialLogos(name: string, links: SocialLinks | null | und
       label: personal ? confirmedSocialLabel(person, platform) : platformHomeLabel(platform),
     };
   });
+}
+
+export interface MediaSocialLogo {
+  platform: MediaLogoPlatform;
+  label: string;
+  confirmed: boolean;
+  href: string;
+}
+
+/** Political order, with Instagram after X. Extra platforms appear only when a URL is supplied. */
+export function mediaProfileSocialLogos(
+  name: string,
+  urls: Partial<Record<MediaLogoPlatform, string>> | null | undefined,
+): MediaSocialLogo[] {
+  const person = formatPersonName(name) || 'Profili';
+  const main = MEDIA_ICON_PLATFORMS.map((platform) => {
+    const personal = urls?.[platform] && /^https:\/\//i.test(urls[platform]) ? urls[platform] : null;
+    return {
+      platform,
+      confirmed: Boolean(personal),
+      href: personal || MEDIA_PLATFORM_HOME[platform],
+      label: personal ? confirmedSocialLabel(person, platform) : `${SOCIAL_PLATFORM_LABEL[platform]} (faqja kryesore e platformës)`,
+    };
+  });
+  const extras = MEDIA_EXTRA_PLATFORMS.flatMap((platform) => {
+    const personal = urls?.[platform] && /^https:\/\//i.test(urls[platform]) ? urls[platform] : null;
+    if (!personal) return [];
+    return [{
+      platform,
+      confirmed: true,
+      href: personal,
+      label: confirmedSocialLabel(person, platform),
+    }];
+  });
+  return [...main, ...extras];
 }

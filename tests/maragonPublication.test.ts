@@ -31,9 +31,9 @@ describe('MARAGON publication stays closed until an assessment is approved', () 
     assert.equal(vip?.photoPending, false);
     assert.equal(vip?.imageUrl, '/media-personalities/portraits/blendi-fevziu-450x600.jpg');
     assert.equal(vip?.scoringSuspended, true);
-    assert.equal(vip?.dynamicScore, 88);
-    assert.equal(vip?.maragonAnalysis?.length, 7);
-    assert.equal(vip?.maragonAnalysis?.[0].score, 85);
+    assert.equal(vip?.dynamicScore ?? null, null);
+    assert.equal(vip?.maragonAnalysis, undefined);
+    assert.equal(vip?.portraitCutout, false);
   });
 
   it('does not publish a score unless the assessment is approved and scoring is open', () => {

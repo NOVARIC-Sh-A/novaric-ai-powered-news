@@ -1,0 +1,981 @@
+{
+ "documentId": "REG-COM-MARAGON-SEVEN-POINT-PILOT-FEVZIU-v0.1-20261127",
+ "label": "DRAFT · AI-assisted · internal pilot data · NOT an owner ruling · NOT in force · NOT for public display",
+ "subject": {
+  "id": "vip_m1",
+  "name": "Blendi FEVZIU",
+  "programme": "«Opinion» · TV Klan",
+  "page": "https://media.novaric.al/personalitete-mediatike"
+ },
+ "createdTirana": "2026-11-27 22:32",
+ "requestedBy": "Dr Alban Gj. THIKA, voice 27.11.2026 22:09 Tirana; owner update 22:10 (real evidence only, no estimated/midpoint/working scores) and 22:14 (36-month window)",
+ "methodologyNote": "Signed v1.0 (21.11.2026, AM-01…AM-09; AM-10 23.11.2026) retires the seven points as a scoring frame (§1.3, D-06/D-07). This pilot does not change v1.0, methodologyApproved or any flag. Five points are read through the v1.0 anchor of their name-matched indicator (P1→R1.2, P3→A2.1, P4→ind:A2.2, P5→ind:A2.3, P7→ind:O4.1). P2 and P6 have no signed anchor. Scores are bands (v1.0 anchors define bands only); no single point value is assigned because no approved band-to-number rule exists (the v0.2 midpoint convention is not used).",
+ "originalDefinitionsSearch": {
+  "result": "No formal original definition of the seven points exists. Labels only in code; one-line descriptions only as mock data, and three of them describe a different construct.",
+  "found": [
+   {
+    "path": "/workspace/aistudio-src/types.ts:326-333 (type MaragonDimension)",
+    "content": "the seven labels only"
+   },
+   {
+    "path": "/workspace/aistudio-src/utils/translations.ts (MARAGON_DIMENSIONS_AL)",
+    "content": "labels only"
+   },
+   {
+    "path": "/workspace/aistudio-src/data.json (maragonAnalysis[].description, 2 variants x 3 mock profiles each)",
+    "content": "P1 ethics standards (conflict of interest, source protection, dignity of guests); P2 text actually describes communication: clarity, eloquence, sharp questions, managing live debate; P3 verification before broadcast, attribution, fact/opinion separation; P4 impartial moderation, equal time, avoiding personal bias; P5 text actually describes influence/agenda-setting ('Ndikimi dhe relevanca publike'); P6 text actually describes social-media professionalism; P7 fostering debate and critical thinking in the audience. All with mock scores; not evidence."
+   },
+   {
+    "path": "/workspace/aistudio-src/components/MediaPersonalitiesPage.tsx:56-76",
+    "content": "archetype thresholds (Moderatori: Paanshmëria>=85 & Profesionalizmi në Kriza>=85; Komunikatori: Qartësia & Koherenca>=90; etc.) — heuristic, no definitions"
+   },
+   {
+    "path": "/workspace/brands/novaric-media/maragon/REPO-CONTRACT-FINDINGS-20261111.md §4.3",
+    "content": "list of the seven labels; they do not map 1:1 to the ten indicators"
+   },
+   {
+    "path": "/workspace/brands/novaric-media/maragon/consolidation-20261122/sources/RPT-COM-MARAGON-GEMINI3-HISTORICAL-RECONSTRUCTION-v0.1-20261122.txt",
+    "content": "historical account: seven heuristic dimensions inherited from PARAGON, simple arithmetic mean feeding archetypes"
+   }
+  ],
+  "cloudRunDocs": "Searched /workspace/aistudio-src (docs/, scripts/deploy_frontend_cloudrun.sh, cloudbuild.yaml, cron/, services/paragon_scoring_engine.py): no seven-point definitions; MARAGON appears only as maragon_indicators lineage (R1.1…O4.2)."
+ },
+ "sample": {
+  "primary": {
+   "seed": 20261127,
+   "frameRule": "RTV KLAN official channel, Opinion playlists 2025-2026 and 2026-2027; title starts 'Opinion'; duration>=3000 s; air date in title between 2026-05-27 and 2026-11-27; one video per air date (longest)",
+   "frameSize": 55,
+   "drawn": 24,
+   "transcribed": 24,
+   "window": "28.05.2026–26.11.2026 (6 months; no episodes 10.06–02.09.2026: summer break announced on air 03.09.2026)",
+   "transcriptSource": "YouTube auto-generated Albanian captions (ASR, 'sq-orig') from the official RTV KLAN channel, fetched with youtube-transcript-api and yt-dlp on 27.11.2026; no speaker labels (only '>>' turn marks)",
+   "episodes": [
+    {
+     "date": "2026-05-28",
+     "title": "Opinion–Zvërneci/Aeroporti i Vlorës/Ilyonis Hotel/Maja e Himalajës/Shqiptari drejt Gazës–28 Maj 2026",
+     "url": "https://www.youtube.com/watch?v=jU7lxcUE9Ro",
+     "duration_s": 6743,
+     "transcript": "subs/2026-05-28_jU7lxcUE9Ro.json"
+    },
+    {
+     "date": "2026-06-01",
+     "title": "Opinion - Përse ndezi protestë Zvërneci? - 1 Qershor 2026",
+     "url": "https://www.youtube.com/watch?v=qsiPen-0VRM",
+     "duration_s": 5395,
+     "transcript": "subs/2026-06-01_qsiPen-0VRM.json"
+    },
+    {
+     "date": "2026-06-02",
+     "title": "Opinion - Dita e tretë e protestës, Rama kërkon bisedime - 2 Qershor 2026",
+     "url": "https://www.youtube.com/watch?v=PhxPdU8cj0c",
+     "duration_s": 4778,
+     "transcript": "subs/2026-06-02_PhxPdU8cj0c.json"
+    },
+    {
+     "date": "2026-06-04",
+     "title": "Opinion - Më shumë njerëz në protestë, cila është zgjidhja - 4 qershor 2026",
+     "url": "https://www.youtube.com/watch?v=rjdELVTIsfg",
+     "duration_s": 7172,
+     "transcript": "subs/2026-06-04_rjdELVTIsfg.json"
+    },
+    {
+     "date": "2026-09-03",
+     "title": "Opinion - Dy biznesmenë në Vlorë, kërcënim dhe armë! - 3 Shtator 2026",
+     "url": "https://www.youtube.com/watch?v=CK5kpAQehtQ",
+     "duration_s": 7849,
+     "transcript": "subs/2026-09-03_CK5kpAQehtQ.json"
+    },
+    {
+     "date": "2026-09-07",
+     "title": "Opinion - 100 ditë protestë, po më pas? - 7 Shtator 2026",
+     "url": "https://www.youtube.com/watch?v=qMs8huKZp1M",
+     "duration_s": 5417,
+     "transcript": "subs/2026-09-07_qMs8huKZp1M.json"
+    },
+    {
+     "date": "2026-09-10",
+     "title": "Opinion – KAYO dhe tregtia e armëve! – 10 Shtator 2026",
+     "url": "https://www.youtube.com/watch?v=NEWq2tOLg80",
+     "duration_s": 7702,
+     "transcript": "subs/2026-09-10_NEWq2tOLg80.json"
+    },
+    {
+     "date": "2026-09-15",
+     "title": "Opinion – Veliaj mbetet në burg! – 15 Shtator 2026",
+     "url": "https://www.youtube.com/watch?v=VG4CVtArITw",
+     "duration_s": 3367,
+     "transcript": "subs/2026-09-15_VG4CVtArITw.json"
+    },
+    {
+     "date": "2026-09-16",
+     "title": "Opinion - Haga dënon luftën e Kosovës, çfarë do ndodhë tani? - 16 Shtator 2026",
+     "url": "https://www.youtube.com/watch?v=K7JBrAwAaiQ",
+     "duration_s": 5279,
+     "transcript": "subs/2026-09-16_K7JBrAwAaiQ.json"
+    },
+    {
+     "date": "2026-09-17",
+     "title": "Opinion - Sali Berisha për vizitën në SHBA! - 17 Shtator 2026",
+     "url": "https://www.youtube.com/watch?v=6pb1y9alDDw",
+     "duration_s": 7284,
+     "transcript": "subs/2026-09-17_6pb1y9alDDw.json"
+    },
+    {
+     "date": "2026-09-21",
+     "title": "Opinion – Video, ja si i masakronin serbët shqiptarët! – 21 Shtator 2026",
+     "url": "https://www.youtube.com/watch?v=CPoNDJgdIo8",
+     "duration_s": 6329,
+     "transcript": "subs/2026-09-21_CPoNDJgdIo8.json"
+    },
+    {
+     "date": "2026-09-22",
+     "title": "Opinion – Zyrtarë të lartë të policisë në rrjetën e SPAK! – 22 shtator 2026",
+     "url": "https://www.youtube.com/watch?v=YqzscqeyX9E",
+     "duration_s": 5318,
+     "transcript": "subs/2026-09-22_YqzscqeyX9E.json"
+    },
+    {
+     "date": "2026-10-05",
+     "title": "Opinion – A po e bllokon qeveria SPAK me ndryshimet në Kod? – 5 Tetor 2026",
+     "url": "https://www.youtube.com/watch?v=2PQM7DAA4Wk",
+     "duration_s": 6236,
+     "transcript": "subs/2026-10-05_2PQM7DAA4Wk.json"
+    },
+    {
+     "date": "2026-10-12",
+     "title": "Opinion – Pro dhe kundër projektit të Zvërnecit! – 12 Tetor 2026",
+     "url": "https://www.youtube.com/watch?v=in5tyGbWMAc",
+     "duration_s": 5857,
+     "transcript": "subs/2026-10-12_in5tyGbWMAc.json"
+    },
+    {
+     "date": "2026-10-13",
+     "title": "Opinion – Studentët në protestë, Tirana në flakë! – 13 Tetor 2026",
+     "url": "https://www.youtube.com/watch?v=PhpWqxF4RoI",
+     "duration_s": 6044,
+     "transcript": "subs/2026-10-13_PhpWqxF4RoI.json"
+    },
+    {
+     "date": "2026-10-15",
+     "title": "Opinion – Protestat djegin Tiranën, cila është zgjidhja? – 15 Tetor 2026",
+     "url": "https://www.youtube.com/watch?v=4aqJvfpiTus",
+     "duration_s": 7813,
+     "transcript": "subs/2026-10-15_4aqJvfpiTus.json"
+    },
+    {
+     "date": "2026-10-21",
+     "title": "Opinion - Ku ndryshon protesta shqiptare nga ajo në Europë? - 21 Tetor 2026",
+     "url": "https://www.youtube.com/watch?v=jaNiUx5szkU",
+     "duration_s": 7228,
+     "transcript": "subs/2026-10-21_jaNiUx5szkU.json"
+    },
+    {
+     "date": "2026-10-27",
+     "title": "Opinion – A do ta zvogëlojnë protestën masat e Ramës?– 27 Tetor 2026",
+     "url": "https://www.youtube.com/watch?v=5fbfTCys5_k",
+     "duration_s": 6095,
+     "transcript": "subs/2026-10-27_5fbfTCys5_k.json"
+    },
+    {
+     "date": "2026-11-02",
+     "title": "Opinion – Si iu përgjigj Erion Veliaj, Ramës në takimin sekret? - 2 Nëntor 2026",
+     "url": "https://www.youtube.com/watch?v=9Xfheod1VHk",
+     "duration_s": 5875,
+     "transcript": "subs/2026-11-02_9Xfheod1VHk.json"
+    },
+    {
+     "date": "2026-11-04",
+     "title": "Opinion - Çfarë pretendon SPAK në dosjen e Ballukut? - 4 Nëntor 2026",
+     "url": "https://www.youtube.com/watch?v=qLYozgnl2o0",
+     "duration_s": 5742,
+     "transcript": "subs/2026-11-04_qLYozgnl2o0.json"
+    },
+    {
+     "date": "2026-11-09",
+     "title": "Opinion - Agasi, Vlora dhe 450 mijë euro! - 9 Nëntor 2026",
+     "url": "https://www.youtube.com/watch?v=Qa9C06R9iTM",
+     "duration_s": 6236,
+     "transcript": "subs/2026-11-09_Qa9C06R9iTM.json"
+    },
+    {
+     "date": "2026-11-17",
+     "title": "Opinion - Prodhimet \"Made In Albania\"! - 17 Nëntor 2026",
+     "url": "https://www.youtube.com/watch?v=BxignrDv-8U",
+     "duration_s": 5412,
+     "transcript": "subs/2026-11-17_BxignrDv-8U.json"
+    },
+    {
+     "date": "2026-11-18",
+     "title": "Opinion – PD për bashkimin e opozitës, protesën dhe qeverinë! – 18 Nëntor 2026",
+     "url": "https://www.youtube.com/watch?v=1PTA3t06sBI",
+     "duration_s": 6041,
+     "transcript": "subs/2026-11-18_1PTA3t06sBI.json"
+    },
+    {
+     "date": "2026-11-26",
+     "title": "Opinion - Çfarë do të rrëfejë Spiropali? - 26 Nëntor 2026",
+     "url": "https://www.youtube.com/watch?v=OoAZzU0IfH0",
+     "duration_s": 6620,
+     "transcript": "subs/2026-11-26_OoAZzU0IfH0.json"
+    }
+   ],
+   "s1Gate": "Met on count and span: 24 random episodes ≥ 20 (daily-format rule, ruling of 19.11.2026) over ≥ 6 months within 18 months."
+  },
+  "secondary": {
+   "seed": 20261128,
+   "frame": "Opinion full episodes 27.11.2023–26.05.2026 (394 air dates)",
+   "drawn": 12,
+   "transcribed": 0,
+   "status": "Not obtained: caption fetch failed for the first two (Dec 2023, Jan 2024) after 3 retries each; fetch stopped to finish the pilot. Older in-window evidence used instead from AMA records, fact-checkers and press (per point, window stated)."
+  },
+  "coding": {
+   "coder": "Grok Bot (single AI coder); no second coder; no inter-rater check",
+   "Qunits": {
+    "rule": "'>>'-delimited turns of ≤ 70 words containing '?' after the opening monologue; 12 per episode drawn with seed '20261127-<videoId>' (8 + 4 extra)",
+    "drawn": 288,
+    "hostAttributed": 197,
+    "droppedNotAttributable": 91,
+    "publicAffairs": 113,
+    "features": 84
+   },
+   "Munits": {
+    "rule": "opening-monologue segments 2–6 per episode (segment 1 is the standard greeting); ~4 sentences each",
+    "coded": 108,
+    "withHostFactualAssertion": 89,
+    "episodes": 23
+   },
+   "files": [
+    "raw/qcodes_b1.txt",
+    "raw/qcodes_b2.txt",
+    "raw/qcodes_b3.txt",
+    "raw/qcodes_b4.txt",
+    "raw/mcodes.txt",
+    "raw/units_q8.json",
+    "raw/units_extra.json"
+   ]
+  }
+ },
+ "points": [
+  {
+   "point": "P1",
+   "label": "Pajtueshmëria Etike / Ethical compliance",
+   "anchor": "v1.0 R1.2 (individual: host's on-air conduct), lower-of-two rule R1.2-S + R1.2-P",
+   "status": "scored",
+   "band": "41–60",
+   "numericValue": null,
+   "confidence": "low",
+   "window": "R1.2-S: 36 months 27.11.2023–27.11.2026; R1.2-P: sample 28.05–26.11.2026",
+   "measurement": {
+    "R12P_mixing": {
+     "segments": 89,
+     "opinionAsFactUnmarked": 5,
+     "pct": 5.6,
+     "ci95": [
+      2.4,
+      12.5
+     ]
+    },
+    "corrections": {
+     "observedInSample": 1,
+     "item": "09.11.2026 live self-correction '450 milion' → '450 mijë euro'"
+    }
+   },
+   "bandDerivation": "R1.2-S points to 41–60: no published TV Klan corrections policy or KShM commitment found; no KShM/AME decision; AMA attributed lack of distancing from guests to the host (Complaints Council, Bulletin 17, Opinion 04.11.2024, T1) and a 30.10.2026 fine on TV Klan over the 22.10.2026 Opinion (Directorate act, Board confirmation not found) — not counted as a confirmed serious breach. R1.2-P: unmarked opinion-as-fact in 5.6% of host factual segments (<10%, which alone would fit 61–80) but corrections only ad hoc (one live self-correction) without a stated policy = the 41–60 descriptor. Lower of the two = 41–60. Robust to sampling error: even the upper CI bound (12.5%) stays inside 41–60.",
+   "evidence": [
+    {
+     "id": "EV-032",
+     "what": "AMA Complaints Bulletin No.17 — Council drew attention over guest statement in Opinion 04.11.2024",
+     "url": "https://ama.gov.al/wp-content/uploads/Buletini-i-Ankesave-Nr.17-1.pdf",
+     "date": "2024-11-04",
+     "source": "../live-scoring-20261127/REG-COM-MARAGON-LIVE-SCORING-v0.2-20261127.json"
+    },
+    {
+     "id": "EV-011",
+     "what": "Shteg: ALL 100,000 fine on TV Klan for Opinion of 22.10.2026 (non-distancing from guest)",
+     "url": "https://shteg.org/kur-nje-fjali-ne-studio-kushton-100-mije-leke/",
+     "date": "2026-11",
+     "source": "../live-scoring-20261127/REG-COM-MARAGON-LIVE-SCORING-v0.2-20261127.json"
+    },
+    {
+     "id": "EV-030",
+     "what": "Reporter.al/BIRN on AMA fines on political shows",
+     "url": "https://www.reporter.al/2026/11/09/gjobat-e-ama-ndaj-emisioneve-politike-ngrene-alarm-per-cenim-te-lirise-se-shprehjes/",
+     "date": "2026-11-09",
+     "source": "../live-scoring-20261127/REG-COM-MARAGON-LIVE-SCORING-v0.2-20261127.json"
+    },
+    {
+     "id": "COV-TVKLAN",
+     "what": "No published corrections policy found on tvklan.al incl. programme page (census re-check 21.11.2026)",
+     "url": "https://tvklan.al/programe/opinion",
+     "date": "2026-11-21",
+     "source": "../live-scoring-20261127/REG-COM-MARAGON-LIVE-SCORING-v0.2-20261127.json"
+    },
+    {
+     "unit": "2026-06-01-M05",
+     "episode": "2026-06-01",
+     "url": "https://www.youtube.com/watch?v=qsiPen-0VRM",
+     "note": "Rama speech; unmarked evaluation 'tried transparent version but late'"
+    },
+    {
+     "unit": "2026-06-04-M03",
+     "episode": "2026-06-04",
+     "url": "https://www.youtube.com/watch?v=rjdELVTIsfg",
+     "note": "'only solution is elections' stated as fact"
+    },
+    {
+     "unit": "2026-09-07-M06",
+     "episode": "2026-09-07",
+     "url": "https://www.youtube.com/watch?v=qMs8huKZp1M",
+     "note": "'is a genuinely political protest' unmarked"
+    },
+    {
+     "unit": "2026-09-16-M06",
+     "episode": "2026-09-16",
+     "url": "https://www.youtube.com/watch?v=K7JBrAwAaiQ",
+     "note": "court origin 'international pressure' stated as fact"
+    },
+    {
+     "unit": "2026-10-15-M03",
+     "episode": "2026-10-15",
+     "url": "https://www.youtube.com/watch?v=4aqJvfpiTus",
+     "note": "OSCE offer; President 'recited a text after rehearsals' unmarked"
+    },
+    {
+     "unit": "2026-11-09-M04",
+     "episode": "2026-11-09",
+     "url": "https://www.youtube.com/watch?v=Qa9C06R9iTM",
+     "note": "live self-correction 450 million → 450 thousand euro"
+    }
+   ],
+   "caveats": [
+    "R1.2-P coded on opening-monologue segments only, not all host speech",
+    "single AI coder on ASR captions",
+    "Board status of the 30.10.2026 AMA act unresolved"
+   ]
+  },
+  {
+   "point": "P2",
+   "label": "Profesionalizmi në Kriza / Professionalism in crises",
+   "anchor": "none in signed v1.0 (retired; no band table)",
+   "status": "not_assessed",
+   "band": "Pa vlerësim / Not assessed",
+   "numericValue": null,
+   "confidence": null,
+   "window": "36 months",
+   "reason": "No signed anchor and no approved rubric; the owner's 22:10 instruction forbids working scores. The only original text (app mock data) actually describes communication skills, so the construct itself is undefined.",
+   "evidenceFoundNotScored": [
+    {
+     "what": "30.10.2026 AMA fine on TV Klan over the 22.10.2026 Opinion: host did not distance himself from a guest's call to violence",
+     "url": "https://shteg.org/kur-nje-fjali-ne-studio-kushton-100-mije-leke/",
+     "date": "2026-11"
+    },
+    {
+     "what": "RTV KLAN clip: studio clash, Berat BUZHALA lunges at Albatros REXHAJ, Blendi FEVZIU intervenes",
+     "url": "https://www.youtube.com/watch?v=4uKuYwr-ZSA",
+     "date": "2026-02-12 (YouTube upload date)"
+    },
+    {
+     "what": "On-air clash with Arlind QORI, host's account to CNA",
+     "url": "https://www.cna.al/aktualitet/nese-me-kerkon-falje-do-vije-ne-emision-fevziu-komenton-debatin-me-ar-i420211",
+     "date": "2025-01-13"
+    },
+    {
+     "what": "Live coverage of the violent student protests 13 and 15.10.2026 (sample episodes)",
+     "url": "https://www.youtube.com/watch?v=PhpWqxF4RoI",
+     "date": "2026-10-13"
+    }
+   ],
+   "missing": "An approved P2 rubric (definition of a 'crisis' event, 5 bands with observable criteria, minimum incidents e.g. ≥ 5 independent incidents in 36 months) and diarised video coding of each incident (interruptions, de-escalation, distancing from hate/violent speech, factual control under time pressure)."
+  },
+  {
+   "point": "P3",
+   "label": "Saktësia Faktike & Verifikimi / Factual accuracy and verification",
+   "anchor": "v1.0 A2.1 (host's own claims)",
+   "status": "not_assessed",
+   "band": "Pa vlerësim / Not assessed",
+   "numericValue": null,
+   "confidence": null,
+   "window": "sample 28.05–26.11.2026; non-sample 36 months",
+   "reason": "The A2.1 claim log was not built: ≥ 60 checkable host claims each verified against T1 or two independent T2 sources. Not done in this pilot (verification of each claim is manual research).",
+   "evidenceFoundNotScored": [
+    {
+     "what": "Faktoje: Fevziu read official replies of SPAK and the Assembly on air to debunk a rumour on Taulant BALLA's immunity (positive verification practice)",
+     "url": "https://faktoje.al/spak-nuk-kerkoi-heqjen-e-imunitetit-te-taulant-balles/",
+     "date": "2025-03-07"
+    },
+    {
+     "what": "'7 ministers on private trips' claim on Opinion; PM Edi RAMA called it a lie; Fevziu stood by it and posted details; no independent fact-check verdict found",
+     "url": "https://ata.gov.al/2026/01/13/rama-fevziu-duhet-te-kerkoje-falje-genjeu-hapur-lidhur-me-levizjet-e-ministrave-jashte-vendit/",
+     "date": "2026-01-13"
+    },
+    {
+     "what": "Host cites ChatGPT as the source for a factual claim (sample)",
+     "url": "https://www.youtube.com/watch?v=YqzscqeyX9E",
+     "date": "2026-09-22"
+    },
+    {
+     "what": "Live self-correction of a figure (sample)",
+     "url": "https://www.youtube.com/watch?v=Qa9C06R9iTM",
+     "date": "2026-11-09"
+    },
+    {
+     "what": "Faktoje search 'Fevziu' (page 1): no rating of a Fevziu claim as false; items found are about fake ads using his image (2023) and a 2022 fake story",
+     "url": "https://faktoje.al/?s=Fevziu",
+     "date": "2026-11-27"
+    }
+   ],
+   "missing": "Claim log of ≥ 60 host claims from the 24-episode sample with T1/T2 checks (≥ 100 for extreme bands)."
+  },
+  {
+   "point": "P4",
+   "label": "Paanshmëria, Balanca & Anshmëria / Impartiality, balance and bias",
+   "anchor": "v1.0 ind:A2.2 (challenge-rate gap by camp)",
+   "status": "not_assessed",
+   "band": "Pa vlerësim / Not assessed",
+   "numericValue": null,
+   "confidence": null,
+   "window": "sample 28.05–26.11.2026",
+   "reason": "Captions have no speaker labels, so the addressee's camp could be identified for only 18 of 113 public-affairs host questions (11 government/PS side, 7 opposition). The anchor needs ≥ 150 coded questions with ≥ 2 political guests from different camps per episode in ≥ 12 episodes.",
+   "measurementNotBanded": {
+    "govSide": {
+     "n": 11,
+     "challenging": 6
+    },
+    "oppositionSide": {
+     "n": 7,
+     "challenging": 3
+    },
+    "note": "far too few to compute a gap"
+   },
+   "missing": "Diarised transcripts (or video coding) with guest identity and party per question; ≥ 12 episodes with two-camp panels; ≥ 150 coded questions."
+  },
+  {
+   "point": "P5",
+   "label": "Thellësia e Analizës/Pyetjeve / Depth of analysis and questioning",
+   "anchor": "v1.0 ind:A2.3 (share of questions/intros with accurate context)",
+   "status": "not_assessed",
+   "band": "Pa vlerësim / Not assessed",
+   "numericValue": null,
+   "confidence": null,
+   "window": "sample 28.05–26.11.2026",
+   "reason": "Measured but not bandable. v1.0 requires the context to be checked for accuracy; that check was not done. The estimate sits on the 20% cut-off and flips the band depending on the denominator: all host questions 18.3% (fits '<20%'), public-affairs questions only 23.0% (fits 20–40%).",
+   "measurementNotBanded": {
+    "allHostQuestions": {
+     "n": 197,
+     "withContext": 36,
+     "pct": 18.3,
+     "ci95": [
+      13.5,
+      24.3
+     ]
+    },
+    "publicAffairsOnly": {
+     "n": 113,
+     "withContext": 26,
+     "pct": 23.0,
+     "ci95": [
+      16.2,
+      31.6
+     ]
+    },
+    "features": 84
+   },
+   "examplesWithContext": [
+    {
+     "unit": "2026-05-28-Q07",
+     "episode": "2026-05-28",
+     "url": "https://www.youtube.com/watch?v=jU7lxcUE9Ro",
+     "note": "flotilla: host restates boat logistics before asking"
+    },
+    {
+     "unit": "2026-06-04-Q07",
+     "episode": "2026-06-04",
+     "url": "https://www.youtube.com/watch?v=rjdELVTIsfg",
+     "note": "bio certification, host states distinction first"
+    },
+    {
+     "unit": "2026-09-07-Q03",
+     "episode": "2026-09-07",
+     "url": "https://www.youtube.com/watch?v=qMs8huKZp1M",
+     "note": "historical analogy (1924 elections) before handing to guest"
+    },
+    {
+     "unit": "2026-09-10-Q03",
+     "episode": "2026-09-10",
+     "url": "https://www.youtube.com/watch?v=NEWq2tOLg80",
+     "note": "supply-chain integrity; shortcuts past MoD"
+    },
+    {
+     "unit": "2026-09-15-Q02",
+     "episode": "2026-09-15",
+     "url": "https://www.youtube.com/watch?v=VG4CVtArITw",
+     "note": "confronts with intercepts and SPAK filing"
+    },
+    {
+     "unit": "2026-09-16-Q08",
+     "episode": "2026-09-16",
+     "url": "https://www.youtube.com/watch?v=K7JBrAwAaiQ",
+     "note": "states verdict facts before asking"
+    },
+    {
+     "unit": "2026-09-17-Q05",
+     "episode": "2026-09-17",
+     "url": "https://www.youtube.com/watch?v=6pb1y9alDDw",
+     "note": "cites Ahmetaj-published intercept to Berisha"
+    },
+    {
+     "unit": "2026-09-21-Q01",
+     "episode": "2026-09-21",
+     "url": "https://www.youtube.com/watch?v=CPoNDJgdIo8",
+     "note": "Recak victim count stated"
+    },
+    {
+     "unit": "2026-09-21-Q02",
+     "episode": "2026-09-21",
+     "url": "https://www.youtube.com/watch?v=CPoNDJgdIo8",
+     "note": "family history stated"
+    },
+    {
+     "unit": "2026-09-21-Q07",
+     "episode": "2026-09-21",
+     "url": "https://www.youtube.com/watch?v=CPoNDJgdIo8",
+     "note": "victim count stated"
+    },
+    {
+     "unit": "2026-09-21-Q08",
+     "episode": "2026-09-21",
+     "url": "https://www.youtube.com/watch?v=CPoNDJgdIo8",
+     "note": "dates of earlier sieges stated"
+    },
+    {
+     "unit": "2026-09-22-Q01",
+     "episode": "2026-09-22",
+     "url": "https://www.youtube.com/watch?v=YqzscqeyX9E",
+     "note": "context on first official received"
+    },
+    {
+     "unit": "2026-09-22-Q05",
+     "episode": "2026-09-22",
+     "url": "https://www.youtube.com/watch?v=YqzscqeyX9E",
+     "note": "names investigators, checks claim"
+    },
+    {
+     "unit": "2026-10-05-Q04",
+     "episode": "2026-10-05",
+     "url": "https://www.youtube.com/watch?v=2PQM7DAA4Wk",
+     "note": "reads draft provision on intercepts"
+    },
+    {
+     "unit": "2026-10-05-Q05",
+     "episode": "2026-10-05",
+     "url": "https://www.youtube.com/watch?v=2PQM7DAA4Wk",
+     "note": "contrasts draft wording with minister's claim"
+    },
+    {
+     "unit": "2026-10-12-Q06",
+     "episode": "2026-10-12",
+     "url": "https://www.youtube.com/watch?v=in5tyGbWMAc",
+     "note": "dunes extent stated"
+    },
+    {
+     "unit": "2026-10-13-Q01",
+     "episode": "2026-10-13",
+     "url": "https://www.youtube.com/watch?v=PhpWqxF4RoI",
+     "note": "refers to footage shown"
+    },
+    {
+     "unit": "2026-10-13-Q02",
+     "episode": "2026-10-13",
+     "url": "https://www.youtube.com/watch?v=PhpWqxF4RoI",
+     "note": "rector declaration kept?"
+    },
+    {
+     "unit": "2026-10-15-Q03",
+     "episode": "2026-10-15",
+     "url": "https://www.youtube.com/watch?v=4aqJvfpiTus",
+     "note": "frames revolt since June before asking"
+    },
+    {
+     "unit": "2026-10-21-Q06",
+     "episode": "2026-10-21",
+     "url": "https://www.youtube.com/watch?v=jaNiUx5szkU",
+     "note": "cites 2025 vote, Balluku, incinerators"
+    },
+    {
+     "unit": "2026-11-02-Q01",
+     "episode": "2026-11-02",
+     "url": "https://www.youtube.com/watch?v=9Xfheod1VHk",
+     "note": "states arrival time 22:30 before asking"
+    },
+    {
+     "unit": "2026-11-02-Q03",
+     "episode": "2026-11-02",
+     "url": "https://www.youtube.com/watch?v=9Xfheod1VHk",
+     "note": "reads points of the letter, tests authenticity"
+    },
+    {
+     "unit": "2026-11-02-Q07",
+     "episode": "2026-11-02",
+     "url": "https://www.youtube.com/watch?v=9Xfheod1VHk",
+     "note": "cites court decision dates"
+    },
+    {
+     "unit": "2026-11-02-Q08",
+     "episode": "2026-11-02",
+     "url": "https://www.youtube.com/watch?v=9Xfheod1VHk",
+     "note": "bank robbery: amount stated"
+    },
+    {
+     "unit": "2026-11-04-Q06",
+     "episode": "2026-11-04",
+     "url": "https://www.youtube.com/watch?v=qLYozgnl2o0",
+     "note": "summarises SPAK claims then asks"
+    },
+    {
+     "unit": "2026-11-04-Q08",
+     "episode": "2026-11-04",
+     "url": "https://www.youtube.com/watch?v=qLYozgnl2o0",
+     "note": "US politics context before question"
+    },
+    {
+     "unit": "2026-11-18-Q03",
+     "episode": "2026-11-18",
+     "url": "https://www.youtube.com/watch?v=1PTA3t06sBI",
+     "note": "immunity makes control impossible"
+    },
+    {
+     "unit": "2026-11-26-Q03",
+     "episode": "2026-11-26",
+     "url": "https://www.youtube.com/watch?v=OoAZzU0IfH0",
+     "note": "confronts with membership since 2009 and responsibility"
+    },
+    {
+     "unit": "2026-11-26-Q05",
+     "episode": "2026-11-26",
+     "url": "https://www.youtube.com/watch?v=OoAZzU0IfH0",
+     "note": "Euro co-hosting context"
+    },
+    {
+     "unit": "2026-09-10-E01",
+     "episode": "2026-09-10",
+     "url": "https://www.youtube.com/watch?v=NEWq2tOLg80",
+     "note": "cites 49% share sale to Ron Jefet"
+    },
+    {
+     "unit": "2026-10-05-E01",
+     "episode": "2026-10-05",
+     "url": "https://www.youtube.com/watch?v=2PQM7DAA4Wk",
+     "note": "reads draft provision"
+    },
+    {
+     "unit": "2026-10-15-E03",
+     "episode": "2026-10-15",
+     "url": "https://www.youtube.com/watch?v=4aqJvfpiTus",
+     "note": "checks footage against official police-station footage"
+    },
+    {
+     "unit": "2026-10-27-E04",
+     "episode": "2026-10-27",
+     "url": "https://www.youtube.com/watch?v=5fbfTCys5_k",
+     "note": "Guinness record date"
+    },
+    {
+     "unit": "2026-11-04-E02",
+     "episode": "2026-11-04",
+     "url": "https://www.youtube.com/watch?v=qLYozgnl2o0",
+     "note": "Llogara tunnel accusation detail"
+    },
+    {
+     "unit": "2026-11-04-E03",
+     "episode": "2026-11-04",
+     "url": "https://www.youtube.com/watch?v=qLYozgnl2o0",
+     "note": "villa provided by Ilir Meta"
+    },
+    {
+     "unit": "2026-11-04-E04",
+     "episode": "2026-11-04",
+     "url": "https://www.youtube.com/watch?v=qLYozgnl2o0",
+     "note": "contract 145k vs villa value 420k per file"
+    }
+   ],
+   "missing": "Accuracy check of each context item; an owner ruling on whether feature/sponsored-style segments count in the denominator; ideally a second coder."
+  },
+  {
+   "point": "P6",
+   "label": "Qartësia & Koherenca / Clarity and coherence",
+   "anchor": "none in signed v1.0 (retired; no band table)",
+   "status": "not_assessed",
+   "band": "Pa vlerësim / Not assessed",
+   "numericValue": null,
+   "confidence": null,
+   "window": "—",
+   "reason": "No signed anchor or approved rubric; the only original text (app mock data) describes social-media professionalism, not clarity. ASR captions cannot separate speech disfluency from transcription error, so clarity cannot be measured from them.",
+   "missing": "An approved P6 rubric (e.g. share of single, well-formed questions; structure of introductions) and coding on video/audio or human-verified transcripts."
+  },
+  {
+   "point": "P7",
+   "label": "Promovimi i të Menduarit Kritik / Promoting critical thinking",
+   "anchor": "v1.0 ind:O4.1 (share of host factual segments with a named source or on-screen document)",
+   "status": "scored",
+   "band": "21–40",
+   "numericValue": null,
+   "confidence": "low",
+   "window": "sample 28.05–26.11.2026; non-sample 36 months",
+   "measurement": {
+    "segments": 89,
+    "episodes": 23,
+    "namedSourceOrDocument": 32,
+    "pct": 36.0,
+    "ci95": [
+     26.8,
+     46.3
+    ],
+    "includingEventFootage": {
+     "k": 46,
+     "pct": 51.7,
+     "note": "footage of events is not a 'document'; reported for transparency only"
+    }
+   },
+   "bandDerivation": "Threshold met (≥ 12 episodes, ≥ 60 segments with host factual assertions: 23 and 89). 36.0% of segments carry a named source or on-screen document → 21–40 ('source in 20–40%'). He does sometimes hedge ('duket se', 'në mos gaboj') and self-corrects (09.11.2026), which are 61–80 features, but the source share sets the band; non-sample evidence may move the value within the band only (AR-2). Low confidence: the 95% interval (26.8–46.3%) reaches into 41–60, coding covers opening monologues only, single AI coder.",
+   "evidence": [
+    {
+     "unit": "2026-05-28-M04",
+     "episode": "2026-05-28",
+     "url": "https://www.youtube.com/watch?v=jU7lxcUE9Ro",
+     "note": "High Court accepted Pacolli request"
+    },
+    {
+     "unit": "2026-05-28-M05",
+     "episode": "2026-05-28",
+     "url": "https://www.youtube.com/watch?v=jU7lxcUE9Ro",
+     "note": "court stages"
+    },
+    {
+     "unit": "2026-06-01-M02",
+     "episode": "2026-06-01",
+     "url": "https://www.youtube.com/watch?v=qsiPen-0VRM",
+     "note": "'sipas qeverisë' + footage of protester"
+    },
+    {
+     "unit": "2026-06-01-M05",
+     "episode": "2026-06-01",
+     "url": "https://www.youtube.com/watch?v=qsiPen-0VRM",
+     "note": "Rama speech; unmarked evaluation 'tried transparent version but late'"
+    },
+    {
+     "unit": "2026-06-02-M02",
+     "episode": "2026-06-02",
+     "url": "https://www.youtube.com/watch?v=PhxPdU8cj0c",
+     "note": "Rama post inviting protesters"
+    },
+    {
+     "unit": "2026-06-04-M04",
+     "episode": "2026-06-04",
+     "url": "https://www.youtube.com/watch?v=rjdELVTIsfg",
+     "note": "Constitution: elections within 45 days"
+    },
+    {
+     "unit": "2026-09-10-M02",
+     "episode": "2026-09-10",
+     "url": "https://www.youtube.com/watch?v=NEWq2tOLg80",
+     "note": "intercepts cited"
+    },
+    {
+     "unit": "2026-09-15-M04",
+     "episode": "2026-09-15",
+     "url": "https://www.youtube.com/watch?v=VG4CVtArITw",
+     "note": "ICJ 2010 opinion"
+    },
+    {
+     "unit": "2026-09-16-M02",
+     "episode": "2026-09-16",
+     "url": "https://www.youtube.com/watch?v=K7JBrAwAaiQ",
+     "note": "ICJ 2010"
+    },
+    {
+     "unit": "2026-09-16-M03",
+     "episode": "2026-09-16",
+     "url": "https://www.youtube.com/watch?v=K7JBrAwAaiQ",
+     "note": "Specialist Chambers sentences"
+    },
+    {
+     "unit": "2026-09-16-M04",
+     "episode": "2026-09-16",
+     "url": "https://www.youtube.com/watch?v=K7JBrAwAaiQ",
+     "note": "sentences per defendant"
+    },
+    {
+     "unit": "2026-09-17-M02",
+     "episode": "2026-09-17",
+     "url": "https://www.youtube.com/watch?v=6pb1y9alDDw",
+     "note": "Rubio decision lifting ban"
+    },
+    {
+     "unit": "2026-09-21-M04",
+     "episode": "2026-09-21",
+     "url": "https://www.youtube.com/watch?v=CPoNDJgdIo8",
+     "note": "explains footage provenance"
+    },
+    {
+     "unit": "2026-09-22-M03",
+     "episode": "2026-09-22",
+     "url": "https://www.youtube.com/watch?v=YqzscqeyX9E",
+     "note": "cites ChatGPT as source (weak source)"
+    },
+    {
+     "unit": "2026-10-05-M04",
+     "episode": "2026-10-05",
+     "url": "https://www.youtube.com/watch?v=2PQM7DAA4Wk",
+     "note": "SPAK searches named"
+    },
+    {
+     "unit": "2026-10-05-M05",
+     "episode": "2026-10-05",
+     "url": "https://www.youtube.com/watch?v=2PQM7DAA4Wk",
+     "note": "'at least so he claims' attribution"
+    },
+    {
+     "unit": "2026-10-12-M02",
+     "episode": "2026-10-12",
+     "url": "https://www.youtube.com/watch?v=in5tyGbWMAc",
+     "note": "government site publication; Kushner response"
+    },
+    {
+     "unit": "2026-10-12-M03",
+     "episode": "2026-10-12",
+     "url": "https://www.youtube.com/watch?v=in5tyGbWMAc",
+     "note": "Kushner version attributed; own filming"
+    },
+    {
+     "unit": "2026-10-15-M02",
+     "episode": "2026-10-15",
+     "url": "https://www.youtube.com/watch?v=4aqJvfpiTus",
+     "note": "PM video"
+    },
+    {
+     "unit": "2026-10-15-M03",
+     "episode": "2026-10-15",
+     "url": "https://www.youtube.com/watch?v=4aqJvfpiTus",
+     "note": "OSCE offer; President 'recited a text after rehearsals' unmarked"
+    },
+    {
+     "unit": "2026-10-15-M04",
+     "episode": "2026-10-15",
+     "url": "https://www.youtube.com/watch?v=4aqJvfpiTus",
+     "note": "business associations' criticism"
+    },
+    {
+     "unit": "2026-10-21-M03",
+     "episode": "2026-10-21",
+     "url": "https://www.youtube.com/watch?v=jaNiUx5szkU",
+     "note": "PM declared"
+    },
+    {
+     "unit": "2026-11-02-M03",
+     "episode": "2026-11-02",
+     "url": "https://www.youtube.com/watch?v=9Xfheod1VHk",
+     "note": "'according to media data'"
+    },
+    {
+     "unit": "2026-11-02-M05",
+     "episode": "2026-11-02",
+     "url": "https://www.youtube.com/watch?v=9Xfheod1VHk",
+     "note": "Veliaj statement via lawyers"
+    },
+    {
+     "unit": "2026-11-02-M06",
+     "episode": "2026-11-02",
+     "url": "https://www.youtube.com/watch?v=9Xfheod1VHk",
+     "note": "Gogu statement"
+    },
+    {
+     "unit": "2026-11-04-M03",
+     "episode": "2026-11-04",
+     "url": "https://www.youtube.com/watch?v=qLYozgnl2o0",
+     "note": "NBC projection on screen"
+    },
+    {
+     "unit": "2026-11-09-M02",
+     "episode": "2026-11-09",
+     "url": "https://www.youtube.com/watch?v=Qa9C06R9iTM",
+     "note": "book with Rama preface; PD complaint"
+    },
+    {
+     "unit": "2026-11-09-M03",
+     "episode": "2026-11-09",
+     "url": "https://www.youtube.com/watch?v=Qa9C06R9iTM",
+     "note": "'material made public in media'"
+    },
+    {
+     "unit": "2026-11-09-M04",
+     "episode": "2026-11-09",
+     "url": "https://www.youtube.com/watch?v=Qa9C06R9iTM",
+     "note": "live self-correction 450 million -> 450 thousand"
+    },
+    {
+     "unit": "2026-11-09-M05",
+     "episode": "2026-11-09",
+     "url": "https://www.youtube.com/watch?v=Qa9C06R9iTM",
+     "note": "video by foreign journalist shown"
+    },
+    {
+     "unit": "2026-11-09-M06",
+     "episode": "2026-11-09",
+     "url": "https://www.youtube.com/watch?v=Qa9C06R9iTM",
+     "note": "quotes the video"
+    },
+    {
+     "unit": "2026-11-18-M06",
+     "episode": "2026-11-18",
+     "url": "https://www.youtube.com/watch?v=1PTA3t06sBI",
+     "note": "German charge d'affaires testimony"
+    },
+    {
+     "what": "Faktoje 07.03.2025: read SPAK/Assembly official replies on air (non-sample, positive)",
+     "url": "https://faktoje.al/spak-nuk-kerkoi-heqjen-e-imunitetit-te-taulant-balles/",
+     "date": "2025-03-07"
+    },
+    {
+     "what": "Kallxo/Krypometër 28.02.2026: on 28.01.2026 he warned viewers on air that AI-made videos used his image (non-sample, positive)",
+     "url": "https://kallxo.com/gjate/identitete-te-vjedhura-si-po-perdoret-ai-per-mashtrime-ne-shendetesi-duke-perdorur-figurat-publike/",
+     "date": "2026-02-28"
+    },
+    {
+     "what": "Cites ChatGPT as a source on 22.09.2026 (sample, negative)",
+     "url": "https://www.youtube.com/watch?v=YqzscqeyX9E",
+     "date": "2026-09-22"
+    }
+   ],
+   "caveats": [
+    "opening monologues only; host speech later in the programme not coded",
+    "verified Instagram @blendifevziu not read (login wall); X @BlendiFevziu UNCERTAIN, excluded",
+    "ASR captions, single AI coder"
+   ]
+  }
+ ],
+ "scored": [
+  "P1",
+  "P7"
+ ],
+ "notAssessed": [
+  "P2",
+  "P3",
+  "P4",
+  "P5",
+  "P6"
+ ],
+ "result": {
+  "scoredCount": 2,
+  "threshold": 5,
+  "decision": "NO-GO",
+  "summary": "2 of 7 points scored (P1 41–60, P7 21–40, both low confidence). Fewer than 5: the seven-point rollout to the other 23 profiles should not start."
+ },
+ "verifiedAccounts": {
+  "instagram": "@blendifevziu VERIFIED (register 27.11.2026) — content not read, login wall",
+  "x": "@BlendiFevziu UNCERTAIN — excluded",
+  "youtube": "@BlendiFevziuofficial UNCERTAIN — excluded",
+  "facebook": "blendifevziu UNCERTAIN — excluded",
+  "register": "../social-accounts-20261127/REG-COM-MARAGON-SOCIAL-ACCOUNTS-v0.1-20261127.json"
+ },
+ "guardrails": "No repo, site, PR, flag or signed document touched; nobody contacted; no private contacts inferred."
+}

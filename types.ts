@@ -397,6 +397,8 @@ export interface VipProfile {
   id: string | number;
   name: string;
   imageUrl: string;
+  /** True only when a transparent cut-out asset exists. Rectangular photos stay a plain circle crop. */
+  portraitCutout?: boolean;
   category: string;
   shortBio: string;
   detailedBio: string;
