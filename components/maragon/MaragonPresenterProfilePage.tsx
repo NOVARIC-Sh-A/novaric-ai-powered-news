@@ -43,6 +43,7 @@ import { ownerSuppliedMediaPortraitSrcSet, resolvePresentableMediaPhoto } from '
 import { MARAGON_BENCHMARKS, isPlottableBenchmarkPoint } from '../../data/maragon/benchmarks';
 import { MaragonContextNotices, MaragonNoticeProfileLink } from './MaragonContextNotice';
 import { LiveIndicatorList } from './MaragonLiveScore';
+import { SevenPointPilotCard } from './SevenPointPilotCard';
 import { liveProfile } from '../../data/maragon/scoring/publicLiveScoring';
 import { confirmedSocialUrls } from '../../utils/maragonSocialAccounts';
 import { ProfileSocialLogos } from '../figurat-politike/ProfileSocialLogos';
@@ -243,6 +244,8 @@ export const MaragonPresenterProfilePage: React.FC<Props> = ({ profile, onBack, 
             </div>
           </div>
         </section>
+
+        <SevenPointPilotCard profileId={rec.id} />
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-5">
           <Card title={t.identity}>
