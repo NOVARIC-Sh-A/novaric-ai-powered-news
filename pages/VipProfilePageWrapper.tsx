@@ -9,7 +9,6 @@ import { isMediaIdentity, isMediaProfile } from "../utils/maragonPublication";
 import { mediaProfilesData } from "../data/mediaProfiles";
 import { findMediaProfile } from "../utils/mediaNavigation";
 import { getPresenterRecord } from "../components/maragon/maragonPresenterUi";
-import { GridaDumaProfilePage } from "../components/maragon/GridaDumaProfilePage";
 import { MaragonPresenterProfilePage } from "../components/maragon/MaragonPresenterProfilePage";
 
 interface VipProfilePageWrapperProps {
@@ -141,10 +140,6 @@ export const VipProfilePageWrapper: React.FC<VipProfilePageWrapperProps> = (prop
         onBack={onBack}
       />
     );
-  }
-
-  if (vipProfile && String(vipProfile.id) === 'vip_m2') {
-    return <GridaDumaProfilePage onBack={() => onNavigate('mediaPersonalitiesPage')} />;
   }
 
   if (vipProfile && getPresenterRecord(vipProfile)) {

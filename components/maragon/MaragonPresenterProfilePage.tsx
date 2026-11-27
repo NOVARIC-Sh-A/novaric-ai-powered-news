@@ -42,6 +42,11 @@ import type { MaragonPillar } from './maragonPresenterTypes';
 import { ownerSuppliedMediaPortraitSrcSet, resolvePresentableMediaPhoto } from '../../utils/officialMediaPhoto';
 import { MARAGON_BENCHMARKS, isPlottableBenchmarkPoint } from '../../data/maragon/benchmarks';
 import { MaragonContextNotices, MaragonNoticeProfileLink } from './MaragonContextNotice';
+import { LiveIndicatorList } from './MaragonLiveScore';
+import { liveProfile } from '../../data/maragon/scoring/publicLiveScoring';
+import { confirmedSocialUrls } from '../../utils/maragonSocialAccounts';
+import { ProfileSocialLogos } from '../figurat-politike/ProfileSocialLogos';
+import { MediaPortrait } from './MediaPortrait';
 import { maragonNoticeVisible } from '../../utils/maragonNoticeNavigation';
 import type { MaragonDisplayState } from '../../data/maragon/maragonContextNotices';
 
@@ -186,7 +191,7 @@ export const MaragonPresenterProfilePage: React.FC<Props> = ({ profile, onBack, 
               <span className="relative inline-block h-8 w-8">
                 <ProfileShareButton id={rec.id} name={name} />
               </span>
-              <StatusBadge status={m.assessmentStatus} lang={lang} />
+              <StatusBadge status={(profile.maragonAssessmentStatus as typeof m.assessmentStatus) || m.assessmentStatus} lang={lang} />
             </span>
         </nav>
 
@@ -201,14 +206,15 @@ export const MaragonPresenterProfilePage: React.FC<Props> = ({ profile, onBack, 
         {/* Identity */}
         <section className="grid grid-cols-1 md:grid-cols-[260px_1fr] gap-6 items-start rounded-lg border bg-white p-5 md:p-6" style={{ borderColor: LINE }}>
           <div className="flex flex-col items-center gap-2">
-            <div className="w-56 h-56 rounded-full p-[3px]" style={{ backgroundColor: CYAN }}>
-              <div className="w-full h-full rounded-full overflow-hidden bg-white">
-                {showPhoto ? (
-                  <img src={photoUrl as string} srcSet={ownerSuppliedMediaPortraitSrcSet(photoUrl)} sizes="224px" alt={name} className="w-full h-full object-cover" style={{ objectPosition: officialPhoto?.objectPosition }} referrerPolicy="no-referrer" onError={() => setImgFailed(true)} />
-                ) : (
-                  <AwaitingPhoto label={t.photoPending} />
-                )}
-              </div>
+            <div className="w-56">
+              <MediaPortrait
+                src={showPhoto ? photoUrl : null}
+                srcSet={showPhoto && photoUrl ? ownerSuppliedMediaPortraitSrcSet(photoUrl) : undefined}
+                alt={name}
+                portraitCutout={profile.portraitCutout === true}
+                objectPosition={officialPhoto?.objectPosition || '50% 18%'}
+                pendingLabel={t.photoPending}
+              />
             </div>
             <p className="text-[13px] text-center max-w-[240px] leading-snug" style={{ color: MUTED }}>
               {showPhoto ? (<>{officialPhoto?.credit}{rec.photo.officialSource?.pageUrl ? (<> · <a href={rec.photo.officialSource.pageUrl} target="_blank" rel="noopener noreferrer" className="underline">{lang === 'en' ? 'source' : 'burimi'}</a></>) : null}</>) : (internal ? (lang === 'en' ? rec.photo.statusNote_en : rec.photo.statusNote_sq) : (lang === 'en' ? 'Photo pending.' : 'Foto në pritje.'))}
@@ -272,9 +278,16 @@ export const MaragonPresenterProfilePage: React.FC<Props> = ({ profile, onBack, 
               </span>
             </Row>
             <Row k={t.pAccounts}>
-              {rec.personalSocials.length ? rec.personalSocials.map((s) => (
-                <a key={s.url} href={s.url} target="_blank" rel="noopener noreferrer" className="underline decoration-2 underline-offset-2 mr-2" style={{ color: NAVY, textDecorationColor: CYAN }}>{s.label}</a>
-              )) : <span style={{ color: MUTED }}>{t.noPersonal}</span>}
+              {rec.id === 'vip_m2' ? (
+                rec.personalSocials.length ? rec.personalSocials.map((s) => (
+                  <a key={s.url} href={s.url} target="_blank" rel="noopener noreferrer" className="underline decoration-2 underline-offset-2 mr-2" style={{ color: NAVY, textDecorationColor: CYAN }}>{s.label}</a>
+                )) : <span style={{ color: MUTED }}>{t.noPersonal}</span>
+              ) : (
+                <span className="flex flex-col gap-1">
+                  <ProfileSocialLogos name={name} mediaUrls={confirmedSocialUrls(rec.id)} />
+                  {Object.keys(confirmedSocialUrls(rec.id)).length === 0 ? <span style={{ color: MUTED }}>{t.noPersonal}</span> : null}
+                </span>
+              )}
             </Row>
           </Card>
 
@@ -295,7 +308,7 @@ export const MaragonPresenterProfilePage: React.FC<Props> = ({ profile, onBack, 
 
         <Card id="maragon" title={<Mark text={t.maragon} />}>
           <div className="grid grid-cols-1 md:grid-cols-[280px_1fr] gap-6 items-start">
-            <div className="w-full max-w-[280px] mx-auto"><BandRadar rec={rec} mode={mode} lang={lang} benchmarks={MARAGON_BENCHMARKS} /></div>
+            <div className="w-full max-w-[280px] mx-auto"><BandRadar rec={rec} mode={mode} lang={lang} benchmarks={MARAGON_BENCHMARKS} livePoints={liveProfile(rec.id)?.indicators ?? []} /></div>
             <div className="flex flex-col gap-3">
               <div className="flex flex-wrap items-center gap-2">
                 <span className={LABEL_CLASS} style={{ color: MUTED }}>{t.overall}</span>
@@ -313,6 +326,7 @@ export const MaragonPresenterProfilePage: React.FC<Props> = ({ profile, onBack, 
                   ))}
                 </div>
               </div>
+              <LiveIndicatorList profileId={rec.id} lang={lang} />
               {!internal && !anyIndicative && <p className="text-[15px] leading-relaxed" style={{ color: NAVY }}>{t.publicNote}</p>}
               <p className="text-[14px] leading-relaxed" style={{ color: MUTED }}>{internal ? (lang === 'en' ? m.statusNote_en : m.statusNote_sq) : (lang === 'en' ? 'Under editorial review. No point has an official band; overall: Not assessed.' : 'Në shqyrtim editorial. Asnjë pikë nuk ka brez zyrtar; vlerësimi i përgjithshëm: Pa vlerësim.')} · {t.ror}</p>
               <MaragonContextNotices state={displayState} lang={lang} />
@@ -393,6 +407,7 @@ export const MaragonPresenterProfilePage: React.FC<Props> = ({ profile, onBack, 
           )}
         </Card>
 
+        {sources.length > 0 && (
         <Card title={t.sources}>
           <ol className="list-decimal list-inside text-[15px] leading-relaxed space-y-1.5" style={{ color: NAVY }}>
             {sources.map((s) => (
@@ -403,6 +418,7 @@ export const MaragonPresenterProfilePage: React.FC<Props> = ({ profile, onBack, 
             ))}
           </ol>
         </Card>
+        )}
 
 
         {rec.documents && (

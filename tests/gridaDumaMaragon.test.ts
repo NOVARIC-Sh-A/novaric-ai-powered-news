@@ -25,7 +25,7 @@ describe('Grida Duma is a MARAGON media profile', () => {
     assert.ok(card);
     assert.equal(card?.category, 'Media');
     assert.equal(formatPersonName(card?.name), 'Grida DUMA');
-    assert.equal(card?.maragonAssessmentStatus, 'research_only');
+    assert.equal(card?.maragonAssessmentStatus, 'not_assessed');
     assert.equal(card?.biographyStatus, 'draft');
     assert.equal(card?.scoringSuspended, true);
     assert.equal(card?.composite ?? null, null);
@@ -44,12 +44,12 @@ describe('Grida Duma is a MARAGON media profile', () => {
     assert.match(card?.shortBio || '', /Në të shkuarën/);
   });
 
-  it('records Top Story with no linked host and no score', () => {
+  it('records Top Story as linked to Grida DUMA and with no score', () => {
     assert.equal(show?.subject.fullName, 'Top Story');
     assert.equal(show?.meta.methodologyApproved, false);
     assert.equal(show?.publication.assessmentStatus, 'research_only');
     assert.equal(show?.scoring.composite, null);
-    assert.equal((show?.scoring as { linkedHostId?: string | null }).linkedHostId, null);
+    assert.equal((show?.scoring as { linkedHostId?: string | null }).linkedHostId, 'vip_m2');
     assert.ok(show?.indicators.every((item) => item.score === null));
     assert.ok(show?.evidenceRegister.some((item) => item.url?.includes('top-channel.tv')));
     assert.equal(draftCoding.label, 'DRAFT – research_only – not for publication');

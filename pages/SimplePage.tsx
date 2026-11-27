@@ -3,7 +3,8 @@ import { NexusHumanistAiGovernancePage } from '../components/NexusHumanistAiGove
 import { Forecast2027Page } from '../components/Forecast2027Page';
 import { MaragonAm10PublicPage } from '../components/MaragonAm10PublicPage';
 import { MaragonCardMockupPage } from '../components/MaragonCardMockupPage';
-import { GridaDumaProfilePage } from '../components/maragon/GridaDumaProfilePage';
+import { MaragonPresenterProfilePage } from '../components/maragon/MaragonPresenterProfilePage';
+import { mediaProfilesData } from '../data/mediaProfiles';
 import { MaragonNoticePage } from '../components/maragon/MaragonNoticePage';
 import {
   PrivacyPolicy,
@@ -265,7 +266,7 @@ export const SimplePage: React.FC<SimplePageProps> = ({ page, onNavigate, profil
     case 'maragonNotice':
         return <MaragonNoticePage onBack={onBack} onNavigate={(target) => onNavigate(target as Page)} />;
     case 'maragonProfile':
-        return <GridaDumaProfilePage onBack={onBack} />;
+        return <MaragonPresenterProfilePage profile={mediaProfilesData.find((item) => item.id === 'vip_m2')!} onBack={onBack} />;
     case 'nexusHumanistAiGovernance':
         return <NexusHumanistAiGovernancePage 
             onBack={onBack} 

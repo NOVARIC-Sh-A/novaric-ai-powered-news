@@ -260,9 +260,11 @@ describe('UD-19 — bands-only presentation (v1.0 §10)', () => {
     assert.equal(/\d/.test([...hidden.matchAll(/<title>([^<]*)<\/title>/g)].map((m) => m[1]).join(' ')), false);
   });
 
-  it('no MARAGON® API route or share preview carries a number', () => {
+  it('the live-scoring route projects the public payload and share previews carry no score', () => {
     const server = read('server.ts');
-    assert.doesNotMatch(server, /maragon/i);
+    assert.match(server, /\/api\/maragon\/live-scoring/);
+    assert.match(server, /loadPublicLiveScoring\(\)/);
+    assert.doesNotMatch(server, /peerAverage|42\.2|dynamicScore:\s*88/);
     const og = read('scripts/writeOgShells.ts');
     const block = og.slice(og.indexOf("'maragon-analysis.html'"), og.indexOf('}));', og.indexOf("'maragon-analysis.html'")));
     assert.equal(/description: '[^']*\d/.test(block), false);

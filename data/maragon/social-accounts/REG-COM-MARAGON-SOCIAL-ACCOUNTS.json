@@ -1,0 +1,706 @@
+{
+  "meta": {
+    "document_id": "REG-COM-MARAGON-SOCIAL-ACCOUNTS-v0.1-20261127",
+    "title": "MARAGON® register of personal social-media accounts for Personalitete Mediatike (excluding Grida DUMA)",
+    "version": "v0.1",
+    "date": "2026-11-27",
+    "timezone": "Europe/Tirane",
+    "compiled_at": "2026-11-27 21:58 Europe/Tirane",
+    "scope_count": 23,
+    "excluded": [
+      "Grida DUMA (vip_m2) — excluded in full by owner instruction of 27 Nov 2026; no accounts researched or recorded for her."
+    ],
+    "source_list": "https://media.novaric.al/personalitete-mediatike",
+    "snapshot": "/workspace/brands/novaric-media/maragon/live-scoring-20261127/live-snapshot-20261127/cards.json",
+    "verification_rules": [
+      "A matching name alone is not proof.",
+      "VERIFIED only with at least one of: (1) linked from an official broadcaster/employer page or the person's official website; (2) linked from the MARAGON profile's own source list; (3) platform verification badge plus consistent identity (bio naming their programme/channel); (4) cited by a credible outlet as their account.",
+      "Everything else that looks plausible is UNCERTAIN, for Dr Alban Gj. THIKA's review, not to be shown publicly.",
+      "Programme or broadcaster accounts are not treated as personal accounts.",
+      "No private contact information, emails or phone numbers were collected.",
+      "Accounts were looked up only; none were followed, messaged or otherwise interacted with.",
+      "X / Twitter Blue (verified_type=blue) was not treated as sufficient on its own, because it is a paid badge."
+    ],
+    "summary": {
+      "profiles_in_scope": 23,
+      "profiles_with_at_least_one_verified_account": 20,
+      "profiles_with_at_least_one_verified_personal_account": 20,
+      "profiles_with_no_verified_account": [
+        "Ermal PEÇI (vip_m24)",
+        "Mustafa NANO (vip_m23)",
+        "Ylli RAKIPI (vip_m32)"
+      ],
+      "verified_accounts_by_platform": {
+        "Instagram": 20,
+        "Facebook": 2,
+        "YouTube": 2,
+        "TikTok": 2,
+        "X": 1
+      },
+      "verified_accounts_by_type": {
+        "personal": 22,
+        "brand": 5
+      },
+      "uncertain_accounts_by_platform": {
+        "LinkedIn": 4,
+        "Facebook": 7,
+        "X": 8,
+        "YouTube": 2,
+        "Instagram": 4
+      },
+      "uncertain_account_count": 25
+    }
+  },
+  "personalities": [
+    {
+      "id": "vip_m16",
+      "name": "Adi KRASTA",
+      "programme_on_list_page": "E paverifikuar",
+      "notes": "An X account @adikrasta exists but has an empty bio, 53 followers and one post; treated as a name collision, not listed as a match.",
+      "accounts": [
+        {
+          "platform": "Instagram",
+          "handle": "@adi_krasta",
+          "url": "https://www.instagram.com/adi_krasta/",
+          "status": "VERIFIED",
+          "account_type": "personal",
+          "verification_basis": "Cited by Politiko.al (28 Nov 2022) with an Instagram embed: “A post shared by Adi Krasta (@adi_krasta)”, on his Kosovo citizenship announcement.",
+          "source_url": "https://politiko.al/politikoff/adi-krasta-merr-nenshtetesine-kosovare-i471515"
+        },
+        {
+          "platform": "LinkedIn",
+          "handle": "adrian-krasta-6b5414161",
+          "url": "https://www.linkedin.com/in/adrian-krasta-6b5414161",
+          "status": "UNCERTAIN",
+          "account_type": "personal",
+          "verification_basis": "Profile name and headline match the television presenter (including a period as Deputy Director General of Radio Television of Kosovo). A matching name and career summary is not enough under the standing rule; no official-site or news-outlet citation of this URL was found.",
+          "source_url": "https://www.linkedin.com/in/adrian-krasta-6b5414161"
+        }
+      ]
+    },
+    {
+      "id": "vip_m13",
+      "name": "Alketa VEJSIU",
+      "programme_on_list_page": "«X Factor Kids» · TV Klan",
+      "notes": "Her personal site alketavejsiu.al did not expose social links in the public HTML fetched on 27 Nov 2026. An X account @alketavejsiu has an empty bio and 64 followers; treated as a name collision, not listed as a match.",
+      "accounts": [
+        {
+          "platform": "Instagram",
+          "handle": "@alketavejsiu",
+          "url": "https://www.instagram.com/alketavejsiu/",
+          "status": "VERIFIED",
+          "account_type": "personal",
+          "verification_basis": "Linked from her Class Lifestyle site, and cited by the official TV Klan website (27 Jan 2025) with an Instagram embed: “A post shared by ALKETA VEJSIU (@alketavejsiu)”. The Instagram profile is platform-verified and the bio names TV Klan.",
+          "source_url": "https://tvklan.al/alketa-vejsiu-prezanton-per-here-te-pare-vajzen-te-ruajta-18-vite-nga-syte-e-botes"
+        },
+        {
+          "platform": "Facebook",
+          "handle": "alketavejsiuofficial",
+          "url": "https://www.facebook.com/alketavejsiuofficial",
+          "status": "VERIFIED",
+          "account_type": "personal",
+          "verification_basis": "Linked from the footer of classlifestyle.com, the official site of her Class media brand.",
+          "source_url": "https://classlifestyle.com/"
+        },
+        {
+          "platform": "YouTube",
+          "handle": "@classmediabyalketavejsiu",
+          "url": "https://www.youtube.com/@classmediabyalketavejsiu",
+          "status": "VERIFIED",
+          "account_type": "brand",
+          "verification_basis": "Linked from classlifestyle.com as “CLASS MEDIA by Alketa Vejsiu”, her media-brand channel rather than a purely personal vlog.",
+          "source_url": "https://classlifestyle.com/"
+        },
+        {
+          "platform": "Facebook",
+          "handle": "classmedial",
+          "url": "https://www.facebook.com/classmedial",
+          "status": "VERIFIED",
+          "account_type": "brand",
+          "verification_basis": "Linked from classlifestyle.com as the Class Media brand page, not a personal profile.",
+          "source_url": "https://classlifestyle.com/"
+        },
+        {
+          "platform": "LinkedIn",
+          "handle": "alketa-vejsiu-31899422",
+          "url": "https://www.linkedin.com/in/alketa-vejsiu-31899422",
+          "status": "UNCERTAIN",
+          "account_type": "personal",
+          "verification_basis": "Name matches and the account has posted about Inspire Podclass / CLASS MEDIA, but no official-site link or news citation of this LinkedIn URL was found.",
+          "source_url": "https://www.linkedin.com/in/alketa-vejsiu-31899422"
+        }
+      ]
+    },
+    {
+      "id": "vip_m15",
+      "name": "Arbana OSMANI",
+      "programme_on_list_page": "«Ferma VIP 3» · Vizion Plus · ish-emision",
+      "notes": "",
+      "accounts": [
+        {
+          "platform": "Instagram",
+          "handle": "@arbanao",
+          "url": "https://www.instagram.com/arbanao/",
+          "status": "VERIFIED",
+          "account_type": "personal",
+          "verification_basis": "Cited by KOHA JONË (17 Oct 2026) with an Instagram embed: “A post shared by Arbana Osmani (@arbanao)”.",
+          "source_url": "https://kohajone.com/showbiz/arbana-osmani-thirrje-rames-mjaft-respekto-popullin-tend-askush-nuk-e-meriton-kete/"
+        },
+        {
+          "platform": "Facebook",
+          "handle": "arbana1001pse",
+          "url": "https://www.facebook.com/arbana1001pse",
+          "status": "UNCERTAIN",
+          "account_type": "programme_or_legacy",
+          "verification_basis": "Appears as an external link on the English Wikipedia page. The slug refers to the old Top Channel show «1001 pse?!», not a clearly current personal page. 2016 outlets reported that she opened a Facebook fan page, but they did not give a durable URL that can be matched to this one.",
+          "source_url": "https://en.wikipedia.org/wiki/Arbana_Osmani"
+        }
+      ]
+    },
+    {
+      "id": "vip_m5",
+      "name": "Ardit GJEBREA",
+      "programme_on_list_page": "«E Diela Shqiptare» · TV Klan",
+      "notes": "He has said his only genuine Facebook presence is the verified page, but no outlet published the Facebook URL. The former official site arditgjebrea.info has been hijacked by unrelated content and was not used.",
+      "accounts": [
+        {
+          "platform": "Instagram",
+          "handle": "@arditgjebrea",
+          "url": "https://www.instagram.com/arditgjebrea/",
+          "status": "VERIFIED",
+          "account_type": "personal",
+          "verification_basis": "Cited by ArkivaNews (10 Dec 2020) as the URL he himself identified as his only Instagram, in a warning about impostor accounts. The Instagram profile is platform-verified and the bio names «Kënga Magjike» and «E Diela Shqiptare». Telegrafi later quoted the same warning.",
+          "source_url": "https://news.arkiva.de/2020/12/10/dikush-po-mashtron-ne-emer-te-tij-arditi-reagon-i-revoltuar/"
+        },
+        {
+          "platform": "X",
+          "handle": "@arditgjebrea",
+          "url": "https://x.com/arditgjebrea",
+          "status": "UNCERTAIN",
+          "account_type": "personal",
+          "verification_basis": "Looked up on X on 27 Nov 2026: display name arditgjebrea, bio “Songwriter & Singer, Tv Host, Tv Producer”, about 1,076 followers, not platform-verified. Consistent occupation language, but a matching name and generic bio is not enough without a badge naming the programme or a news citation of this handle.",
+          "source_url": "https://x.com/arditgjebrea"
+        }
+      ]
+    },
+    {
+      "id": "vip_m14",
+      "name": "Arian ÇANI",
+      "programme_on_list_page": "«Zonë e Lirë» · TV Klan",
+      "notes": "Telegrafi reported in 2015 that he would keep only a staff-run Facebook fan page; no URL was given, so no Facebook row is recorded.",
+      "accounts": [
+        {
+          "platform": "Instagram",
+          "handle": "@ariancanizl",
+          "url": "https://www.instagram.com/ariancanizl/",
+          "status": "VERIFIED",
+          "account_type": "personal",
+          "verification_basis": "Cited by Opinion.al (19 Mar 2018) with an Instagram embed “A post shared by arian cani (@ariancanizl)”. The live Opinion.al page returned HTTP 500 on 27 Nov 2026; the citation is preserved in the Internet Archive capture of 8 Sep 2018. CNA.al separately reported that his associate announced this as his only official Instagram.",
+          "source_url": "https://web.archive.org/web/20180908225753/http://opinion.al/edhe-arian-cani-nuk-shpeton-nga-mania-e-selfie-skeni-pare-gje-akoma/"
+        },
+        {
+          "platform": "TikTok",
+          "handle": "@ariancanitiktok",
+          "url": "https://www.tiktok.com/@ariancanitiktok",
+          "status": "VERIFIED",
+          "account_type": "personal",
+          "verification_basis": "Cited by aktualitet.al (18 Nov 2020) as the official TikTok he opened, with embedded TikTok posts under @ariancanitiktok, including videos with his daughter.",
+          "source_url": "https://aktualitet.al/2020/11/18/video-arian-cani-hap-tik-tok-dhe-na-prezanton-me-vajzen/"
+        },
+        {
+          "platform": "X",
+          "handle": "@arian_cani",
+          "url": "https://x.com/arian_cani",
+          "status": "UNCERTAIN",
+          "account_type": "personal",
+          "verification_basis": "Looked up on X on 27 Nov 2026: display name Arian Çani, bio “Journalist tv talk show zone e lire tv klan”, about 1,235 followers, not platform-verified. Politiko.al reported in 2018 that he had joined Twitter, but did not publish this handle. Strong identity fit, held for review because the standing rule needs a badge or a cited handle.",
+          "source_url": "https://x.com/arian_cani"
+        }
+      ]
+    },
+    {
+      "id": "vip_m21",
+      "name": "Armina MEVLANI",
+      "programme_on_list_page": "«Ferma VIP 3» · Vizion Plus · ish-emision",
+      "notes": "",
+      "accounts": [
+        {
+          "platform": "Instagram",
+          "handle": "@armina_mevlani",
+          "url": "https://www.instagram.com/armina_mevlani/",
+          "status": "VERIFIED",
+          "account_type": "personal",
+          "verification_basis": "Cited by TPZ.al (26 Jun 2019) with an Instagram embed: “A post shared by Armina Mevlani (@armina_mevlani)”.",
+          "source_url": "https://tpz.al/armina-djeg-instagramin-publikon-videon-nga-pushimet"
+        },
+        {
+          "platform": "Facebook",
+          "handle": "arminamevlaniofficial",
+          "url": "https://www.facebook.com/arminamevlaniofficial",
+          "status": "UNCERTAIN",
+          "account_type": "personal",
+          "verification_basis": "The slug is plausible, but it was only found via secondary aggregators, not linked from an official page or cited with a URL by a news outlet.",
+          "source_url": "https://www.facebook.com/arminamevlaniofficial"
+        }
+      ]
+    },
+    {
+      "id": "vip_m22",
+      "name": "Bledi MANE",
+      "programme_on_list_page": "E paverifikuar",
+      "notes": "",
+      "accounts": [
+        {
+          "platform": "Instagram",
+          "handle": "@bled_mane",
+          "url": "https://www.instagram.com/bled_mane/",
+          "status": "VERIFIED",
+          "account_type": "personal",
+          "verification_basis": "Cited by Telegrafi with an Instagram embed: “A post shared by Bledi Mane (@bled_mane)”, on his public statement about Eli Fara.",
+          "source_url": "https://telegrafi.com/u-perfol-se-ishte-pjese-e-videove-bledi-mane-une-do-te-martohem-me-eli-faren-besoi-verberisht-te-nje-njeri-e-preu-ne-bese-dhe-e-poshteroi/"
+        },
+        {
+          "platform": "Facebook",
+          "handle": "bledi.mane",
+          "url": "https://www.facebook.com/bledi.mane",
+          "status": "UNCERTAIN",
+          "account_type": "personal",
+          "verification_basis": "A Facebook profile at this slug exists and has been used in posts under the name Bledi Mane, but no official-site link or news outlet citing this URL as his account was found. A matching name is not proof.",
+          "source_url": "https://www.facebook.com/bledi.mane"
+        }
+      ]
+    },
+    {
+      "id": "vip_m1",
+      "name": "Blendi FEVZIU",
+      "programme_on_list_page": "«Opinion» · TV Klan",
+      "notes": "",
+      "accounts": [
+        {
+          "platform": "Instagram",
+          "handle": "@blendifevziu",
+          "url": "https://www.instagram.com/blendifevziu/",
+          "status": "VERIFIED",
+          "account_type": "personal",
+          "verification_basis": "Cited by Albeu.com (29 Mar 2022) with an Instagram embed: “A post shared by Blendi Fevziu (@blendifevziu)”. Also listed as an external link on the English Wikipedia page, which is treated only as supporting context.",
+          "source_url": "https://albeu.com/showbiz/blendi-fevziu-surprizon-instagramin-publikon-foton-e-rralle-me-vajzen-e-tij-te-madhe-foto-lajm/277524/"
+        },
+        {
+          "platform": "X",
+          "handle": "@BlendiFevziu",
+          "url": "https://x.com/BlendiFevziu",
+          "status": "UNCERTAIN",
+          "account_type": "personal",
+          "verification_basis": "Looked up on X on 27 Nov 2026: display name Blendi Fevziu, about 134,930 followers, account created Oct 2011. Bio reads “Host of OPINION show! On air, Tv Klan, Monday, Tuesday, Wednesday 22:00; Thursday 21.00!”. Not platform-verified (verified=false). Strong identity fit, but the standing rule requires a verification badge plus bio, or a news citation of the handle. No such citation was found. Held for review.",
+          "source_url": "https://x.com/BlendiFevziu"
+        },
+        {
+          "platform": "YouTube",
+          "handle": "@BlendiFevziuofficial",
+          "url": "https://www.youtube.com/@BlendiFevziuofficial",
+          "status": "UNCERTAIN",
+          "account_type": "personal",
+          "verification_basis": "A channel with this handle exists and Wikidata records YouTube channel ID UCufmgU-QUGEBPPQXI4VzO5w, but no official-site link or news-outlet citation was found.",
+          "source_url": "https://www.youtube.com/@BlendiFevziuofficial"
+        },
+        {
+          "platform": "Facebook",
+          "handle": "blendifevziu",
+          "url": "https://www.facebook.com/blendifevziu",
+          "status": "UNCERTAIN",
+          "account_type": "personal",
+          "verification_basis": "A Facebook presence at this slug is widely assumed in aggregator directories. No official-site link or news citation of the URL was found.",
+          "source_url": "https://www.facebook.com/blendifevziu"
+        }
+      ]
+    },
+    {
+      "id": "vip_m19",
+      "name": "Blendi SALAJ",
+      "programme_on_list_page": "«Wake Up» · Top Channel",
+      "notes": "",
+      "accounts": [
+        {
+          "platform": "Instagram",
+          "handle": "@blendisalaj",
+          "url": "https://www.instagram.com/blendisalaj/",
+          "status": "VERIFIED",
+          "account_type": "personal",
+          "verification_basis": "Cited by Sot.com.al (2 Aug 2024) with an Instagram embed: “A post shared by Blendi Salaj (@blendisalaj)”, in his warning about a “Nearest Edge” investment scam using his identity.",
+          "source_url": "https://sot.com.al/2024/08/02/leket-nuk-iu-kthehen-me-moderatori-i-njohur-paralajmeron-qytetaret-mos-u-mashtroni-nga-kjo-faqe-ska-lidhje-me"
+        },
+        {
+          "platform": "X",
+          "handle": "@BlendiSalaj",
+          "url": "https://x.com/BlendiSalaj",
+          "status": "UNCERTAIN",
+          "account_type": "personal",
+          "verification_basis": "Looked up on X on 27 Nov 2026: display name Blendi Salaj, about 7,620 followers, account created Oct 2009. Bio names “Producer, Presenter at Wake Up on Top Channel and Top Albania Radio”. Not platform-verified. Strong identity fit, held for review because there is no badge and no news citation of this handle.",
+          "source_url": "https://x.com/BlendiSalaj"
+        },
+        {
+          "platform": "LinkedIn",
+          "handle": "blendi-salaj-3326791a3",
+          "url": "https://www.linkedin.com/in/blendi-salaj-3326791a3",
+          "status": "UNCERTAIN",
+          "account_type": "personal",
+          "verification_basis": "A LinkedIn profile under this slug has posted in the first person about lost LinkedIn history. Name match only; no official-site or news citation of the URL.",
+          "source_url": "https://www.linkedin.com/in/blendi-salaj-3326791a3"
+        }
+      ]
+    },
+    {
+      "id": "vip_m26",
+      "name": "Dalina BUZI",
+      "programme_on_list_page": "E paverifikuar",
+      "notes": "Her company site anabel.io lists her as Founder & CEO but does not link a personal social account. Anabel brand accounts (facebook.com/AnabelWorld, instagram.com/anabel.io_) are company accounts, not listed here as personal.",
+      "accounts": [
+        {
+          "platform": "Instagram",
+          "handle": "@dalinabuzii",
+          "url": "https://www.instagram.com/dalinabuzii/",
+          "status": "VERIFIED",
+          "account_type": "personal",
+          "verification_basis": "Cited by Dosja.al (3 Nov 2021) with an Instagram embed: “A post shared by Dalina Buzi (@dalinabuzii)”. Note the handle has two trailing i’s.",
+          "source_url": "https://dosja.al/dalina-buzi-i-nenshtrohet-operacionit-rregullon-ne-vjene-gabimin-e-bere-ne-shqiperi"
+        },
+        {
+          "platform": "Instagram",
+          "handle": "@dalinabuzi",
+          "url": "https://www.instagram.com/dalinabuzi/",
+          "status": "UNCERTAIN",
+          "account_type": "possible_variant_or_impostor",
+          "verification_basis": "Some secondary biographies list @dalinabuzi (one trailing i). The handle actually cited by Dosja.al is @dalinabuzii. This shorter slug should not be shown publicly until reviewed.",
+          "source_url": "https://www.instagram.com/dalinabuzi/"
+        }
+      ]
+    },
+    {
+      "id": "vip_m28",
+      "name": "Dritan SHAKOHOXHA",
+      "programme_on_list_page": "E paverifikuar",
+      "notes": "He has publicly discussed fake Facebook profiles opened in his name; no verified personal Facebook URL is recorded.",
+      "accounts": [
+        {
+          "platform": "Instagram",
+          "handle": "@dritan_shakohoxha",
+          "url": "https://www.instagram.com/dritan_shakohoxha/",
+          "status": "VERIFIED",
+          "account_type": "personal",
+          "verification_basis": "Cited by Balkanweb.com / News24 (11 Jun 2022) and by Politiko.al (12 Jul 2021) with Instagram embeds: “A post shared by Dritan Shakohoxha (@dritan_shakohoxha)”.",
+          "source_url": "https://www.balkanweb.com/koha-per-trajner-shqiptar-shakohoxha-reja-e-fshf-deshtim-me-fat-qe-kemi-kete-skuader/"
+        }
+      ]
+    },
+    {
+      "id": "vip_m10",
+      "name": "Eni VASILI",
+      "programme_on_list_page": "«OPEN» · Top Channel · ish-emision",
+      "notes": "An X account @EniVasili has one follower and no posts; treated as a name collision, not listed as a match.",
+      "accounts": [
+        {
+          "platform": "Instagram",
+          "handle": "@enivasili",
+          "url": "https://www.instagram.com/enivasili/",
+          "status": "VERIFIED",
+          "account_type": "personal",
+          "verification_basis": "Cited by Gazeta Fjala (7 Jul 2021, archive) with an Instagram embed: “A post shared by ENI VASILI (@enivasili)”, on the first photograph of her twins.",
+          "source_url": "https://arkiva.fjala.al/2021/07/07/eni-vasili-poston-foton-e-pare-te-binjakeve/"
+        },
+        {
+          "platform": "Facebook",
+          "handle": "enivasiliopen",
+          "url": "https://www.facebook.com/enivasiliopen",
+          "status": "UNCERTAIN",
+          "account_type": "programme_or_legacy",
+          "verification_basis": "A Facebook page titled “Eni Vasili - Open” exists. The slug points to the former programme OPEN rather than a clearly personal profile, and no official-site or news citation identifying this URL as her personal account was found.",
+          "source_url": "https://www.facebook.com/enivasiliopen"
+        }
+      ]
+    },
+    {
+      "id": "vip_m20",
+      "name": "Enkel DEMI",
+      "programme_on_list_page": "E paverifikuar",
+      "notes": "",
+      "accounts": [
+        {
+          "platform": "Instagram",
+          "handle": "@enkel.demi",
+          "url": "https://www.instagram.com/enkel.demi/",
+          "status": "VERIFIED",
+          "account_type": "personal",
+          "verification_basis": "Cited by Newsport.al / FACENEWS (24 Mar 2025) with an Instagram embed: “A post shared by Enkel Demi (@enkel.demi)”.",
+          "source_url": "https://newsport.al/facenews/ju-falenderoj-te-gjitheve-qe-na-u-gjetet-prane-enkel-demi-presim-miqte--i513846"
+        }
+      ]
+    },
+    {
+      "id": "vip_m12",
+      "name": "Ermal MAMAQI",
+      "programme_on_list_page": "«Xing me Ermalin» · TV Klan · ish-emision",
+      "notes": "A garbled Facebook footer link on ermalmamaqi.com pointed at facebook.com/tidi.al and was not treated as his account. No personal phone numbers or emails from the site were recorded.",
+      "accounts": [
+        {
+          "platform": "Instagram",
+          "handle": "@ermalmamaqiofficial",
+          "url": "https://www.instagram.com/ermalmamaqiofficial/",
+          "status": "VERIFIED",
+          "account_type": "personal",
+          "verification_basis": "Cited by Politiko.al (15 Aug 2021) with an Instagram embed: “A post shared by Ermal Mamaqi (@ermalmamaqiofficial)”.",
+          "source_url": "https://politiko.al/politikoff/ne-ami-me-ledrin-ermal-mamaqi-ngaterrohet-kur-sheh-foton-e-gruas-se-t-i441652"
+        },
+        {
+          "platform": "Instagram",
+          "handle": "@ermalmamaqitraining",
+          "url": "https://www.instagram.com/ermalmamaqitraining/",
+          "status": "VERIFIED",
+          "account_type": "brand",
+          "verification_basis": "Linked from the footer of his official training website ermalmamaqi.com.",
+          "source_url": "https://ermalmamaqi.com/"
+        },
+        {
+          "platform": "TikTok",
+          "handle": "@ermalmamaqitraining",
+          "url": "https://www.tiktok.com/@ermalmamaqitraining",
+          "status": "VERIFIED",
+          "account_type": "brand",
+          "verification_basis": "Linked from the footer of ermalmamaqi.com.",
+          "source_url": "https://ermalmamaqi.com/"
+        },
+        {
+          "platform": "YouTube",
+          "handle": "@ermalmamaqitraining",
+          "url": "https://www.youtube.com/@ermalmamaqitraining",
+          "status": "VERIFIED",
+          "account_type": "brand",
+          "verification_basis": "Linked from the footer of ermalmamaqi.com.",
+          "source_url": "https://ermalmamaqi.com/"
+        },
+        {
+          "platform": "X",
+          "handle": "@ErmalMamaqi",
+          "url": "https://x.com/ErmalMamaqi",
+          "status": "UNCERTAIN",
+          "account_type": "personal",
+          "verification_basis": "Looked up on X on 27 Nov 2026: display name Ermal Mamaqi, about 2,119 followers, empty bio, zero posts, profile URL pointing to the old site apartamenti2xl.tv. Not platform-verified. Held for review.",
+          "source_url": "https://x.com/ErmalMamaqi"
+        }
+      ]
+    },
+    {
+      "id": "vip_m24",
+      "name": "Ermal PEÇI",
+      "programme_on_list_page": "«Më prit në fundjavë» · RTSH · ish-emision",
+      "notes": "No personal account met the verification rule. Secondary influencer lists mention Instagram @ermal.peci (about 281,000 followers in one directory), but no official-site link, platform-verification-plus-programme-bio, or news-outlet citation of that handle was found, so it is recorded only as UNCERTAIN below.",
+      "accounts": [
+        {
+          "platform": "Instagram",
+          "handle": "@ermal.peci",
+          "url": "https://www.instagram.com/ermal.peci/",
+          "status": "UNCERTAIN",
+          "account_type": "personal",
+          "verification_basis": "Appears in influencer directories under this handle. Wikipedia describes him as a digital creator, but neither Wikipedia nor a news outlet cited this handle, and no official RTSH or personal-site link was found. A matching name is not proof.",
+          "source_url": "https://www.instagram.com/ermal.peci/"
+        }
+      ]
+    },
+    {
+      "id": "vip_m25",
+      "name": "Ilva TARE",
+      "programme_on_list_page": "«Balkans Debrief» · Atlantic Council — Europe Center",
+      "notes": "",
+      "accounts": [
+        {
+          "platform": "X",
+          "handle": "@IlvaTare",
+          "url": "https://x.com/IlvaTare",
+          "status": "VERIFIED",
+          "account_type": "personal",
+          "verification_basis": "Cited by Euronews Albania (16 Apr 2022), her former employer, which embedded her announcement tweet signed “— Ilva Tare (@IlvaTare) April 15, 2022”. X lookup on 27 Nov 2026: display name Ilva Tare, bio “Resident Senior Fellow @AtlanticCouncil in Washington, DC. #BalkansDebrief host”, profile URL pointing at the Atlantic Council Balkans Debrief series. (The Atlantic Council expert page itself did not link this handle in the HTML fetched on 27 Nov 2026.)",
+          "source_url": "https://euronews.al/ilva-tare-me-mision-te-ri-behet-pjese-e-keshillit-te-atlantikut/"
+        },
+        {
+          "platform": "Instagram",
+          "handle": "@ilva_tare",
+          "url": "https://www.instagram.com/ilva_tare/",
+          "status": "UNCERTAIN",
+          "account_type": "personal",
+          "verification_basis": "An Instagram profile at this slug exists. No official employer-page link or news-outlet citation of the handle was found.",
+          "source_url": "https://www.instagram.com/ilva_tare/"
+        },
+        {
+          "platform": "LinkedIn",
+          "handle": "ilva-tare",
+          "url": "https://www.linkedin.com/in/ilva-tare",
+          "status": "UNCERTAIN",
+          "account_type": "personal",
+          "verification_basis": "A LinkedIn profile at this slug exists. The official Atlantic Council expert page did not link it in the HTML fetched on 27 Nov 2026.",
+          "source_url": "https://www.linkedin.com/in/ilva-tare"
+        }
+      ]
+    },
+    {
+      "id": "vip_m11",
+      "name": "Inva MULA",
+      "programme_on_list_page": "E paverifikuar",
+      "notes": "The former official domain inva-mula.com has been hijacked by unrelated content and was not used. A YouTube channel associated with her name appears in search results but was not cited by an official page or news outlet.",
+      "accounts": [
+        {
+          "platform": "Instagram",
+          "handle": "@invamula",
+          "url": "https://www.instagram.com/invamula/",
+          "status": "VERIFIED",
+          "account_type": "personal",
+          "verification_basis": "Cited by Dosja.al (30 Apr 2019) with an Instagram embed: “A post shared by Inva Mula (@invamula)”.",
+          "source_url": "https://dosja.al/ne-ditelindjen-e-vajzes-inva-mula-publikon-foton-e-saj-te-pare"
+        },
+        {
+          "platform": "X",
+          "handle": "@InvaMula",
+          "url": "https://x.com/InvaMula",
+          "status": "UNCERTAIN",
+          "account_type": "personal",
+          "verification_basis": "Looked up on X on 27 Nov 2026: display name Inva Mula, bio “Opera Soprano”, about 375 followers, one post, not platform-verified. Name and occupation match, but that is not enough without a badge or a cited handle.",
+          "source_url": "https://x.com/InvaMula"
+        }
+      ]
+    },
+    {
+      "id": "vip_m27",
+      "name": "Ledion LIÇO",
+      "programme_on_list_page": "«Big Brother VIP» · Top Channel · ish-emision",
+      "notes": "ledionlico.com is live but only as a coming-soon page, with no social links, so it could not be used as an official-site source. An X account @LedionLico has two followers; treated as a name collision. An older Twitter handle @ledionl appears in a 2017 item and was not confirmed as current.",
+      "accounts": [
+        {
+          "platform": "Instagram",
+          "handle": "@mr.ledionlico",
+          "url": "https://www.instagram.com/mr.ledionlico/",
+          "status": "VERIFIED",
+          "account_type": "personal",
+          "verification_basis": "Cited by NTV.al (2 Nov 2026) with an Instagram embed: “A post shared by Ledion Liço (@mr.ledionlico)”, on his first public signal of Big Brother VIP Albania 6.",
+          "source_url": "https://ntv.al/ledion-lico-konfirmon-sezonin-e-6-te-bbva-jep-sinjalin-e-pare/"
+        }
+      ]
+    },
+    {
+      "id": "vip_m18",
+      "name": "Marin MEMA",
+      "programme_on_list_page": "«Gjurmë Shqiptare» · Top Channel",
+      "notes": "The X account @MarinMema states in its bio: “This account is not managed by Marin Mema. This is a fan account of the Albanian Journalist.” It is rejected, not listed as his.",
+      "accounts": [
+        {
+          "platform": "Instagram",
+          "handle": "@marin.mema",
+          "url": "https://www.instagram.com/marin.mema/",
+          "status": "VERIFIED",
+          "account_type": "personal",
+          "verification_basis": "Cited by Newsport.al (31 Mar 2026) with an Instagram embed: “A post shared by Marin Mema (@marin.mema)”.",
+          "source_url": "https://newsport.al/kosova/krejt-me-vllaun-e-vogel-gazetari-marin-mema-mesazh-shqiptareve-para-betej-i530463"
+        }
+      ]
+    },
+    {
+      "id": "vip_m23",
+      "name": "Mustafa NANO",
+      "programme_on_list_page": "«Provokacija» · ABC News · ish-emision",
+      "notes": "No verifiable personal account was found. TiranaPost has reported that an Instagram presence in his name was not authentic. The X account @mustafanano belongs to a differently named user and is a name collision. A later item referred to him using Facebook, but no handle or URL was given.",
+      "accounts": []
+    },
+    {
+      "id": "vip_m9",
+      "name": "Sokol BALLA",
+      "programme_on_list_page": "«Real Story» · ABC News",
+      "notes": "Programme accounts linked from official site realstory.al on 27 Nov 2026: Instagram @real_story_al, Facebook realstory.al, X @RealStoryAl. These are show accounts, not listed as his personal accounts.",
+      "accounts": [
+        {
+          "platform": "Instagram",
+          "handle": "@sokolballaofficial",
+          "url": "https://www.instagram.com/sokolballaofficial/",
+          "status": "VERIFIED",
+          "account_type": "personal",
+          "verification_basis": "Cited by Politiko.al (15 Jul 2019) with Instagram embeds: “A post shared by Sokol Balla (@sokolballaofficial)”.",
+          "source_url": "https://politiko.al/i-mban-larg-vemendjes-se-publikut-sokol-balla-poston-fotot-nga-pushimet-me-femijet"
+        },
+        {
+          "platform": "X",
+          "handle": "@sokolballa",
+          "url": "https://x.com/sokolballa",
+          "status": "UNCERTAIN",
+          "account_type": "personal",
+          "verification_basis": "Looked up on X on 27 Nov 2026: display name Sokol Balla, about 99,423 followers, account created Apr 2010, Twitter Blue badge (verified_type=blue, not a legacy gold check). Bio does not name «Real Story» or ABC News; the profile URL points to realstory.al. The official Real Story site links a different programme account, @RealStoryAl, not this personal handle. Held for review.",
+          "source_url": "https://x.com/sokolballa"
+        },
+        {
+          "platform": "Instagram",
+          "handle": "@sokolballareal",
+          "url": "https://www.instagram.com/sokolballareal/",
+          "status": "UNCERTAIN",
+          "account_type": "possible_variant_or_legacy",
+          "verification_basis": "Recorded on Wikidata (P2003) as sokolballareal, which conflicts with the Politiko-cited handle @sokolballaofficial. Do not show publicly until reviewed.",
+          "source_url": "https://www.wikidata.org/wiki/Q13046253"
+        },
+        {
+          "platform": "YouTube",
+          "handle": "@SokolBallaOfficial",
+          "url": "https://www.youtube.com/@SokolBallaOfficial",
+          "status": "UNCERTAIN",
+          "account_type": "personal",
+          "verification_basis": "A YouTube channel with this handle exists. No official-site link or news citation was found. A separate programme channel @realstory-sokolballa also exists and is not treated as a personal account.",
+          "source_url": "https://www.youtube.com/@SokolBallaOfficial"
+        },
+        {
+          "platform": "Facebook",
+          "handle": "sokolballa.al",
+          "url": "https://www.facebook.com/sokolballa.al",
+          "status": "UNCERTAIN",
+          "account_type": "personal",
+          "verification_basis": "Wikidata records Facebook ID “sooolballa.al” (likely a typo) and some directories use sokolballa.al. No news citation or official-site link confirmed this URL.",
+          "source_url": "https://www.facebook.com/sokolballa.al"
+        }
+      ]
+    },
+    {
+      "id": "vip_m17",
+      "name": "Sonila MEÇO",
+      "programme_on_list_page": "E paverifikuar",
+      "notes": "",
+      "accounts": [
+        {
+          "platform": "Instagram",
+          "handle": "@sonilameco1",
+          "url": "https://www.instagram.com/sonilameco1/",
+          "status": "VERIFIED",
+          "account_type": "personal",
+          "verification_basis": "Cited by InfoMedia Albania (2 Sep 2024) with an Instagram embed: “A post shared by Sonila Meço (@sonilameco1)”, announcing the new season of «Task Force» on Syri TV.",
+          "source_url": "https://www.imalbania.com/sonila-meco-rikthehet-me-sezonin-e-ri-te-task-force-ne-syri-tv/"
+        },
+        {
+          "platform": "X",
+          "handle": "@sonilameco",
+          "url": "https://x.com/sonilameco",
+          "status": "UNCERTAIN",
+          "account_type": "personal",
+          "verification_basis": "Looked up on X on 27 Nov 2026: display name Sonila Meco, bio “Journalist, Author, Tv Host Task Force Syri Tv”, profile URL sonilameco.com, about 245 followers, one post, not platform-verified. The official-looking domain sonilameco.com failed to load (HTTP 500 / SSL error) on 27 Nov 2026, so it could not be used to confirm a link back. Held for review.",
+          "source_url": "https://x.com/sonilameco"
+        },
+        {
+          "platform": "Facebook",
+          "handle": "sonilamecoA",
+          "url": "https://www.facebook.com/sonilamecoA",
+          "status": "UNCERTAIN",
+          "account_type": "personal",
+          "verification_basis": "Listed by aggregator contact directories. No official-site link or news citation of this URL was found.",
+          "source_url": "https://www.facebook.com/sonilamecoA"
+        }
+      ]
+    },
+    {
+      "id": "vip_m32",
+      "name": "Ylli RAKIPI",
+      "programme_on_list_page": "«Të Paekspozuarit» · Vizion Plus",
+      "notes": "No verifiable personal account was found. Programme / show accounts exist (Facebook “Të Paekspozuarit - TPZ.AL”, YouTube @tepaekspozuarit, and a reported Instagram @tpz.al) and are not treated as his personal accounts. An X account @YlliRakipi has five followers and no posts; treated as a name collision.",
+      "accounts": []
+    }
+  ]
+}

@@ -6,6 +6,7 @@ import path from 'path';
 import { fileURLToPath } from 'url';
 import { WebSocketServer, WebSocket } from 'ws';
 import { seoShellRelativePath } from './utils/seoShell';
+import { loadPublicLiveScoring } from './services/maragonLiveScoringLoad';
 import { GoogleGenAI, Type, Modality } from '@google/genai';
 import type { GenerateContentResponse, LiveServerMessage } from '@google/genai';
 // Self-contained image resolver tool declaration & fallback executor for server
@@ -180,6 +181,11 @@ Përgjigja jote DUHET TË JETË VETËM NJË OBJEKT I VLEFSHËM JSON. Mos përfsh
 // ============================================================================
 
 // Health check
+app.get('/api/maragon/live-scoring', (_req: Request, res: Response) => {
+  res.setHeader('Cache-Control', 'no-store');
+  res.json(loadPublicLiveScoring());
+});
+
 app.get('/api/gemini/health', (_req: Request, res: Response) => {
   const configured = !!(process.env.GEMINI_API_KEY || process.env.API_KEY);
   res.json({

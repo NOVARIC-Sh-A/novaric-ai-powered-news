@@ -22,9 +22,15 @@ import {
   formatNameSurname,
   getPresenterRecord,
   nameSurnameFromFull,
+  BandRadar,
   visibleIndicatorBand,
   type DisplayMode,
 } from './maragon/maragonPresenterUi';
+import { MediaPortrait } from './maragon/MediaPortrait';
+import { LiveIndicatorList } from './maragon/MaragonLiveScore';
+import { liveProfile } from '../data/maragon/scoring/publicLiveScoring';
+import { confirmedSocialUrls } from '../utils/maragonSocialAccounts';
+import { ProfileSocialLogos } from './figurat-politike/ProfileSocialLogos';
 import { maragonInternalPreview } from '../utils/maragonPublication';
 import { ownerSuppliedMediaPortraitSrcSet, resolvePresentableMediaPhoto, type OfficialMediaPhotoSource } from '../utils/officialMediaPhoto';
 import { mediaProfilePath } from '../utils/mediaNavigation';
@@ -77,8 +83,8 @@ export const MediaPersonalityCard: React.FC<MediaPersonalityCardProps> = ({
   const [imgFailed, setImgFailed] = useState(false);
 
   const status: MaragonAssessmentStatus =
+    ((profile as { maragonAssessmentStatus?: MaragonAssessmentStatus }).maragonAssessmentStatus) ||
     (rec?.maragon.assessmentStatus as MaragonAssessmentStatus) ||
-    ((profile as any).maragonAssessmentStatus as MaragonAssessmentStatus) ||
     'not_assessed';
   const published = isMaragonAssessmentPublished({ ...(profile as any), maragonAssessmentStatus: status });
 
@@ -146,14 +152,15 @@ export const MediaPersonalityCard: React.FC<MediaPersonalityCardProps> = ({
 
       <div className="flex gap-4 px-4 pt-4">
         <div className="w-[140px] flex-shrink-0 flex flex-col items-center gap-1.5">
-          <div className="w-[140px] h-[140px] rounded-full p-[3px]" style={{ backgroundColor: CYAN }}>
-            <div className="w-full h-full rounded-full overflow-hidden bg-white">
-              {showPhoto ? (
-                <img src={photoUrl as string} srcSet={ownerSuppliedMediaPortraitSrcSet(photoUrl)} sizes="140px" alt={displayName} className="w-full h-full object-cover" style={{ objectPosition: officialPhoto?.objectPosition }} referrerPolicy="no-referrer" loading="lazy" onError={() => setImgFailed(true)} />
-              ) : (
-                <AwaitingPhoto label={t.photoPending} />
-              )}
-            </div>
+          <div className="w-[148px]">
+            <MediaPortrait
+              src={showPhoto ? photoUrl : null}
+              srcSet={showPhoto && photoUrl ? ownerSuppliedMediaPortraitSrcSet(photoUrl) : undefined}
+              alt={displayName}
+              portraitCutout={profile.portraitCutout === true}
+              objectPosition={officialPhoto?.objectPosition || '50% 18%'}
+              pendingLabel={t.photoPending}
+            />
           </div>
           <p className="text-[12px] leading-tight text-center" style={{ color: MUTED }}>
             {showPhoto ? photoCredit : t.photoPending}
@@ -202,6 +209,20 @@ export const MediaPersonalityCard: React.FC<MediaPersonalityCardProps> = ({
           <span className={LABEL_CLASS} style={{ color: MUTED }}>{t.overall}</span>
           <BandPill v={{ band: null, confidence: null, indicative: false, notApplicable: false }} lang={lang} />
         </div>
+        <div onClick={(event) => { event.preventDefault(); event.stopPropagation(); }}>
+          <ProfileSocialLogos name={displayName} mediaUrls={confirmedSocialUrls(String(profile.id))} />
+          {Object.keys(confirmedSocialUrls(String(profile.id))).length === 0 && (
+            <p className="mt-1 text-[12px] leading-snug" style={{ color: MUTED }}>
+              {lang === 'en'
+                ? 'No verified personal account (a matching name is not verification).'
+                : 'Asnjë llogari personale e verifikuar (emri i njëjtë nuk është verifikim).'}
+            </p>
+          )}
+        </div>
+        {rec && (
+          <BandRadar rec={rec} mode={mode} lang={lang} size={210} livePoints={liveProfile(String(profile.id))?.indicators ?? []} />
+        )}
+        <LiveIndicatorList profileId={String(profile.id)} lang={lang} />
       </div>
 
       <footer className="mt-4 px-4 py-3 border-t flex flex-col gap-2" style={{ borderColor: LINE }}>
@@ -209,15 +230,17 @@ export const MediaPersonalityCard: React.FC<MediaPersonalityCardProps> = ({
           <label
             className={`flex items-center gap-2 text-[13px] font-bold ${published ? 'cursor-pointer' : 'cursor-not-allowed'}`}
             style={{ color: published ? NAVY : MUTED }}
-            title={published ? undefined : t.compareLocked}
-            onClick={(e) => e.stopPropagation()}
+            title={isCompareDisabled ? t.compareLocked : undefined}
+            onClick={(e) => { e.preventDefault(); e.stopPropagation(); }}
           >
             <input
               type="checkbox"
-              checked={published && isSelectedForCompare}
-              disabled={!published || isCompareDisabled}
-              onChange={() => published && onCompareToggle(profile.id)}
+              checked={isSelectedForCompare}
+              disabled={isCompareDisabled}
+              onClick={(event) => event.stopPropagation()}
+              onChange={() => onCompareToggle(profile.id)}
               className="w-4 h-4 accent-[#30384B]"
+              aria-label={t.compare}
             />
             {t.compare}
           </label>

@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "tsx server.ts",
     "start": "node server.ts",
-    "build": "vite build && python3 scripts/build_og_cards.py profiles dist/og/profiles && python3 scripts/build_og_cards.py media-listing && python3 scripts/build_og_cards.py media-profiles dist/og/personalitete-mediatike && tsx scripts/writeOgShells.ts",
+    "build": "tsx scripts/projectMaragonPublicScoring.ts && vite build && python3 scripts/build_og_cards.py profiles dist/og/profiles && python3 scripts/build_og_cards.py media-listing && python3 scripts/build_og_cards.py media-profiles dist/og/personalitete-mediatike && tsx scripts/writeOgShells.ts",
     "lint": "tsc --noEmit",
     "test": "tsx --test tests/**/*.test.ts",
     "preview": "vite preview --port 3000 --host 0.0.0.0"

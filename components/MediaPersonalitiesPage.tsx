@@ -2,7 +2,7 @@
 import React, { useState, useMemo } from 'react';
 import ReactDOM from 'react-dom';
 import { VipProfile, ParagonEntry, Archetype } from '../types';
-import { PoliticianComparisonModal } from './PoliticianComparisonModal';
+import { MaragonCompareModal } from './maragon/MaragonCompareModal';
 import { MediaPersonalityCard } from './MediaPersonalityCard';
 import { renderWithSuperscript } from '../utils/textUtils';
 import { CpuChipIcon, HeartIcon, ArrowPathIcon } from './icons';
@@ -355,7 +355,8 @@ export const MediaPersonalitiesPage: React.FC<MediaPersonalitiesPageProps> = ({
 
 
   const comparisonProfiles = useMemo(() => {
-    return processedAndRankedMedia.filter((p) => comparisonList.includes(p.id));
+    const byId = new Map(processedAndRankedMedia.map((profile) => [profile.id, profile]));
+    return comparisonList.map((id) => byId.get(id)).filter((profile): profile is NonNullable<typeof profile> => Boolean(profile));
   }, [comparisonList, processedAndRankedMedia]);
 
   return (
@@ -526,9 +527,10 @@ export const MediaPersonalitiesPage: React.FC<MediaPersonalitiesPageProps> = ({
       </main>
 
       {isModalOpen && comparisonProfiles.length >= 2 && (
-        <PoliticianComparisonModal
+        <MaragonCompareModal
           profiles={comparisonProfiles}
           onClose={() => setIsModalOpen(false)}
+          lang={lang}
         />
       )}
       

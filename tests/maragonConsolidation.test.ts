@@ -267,8 +267,12 @@ describe('5. Entity independence', () => {
 
 describe('6. Mock-data exclusion', () => {
   const vip = mediaProfilesData.find((p) => p.id === 'vip_m1')!;
-  it('detects the retired seven-label model on the stored vip_m1 rows', () => {
-    assert.equal(isRetiredLegacyMaragonAnalysis(vip.maragonAnalysis), true);
+  it('no longer stores the retired seven-label rows on vip_m1', () => {
+    assert.equal(vip.maragonAnalysis, undefined);
+    assert.equal(vip.dynamicScore ?? null, null);
+    assert.equal(isRetiredLegacyMaragonAnalysis([
+      { dimension: 'Pajtueshmëria Etike' },
+    ]), true);
   });
   it('never publishes those rows, even if the status were approved', () => {
     const approvedClone = { ...vip, maragonAssessmentStatus: 'approved' as const, scoringSuspended: false, methodologyApproved: true };
