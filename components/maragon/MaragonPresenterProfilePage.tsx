@@ -40,7 +40,7 @@ import {
 import type { MaragonPillar } from './maragonPresenterTypes';
 import { ownerSuppliedMediaPortraitSrcSet, resolvePresentableMediaPhoto } from '../../utils/officialMediaPhoto';
 import { MaragonContextNotices, MaragonNoticeProfileLink } from './MaragonContextNotice';
-import { SevenPointPilotCard } from './SevenPointPilotCard';
+import { MaragonV2ProfileSection, visibleSevenPointFrame } from './MaragonV2ProfileSection';
 import { confirmedSocialUrls } from '../../utils/maragonSocialAccounts';
 import { ProfileSocialLogos } from '../figurat-politike/ProfileSocialLogos';
 import { MediaPortrait } from './MediaPortrait';
@@ -48,7 +48,8 @@ import { maragonNoticeVisible } from '../../utils/maragonNoticeNavigation';
 import type { MaragonDisplayState } from '../../data/maragon/maragonContextNotices';
 
 /*
- * MARAGON® v1.0 — deeper profile page for a media personality (click-through from the cover card).
+ * Media personality profile. The assessment block is MARAGON® v2.0 (seven characteristic points).
+ * The ten v1.0 indicators stay on the page as reference and are not scores.
  * Route: ?page=vipProfilePage&id=vip_m1 (same flow as the political figures).
  * Public mode: facts with sources, status, "Pa vlerësim" for every point without an official band.
  * Indicative bands, findings and evidence appear only in the dev preview (?maragonPreview=1) or,
@@ -62,7 +63,7 @@ const L = {
     contact: 'Kontakti zyrtar', bAccounts: 'Llogaritë zyrtare të transmetuesit', pAccounts: 'Llogaritë personale',
     noPersonal: 'Asnjë llogari personale e verifikuar (emri i njëjtë nuk është verifikim).', bio: 'Biografia',
     bioPending: 'Biografia e plotë është në shqyrtim dhe shfaqet pas miratimit.', draft: 'DRAFT · në shqyrtim',
-    maragon: 'Vlerësimi MARAGON® v1.0', overall: 'Vlerësimi i përgjithshëm', dims: 'Dimensionet', indicators: 'Dhjetë treguesit',
+    maragon: 'Vlerësimi MARAGON® v2.0', overall: 'Vlerësimi i përgjithshëm', dims: 'Dimensionet', indicators: 'Dhjetë treguesit',
     code: 'Kodi', indicator: 'Treguesi', official: 'Brezi zyrtar', indicative: 'Brezi indikativ', status: 'Statusi', evidence: 'Prova',
     findings: 'Gjetjet (draft i brendshëm)', path: 'Për brez zyrtar', open: 'Çështjet e hapura', sources: 'Burimet (hapur më 21.11.2026)',
     internal: 'PAMJE E BRENDSHME · vetëm në serverin e zhvillimit · jo për publikim',
@@ -81,7 +82,7 @@ const L = {
     contact: 'Official contact', bAccounts: 'Broadcaster’s official accounts', pAccounts: 'Personal accounts',
     noPersonal: 'No verified personal account (a matching name is not verification).', bio: 'Biography',
     bioPending: 'The full biography is under review and appears once approved.', draft: 'DRAFT · under review',
-    maragon: 'MARAGON® v1.0 assessment', overall: 'Overall assessment', dims: 'Dimensions', indicators: 'The ten indicators',
+    maragon: 'MARAGON® v2.0 assessment', overall: 'Overall assessment', dims: 'Dimensions', indicators: 'The ten indicators',
     code: 'Code', indicator: 'Indicator', official: 'Official band', indicative: 'Indicative band', status: 'Status', evidence: 'Evidence',
     findings: 'Findings (internal draft)', path: 'For an official band', open: 'Open items', sources: 'Sources (opened 21.11.2026)',
     internal: 'INTERNAL VIEW · dev server only · not for publication',
@@ -150,7 +151,7 @@ export const MaragonPresenterProfilePage: React.FC<Props> = ({ profile, onBack, 
   // vip_m1 keeps its public-source gate. Other personalities: cited official-source facts are listed.
   const publicSourceIds = new Set(['EV-001', 'EV-031', 'EV-002', 'EV-003', 'EV-005']);
   const sources = internal || rec.id !== 'vip_m1' ? rec.sources : rec.sources.filter((s) => publicSourceIds.has(s.id));
-  const pillars: MaragonPillar[] = ['R', 'A', 'G', 'O'];
+  const seven = visibleSevenPointFrame(rec.id);
   // What the assessment area really renders, for the contextual notices (they never change it).
   // OD-S14: the seven-point graph draws no AM-10 reference lines.
   const benchmarkVerticesDrawn = 0;
@@ -170,7 +171,7 @@ export const MaragonPresenterProfilePage: React.FC<Props> = ({ profile, onBack, 
       <div className="w-full" style={{ backgroundColor: RED }}>
         <div className="max-w-6xl mx-auto px-4 md:px-8 py-3 flex items-center gap-3 text-white">
           <span className="flex-shrink-0"><NovaricLogo size={36} /></span>
-          <span className="text-[16px] font-bold leading-tight"><Mark text="NOVARIC® Media House" /><span className="font-normal"> · <Mark text="MARAGON® v1.0" /></span></span>
+          <span className="text-[16px] font-bold leading-tight"><Mark text="NOVARIC® Media House" /><span className="font-normal"> · <Mark text="MARAGON® v2.0" /></span></span>
         </div>
       </div>
       <div className="max-w-6xl mx-auto px-4 md:px-8 py-6 flex flex-col gap-6">
@@ -233,8 +234,12 @@ export const MaragonPresenterProfilePage: React.FC<Props> = ({ profile, onBack, 
               </p>
             )}
             <div className="mt-5 flex flex-wrap items-center gap-2 border-l-4 pl-3 py-1" style={{ borderColor: CYAN }}>
-              <span className={LABEL_CLASS} style={{ color: MUTED }}><Mark text="MARAGON® v1.0" /> · {t.overall}</span>
-              <BandPill v={{ band: null, confidence: null, indicative: false, notApplicable: false }} lang={lang} size="md" />
+              <span className={LABEL_CLASS} style={{ color: MUTED }}><Mark text="MARAGON® v2.0" /> · {t.overall}</span>
+              {seven.overallBand ? (
+                <span className="inline-flex items-center rounded border px-3 py-1 text-[15px] font-bold" style={{ backgroundColor: NAVY, color: '#fff', borderColor: NAVY }} data-profile-overall={seven.overallBand}>{seven.overallBand}</span>
+              ) : (
+                <BandPill v={{ band: null, confidence: null, indicative: false, notApplicable: false }} lang={lang} size="md" />
+              )}
             </div>
           </div>
         </section>
@@ -301,32 +306,20 @@ export const MaragonPresenterProfilePage: React.FC<Props> = ({ profile, onBack, 
           </Card>
         </div>
 
-        <Card id="maragon" title={<Mark text={t.maragon} />}>
-          <SevenPointPilotCard profileId={rec.id} />
-          <div className="mt-6 flex flex-col gap-3">
-              <div className="flex flex-wrap items-center gap-2">
-                <span className={LABEL_CLASS} style={{ color: MUTED }}>{t.overall}</span>
-                <BandPill v={{ band: null, confidence: null, indicative: false, notApplicable: false }} lang={lang} size="md" />
-              </div>
-              <p className="text-[15px] leading-relaxed" style={{ color: MUTED }}>{t.compositeNote}</p>
-              <div>
-                <span className={LABEL_CLASS} style={{ color: MUTED }}>{t.dims}</span>
-                <div className="grid grid-cols-2 sm:grid-cols-4 gap-2 mt-1.5">
-                  {pillars.map((p) => (
-                    <div key={p} className="rounded border-t-4 border px-3 py-2" style={{ borderColor: LINE, borderTopColor: CYAN, backgroundColor: SURFACE }}>
-                      <div className="text-[14px] font-bold" style={{ color: NAVY }}>{p} · {t.dimNames[p]}</div>
-                      <div className="text-[14px]" style={{ color: MUTED }}>{notAssessedLabel(lang)}</div>
-                    </div>
-                  ))}
-                </div>
-              </div>
-              <p className="text-[14px] leading-relaxed" style={{ color: MUTED }}>Dhjetë treguesit e v1.0 më poshtë janë referencë, jo pikë. / The ten v1.0 indicators below are reference, not scores.</p>
-              {!internal && !anyIndicative && <p className="text-[15px] leading-relaxed" style={{ color: NAVY }}>{t.publicNote}</p>}
-              <p className="text-[14px] leading-relaxed" style={{ color: MUTED }}>{internal ? (lang === 'en' ? m.statusNote_en : m.statusNote_sq) : (lang === 'en' ? 'Under editorial review. No point has an official band; overall: Not assessed.' : 'Në shqyrtim editorial. Asnjë pikë nuk ka brez zyrtar; vlerësimi i përgjithshëm: Pa vlerësim.')} · {t.ror}</p>
-              <MaragonContextNotices state={displayState} lang={lang} />
-          </div>
+        <section id="maragon" className="flex flex-col gap-4">
+          <h2 className="text-[22px] font-bold leading-tight" style={{ color: NAVY }}>
+            <Mark text="Vlerësimi MARAGON® v2.0" />
+            <span className="mt-0.5 block text-[15px] font-medium" style={{ color: MUTED }}><Mark text="MARAGON® v2.0 assessment" /></span>
+          </h2>
+          <MaragonV2ProfileSection profileId={rec.id} />
+          <MaragonContextNotices state={displayState} lang={lang} />
+        </section>
 
-          <h3 className="mt-8 mb-2 text-[17px] font-bold" style={{ color: NAVY }}>{t.indicators}</h3>
+        <Card title={t.indicators}>
+          <p className="mb-3 text-[14px] leading-relaxed" style={{ color: MUTED }}>Dhjetë treguesit e v1.0 më poshtë janë referencë, jo pikë. / The ten v1.0 indicators below are reference, not scores.</p>
+          {!internal && !anyIndicative && <p className="mb-3 text-[15px] leading-relaxed" style={{ color: NAVY }}>{t.publicNote}</p>}
+          <p className="mb-3 text-[14px] leading-relaxed" style={{ color: MUTED }}>{internal ? (lang === 'en' ? m.statusNote_en : m.statusNote_sq) : (lang === 'en' ? 'Under editorial review. No v1.0 indicator has an official band.' : 'Në shqyrtim editorial. Asnjë tregues i v1.0 nuk ka brez zyrtar.')} · {t.ror}</p>
+
           <div className="overflow-x-auto">
             <table className="w-full text-[15px] border-collapse">
               <thead>
@@ -477,7 +470,7 @@ export const MaragonPresenterProfilePage: React.FC<Props> = ({ profile, onBack, 
         )}
 
         <footer className="flex flex-wrap items-center justify-between gap-2 text-[13px] border-t pt-4" style={{ color: MUTED, borderColor: LINE }}>
-          <span className="font-bold"><Mark text="NOVARIC® Media House · MARAGON® v1.0" /> · {t.methodology}: {m.methodology}</span>
+          <span className="font-bold"><Mark text="NOVARIC® Media House · MARAGON® v2.0" /> · {t.methodology}: {m.methodology}</span>
           <span>{t.disclaimer}</span>
           <MaragonNoticeProfileLink lang={lang} visible={noticeLinkVisible} />
         </footer>

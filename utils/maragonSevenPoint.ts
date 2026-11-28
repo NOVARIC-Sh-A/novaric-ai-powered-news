@@ -51,7 +51,18 @@ const NOT_ASSESSED_REASON: Record<string, string> = {
   P6: 'no calibrated scale yet; auto-captions cannot separate speech errors from transcription errors.',
 };
 
-const ORDER = ['P1', 'P2', 'P3', 'P4', 'P5', 'P6', 'P7'] as const;
+export const SEVEN_POINT_ORDER = ['P1', 'P2', 'P3', 'P4', 'P5', 'P6', 'P7'] as const;
+
+export const SEVEN_POINT_BAND_ORDER: readonly SevenPointBand[] = ['0–20', '21–40', '41–60', '61–80', '81–100'];
+
+/** Public band names. The page shows these words, never a point inside the band. */
+export const SEVEN_POINT_BAND_LABEL: Record<SevenPointBand, { sq: string; en: string }> = {
+  '0–20': { sq: 'Shumë e dobët', en: 'Very weak' },
+  '21–40': { sq: 'E dobët', en: 'Weak' },
+  '41–60': { sq: 'Mesatare', en: 'Moderate' },
+  '61–80': { sq: 'E fortë', en: 'Strong' },
+  '81–100': { sq: 'Shumë e fortë', en: 'Very strong' },
+};
 
 export interface SevenPointView {
   code: string;
@@ -136,7 +147,7 @@ export function calibrationElapsed(firstScoreAt: string | null, now: Date): bool
  * The returned value is a band, not a number.
  */
 export function overallSevenPointBand(points: SevenPointView[], firstScoreAt: string | null, now: Date): SevenPointBand | null {
-  const codes = calibrationElapsed(firstScoreAt, now) ? ORDER : SEVEN_POINT_CORE;
+  const codes = calibrationElapsed(firstScoreAt, now) ? SEVEN_POINT_ORDER : SEVEN_POINT_CORE;
   const chosen = codes.map((code) => points.find((point) => point.code === code));
   if (chosen.some((point) => !point?.band)) return null;
   const mean = chosen.reduce((sum, point) => sum + bandMidpoint(point!.band!), 0) / chosen.length;
@@ -151,6 +162,13 @@ export function sevenPointPolygonAllowed(points: { status: string }[]): boolean 
   return points.filter((point) => point.status === 'scored').length >= 3;
 }
 
+/** How many points the current overall rule is waiting on. Five during calibration, seven after it. */
+export function calibrationProgress(points: Pick<SevenPointView, 'code' | 'band'>[], fivePointMean: boolean): { scored: number; of: 5 | 7 } {
+  const codes: readonly string[] = fivePointMean ? SEVEN_POINT_CORE : SEVEN_POINT_ORDER;
+  const scored = codes.filter((code) => points.some((point) => point.code === code && point.band)).length;
+  return { scored, of: fivePointMean ? 5 : 7 };
+}
+
 export function projectSevenPointCard(raw: RegisterFile): SevenPointCard {
   if (raw.subject?.id !== 'vip_m1' || raw.subject?.name !== 'Blendi FEVZIU') {
     throw new Error('Seven-point pilot register is not the Blendi FEVZIU template.');
@@ -159,7 +177,7 @@ export function projectSevenPointCard(raw: RegisterFile): SevenPointCard {
     throw new Error('Seven-point pilot result is not NO-GO with 2 scored points.');
   }
   const byCode = new Map((raw.points ?? []).map((point) => [point.point, point]));
-  const points: SevenPointView[] = ORDER.map((code) => {
+  const points: SevenPointView[] = SEVEN_POINT_ORDER.map((code) => {
     const source = byCode.get(code);
     const labels = DISPLAY[code];
     if (!source || !labels) throw new Error(`Missing seven-point row ${code}.`);
@@ -198,7 +216,7 @@ export function projectSevenPointCard(raw: RegisterFile): SevenPointCard {
 const pilot = pilotCard as SevenPointCard;
 
 export function blankSevenPoints(): SevenPointView[] {
-  return ORDER.map((code) => ({
+  return SEVEN_POINT_ORDER.map((code) => ({
     code,
     labelSq: DISPLAY[code].sq,
     labelEn: DISPLAY[code].en,
@@ -219,6 +237,8 @@ export interface SevenPointFrameView {
   calibrationOpen: boolean;
   /** OD-S13: after the cap, a scored P2 or P6 carries the DRAFT/provisional label. */
   p2p6Provisional: boolean;
+  /** True while the overall is still the equal-weight mean of P1, P3, P4, P5 and P7. */
+  fivePointMean: boolean;
   overallBand: SevenPointBand | null;
   evidenceMonths: typeof SEVEN_POINT_EVIDENCE_MONTHS;
 }
@@ -237,6 +257,7 @@ export function sevenPointFrame(profileId: string, now: Date = new Date()): Seve
     firstScoreAt,
     calibrationOpen: Boolean(firstScoreAt) && !elapsed,
     p2p6Provisional: elapsed,
+    fivePointMean: !elapsed,
     overallBand: overallSevenPointBand(points, firstScoreAt, now),
     evidenceMonths: SEVEN_POINT_EVIDENCE_MONTHS,
   };
